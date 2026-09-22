@@ -2208,15 +2208,40 @@
 <script>
 (function () {
   if (!('speechSynthesis' in window)) return;
-  var synth = window.speechSynthesis, stemme = null, fart = 0.9, aktiv = null, koe = [];
-  function velgStemme() {
-    var v = synth.getVoices();
-    stemme = v.find(function (x) { return /^(nb|no)(-|_|$)/i.test(x.lang); }) ||
-             v.find(function (x) { return /^nn(-|_|$)/i.test(x.lang); }) ||
-             v.find(function (x) { return /norsk|norwegian/i.test(x.name); }) || null;
+  var synth = window.speechSynthesis, stemme = null, stemmer = [], fart = 0.9, aktiv = null, koe = [];
+  var LAGRET = 'lytt-stemme';
+  function norsk(x) { return /^(nb|no|nn)(-|_|$)/i.test(x.lang) || /norsk|norwegian|bokmål/i.test(x.name); }
+  // Rangering: nevrale og nettbaserte stemmer høres mest naturlige ut (Edge: «Online (Natural)», Chrome: «Google»).
+  function poeng(x) {
+    var p = 0, n = x.name || '';
+    if (/natural|neural|online/i.test(n)) p += 6;
+    if (/pernille|finn|iselin/i.test(n)) p += 2;
+    if (/google/i.test(n)) p += 4;
+    if (x.localService === false) p += 1;
+    if (/^(nb|no)/i.test(x.lang)) p += 1;       // bokmål foran nynorsk
+    if (/espeak|compact/i.test(n)) p -= 5;      // enkle robotstemmer
+    return p;
   }
-  velgStemme();
-  if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = velgStemme;
+  function velgStemme() {
+    stemmer = synth.getVoices().filter(norsk).sort(function (a, b) { return poeng(b) - poeng(a); });
+    var ønsket = null;
+    try { ønsket = localStorage.getItem(LAGRET); } catch (e) {}
+    stemme = stemmer.find(function (x) { return x.name === ønsket; }) || stemmer[0] || null;
+    fyllVelger();
+  }
+  function fyllVelger() {
+    var v = stripe.querySelector('.lytt-stemme');
+    if (!v) return;
+    v.innerHTML = stemmer.map(function (x, i) {
+      var navn = x.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*?\)\s*/g, ' ').replace(/Online|Natural|Norwegian|Norsk|Bokmål|bokmål/gi, '').replace(/[-–]\s*$/, '').trim();
+      var leverandor = (x.name.match(/^(Microsoft|Google|Apple|Chrome OS|ChromeOS)/i) || [''])[0];
+      if (!navn) navn = leverandor || ('Stemme ' + (i + 1));
+      else if (leverandor && !/natural|neural/i.test(x.name)) navn = leverandor + ' ' + navn;
+      return '<option value="' + i + '"' + (x === stemme ? ' selected' : '') + '>' + navn +
+             (/natural|neural/i.test(x.name) ? ' (naturlig)' : '') + '</option>';
+    }).join('');
+    v.hidden = stemmer.length < 2;
+  }
 
   // kontrollstripe
   var stripe = document.createElement('div');
@@ -2224,6 +2249,7 @@
   stripe.setAttribute('role', 'region');
   stripe.setAttribute('aria-label', 'Opplesning');
   stripe.innerHTML = '<span class="lytt-status">Leser opp …</span>' +
+    '<select class="lytt-stemme" aria-label="Velg stemme" hidden></select>' +
     '<button type="button" class="lytt-fart">Saktere</button>' +
     '<button type="button" class="lytt-stopp">Stopp</button>';
   document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(stripe); });
@@ -2237,6 +2263,14 @@
     if (aktiv) aktiv.classList.remove('lytt-leser');
     aktiv = null; stripe.classList.remove('vis');
   }
+  stripe.addEventListener('change', function (e) {
+    if (!e.target.classList.contains('lytt-stemme')) return;
+    stemme = stemmer[+e.target.value] || stemme;
+    try { localStorage.setItem(LAGRET, stemme.name); } catch (err) {}
+    if (aktiv) { var el = aktiv, t = el._lyttTekst; stopp(); les(el, t); }   // start på nytt med ny stemme
+  });
+  velgStemme();
+  if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = velgStemme;
   stripe.addEventListener('click', function (e) {
     if (e.target.classList.contains('lytt-stopp')) stopp();
     if (e.target.classList.contains('lytt-fart')) {
@@ -2265,7 +2299,7 @@
     synth.speak(u);
   }
   function les(el, tekst) {
-    velgStemme();
+    if (!stemmer.length) velgStemme();
     if (!stemme) {
       melding('Denne maskinen har ingen norsk stemme. På Chromebook kan du bruke «Velg for å høre».');
       setTimeout(function () { stripe.classList.remove('vis'); }, 6000);
@@ -2274,7 +2308,7 @@
     var samme = aktiv === el;
     stopp();
     if (samme) return;              // andre klikk på samme knapp stopper
-    aktiv = el; el.classList.add('lytt-leser');
+    aktiv = el; el._lyttTekst = tekst; el.classList.add('lytt-leser');
     melding('Leser opp …');
     koe = setninger(tekst || tekstFra(el));
     neste();

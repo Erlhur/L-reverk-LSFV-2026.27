@@ -377,6 +377,7 @@ ol.fasit .d{ margin-right: 1.4rem; white-space: nowrap; display: inline-block; }
 .lytt-stripe button { border: 0; border-radius: 999px; padding: .35em .9em; background: #fff; color: #1f2d3a;
   font: inherit; font-weight: 600; cursor: pointer; }
 .lytt-stripe .lytt-stopp { background: #f2c98f; }
+.lytt-stripe select { border: 0; border-radius: 999px; padding: .35em .7em; font: inherit; max-width: 12rem; background: #fff; color: #1f2d3a; }
 @media print { .lytt-knapp, .lytt-stripe { display: none !important; } .lytt-ord { text-decoration: none; } }
 
 /* ---- Film, lyd og lenker (lag_kapittel.video / lyd / lenkekort) ---- */
