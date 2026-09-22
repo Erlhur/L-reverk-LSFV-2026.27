@@ -359,3 +359,31 @@ ol.fasit .d{ margin-right: 1.4rem; white-space: nowrap; display: inline-block; }
 .ovlenke:hover{ background: #e8f0f8; }
 
 @media print{ .ovbanner{ display: none; } }
+
+/* ---- Lytt: norsk opplesning (lytt.py) ---- */
+.lytt-knapp { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px;
+  margin: 0 .45em 0 0; padding: 0; vertical-align: -6px; border: 1px solid #c9d3dc; border-radius: 50%;
+  background: #fff; color: #2d5c7a; cursor: pointer; flex: none; }
+.lytt-knapp:hover, .lytt-knapp:focus-visible { background: #e8f1f8; border-color: #2d5c7a; outline: none; }
+.regel > .lytt-knapp, .forsok > .lytt-knapp, .delmaal > .lytt-knapp { float: right; margin: 0 0 .3em .6em; }
+.lytt-leser { background: #fff8d6 !important; box-shadow: 0 0 0 3px #fff8d6; border-radius: 4px; }
+.lytt-ord { cursor: pointer; text-decoration: underline dotted #8aa4b8; text-underline-offset: 3px; }
+.lytt-ord:hover, .lytt-ord:focus-visible { background: #eef5fa; outline: none; }
+.lytt-stripe { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%) translateY(150%);
+  display: flex; gap: .6em; align-items: center; padding: .55em .8em .55em 1.1em; background: #1f2d3a; color: #fff;
+  border-radius: 999px; box-shadow: 0 6px 24px rgba(0,0,0,.25); font-size: .95rem; z-index: 50;
+  transition: transform .2s ease; max-width: calc(100vw - 32px); }
+.lytt-stripe.vis { transform: translateX(-50%) translateY(0); }
+.lytt-stripe button { border: 0; border-radius: 999px; padding: .35em .9em; background: #fff; color: #1f2d3a;
+  font: inherit; font-weight: 600; cursor: pointer; }
+.lytt-stripe .lytt-stopp { background: #f2c98f; }
+@media print { .lytt-knapp, .lytt-stripe { display: none !important; } .lytt-ord { text-decoration: none; } }
+
+/* ---- Film, lyd og lenker (lag_kapittel.video / lyd / lenkekort) ---- */
+.media .media-ramme { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: .6em 0; background: #000; border-radius: 8px; overflow: hidden; }
+.media .media-ramme iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.media video { width: 100%; max-height: 70vh; margin: .6em 0; border-radius: 8px; background: #000; }
+.media audio { width: 100%; margin: .6em 0; }
+.media .media-papir { display: none; }
+.media-lenke a { word-break: break-all; font-weight: 600; }
+@media print { .media .media-ramme, .media video, .media audio { display: none !important; } .media .media-papir { display: block; font-style: italic; } }
