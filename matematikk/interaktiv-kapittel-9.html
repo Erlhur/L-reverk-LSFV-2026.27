@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 9. Statistikk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html" aria-current="page"><span class="nr">9</span><span>Statistikk</span></a></li><li class="dk"><a href="#d9-1">9.1 Å samle og ordne data</a></li><li class="dk"><a href="#d9-2">9.2 Diagrammer</a></li><li class="dk"><a href="#d9-3">9.3 Sentralmål</a></li><li class="dk"><a href="#d9-4">9.4 Variasjonsbredde og spredning</a></li><li class="dk"><a href="#d9-5">9.5 Å vurdere statistikk kritisk</a></li><li class="dk"><a href="#d9-6">9.6 Sannsynlighet</a></li><li class="dk"><a href="#d9-7">9.7 Blandede oppgaver</a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#64452f">
+<section class="kapittelapning" style="--kap:#64452f">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 9</p>
+    <h1 class="kapittel-tittel">Statistikk</h1>
+    <p class="ingress">21 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-9.html">←
+  Til kapittel 9: Statistikk</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 9, "tittel": "Statistikk", "farge": "#64452f", "aktiviteter": [{"id": "k9a1", "type": "sorter", "oppgave": "Sett tallene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "1", "verdi": 1}, {"vis": "3", "verdi": 3}, {"vis": "5", "verdi": 5}, {"vis": "7", "verdi": 7}, {"vis": "9", "verdi": 9}], "hint": "Dette må du alltid gjøre før du finner medianen.", "forklaring": "Når tallene står i rekkefølge, er medianen tallet i midten: 5."}, {"id": "k9a2", "type": "velg", "oppgave": "Hva er typetallet i 2, 3, 3, 5, 7?", "alternativer": [{"vis": "3", "riktig": true}, {"vis": "2", "riktig": false}, {"vis": "5", "riktig": false}, {"vis": "4", "riktig": false}], "hint": "Typetallet er det som går oftest igjen.", "forklaring": "3 står to ganger. Alle de andre står bare én gang."}, {"id": "k9a3", "type": "velg", "oppgave": "Hva er gjennomsnittet av 4, 6 og 8?", "alternativer": [{"vis": "6", "riktig": true}, {"vis": "4", "riktig": false}, {"vis": "8", "riktig": false}, {"vis": "18", "riktig": false}], "hint": "Legg sammen alle tallene og del på hvor mange det er.", "forklaring": "4 + 6 + 8 = 18, og 18 : 3 = 6."}, {"id": "k9a4", "type": "par", "oppgave": "Koble hvert ord til det det betyr.", "par": [{"v": "Gjennomsnitt", "h": "Summen delt på antallet"}, {"v": "Median", "h": "Tallet i midten"}, {"v": "Typetall", "h": "Det som går oftest igjen"}, {"v": "Variasjonsbredde", "h": "Størst minus minst"}]}, {"id": "k9a5", "type": "tallinje", "oppgave": "Sett merket på gjennomsnittet av 2 og 8.", "fra": 0, "til": 10, "mal": 5, "hint": "Legg sammen og del på 2.", "forklaring": "2 + 8 = 10, og 10 : 2 = 5. Gjennomsnittet ligger midt mellom.", "hakk": 1, "fest": 0.5, "toleranse": 0.3}, {"id": "k9a6", "type": "velg", "oppgave": "Hva er medianen i 2, 5 og 9?", "alternativer": [{"vis": "5", "riktig": true}, {"vis": "2", "riktig": false}, {"vis": "9", "riktig": false}, {"vis": "16", "riktig": false}], "hint": "Medianen er tallet i midten når de står i rekkefølge."}, {"id": "k9a7", "type": "sorter", "oppgave": "Sett tallene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "4", "verdi": 4}, {"vis": "8", "verdi": 8}, {"vis": "12", "verdi": 12}, {"vis": "15", "verdi": 15}, {"vis": "20", "verdi": 20}], "hint": "Når de står i rekkefølge, er medianen den i midten.", "forklaring": "Medianen er 12, fordi den står i midten av fem tall."}, {"id": "k9a8", "type": "par", "oppgave": "Koble hver tallrekke til gjennomsnittet sitt.", "par": [{"v": "2 og 4", "h": "3", "verdi": 3}, {"v": "4, 6 og 8", "h": "6", "verdi": 6}, {"v": "10 og 20", "h": "15", "verdi": 15}, {"v": "1 og 9", "h": "5", "verdi": 5}], "hint": "Legg sammen tallene og del på hvor mange det er."}, {"id": "k9a9", "type": "velg", "oppgave": "Hva er variasjonsbredden i 3, 7 og 12?", "alternativer": [{"vis": "9", "riktig": true}, {"vis": "12", "riktig": false}, {"vis": "7", "riktig": false}, {"vis": "22", "riktig": false}], "hint": "Trekk det minste tallet fra det største.", "forklaring": "12 − 3 = 9."}, {"id": "k9a10", "type": "tallinje", "oppgave": "Sett merket på medianen i 2, 4 og 9.", "fra": 0, "til": 10, "mal": 4, "hint": "Medianen er tallet i midten, ikke gjennomsnittet.", "forklaring": "Tallene står allerede i rekkefølge. Det i midten er 4.", "hakk": 1, "fest": 0.5, "toleranse": 0.3}, {"id": "k9a11", "type": "kurver", "oppgave": "Hvor sannsynlig er det?", "kurver": ["Sikkert", "Kan skje", "Umulig"], "brikker": [{"vis": "Terningen viser under 7", "kurv": 0}, {"vis": "Det blir mandag etter søndag", "kurv": 0}, {"vis": "Terningen viser 3", "kurv": 1}, {"vis": "Det regner i morgen", "kurv": 1}, {"vis": "Terningen viser 7", "kurv": 2}, {"vis": "Terningen viser 0", "kurv": 2}], "hint": "En terning har bare tallene 1 til 6."}, {"id": "k9a12", "type": "velg", "oppgave": "Hva er gjennomsnittet av 12, 16, 20 og 24?", "alternativer": [{"vis": "18", "riktig": true}, {"vis": "16", "riktig": false}, {"vis": "20", "riktig": false}, {"vis": "72", "riktig": false}], "hint": "Legg sammen alle fire og del på 4.", "forklaring": "12 + 16 + 20 + 24 = 72, og 72 : 4 = 18."}, {"id": "k9a13", "type": "velg", "oppgave": "Hva er medianen i 2, 2, 6, 10 og 20?", "alternativer": [{"vis": "6", "riktig": true}, {"vis": "8", "riktig": false}, {"vis": "2", "riktig": false}, {"vis": "20", "riktig": false}], "hint": "Tallene står allerede i rekkefølge. Ta det i midten.", "forklaring": "Med fem tall er det tredje tallet medianen."}, {"id": "k9a14", "type": "velg", "oppgave": "Hva er typetallet i 2, 6, 6, 6 og 11?", "alternativer": [{"vis": "6", "riktig": true}, {"vis": "2", "riktig": false}, {"vis": "11", "riktig": false}, {"vis": "31", "riktig": false}], "hint": "Hvilket tall går oftest igjen?", "forklaring": "6 står tre ganger."}, {"id": "k9a15", "type": "velg", "oppgave": "Hva er variasjonsbredden i 30, 35, 45 og 60?", "alternativer": [{"vis": "30", "riktig": true}, {"vis": "60", "riktig": false}, {"vis": "15", "riktig": false}, {"vis": "170", "riktig": false}], "hint": "Trekk det minste tallet fra det største.", "forklaring": "60 − 30 = 30."}, {"id": "k9a16", "type": "tallinje", "oppgave": "Sett merket på gjennomsnittet av 4, 6 og 8.", "fra": 0, "til": 10, "mal": 6, "hint": "Legg sammen de tre tallene og del på 3.", "forklaring": "4 + 6 + 8 = 18, og 18 : 3 = 6.", "hakk": 1, "fest": 0.5, "toleranse": 0.3}, {"id": "k9a17", "type": "velg", "oppgave": "Et sektordiagram er delt i fem like deler. Hvor mange prosent er hver?", "alternativer": [{"vis": "20 %", "riktig": true}, {"vis": "5 %", "riktig": false}, {"vis": "25 %", "riktig": false}, {"vis": "50 %", "riktig": false}], "hint": "Hele sirkelen er 100 %.", "forklaring": "100 : 5 = 20 %."}, {"id": "k9a18", "type": "sorter", "oppgave": "Sett sannsynlighetene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "{1/6}", "verdi": 0.16666666666666666}, {"vis": "{1/3}", "verdi": 0.3333333333333333}, {"vis": "{1/2}", "verdi": 0.5}, {"vis": "{2/3}", "verdi": 0.6666666666666666}, {"vis": "{5/6}", "verdi": 0.8333333333333334}], "hint": "Alle har nevner 6 eller kan skrives med nevner 6."}, {"id": "k9a19", "type": "kurver", "oppgave": "Er sannsynligheten mindre eller større enn en halv?", "kurver": ["Mindre enn {1/2}", "Større enn {1/2}"], "brikker": [{"vis": "{1/6}", "kurv": 0}, {"vis": "{1/3}", "kurv": 0}, {"vis": "{2/5}", "kurv": 0}, {"vis": "{2/3}", "kurv": 1}, {"vis": "{3/4}", "kurv": 1}, {"vis": "{5/6}", "kurv": 1}], "hint": "En halv er det samme som 0,5.", "prov": ["v < 0.5", "v > 0.5"]}, {"id": "k9a20", "type": "velg", "oppgave": "Hva er sannsynligheten for å få et oddetall med en terning?", "alternativer": [{"vis": "{1/2}", "riktig": true}, {"vis": "{1/6}", "riktig": false}, {"vis": "{1/3}", "riktig": false}, {"vis": "{2/3}", "riktig": false}], "hint": "Oddetallene på en terning er 1, 3 og 5.", "forklaring": "Tre av seks utfall gir oddetall, altså {3/6} = {1/2}."}, {"id": "k9a21", "type": "velg", "oppgave": "I en pose er det 3 grønne og 7 gule kuler. Sjansen for grønn?", "alternativer": [{"vis": "{3/10}", "riktig": true}, {"vis": "{3/7}", "riktig": false}, {"vis": "{7/10}", "riktig": false}, {"vis": "{1/3}", "riktig": false}], "hint": "Hvor mange kuler er det til sammen?", "forklaring": "3 av 10 kuler er grønne."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><a class="forrige" href="interaktiv-kapittel-8.html"><span class="etikett">Forrige kapittel</span><strong>8. Geometri</strong></a><a class="neste" href="interaktiv-kapittel-10.html"><span class="etikett">Neste kapittel</span><strong>10. Temaer for modul 4</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

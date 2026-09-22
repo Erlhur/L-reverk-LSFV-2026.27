@@ -1,0 +1,361 @@
+/* ==========================================================
+   Nettversjon — layout og navigasjon
+   Bygger på bok.css. Alt som gjelder skjerm, står her.
+   ========================================================== */
+
+:root{
+  --topp: #123252;
+  --topp-lys: #1d4e89;
+  --flate: #ffffff;
+  --bunn: #f4f6f8;
+  --kant: #dfe3e8;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--bunn);
+  font-family: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: #1f2430;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- topplinje ---------- */
+.topplinje{
+  background: var(--topp);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  box-shadow: 0 1px 6px rgba(0,0,0,.18);
+}
+.topplinje .innmat{
+  max-width: 1680px; margin: 0 auto;
+  display: flex; align-items: center; gap: 1rem;
+  padding: .7rem 1rem;
+}
+.topplinje a{ color: #fff; text-decoration: none; }
+.merke{ font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+.merke span{ font-weight: 400; opacity: .8; }
+.topplinje nav{ margin-left: auto; display: flex; gap: .3rem; flex-wrap: wrap; }
+.topplinje nav a{
+  padding: .35rem .7rem; border-radius: 6px; font-size: .94rem;
+}
+.topplinje nav a:hover{ background: rgba(255,255,255,.12); }
+.topplinje nav a[aria-current="page"]{ background: rgba(255,255,255,.2); font-weight: 600; }
+
+.menyknapp{
+  display: none;
+  background: rgba(255,255,255,.14); border: 0; color: #fff;
+  font-size: 1rem; padding: .4rem .7rem; border-radius: 6px; cursor: pointer;
+}
+
+/* ---------- sideoppsett ---------- */
+.side{
+  max-width: 1680px; margin: 0 auto;
+  display: grid; grid-template-columns: 270px minmax(0,1fr);
+  gap: 1.6rem; padding: 1.6rem 1rem 4rem;
+  align-items: start;
+}
+.sidemeny{
+  position: sticky; top: 68px;
+  background: var(--flate); border: 1px solid var(--kant); border-radius: 10px;
+  padding: 1rem; font-size: .93rem;
+  max-height: calc(100vh - 90px); overflow-y: auto;
+}
+.sidemeny h2{
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: #5a6272; margin: 0 0 .6rem; border: 0; padding: 0;
+}
+.sidemeny ol{ list-style: none; margin: 0 0 1rem; padding: 0; }
+.sidemeny li{ margin: 0; }
+.sidemeny a{
+  display: flex; gap: .5rem; align-items: baseline;
+  padding: .32rem .45rem; border-radius: 6px;
+  color: #1f2430; text-decoration: none; line-height: 1.3;
+}
+.sidemeny a:hover{ background: #eef1f4; }
+.sidemeny a[aria-current="page"]{ background: var(--kap, #1d4e89); color: #fff; font-weight: 600; }
+.sidemeny .nr{ font-weight: 700; min-width: 1.9rem; opacity: .75; }
+.sidemeny .dk a{ padding-left: 2.4rem; font-size: .89rem; color: #5a6272; }
+
+.innhold{
+  background: var(--flate); border: 1px solid var(--kant); border-radius: 10px;
+  padding: 1.6rem 2rem 2.4rem;
+  min-width: 0;
+}
+
+/* ---------- justeringer av bokstilene for skjerm ---------- */
+@media screen{
+  /* bok.css setter body til 52rem for skjerm — det gjaldt da hvert kapittel
+     ble forhåndsvist som en enkeltside. Her styrer nettoppsettet bredden. */
+  body{ max-width: none; margin: 0; padding: 0; }
+
+  .kapittelapning{
+    min-height: 0 !important;
+    break-before: auto; page-break-before: auto; break-after: auto;
+    margin-bottom: 2rem;
+  }
+  .kapittelapning .illustrasjon svg,
+  .kapittelapning .illustrasjon img{ max-width: 100%; }
+  .nyside{ break-before: auto; page-break-before: auto; }
+  section[id]{ scroll-margin-top: 80px; }
+  figure svg, figure img{ max-width: 100%; height: auto; }
+  table{ max-width: 100%; }
+  .ordliste{ display: block; overflow-x: auto; white-space: nowrap; }
+  .ordliste table{ white-space: normal; }
+}
+
+/* ---------- forrige/neste ---------- */
+.blaing{
+  display: flex; justify-content: space-between; gap: 1rem;
+  margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--kant);
+}
+.blaing a{
+  flex: 1; text-decoration: none; color: #1f2430;
+  border: 1px solid var(--kant); border-radius: 8px; padding: .8rem 1rem;
+  background: #fafbfc;
+}
+.blaing a:hover{ border-color: var(--topp-lys); }
+.blaing .etikett{
+  display: block; font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: #5a6272; margin-bottom: .2rem;
+}
+.blaing .neste{ text-align: right; }
+.blaing .tom{ visibility: hidden; }
+
+/* ---------- forside ---------- */
+.helt{
+  background: linear-gradient(160deg, #123252, #1d4e89);
+  color: #fff; padding: 3.2rem 1rem 3.6rem;
+}
+.helt .innmat{ max-width: 1680px; margin: 0 auto; }
+.helt h1{ font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 .6rem; color: #fff; border: 0; padding: 0; }
+.helt p{ font-size: 1.08rem; max-width: 46rem; opacity: .92; margin: 0; }
+
+.fagkort{
+  max-width: 1680px; margin: -2rem auto 0; padding: 0 1rem 3rem;
+  display: grid; gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.fagkort > a, .fagkort > div{
+  background: var(--flate); border: 1px solid var(--kant); border-radius: 12px;
+  padding: 1.4rem 1.5rem; text-decoration: none; color: #1f2430;
+  box-shadow: 0 2px 10px rgba(18,50,82,.07);
+  display: block;
+}
+.fagkort > a:hover{ border-color: var(--topp-lys); box-shadow: 0 4px 16px rgba(18,50,82,.13); }
+.fagkort h2{ margin: 0 0 .4rem; font-size: 1.3rem; border: 0; padding: 0; }
+.fagkort p{ margin: 0; color: #5a6272; font-size: .96rem; }
+.merkelapp{
+  display: inline-block; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+  padding: .15rem .5rem; border-radius: 4px; margin-bottom: .6rem; font-weight: 700;
+}
+.klar{ background: #e7f2e8; color: #2e7d32; }
+.kommer{ background: #f0f1f3; color: #5a6272; }
+.fagkort .venter{ opacity: .62; }
+
+/* ---------- kapittelrutenett ---------- */
+.kapittelrutenett{
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin: 1.4rem 0 0;
+}
+.kapittelrutenett a{
+  display: block; text-decoration: none; color: #1f2430;
+  border: 1px solid var(--kant); border-left: 6px solid var(--kap);
+  border-radius: 8px; padding: .9rem 1rem; background: #fafbfc;
+}
+.kapittelrutenett a:hover{ background: #fff; box-shadow: 0 2px 10px rgba(18,50,82,.09); }
+.kapittelrutenett .nr{
+  display: block; font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--kap); font-weight: 700; margin-bottom: .15rem;
+}
+.kapittelrutenett strong{ font-size: 1.02rem; display: block; margin-bottom: .3rem; }
+.kapittelrutenett span.antall{ font-size: .85rem; color: #5a6272; }
+
+/* ---------- mobil ----------
+   Reglene står i to utgaver: én som slår inn av seg selv på smale skjermer,
+   og én som kan tvinges fram med bryteren i topplinjen.
+   --------------------------------------------------------------------- */
+@media (max-width: 860px){
+  body:not(.vis-pc) .side{ grid-template-columns: 1fr; gap: 1rem; padding: 1rem .7rem 3rem; }
+  body:not(.vis-pc) .sidemeny{ position: static; max-height: none; display: none; }
+  body:not(.vis-pc) .sidemeny.apen{ display: block; }
+  body:not(.vis-pc) .menyknapp{ display: inline-block; }
+  body:not(.vis-pc) .innhold{ padding: 1.1rem 1rem 1.8rem; border-radius: 8px; }
+  body:not(.vis-pc) .topplinje nav{ width: 100%; margin-left: 0; order: 3; }
+  body:not(.vis-pc) .blaing{ flex-direction: column; }
+  body:not(.vis-pc) .blaing .neste{ text-align: left; }
+  body:not(.vis-pc) .blaing .tom{ display: none; }
+}
+
+/* tvungen mobilvisning uansett skjermbredde */
+  body.vis-mobil .side{ grid-template-columns: 1fr; gap: 1rem; padding: 1rem .7rem 3rem; }
+  body.vis-mobil .sidemeny{ position: static; max-height: none; display: none; }
+  body.vis-mobil .sidemeny.apen{ display: block; }
+  body.vis-mobil .menyknapp{ display: inline-block; }
+  body.vis-mobil .innhold{ padding: 1.1rem 1rem 1.8rem; border-radius: 8px; }
+  body.vis-mobil .topplinje nav{ width: 100%; margin-left: 0; order: 3; }
+  body.vis-mobil .blaing{ flex-direction: column; }
+  body.vis-mobil .blaing .neste{ text-align: left; }
+  body.vis-mobil .blaing .tom{ display: none; }
+
+/* ---------- visningsbryter ---------- */
+.visningsbryter{
+  display: inline-flex; gap: .15rem; margin-left: .5rem;
+  background: rgba(255,255,255,.12); border-radius: 7px; padding: .15rem;
+}
+.visningsbryter button{
+  background: none; border: 0; color: #fff; cursor: pointer;
+  font: inherit; font-size: .84rem; padding: .28rem .6rem; border-radius: 5px;
+  opacity: .72; white-space: nowrap;
+}
+.visningsbryter button:hover{ opacity: 1; }
+.visningsbryter button[aria-pressed="true"]{
+  background: rgba(255,255,255,.22); opacity: 1; font-weight: 600;
+}
+
+/* tvungen PC-visning: sidemenyen skal alltid vises */
+body.vis-pc .sidemeny{ display: block; }
+body.vis-pc .menyknapp{ display: none; }
+body.vis-pc .side{ grid-template-columns: 270px minmax(0,1fr); }
+
+/* ---------- utskrift fra nettleser ---------- */
+@media print{
+  .topplinje, .sidemeny, .blaing, .menyknapp, .visningsbryter{ display: none !important; }
+  .side{ display: block; padding: 0; max-width: none; }
+  .innhold{ border: 0; padding: 0; border-radius: 0; }
+}
+
+/* ==========================================================
+   Lesebredde på brede skjermer
+   Løpende tekst holdes på en lesbar linjelengde, mens figurer,
+   tabeller og oppgavebolker får bruke hele bredden.
+   ========================================================== */
+.innhold > section > p,
+.innhold > p,
+.innhold > section > .delmaal,
+.innhold .illtekst,
+.innhold figcaption{
+  max-width: 74ch;
+  margin-left: auto;
+  margin-right: auto;   /* står midt under bildet, også når bildet er bredere enn teksten */
+}
+.innhold .oppgavebolk,
+.innhold .regel,
+.innhold .eksempel,
+.innhold .sjekkliste,
+.innhold .maalboks,
+.innhold table,
+.innhold figure,
+.innhold .kapittelapning{
+  max-width: none;
+}
+.innhold .oppgavebolk p,
+.innhold .regel p,
+.innhold .eksempel p{ max-width: none; }
+
+/* figurene får bruke plassen — nyttig når boka vises på projektor */
+.innhold figure svg,
+.innhold figure img{ width: 100%; height: auto; }
+.innhold .kapittelapning .illustrasjon svg{ max-width: 1000px; }
+
+/* ordlisten trenger ikke være bredere enn den er lesbar */
+.innhold table.ordliste{ max-width: 1100px; }
+
+/* ==========================================================
+   Fasit på nett
+   Elevsidene har fasiten samlet til slutt i kapitlet. Eleven gjør
+   oppgaven og slår så opp nummeret sitt — svaret står ikke ved
+   siden av oppgaven. Lærersidene har hele fasiten med kommentarer.
+   ========================================================== */
+
+.kapittelfasit{
+  margin: 3rem 0 0; padding: 1.6rem 0 0;
+  border-top: 3px solid var(--kap, #1d4e89);
+}
+.kapittelfasit > h2{
+  margin-top: 0; border-bottom-color: var(--kap, #1d4e89); color: var(--kap, #1d4e89);
+}
+.fasitintro{
+  color: #5a6272; font-size: .98rem; margin: 0 0 1.4rem;
+}
+
+.fasitseksjon{ margin-bottom: 1.6rem; }
+.fasitseksjon > h3{
+  background: var(--graa-lys, #f5f6f8);
+  border-left: 5px solid var(--kap, #1d4e89);
+  padding: .4rem .8rem; border-radius: 0 6px 6px 0; margin-top: 1.6rem;
+  color: var(--tekst, #1f2430); font-size: 1.02rem;
+}
+.fasitseksjon .fri{ font-size: .95rem; color: var(--tekst-svak, #5a6272); font-style: italic; }
+ol.fasit{ padding-left: 2.4rem; margin: .5rem 0 0; list-style: none; }
+ol.fasit > li{
+  margin-bottom: .45rem; break-inside: avoid; position: relative; counter-increment: fas;
+}
+ol.fasit > li::before{
+  content: counter(fas) "."; position: absolute; left: -2.4rem; width: 2rem;
+  text-align: right; font-weight: 700; color: var(--kap, #1d4e89);
+}
+ol.fasit .d{ margin-right: 1.4rem; white-space: nowrap; display: inline-block; }
+
+.sidemeny .fasitlenke a{ font-weight: 600; }
+
+/* ---------- lærersider ---------- */
+.laerermerke{
+  background: #6a1b9a; color: #fff;
+  font-size: .78rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: .45rem .9rem; border-radius: 6px;
+  margin: 0 0 1.2rem; display: inline-block;
+}
+.laererside .sidemeny a[aria-current="page"]{ background: #6a1b9a; }
+.laererside .fasitseksjon > h3{ border-left-color: var(--kap, #6a1b9a); }
+
+.tilbakelenke{ margin: 0 0 1.4rem; font-size: .95rem; }
+.tilbakelenke a{ color: var(--kap, #1d4e89); text-decoration: none; font-weight: 600; }
+.tilbakelenke a:hover{ text-decoration: underline; }
+
+.laererlenke{
+  display: inline-block; color: #6a1b9a; font-weight: 700; text-decoration: none;
+  border: 1px solid #d6bde0; border-radius: 8px; padding: .55rem 1rem; background: #faf5fc;
+}
+.laererlenke:hover{ background: #f3e5f5; }
+
+/* ---------- utskrift ----------
+   Et utskrevet kapittel skal fortsatt være en ren elevbok, slik boka er.
+   Fasiten blir derfor ikke med. Lærersidene skrives ut som de er. */
+@media print{
+  .kapittelfasit{ display: none !important; }
+  .laererside .kapittelfasit{ display: block !important; }
+  .laerermerke{ background: none; color: #6a1b9a; border: 1px solid #6a1b9a; }
+  .tilbakelenke{ display: none; }
+}
+
+/* ---------- lenke fra kapitlet til øvingssida ---------- */
+.ovbanner{ margin: 0 0 1.6rem; }
+.ovbanner a{
+  display: flex; align-items: center; gap: .9rem;
+  text-decoration: none; color: #1f2430;
+  border: 1px solid var(--kant, #dfe3e8);
+  border-left: 6px solid var(--kap, #1d4e89);
+  border-radius: 10px; padding: .85rem 1.1rem; background: #fafbfc;
+}
+.ovbanner a:hover{ background: #fff; box-shadow: 0 2px 10px rgba(18,50,82,.09); }
+.ovbanner .ikon{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2rem; height: 2.2rem; flex: none; border-radius: 50%;
+  background: var(--kap, #1d4e89); color: #fff; font-size: .9rem;
+}
+.ovbanner strong{ display: block; font-size: 1.05rem; }
+.ovbanner .under{ display: block; font-size: .92rem; color: #5a6272; }
+
+.ovlenke{
+  display: inline-block; color: #1d4e89; font-weight: 700; text-decoration: none;
+  border: 1px solid #b8d0e6; border-radius: 8px; padding: .55rem 1rem; background: #f2f7fc;
+}
+.ovlenke:hover{ background: #e8f0f8; }
+
+@media print{ .ovbanner{ display: none; } }

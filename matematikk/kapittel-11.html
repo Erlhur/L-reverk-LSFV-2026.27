@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>11. Digitale verktøy — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html" aria-current="page"><span class="nr">11</span><span>Digitale verktøy</span></a></li><li class="dk"><a href="#d11-1">11.1 Regneark — formler og cellereferanser</a></li><li class="dk"><a href="#d11-2">11.2 Regneark — HVIS og diagram</a></li><li class="dk"><a href="#d11-3">11.3 GeoGebra</a></li><li class="dk"><a href="#d11-4">11.4 Scratch</a></li><li class="dk"><a href="#d11-5">11.5 Python</a></li><li class="dk"><a href="#d11-6">11.6 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li></ol></aside>
+<main class="innhold" style="--kap:#3f4550">
+
+
+<section class="kapittelapning" style="--kap:#3f4550">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 11</p>
+    <h1 class="kapittel-tittel">Digitale verktøy</h1>
+    <p class="ingress">
+      Regneark, GeoGebra, Scratch og Python gjør ikke matematikken enklere i seg selv — men de
+      lar deg regne på mange tall samtidig, se en funksjon som graf, og få datamaskinen til å
+      gjenta arbeidet for deg. I dette kapitlet møter du de samme oppgavene som tidligere i
+      boka, men løst med verktøy i stedet for blyant.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regneark, GeoGebra-graf, Scratch-blokker og Python-kode">
+  <!-- regneark -->
+  <text x="104" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">REGNEARK</text>
+  <g stroke="#3f4550" stroke-width="1" fill="none">
+    <rect x="30" y="42" width="150" height="106" fill="#fff" stroke-width="1.4"/>
+    <line x1="30" y1="62" x2="180" y2="62" stroke-width="1.3"/>
+    <line x1="30" y1="84" x2="180" y2="84"/><line x1="30" y1="106" x2="180" y2="106"/>
+    <line x1="30" y1="127" x2="180" y2="127"/>
+    <line x1="70" y1="42" x2="70" y2="148"/><line x1="106" y1="42" x2="106" y2="148"/>
+    <line x1="143" y1="42" x2="143" y2="148"/>
+  </g>
+  <g font-family="Arial" font-size="8.5" fill="#5a6272" text-anchor="middle">
+    <text x="50" y="56">A</text><text x="88" y="56">B</text><text x="124" y="56">C</text><text x="161" y="56">D</text>
+  </g>
+  <g font-family="Arial" font-size="8.5" fill="#1f2430" text-anchor="middle">
+    <text x="50" y="77">Brød</text><text x="88" y="77">2</text><text x="124" y="77">39</text>
+    <text x="50" y="99">Melk</text><text x="88" y="99">3</text><text x="124" y="99">23</text>
+  </g>
+  <rect x="143" y="64" width="37" height="20" fill="#3f4550" fill-opacity="0.18" stroke="#3f4550" stroke-width="1.3"/>
+  <text x="161" y="77" font-family="Consolas,monospace" font-size="8" fill="#1f4e5f" text-anchor="middle">78</text>
+  <rect x="30" y="158" width="150" height="20" rx="3" fill="#eef0f2" stroke="#3f4550" stroke-width="1.1"/>
+  <text x="105" y="172" font-family="Consolas,monospace" font-size="10" fill="#1f4e5f" text-anchor="middle">=B2*C2</text>
+  <text x="104" y="196" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">formelen regner for deg</text>
+  <text x="104" y="210" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">— og kan kopieres nedover</text>
+
+  <line x1="200" y1="20" x2="200" y2="252" stroke="#d6d9de"/>
+
+  <!-- geogebra -->
+  <text x="300" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">GEOGEBRA</text>
+  <line x1="230" y1="150" x2="372" y2="150" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="248" y1="46" x2="248" y2="168" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="234" y1="138" x2="368" y2="58" stroke="#3f4550" stroke-width="2.2"/>
+  <line x1="234" y1="62" x2="368" y2="142" stroke="#a0562f" stroke-width="2.2"/>
+  <circle cx="301" cy="100" r="5" fill="#c62828"/>
+  <text x="316" y="96" font-family="Arial" font-size="9" fill="#c62828">skjæring</text>
+  <rect x="228" y="176" width="146" height="20" rx="3" fill="#eef0f2" stroke="#3f4550" stroke-width="1.1"/>
+  <text x="301" y="190" font-family="Consolas,monospace" font-size="10" fill="#1f4e5f" text-anchor="middle">f(x)=2x+1</text>
+  <text x="300" y="214" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">se funksjonen som graf</text>
+
+  <line x1="394" y1="20" x2="394" y2="252" stroke="#d6d9de"/>
+
+  <!-- scratch -->
+  <text x="478" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">SCRATCH</text>
+  <g>
+    <rect x="416" y="44" width="124" height="24" rx="5" fill="#f9a825"/>
+    <rect x="416" y="72" width="124" height="24" rx="5" fill="#c9722a"/>
+    <rect x="424" y="100" width="116" height="24" rx="5" fill="#2e7d32"/>
+    <rect x="424" y="128" width="116" height="24" rx="5" fill="#1d4e89"/>
+    <rect x="416" y="156" width="124" height="24" rx="5" fill="#c9722a"/>
+  </g>
+  <g font-family="Arial" font-size="9" fill="#fff">
+    <text x="426" y="60">sett teller til 0</text>
+    <text x="426" y="88">gjenta 5 ganger</text>
+    <text x="434" y="116">endre teller med 1</text>
+    <text x="434" y="144">si teller</text>
+    <text x="426" y="172">slutt</text>
+  </g>
+  <text x="478" y="200" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">blokker som klikkes sammen</text>
+
+  <line x1="558" y1="20" x2="558" y2="252" stroke="#d6d9de"/>
+
+  <!-- python -->
+  <text x="598" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">PYTHON</text>
+  <rect x="566" y="44" width="62" height="112" rx="5" fill="#eef0f2" stroke="#3f4550" stroke-width="1.2"/>
+  <g font-family="Consolas,monospace" font-size="8" fill="#1f4e5f">
+    <text x="572" y="62">b = 10000</text>
+    <text x="572" y="80">for i in</text>
+    <text x="578" y="94">range(4):</text>
+    <text x="578" y="112">b = b*1.03</text>
+    <text x="572" y="134">print(b)</text>
+  </g>
+  <text x="598" y="180" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">datamaskinen</text>
+  <text x="598" y="194" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">gjentar for deg</text>
+
+  <!-- bunnlinje -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="298" font-family="Arial" font-size="11" font-weight="bold" fill="#3f4550">ALLE FIRE ER GRATIS</text>
+  <g font-family="Arial" font-size="11.5" fill="#1f2430">
+    <text x="200" y="298">og kjører i nettleseren</text>
+    <text x="400" y="298">— ingen installasjon nødvendig</text>
+  </g>
+</svg>
+<p class="illtekst">Fire verktøy med hvert sitt bruksområde: regneark til mange tall, GeoGebra til å se former og grafer, Scratch til å bygge et program av blokker, og Python til å skrive det som tekst.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">11.1</span><span>Regneark — formler og cellereferanser</span></li>
+    <li><span class="dknr">11.2</span><span>Regneark — HVIS og diagram</span></li>
+    <li><span class="dknr">11.3</span><span>GeoGebra</span></li>
+    <li><span class="dknr">11.4</span><span>Scratch</span></li>
+    <li><span class="dknr">11.5</span><span>Python</span></li>
+    <li><span class="dknr">11.6</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-11.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>ordne, gruppere og presentere data med og uten digitale verktøy, og begrunne valg av framstilling</li>
+      <li>finne sentralmål og variasjonsbredde med og uten digitale verktøy, og forholde seg kritisk til resultatene</li>
+      <li>bruke og samtale om skriftlig regning med hele tall og desimaltall i addisjon, subtraksjon, enkel multiplikasjon og enkel divisjon og bruke digitale verktøy i beregninger</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 2 — deltakeren skal kunne</p>
+    <ul>
+      <li>bruke referansesystemet og notasjonen for formler i et regneark, og bruke regneark til å utføre og presentere enkle beregninger</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Modul 2-målet om regneark er tatt med fordi det er grunnlaget for 11.1 og 11.2. Læreplanen har ingen egne mål om programmering. Scratch, Python og GeoGebra er hentet fra kjerneaktivitetene i skolens årsplan, der de brukes som arbeidsmåter for å nå målene i de andre kapitlene. Delkapittel 11.3 til 11.5 er derfor arbeidsmåter, ikke pensum i seg selv.</p>
+</section>
+
+<div class="regel">
+  <span class="etikett">Slik kommer du i gang</span>
+  <ul>
+    <li><strong>Regneark</strong> — Excel, Google Regneark eller LibreOffice Calc. Formelnavnene i boka er de norske.</li>
+    <li><strong>GeoGebra</strong> — geogebra.org, kjører i nettleseren.</li>
+    <li><strong>Scratch</strong> — scratch.mit.edu, ingen installasjon.</li>
+    <li><strong>Python</strong> — trinket.io eller replit.com, kjører i nettleseren.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Alle fire er gratis. Du trenger ingen forkunnskaper — oppgavene
+  begynner helt fra bunnen.</p>
+</div>
+
+<!-- ============================================================
+     11.1 REGNEARK — FORMLER OG CELLEREFERANSER
+     ============================================================ -->
+<section id="k111">
+<h2 id="d11-1">11.1 Regneark — formler og cellereferanser</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skrive celleadresser riktig</li>
+    <li>lage enkle formler med regnetegn</li>
+    <li>bruke cellereferanser i stedet for faste tall</li>
+    <li>bruke SUMMER og GJENNOMSNITT</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>celle</td><td></td><td>Tallet står i celle B2.</td></tr>
+    <tr><td>rad og kolonne</td><td></td><td>Kolonne B, rad 2.</td></tr>
+    <tr><td>formel</td><td></td><td>Formelen begynner med likhetstegn.</td></tr>
+    <tr><td>cellereferanse</td><td></td><td>B2 er en cellereferanse.</td></tr>
+    <tr><td>å kopiere nedover</td><td></td><td>Jeg kopierer formelen nedover.</td></tr>
+    <tr><td>område</td><td></td><td>Området er D2 til D10.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Et regneark er rutenett av celler. Hver celle har en adresse: bokstaven er kolonnen,
+  tallet er raden. Alt som begynner med <code>=</code> blir regnet ut av programmet.
+  Det store poenget er at du skriver <em>hvor</em> tallene står, ikke <em>hvilke</em> tall det er
+  — da regner arket på nytt av seg selv når tallene endres.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Formel med cellereferanser kopiert nedover">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef0f2" stroke="#cfd4d9"/>
+  <text x="310" y="38" font-family="Arial" font-size="12" font-weight="bold" fill="#3f4550" text-anchor="middle">SKRIV HVOR TALLENE STÅR, IKKE HVILKE</text>
+
+  <g stroke="#3f4550" stroke-width="1" fill="none">
+    <rect x="60" y="52" width="290" height="110" fill="#fff" stroke-width="1.4"/>
+    <line x1="60" y1="72" x2="350" y2="72" stroke-width="1.3"/>
+    <line x1="60" y1="94" x2="350" y2="94"/><line x1="60" y1="116" x2="350" y2="116"/>
+    <line x1="60" y1="138" x2="350" y2="138"/>
+    <line x1="140" y1="52" x2="140" y2="162"/><line x1="200" y1="52" x2="200" y2="162"/>
+    <line x1="265" y1="52" x2="265" y2="162"/>
+  </g>
+  <g font-family="Arial" font-size="9" fill="#5a6272" text-anchor="middle">
+    <text x="100" y="66">A</text><text x="170" y="66">B</text><text x="232" y="66">C</text><text x="307" y="66">D</text>
+  </g>
+  <g font-family="Arial" font-size="9.5" fill="#1f2430" text-anchor="middle">
+    <text x="100" y="87">Vare</text><text x="170" y="87">Antall</text><text x="232" y="87">Pris</text><text x="307" y="87">Sum</text>
+    <text x="100" y="109">Brød</text><text x="170" y="109">2</text><text x="232" y="109">39</text>
+    <text x="100" y="131">Melk</text><text x="170" y="131">3</text><text x="232" y="131">23</text>
+    <text x="100" y="153">Smør</text><text x="170" y="153">1</text><text x="232" y="153">62</text>
+  </g>
+  <g font-family="Consolas,monospace" font-size="9" fill="#1f4e5f" text-anchor="middle">
+    <text x="307" y="109">=B2*C2</text><text x="307" y="131">=B3*C3</text><text x="307" y="153">=B4*C4</text>
+  </g>
+  <path d="M 360 108 q 22 22 0 44" fill="none" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#pk11)"/>
+  <defs><marker id="pk11" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#2e7d32"/></marker></defs>
+  <text x="404" y="132" font-family="Arial" font-size="10.5" fill="#2e7d32">kopieres nedover</text>
+
+  <text x="480" y="86" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">Radnummeret følger</text>
+  <text x="480" y="102" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">med av seg selv.</text>
+  <text x="480" y="164" font-family="Consolas,monospace" font-size="11" fill="#1f4e5f" text-anchor="middle">=SUMMER(D2:D4)</text>
+</svg>
+<figcaption>Figur 11.1 &nbsp;Formelen skriver du bare én gang. Når du kopierer den nedover, endrer radnumrene seg automatisk.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Skriv celleadressen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>kolonne B, rad 3</li><li><span class="bokstav">b)</span>kolonne D, rad 7</li>
+          <li><span class="bokstav">c)</span>kolonne A, rad 12</li>
+        </ul>
+      </li>
+      <li>Skriv celleadressen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>kolonne C, rad 5</li>
+          <li><span class="bokstav">b)</span>kolonne F, rad 2</li>
+          <li><span class="bokstav">c)</span>kolonne E, rad 10</li>
+        </ul>
+      </li>
+      <li>Hva regner formelen ut?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><code>=2+3</code></li><li><span class="bokstav">b)</span><code>=A1+A2</code></li>
+          <li><span class="bokstav">c)</span><code>=B2*4</code></li>
+        </ul>
+      </li>
+      <li>Hva regner formelen ut?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><code>=4+9</code></li>
+          <li><span class="bokstav">b)</span><code>=B1+B2</code></li>
+          <li><span class="bokstav">c)</span><code>=C3*5</code></li>
+        </ul>
+      </li>
+      <li>Skriv formelen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>legg sammen A1 og B1</li>
+          <li><span class="bokstav">b)</span>gang C2 med D2</li>
+          <li><span class="bokstav">c)</span>trekk B3 fra A3</li>
+        </ul>
+      </li>
+      <li>Skriv formelen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>legg sammen C1 og D1</li>
+          <li><span class="bokstav">b)</span>gang A2 med B2</li>
+          <li><span class="bokstav">c)</span>trekk D4 fra C4</li>
+        </ul>
+      </li>
+      <li>Hvilket tegn må alltid stå først i en formel i et regneark?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Et regneark har varenavn i kolonne A, antall i kolonne B og pris per stykk i kolonne C.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilken formel skriver du i D2 for å få totalprisen?</li>
+          <li><span class="bokstav">b)</span>Hva står det i D3 når du kopierer formelen nedover?</li>
+        </ul>
+      </li>
+      <li>Skriv formelen for summen av alle tallene fra D2 til D10.</li>
+      <li>Skriv formelen for gjennomsnittet av tallene fra B2 til B20.</li>
+      <li>Hva gjør disse formlene?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><code>=MAKS(A1:A10)</code></li><li><span class="bokstav">b)</span><code>=MIN(A1:A10)</code></li>
+          <li><span class="bokstav">c)</span><code>=MEDIAN(A1:A10)</code></li>
+        </ul>
+      </li>
+      <li>I et lønnsark står bruttolønnen i B2 og skatteprosenten som desimaltall i C2.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv formelen for skatten i D2.</li>
+          <li><span class="bokstav">b)</span>Skriv formelen for nettolønnen i E2.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>Hvorfor er det bedre å skrive <code>=B2*C2</code> enn <code>=2*39</code>,
+        selv om begge gir samme svar?</li>
+      <li>En elev skriver <code>B2*C2</code> i en celle, uten likhetstegn foran.
+        Hva skjer, og hvorfor?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="15" class="oppgaver" style="counter-reset: oppg 14;">
+      <li>Lag et regneark for denne handleturen:<br>
+        brød 2 stk à 39 kr · melk 3 à 23 kr · smør 1 à 62 kr · kaffe 2 à 89 kr · ost 1 à 78 kr
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv formler i kolonne D som regner ut prisen for hver vare.</li>
+          <li><span class="bokstav">b)</span>Lag en formel for totalsummen. Hva blir den?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent av totalen er kaffen? Skriv en formel for det også.</li>
+        </ul>
+      </li>
+      <li>Lag et månedsbudsjett der inntekten står i B1 og utgiftene i B2 til B8.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv formelen for sum utgifter i B9.</li>
+          <li><span class="bokstav">b)</span>Skriv formelen for overskuddet i B10.</li>
+          <li><span class="bokstav">c)</span>Skriv en formel som viser hvor mange prosent av inntekten utgiftene utgjør.</li>
+          <li><span class="bokstav">d)</span>Endre ett av utgiftstallene. Hva skjer med B9 og B10?</li>
+        </ul>
+      </li>
+      <li>Forklar hva som er likt mellom en formel i et regneark
+        og en formel i matematikken, slik du møtte dem i kapittel 6.2.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     11.2 REGNEARK — HVIS OG DIAGRAM
+     ============================================================ -->
+<section id="k112" class="nyside">
+<h2 id="d11-2">11.2 Regneark — HVIS og diagram</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>lese og skrive en HVIS-formel</li>
+    <li>bruke sammenligningstegnene riktig</li>
+    <li>regne ut sentralmål og variasjonsbredde i regneark</li>
+    <li>lage diagram fra data i et regneark</li>
+  </ul>
+</div>
+
+<p>
+  <code>HVIS</code> lar regnearket ta en avgjørelse. Du oppgir en betingelse, hva som skal skje
+  hvis den er sann, og hva som skal skje hvis den er usann. Det er den enkleste formen for
+  programmering du kan drive med — og den er direkte nyttig i arbeidslivet.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HVIS-formelen delt i tre deler">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#eef0f2" stroke="#cfd4d9"/>
+
+  <text x="310" y="58" font-family="Consolas,monospace" font-size="15" fill="#1f4e5f" text-anchor="middle">=HVIS( B2&gt;=60 ;  "Bestått" ;  "Ikke bestått" )</text>
+
+  <rect x="152" y="42" width="76" height="22" rx="4" fill="none" stroke="#1d4e89" stroke-width="1.4"/>
+  <rect x="240" y="42" width="82" height="22" rx="4" fill="none" stroke="#2e7d32" stroke-width="1.4"/>
+  <rect x="334" y="42" width="118" height="22" rx="4" fill="none" stroke="#c62828" stroke-width="1.4"/>
+
+  <line x1="190" y1="70" x2="190" y2="98" stroke="#1d4e89" stroke-width="1.2"/>
+  <line x1="281" y1="70" x2="281" y2="118" stroke="#2e7d32" stroke-width="1.2"/>
+  <line x1="393" y1="70" x2="393" y2="138" stroke="#c62828" stroke-width="1.2"/>
+
+  <text x="190" y="112" font-family="Arial" font-size="11" fill="#1d4e89" text-anchor="middle">betingelsen</text>
+  <text x="281" y="132" font-family="Arial" font-size="11" fill="#2e7d32" text-anchor="middle">hvis den er sann</text>
+  <text x="393" y="152" font-family="Arial" font-size="11" fill="#c62828" text-anchor="middle">hvis den er usann</text>
+
+  <text x="310" y="172" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">Semikolon skiller de tre delene. Tekst skal stå i anførselstegn.</text>
+</svg>
+<figcaption>Figur 11.2 &nbsp;HVIS-formelen har alltid tre deler: en betingelse og to mulige svar.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Sammenligningstegn</span>
+  <ul>
+    <li><code>&gt;</code> større enn &nbsp;·&nbsp; <code>&lt;</code> mindre enn</li>
+    <li><code>&gt;=</code> større enn eller lik &nbsp;·&nbsp; <code>&lt;=</code> mindre enn eller lik</li>
+    <li><code>=</code> lik &nbsp;·&nbsp; <code>&lt;&gt;</code> ulik</li>
+  </ul>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="18" class="oppgaver" style="counter-reset: oppg 17;">
+      <li>Hva svarer <code>=HVIS(A1&gt;10; "Ja"; "Nei")</code> når
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>A1 er 15</li><li><span class="bokstav">b)</span>A1 er 5</li>
+        </ul>
+      </li>
+      <li>Hva svarer <code>=HVIS(A1&gt;20; "Ja"; "Nei")</code> når
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>A1 er 25</li>
+          <li><span class="bokstav">b)</span>A1 er 20</li>
+        </ul>
+      </li>
+      <li>Skriv en HVIS-formel som gir «Bestått» hvis tallet i B2 er minst 60,
+        og «Ikke bestått» ellers.</li>
+      <li>Skriv en HVIS-formel som gir «Full pott» hvis tallet i C3 er minst 100, og «Ikke ennå» ellers.</li>
+      <li>Hva betyr tegnene?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><code>&gt;</code></li><li><span class="bokstav">b)</span><code>&lt;</code></li>
+          <li><span class="bokstav">c)</span><code>&gt;=</code></li><li><span class="bokstav">d)</span><code>&lt;&gt;</code></li>
+        </ul>
+      </li>
+      <li>Hva betyr tegnene?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><code>&lt;=</code></li>
+          <li><span class="bokstav">b)</span><code>=</code></li>
+          <li><span class="bokstav">c)</span><code>&gt;</code></li>
+          <li><span class="bokstav">d)</span><code>&lt;&gt;</code></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="24" class="oppgaver" style="counter-reset: oppg 23;">
+      <li>En poengliste har poengsummen i kolonne B.
+        Skriv en formel i C2 som gir «Godkjent» ved 50 poeng eller mer.</li>
+      <li>Skriv en formel som gir 10 % rabatt hvis kjøpesummen i B2 er over 1 000 kroner,
+        og 0 ellers.</li>
+      <li>En temperaturliste har målingene i kolonne A.
+        Skriv en formel som skriver «Frost» når temperaturen er under null.</li>
+      <li>Du har navn i A1:A20 og antall i B1:B20.
+        Hvilken diagramtype ville du valgt for å sammenligne dem, og hvorfor?
+        Se gjerne kapittel 9.2.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="28" class="oppgaver" style="counter-reset: oppg 27;">
+      <li>Hva er forskjellen på <code>=HVIS(B2&gt;=60; …)</code> og <code>=HVIS(B2&gt;60; …)</code>?
+        Gi et eksempel på en verdi i B2 der de gir ulikt svar.</li>
+      <li>En elev trenger tre kategorier — «Høy», «Middels» og «Lav» — men HVIS gir bare to svar.
+        Hvordan kan det løses?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="30" class="oppgaver" style="counter-reset: oppg 29;">
+      <li>En bedrift gir 5 % bonus av salget til ansatte som selger for mer enn
+        250 000 kroner i måneden. Andre får ingen bonus.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Salget står i B2. Skriv formelen for bonusen i C2.</li>
+          <li><span class="bokstav">b)</span>Hva blir bonusen ved et salg på 310 000 kroner?</li>
+          <li><span class="bokstav">c)</span>Hva blir den ved 240 000 kroner?</li>
+          <li><span class="bokstav">d)</span>Hvorfor er regneark bedre enn kalkulator når bedriften har 40 ansatte?</li>
+        </ul>
+      </li>
+      <li>En klasse har svart på hvor mange timer de sover per natt.
+        Svarene står i B2 til B26.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv formler for gjennomsnitt, median, høyeste og laveste verdi.</li>
+          <li><span class="bokstav">b)</span>Skriv en formel for variasjonsbredden.</li>
+          <li><span class="bokstav">c)</span>Lag et diagram av dataene. Hvilken type valgte du, og hvorfor?</li>
+        </ul>
+      </li>
+      <li>Forklar hvorfor en HVIS-formel kan kalles programmering.
+        Hva er det datamaskinen gjør for deg?</li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     11.3 GEOGEBRA
+     ============================================================ -->
+<section id="k113" class="nyside">
+<h2 id="d11-3">11.3 GeoGebra</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skrive inn punkter og funksjoner</li>
+    <li>lese av skjæringspunkter mellom to grafer</li>
+    <li>tegne og måle geometriske figurer</li>
+    <li>bruke en glider til å se hvordan tallene i en formel virker</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>skrivefelt</td><td></td><td>Jeg skriver funksjonen i skrivefeltet.</td></tr>
+    <tr><td>graf</td><td></td><td>Grafen vises til høyre.</td></tr>
+    <tr><td>skjæringspunkt</td><td></td><td>Skjæringspunktet er (2, 5).</td></tr>
+    <tr><td>glider</td><td></td><td>Jeg drar i glideren for a.</td></tr>
+    <tr><td>å måle</td><td></td><td>Jeg måler vinkelen i trekanten.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  GeoGebra er både en tegneblokk og en kalkulator. Du skriver inn et punkt eller en funksjon,
+  og programmet tegner den. Den store nytten er at du <em>ser</em> hva tallene i en formel gjør —
+  noe som er vanskelig å få øye på i en verditabell.
+</p>
+
+<div class="regel">
+  <span class="etikett">Slik skriver du</span>
+  <ul>
+    <li>Punkt: <code>A=(3,5)</code></li>
+    <li>Funksjon: <code>f(x)=2x+1</code></li>
+    <li>Sirkel med sentrum og radius: <code>Sirkel((0,0),5)</code></li>
+    <li>Skjæring mellom to grafer: <code>Skjæring(f,g)</code></li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Bruk komma mellom koordinatene, og husk at desimaltall skrives
+  med punktum i GeoGebra: <code>f(x)=0.85x+39</code></p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="33" class="oppgaver" style="counter-reset: oppg 32;">
+      <li>Hvordan skriver du punktet med x lik 3 og y lik 5?</li>
+      <li>Hvordan skriver du punktet med x lik −2 og y lik 4?</li>
+      <li>Hvordan skriver du funksjonen y = 2x + 1?</li>
+      <li>Hvordan skriver du funksjonen <span class="matte">y = 5x − 3</span>?</li>
+      <li>Skriv inn i GeoGebra og se på grafene.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>f(x) = x + 2</li><li><span class="bokstav">b)</span>g(x) = 3x</li>
+          <li><span class="bokstav">c)</span>h(x) = −2x + 6</li>
+        </ul>
+      </li>
+      <li>Hvilken av de tre grafene i oppgave 37 heller nedover? Hvorfor?</li>
+      <li>Heller grafen oppover eller nedover?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><code>f(x)=3x+2</code></li>
+          <li><span class="bokstav">b)</span><code>g(x)=-x+4</code></li>
+          <li><span class="bokstav">c)</span><code>h(x)=-5x</code></li>
+          <li><span class="bokstav">d)</span><code>k(x)=0.5x-1</code></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Tegn <code>f(x)=2x+1</code> og <code>g(x)=-x+7</code>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Bruk Skjæring til å finne hvor de krysser.</li>
+          <li><span class="bokstav">b)</span>Løs det samme som likningssett for hånd. Får du samme svar?</li>
+        </ul>
+      </li>
+      <li>Tegn en trekant med hjørnene A=(0,0), B=(6,0) og C=(0,4).
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Mål alle tre sidene.</li>
+          <li><span class="bokstav">b)</span>Mål alle tre vinklene.</li>
+          <li><span class="bokstav">c)</span>Kontroller at vinkelsummen blir 180 grader.</li>
+        </ul>
+      </li>
+      <li>Tegn en sirkel med sentrum i (0,0) og radius 5.
+        Bruk GeoGebra til å finne omkretsen og arealet.</li>
+      <li>Lag en glider for b, og skriv <code>f(x)=2x+b</code>.
+        Dra i glideren. Hva skjer med grafen?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>Strømavtalen fra kapittel 10.1 var <code>f(x)=0.85x+39</code>.
+        Tegn grafen, og bruk den til å finne hvor mange kilowattimer
+        som gir en regning på 379 kroner.</li>
+      <li>Hvorfor er det nyttig å se en funksjon som graf,
+        når du allerede har formelen?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>De to mobilabonnementene fra kapittel 10.1:
+        <code>f(x)=199+2x</code> og <code>g(x)=149+4x</code>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Tegn begge i samme vindu.</li>
+          <li><span class="bokstav">b)</span>Finn skjæringspunktet med Skjæring.</li>
+          <li><span class="bokstav">c)</span>Les av hvilket abonnement som er billigst ved 10 GB og ved 40 GB.</li>
+          <li><span class="bokstav">d)</span>Forklar med grafen hvorfor svaret bytter om.</li>
+        </ul>
+      </li>
+      <li>Takstolen fra kapittel 8.5: grunnlinjen er 8 meter og høyden 3 meter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Tegn trekanten i GeoGebra med hjørner i (0,0), (8,0) og (4,3).</li>
+          <li><span class="bokstav">b)</span>Mål lengden av takflaten.</li>
+          <li><span class="bokstav">c)</span>Mål vinkelen ved grunnlinjen.</li>
+          <li><span class="bokstav">d)</span>Sammenlign målingen med utregningen du gjorde med Pytagoras.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     11.4 SCRATCH
+     ============================================================ -->
+<section id="k114" class="nyside">
+<h2 id="d11-4">11.4 Scratch</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva en blokk, en variabel og en løkke er</li>
+    <li>sette sammen blokker til et program som teller</li>
+    <li>lage et program som regner ut noe for deg</li>
+    <li>se sammenhengen mellom en løkke og et tallmønster</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>blokk</td><td></td><td>Jeg drar en blokk inn i programmet.</td></tr>
+    <tr><td>variabel</td><td></td><td>Variabelen heter teller.</td></tr>
+    <tr><td>løkke</td><td></td><td>Løkka gjentar det som står inni.</td></tr>
+    <tr><td>program</td><td></td><td>Programmet teller til ti.</td></tr>
+    <tr><td>å kjøre</td><td></td><td>Jeg kjører programmet.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  I Scratch bygger du programmet av blokker du klikker sammen. Du slipper å skrive kode, og du
+  kan ikke skrive feil — blokker som ikke passer sammen, fester seg rett og slett ikke.
+  Det gjør Scratch til et godt sted å begynne.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Et Scratch-program som teller fra 1 til 5">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef0f2" stroke="#cfd4d9"/>
+  <text x="310" y="38" font-family="Arial" font-size="12" font-weight="bold" fill="#3f4550" text-anchor="middle">ET PROGRAM SOM TELLER TIL 5</text>
+
+  <g>
+    <rect x="70" y="52" width="180" height="24" rx="5" fill="#f9a825"/>
+    <rect x="70" y="80" width="180" height="24" rx="5" fill="#c9722a"/>
+    <rect x="84" y="108" width="166" height="24" rx="5" fill="#2e7d32"/>
+    <rect x="84" y="136" width="166" height="24" rx="5" fill="#1d4e89"/>
+  </g>
+  <g font-family="Arial" font-size="10.5" fill="#fff">
+    <text x="82" y="68">sett teller til 0</text>
+    <text x="82" y="96">gjenta 5 ganger</text>
+    <text x="96" y="124">endre teller med 1</text>
+    <text x="96" y="152">si teller</text>
+  </g>
+  <line x1="76" y1="104" x2="76" y2="164" stroke="#c9722a" stroke-width="6"/>
+
+  <line x1="290" y1="46" x2="290" y2="170" stroke="#cfd4d9"/>
+
+  <text x="330" y="72" font-family="Arial" font-size="11" font-weight="bold" fill="#3f4550">Programmet sier:</text>
+  <g font-family="Consolas,monospace" font-size="14" fill="#1f4e5f">
+    <text x="330" y="100">1  2  3  4  5</text>
+  </g>
+  <text x="330" y="132" font-family="Arial" font-size="10.5" fill="#5a6272">Variabelen «teller» husker hvor</text>
+  <text x="330" y="148" font-family="Arial" font-size="10.5" fill="#5a6272">langt programmet er kommet —</text>
+  <text x="330" y="164" font-family="Arial" font-size="10.5" fill="#5a6272">akkurat som x i kapittel 6.</text>
+</svg>
+<figcaption>Figur 11.3 &nbsp;Blokkene inni løkka gjentas. Variabelen teller opp underveis.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>Hva gjør blokken «gjenta 10 ganger»?</li>
+      <li>Et program setter teller til 0 og gjentar fire ganger «endre teller med 5». Hvilket tall står i teller til slutt?</li>
+      <li>Hva er en variabel i Scratch?
+        Sammenlign med hva en bokstav betyr i kapittel 6.1.</li>
+      <li>Et program setter teller til 100 og gjentar tre ganger «endre teller med −10». Hvilket tall står i teller til slutt?</li>
+      <li>Skriv opp rekkefølgen av blokker for et program som
+        setter teller til 0 og deretter gjentar fem ganger:
+        endre teller med 1, og si teller.</li>
+      <li>Skriv opp rekkefølgen av blokker for et program som setter teller til 10 og deretter gjentar tre ganger: endre teller med 2, og si teller.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="54" class="oppgaver" style="counter-reset: oppg 53;">
+      <li>Lag et program som teller fra 1 til 10 og sier hvert tall.</li>
+      <li>Lag et program som sier sjugangen:
+        7, 14, 21 og videre opp til 70.</li>
+      <li>Et program setter teller til 0 og gjentar seks ganger «endre teller med 3».
+        Hvilket tall står i teller til slutt?</li>
+      <li>Lag et program som spør om et tall
+        og sier om tallet er et partall eller et oddetall.
+        Bruk blokken «rest av».</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="58" class="oppgaver" style="counter-reset: oppg 57;">
+      <li>Forklar likheten mellom en «gjenta»-blokk i Scratch
+        og et tallmønster slik du møtte det i kapittel 6.5.
+        Hva svarer «endre teller med 3» til i formelen for mønsteret?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="59" class="oppgaver" style="counter-reset: oppg 58;">
+      <li>Lag en binærteller: et program som teller fra 0 til 10
+        og viser hvert tall både i titallssystemet og i totallssystemet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er 5 skrevet i totallssystemet?</li>
+          <li><span class="bokstav">b)</span>Hva er 10 skrevet i totallssystemet?</li>
+          <li><span class="bokstav">c)</span>Hvorfor er dette et eksempel på at programmering og matematikk er det samme?</li>
+        </ul>
+      </li>
+      <li>Lag et program som regner ut prisen på en taxitur.
+        Programmet skal spørre hvor mange kilometer turen var,
+        og si prisen: 65 kroner i startpris pluss 18 kroner per kilometer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva sier programmet ved 12 kilometer?</li>
+          <li><span class="bokstav">b)</span>Hvilken funksjon fra kapittel 10.1 er dette?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     11.5 PYTHON
+     ============================================================ -->
+<section id="k115" class="nyside">
+<h2 id="d11-5">11.5 Python</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>lese enkel Python-kode og forutsi hva den skriver ut</li>
+    <li>lagre verdier i variabler</li>
+    <li>bruke en for-løkke til å gjenta noe</li>
+    <li>skrive en funksjon og se sammenhengen med f(x)</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>kode</td><td></td><td>Koden skriver ut tallet.</td></tr>
+    <tr><td>variabel</td><td></td><td>Variabelen x har verdien 5.</td></tr>
+    <tr><td>løkke</td><td></td><td>For-løkka gjentar fire ganger.</td></tr>
+    <tr><td>å skrive ut</td><td></td><td>print skriver ut svaret.</td></tr>
+    <tr><td>innrykk</td><td></td><td>Linjene inni løkka har innrykk.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  I Python skriver du programmet som tekst i stedet for å klikke blokker sammen. Det er litt
+  strengere — men til gjengjeld ser koden nesten ut som matematikk. Poenget her er ikke å lære
+  Python, men å se at en matematisk funksjon og en programmeringsfunksjon er samme idé.
+</p>
+
+<div class="regel">
+  <span class="etikett">Fire ting du trenger</span>
+  <p><code>x = 5</code> &nbsp;— lagrer tallet 5 i variabelen x</p>
+  <p><code>print(x)</code> &nbsp;— skriver ut verdien</p>
+  <p><code>for i in range(4):</code> &nbsp;— gjentar fire ganger, med i lik 0, 1, 2 og 3</p>
+  <p style="margin-bottom:0;"><code>2 ** 3</code> &nbsp;— to opphøyd i tredje, altså en potens</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Python-funksjon sammenlignet med matematisk funksjon">
+  <rect x="16" y="14" width="288" height="162" rx="8" fill="#eef0f2" stroke="#cfd4d9"/>
+  <rect x="316" y="14" width="288" height="162" rx="8" fill="#eef0f2" stroke="#cfd4d9"/>
+  <text x="160" y="40" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">I MATEMATIKKEN</text>
+  <text x="460" y="40" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f4550" text-anchor="middle">I PYTHON</text>
+
+  <text x="160" y="82" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">f(x) = 3x + 2</text>
+  <text x="160" y="124" font-family="DejaVu Serif" font-size="16" fill="#5a6272" text-anchor="middle">f(4) = 14</text>
+  <text x="160" y="156" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">sett inn et tall, få ett svar</text>
+
+  <g font-family="Consolas,monospace" font-size="13" fill="#1f4e5f">
+    <text x="352" y="76">def f(x):</text>
+    <text x="372" y="96">return 3*x + 2</text>
+    <text x="352" y="126">print(f(4))</text>
+  </g>
+  <text x="460" y="156" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">samme idé, annen skrivemåte</text>
+</svg>
+<figcaption>Figur 11.4 &nbsp;En funksjon i Python gjør nøyaktig det samme som f(x) i matematikken: den tar imot et tall og gir ett svar tilbake.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="61" class="oppgaver" style="counter-reset: oppg 60;">
+      <li>Hva skriver koden ut?<br>
+        <code>x = 5</code><br><code>print(x + 3)</code></li>
+      <li>Hva skriver koden ut?<br><code>x = 7</code><br><code>print(x * 4)</code></li>
+      <li>Hva skriver koden ut?<br>
+        <code>for i in range(4):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code></li>
+      <li>Hva skriver koden ut?<br><code>for i in range(1, 5):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(i * 2)</code></li>
+      <li>Skriv en linje som lagrer tallet 12 i variabelen a.</li>
+      <li>Skriv en linje som lagrer tallet 25 i variabelen b.</li>
+      <li>Hva skriver <code>print(2 ** 3)</code> ut?
+        Hvilket kapittel i boka handler om dette?</li>
+      <li>Hva skriver <code>print(5 ** 3)</code> ut?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="69" class="oppgaver" style="counter-reset: oppg 68;">
+      <li>Hva skriver koden ut?<br>
+        <code>for x in range(1, 6):</code><br><code>&nbsp;&nbsp;&nbsp;&nbsp;print(x, 3*x + 2)</code><br>
+        Hva slags tabell er dette?</li>
+      <li>Skriv en funksjon som regner ut arealet av et rektangel
+        når lengden og bredden er kjent.</li>
+      <li>Hva skriver koden ut?<br>
+        <code>belop = 10000</code><br>
+        <code>for aar in range(4):</code><br>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;belop = belop * 1.03</code><br>
+        <code>print(round(belop, 2))</code><br>
+        Hvilken oppgave fra kapittel 3 er dette?</li>
+      <li>Skriv kode som regner ut nettolønnen
+        når bruttolønnen er 42 000 kroner og skatten er 32 prosent.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="73" class="oppgaver" style="counter-reset: oppg 72;">
+      <li>Forklar hva som er likt mellom <code>def</code> i Python
+        og <span class="matte">f(x)</span> i matematikken.</li>
+      <li>En elev skriver <code>range(1, 5)</code> og venter tallene 1, 2, 3, 4 og 5.
+        Hva blir det egentlig, og hvorfor?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="75" class="oppgaver" style="counter-reset: oppg 74;">
+      <li>Lag en rentekalkulator: et program som spør om beløp, rente og antall år,
+        og skriver ut sluttbeløpet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Kjør programmet med 25 000 kroner, 3,5 % rente og 5 år. Hva blir svaret?</li>
+          <li><span class="bokstav">b)</span>Hvilken formel fra kapittel 5.5 er det programmet bruker?</li>
+          <li><span class="bokstav">c)</span>Prøv med 30 år. Hva legger du merke til?</li>
+        </ul>
+      </li>
+      <li>Python har en innebygd funksjon <code>bin()</code>
+        som gjør om til totallssystemet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva skriver <code>print(bin(10))</code> ut?</li>
+          <li><span class="bokstav">b)</span>Hva er dette tallet i titallssystemet?</li>
+          <li><span class="bokstav">c)</span>Skriv kode som skriver ut totallsformen for alle tall fra 0 til 10. Sammenlign med Scratch-programmet i oppgave 59.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     11.6 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k116" class="nyside">
+<h2 id="d11-6">11.6 Blandede oppgaver</h2>
+
+<p>Her møter du alle fire verktøyene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="77" class="oppgaver" style="counter-reset: oppg 76;">
+      <li>Skriv regnearkformelen for summen av C2 til C15.</li>
+      <li>Hva skriver <code>print(4 ** 2)</code> ut?</li>
+      <li>Skriv en HVIS-formel som gir «Ja» hvis tallet i A2 er større enn 100,
+        og «Nei» ellers.</li>
+      <li>Hvordan skriver du funksjonen y = −3x + 5 i GeoGebra?</li>
+      <li>Et Scratch-program setter teller til 0 og gjentar åtte ganger
+        «endre teller med 5». Hvilket tall står i teller til slutt?</li>
+      <li>Hva skriver koden ut?<br>
+        <code>a = 7</code><br><code>b = 3</code><br><code>print(a * b - 4)</code></li>
+      <li>I et regneark står 850 i B2 og 0,34 i C2.
+        Hva blir svaret av <code>=B2-B2*C2</code>? Hva regner formelen ut?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>P &nbsp;·&nbsp; På maskinen</span><span class="nivaa">Praktisk</span></div>
+  <div class="kropp">
+    <ol start="84" class="oppgaver" style="counter-reset: oppg 83;">
+      <li>Gjennomfør en liten undersøkelse i klassen om skjermtid per dag,
+        og legg svarene i et regneark.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv formler for gjennomsnitt, median, høyeste og laveste verdi.</li>
+          <li><span class="bokstav">b)</span>Skriv en formel for variasjonsbredden.</li>
+          <li><span class="bokstav">c)</span>Lag et diagram, og begrunn valget av diagramtype.</li>
+          <li><span class="bokstav">d)</span>Hva forteller tallene om klassen? Se kapittel 9.4.</li>
+        </ul>
+      </li>
+      <li>Kostnadsfunksjonen fra kapittel 10.7 var
+        <span class="matte">y = 250x + 1 200</span>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv Python-kode som lager en verditabell for x fra 1 til 6.</li>
+          <li><span class="bokstav">b)</span>Hva koster 6 timer?</li>
+          <li><span class="bokstav">c)</span>Lag den samme tabellen i et regneark. Hvilket verktøy syntes du var enklest?</li>
+        </ul>
+      </li>
+      <li>De to firmatilbudene fra kapittel 10.7:
+        <code>f(x)=450x+8500</code> og <code>g(x)=780x+3200</code>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Tegn begge i GeoGebra.</li>
+          <li><span class="bokstav">b)</span>Finn skjæringspunktet.</li>
+          <li><span class="bokstav">c)</span>Forklar hva skjæringspunktet betyr for en kunde som skal velge firma.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan skrive formler med cellereferanser i et regneark. <em>(11.1)</em></li>
+    <li>Jeg kan bruke SUMMER, GJENNOMSNITT, MAKS og MIN. <em>(11.1)</em></li>
+    <li>Jeg kan lage en HVIS-formel og et diagram. <em>(11.2)</em></li>
+    <li>Jeg kan tegne funksjoner i GeoGebra og finne skjæringspunkter. <em>(11.3)</em></li>
+    <li>Jeg kan lage et enkelt program med løkke og variabel i Scratch. <em>(11.4)</em></li>
+    <li>Jeg kan lese enkel Python-kode og forutsi hva den skriver ut. <em>(11.5)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 11</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>11.1 Regneark — formler og cellereferanser</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) B3</span><span class="d">b) D7</span><span class="d">c) A12</span></li>
+<li><span class="d">a) C5</span><span class="d">b) F2</span><span class="d">c) E10</span></li>
+<li><span class="d">a) 5</span><span class="d">b) summen av tallene i A1 og A2</span>
+<span class="d">c) tallet i B2 ganget med 4</span></li>
+<li><span class="d">a) 13</span><span class="d">b) summen av tallene i B1 og B2</span><span class="d">c) tallet i C3 ganget med 5</span></li>
+<li><span class="d">a) =A1+B1</span><span class="d">b) =C2*D2</span><span class="d">c) =A3-B3</span></li>
+<li><span class="d">a) =C1+D1</span><span class="d">b) =A2*B2</span><span class="d">c) =C4-D4</span></li>
+<li>Likhetstegnet <code>=</code></li>
+<li><span class="d">a) =B2*C2</span><span class="d">b) =B3*C3</span>
+</li>
+<li><code>=SUMMER(D2:D10)</code></li>
+<li><code>=GJENNOMSNITT(B2:B20)</code></li>
+<li><span class="d">a) høyeste verdi</span><span class="d">b) laveste verdi</span><span class="d">c) medianen</span></li>
+<li><span class="d">a) =B2*C2</span><span class="d">b) =B2-D2</span>
+</li>
+<li> Forventet: med cellereferanser regner arket på nytt
+    av seg selv når tallene endres. Med faste tall må du finne og rette hver enkelt formel.
+    I et ark med hundre rader er forskjellen avgjørende.</li>
+<li>Cellen viser teksten <code>B2*C2</code> i stedet for et svar.
+    </li>
+<li><span class="d">a) =B2*C2 kopiert nedover til D6</span><span class="d">b) =SUMMER(D2:D6) gir 465 kroner</span>
+<span class="d">c) 38,3 %</span><br/>
+</li>
+<li><span class="d">a) =SUMMER(B2:B8)</span><span class="d">b) =B1-B9</span>
+<span class="d">c) =B9/B1*100</span><span class="d">d) </span><br/>
+</li>
+<li> Forventet: begge beskriver en regnemåte med
+    plassholdere i stedet for faste tall. <code>=B2*C2</code> svarer til <span class="matte">A = l · b</span>
+    — cellereferansen spiller samme rolle som bokstaven.</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>11.2 Regneark — HVIS og diagram</h3>
+<ol class="fasit" start="18" style="counter-reset: fas 17;">
+<li><span class="d">a) Ja</span><span class="d">b) Nei</span></li>
+<li><span class="d">a) Ja</span><span class="d">b) Nei</span></li>
+<li><code>=HVIS(B2&gt;=60;"Bestått";"Ikke bestått")</code></li>
+<li><code>=HVIS(C3&gt;=100;"Full pott";"Ikke ennå")</code></li>
+<li><span class="d">a) større enn</span><span class="d">b) mindre enn</span>
+<span class="d">c) større enn eller lik</span><span class="d">d) ulik</span></li>
+<li><span class="d">a) mindre enn eller lik</span><span class="d">b) lik</span><span class="d">c) større enn</span><span class="d">d) ulik</span></li>
+<li><code>=HVIS(B2&gt;=50;"Godkjent";"Ikke godkjent")</code></li>
+<li><code>=HVIS(B2&gt;1000;B2*0,1;0)</code>
+</li>
+<li><code>=HVIS(A2&lt;0;"Frost";"Ikke frost")</code></li>
+<li> Forventet: stolpediagram, fordi navnene er
+    kategorier som ikke henger sammen. Se kapittel 9.2.</li>
+<li>Forskjellen gjelder bare når B2 er nøyaktig 60.
+    Med <code>&gt;=</code> er 60 bestått, med <code>&gt;</code> er det ikke bestått.
+    </li>
+<li>Ved å legge en HVIS-formel inne i en annen:<br/>
+<code>=HVIS(B2&gt;=80;"Høy";HVIS(B2&gt;=50;"Middels";"Lav"))</code>
+</li>
+<li><span class="d">a) =HVIS(B2&gt;250000;B2*0,05;0)</span><span class="d">b) 15 500 kr</span>
+<span class="d">c) 0 kr</span><span class="d">d) </span><br/>
+</li>
+<li><span class="d">a) se under</span><span class="d">b) =MAKS(B2:B26)-MIN(B2:B26)</span>
+<span class="d">c) </span><br/>
+</li>
+<li> Forventet: formelen inneholder en betingelse og to
+    mulige utfall, og datamaskinen tar avgjørelsen for deg — for hver eneste rad. Det er
+    nøyaktig det et program gjør.</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>11.3 GeoGebra</h3>
+<ol class="fasit" start="33" style="counter-reset: fas 32;">
+<li><code>A=(3,5)</code></li>
+<li>A=(-2,4)</li>
+<li><code>f(x)=2x+1</code></li>
+<li><code>f(x)=5x-3</code></li>
+<li> Kontroller at alle tre grafene er rette linjer,
+    og at h krysser y-aksen i 6.</li>
+<li><strong>h(x) = −2x + 6.</strong>
+</li>
+<li><span class="d">a) oppover</span><span class="d">b) nedover</span><span class="d">c) nedover</span><span class="d">d) oppover</span></li>
+<li><span class="d">a) skjæringspunktet er (2, 5)</span><span class="d">b) samme svar</span><br/>
+</li>
+<li><span class="d">a) AB = 6, AC = 4, BC ≈ 7,21</span>
+<span class="d">b) 90°, ca. 33,7° og ca. 56,3°</span><span class="d">c) 180° ✓</span><br/>
+</li>
+<li>Omkrets ca. <strong>31,4</strong> og areal ca. <strong>78,5</strong>
+</li>
+<li>Grafen flytter seg opp eller ned uten å endre helning.
+    </li>
+<li><strong>400 kilowattimer.</strong>
+</li>
+<li> Forventet: grafen viser hele sammenhengen på én gang.
+    Du ser med ett blikk om noe vokser eller synker, hvor raskt, og hvor to alternativer bytter
+    plass — det er vanskelig å se ut av en formel alene.</li>
+<li><span class="d">a) og b) skjæringspunktet er (25, 249)</span>
+<span class="d">c) 10 GB: B er billigst · 40 GB: A er billigst</span>
+<span class="d">d) </span><br/>
+</li>
+<li><span class="d">b) 5 meter</span><span class="d">c) ca. 36,87°</span>
+<span class="d">d) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>11.4 Scratch</h3>
+<ol class="fasit" start="48" style="counter-reset: fas 47;">
+<li>Den gjentar blokkene som ligger inni seg, ti ganger.</li>
+<li>20</li>
+<li> Forventet: en variabel er et navn som holder på en
+    verdi som kan endre seg — nøyaktig som bokstaven x i et algebrauttrykk. Forskjellen er at
+    i Scratch ser du verdien endre seg mens programmet kjører.</li>
+<li>70</li>
+<li>sett teller til 0 → gjenta 5 ganger [ endre teller med 1 → si teller ]<br/>
+</li>
+<li>sett teller til 10 → gjenta 3 ganger [ endre teller med 2 → si teller ]. Programmet sier 12, 14 og 16.</li>
+<li> Samme oppbygning som oppgave 52,
+    men med «gjenta 10 ganger».</li>
+<li> For eksempel: sett teller til 0,
+    gjenta 10 ganger [ endre teller med 1, si teller · 7 ].
+    Godkjenn også løsninger som endrer teller med 7 hver gang.</li>
+<li><strong>18</strong>  </li>
+<li> Løsningen skal bruke «rest av (svar) delt på 2».
+    Er resten 0, er tallet et partall. Her møter elevene divisjon med rest fra kapittel 1.3
+    i en ny sammenheng.</li>
+<li> Forventet: løkka legger til det samme tallet hver
+    gang, akkurat som et mønster øker med det samme hver gang. «Endre teller med 3» svarer til
+    stigningstallet 3 i formelen 3n + noe, og starttallet svarer til konstantleddet.</li>
+<li><span class="d">a) 101</span><span class="d">b) 1010</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 281 kroner</span><span class="d">b) f(x) = 18x + 65</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>11.5 Python</h3>
+<ol class="fasit" start="61" style="counter-reset: fas 60;">
+<li><strong>8</strong></li>
+<li>28</li>
+<li><strong>0, 1, 2 og 3</strong> — ett tall per linje.
+    </li>
+<li>2, 4, 6 og 8 — ett tall per linje</li>
+<li><code>a = 12</code></li>
+<li><code>b = 25</code></li>
+<li><strong>8.</strong> Dette er potenser, kapittel 3.1.
+    </li>
+<li>125</li>
+<li>Koden skriver ut:<br/>
+<code>1 5</code> · <code>2 8</code> · <code>3 11</code> · <code>4 14</code> · <code>5 17</code><br/>
+    Dette er en <strong>verditabell</strong> for funksjonen f(x) = 3x + 2.
+    </li>
+<li><code>def areal(l, b):</code><br/><code>    return l * b</code></li>
+<li><strong>11255.09</strong>. Dette er oppgave 16 i kapittel 3.1 — 10 000 kroner
+    med 3 % rente i fire år.</li>
+<li><code>brutto = 42000</code><br/><code>skatt = brutto * 0.32</code><br/>
+<code>print(brutto - skatt)</code><br/>
+    Svaret blir <strong>28560.0</strong>.
+    </li>
+<li> Forventet: begge tar imot et tall og gir ett svar
+    tilbake. <code>def f(x): return 3*x + 2</code> er nøyaktig det samme som
+    <span class="matte">f(x) = 3x + 2</span>. Til og med skrivemåten <code>f(4)</code> er lik.</li>
+<li>Det blir <strong>1, 2, 3 og 4</strong> — ikke 5.
+    </li>
+<li><span class="d">a) 29 692,16 kroner</span><span class="d">b) vekstfaktor opphøyd i antall år</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 0b1010</span><span class="d">b) 10</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>11.6 Blandede oppgaver</h3>
+<ol class="fasit" start="77" style="counter-reset: fas 76;">
+<li><code>=SUMMER(C2:C15)</code></li>
+<li><strong>16</strong></li>
+<li><code>=HVIS(A2&gt;100;"Ja";"Nei")</code></li>
+<li><code>f(x)=-3x+5</code></li>
+<li><strong>40</strong>  </li>
+<li><strong>17</strong>  </li>
+<li><strong>561</strong>. Formelen regner ut nettolønnen når 850 er bruttobeløpet
+    og 0,34 er skatteprosenten.</li>
+<li> Kontroller at formlene er riktige
+    og at diagramvalget er begrunnet. Bruk gjerne anledningen til å ta opp igjen skillet mellom
+    gjennomsnitt og median fra kapittel 9.3, og hva variasjonsbredden forteller om spredningen
+    i klassen.</li>
+<li><span class="d">a) se under</span><span class="d">b) 2 700 kroner</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">b) omtrent (16,1 · 15 727)</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-10.html"><span class="etikett">Forrige kapittel</span><strong>10. Temaer for modul 4</strong></a><span class="tom"></span></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

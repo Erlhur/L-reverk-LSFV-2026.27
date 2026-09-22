@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10. Temaer for modul 4 — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html" aria-current="page"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li class="dk"><a href="#d10-1">10.1 Funksjoner og grafer</a></li><li class="dk"><a href="#d10-2">10.2 Likningssett</a></li><li class="dk"><a href="#d10-3">10.3 Formlikhet</a></li><li class="dk"><a href="#d10-4">10.4 Lønn og skatt</a></li><li class="dk"><a href="#d10-5">10.5 Budsjett, sparing og lån</a></li><li class="dk"><a href="#d10-6">10.6 Valuta</a></li><li class="dk"><a href="#d10-7">10.7 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#3a4b5c">
+
+
+<section class="kapittelapning" style="--kap:#3a4b5c">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 10</p>
+    <h1 class="kapittel-tittel">Temaer for modul 4</h1>
+    <p class="ingress">
+      Dette kapitlet samler det som hører til modul 4Y alene: funksjoner og grafer, likningssett,
+      formlikhet og hele feltet personlig økonomi — lønn og skatt, budsjett, sparing, lån og
+      valuta. Oppgavene bygger i stor grad på tekster du må lese informasjon ut av selv,
+      slik du møter dem på eksamen og i arbeidslivet.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lineær graf, likningssett, formlikhet og lønnsslipp">
+  <!-- lineær funksjon -->
+  <text x="106" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3a4b5c" text-anchor="middle">LINEÆR FUNKSJON</text>
+  <line x1="44" y1="192" x2="180" y2="192" stroke="#1f2430" stroke-width="1.5"/>
+  <line x1="44" y1="192" x2="44" y2="52" stroke="#1f2430" stroke-width="1.5"/>
+  <line x1="44" y1="168" x2="172" y2="66" stroke="#3a4b5c" stroke-width="2.4"/>
+  <circle cx="44" cy="168" r="4" fill="#c62828"/>
+  <text x="58" y="182" font-family="DejaVu Serif" font-size="11" fill="#c62828">b</text>
+  <path d="M 108 118 h 26 M 134 118 v -21" stroke="#2e7d32" stroke-width="1.4" fill="none"/>
+  <text x="142" y="114" font-family="DejaVu Serif" font-size="11" fill="#2e7d32">a</text>
+  <text x="106" y="212" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">y = ax + b</text>
+  <text x="106" y="232" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">b er startverdien</text>
+  <text x="106" y="246" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">a er endringen per steg</text>
+
+  <line x1="200" y1="20" x2="200" y2="252" stroke="#d6d9de"/>
+
+  <!-- likningssett -->
+  <text x="306" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3a4b5c" text-anchor="middle">LIKNINGSSETT</text>
+  <line x1="232" y1="152" x2="380" y2="152" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="232" y1="152" x2="232" y2="52" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="238" y1="140" x2="374" y2="70" stroke="#3a4b5c" stroke-width="2"/>
+  <line x1="238" y1="66" x2="374" y2="136" stroke="#a0562f" stroke-width="2"/>
+  <circle cx="306" cy="103" r="5" fill="#c62828"/>
+  <text x="306" y="94" font-family="Arial" font-size="10" fill="#c62828" text-anchor="middle">løsning</text>
+  <text x="306" y="176" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">to likninger</text>
+  <text x="306" y="196" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">to ukjente</text>
+  <text x="306" y="220" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">grafene krysser der</text>
+  <text x="306" y="234" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">begge stemmer</text>
+
+  <line x1="404" y1="20" x2="404" y2="252" stroke="#d6d9de"/>
+
+  <!-- formlikhet -->
+  <text x="470" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3a4b5c" text-anchor="middle">FORMLIKHET</text>
+  <path d="M 424 110 L 424 74 L 452 110 Z" fill="#e6eaee" stroke="#3a4b5c" stroke-width="1.5"/>
+  <path d="M 424 190 L 424 118 L 480 190 Z" fill="#e6eaee" stroke="#3a4b5c" stroke-width="1.5"/>
+  <text x="470" y="92" font-family="Arial" font-size="10" fill="#5a6272">samme form,</text>
+  <text x="470" y="106" font-family="Arial" font-size="10" fill="#5a6272">ulik størrelse</text>
+  <text x="466" y="214" font-family="DejaVu Serif" font-size="12.5" fill="#1f2430" text-anchor="middle">alle sider i</text>
+  <text x="466" y="232" font-family="DejaVu Serif" font-size="12.5" fill="#1f2430" text-anchor="middle">samme forhold</text>
+
+  <line x1="516" y1="20" x2="516" y2="252" stroke="#d6d9de"/>
+
+  <!-- lønnsslipp -->
+  <text x="578" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3a4b5c" text-anchor="middle">LØNNSSLIPP</text>
+  <rect x="530" y="44" width="96" height="130" rx="6" fill="#e6eaee" stroke="#3a4b5c" stroke-width="1.4"/>
+  <line x1="530" y1="66" x2="626" y2="66" stroke="#3a4b5c" stroke-width="1.1"/>
+  <g font-family="Arial" font-size="9" fill="#1f2430">
+    <text x="538" y="60">Lønn mai</text>
+    <text x="538" y="86">Brutto</text><text x="618" y="86" text-anchor="end">42 000</text>
+    <text x="538" y="108">Skatt 32 %</text><text x="618" y="108" text-anchor="end">−13 440</text>
+    <text x="538" y="130">Feriepenger</text><text x="618" y="130" text-anchor="end">10,2 %</text>
+  </g>
+  <line x1="538" y1="140" x2="618" y2="140" stroke="#1f2430" stroke-width="1.2"/>
+  <text x="538" y="158" font-family="Arial" font-size="9.5" font-weight="bold" fill="#1f2430">Netto</text>
+  <text x="618" y="158" font-family="Arial" font-size="9.5" font-weight="bold" fill="#1f2430" text-anchor="end">28 560</text>
+  <text x="578" y="196" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">brutto minus skatt</text>
+  <text x="578" y="210" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">er det du får</text>
+
+  <!-- bunnlinje -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="298" font-family="Arial" font-size="11" font-weight="bold" fill="#3a4b5c">OGSÅ I DETTE KAPITLET</text>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430">
+    <text x="216" y="298">budsjett</text>
+    <text x="310" y="298">sparing og lån</text>
+    <text x="446" y="298">valuta</text>
+  </g>
+</svg>
+<p class="illtekst">Fire verktøy fra modul 4: den lineære funksjonen med startverdi og stigning, likningssettet som finner der to sammenhenger møtes, formlikhet — og økonomien du møter på lønnsslippen.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">10.1</span><span>Funksjoner og grafer</span></li>
+    <li><span class="dknr">10.2</span><span>Likningssett</span></li>
+    <li><span class="dknr">10.3</span><span>Formlikhet</span></li>
+    <li><span class="dknr">10.4</span><span>Lønn og skatt</span></li>
+    <li><span class="dknr">10.5</span><span>Budsjett, sparing og lån</span></li>
+    <li><span class="dknr">10.6</span><span>Valuta</span></li>
+    <li><span class="dknr">10.7</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-10.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">24 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>utforske funksjonsbegrepet og grafen til en funksjon, med vekt på lineære funksjoner, knyttet til praktiske situasjoner</li>
+      <li>formulere og løse problemer fra hverdag og arbeidsliv ved bruk av likninger eller likningssett</li>
+      <li>bruke Pytagoras’ læresetning og formlikhet til å løse praktiske problemer</li>
+      <li>gjøre beregninger og utforske sammenhenger knyttet til personlig økonomi, inkludert lønn og skatt, lån, sparing, valuta og bruk av kredittkort</li>
+      <li>lese og hente ut matematisk informasjon fra ulike typer tekster fra hverdagsliv, arbeidsliv og samfunnsliv, og bruke informasjonen til å gjøre hensiktsmessige beregninger</li>
+      <li>forstå og kritisk vurdere resonnementer i relevante tekster fra arbeidsliv og media</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Pytagoras' setning er behandlet i kapittel 8.5; her følger formlikhet. De to siste målene om å lese og vurdere tekster er ikke egne delkapitler, men ligger i tekstoppgavene gjennom hele kapitlet.</p>
+</section>
+
+<div class="regel">
+  <span class="etikett">Om oppgavenivåene i dette kapitlet</span>
+  <p style="margin-bottom:0;">Hele kapitlet ligger på modul 4-nivå. Derfor er den vanlige
+  M4-bolken byttet ut med <strong>E — Eksamensnær</strong>: lengre tekstoppgaver med flere
+  spørsmål, av samme type som på eksamen i MATV011.</p>
+</div>
+
+<!-- ============================================================
+     10.1 FUNKSJONER OG GRAFER
+     ============================================================ -->
+<section id="k101">
+<h2 id="d10-1">10.1 Funksjoner og grafer</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva en funksjon er</li>
+    <li>lage en verditabell og tegne grafen</li>
+    <li>tolke stigningstall og konstantledd i en praktisk situasjon</li>
+    <li>sammenligne to funksjoner og finne hvor de er like</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>funksjon</td><td></td><td>Prisen er en funksjon av antall timer.</td></tr>
+    <tr><td>graf</td><td></td><td>Grafen er en rett linje.</td></tr>
+    <tr><td>stigningstall</td><td></td><td>Stigningstallet er 18.</td></tr>
+    <tr><td>konstantledd</td><td></td><td>Konstantleddet er startprisen.</td></tr>
+    <tr><td>verditabell</td><td></td><td>Jeg lager en verditabell først.</td></tr>
+    <tr><td>koordinatsystem</td><td></td><td>Punktet ligger i koordinatsystemet.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  En funksjon er en sammenheng der hver verdi av <span class="matte">x</span> gir nøyaktig én
+  verdi av <span class="matte">y</span>. I en <strong>lineær</strong> funksjon endrer y seg
+  like mye for hvert steg x tar — derfor blir grafen en rett linje.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grafen til taxiprisen y er lik 18x pluss 65">
+  <rect x="16" y="14" width="588" height="192" rx="8" fill="#e6eaee" stroke="#c3cdd6"/>
+  <text x="310" y="38" font-family="Arial" font-size="12" font-weight="bold" fill="#3a4b5c" text-anchor="middle">TAXIPRIS: y = 18x + 65</text>
+
+  <line x1="70" y1="180" x2="350" y2="180" stroke="#1f2430" stroke-width="1.6"/>
+  <line x1="70" y1="180" x2="70" y2="56" stroke="#1f2430" stroke-width="1.6"/>
+  <line x1="70" y1="156" x2="330" y2="66" stroke="#3a4b5c" stroke-width="2.6"/>
+  <circle cx="70" cy="156" r="5" fill="#c62828"/>
+  <circle cx="200" cy="111" r="4" fill="#3a4b5c"/>
+  <circle cx="330" cy="66" r="4" fill="#3a4b5c"/>
+
+  <g font-family="Arial" font-size="9.5" fill="#5a6272" text-anchor="end">
+    <text x="64" y="184">0</text><text x="64" y="160">65</text>
+    <text x="64" y="115">155</text><text x="64" y="70">245</text>
+  </g>
+  <g font-family="Arial" font-size="9.5" fill="#5a6272" text-anchor="middle">
+    <text x="70" y="196">0</text><text x="200" y="196">5</text><text x="330" y="196">10</text>
+  </g>
+  <text x="210" y="212" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">kilometer</text>
+
+  <text x="96" y="150" font-family="Arial" font-size="10" fill="#c62828">startpris</text>
+
+  <line x1="392" y1="50" x2="392" y2="192" stroke="#c3cdd6"/>
+  <text x="500" y="70" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3a4b5c" text-anchor="middle">VERDITABELL</text>
+  <rect x="424" y="82" width="152" height="88" fill="#fff" stroke="#3a4b5c" stroke-width="1.3"/>
+  <line x1="424" y1="104" x2="576" y2="104" stroke="#3a4b5c" stroke-width="1.1"/>
+  <line x1="480" y1="82" x2="480" y2="170" stroke="#3a4b5c" stroke-opacity="0.5"/>
+  <g font-family="DejaVu Serif" font-size="12" fill="#1f2430" text-anchor="middle">
+    <text x="452" y="98">x</text><text x="528" y="98">y</text>
+    <text x="452" y="124">0</text><text x="528" y="124">65</text>
+    <text x="452" y="144">5</text><text x="528" y="144">155</text>
+    <text x="452" y="164">10</text><text x="528" y="164">245</text>
+  </g>
+  <text x="500" y="190" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">18 kroner mer per kilometer</text>
+</svg>
+<figcaption>Figur 10.1 &nbsp;Konstantleddet 65 er der grafen krysser y-aksen. Stigningstallet 18 er hvor mye prisen øker per kilometer.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Fra tekst til funksjon</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En bedrift leier ut en lift for 950 kroner i fast leie pluss 340 kroner per dag. Sett opp funksjonen, og finn prisen for 5 dager.</p>
+    <ol class="trinn">
+      <li>Det faste beløpet kommer uansett — det blir konstantleddet: <span class="matte">950</span></li>
+      <li>Hver dag koster 340 kroner — det blir stigningstallet: <span class="matte">340x</span></li>
+      <li>Funksjonen blir <span class="matte">y = 340x + 950</span></li>
+      <li>Sett inn x = 5: <span class="matte">340 · 5 + 950 = 1 700 + 950 = 2 650</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Fem dager koster 2 650 kroner.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Funksjonen er <span class="matte">y = 2x + 3</span>. Regn ut y når
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x = 0</li><li><span class="bokstav">b)</span>x = 1</li>
+          <li><span class="bokstav">c)</span>x = 5</li>
+        </ul>
+      </li>
+      <li>Funksjonen er <span class="matte">y = 3x + 1</span>. Regn ut y når
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x = 0</li>
+          <li><span class="bokstav">b)</span>x = 2</li>
+          <li><span class="bokstav">c)</span>x = 4</li>
+        </ul>
+      </li>
+      <li>Funksjonen er <span class="matte">y = 50x</span>. Regn ut y når
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x = 2</li><li><span class="bokstav">b)</span>x = 4</li>
+          <li><span class="bokstav">c)</span>x = 10</li>
+        </ul>
+      </li>
+      <li>Funksjonen er <span class="matte">y = 25x</span>. Regn ut y når
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x = 3</li>
+          <li><span class="bokstav">b)</span>x = 6</li>
+          <li><span class="bokstav">c)</span>x = 12</li>
+        </ul>
+      </li>
+      <li>Lag en verditabell for <span class="matte">y = x + 4</span>
+        med x lik 0, 1, 2 og 3.</li>
+      <li>I funksjonen <span class="matte">y = 3x + 7</span>:
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er stigningstallet?</li><li><span class="bokstav">b)</span>Hva er konstantleddet?</li>
+        </ul>
+      </li>
+      <li>I funksjonen <span class="matte">y = 5x − 2</span>:
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er stigningstallet?</li>
+          <li><span class="bokstav">b)</span>Hva er konstantleddet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Taxiprisen er <span class="matte">y = 18x + 65</span>, der x er antall kilometer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en verditabell for x lik 0, 5 og 10.</li>
+          <li><span class="bokstav">b)</span>Hva betyr tallet 65 i praksis?</li>
+          <li><span class="bokstav">c)</span>Hva betyr tallet 18?</li>
+        </ul>
+      </li>
+      <li>En strømavtale koster <span class="matte">y = 0,85x + 39</span> kroner,
+        der x er antall kilowattimer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster 400 kWh?</li>
+          <li><span class="bokstav">b)</span>Hva betyr tallet 39?</li>
+        </ul>
+      </li>
+      <li>Tegn grafen til <span class="matte">y = 2x + 1</span> for x fra 0 til 5.
+        Lag verditabell først.</li>
+      <li>En graf går gjennom punktene (0, 100) og (10, 300).
+        Finn stigningstallet.</li>
+      <li>Hvilken funksjon vokser raskest,
+        <span class="matte">y = 3x + 10</span> eller <span class="matte">y = 5x + 2</span>?
+        Begrunn svaret.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>To mobilabonnement: A koster <span class="matte">y = 199 + 2x</span> kroner,
+        B koster <span class="matte">y = 149 + 4x</span>. Her er x antall GB.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Ved hvor mange GB koster de like mye?</li>
+          <li><span class="bokstav">b)</span>Tegn begge grafene i samme koordinatsystem.</li>
+          <li><span class="bokstav">c)</span>Hvilket abonnement lønner seg ved 10 GB?</li>
+        </ul>
+      </li>
+      <li>Funksjonen <span class="matte">y = 500 − 25x</span> viser hvor mye som er igjen
+        på et gavekort etter x kjøp på 25 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er igjen etter 8 kjøp?</li>
+          <li><span class="bokstav">b)</span>Etter hvor mange kjøp er kortet tomt?</li>
+          <li><span class="bokstav">c)</span>Hva betyr det at stigningstallet er negativt?</li>
+        </ul>
+      </li>
+      <li>Forklar hvorfor grafen til en lineær funksjon
+        alltid blir en rett linje.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="16" class="oppgaver" style="counter-reset: oppg 15;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift leier ut lift. Prisen er 950 kroner i fast leie
+          pluss 340 kroner per dag.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en funksjon for prisen ved x dager.</li>
+          <li><span class="bokstav">b)</span>Hva koster det å leie liften i 5 dager?</li>
+          <li><span class="bokstav">c)</span>En kunde betalte 5 030 kroner. Hvor mange dager leide han liften?</li>
+          <li><span class="bokstav">d)</span>Tegn grafen for 0 til 10 dager.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «To firmaer gir tilbud på samme jobb. Firma A tar 4 500 kroner i oppmøte
+          og 620 kroner per time. Firma B tar 7 200 kroner i oppmøte og 380 kroner per time.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Ved hvor mange timer koster de like mye?</li>
+          <li><span class="bokstav">b)</span>Hvilket firma er billigst ved 8 timer?</li>
+          <li><span class="bokstav">c)</span>Hvilket firma er billigst ved 15 timer?</li>
+          <li><span class="bokstav">d)</span>Hva bør en kunde tenke på før hun velger?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     10.2 LIKNINGSSETT
+     ============================================================ -->
+<section id="k102" class="nyside">
+<h2 id="d10-2">10.2 Likningssett</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva et likningssett er</li>
+    <li>løse et likningssett med innsettingsmetoden</li>
+    <li>kontrollere løsningen i begge likningene</li>
+    <li>sette opp et likningssett ut fra en tekst</li>
+  </ul>
+</div>
+
+<p>
+  Et likningssett er to likninger med to ukjente. Løsningen er det tallparet som gjør
+  <strong>begge</strong> likningene sanne samtidig. Grafisk er det punktet der de to
+  linjene krysser hverandre.
+</p>
+
+<div class="regel">
+  <span class="etikett">Innsettingsmetoden</span>
+  <ul>
+    <li>Gjør den ene likningen om slik at du får «x = …» eller «y = …».</li>
+    <li>Sett dette uttrykket inn i den andre likningen. Nå har du bare én ukjent.</li>
+    <li>Løs likningen, og sett svaret tilbake for å finne den andre ukjente.</li>
+    <li>Kontroller til slutt i <em>begge</em> de opprinnelige likningene.</li>
+  </ul>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; To ukjente</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Løs likningssettet <span class="matte">x + y = 12</span> og <span class="matte">x − y = 4</span>.</p>
+    <ol class="trinn">
+      <li>Gjør om den andre: <span class="matte">x = y + 4</span></li>
+      <li>Sett inn i den første: <span class="matte">(y + 4) + y = 12</span></li>
+      <li>Trekk sammen: <span class="matte">2y + 4 = 12</span>, altså <span class="matte">2y = 8</span> og <span class="matte">y = 4</span></li>
+      <li>Sett tilbake: <span class="matte">x = 4 + 4 = 8</span></li>
+      <li>Kontroll: <span class="matte">8 + 4 = 12</span> ✓ og <span class="matte">8 − 4 = 4</span> ✓</li>
+    </ol>
+    <p class="svarlinje">Svar: x = 8 og y = 4</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="18" class="oppgaver" style="counter-reset: oppg 17;">
+      <li>Kontroller om x = 3 og y = 5 er løsningen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>x + y = 8</li><li><span class="bokstav">b)</span>2x + y = 11</li>
+        </ul>
+      </li>
+      <li>Løs likningssettet: <span class="matte">x + y = 12</span> og <span class="matte">x − y = 4</span></li>
+      <li>Løs likningssettet: <span class="matte">x + y = 15</span> og <span class="matte">x − y = 3</span></li>
+      <li>Løs likningssettet: <span class="matte">x + y = 20</span> og <span class="matte">y = 3x</span></li>
+      <li>Løs likningssettet: <span class="matte">x + y = 24</span> og <span class="matte">y = 2x</span></li>
+      <li>Løs likningssettet: <span class="matte">y = 2x</span> og <span class="matte">x + y = 9</span></li>
+      <li>Løs likningssettet: <span class="matte">y = 4x</span> og <span class="matte">x + y = 20</span></li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="25" class="oppgaver" style="counter-reset: oppg 24;">
+      <li>Løs likningssettet: <span class="matte">2x + y = 14</span> og <span class="matte">y = x + 2</span></li>
+      <li>Løs likningssettet: <span class="matte">x + 2y = 16</span> og <span class="matte">x = y + 1</span></li>
+      <li>To tall har summen 45 og differansen 9. Finn tallene.</li>
+      <li>To voksne og tre barn betaler 690 kroner for inngang.
+        Én voksen og to barn betaler 400 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp et likningssett.</li>
+          <li><span class="bokstav">b)</span>Hva koster en voksenbillett og en barnebillett?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="29" class="oppgaver" style="counter-reset: oppg 28;">
+      <li>En bonde har høner og kuer. Til sammen har dyrene 30 hoder og 84 bein.
+        Hvor mange er det av hvert slag?</li>
+      <li>Forklar hva løsningen på et likningssett betyr grafisk.
+        Hva ville det bety hvis de to linjene var parallelle?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="31" class="oppgaver" style="counter-reset: oppg 30;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En kiosk selger kaffe og boller. Mandag ble det solgt 40 kopper kaffe
+          og 25 boller for til sammen 2 025 kroner. Tirsdag ble det solgt 30 kopper kaffe
+          og 40 boller for til sammen 2 050 kroner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp et likningssett.</li>
+          <li><span class="bokstav">b)</span>Hva koster en kopp kaffe, og hva koster en bolle?</li>
+          <li><span class="bokstav">c)</span>Hva koster tre kaffe og to boller?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et treningssenter har to medlemskap. A koster 349 kroner i måneden pluss
+          25 kroner per time med personlig trener. B koster 549 kroner pluss 15 kroner per time.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en funksjon for hvert medlemskap.</li>
+          <li><span class="bokstav">b)</span>Ved hvor mange timer koster de like mye?</li>
+          <li><span class="bokstav">c)</span>Hva bør en som trener 30 timer i måneden velge?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     10.3 FORMLIKHET
+     ============================================================ -->
+<section id="k103" class="nyside">
+<h2 id="d10-3">10.3 Formlikhet</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>avgjøre om to figurer er formlike</li>
+    <li>finne ukjente sider i formlike figurer</li>
+    <li>bruke formlikhet til å måle høyder med skygge</li>
+    <li>forklare hvordan areal endrer seg ved forstørring</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>formlik</td><td></td><td>De to trekantene er formlike.</td></tr>
+    <tr><td>forholdstall</td><td></td><td>Forholdstallet er 3.</td></tr>
+    <tr><td>tilsvarende side</td><td></td><td>Den tilsvarende siden er 12 cm.</td></tr>
+    <tr><td>å forstørre</td><td></td><td>Bildet forstørres til dobbel bredde.</td></tr>
+    <tr><td>skygge</td><td></td><td>Stangen kaster 1,5 meter skygge.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  To figurer er <strong>formlike</strong> når de har nøyaktig samme form, men ulik størrelse.
+  Da er alle tilsvarende sider i samme forhold, og alle vinkler er like. Det gjør at du kan
+  finne mål du ikke kommer til — for eksempel høyden på et tre.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skyggemetoden med stang og tre">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#e6eaee" stroke="#c3cdd6"/>
+  <text x="310" y="38" font-family="Arial" font-size="12" font-weight="bold" fill="#3a4b5c" text-anchor="middle">SKYGGEMETODEN</text>
+
+  <line x1="50" y1="158" x2="580" y2="158" stroke="#1f2430" stroke-width="1.6"/>
+
+  <line x1="110" y1="158" x2="110" y2="118" stroke="#3a4b5c" stroke-width="3"/>
+  <line x1="110" y1="118" x2="140" y2="158" stroke="#c62828" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <line x1="110" y1="158" x2="140" y2="158" stroke="#c62828" stroke-width="3"/>
+  <text x="96" y="138" font-family="DejaVu Serif" font-size="11" fill="#3a4b5c" text-anchor="end">2 m</text>
+  <text x="125" y="174" font-family="DejaVu Serif" font-size="10" fill="#c62828" text-anchor="middle">1,5 m</text>
+
+  <line x1="300" y1="158" x2="300" y2="58" stroke="#3a4b5c" stroke-width="4"/>
+  <circle cx="300" cy="58" r="18" fill="#3a4b5c" fill-opacity="0.3" stroke="#3a4b5c" stroke-width="1.4"/>
+  <line x1="300" y1="58" x2="480" y2="158" stroke="#c62828" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <line x1="300" y1="158" x2="480" y2="158" stroke="#c62828" stroke-width="3"/>
+  <text x="286" y="112" font-family="DejaVu Serif" font-size="11" fill="#3a4b5c" text-anchor="end">?</text>
+  <text x="390" y="174" font-family="DejaVu Serif" font-size="10" fill="#c62828" text-anchor="middle">9 m</text>
+
+  <text x="310" y="196" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">2 : 1,5 = h : 9 &nbsp;&nbsp;→&nbsp;&nbsp; h = 12 m</text>
+</svg>
+<figcaption>Figur 10.2 &nbsp;Sola gir samme vinkel på begge, så trekantene blir formlike. Da kan høyden regnes ut fra skyggene.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="33" class="oppgaver" style="counter-reset: oppg 32;">
+      <li>To formlike rektangler. Det lille er 3 cm × 5 cm.
+        Det store har korteste side 9 cm. Hvor lang er den lengste siden?</li>
+      <li>To formlike rektangler. Det lille er 4 cm × 6 cm. Det store har korteste side 12 cm. Hvor lang er den lengste siden?</li>
+      <li>Forholdstallet mellom to formlike figurer er 1 : 4.
+        En side i den lille er 6 cm. Hvor lang er den tilsvarende siden i den store?</li>
+      <li>Forholdstallet mellom to formlike figurer er 1 : 5. En side i den lille er 7 cm. Hvor lang er den tilsvarende siden i den store?</li>
+      <li>To formlike trekanter. Sidene i den lille er 3 cm, 4 cm og 5 cm.
+        Den store har korteste side 9 cm. Finn de to andre sidene.</li>
+      <li>To formlike trekanter. Sidene i den lille er 6 cm, 8 cm og 10 cm. Den store har korteste side 15 cm. Finn de to andre sidene.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="39" class="oppgaver" style="counter-reset: oppg 38;">
+      <li>En stang på 2 meter kaster 1,5 meter skygge.
+        Samtidig kaster et tre 9 meter skygge. Hvor høyt er treet?</li>
+      <li>Et bilde er 12 cm bredt og 18 cm høyt.
+        Det forstørres slik at bredden blir 30 cm. Hvor høyt blir bildet?</li>
+      <li>To formlike trekanter har forholdstall 2,5.
+        Den lille har omkrets 14 cm. Hva er omkretsen til den store?</li>
+      <li>Et kart har målestokk 1 : 25 000.
+        To steder ligger 8 cm fra hverandre på kartet.
+        Hvor langt er det i virkeligheten? Oppgi svaret i kilometer.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="43" class="oppgaver" style="counter-reset: oppg 42;">
+      <li>To formlike rektangler har forholdstall 1 : 3.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange ganger større er omkretsen til den store?</li>
+          <li><span class="bokstav">b)</span>Hvor mange ganger større er arealet?</li>
+          <li><span class="bokstav">c)</span>Forklar hvorfor de to svarene er forskjellige.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En person på 1,75 meter kaster 2,1 meter skygge.
+          Samtidig kaster en bygning 27 meter skygge.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor høy er bygningen?</li>
+          <li><span class="bokstav">b)</span>Hver etasje er 3 meter høy. Hvor mange hele etasjer har bygningen?</li>
+          <li><span class="bokstav">c)</span>Hvorfor må de to målingene gjøres på samme tidspunkt?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «På en arbeidstegning i målestokk 1 : 20 er et vindu 6 cm bredt og 4,5 cm høyt.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er vinduet i virkeligheten?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er glassarealet i kvadratmeter?</li>
+          <li><span class="bokstav">c)</span>Glasset koster 890 kroner per kvadratmeter. Hva koster glasset til vinduet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     10.4 LØNN OG SKATT
+     ============================================================ -->
+<section id="k104" class="nyside">
+<h2 id="d10-4">10.4 Lønn og skatt</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skille mellom bruttolønn og nettolønn</li>
+    <li>regne ut skattetrekk og utbetalt lønn</li>
+    <li>regne ut overtidsbetaling og feriepenger</li>
+    <li>sammenligne to jobbtilbud</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>bruttolønn</td><td></td><td>Bruttolønnen er 42 000 kroner.</td></tr>
+    <tr><td>nettolønn</td><td></td><td>Nettolønnen er det jeg får utbetalt.</td></tr>
+    <tr><td>skattetrekk</td><td></td><td>Skattetrekket er 32 prosent.</td></tr>
+    <tr><td>feriepenger</td><td></td><td>Feriepengene er 10,2 prosent.</td></tr>
+    <tr><td>overtid</td><td></td><td>Overtid betales med 50 prosent tillegg.</td></tr>
+    <tr><td>lønnsslipp</td><td></td><td>Lønnsslippen viser alle trekkene.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Bruttolønn</strong> er lønnen før skatt — det tallet som står i stillingsannonsen.
+  <strong>Nettolønn</strong> er det som faktisk kommer inn på kontoen. Forskjellen er
+  skattetrekket, og den er stor nok til at det lønner seg å regne på den før du takker ja.
+</p>
+
+<div class="regel">
+  <span class="etikett">Tre regnestykker du trenger</span>
+  <ul>
+    <li><strong>Skatt:</strong> bruttolønn ganget med skatteprosenten som desimaltall.</li>
+    <li><strong>Nettolønn:</strong> bruttolønn minus skatt. Eller: brutto ganget med (1 − skatteprosent).</li>
+    <li><strong>Overtid:</strong> timelønn ganget med 1,5 ved 50 % tillegg.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Feriepenger regnes av <em>fjorårets</em> bruttolønn, vanligvis
+  10,2 prosent, og utbetales året etter.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Fra brutto til netto</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En ansatt har 42 000 kroner i bruttolønn, og skattetrekket er 32 %. Hva blir nettolønnen?</p>
+    <ol class="trinn">
+      <li>Skatt: <span class="matte">42 000 · 0,32 = 13 440</span></li>
+      <li>Netto: <span class="matte">42 000 − 13 440 = 28 560</span></li>
+      <li>Kontroll med den andre metoden: <span class="matte">42 000 · 0,68 = 28 560</span> ✓</li>
+    </ol>
+    <p class="svarlinje">Svar: Nettolønnen er 28 560 kroner.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>Bruttolønnen er 35 000 kroner, og skattetrekket er 30 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er skatten?</li><li><span class="bokstav">b)</span>Hva blir nettolønnen?</li>
+        </ul>
+      </li>
+      <li>Bruttolønnen er 42 000 kroner, og skattetrekket er 25 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er skatten?</li>
+          <li><span class="bokstav">b)</span>Hva blir nettolønnen?</li>
+        </ul>
+      </li>
+      <li>Timelønnen er 235 kroner, og du jobber 160 timer i måneden.
+        Hva blir bruttolønnen?</li>
+      <li>Timelønnen er 210 kroner, og du jobber 150 timer i måneden. Hva blir bruttolønnen?</li>
+      <li>Feriepengene er 10,2 % av fjorårets bruttolønn.
+        Lønnen i fjor var 420 000 kroner. Hvor mye blir feriepengene?</li>
+      <li>Feriepengene er 10,2 % av fjorårets bruttolønn. Lønnen i fjor var 380 000 kroner. Hvor mye blir feriepengene?</li>
+      <li>Bruttolønnen er 28 000 kroner, og nettolønnen er 20 160 kroner.
+        Hvor mange prosent er skattetrekket?</li>
+      <li>Bruttolønnen er 32 000 kroner, og nettolønnen er 22 400 kroner. Hvor mange prosent er skattetrekket?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="54" class="oppgaver" style="counter-reset: oppg 53;">
+      <li>Timelønnen er 248 kroner. Du jobber 37,5 timer i uka i fire uker.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva blir bruttolønnen?</li>
+          <li><span class="bokstav">b)</span>Skattetrekket er 33 %. Hvor mye blir skatten?</li>
+          <li><span class="bokstav">c)</span>Hva blir nettolønnen?</li>
+        </ul>
+      </li>
+      <li>Overtid betales med 50 % tillegg. Timelønnen er 260 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er overtidssatsen per time?</li>
+          <li><span class="bokstav">b)</span>Hva tjener du på 12 timer overtid?</li>
+        </ul>
+      </li>
+      <li>En ansatt tjener 480 000 kroner i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er månedslønnen?</li>
+          <li><span class="bokstav">b)</span>Hvor mye får hun i feriepenger neste år?</li>
+        </ul>
+      </li>
+      <li>To jobbtilbud: A gir 39 000 kroner brutto med 34 % skatt.
+        B gir 36 000 kroner brutto med 28 % skatt.
+        Hvilken jobb gir mest utbetalt?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="58" class="oppgaver" style="counter-reset: oppg 57;">
+      <li>En ansatt får lønnsøkning fra 42 000 til 45 000 kroner,
+        men skattetrekket øker samtidig fra 34 % til 36 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva var nettolønnen før?</li>
+          <li><span class="bokstav">b)</span>Hva blir nettolønnen etter?</li>
+          <li><span class="bokstav">c)</span>Hvor mye mer får hun utbetalt?</li>
+        </ul>
+      </li>
+      <li>Hvorfor er det bruttolønnen som står i en stillingsannonse,
+        når det er nettolønnen du faktisk får utbetalt?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="60" class="oppgaver" style="counter-reset: oppg 59;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Amina jobber 160 timer i måneden til 265 kroner timen. I tillegg hadde hun
+          14 timer overtid, som betales med 50 % tillegg. Skattetrekket er 35 %.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er den ordinære lønnen?</li>
+          <li><span class="bokstav">b)</span>Hva tjente hun på overtiden?</li>
+          <li><span class="bokstav">c)</span>Hva blir bruttolønnen?</li>
+          <li><span class="bokstav">d)</span>Hva blir nettolønnen?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift skriver i en annonse at gjennomsnittslønnen er 620 000 kroner.
+          Bedriften har 20 ansatte. 18 av dem tjener i snitt 450 000 kroner.
+          De to siste tjener 2,1 og 2,2 millioner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er samlet lønn for de 18?</li>
+          <li><span class="bokstav">b)</span>Kontroller at gjennomsnittet for alle 20 virkelig er 620 000 kroner.</li>
+          <li><span class="bokstav">c)</span>Omtrent hva er medianlønnen?</li>
+          <li><span class="bokstav">d)</span>Er annonsen misvisende? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     10.5 BUDSJETT, SPARING OG LÅN
+     ============================================================ -->
+<section id="k105" class="nyside">
+<h2 id="d10-5">10.5 Budsjett, sparing og lån</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>sette opp et enkelt månedsbudsjett</li>
+    <li>regne ut hvor mye du har igjen etter faste utgifter</li>
+    <li>regne ut renter på sparing og på lån</li>
+    <li>sammenligne kostnaden ved ulike former for gjeld</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>budsjett</td><td></td><td>Budsjettet viser inntekter og utgifter.</td></tr>
+    <tr><td>overskudd</td><td></td><td>Overskuddet er 1 700 kroner.</td></tr>
+    <tr><td>rente</td><td></td><td>Renten er 3 prosent i året.</td></tr>
+    <tr><td>avdrag</td><td></td><td>Avdraget er 3 500 kroner i måneden.</td></tr>
+    <tr><td>restgjeld</td><td></td><td>Restgjelden er 246 500 kroner.</td></tr>
+    <tr><td>kredittkort</td><td></td><td>Kredittkortet har høy rente.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Et budsjett er en plan: hva kommer inn, og hva går ut. Det som er igjen, kan spares.
+  Sparing og lån er to sider av samme sak — i det ene tilfellet får du renter, i det andre
+  betaler du dem. Regningen bruker vekstfaktoren fra kapittel 5.5.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Månedsbudsjett med inntekt, utgifter og overskudd">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#e6eaee" stroke="#c3cdd6"/>
+  <text x="310" y="38" font-family="Arial" font-size="12" font-weight="bold" fill="#3a4b5c" text-anchor="middle">MÅNEDSBUDSJETT</text>
+
+  <rect x="56" y="54" width="72" height="100" rx="5" fill="#2e7d32" fill-opacity="0.75"/>
+  <text x="92" y="110" font-family="DejaVu Serif" font-size="13" fill="#fff" text-anchor="middle">28 000</text>
+  <text x="92" y="170" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">inntekt</text>
+
+  <text x="152" y="110" font-family="DejaVu Serif" font-size="18" fill="#5a6272" text-anchor="middle">−</text>
+
+  <g>
+    <rect x="180" y="54" width="72" height="39" rx="4" fill="#3a4b5c"/>
+    <rect x="180" y="97" width="72" height="16" rx="4" fill="#5c7186"/>
+    <rect x="180" y="117" width="72" height="7" rx="3" fill="#8598a8"/>
+    <rect x="180" y="128" width="72" height="13" rx="4" fill="#adbcc9"/>
+  </g>
+  <g font-family="Arial" font-size="8.5" fill="#fff">
+    <text x="216" y="78" text-anchor="middle">bolig 11 000</text>
+    <text x="216" y="109" text-anchor="middle">mat 4 500</text>
+  </g>
+  <g font-family="Arial" font-size="8.5" fill="#1f2430">
+    <text x="260" y="124">transport 2 000</text>
+    <text x="260" y="139">annet 3 500</text>
+  </g>
+  <text x="216" y="170" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">utgifter 21 000</text>
+
+  <text x="392" y="110" font-family="DejaVu Serif" font-size="18" fill="#5a6272" text-anchor="middle">=</text>
+
+  <rect x="432" y="112" width="72" height="42" rx="5" fill="#f9a825"/>
+  <text x="468" y="139" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">7 000</text>
+  <text x="468" y="170" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">til sparing</text>
+
+  <text x="556" y="94" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">25 % av</text>
+  <text x="556" y="108" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">inntekten</text>
+</svg>
+<figcaption>Figur 10.3 &nbsp;Overskuddet er det du kan spare. Uten et budsjett er det lett å tro at det er større enn det er.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="62" class="oppgaver" style="counter-reset: oppg 61;">
+      <li>Inntekten er 28 000 kroner. Utgiftene er bolig 11 000, mat 4 500,
+        transport 2 000 og annet 3 500.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er summen av utgiftene?</li><li><span class="bokstav">b)</span>Hvor mye er igjen?</li>
+        </ul>
+      </li>
+      <li>Inntekten er 32 000 kroner. Utgiftene er bolig 12 000, mat 5 000, transport 2 500 og annet 4 000.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er summen av utgiftene?</li>
+          <li><span class="bokstav">b)</span>Hvor mye er igjen?</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent av inntekten i oppgave 62 går til bolig?
+        Rund av til én desimal.</li>
+      <li>Du sparer 1 500 kroner i måneden.
+        Hvor mye har du spart etter to år, uten å regne med renter?</li>
+      <li>Du sparer 2 000 kroner i måneden. Hvor mye har du spart etter tre år, uten å regne med renter?</li>
+      <li>Du setter 20 000 kroner i banken med 3 % rente.
+        Hvor mye står på kontoen etter ett år?</li>
+      <li>Du setter 15 000 kroner i banken med 4 % rente. Hvor mye står på kontoen etter ett år?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="69" class="oppgaver" style="counter-reset: oppg 68;">
+      <li>Du sparer 50 000 kroner med 2,5 % rente i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er vekstfaktoren?</li>
+          <li><span class="bokstav">b)</span>Hvor mye står på kontoen etter fem år?</li>
+          <li><span class="bokstav">c)</span>Hvor mye av dette er renter?</li>
+        </ul>
+      </li>
+      <li>Et lån på 300 000 kroner har 5,5 % rente i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er rentene det første året?</li>
+          <li><span class="bokstav">b)</span>Hvor mye utgjør det per måned?</li>
+        </ul>
+      </li>
+      <li>Et kredittkort har 22 % effektiv rente. Du har 15 000 kroner i gjeld.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster gjelden i renter på ett år?</li>
+          <li><span class="bokstav">b)</span>Et forbrukslån har 9 % rente. Hva ville det kostet?</li>
+          <li><span class="bokstav">c)</span>Hvor stor er forskjellen?</li>
+        </ul>
+      </li>
+      <li>Et budsjett viser inntekt 31 500 kroner og utgifter 29 800 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er overskuddet?</li>
+          <li><span class="bokstav">b)</span>Hvor mange måneder tar det å spare 20 000 kroner?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="73" class="oppgaver" style="counter-reset: oppg 72;">
+      <li>En familie har 42 000 kroner i månedsinntekt. De bruker
+        <span class="brok"><span class="t">1</span><span class="n">3</span></span> på bolig, <span class="brok"><span class="t">1</span><span class="n">5</span></span> på mat og <span class="brok"><span class="t">1</span><span class="n">10</span></span> på transport.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kroner går til hver av de tre postene?</li>
+          <li><span class="bokstav">b)</span>Hva er summen av disse utgiftene?</li>
+          <li><span class="bokstav">c)</span>Hvor mye er igjen til alt annet?</li>
+        </ul>
+      </li>
+      <li>Hvorfor lønner det seg å betale ned kredittkortgjeld
+        før man begynner å spare? Bruk tallene fra oppgave 71 i forklaringen.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="75" class="oppgaver" style="counter-reset: oppg 74;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Jonas sparer 2 000 kroner i måneden. Han setter hele årsbeløpet inn på
+          en konto på slutten av hvert år. Renten er 3,2 % i året.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye setter han inn hvert år?</li>
+          <li><span class="bokstav">b)</span>Hvor mye står på kontoen etter tre år? Husk at det første innskuddet får renter i to år, det andre i ett år, og det siste ingen.</li>
+          <li><span class="bokstav">c)</span>Hvor mye av beløpet er renter?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et forbrukslån på 80 000 kroner har 12,9 % rente.
+          Låntakeren betaler bare renter det første året, ingen avdrag.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster lånet i renter det første året?</li>
+          <li><span class="bokstav">b)</span>Hvor mye ville de samme 80 000 kronene gitt i renteinntekt på en sparekonto med 3 % rente?</li>
+          <li><span class="bokstav">c)</span>Hvor stor er forskjellen mellom å låne og å spare det samme beløpet i ett år?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     10.6 VALUTA
+     ============================================================ -->
+<section id="k106" class="nyside">
+<h2 id="d10-6">10.6 Valuta</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>veksle fra norske kroner til utenlandsk valuta</li>
+    <li>veksle tilbake til kroner</li>
+    <li>regne med vekslingsgebyr</li>
+    <li>sammenligne priser i ulike valutaer</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>valuta</td><td></td><td>Euro er en valuta.</td></tr>
+    <tr><td>valutakurs</td><td></td><td>Kursen er 11,80 kroner per euro.</td></tr>
+    <tr><td>å veksle</td><td></td><td>Jeg veksler kroner til euro.</td></tr>
+    <tr><td>gebyr</td><td></td><td>Banken tar 1,5 prosent i gebyr.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  En valutakurs forteller hvor mange kroner én enhet utenlandsk valuta koster.
+  Skal du <strong>fra</strong> kroner, deler du. Skal du <strong>til</strong> kroner, ganger du.
+  Kursene under brukes i alle oppgavene i dette delkapitlet.
+</p>
+
+<div class="regel">
+  <span class="etikett">Kurser i dette delkapitlet</span>
+  <table class="data" style="margin:0.5rem auto 0;">
+    <tr><th>Valuta</th><td>1 euro (EUR)</td><td>1 dollar (USD)</td><td>1 svensk krone (SEK)</td><td>1 pund (GBP)</td></tr>
+    <tr><th>I norske kroner</th><td>11,80</td><td>10,60</td><td>0,98</td><td>13,70</td></tr>
+  </table>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Begge veier</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Hvor mange kroner er 45 euro? Og hvor mange euro får du for 1 180 kroner?</p>
+    <ol class="trinn">
+      <li>Til kroner: gang med kursen. <span class="matte">45 · 11,80 = 531</span></li>
+      <li>Fra kroner: del på kursen. <span class="matte">1 180 : 11,80 = 100</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 45 euro er 531 kroner, og 1 180 kroner er 100 euro.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="77" class="oppgaver" style="counter-reset: oppg 76;">
+      <li>Hvor mange norske kroner er
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>100 euro</li><li><span class="bokstav">b)</span>50 dollar</li>
+          <li><span class="bokstav">c)</span>500 svenske kroner</li>
+        </ul>
+      </li>
+      <li>Hvor mange norske kroner er
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>200 euro</li>
+          <li><span class="bokstav">b)</span>80 dollar</li>
+          <li><span class="bokstav">c)</span>300 svenske kroner</li>
+        </ul>
+      </li>
+      <li>Hvor mange euro får du for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>1 180 kroner</li><li><span class="bokstav">b)</span>5 900 kroner</li>
+        </ul>
+      </li>
+      <li>Hvor mange euro får du for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2 360 kroner</li>
+          <li><span class="bokstav">b)</span>590 kroner</li>
+        </ul>
+      </li>
+      <li>En vare koster 45 euro. Hva er det i norske kroner?</li>
+      <li>En vare koster 75 dollar. Hva er det i norske kroner?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="83" class="oppgaver" style="counter-reset: oppg 82;">
+      <li>På en reise koster hotellet 640 euro og maten 280 euro.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er dette i euro til sammen?</li>
+          <li><span class="bokstav">b)</span>Hvor mye er det i norske kroner?</li>
+        </ul>
+      </li>
+      <li>Du veksler 8 000 kroner til euro. Banken tar 1,5 % i gebyr av beløpet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er gebyret?</li>
+          <li><span class="bokstav">b)</span>Hvor mye blir vekslet?</li>
+          <li><span class="bokstav">c)</span>Hvor mange euro får du? Rund av til to desimaler.</li>
+        </ul>
+      </li>
+      <li>En vare koster 120 dollar i USA og 1 350 kroner i Norge.
+        Hvor er den billigst?</li>
+      <li>Du har 250 euro igjen etter ferien og veksler dem tilbake.
+        Banken kjøper euro til kurs 11,40.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kroner får du?</li>
+          <li><span class="bokstav">b)</span>Hvor mye mindre er det enn om kursen hadde vært 11,80?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="87" class="oppgaver" style="counter-reset: oppg 86;">
+      <li>Forklar hvorfor du sitter igjen med mindre enn du startet med,
+        når du veksler penger fram og tilbake — selv om kursen ikke har endret seg.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="88" class="oppgaver" style="counter-reset: oppg 87;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En familie på fire reiser til Spania. Flybilletten koster 3 480 kroner per person.
+          Hotellet koster 148 euro per natt i 7 netter. De regner 60 euro per dag til mat
+          for hele familien, i 7 dager. Kursen er 11,80.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster flybillettene til sammen?</li>
+          <li><span class="bokstav">b)</span>Hva koster hotellet i norske kroner?</li>
+          <li><span class="bokstav">c)</span>Hva koster maten i norske kroner?</li>
+          <li><span class="bokstav">d)</span>Hva koster hele turen?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift bestiller varer for 24 000 euro. Ved bestilling er kursen 11,60.
+          Ved betaling tre måneder senere er kursen 12,15.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva ville varene kostet i kroner ved bestilling?</li>
+          <li><span class="bokstav">b)</span>Hva koster de ved betaling?</li>
+          <li><span class="bokstav">c)</span>Hvor mye dyrere ble det, i kroner og i prosent?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     10.7 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k107" class="nyside">
+<h2 id="d10-7">10.7 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="90" class="oppgaver" style="counter-reset: oppg 89;">
+      <li>Funksjonen er <span class="matte">y = 4x + 12</span>. Finn y når x = 7.</li>
+      <li>Løs likningssettet: <span class="matte">x + y = 14</span> og <span class="matte">x − y = 6</span></li>
+      <li>Bruttolønnen er 38 000 kroner, og skattetrekket er 32 %.
+        Hva blir nettolønnen?</li>
+      <li>Hvor mange norske kroner er 150 euro, når kursen er 11,80?</li>
+      <li>To formlike trekanter har forholdstall 3.
+        Den lille har omkrets 12 cm. Hva er omkretsen til den store?</li>
+      <li>Du sparer 40 000 kroner med 3 % rente i året.
+        Hvor mye står på kontoen etter fire år?</li>
+      <li>Funksjonen <span class="matte">y = 250x + 1 200</span> viser kostnaden
+        i kroner ved x timers arbeid.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster 6 timer?</li>
+          <li><span class="bokstav">b)</span>Hvor mange timer får du for 5 200 kroner?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>E &nbsp;·&nbsp; Eksamensnær</span><span class="nivaa">Modul 4Y</span></div>
+  <div class="kropp">
+    <ol start="97" class="oppgaver" style="counter-reset: oppg 96;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En ansatt har 41 000 kroner i bruttolønn. Skattetrekket er 34 %.
+          Hun sparer 15 % av nettolønnen hver måned.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye betaler hun i skatt?</li>
+          <li><span class="bokstav">b)</span>Hva er nettolønnen?</li>
+          <li><span class="bokstav">c)</span>Hvor mye sparer hun i måneden?</li>
+          <li><span class="bokstav">d)</span>Hvor lang tid tar det å spare 50 000 kroner?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et lån på 250 000 kroner har 6,2 % rente i året. Låntakeren betaler
+          3 500 kroner i avdrag hver måned, i tillegg til rentene.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er rentene den første måneden?</li>
+          <li><span class="bokstav">b)</span>Hvor mye betaler hun til sammen den første måneden?</li>
+          <li><span class="bokstav">c)</span>Hvor stor er restgjelden etter én måned?</li>
+          <li><span class="bokstav">d)</span>Blir rentebeløpet større eller mindre neste måned? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «To firmaer gir tilbud på en jobb. Firma A tar 8 500 kroner fast
+          pluss 450 kroner per time. Firma B tar 3 200 kroner fast pluss 780 kroner per time.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en funksjon for hvert firma.</li>
+          <li><span class="bokstav">b)</span>Ved hvor mange timer koster de omtrent like mye?</li>
+          <li><span class="bokstav">c)</span>Hvilket firma er billigst ved 10 timer?</li>
+          <li><span class="bokstav">d)</span>Hvilket firma er billigst ved 25 timer?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan sette opp en lineær funksjon ut fra en tekst og tegne grafen. <em>(10.1)</em></li>
+    <li>Jeg kan løse et likningssett og kontrollere svaret. <em>(10.2)</em></li>
+    <li>Jeg kan bruke formlikhet til å finne ukjente lengder. <em>(10.3)</em></li>
+    <li>Jeg kan regne fra bruttolønn til nettolønn, og regne ut overtid og feriepenger. <em>(10.4)</em></li>
+    <li>Jeg kan sette opp et budsjett og regne renter på sparing og lån. <em>(10.5)</em></li>
+    <li>Jeg kan veksle mellom kroner og utenlandsk valuta. <em>(10.6)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 10</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>10.1 Funksjoner og grafer</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 3</span><span class="d">b) 5</span><span class="d">c) 13</span></li>
+<li><span class="d">a) 1</span><span class="d">b) 7</span><span class="d">c) 13</span></li>
+<li><span class="d">a) 100</span><span class="d">b) 200</span><span class="d">c) 500</span></li>
+<li><span class="d">a) 75</span><span class="d">b) 150</span><span class="d">c) 300</span></li>
+<li>x: 0, 1, 2, 3 gir y: <strong>4, 5, 6, 7</strong></li>
+<li><span class="d">a) 3</span><span class="d">b) 7</span></li>
+<li><span class="d">a) 5</span><span class="d">b) −2</span></li>
+<li><span class="d">a) 65, 155 og 245 kroner</span><span class="d">b) startprisen</span><span class="d">c) prisen per kilometer</span></li>
+<li><span class="d">a) 379 kroner</span><span class="d">b) fastbeløpet, som påløper uansett forbruk</span></li>
+<li>x: 0–5 gir y: <strong>1, 3, 5, 7, 9, 11</strong>.
+    </li>
+<li>(300 − 100) : 10 = <strong>20</strong></li>
+<li><span class="matte">y = 5x + 2</span> vokser raskest.
+    </li>
+<li><span class="d">a) 25 GB</span><span class="d">b) </span><span class="d">c) abonnement B</span><br/>
+</li>
+<li><span class="d">a) 300 kroner</span><span class="d">b) etter 20 kjøp</span><span class="d">c) </span><br/>
+</li>
+<li> Forventet: y endrer seg like mye for hvert steg x tar.
+    Når endringen er den samme hele veien, blir helningen den samme hele veien — og da er
+    grafen en rett linje.</li>
+<li><span class="d">a) y = 340x + 950</span><span class="d">b) 2 650 kroner</span><span class="d">c) 12 dager</span>
+<span class="d">d) </span><br/>
+</li>
+<li><span class="d">a) 11,25 timer</span><span class="d">b) firma A</span><span class="d">c) firma B</span>
+<span class="d">d) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.2 Likningssett</h3>
+<ol class="fasit" start="18" style="counter-reset: fas 17;">
+<li><span class="d">a) ja — 3 + 5 = 8</span><span class="d">b) ja — 6 + 5 = 11</span>
+</li>
+<li>x = <strong>8</strong>, y = <strong>4</strong></li>
+<li><span class="d">x = 9</span><span class="d">y = 6</span></li>
+<li>x = <strong>5</strong>, y = <strong>15</strong></li>
+<li><span class="d">x = 8</span><span class="d">y = 16</span></li>
+<li>x = <strong>3</strong>, y = <strong>6</strong></li>
+<li><span class="d">x = 4</span><span class="d">y = 16</span></li>
+<li>x = <strong>4</strong>, y = <strong>6</strong></li>
+<li>x = <strong>6</strong>, y = <strong>5</strong></li>
+<li>Tallene er <strong>27 og 18</strong></li>
+<li><span class="d">a) 2v + 3b = 690 og v + 2b = 400</span>
+<span class="d">b) voksen 180 kr, barn 110 kr</span><br/>
+</li>
+<li><strong>18 høner og 12 kuer.</strong>
+</li>
+<li> Løsningen er punktet der de to linjene krysser
+    hverandre — det eneste punktet som ligger på begge. Er linjene parallelle, krysser de aldri,
+    og likningssettet har ingen løsning.</li>
+<li><span class="d">a) 40k + 25b = 2 025 og 30k + 40b = 2 050</span>
+<span class="d">b) kaffe 35 kr, bolle 25 kr</span><span class="d">c) 155 kroner</span><br/>
+</li>
+<li><span class="d">a) y = 25x + 349 og y = 15x + 549</span><span class="d">b) 20 timer</span>
+<span class="d">c) medlemskap B</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.3 Formlikhet</h3>
+<ol class="fasit" start="33" style="counter-reset: fas 32;">
+<li>Forholdstallet er 3, så den lengste siden er <strong>15 cm</strong></li>
+<li>Forholdstallet er 3, så den lengste siden er 18 cm</li>
+<li>6 · 4 = <strong>24 cm</strong></li>
+<li>7 · 5 = 35 cm</li>
+<li><strong>12 cm og 15 cm</strong></li>
+<li>20 cm og 25 cm</li>
+<li>2 : 1,5 = h : 9, altså h = 2 : 1,5 · 9 = <strong>12 meter</strong></li>
+<li>Forholdstallet er 30 : 12 = 2,5, så høyden blir 18 · 2,5 = <strong>45 cm</strong></li>
+<li>14 · 2,5 = <strong>35 cm</strong></li>
+<li>8 · 25 000 = 200 000 cm = <strong>2 kilometer</strong></li>
+<li><span class="d">a) 3 ganger</span><span class="d">b) 9 ganger</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 22,5 meter</span><span class="d">b) 7 hele etasjer</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 120 cm × 90 cm</span><span class="d">b) 1,08 m²</span><span class="d">c) 961,20 kroner</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.4 Lønn og skatt</h3>
+<ol class="fasit" start="46" style="counter-reset: fas 45;">
+<li><span class="d">a) 10 500 kr</span><span class="d">b) 24 500 kr</span></li>
+<li><span class="d">a) 10 500 kr</span><span class="d">b) 31 500 kr</span></li>
+<li>235 · 160 = <strong>37 600 kroner</strong></li>
+<li>210 · 150 = 31 500 kroner</li>
+<li>0,102 · 420 000 = <strong>42 840 kroner</strong></li>
+<li>0,102 · 380 000 = 38 760 kroner</li>
+<li>Skatten er 7 840 kr. 7 840 : 28 000 = <strong>28 %</strong></li>
+<li>Skatten er 9 600 kr. 9 600 : 32 000 = 30 %</li>
+<li><span class="d">a) 37 200 kr</span><span class="d">b) 12 276 kr</span><span class="d">c) 24 924 kr</span><br/>
+</li>
+<li><span class="d">a) 390 kr per time</span><span class="d">b) 4 680 kr</span></li>
+<li><span class="d">a) 40 000 kr</span><span class="d">b) 48 960 kr</span></li>
+<li>A gir 39 000 · 0,66 = <strong>25 740 kr</strong>. B gir 36 000 · 0,72 = <strong>25 920 kr</strong>.<br/>
+<strong>Jobb B gir mest utbetalt</strong>, med 180 kroner.
+    </li>
+<li><span class="d">a) 27 720 kr</span><span class="d">b) 28 800 kr</span><span class="d">c) 1 080 kr mer</span><br/>
+</li>
+<li> Forventet: skattetrekket avhenger av den enkeltes
+    situasjon — samlet inntekt, fradrag, skattekort. Arbeidsgiver kan derfor bare oppgi
+    bruttolønnen, som er den samme for alle i stillingen.</li>
+<li><span class="d">a) 42 400 kr</span><span class="d">b) 5 565 kr</span><span class="d">c) 47 965 kr</span>
+<span class="d">d) 31 177,25 kr</span><br/>
+</li>
+<li><span class="d">a) 8 100 000 kr</span><span class="d">b) 12 400 000 : 20 = 620 000 ✓</span>
+<span class="d">c) ca. 450 000 kr</span><span class="d">d) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.5 Budsjett, sparing og lån</h3>
+<ol class="fasit" start="62" style="counter-reset: fas 61;">
+<li><span class="d">a) 21 000 kr</span><span class="d">b) 7 000 kr</span></li>
+<li><span class="d">a) 23 500 kr</span><span class="d">b) 8 500 kr</span></li>
+<li>11 000 : 28 000 = <strong>39,3 %</strong></li>
+<li>1 500 · 24 = <strong>36 000 kroner</strong></li>
+<li>2 000 · 36 = 72 000 kroner</li>
+<li>20 000 · 1,03 = <strong>20 600 kroner</strong></li>
+<li>15 000 · 1,04 = 15 600 kroner</li>
+<li><span class="d">a) 1,025</span><span class="d">b) 56 570,41 kr</span><span class="d">c) 6 570,41 kr</span></li>
+<li><span class="d">a) 16 500 kr</span><span class="d">b) 1 375 kr per måned</span></li>
+<li><span class="d">a) 3 300 kr</span><span class="d">b) 1 350 kr</span><span class="d">c) 1 950 kr</span></li>
+<li><span class="d">a) 1 700 kr</span><span class="d">b) 12 måneder</span><br/>
+</li>
+<li><span class="d">a) bolig 14 000, mat 8 400, transport 4 200</span><span class="d">b) 26 600 kr</span>
+<span class="d">c) 15 400 kr</span></li>
+<li> Forventet: kredittkortgjelden koster 22 % i året,
+    mens sparingen gir langt mindre — kanskje 3 %. Hver krone som brukes til nedbetaling i stedet
+    for sparing, gir altså en sikker gevinst på nesten 20 %. Å spare mens man har dyr gjeld,
+    er å tape penger.</li>
+<li><span class="d">a) 24 000 kr</span><span class="d">b) 74 328,58 kr</span><span class="d">c) 2 328,58 kr</span><br/>
+</li>
+<li><span class="d">a) 10 320 kr</span><span class="d">b) 2 400 kr</span><span class="d">c) 7 920 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.6 Valuta</h3>
+<ol class="fasit" start="77" style="counter-reset: fas 76;">
+<li><span class="d">a) 1 180 kr</span><span class="d">b) 530 kr</span><span class="d">c) 490 kr</span></li>
+<li><span class="d">a) 2 360 kr</span><span class="d">b) 848 kr</span><span class="d">c) 294 kr</span></li>
+<li><span class="d">a) 100 euro</span><span class="d">b) 500 euro</span></li>
+<li><span class="d">a) 200 euro</span><span class="d">b) 50 euro</span></li>
+<li>45 · 11,80 = <strong>531 kroner</strong></li>
+<li>75 · 10,60 = 795 kroner</li>
+<li><span class="d">a) 920 euro</span><span class="d">b) 10 856 kroner</span></li>
+<li><span class="d">a) 120 kr</span><span class="d">b) 7 880 kr</span><span class="d">c) 667,80 euro</span></li>
+<li>120 · 10,60 = 1 272 kroner. <strong>Varen er billigst i USA</strong>, med 78 kroner.</li>
+<li><span class="d">a) 2 850 kr</span><span class="d">b) 100 kroner mindre</span></li>
+<li> Forventet: banken kjøper til en lavere kurs enn den
+    selger til, og forskjellen er bankens fortjeneste. I tillegg kommer gebyr. Begge deler
+    trekkes fra hver gang du veksler, så du taper på begge vekslingene.</li>
+<li><span class="d">a) 13 920 kr</span><span class="d">b) 12 224,80 kr</span><span class="d">c) 4 956 kr</span>
+<span class="d">d) 31 100,80 kr</span><br/>
+</li>
+<li><span class="d">a) 278 400 kr</span><span class="d">b) 291 600 kr</span>
+<span class="d">c) 13 200 kr, altså 4,7 %</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>10.7 Blandede oppgaver</h3>
+<ol class="fasit" start="90" style="counter-reset: fas 89;">
+<li>4 · 7 + 12 = <strong>40</strong></li>
+<li>x = <strong>10</strong>, y = <strong>4</strong></li>
+<li>38 000 · 0,68 = <strong>25 840 kroner</strong></li>
+<li>150 · 11,80 = <strong>1 770 kroner</strong></li>
+<li>12 · 3 = <strong>36 cm</strong></li>
+<li>40 000 · 1,03⁴ = <strong>45 020,35 kroner</strong></li>
+<li><span class="d">a) 2 700 kr</span><span class="d">b) 16 timer</span></li>
+<li><span class="d">a) 13 940 kr</span><span class="d">b) 27 060 kr</span><span class="d">c) 4 059 kr</span>
+<span class="d">d) 13 måneder</span><br/>
+</li>
+<li><span class="d">a) 1 291,67 kr</span><span class="d">b) 4 791,67 kr</span><span class="d">c) 246 500 kr</span>
+<span class="d">d) </span><br/>
+</li>
+<li><span class="d">a) A: y = 450x + 8 500 · B: y = 780x + 3 200</span>
+<span class="d">b) ca. 16,1 timer</span><span class="d">c) firma B</span><span class="d">d) firma A</span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-9.html"><span class="etikett">Forrige kapittel</span><strong>9. Statistikk</strong></a><a class="neste" href="kapittel-11.html"><span class="etikett">Neste kapittel</span><strong>11. Digitale verktøy</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

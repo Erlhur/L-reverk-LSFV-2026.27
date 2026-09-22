@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4. Brøk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html" aria-current="page"><span class="nr">4</span><span>Brøk</span></a></li><li class="dk"><a href="#d4-1">4.1 Hva en brøk er</a></li><li class="dk"><a href="#d4-2">4.2 Utvide og forkorte</a></li><li class="dk"><a href="#d4-3">4.3 Brøk, desimaltall og prosent</a></li><li class="dk"><a href="#d4-4">4.4 Addisjon og subtraksjon av brøk</a></li><li class="dk"><a href="#d4-5">4.5 Multiplikasjon og divisjon av brøk</a></li><li class="dk"><a href="#d4-6">4.6 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#2f6b4f">
+
+
+<section class="kapittelapning" style="--kap:#2f6b4f">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 4</p>
+    <h1 class="kapittel-tittel">Brøk</h1>
+    <p class="ingress">
+      Brøk handler om deler av noe helt: en halv time, tre fjerdedels lønn, en femtedel av
+      klassen. Du møter brøk i oppskrifter, i arbeidsavtaler og i nyhetene. I dette kapitlet
+      lærer du å lese og skrive brøk, gjøre om mellom brøk, desimaltall og prosent, og regne
+      med brøk i praktiske situasjoner.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brøk som del av det hele, del av en mengde, tall på tallinja og som desimaltall og prosent">
+  <!-- del av det hele -->
+  <text x="104" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2f6b4f" text-anchor="middle">DEL AV DET HELE</text>
+  <g transform="translate(104,104)">
+    <path d="M 0 0 L 0 -62 A 62 62 0 0 1 43.8 -43.8 Z" fill="#2f6b4f" fill-opacity="0.75"/>
+    <path d="M 0 0 L 43.8 -43.8 A 62 62 0 0 1 62 0 Z" fill="#2f6b4f" fill-opacity="0.75"/>
+    <path d="M 0 0 L 62 0 A 62 62 0 0 1 43.8 43.8 Z" fill="#2f6b4f" fill-opacity="0.75"/>
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#2f6b4f" stroke-width="1.8"/>
+    <g stroke="#2f6b4f" stroke-width="1.4">
+      <line x1="0" y1="0" x2="0" y2="-62"/><line x1="0" y1="0" x2="43.8" y2="-43.8"/>
+      <line x1="0" y1="0" x2="62" y2="0"/><line x1="0" y1="0" x2="43.8" y2="43.8"/>
+      <line x1="0" y1="0" x2="0" y2="62"/><line x1="0" y1="0" x2="-43.8" y2="43.8"/>
+      <line x1="0" y1="0" x2="-62" y2="0"/><line x1="0" y1="0" x2="-43.8" y2="-43.8"/>
+    </g>
+  </g>
+  <text x="104" y="190" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">3 av 8 deler</text>
+  <text x="82" y="216" font-family="DejaVu Serif" font-size="20" fill="#2f6b4f" text-anchor="middle">3</text>
+  <line x1="70" y1="222" x2="94" y2="222" stroke="#2f6b4f" stroke-width="2"/>
+  <text x="82" y="242" font-family="DejaVu Serif" font-size="20" fill="#2f6b4f" text-anchor="middle">8</text>
+  <text x="132" y="232" font-family="Arial" font-size="11" fill="#5a6272">teller</text>
+  <text x="132" y="248" font-family="Arial" font-size="11" fill="#5a6272">nevner</text>
+
+  <line x1="218" y1="20" x2="218" y2="256" stroke="#d6d9de"/>
+
+  <!-- del av en mengde -->
+  <text x="330" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2f6b4f" text-anchor="middle">DEL AV EN MENGDE</text>
+  <g>
+    <circle cx="258" cy="56" r="8" fill="#2f6b4f"/><circle cx="282" cy="56" r="8" fill="#2f6b4f"/>
+    <circle cx="306" cy="56" r="8" fill="#2f6b4f"/><circle cx="330" cy="56" r="8" fill="#2f6b4f"/>
+    <circle cx="354" cy="56" r="8" fill="#c8d6cf"/><circle cx="378" cy="56" r="8" fill="#c8d6cf"/>
+    <circle cx="402" cy="56" r="8" fill="#c8d6cf"/>
+    <circle cx="258" cy="82" r="8" fill="#c8d6cf"/><circle cx="282" cy="82" r="8" fill="#c8d6cf"/>
+    <circle cx="306" cy="82" r="8" fill="#c8d6cf"/><circle cx="330" cy="82" r="8" fill="#c8d6cf"/>
+    <circle cx="354" cy="82" r="8" fill="#c8d6cf"/>
+  </g>
+  <rect x="246" y="44" width="120" height="24" rx="8" fill="none" stroke="#2f6b4f" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="330" y="112" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">1/3 av 12 er 4</text>
+
+  <!-- tallinja -->
+  <text x="330" y="150" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2f6b4f" text-anchor="middle">TALL PÅ TALLINJA</text>
+  <line x1="248" y1="176" x2="480" y2="176" stroke="#1f2430" stroke-width="1.8"/>
+  <g stroke="#1f2430" stroke-width="1.6">
+    <line x1="248" y1="168" x2="248" y2="184"/><line x1="306" y1="170" x2="306" y2="182"/>
+    <line x1="364" y1="168" x2="364" y2="184"/><line x1="422" y1="170" x2="422" y2="182"/>
+    <line x1="480" y1="168" x2="480" y2="184"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">
+    <text x="248" y="200">0</text><text x="306" y="200">¼</text>
+    <text x="364" y="200">½</text><text x="422" y="200">¾</text><text x="480" y="200">1</text>
+  </g>
+  <circle cx="422" cy="176" r="5" fill="#2f6b4f"/>
+
+  <line x1="502" y1="20" x2="502" y2="256" stroke="#d6d9de"/>
+
+  <!-- tre skrivemåter -->
+  <text x="572" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2f6b4f" text-anchor="middle">TRE SKRIVEMÅTER</text>
+  <rect x="516" y="44" width="112" height="52" rx="7" fill="#eaf2ee" stroke="#2f6b4f" stroke-width="1.3"/>
+  <text x="572" y="66" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">1/2</text>
+  <text x="572" y="86" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">brøk</text>
+  <rect x="516" y="104" width="112" height="52" rx="7" fill="#eaf2ee" stroke="#2f6b4f" stroke-width="1.3"/>
+  <text x="572" y="126" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">0,5</text>
+  <text x="572" y="146" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">desimaltall</text>
+  <rect x="516" y="164" width="112" height="52" rx="7" fill="#eaf2ee" stroke="#2f6b4f" stroke-width="1.3"/>
+  <text x="572" y="186" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">50 %</text>
+  <text x="572" y="206" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">prosent</text>
+  <text x="572" y="238" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">samme mengde</text>
+
+  <!-- brøkstriper -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <g>
+    <rect x="150" y="288" width="340" height="20" fill="none" stroke="#2f6b4f" stroke-width="1.4"/>
+    <rect x="150" y="288" width="170" height="20" fill="#2f6b4f" fill-opacity="0.35"/>
+    <line x1="320" y1="288" x2="320" y2="308" stroke="#2f6b4f" stroke-width="1.4"/>
+    <line x1="235" y1="288" x2="235" y2="308" stroke="#2f6b4f" stroke-opacity="0.5"/>
+    <line x1="405" y1="288" x2="405" y2="308" stroke="#2f6b4f" stroke-opacity="0.5"/>
+  </g>
+  <text x="30" y="302" font-family="Arial" font-size="11" font-weight="bold" fill="#2f6b4f">LIKE BRØKER</text>
+  <text x="504" y="302" font-family="DejaVu Serif" font-size="14" fill="#1f2430">1/2 = 2/4 = 4/8</text>
+</svg>
+<p class="illtekst">Brøk kan bety en del av noe helt, en del av en mengde, eller et tall på tallinja — og den samme mengden kan skrives som brøk, desimaltall eller prosent.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">4.1</span><span>Hva en brøk er</span></li>
+    <li><span class="dknr">4.2</span><span>Utvide og forkorte</span></li>
+    <li><span class="dknr">4.3</span><span>Brøk, desimaltall og prosent</span></li>
+    <li><span class="dknr">4.4</span><span>Addisjon og subtraksjon av brøk</span></li>
+    <li><span class="dknr">4.5</span><span>Multiplikasjon og divisjon av brøk</span></li>
+    <li><span class="dknr">4.6</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-4.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">22 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>videreutvikle og bruke formålstjenlige strategier for addisjon, subtraksjon og multiplikasjon av brøk og forklare tenkemåtene sine</li>
+      <li>representere og bruke brøk, desimaltall og prosent på ulike måter, utforske de matematiske sammenhengene mellom disse representasjonsformene og vurdere i hvilke situasjoner ulike representasjoner er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>sammenligne og bruke tall representert som desimaltall, prosent, brøker, potenser og kvadratrøtter i praktiske situasjoner, og vurdere hvilke representasjoner som er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Merk at modul 3-målet nevner addisjon, subtraksjon og multiplikasjon, men ikke divisjon av brøk. Divisjon er derfor lagt til delkapittel 4.5 som utvidelse, merket for modul 4.</p>
+</section>
+
+<!-- ============================================================
+     4.1 HVA EN BRØK ER
+     ============================================================ -->
+<section id="k41">
+<h2 id="d4-1">4.1 Hva en brøk er</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva teller og nevner betyr</li>
+    <li>skrive en brøk som beskriver en del av noe helt</li>
+    <li>finne en brøkdel av en mengde</li>
+    <li>plassere brøker på tallinja og sammenligne dem</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>brøk</td><td></td><td>Tre firedeler er en brøk.</td></tr>
+    <tr><td>teller</td><td></td><td>Telleren står over brøkstreken.</td></tr>
+    <tr><td>nevner</td><td></td><td>Nevneren står under brøkstreken.</td></tr>
+    <tr><td>en halv / en tredel</td><td></td><td>Jeg tok en halv liter.</td></tr>
+    <tr><td>andel</td><td></td><td>Andelen som sykler, er <span class="brok"><span class="t">3</span><span class="n">8</span></span>.</td></tr>
+    <tr><td>like deler</td><td></td><td>Kaka er delt i åtte like deler.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  En brøk forteller to ting. <strong>Nevneren</strong> sier hvor mange like deler det hele er
+  delt i. <strong>Telleren</strong> sier hvor mange av delene vi tar. Derfor er det helt
+  avgjørende at delene er <em>like store</em> — ellers gir brøken ingen mening.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teller og nevner forklart med en oppdelt figur">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eaf2ee" stroke="#bcd6c8"/>
+
+  <g>
+    <rect x="44" y="52" width="220" height="46" fill="none" stroke="#2f6b4f" stroke-width="1.8"/>
+    <rect x="44" y="52" width="132" height="46" fill="#2f6b4f" fill-opacity="0.4"/>
+    <g stroke="#2f6b4f" stroke-width="1.4">
+      <line x1="88" y1="52" x2="88" y2="98"/><line x1="132" y1="52" x2="132" y2="98"/>
+      <line x1="176" y1="52" x2="176" y2="98"/><line x1="220" y1="52" x2="220" y2="98"/>
+    </g>
+  </g>
+  <text x="154" y="124" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">delt i 5 like deler — 3 er fargelagt</text>
+
+  <text x="352" y="70" font-family="DejaVu Serif" font-size="34" fill="#2f6b4f" text-anchor="middle">3</text>
+  <line x1="330" y1="80" x2="374" y2="80" stroke="#1f2430" stroke-width="2.4"/>
+  <text x="352" y="112" font-family="DejaVu Serif" font-size="34" fill="#2f6b4f" text-anchor="middle">5</text>
+
+  <path d="M 384 62 L 424 62" stroke="#5a6272" stroke-width="1.3" marker-end="url(#pb)"/>
+  <path d="M 384 104 L 424 104" stroke="#5a6272" stroke-width="1.3" marker-end="url(#pb)"/>
+  <defs><marker id="pb" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#5a6272"/></marker></defs>
+  <text x="432" y="58" font-family="Arial" font-size="12.5" font-weight="bold" fill="#1f2430">teller</text>
+  <text x="432" y="74" font-family="Arial" font-size="11" fill="#5a6272">hvor mange vi tar</text>
+  <text x="432" y="100" font-family="Arial" font-size="12.5" font-weight="bold" fill="#1f2430">nevner</text>
+  <text x="432" y="116" font-family="Arial" font-size="11" fill="#5a6272">hvor mange like deler</text>
+
+  <text x="310" y="164" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Leses «tre femdeler». Nevneren gir brøken navn: femdeler, sjudeler, tideler.</text>
+</svg>
+<figcaption>Figur 4.1 &nbsp;Nevneren navngir delene, telleren teller dem.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Brøkdel av et tall</span>
+  <p style="margin-bottom:0;">For å finne en brøkdel av et tall: <strong>del på nevneren, gang med telleren</strong>.<br>
+  <span class="brok"><span class="t">3</span><span class="n">4</span></span> av 20: &nbsp; <span class="matte">20 : 4 = 5</span> &nbsp;og&nbsp; <span class="matte">5 · 3 = 15</span></p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Brøkdel av en mengde</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En klasse har 24 elever. <span class="brok"><span class="t">3</span><span class="n">8</span></span> av dem tar bussen til skolen. Hvor mange er det?</p>
+    <ol class="trinn">
+      <li>Nevneren er 8, så vi deler klassen i 8 like grupper: <span class="matte">24 : 8 = 3</span></li>
+      <li>Hver gruppe er altså 3 elever.</li>
+      <li>Telleren er 3, så vi tar 3 slike grupper: <span class="matte">3 · 3 = 9</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 9 elever tar bussen.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Skriv som brøk.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>tre av fire like deler</li>
+          <li><span class="bokstav">b)</span>én av åtte like deler</li>
+          <li><span class="bokstav">c)</span>fem av seks like deler</li>
+          <li><span class="bokstav">d)</span>to av tre like deler</li>
+        </ul>
+      </li>
+      <li>Skriv som brøk.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>to av fem like deler</li>
+          <li><span class="bokstav">b)</span>tre av åtte like deler</li>
+          <li><span class="bokstav">c)</span>én av seks like deler</li>
+          <li><span class="bokstav">d)</span>fire av sju like deler</li>
+        </ul>
+      </li>
+      <li>Hva er telleren, og hva er nevneren?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">9</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> av 10</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> av 20</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> av 12</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">1</span><span class="n">5</span></span> av 25</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> av 8</li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> av 9</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> av 16</li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">1</span><span class="n">5</span></span> av 20</li>
+          <li><span class="bokstav">e)</span><span class="brok"><span class="t">1</span><span class="n">10</span></span> av 50</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> av 9</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> av 20</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> av 15</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">8</span></span> av 16</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> av 12</li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> av 10</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> av 16</li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">2</span><span class="n">7</span></span> av 21</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> av 60</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> av 45</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> av 42</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> av 100</li>
+        </ul>
+      </li>
+      <li>En klasse har 24 elever, og <span class="brok"><span class="t">3</span><span class="n">8</span></span> av dem tar bussen. Hvor mange er det?</li>
+      <li>En pizza er delt i 8 like stykker. Ali spiser 3 stykker, Nora spiser 2.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilken brøk spiste Ali?</li>
+          <li><span class="bokstav">b)</span>Hvilken brøk spiste Nora?</li>
+          <li><span class="bokstav">c)</span>Hvor stor del er igjen?</li>
+        </ul>
+      </li>
+      <li>Tegn en tallinje fra 0 til 1, og plasser brøkene
+        <span class="brok"><span class="t">1</span><span class="n">8</span></span>, <span class="brok"><span class="t">1</span><span class="n">4</span></span>, <span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">3</span><span class="n">4</span></span> på den.</li>
+      <li>Hvilken brøk er størst?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> eller <span class="brok"><span class="t">1</span><span class="n">3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> eller <span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> eller <span class="brok"><span class="t">2</span><span class="n">3</span></span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>En arbeidsoppgave tar <span class="brok"><span class="t">3</span><span class="n">4</span></span> time. Hvor mange minutter er det?</li>
+      <li>Et byggeprosjekt er <span class="brok"><span class="t">2</span><span class="n">5</span></span> ferdig etter 30 dager.
+        Hvor mange dager tar hele jobben hvis tempoet holder seg?</li>
+      <li>Forklar hvorfor <span class="brok"><span class="t">1</span><span class="n">3</span></span> av 24 blir mer enn <span class="brok"><span class="t">1</span><span class="n">4</span></span> av 24,
+        selv om 4 er større enn 3. Regn ut begge.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="16" class="oppgaver" style="counter-reset: oppg 15;">
+      <li>En bedrift har 180 ansatte. <span class="brok"><span class="t">2</span><span class="n">9</span></span> av dem jobber deltid,
+        og av dem som jobber deltid, er <span class="brok"><span class="t">3</span><span class="n">4</span></span> kvinner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange jobber deltid?</li>
+          <li><span class="bokstav">b)</span>Hvor mange av dem er kvinner?</li>
+          <li><span class="bokstav">c)</span>Hvor stor andel av alle ansatte er dette? Skriv svaret som en forkortet brøk.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «I en undersøkelse svarte 5 av 8 at de sykler til jobb minst én dag i uken.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv andelen som brøk.</li>
+          <li><span class="bokstav">b)</span>Skriv den som desimaltall og som prosent.</li>
+          <li><span class="bokstav">c)</span>Hvor mange ville det svart til i en gruppe på 240 personer?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     4.2 UTVIDE OG FORKORTE
+     ============================================================ -->
+<section id="k42" class="nyside">
+<h2 id="d4-2">4.2 Utvide og forkorte</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>utvide en brøk til en gitt nevner</li>
+    <li>forkorte en brøk så langt det går</li>
+    <li>avgjøre om to brøker er like store</li>
+    <li>bruke faktorisering til å forkorte</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>å utvide</td><td></td><td>Jeg utvider brøken med 3.</td></tr>
+    <tr><td>å forkorte</td><td></td><td>Brøken kan forkortes med 4.</td></tr>
+    <tr><td>like store brøker</td><td></td><td><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">3</span><span class="n">6</span></span> er like store.</td></tr>
+    <tr><td>fellesnevner</td><td></td><td>Fellesnevneren er 12.</td></tr>
+    <tr><td>så langt det går</td><td></td><td>Jeg forkortet så langt det går.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Å utvide og å forkorte endrer <em>hvordan brøken ser ut</em>, men ikke <em>hvor mye den er</em>.
+  Så lenge du gjør det samme med teller og nevner, er verdien uendret. Det er dette som gjør det
+  mulig å sammenligne og legge sammen brøker med ulik nevner.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brøkstriper som viser at en halv er lik to firedeler og fire åttedeler">
+  <g>
+    <text x="40" y="46" font-family="DejaVu Serif" font-size="16" fill="#1f2430">1/2</text>
+    <rect x="96" y="30" width="440" height="26" fill="none" stroke="#2f6b4f" stroke-width="1.6"/>
+    <rect x="96" y="30" width="220" height="26" fill="#2f6b4f" fill-opacity="0.4"/>
+    <line x1="316" y1="30" x2="316" y2="56" stroke="#2f6b4f" stroke-width="1.6"/>
+  </g>
+  <g>
+    <text x="40" y="98" font-family="DejaVu Serif" font-size="16" fill="#1f2430">2/4</text>
+    <rect x="96" y="82" width="440" height="26" fill="none" stroke="#2f6b4f" stroke-width="1.6"/>
+    <rect x="96" y="82" width="220" height="26" fill="#2f6b4f" fill-opacity="0.4"/>
+    <g stroke="#2f6b4f" stroke-width="1.3">
+      <line x1="206" y1="82" x2="206" y2="108"/><line x1="316" y1="82" x2="316" y2="108"/>
+      <line x1="426" y1="82" x2="426" y2="108"/>
+    </g>
+  </g>
+  <g>
+    <text x="40" y="150" font-family="DejaVu Serif" font-size="16" fill="#1f2430">4/8</text>
+    <rect x="96" y="134" width="440" height="26" fill="none" stroke="#2f6b4f" stroke-width="1.6"/>
+    <rect x="96" y="134" width="220" height="26" fill="#2f6b4f" fill-opacity="0.4"/>
+    <g stroke="#2f6b4f" stroke-width="1.1">
+      <line x1="151" y1="134" x2="151" y2="160"/><line x1="206" y1="134" x2="206" y2="160"/>
+      <line x1="261" y1="134" x2="261" y2="160"/><line x1="316" y1="134" x2="316" y2="160"/>
+      <line x1="371" y1="134" x2="371" y2="160"/><line x1="426" y1="134" x2="426" y2="160"/>
+      <line x1="481" y1="134" x2="481" y2="160"/>
+    </g>
+  </g>
+  <line x1="316" y1="24" x2="316" y2="168" stroke="#c62828" stroke-width="1.3" stroke-dasharray="5 4"/>
+  <text x="560" y="98" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">like</text>
+  <text x="560" y="114" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">mye</text>
+  <text x="310" y="188" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Antall deler endrer seg, men den fargelagte mengden er den samme.</text>
+</svg>
+<figcaption>Figur 4.2 &nbsp;Samme mengde, tre skrivemåter. Den røde streken viser at grensen ligger på nøyaktig samme sted.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Regel</span>
+  <ul>
+    <li><strong>Utvide:</strong> gang både teller og nevner med det samme tallet.</li>
+    <li><strong>Forkorte:</strong> del både teller og nevner på det samme tallet.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Vil du forkorte helt ferdig i ett steg, deler du på den
+  største felles faktoren — se kapittel 3.5.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; Forkort så langt det går</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Forkort <span class="brok"><span class="t">18</span><span class="n">24</span></span> så langt det går.</p>
+    <ol class="trinn">
+      <li>Faktoriser: <span class="matte">18 = 2 · 3 · 3</span> og <span class="matte">24 = 2 · 2 · 2 · 3</span></li>
+      <li>Felles faktorer er 2 og 3, altså største felles faktor <span class="matte">2 · 3 = 6</span></li>
+      <li>Del begge på 6: <span class="matte">18 : 6 = 3</span> og <span class="matte">24 : 6 = 4</span></li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="brok"><span class="t">18</span><span class="n">24</span></span> = <span class="brok"><span class="t">3</span><span class="n">4</span></span></p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="18" class="oppgaver" style="counter-reset: oppg 17;">
+      <li>Utvid brøken med 2.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span></li>
+        </ul>
+      </li>
+      <li>Utvid brøken med 3.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">4</span><span class="n">7</span></span></li>
+        </ul>
+      </li>
+      <li>Forkort brøken.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">9</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">4</span><span class="n">8</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">6</span><span class="n">10</span></span></li>
+        </ul>
+      </li>
+      <li>Forkort brøken.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">4</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">9</span><span class="n">12</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">8</span><span class="n">20</span></span></li>
+        </ul>
+      </li>
+      <li>Utvid til nevner 12.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span></li>
+        </ul>
+      </li>
+      <li>Utvid til nevner 20.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span></li>
+        </ul>
+      </li>
+      <li>Er brøkene like store? Svar ja eller nei.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">3</span><span class="n">6</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> og <span class="brok"><span class="t">4</span><span class="n">9</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> og <span class="brok"><span class="t">9</span><span class="n">15</span></span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="25" class="oppgaver" style="counter-reset: oppg 24;">
+      <li>Forkort så langt det går.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">12</span><span class="n">18</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">20</span><span class="n">30</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">24</span><span class="n">36</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">45</span><span class="n">60</span></span></li>
+        </ul>
+      </li>
+      <li>Forkort så langt det går.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">16</span><span class="n">24</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">35</span><span class="n">56</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">42</span><span class="n">70</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">84</span><span class="n">96</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv brøkene med samme nevner.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">1</span><span class="n">3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> og <span class="brok"><span class="t">3</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> og <span class="brok"><span class="t">5</span><span class="n">6</span></span></li>
+        </ul>
+      </li>
+      <li>En oppskrift bruker <span class="brok"><span class="t">6</span><span class="n">8</span></span> liter melk.
+        Skriv mengden så enkelt som mulig.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="29" class="oppgaver" style="counter-reset: oppg 28;">
+      <li>En elev forkorter <span class="brok"><span class="t">12</span><span class="n">16</span></span> til <span class="brok"><span class="t">6</span><span class="n">8</span></span> og sier at brøken nå er forkortet ferdig.
+        Har eleven rett? Begrunn svaret.</li>
+      <li>Bruk faktorisering til å forkorte <span class="brok"><span class="t">84</span><span class="n">126</span></span> i ett steg.
+        Vis hvordan du finner den største felles faktoren.</li>
+      <li>Finn tre ulike brøker som er like store som <span class="brok"><span class="t">2</span><span class="n">5</span></span>.
+        Forklar hvordan du kom fram til dem.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="32" class="oppgaver" style="counter-reset: oppg 31;">
+      <li>To oppskrifter bruker ulik mengde olje per porsjon.
+        Den ene bruker <span class="brok"><span class="t">3</span><span class="n">4</span></span> dl, den andre <span class="brok"><span class="t">5</span><span class="n">8</span></span> dl.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv begge med samme nevner.</li>
+          <li><span class="bokstav">b)</span>Hvilken oppskrift bruker mest olje?</li>
+          <li><span class="bokstav">c)</span>Hvor mye mer olje går med til 8 porsjoner?</li>
+        </ul>
+      </li>
+      <li>Et lager har 96 kasser, og <span class="brok"><span class="t">5</span><span class="n">8</span></span> av dem er sendt ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kasser er sendt ut?</li>
+          <li><span class="bokstav">b)</span>Hvor mange er igjen?</li>
+          <li><span class="bokstav">c)</span>Skriv andelen som er igjen som en brøk av 96, og forkort den. Stemmer den med svaret ditt i a)?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     4.3 BRØK, DESIMALTALL OG PROSENT
+     ============================================================ -->
+<section id="k43" class="nyside">
+<h2 id="d4-3">4.3 Brøk, desimaltall og prosent</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>gjøre om mellom brøk, desimaltall og prosent</li>
+    <li>kjenne igjen de vanligste omgjøringene uten å regne</li>
+    <li>sammenligne tall som er skrevet på ulike måter</li>
+    <li>vurdere hvilken skrivemåte som passer best i en situasjon</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>desimaltall</td><td></td><td>0,75 er et desimaltall.</td></tr>
+    <tr><td>prosent</td><td></td><td>75 prosent er det samme som <span class="brok"><span class="t">3</span><span class="n">4</span></span>.</td></tr>
+    <tr><td>å gjøre om</td><td></td><td>Jeg gjør om brøken til prosent.</td></tr>
+    <tr><td>skrivemåte</td><td></td><td>Prosent er en praktisk skrivemåte her.</td></tr>
+    <tr><td>hensiktsmessig</td><td></td><td>Brøk er mest hensiktsmessig i oppskrifter.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Brøk, desimaltall og prosent er tre måter å skrive den samme mengden på. Hvilken du velger,
+  avhenger av situasjonen: i en oppskrift er <span class="brok"><span class="t">1</span><span class="n">2</span></span> liter naturlig, på en lønnsslipp er
+  50 % naturlig, og på en digital vekt er 0,5 kg naturlig.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Slik gjør du om mellom brøk, desimaltall og prosent">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#eaf2ee" stroke="#bcd6c8"/>
+
+  <rect x="46" y="60" width="130" height="52" rx="8" fill="#fff" stroke="#2f6b4f" stroke-width="1.6"/>
+  <text x="111" y="92" font-family="DejaVu Serif" font-size="18" fill="#1f2430" text-anchor="middle">BRØK</text>
+  <rect x="244" y="60" width="130" height="52" rx="8" fill="#fff" stroke="#2f6b4f" stroke-width="1.6"/>
+  <text x="309" y="92" font-family="DejaVu Serif" font-size="18" fill="#1f2430" text-anchor="middle">DESIMALTALL</text>
+  <rect x="442" y="60" width="130" height="52" rx="8" fill="#fff" stroke="#2f6b4f" stroke-width="1.6"/>
+  <text x="507" y="92" font-family="DejaVu Serif" font-size="18" fill="#1f2430" text-anchor="middle">PROSENT</text>
+
+  <path d="M 182 78 L 238 78" stroke="#2f6b4f" stroke-width="1.8" marker-end="url(#pf)"/>
+  <path d="M 238 98 L 182 98" stroke="#5a6272" stroke-width="1.4" marker-end="url(#pf2)"/>
+  <path d="M 380 78 L 436 78" stroke="#2f6b4f" stroke-width="1.8" marker-end="url(#pf)"/>
+  <path d="M 436 98 L 380 98" stroke="#5a6272" stroke-width="1.4" marker-end="url(#pf2)"/>
+  <defs>
+    <marker id="pf" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#2f6b4f"/></marker>
+    <marker id="pf2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5a6272"/></marker>
+  </defs>
+  <text x="210" y="70" font-family="Arial" font-size="10.5" fill="#2f6b4f" text-anchor="middle">del</text>
+  <text x="210" y="118" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">skriv med nevner</text>
+  <text x="210" y="132" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">10, 100 eller 1 000</text>
+  <text x="408" y="70" font-family="Arial" font-size="10.5" fill="#2f6b4f" text-anchor="middle">gang med 100</text>
+  <text x="408" y="118" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">del på 100</text>
+
+  <text x="310" y="42" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">3/8 &nbsp;→&nbsp; 3 : 8 = 0,375 &nbsp;→&nbsp; 37,5 %</text>
+  <text x="310" y="162" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Fra brøk til desimaltall deler du telleren på nevneren. Resten følger av seg selv.</text>
+</svg>
+<figcaption>Figur 4.3 &nbsp;Veien mellom de tre skrivemåtene.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Verdt å kunne utenat</span>
+  <table class="data" style="margin:0.5rem auto 0;">
+    <tr><th>Brøk</th><td><span class="brok"><span class="t">1</span><span class="n">2</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">4</span></span></td><td><span class="brok"><span class="t">3</span><span class="n">4</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">5</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">10</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">3</span></span></td></tr>
+    <tr><th>Desimaltall</th><td>0,5</td><td>0,25</td><td>0,75</td><td>0,2</td><td>0,1</td><td>≈ 0,33</td></tr>
+    <tr><th>Prosent</th><td>50 %</td><td>25 %</td><td>75 %</td><td>20 %</td><td>10 %</td><td>≈ 33 %</td></tr>
+  </table>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Fra brøk til prosent</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Skriv <span class="brok"><span class="t">3</span><span class="n">8</span></span> som desimaltall og som prosent.</p>
+    <ol class="trinn">
+      <li>Brøkstreken betyr «delt på»: <span class="matte">3 : 8 = 0,375</span></li>
+      <li>Fra desimaltall til prosent ganger du med 100: <span class="matte">0,375 · 100 = 37,5</span></li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="brok"><span class="t">3</span><span class="n">8</span></span> = 0,375 = 37,5 %</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="34" class="oppgaver" style="counter-reset: oppg 33;">
+      <li>Skriv som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">1</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">4</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">10</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv som brøk.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>0,5</li><li><span class="bokstav">b)</span>0,25</li>
+          <li><span class="bokstav">c)</span>0,2</li><li><span class="bokstav">d)</span>0,75</li>
+        </ul>
+      </li>
+      <li>Skriv som brøk, og forkort.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>50 %</li><li><span class="bokstav">b)</span>20 %</li>
+          <li><span class="bokstav">c)</span>75 %</li><li><span class="bokstav">d)</span>10 %</li>
+        </ul>
+      </li>
+      <li>Skriv som brøk, og forkort.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>25 %</li>
+          <li><span class="bokstav">b)</span>40 %</li>
+          <li><span class="bokstav">c)</span>60 %</li>
+          <li><span class="bokstav">d)</span>80 %</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="41" class="oppgaver" style="counter-reset: oppg 40;">
+      <li>Skriv som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">8</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">9</span><span class="n">20</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">8</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">7</span><span class="n">20</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">9</span><span class="n">25</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">1</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+      <li>Sorter fra minst til størst. Gjør om til samme skrivemåte først.<br>
+        <span class="matte">0,6</span> &nbsp; <span class="matte"><span class="brok"><span class="t">1</span><span class="n">2</span></span></span> &nbsp;
+        <span class="matte">55 %</span> &nbsp; <span class="matte"><span class="brok"><span class="t">3</span><span class="n">5</span></span></span></li>
+      <li>En vare koster 400 kroner og settes ned med <span class="brok"><span class="t">1</span><span class="n">4</span></span>.
+        Hva er den nye prisen?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="45" class="oppgaver" style="counter-reset: oppg 44;">
+      <li>Tre elever løser samme oppgave. Én svarer 0,75, én svarer <span class="brok"><span class="t">3</span><span class="n">4</span></span> og én svarer 75 %.
+        Hvem har rett? Begrunn svaret.</li>
+      <li>Hvilket tall er størst, <span class="brok"><span class="t">2</span><span class="n">3</span></span> eller 0,7? Vis utregningen.</li>
+      <li>En butikk reklamerer med «<span class="brok"><span class="t">1</span><span class="n">3</span></span> avslag». En annen butikk gir «30 % avslag».
+        Varen koster 900 kroner begge steder.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye avslag gir hver butikk i kroner?</li>
+          <li><span class="bokstav">b)</span>Hvilken butikk er billigst?</li>
+          <li><span class="bokstav">c)</span>Hvorfor kan «<span class="brok"><span class="t">1</span><span class="n">3</span></span>» høres mindre ut enn «30 %» selv om det er mer?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Av 320 spurte svarte <span class="brok"><span class="t">3</span><span class="n">8</span></span> at de bruker sykkel daglig.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange personer er det?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er det?</li>
+          <li><span class="bokstav">c)</span>En avis skriver «nesten fire av ti». Er det en dekkende beskrivelse? Begrunn med utregning.</li>
+        </ul>
+      </li>
+      <li>Vurder hvilken skrivemåte som er mest hensiktsmessig i hver situasjon,
+        og begrunn valget.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>En oppskrift som bruker en tredel av en pakke smør.</li>
+          <li><span class="bokstav">b)</span>En rente på lånet ditt.</li>
+          <li><span class="bokstav">c)</span>Mengden væske i en flaske.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     4.4 ADDISJON OG SUBTRAKSJON AV BRØK
+     ============================================================ -->
+<section id="k44" class="nyside">
+<h2 id="d4-4">4.4 Addisjon og subtraksjon av brøk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>legge sammen og trekke fra brøker med samme nevner</li>
+    <li>finne en fellesnevner for to brøker</li>
+    <li>regne med brøker som har ulik nevner</li>
+    <li>forkorte svaret når det er mulig</li>
+  </ul>
+</div>
+
+<p>
+  Du kan bare legge sammen deler som er <strong>like store</strong>. Tredeler og firedeler kan
+  ikke slås sammen direkte — akkurat som du ikke kan legge sammen 3 meter og 3 sekunder.
+  Derfor gjør vi først om brøkene så de får samme nevner.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="En halv pluss en tredel regnet ut med fellesnevner seks">
+  <rect x="16" y="14" width="588" height="182" rx="8" fill="#eaf2ee" stroke="#bcd6c8"/>
+
+  <text x="70" y="46" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">1/2</text>
+  <rect x="42" y="56" width="140" height="26" fill="none" stroke="#2f6b4f" stroke-width="1.5"/>
+  <rect x="42" y="56" width="70" height="26" fill="#2f6b4f" fill-opacity="0.4"/>
+  <line x1="112" y1="56" x2="112" y2="82" stroke="#2f6b4f" stroke-width="1.4"/>
+
+  <text x="212" y="74" font-family="DejaVu Serif" font-size="22" fill="#1f2430" text-anchor="middle">+</text>
+
+  <text x="312" y="46" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">1/3</text>
+  <rect x="242" y="56" width="140" height="26" fill="none" stroke="#2f6b4f" stroke-width="1.5"/>
+  <rect x="242" y="56" width="46.7" height="26" fill="#2f6b4f" fill-opacity="0.4"/>
+  <g stroke="#2f6b4f" stroke-width="1.4">
+    <line x1="288.7" y1="56" x2="288.7" y2="82"/><line x1="335.3" y1="56" x2="335.3" y2="82"/>
+  </g>
+
+  <text x="412" y="74" font-family="DejaVu Serif" font-size="22" fill="#5a6272" text-anchor="middle">=</text>
+  <text x="500" y="76" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">?</text>
+
+  <text x="310" y="118" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Delene er ulike store. Vi deler begge striper i seksdeler:</text>
+
+  <text x="70" y="146" font-family="DejaVu Serif" font-size="15" fill="#2f6b4f" text-anchor="middle">3/6</text>
+  <rect x="42" y="154" width="140" height="24" fill="none" stroke="#2f6b4f" stroke-width="1.5"/>
+  <rect x="42" y="154" width="70" height="24" fill="#2f6b4f" fill-opacity="0.4"/>
+  <g stroke="#2f6b4f" stroke-width="1.1">
+    <line x1="65.3" y1="154" x2="65.3" y2="178"/><line x1="88.7" y1="154" x2="88.7" y2="178"/>
+    <line x1="112" y1="154" x2="112" y2="178"/><line x1="135.3" y1="154" x2="135.3" y2="178"/>
+    <line x1="158.7" y1="154" x2="158.7" y2="178"/>
+  </g>
+
+  <text x="212" y="172" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">+</text>
+
+  <text x="312" y="146" font-family="DejaVu Serif" font-size="15" fill="#2f6b4f" text-anchor="middle">2/6</text>
+  <rect x="242" y="154" width="140" height="24" fill="none" stroke="#2f6b4f" stroke-width="1.5"/>
+  <rect x="242" y="154" width="46.7" height="24" fill="#2f6b4f" fill-opacity="0.4"/>
+  <g stroke="#2f6b4f" stroke-width="1.1">
+    <line x1="265.3" y1="154" x2="265.3" y2="178"/><line x1="288.7" y1="154" x2="288.7" y2="178"/>
+    <line x1="312" y1="154" x2="312" y2="178"/><line x1="335.3" y1="154" x2="335.3" y2="178"/>
+    <line x1="358.7" y1="154" x2="358.7" y2="178"/>
+  </g>
+
+  <text x="412" y="172" font-family="DejaVu Serif" font-size="20" fill="#5a6272" text-anchor="middle">=</text>
+  <text x="510" y="174" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#2f6b4f" text-anchor="middle">5/6</text>
+</svg>
+<figcaption>Figur 4.4 &nbsp;Med samme nevner blir delene like store, og da kan tellerne legges sammen.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Framgangsmåte</span>
+  <ul>
+    <li>Har brøkene samme nevner: legg sammen eller trekk fra <strong>tellerne</strong>. Nevneren står stille.</li>
+    <li>Har de ulik nevner: finn en fellesnevner, utvid begge brøkene, og regn deretter.</li>
+    <li>Forkort svaret hvis det går.</li>
+  </ul>
+</div>
+
+<div class="regel">
+  <span class="etikett">Vanlig feil</span>
+  <p style="margin-bottom:0;">Nevnerne skal <strong>ikke</strong> legges sammen.
+  <span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">3</span></span> er ikke <span class="brok"><span class="t">2</span><span class="n">5</span></span>. Tenk etter: <span class="brok"><span class="t">2</span><span class="n">5</span></span> er mindre enn <span class="brok"><span class="t">1</span><span class="n">2</span></span>, men svaret må jo bli
+  <em>større</em> enn <span class="brok"><span class="t">1</span><span class="n">2</span></span> når du legger noe til.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Ulik nevner</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="brok"><span class="t">3</span><span class="n">4</span></span> − <span class="brok"><span class="t">1</span><span class="n">6</span></span>.</p>
+    <ol class="trinn">
+      <li>Finn fellesnevner. Det minste tallet både 4 og 6 går opp i, er 12.</li>
+      <li>Utvid: <span class="matte"><span class="brok"><span class="t">3</span><span class="n">4</span></span> = <span class="brok"><span class="t">9</span><span class="n">12</span></span></span> og <span class="matte"><span class="brok"><span class="t">1</span><span class="n">6</span></span> = <span class="brok"><span class="t">2</span><span class="n">12</span></span></span></li>
+      <li>Trekk fra tellerne: <span class="matte">9 − 2 = 7</span></li>
+      <li>Svaret <span class="brok"><span class="t">7</span><span class="n">12</span></span> kan ikke forkortes, siden 7 er et primtall som ikke går opp i 12.</li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="brok"><span class="t">3</span><span class="n">4</span></span> − <span class="brok"><span class="t">1</span><span class="n">6</span></span> = <span class="brok"><span class="t">7</span><span class="n">12</span></span></p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="50" class="oppgaver" style="counter-reset: oppg 49;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">5</span></span> + <span class="brok"><span class="t">2</span><span class="n">5</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">8</span></span> + <span class="brok"><span class="t">4</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5</span><span class="n">9</span></span> − <span class="brok"><span class="t">2</span><span class="n">9</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span> − <span class="brok"><span class="t">3</span><span class="n">10</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">7</span></span> + <span class="brok"><span class="t">3</span><span class="n">7</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">9</span></span> + <span class="brok"><span class="t">5</span><span class="n">9</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">8</span></span> − <span class="brok"><span class="t">2</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">9</span><span class="n">11</span></span> − <span class="brok"><span class="t">4</span><span class="n">11</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut, og forkort svaret.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">6</span></span> + <span class="brok"><span class="t">3</span><span class="n">6</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">8</span></span> + <span class="brok"><span class="t">2</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5</span><span class="n">10</span></span> − <span class="brok"><span class="t">1</span><span class="n">10</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">7</span><span class="n">12</span></span> − <span class="brok"><span class="t">1</span><span class="n">12</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut, og forkort svaret.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">8</span></span> + <span class="brok"><span class="t">3</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">10</span></span> + <span class="brok"><span class="t">4</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">9</span></span> − <span class="brok"><span class="t">1</span><span class="n">9</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">5</span><span class="n">12</span></span> − <span class="brok"><span class="t">1</span><span class="n">12</span></span></li>
+        </ul>
+      </li>
+      <li>Finn fellesnevneren.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> og <span class="brok"><span class="t">1</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">1</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> + <span class="brok"><span class="t">1</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> − <span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> − <span class="brok"><span class="t">1</span><span class="n">6</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> + <span class="brok"><span class="t">1</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> − <span class="brok"><span class="t">1</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> − <span class="brok"><span class="t">1</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="57" class="oppgaver" style="counter-reset: oppg 56;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> + <span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> + <span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> − <span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> − <span class="brok"><span class="t">2</span><span class="n">5</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">8</span></span> + <span class="brok"><span class="t">1</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">10</span></span> − <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> + <span class="brok"><span class="t">3</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+      <li>En oppskrift bruker <span class="brok"><span class="t">1</span><span class="n">2</span></span> dl olje og <span class="brok"><span class="t">1</span><span class="n">4</span></span> dl eddik.
+        Hvor mye væske er det til sammen?</li>
+      <li>Hassan bruker <span class="brok"><span class="t">2</span><span class="n">5</span></span> av lønnen på husleie og <span class="brok"><span class="t">1</span><span class="n">4</span></span> på mat.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del av lønnen går til disse to tingene?</li>
+          <li><span class="bokstav">b)</span>Hvor stor del har han igjen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="61" class="oppgaver" style="counter-reset: oppg 60;">
+      <li>En elev regner <span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">3</span></span> og svarer <span class="brok"><span class="t">2</span><span class="n">5</span></span>.
+        Forklar hvorfor svaret ikke kan stemme, og regn ut riktig.</li>
+      <li>Tre venner deler en kake. Den første tar <span class="brok"><span class="t">1</span><span class="n">4</span></span>, den andre tar <span class="brok"><span class="t">1</span><span class="n">3</span></span>,
+        og den tredje får resten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del er tatt av de to første?</li>
+          <li><span class="bokstav">b)</span>Hvor stor del får den tredje?</li>
+          <li><span class="bokstav">c)</span>Hvem fikk mest? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>Hvilken brøk mangler?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> + □ = <span class="brok"><span class="t">3</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> − □ = <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">c)</span>□ + <span class="brok"><span class="t">1</span><span class="n">3</span></span> = 1</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="64" class="oppgaver" style="counter-reset: oppg 63;">
+      <li>Et byggeprosjekt går slik: i uke 1 blir <span class="brok"><span class="t">1</span><span class="n">4</span></span> ferdig, i uke 2 blir <span class="brok"><span class="t">1</span><span class="n">3</span></span> ferdig,
+        og i uke 3 blir <span class="brok"><span class="t">1</span><span class="n">6</span></span> ferdig.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del av jobben er ferdig etter tre uker?</li>
+          <li><span class="bokstav">b)</span>Hvor stor del gjenstår?</li>
+          <li><span class="bokstav">c)</span>Hele jobben er beregnet til 240 timer. Hvor mange timer gjenstår?</li>
+        </ul>
+      </li>
+      <li>En tank er <span class="brok"><span class="t">3</span><span class="n">8</span></span> full. Det fylles på en mengde som svarer til <span class="brok"><span class="t">1</span><span class="n">4</span></span> av tankens volum.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del av tanken er full nå?</li>
+          <li><span class="bokstav">b)</span>Tanken rommer 400 liter. Hvor mange liter er det i den?</li>
+          <li><span class="bokstav">c)</span>Hvor mange liter får det plass til før tanken er full?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     4.5 MULTIPLIKASJON OG DIVISJON AV BRØK
+     ============================================================ -->
+<section id="k45" class="nyside">
+<h2 id="d4-5">4.5 Multiplikasjon og divisjon av brøk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>gange en brøk med et helt tall</li>
+    <li>gange to brøker med hverandre</li>
+    <li>forstå at «av» betyr gange</li>
+    <li>dividere med en brøk <span class="m4merke">M4</span></li>
+  </ul>
+</div>
+
+<p>
+  Multiplikasjon av brøk er enklere enn addisjon: her trenger du ingen fellesnevner.
+  Du ganger teller med teller og nevner med nevner. Og legg merke til at svaret ofte blir
+  <em>mindre</em> enn det du startet med — det er fordi du tar en del av en del.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="En halv av en tredel vist som rutenett">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eaf2ee" stroke="#bcd6c8"/>
+
+  <rect x="60" y="46" width="180" height="108" fill="none" stroke="#2f6b4f" stroke-width="1.8"/>
+  <rect x="60" y="46" width="60" height="108" fill="#2f6b4f" fill-opacity="0.25"/>
+  <g stroke="#2f6b4f" stroke-width="1.3">
+    <line x1="120" y1="46" x2="120" y2="154"/><line x1="180" y1="46" x2="180" y2="154"/>
+  </g>
+  <text x="150" y="176" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">1/3 av det hele</text>
+  <text x="150" y="38" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">delt i tre</text>
+
+  <text x="266" y="106" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">→</text>
+
+  <rect x="310" y="46" width="180" height="108" fill="none" stroke="#2f6b4f" stroke-width="1.8"/>
+  <rect x="310" y="46" width="60" height="54" fill="#2f6b4f" fill-opacity="0.75"/>
+  <g stroke="#2f6b4f" stroke-width="1.3">
+    <line x1="370" y1="46" x2="370" y2="154"/><line x1="430" y1="46" x2="430" y2="154"/>
+    <line x1="310" y1="100" x2="490" y2="100"/>
+  </g>
+  <text x="400" y="176" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">1/2 av den tredelen = 1/6</text>
+  <text x="400" y="38" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">og så i to</text>
+
+  <text x="552" y="94" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">1/2 · 1/3</text>
+  <text x="552" y="120" font-family="DejaVu Serif" font-size="19" font-weight="bold" fill="#2f6b4f" text-anchor="middle">= 1/6</text>
+</svg>
+<figcaption>Figur 4.5 &nbsp;Å ta en halv av en tredel gir seksdeler. Rutenettet viser hvorfor nevnerne ganges.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Regel</span>
+  <ul>
+    <li><strong>Brøk · brøk:</strong> gang teller med teller og nevner med nevner.</li>
+    <li><strong>Brøk · helt tall:</strong> gang telleren med tallet. <span class="brok"><span class="t">3</span><span class="n">4</span></span> · 20 = <span class="brok"><span class="t">60</span><span class="n">4</span></span> = 15</li>
+    <li>Ordet <strong>«av»</strong> betyr gange: «<span class="brok"><span class="t">2</span><span class="n">3</span></span> av 9» er det samme som <span class="brok"><span class="t">2</span><span class="n">3</span></span> · 9.</li>
+  </ul>
+</div>
+
+<div class="regel">
+  <span class="etikett">Divisjon med brøk <span class="m4merke">M4</span></span>
+  <p style="margin-bottom:0;">Å dele på en brøk er det samme som å gange med den omvendte brøken:
+  <span class="matte"><span class="brok"><span class="t">3</span><span class="n">4</span></span> : <span class="brok"><span class="t">1</span><span class="n">2</span></span> = <span class="brok"><span class="t">3</span><span class="n">4</span></span> · <span class="brok"><span class="t">2</span><span class="n">1</span></span> = <span class="brok"><span class="t">6</span><span class="n">4</span></span> = <span class="brok"><span class="t">3</span><span class="n">2</span></span></span><br>
+  Tenk på det slik: «hvor mange halve får plass i tre firedeler?» Svaret er halvannen.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="66" class="oppgaver" style="counter-reset: oppg 65;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · <span class="brok"><span class="t">1</span><span class="n">3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> · <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> · <span class="brok"><span class="t">1</span><span class="n">5</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> · <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> · <span class="brok"><span class="t">1</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · <span class="brok"><span class="t">1</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> · <span class="brok"><span class="t">1</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> · <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · 8</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span> · 12</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> · 9</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> · 20</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · 6</li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> · 15</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> · 8</li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> · 25</li>
+        </ul>
+      </li>
+      <li>Regn ut, og forkort svaret.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> · <span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span> · <span class="brok"><span class="t">5</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">4</span></span> · <span class="brok"><span class="t">4</span><span class="n">6</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut, og forkort svaret.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> · <span class="brok"><span class="t">2</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> · <span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> · <span class="brok"><span class="t">2</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · <span class="brok"><span class="t">1</span><span class="n">2</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> · <span class="brok"><span class="t">5</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">7</span></span> · <span class="brok"><span class="t">7</span><span class="n">3</span></span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="73" class="oppgaver" style="counter-reset: oppg 72;">
+      <li>Regn ut, og forkort svaret.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> · <span class="brok"><span class="t">8</span><span class="n">9</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> · <span class="brok"><span class="t">3</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">4</span><span class="n">7</span></span> · <span class="brok"><span class="t">21</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> · 24</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">8</span></span> · 40</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3</span><span class="n">10</span></span> · 250</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">7</span><span class="n">12</span></span> · 36</li>
+        </ul>
+      </li>
+      <li>En oppskrift til 4 personer bruker <span class="brok"><span class="t">3</span><span class="n">4</span></span> liter melk.
+        Hvor mye melk trengs til 8 personer?</li>
+      <li>En malingsspann rommer 10 liter. Det er <span class="brok"><span class="t">2</span><span class="n">5</span></span> igjen i spannet.
+        Hvor mange liter er det?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="77" class="oppgaver" style="counter-reset: oppg 76;">
+      <li>En elev regner <span class="brok"><span class="t">1</span><span class="n">2</span></span> · <span class="brok"><span class="t">1</span><span class="n">3</span></span> og svarer <span class="brok"><span class="t">2</span><span class="n">6</span></span>, fordi «det må jo bli mer når man ganger».
+        Forklar hvorfor svaret her blir mindre, og gi riktig svar.</li>
+      <li><span class="brok"><span class="t">3</span><span class="n">4</span></span> av elevene i en klasse er til stede.
+        Av dem som er til stede, har <span class="brok"><span class="t">2</span><span class="n">3</span></span> gjort leksene.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del av hele klassen har gjort leksene?</li>
+          <li><span class="bokstav">b)</span>Klassen har 24 elever. Hvor mange er det?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="79" class="oppgaver" style="counter-reset: oppg 78;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> : <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> : <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> : <span class="brok"><span class="t">4</span><span class="n">9</span></span></li>
+        </ul>
+      </li>
+      <li>Hvor mange glass på <span class="brok"><span class="t">1</span><span class="n">4</span></span> liter får du av 3 liter saft?
+        Skriv regnestykket med brøk.</li>
+      <li>En planke er 4 <span class="brok"><span class="t">1</span><span class="n">2</span></span> meter lang og skal deles i biter på <span class="brok"><span class="t">3</span><span class="n">4</span></span> meter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange hele biter blir det?</li>
+          <li><span class="bokstav">b)</span>Skriv regnestykket med brøk i stedet for desimaltall.</li>
+          <li><span class="bokstav">c)</span>Blir det noe til overs? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     4.6 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k46" class="nyside">
+<h2 id="d4-6">4.6 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="82" class="oppgaver" style="counter-reset: oppg 81;">
+      <li>Forkort så langt det går.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">8</span><span class="n">12</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">15</span><span class="n">20</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">24</span><span class="n">30</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">3</span></span> + <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">5</span><span class="n">6</span></span> − <span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">2</span><span class="n">5</span></span> · <span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span> av 24</li>
+        </ul>
+      </li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">3</span><span class="n">5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+      <li>En klasse har 30 elever, og <span class="brok"><span class="t">2</span><span class="n">5</span></span> av dem er gutter. Hvor mange jenter er det?</li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">8</span></span> + <span class="brok"><span class="t">1</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">2</span><span class="n">3</span></span> − <span class="brok"><span class="t">1</span><span class="n">9</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">2</span></span> · <span class="brok"><span class="t">4</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv 0,375 som brøk og som prosent.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="88" class="oppgaver" style="counter-reset: oppg 87;">
+      <li><span class="m4merke">M4</span> En familie bruker <span class="brok"><span class="t">1</span><span class="n">3</span></span> av inntekten på bolig,
+        <span class="brok"><span class="t">1</span><span class="n">5</span></span> på mat og <span class="brok"><span class="t">1</span><span class="n">10</span></span> på transport.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor del av inntekten er dette til sammen?</li>
+          <li><span class="bokstav">b)</span>Inntekten er 42 000 kroner i måneden. Hvor mye går til bolig?</li>
+          <li><span class="bokstav">c)</span>Hvor mye har familien igjen etter disse tre utgiftene?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «To av fem husholdninger i kommunen har varmepumpe.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv andelen som brøk, desimaltall og prosent.</li>
+          <li><span class="bokstav">b)</span>Kommunen har 6 200 husholdninger. Hvor mange har varmepumpe?</li>
+          <li><span class="bokstav">c)</span>Hvilken av de tre skrivemåtene passer best i en avisoverskrift? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En vare koster 480 kroner. Prisen settes først ned med <span class="brok"><span class="t">1</span><span class="n">4</span></span>.
+        Senere settes den opp igjen med <span class="brok"><span class="t">1</span><span class="n">4</span></span> av den nye prisen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er prisen etter nedsettelsen?</li>
+          <li><span class="bokstav">b)</span>Hva er prisen etter økningen?</li>
+          <li><span class="bokstav">c)</span>Hvorfor er ikke prisen tilbake på 480 kroner? Forklar.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Regn ut <span class="brok"><span class="t">2</span><span class="n">3</span></span> : <span class="brok"><span class="t">4</span><span class="n">9</span></span>.
+        Forklar hvorfor svaret blir større enn <span class="brok"><span class="t">2</span><span class="n">3</span></span>.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg vet hva teller og nevner er, og kan finne en brøkdel av et tall. <em>(4.1)</em></li>
+    <li>Jeg kan utvide og forkorte brøker. <em>(4.2)</em></li>
+    <li>Jeg kan gjøre om mellom brøk, desimaltall og prosent. <em>(4.3)</em></li>
+    <li>Jeg kan finne fellesnevner og legge sammen brøker med ulik nevner. <em>(4.4)</em></li>
+    <li>Jeg kan gange brøker, og jeg vet at «av» betyr gange. <em>(4.5)</em></li>
+    <li>Jeg kan dividere med en brøk. <em>(4.5 — modul 4)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 4</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>4.1 Hva en brøk er</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">5</span><span class="n">6</span></span></span><span class="d">d) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">6</span></span></span><span class="d">d) <span class="brok"><span class="t">4</span><span class="n">7</span></span></span></li>
+<li><span class="d">a) teller 3, nevner 5</span><span class="d">b) teller 7, nevner 10</span><span class="d">c) teller 2, nevner 9</span></li>
+<li><span class="d">a) 5</span><span class="d">b) 5</span><span class="d">c) 4</span><span class="d">d) 5</span></li>
+<li><span class="d">a) 4</span><span class="d">b) 3</span><span class="d">c) 4</span><span class="d">d) 4</span><span class="d">e) 5</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 15</span><span class="d">c) 6</span><span class="d">d) 6</span></li>
+<li><span class="d">a) 8</span><span class="d">b) 6</span><span class="d">c) 12</span><span class="d">d) 6</span></li>
+<li><span class="d">a) 45</span><span class="d">b) 30</span><span class="d">c) 35</span><span class="d">d) 60</span></li>
+<li>24 : 8 = 3, og 3 · 3 = <strong>9 elever</strong></li>
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">8</span></span></span><span class="d">b) <span class="brok"><span class="t">2</span><span class="n">8</span></span> = <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">8</span></span></span></li>
+<li> Rekkefølgen fra venstre skal
+    være <span class="brok"><span class="t">1</span><span class="n">8</span></span>, <span class="brok"><span class="t">1</span><span class="n">4</span></span>, <span class="brok"><span class="t">1</span><span class="n">2</span></span>, <span class="brok"><span class="t">3</span><span class="n">4</span></span>, og <span class="brok"><span class="t">1</span><span class="n">4</span></span> skal ligge dobbelt så langt ute som <span class="brok"><span class="t">1</span><span class="n">8</span></span>.</li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><br/>
+</li>
+<li><span class="brok"><span class="t">3</span><span class="n">4</span></span> av 60 minutter = <strong>45 minutter</strong></li>
+<li><span class="brok"><span class="t">2</span><span class="n">5</span></span> tok 30 dager, så <span class="brok"><span class="t">1</span><span class="n">5</span></span> tar 15 dager. Hele jobben er 5 femdeler:
+    5 · 15 = <strong>75 dager</strong></li>
+<li><span class="brok"><span class="t">1</span><span class="n">3</span></span> av 24 = 8 og <span class="brok"><span class="t">1</span><span class="n">4</span></span> av 24 = 6.
+    </li>
+<li><span class="d">a) 40 ansatte</span><span class="d">b) 30 kvinner</span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">6</span></span></span><br/>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">b) 0,625 og 62,5 %</span><span class="d">c) 150 personer</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>4.2 Utvide og forkorte</h3>
+<ol class="fasit" start="18" style="counter-reset: fas 17;">
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">4</span><span class="n">10</span></span></span><span class="d">c) <span class="brok"><span class="t">6</span><span class="n">8</span></span></span><span class="d">d) <span class="brok"><span class="t">10</span><span class="n">12</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">6</span><span class="n">9</span></span></span><span class="d">c) <span class="brok"><span class="t">9</span><span class="n">15</span></span></span><span class="d">d) <span class="brok"><span class="t">12</span><span class="n">21</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">d) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">6</span><span class="n">12</span></span></span><span class="d">b) <span class="brok"><span class="t">4</span><span class="n">12</span></span></span><span class="d">c) <span class="brok"><span class="t">9</span><span class="n">12</span></span></span><span class="d">d) <span class="brok"><span class="t">10</span><span class="n">12</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">10</span><span class="n">20</span></span></span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">20</span></span></span><span class="d">c) <span class="brok"><span class="t">12</span><span class="n">20</span></span></span><span class="d">d) <span class="brok"><span class="t">14</span><span class="n">20</span></span></span></li>
+<li><span class="d">a) ja</span><span class="d">b) nei</span><span class="d">c) ja</span>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span><span class="d">d) <span class="brok"><span class="t">7</span><span class="n">8</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">6</span></span> og <span class="brok"><span class="t">2</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">8</span><span class="n">12</span></span> og <span class="brok"><span class="t">9</span><span class="n">12</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">12</span></span> og <span class="brok"><span class="t">10</span><span class="n">12</span></span></span></li>
+<li><span class="brok"><span class="t">6</span><span class="n">8</span></span> = <strong><span class="brok"><span class="t">3</span><span class="n">4</span></span> liter</strong></li>
+<li><strong>Nei.</strong> <span class="brok"><span class="t">6</span><span class="n">8</span></span> kan forkortes videre med 2 til <span class="brok"><span class="t">3</span><span class="n">4</span></span>.
+    </li>
+<li>84 = 2² · 3 · 7 og 126 = 2 · 3² · 7. Felles faktorer: 2 · 3 · 7 = 42.
+    <span class="brok"><span class="t">84</span><span class="n">126</span></span> = <strong><span class="brok"><span class="t">2</span><span class="n">3</span></span></strong></li>
+<li> For eksempel <span class="brok"><span class="t">4</span><span class="n">10</span></span>, <span class="brok"><span class="t">6</span><span class="n">15</span></span> og <span class="brok"><span class="t">8</span><span class="n">20</span></span> — brøken utvides
+    med 2, 3 og 4.</li>
+<li><span class="d">a) <span class="brok"><span class="t">6</span><span class="n">8</span></span> og <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">b) den første, med <span class="brok"><span class="t">3</span><span class="n">4</span></span> dl</span><span class="d">c) 1 dl mer</span><br/>
+</li>
+<li><span class="d">a) 60 kasser</span><span class="d">b) 36 kasser</span><span class="d">c) <span class="brok"><span class="t">36</span><span class="n">96</span></span> = <span class="brok"><span class="t">3</span><span class="n">8</span></span> ✓</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>4.3 Brøk, desimaltall og prosent</h3>
+<ol class="fasit" start="34" style="counter-reset: fas 33;">
+<li><span class="d">a) 0,5</span><span class="d">b) 0,25</span><span class="d">c) 0,75</span><span class="d">d) 0,2</span></li>
+<li><span class="d">a) 0,1</span><span class="d">b) 0,4</span><span class="d">c) 0,7</span><span class="d">d) 0,8</span></li>
+<li><span class="d">a) 50 %</span><span class="d">b) 25 %</span><span class="d">c) 10 %</span><span class="d">d) 60 %</span></li>
+<li><span class="d">a) 75 %</span><span class="d">b) 20 %</span><span class="d">c) 70 %</span><span class="d">d) 40 %</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">5</span></span></span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">5</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">d) <span class="brok"><span class="t">1</span><span class="n">10</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">b) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span><span class="d">d) <span class="brok"><span class="t">4</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) 0,375</span><span class="d">b) 0,625</span><span class="d">c) 0,7</span><span class="d">d) 0,45</span></li>
+<li><span class="d">a) 37,5 %</span><span class="d">b) 35 %</span><span class="d">c) 36 %</span><span class="d">d) 12,5 %</span></li>
+<li><span class="brok"><span class="t">1</span><span class="n">2</span></span> = 0,5 · 55 % = 0,55 · <span class="brok"><span class="t">3</span><span class="n">5</span></span> = 0,6 · 0,6<br/>
+    Rekkefølge: <strong><span class="brok"><span class="t">1</span><span class="n">2</span></span>, 55 %, og deretter 0,6 og <span class="brok"><span class="t">3</span><span class="n">5</span></span> som er like store.</strong>
+</li>
+<li><span class="brok"><span class="t">1</span><span class="n">4</span></span> av 400 = 100 kr i avslag. Ny pris: <strong>300 kroner</strong></li>
+<li><strong>Alle tre har rett.</strong> 0,75, <span class="brok"><span class="t">3</span><span class="n">4</span></span> og 75 % er samme mengde skrevet på
+    tre måter.</li>
+<li><span class="brok"><span class="t">2</span><span class="n">3</span></span> ≈ 0,67 og 0,7 er større. <strong>0,7 er størst.</strong></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">3</span></span> gir 300 kr, 30 % gir 270 kr</span><span class="d">b) butikken med <span class="brok"><span class="t">1</span><span class="n">3</span></span> avslag</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 120 personer</span><span class="d">b) 37,5 %</span><span class="d">c) </span><br/>
+</li>
+<li> Forventet:
+    a) brøk, fordi pakken deles fysisk i tre like deler.
+    b) prosent, fordi renter alltid oppgis slik og lett kan sammenlignes mellom banker.
+    c) desimaltall, fordi flasker og målebegre er merket med desimaltall.</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>4.4 Addisjon og subtraksjon av brøk</h3>
+<ol class="fasit" start="50" style="counter-reset: fas 49;">
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span><span class="d">b) <span class="brok"><span class="t">7</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">9</span></span> = <span class="brok"><span class="t">1</span><span class="n">3</span></span></span><span class="d">d) <span class="brok"><span class="t">4</span><span class="n">10</span></span> = <span class="brok"><span class="t">2</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">5</span><span class="n">7</span></span></span><span class="d">b) <span class="brok"><span class="t">6</span><span class="n">9</span></span> = <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">c) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">d) <span class="brok"><span class="t">5</span><span class="n">11</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span><span class="d">d) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">5</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">d) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) 4</span><span class="d">b) 6</span><span class="d">c) 10</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">d) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">d) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">5</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">11</span><span class="n">12</span></span></span><span class="d">c) <span class="brok"><span class="t">11</span><span class="n">10</span></span></span><span class="d">d) <span class="brok"><span class="t">7</span><span class="n">12</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">7</span><span class="n">20</span></span></span><span class="d">b) <span class="brok"><span class="t">19</span><span class="n">24</span></span></span><span class="d">c) <span class="brok"><span class="t">9</span><span class="n">20</span></span></span><span class="d">d) <span class="brok"><span class="t">25</span><span class="n">24</span></span></span></li>
+<li><span class="brok"><span class="t">1</span><span class="n">2</span></span> + <span class="brok"><span class="t">1</span><span class="n">4</span></span> = <strong><span class="brok"><span class="t">3</span><span class="n">4</span></span> dl</strong></li>
+<li><span class="d">a) <span class="brok"><span class="t">13</span><span class="n">20</span></span></span><span class="d">b) <span class="brok"><span class="t">7</span><span class="n">20</span></span></span></li>
+<li>Riktig svar er <strong><span class="brok"><span class="t">5</span><span class="n">6</span></span></strong>. Nevnerne skal ikke legges sammen.
+    </li>
+<li><span class="d">a) <span class="brok"><span class="t">7</span><span class="n">12</span></span></span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">12</span></span></span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">c) 60 timer</span><br/>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">b) 250 liter</span><span class="d">c) 150 liter</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>4.5 Multiplikasjon og divisjon av brøk</h3>
+<ol class="fasit" start="66" style="counter-reset: fas 65;">
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">8</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">15</span></span></span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">8</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">12</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">10</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">15</span></span></span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">10</span></span></span></li>
+<li><span class="d">a) 4</span><span class="d">b) 3</span><span class="d">c) 6</span><span class="d">d) 12</span></li>
+<li><span class="d">a) 3</span><span class="d">b) 5</span><span class="d">c) 6</span><span class="d">d) 10</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">b) 1</span><span class="d">c) 1</span>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">2</span></span></span></li>
+<li><span class="d">a) 16</span><span class="d">b) 25</span><span class="d">c) 75</span><span class="d">d) 21</span></li>
+<li>Dobbelt så mange personer gir dobbelt så mye melk:
+    <span class="brok"><span class="t">3</span><span class="n">4</span></span> · 2 = <span class="brok"><span class="t">6</span><span class="n">4</span></span> = <strong><span class="brok"><span class="t">3</span><span class="n">2</span></span> liter, altså 1,5 liter</strong></li>
+<li><span class="brok"><span class="t">2</span><span class="n">5</span></span> av 10 = <strong>4 liter</strong></li>
+<li>Riktig svar er <strong><span class="brok"><span class="t">1</span><span class="n">6</span></span></strong>.
+    </li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">b) 12 elever</span></li>
+<li><span class="d">a) 2</span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">2</span></span></span></li>
+<li>3 : <span class="brok"><span class="t">1</span><span class="n">4</span></span> = 3 · 4 = <strong>12 glass</strong></li>
+<li><span class="d">a) 6 biter</span><span class="d">b) <span class="brok"><span class="t">9</span><span class="n">2</span></span> : <span class="brok"><span class="t">3</span><span class="n">4</span></span> = <span class="brok"><span class="t">9</span><span class="n">2</span></span> · <span class="brok"><span class="t">4</span><span class="n">3</span></span> = <span class="brok"><span class="t">36</span><span class="n">6</span></span> = 6</span>
+<span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>4.6 Blandede oppgaver</h3>
+<ol class="fasit" start="82" style="counter-reset: fas 81;">
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">4</span></span></span><span class="d">c) <span class="brok"><span class="t">4</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">7</span><span class="n">12</span></span></span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">3</span></span></span><span class="d">c) <span class="brok"><span class="t">3</span><span class="n">10</span></span></span><span class="d">d) 18</span></li>
+<li><span class="d">a) 25 %</span><span class="d">b) 60 %</span><span class="d">c) 87,5 %</span></li>
+<li><span class="brok"><span class="t">2</span><span class="n">5</span></span> av 30 = 12 gutter, altså <strong>18 jenter</strong></li>
+<li><span class="d">a) <span class="brok"><span class="t">5</span><span class="n">8</span></span></span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">9</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">5</span></span></span></li>
+<li>0,375 = <strong><span class="brok"><span class="t">3</span><span class="n">8</span></span></strong> = <strong>37,5 %</strong></li>
+<li><span class="d">a) <span class="brok"><span class="t">19</span><span class="n">30</span></span></span><span class="d">b) 14 000 kr</span><span class="d">c) 15 400 kr</span><br/>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">5</span></span> = 0,4 = 40 %</span><span class="d">b) 2 480 husholdninger</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 360 kr</span><span class="d">b) 450 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="brok"><span class="t">2</span><span class="n">3</span></span> : <span class="brok"><span class="t">4</span><span class="n">9</span></span> = <span class="brok"><span class="t">2</span><span class="n">3</span></span> · <span class="brok"><span class="t">9</span><span class="n">4</span></span> = <span class="brok"><span class="t">18</span><span class="n">12</span></span> = <strong><span class="brok"><span class="t">3</span><span class="n">2</span></span></strong>.
+    </li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-3.html"><span class="etikett">Forrige kapittel</span><strong>3. Potenser, kvadratrot og faktorisering</strong></a><a class="neste" href="kapittel-5.html"><span class="etikett">Neste kapittel</span><strong>5. Prosent</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+/* ==========================================================
+   Interaktive oppgaver — eget lag, finnes bare på nett
+   Bygger på bok.css og nett.css. Kapittelfargen kommer fra
+   --kap, som settes på .innhold av byggeskriptet.
+   ==========================================================
+
+   Utformet for voksne på A1–B1 i norsk. Derfor:
+   løpende tekst holdes på et minimum, instruksjonen står i
+   én kort setning som kan leses høyt, og alt som skal gjøres
+   kan gjøres med å trykke. Ingenting krever at eleven skriver
+   norsk, og ingenting krever at eleven leser for å forstå
+   hva oppgaven går ut på.
+   ========================================================== */
+
+.aktliste{ margin: 1.6rem 0 0; }
+
+/* ---------- framdrift ---------- */
+.framdrift{
+  position: sticky; top: 68px; z-index: 20;
+  display: flex; align-items: center; gap: .9rem;
+  background: #fff; border: 1px solid var(--kant, #dfe3e8);
+  border-radius: 10px; padding: .7rem 1rem; margin-bottom: 1.4rem;
+}
+.framdrift .stolpe{
+  flex: 1; height: 10px; border-radius: 999px; background: #eceff2; overflow: hidden;
+}
+.framdrift .fyll{
+  height: 100%; width: 0; border-radius: 999px;
+  background: var(--kap, #1d4e89); transition: width .35s ease;
+}
+.framdrift .tall{ font-weight: 700; font-size: .95rem; white-space: nowrap; }
+.framdrift .nullstill{
+  font: inherit; font-size: .84rem; background: none; border: 0;
+  color: #5a6272; cursor: pointer; text-decoration: underline; padding: 0;
+}
+
+/* ---------- én aktivitet ---------- */
+.akt{
+  border: 1px solid var(--kant, #dfe3e8);
+  border-left: 6px solid var(--kap, #1d4e89);
+  border-radius: 10px; background: #fff;
+  margin: 0 0 1.3rem; overflow: hidden;
+}
+.akt.riktig{ border-left-color: #2e7d32; }
+
+.akt > .hode{
+  display: flex; align-items: baseline; gap: .8rem;
+  padding: .75rem 1.1rem; background: #f7f9fa;
+  border-bottom: 1px solid var(--kant, #dfe3e8);
+}
+.akt > .hode .nr{
+  font-weight: 800; font-size: .8rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--kap, #1d4e89); white-space: nowrap;
+}
+.akt > .hode .oppgave{ font-size: 1.05rem; font-weight: 600; margin: 0; }
+.akt > .kropp{ padding: 1.1rem; }
+
+.akt .merke{
+  margin-left: auto; font-size: 1.25rem; line-height: 1;
+  color: #2e7d32; opacity: 0; transition: opacity .2s;
+}
+.akt.riktig .merke{ opacity: 1; }
+
+/* ---------- knapperad ---------- */
+.aktknapper{
+  display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+  margin-top: 1rem;
+}
+.aktknapp{
+  font: inherit; font-size: .95rem; font-weight: 600;
+  border-radius: 8px; padding: .5rem 1.1rem; cursor: pointer;
+  border: 1px solid var(--kap, #1d4e89);
+  background: var(--kap, #1d4e89); color: #fff;
+}
+.aktknapp:hover{ filter: brightness(1.12); }
+.aktknapp:focus-visible{ outline: 3px solid #f9a825; outline-offset: 2px; }
+.aktknapp.mild{ background: #fff; color: var(--kap, #1d4e89); }
+.aktknapp.mild:hover{ background: #f2f5f7; filter: none; }
+.aktknapp[disabled]{ opacity: .45; cursor: default; filter: none; }
+
+/* ---------- tilbakemelding ---------- */
+.tilbakemelding{
+  margin-top: .9rem; padding: .7rem 1rem; border-radius: 8px;
+  font-size: .98rem; display: none;
+}
+.tilbakemelding.vis{ display: block; }
+.tilbakemelding.ja{ background: #e8f5e9; border-left: 5px solid #2e7d32; color: #1b5e20; }
+.tilbakemelding.nei{ background: #fff8e1; border-left: 5px solid #f9a825; color: #6b4e00; }
+.tilbakemelding p{ margin: 0 0 .4rem; }
+.tilbakemelding p:last-child{ margin: 0; }
+
+/* ==========================================================
+   Type: brøkfigur — klikk deler for å fargelegge
+   ========================================================== */
+.figurrad{ display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: center; }
+.brokfigur{ touch-action: manipulation; }
+.brokfigur .del{
+  fill: #fff; stroke: var(--kap, #1d4e89); stroke-width: 1.6;
+  cursor: pointer; transition: fill .12s;
+}
+.brokfigur .del:hover{ fill: color-mix(in srgb, var(--kap, #1d4e89) 18%, #fff); }
+.brokfigur .del.pa{ fill: var(--kap, #1d4e89); fill-opacity: .78; }
+.brokfigur .del:focus-visible{ outline: 3px solid #f9a825; }
+
+.teller{
+  font-size: 1.15rem; font-weight: 600;
+  display: flex; align-items: center; gap: .6rem;
+}
+.teller .antall{
+  font-size: 1.6rem; font-weight: 800; color: var(--kap, #1d4e89);
+  min-width: 2.2rem; text-align: center;
+}
+
+/* ==========================================================
+   Type: tallinje — dra merket til rett plass
+   ========================================================== */
+.tallinje{ touch-action: none; width: 100%; max-width: 640px; }
+.tallinje .akse{ stroke: #1f2430; stroke-width: 2; }
+.tallinje .hakk{ stroke: #1f2430; stroke-width: 1.6; }
+.tallinje .smahakk{ stroke: #9aa3ad; stroke-width: 1.2; }
+.tallinje .merkelapp{ font-size: 13px; fill: #1f2430; text-anchor: middle; }
+.tallinje .brikke{ fill: var(--kap, #1d4e89); cursor: grab; }
+.tallinje .brikke:active{ cursor: grabbing; }
+.tallinje .brikke:focus-visible{ outline: 3px solid #f9a825; }
+.tallinje .fasitmerke{ fill: #2e7d32; }
+
+.tallinjehjelp{ font-size: .88rem; color: #5a6272; margin: .5rem 0 0; }
+
+/* ==========================================================
+   Typer med brikker: par, kurver, sorter
+   Samme grep overalt — trykk på en brikke for å velge den,
+   trykk så der den skal. Å dra virker også, men å trykke to
+   ganger virker alltid, også med tastatur.
+   ========================================================== */
+.brikke{
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .35rem; min-height: 2.6rem; padding: .45rem .9rem;
+  border: 2px solid var(--kant, #dfe3e8); border-radius: 9px;
+  background: #fff; font-size: 1.05rem; font-weight: 600;
+  cursor: pointer; user-select: none; touch-action: none;
+}
+.brikke:hover{ border-color: var(--kap, #1d4e89); }
+.brikke:focus-visible{ outline: 3px solid #f9a825; outline-offset: 2px; }
+.brikke.valgt{
+  border-color: var(--kap, #1d4e89); background: var(--kap, #1d4e89); color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.18);
+}
+.brikke.valgt .brok{ color: #fff; }
+.brikke.drar{
+  position: fixed; z-index: 90; pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25); opacity: .95;
+}
+.brikke.laast{ cursor: default; opacity: .95; }
+
+.brikkelager{
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  padding: .8rem; border: 2px dashed var(--kant, #dfe3e8);
+  border-radius: 10px; background: #fafbfc; min-height: 4.2rem;
+  align-content: flex-start;
+}
+.brikkelager.tom::after{
+  content: "Alle brikkene er plassert.";
+  color: #8a929c; font-size: .92rem; align-self: center;
+}
+.brikkelager.mal{ border-style: solid; }
+
+/* mål som kan ta imot en brikke */
+.mal{ transition: background .15s, border-color .15s; }
+.mal.klar{ border-color: var(--kap, #1d4e89); background: #f0f6fb; }
+.mal.over{ border-color: var(--kap, #1d4e89); background: #e3eef8; }
+
+/* --- par: to kolonner, hver rad tar imot én brikke --- */
+.parliste{ display: grid; gap: .6rem; margin-bottom: 1rem; }
+.parrad{
+  display: grid; grid-template-columns: minmax(0,1fr) 2rem minmax(0,1fr);
+  gap: .6rem; align-items: stretch;
+}
+.parrad .fast{
+  display: flex; align-items: center; justify-content: center;
+  padding: .45rem .9rem; border-radius: 9px;
+  background: #f2f5f7; border: 2px solid #e6eaee;
+  font-size: 1.05rem; font-weight: 600; min-height: 2.6rem;
+}
+.parrad .pil{ display: flex; align-items: center; justify-content: center; color: #9aa3ad; }
+.parrad .plass{
+  border: 2px dashed var(--kant, #dfe3e8); border-radius: 9px;
+  background: #fafbfc; min-height: 2.6rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.parrad .plass .brikke{ border: 0; width: 100%; }
+.parrad.riktig .plass{ border-style: solid; border-color: #a5d6a7; background: #e8f5e9; }
+.parrad.feil .plass{ border-style: solid; border-color: #ffcc80; background: #fff8e1; }
+
+/* --- kurver: navngitte bokser --- */
+.kurvrad{
+  display: grid; gap: .8rem; margin-bottom: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.kurv{
+  border: 2px solid var(--kant, #dfe3e8); border-radius: 10px;
+  background: #fafbfc; padding: 0 0 .7rem; min-height: 6.5rem;
+}
+.kurv > h4{
+  margin: 0 0 .6rem; padding: .5rem .8rem;
+  background: var(--kap, #1d4e89); color: #fff;
+  border-radius: 7px 7px 0 0; font-size: .95rem;
+}
+.kurv .innhold{
+  display: flex; flex-wrap: wrap; gap: .5rem; padding: 0 .7rem;
+  align-content: flex-start; min-height: 3rem;
+}
+.kurv.riktig{ border-color: #a5d6a7; }
+.kurv .brikke.feilplassert{ border-color: #f9a825; background: #fff8e1; }
+
+/* --- sorter: bytt plass på to brikker --- */
+.sorterrad{
+  display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+  padding: .8rem; border: 2px solid var(--kant, #dfe3e8);
+  border-radius: 10px; background: #fafbfc;
+}
+.sorterrad .brikke{ min-width: 4.2rem; }
+.sorterrad .brikke.paplass{ border-color: #a5d6a7; background: #e8f5e9; }
+.sorterpiler{
+  display: flex; justify-content: space-between;
+  font-size: .85rem; color: #5a6272; margin: .5rem .2rem 0;
+}
+
+/* ==========================================================
+   Type: rutenett — klikk ruter
+   ========================================================== */
+.rutenett{ display: grid; gap: 2px; touch-action: manipulation; width: max-content; }
+.rutenett .rute{
+  width: 26px; height: 26px; padding: 0;
+  border: 1px solid #b8c2cc; background: #fff; cursor: pointer;
+}
+.rutenett .rute:hover{ background: color-mix(in srgb, var(--kap, #1d4e89) 15%, #fff); }
+.rutenett .rute.pa{ background: var(--kap, #1d4e89); border-color: var(--kap, #1d4e89); }
+.rutenett .rute:focus-visible{ outline: 3px solid #f9a825; outline-offset: -2px; z-index: 2; }
+.rutenett.smaa .rute{ width: 20px; height: 20px; }
+
+/* ==========================================================
+   Type: velg — trykk på riktig svar
+   ========================================================== */
+.valgrad{ display: flex; flex-wrap: wrap; gap: .7rem; }
+.valg{
+  font: inherit; font-size: 1.1rem; font-weight: 600;
+  min-width: 4.5rem; min-height: 3rem; padding: .55rem 1.2rem;
+  border: 2px solid var(--kant, #dfe3e8); border-radius: 10px;
+  background: #fff; cursor: pointer;
+}
+.valg:hover{ border-color: var(--kap, #1d4e89); }
+.valg:focus-visible{ outline: 3px solid #f9a825; outline-offset: 2px; }
+.valg.valgt{ border-color: var(--kap, #1d4e89); background: var(--kap, #1d4e89); color: #fff; }
+.valg.valgt .brok{ color: #fff; }
+.valg.erriktig{ border-color: #2e7d32; background: #e8f5e9; color: #1b5e20; }
+.valg.erfeil{ border-color: #f9a825; background: #fff8e1; color: #6b4e00; }
+
+/* ==========================================================
+   Diverse
+   ========================================================== */
+.aktintro{
+  background: #f7f9fa; border: 1px solid var(--kant, #dfe3e8);
+  border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.4rem;
+}
+.aktintro p{ margin: 0; max-width: 62ch; }
+.aktintro .tilbake{ font-weight: 600; color: var(--kap, #1d4e89); text-decoration: none; }
+
+.ingenskript{
+  background: #fff8e1; border-left: 5px solid #f9a825;
+  padding: 1rem 1.2rem; border-radius: 8px;
+}
+
+@media (max-width: 620px){
+  .parrad{ grid-template-columns: minmax(0,1fr) 1.4rem minmax(0,1fr); gap: .4rem; }
+  .parrad .fast, .parrad .plass{ font-size: .95rem; padding: .4rem .5rem; }
+  .framdrift{ top: 60px; }
+  .rutenett .rute{ width: 22px; height: 22px; }
+}
+
+/* De interaktive sidene er laget for skjerm. Skrives de ut, blir de
+   en oversikt over hva oppgavene går ut på — ikke et arbeidsark. */
+@media print{
+  .framdrift, .aktknapper, .tilbakemelding{ display: none !important; }
+  .akt{ break-inside: avoid; }
+}
+
+/* ==========================================================
+   Type: trekant — dra katetene
+   Type: koordinat — sett et punkt, eller lag en linje
+   ========================================================== */
+.trekant, .koordinat{ touch-action: none; max-width: 420px; width: 100%; }
+.trekant .grep, .koordinat .grep{ cursor: grab; }
+.trekant .grep:active, .koordinat .grep:active{ cursor: grabbing; }
+.trekant .grep:focus-visible, .koordinat .grep:focus-visible{ outline: 3px solid #f9a825; }
+
+.utregning{
+  margin: .7rem 0 0; padding: .55rem .85rem;
+  background: var(--graa-lys, #f5f6f8);
+  border-left: 4px solid var(--kap, #1d4e89);
+  border-radius: 0 6px 6px 0;
+  font-size: 1.02rem;
+}
+.utregning sup{ font-size: .72em; }
+
+/* --- merk: nummererte deler av en figur --- */
+.merkfigur{
+  background: #fff; border: 1px solid #e6eaee; border-radius: 10px;
+  padding: .6rem; margin-bottom: 1rem; text-align: center;
+}
+.merkfigur svg{ width: 100%; max-width: 620px; height: auto; }
+.merkpunkt circle{ transition: fill .15s; }
+.merkpunkt.aktiv circle{ fill: var(--kap, #1d4e89); }
+.merkpunkt.riktig circle{ fill: #2e7d32; }
+.merkpunkt.feil circle{ fill: #e08a00; }
+.merkrad{ grid-template-columns: 2.6rem minmax(0,1fr); }
+.merkrad .fast.nummer{
+  border-radius: 50%; width: 2.6rem; padding: 0;
+  background: #1f2430; border-color: #1f2430; color: #fff;
+}
+.merkrad.riktig .fast.nummer{ background: #2e7d32; border-color: #2e7d32; }
+.merkrad.feil .fast.nummer{ background: #e08a00; border-color: #e08a00; }
+@media (min-width: 760px){
+  .merkliste{ grid-template-columns: 1fr 1fr; column-gap: 1.4rem; }
+}

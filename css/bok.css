@@ -1,0 +1,800 @@
+/* =========================================================
+   MATEMATIKK FOV MODUL 3 OG 4 – felles designsystem
+   Brukes av både nettversjon og utskriftsversjon
+   ========================================================= */
+
+:root{
+  --blaa:        #1d4e89;
+  --blaa-lys:    #e8f0f8;
+  --blaa-kant:   #b8d0e6;
+
+  --gronn:       #2e7d32;
+  --gronn-lys:   #e8f5e9;
+  --gronn-kant:  #a5d6a7;
+
+  --lilla:       #6a1b9a;
+  --lilla-lys:   #f3e5f5;
+  --lilla-kant:  #ce93d8;
+
+  --teal:        #00695c;
+  --teal-lys:    #e0f2f1;
+  --teal-kant:   #80cbc4;
+
+  --gul:         #f9a825;
+  --gul-lys:     #fff8e1;
+  --gul-kant:    #ffe082;
+
+  --graa-lys:    #f5f6f8;
+  --graa-kant:   #d6d9de;
+  --tekst:       #1f2430;
+  --tekst-svak:  #5a6272;
+
+  --radius: 8px;
+}
+
+/* ---------- Grunntypografi ---------- */
+html{ font-size: 11.5pt; }
+
+body{
+  font-family: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--tekst);
+  line-height: 1.55;
+  margin: 0;
+  background: #fff;
+}
+
+p{ margin: 0 0 0.7em; }
+
+strong{ font-weight: 600; }
+
+.matte{
+  font-family: "Cambria Math", "Latin Modern Math", Cambria, Georgia, serif;
+  font-size: 1.06em;
+  white-space: nowrap;
+}
+
+/* ---------- Overskrifter ---------- */
+h1.kapittel-tittel{
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 0.2em;
+  color: #fff;
+}
+
+h2{
+  font-size: 1.45rem;
+  color: var(--blaa);
+  margin: 1.9em 0 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 3px solid var(--blaa);
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h3{
+  font-size: 1.13rem;
+  color: var(--blaa);
+  margin: 1.5em 0 0.4em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h4{
+  font-size: 1rem;
+  margin: 1.2em 0 0.3em;
+  color: var(--tekst);
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+/* ---------- Kapittelforside ---------- */
+.kapittelforside{
+  background: linear-gradient(135deg, var(--blaa) 0%, #2a6ba8 100%);
+  color: #fff;
+  padding: 2.2rem 2rem 1.9rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.6rem;
+}
+.kapittelforside .kapittelnr{
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0 0 0.4rem;
+}
+.kapittelforside .ingress{
+  font-size: 1.05rem;
+  margin: 0.8rem 0 0;
+  max-width: 46em;
+  opacity: 0.96;
+}
+
+/* ---------- Kompetansemål ---------- */
+.maalboks{
+  border: 1px solid var(--graa-kant);
+  border-radius: var(--radius);
+  padding: 0 0 0.9rem;
+  margin: 0 0 1.6rem;
+  background: var(--graa-lys);
+  overflow: hidden;
+  break-inside: avoid;
+}
+.maalboks > h3{
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: var(--graa-kant);
+  color: var(--tekst);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.maalgruppe{ padding: 0.9rem 1rem 0; }
+.maalgruppe > .maaltittel{
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.45rem;
+}
+.maalgruppe.m3 > .maaltittel{ color: var(--blaa); }
+.maalgruppe.m4 > .maaltittel{ color: var(--teal); }
+.maalboks ul{ margin: 0; padding-left: 1.15rem; }
+.maalboks li{ margin-bottom: 0.35rem; }
+.maalkilde{
+  font-size: 0.78rem;
+  color: var(--tekst-svak);
+  padding: 0.8rem 1rem 0;
+  font-style: italic;
+}
+
+/* ---------- Delmål ---------- */
+.delmaal{
+  background: var(--blaa-lys);
+  border-left: 5px solid var(--blaa);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0 1.2rem;
+  break-inside: avoid;
+}
+.delmaal .etikett{
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blaa);
+  margin-bottom: 0.35rem;
+}
+.delmaal ul{ margin: 0; padding-left: 1.1rem; }
+.delmaal li{ margin-bottom: 0.2rem; }
+
+/* ---------- Ordliste ---------- */
+table.ordliste{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1.4rem;
+  font-size: 0.95rem;
+}
+table.ordliste thead{ display: table-header-group; }
+table.ordliste th{
+  background: var(--teal);
+  color: #fff;
+  text-align: left;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--teal);
+}
+table.ordliste td{
+  border: 1px solid var(--graa-kant);
+  padding: 0.42rem 0.6rem;
+  vertical-align: top;
+}
+table.ordliste td:first-child{ font-weight: 600; width: 24%; }
+table.ordliste td:nth-child(2){ width: 26%; background: #fcfcfd; }
+table.ordliste tbody tr:nth-child(even) td{ background: #fafbfc; }
+table.ordliste tbody tr:nth-child(even) td:nth-child(2){ background: #f6f7f9; }
+
+/* ---------- Huskeboks / regelboks ---------- */
+.regel{
+  background: var(--gul-lys);
+  border: 1px solid var(--gul-kant);
+  border-left: 5px solid var(--gul);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0 1.2rem;
+  break-inside: avoid;
+}
+.regel .etikett{
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8d6708;
+  margin-bottom: 0.35rem;
+}
+.regel p:last-child, .regel ul:last-child{ margin-bottom: 0; }
+.regel ul{ margin: 0.3rem 0 0; padding-left: 1.15rem; }
+
+/* ---------- Eksempel ---------- */
+.eksempel{
+  border: 1px solid var(--blaa-kant);
+  border-radius: var(--radius);
+  margin: 1.1rem 0 1.4rem;
+  overflow: hidden;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.eksempel > .hode{
+  background: var(--blaa);
+  color: #fff;
+  padding: 0.42rem 0.9rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.eksempel > .kropp{
+  padding: 0.9rem 1rem 1rem;
+  background: #fbfcfe;
+}
+.eksempel .oppgavetekst{
+  font-style: italic;
+  color: var(--tekst-svak);
+  margin-bottom: 0.7rem;
+}
+
+/* Trinnvis løsning */
+ol.trinn{
+  counter-reset: trinn;
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+ol.trinn > li{
+  counter-increment: trinn;
+  position: relative;
+  padding-left: 2.1rem;
+  margin-bottom: 0.65rem;
+}
+ol.trinn > li::before{
+  content: counter(trinn);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--blaa);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ol.trinn > li:last-child{ margin-bottom: 0; }
+
+.svarlinje{
+  margin-top: 0.7rem;
+  padding: 0.45rem 0.8rem;
+  background: var(--gronn-lys);
+  border-left: 4px solid var(--gronn);
+  border-radius: 0 4px 4px 0;
+  font-weight: 600;
+}
+
+/* ---------- Figurer ---------- */
+figure{
+  margin: 1rem 0 1.2rem;
+  text-align: center;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+figure svg{ max-width: 100%; height: auto; }
+figcaption{
+  font-size: 0.85rem;
+  color: var(--tekst-svak);
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* ---------- Oppgavebolker ---------- */
+.oppgavebolk{
+  border-radius: var(--radius);
+  margin: 1.3rem 0;
+  overflow: hidden;
+  border: 1px solid var(--graa-kant);
+}
+.oppgavebolk > .hode{
+  padding: 0.5rem 0.9rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.oppgavebolk > .hode .nivaa{
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+.oppgavebolk > .kropp{ padding: 0.85rem 1rem 1rem; }
+
+.bolk-a > .hode{ background: var(--gronn); }
+.bolk-a{ border-color: var(--gronn-kant); }
+.bolk-b > .hode{ background: var(--blaa); }
+.bolk-b{ border-color: var(--blaa-kant); }
+.bolk-c > .hode{ background: var(--lilla); }
+.bolk-c{ border-color: var(--lilla-kant); }
+.bolk-m4 > .hode{ background: var(--teal); }
+.bolk-m4{ border-color: var(--teal-kant); }
+
+/* Oppgaveliste */
+ol.oppgaver{
+  margin: 0;
+  padding-left: 2.15rem;
+  list-style: none;
+}
+ol.oppgaver > li{
+  margin-bottom: 0.75rem;
+  position: relative;
+  counter-increment: oppg;
+  break-inside: avoid;
+}
+ol.oppgaver > li::before{
+  content: counter(oppg) ".";
+  position: absolute;
+  left: -2.15rem;
+  width: 1.8rem;
+  text-align: right;
+  font-weight: 700;
+  color: var(--tekst-svak);
+}
+ol.oppgaver > li:last-child{ margin-bottom: 0; }
+
+/* Deloppgaver a) b) c) på rekke */
+.deloppgaver{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.6rem;
+  margin: 0.3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.deloppgaver > li{
+  min-width: 7.5em;
+}
+.deloppgaver > li .bokstav{
+  font-weight: 700;
+  color: var(--tekst-svak);
+  margin-right: 0.35em;
+}
+.deloppgaver.smal > li{ min-width: 5.8em; }
+.deloppgaver.brei > li{ min-width: 13em; }
+
+/* Merkelapp for modul 4-oppgave inne i en vanlig bolk */
+.m4merke{
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.08em 0.45em;
+  border-radius: 3px;
+  vertical-align: 0.12em;
+  margin-left: 0.35em;
+}
+
+/* ---------- Tabeller i innhold ---------- */
+table.data{
+  border-collapse: collapse;
+  margin: 0.7rem auto 1rem;
+  font-size: 0.95rem;
+}
+table.data th, table.data td{
+  border: 1px solid var(--graa-kant);
+  padding: 0.35rem 0.7rem;
+  text-align: center;
+}
+table.data th{ background: var(--blaa-lys); font-weight: 600; }
+
+/* Plassverditabell */
+table.plassverdi{
+  border-collapse: collapse;
+  margin: 0.6rem auto 0.9rem;
+  font-size: 0.98rem;
+}
+table.plassverdi th{
+  background: var(--blaa-lys);
+  border: 1px solid var(--blaa-kant);
+  padding: 0.3rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blaa);
+}
+table.plassverdi td{
+  border: 1px solid var(--blaa-kant);
+  padding: 0.35rem 0.7rem;
+  text-align: center;
+  font-family: "Cambria Math", Cambria, Georgia, serif;
+  font-size: 1.15rem;
+}
+table.plassverdi td.komma{
+  background: var(--gul-lys);
+  border-left: 2px solid var(--gul);
+  border-right: 2px solid var(--gul);
+  font-weight: 700;
+}
+
+/* ---------- Sjekkliste ---------- */
+.sjekkliste{
+  border: 1px solid var(--gronn-kant);
+  background: var(--gronn-lys);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  margin: 1.5rem 0;
+  break-inside: avoid;
+}
+.sjekkliste h3{ margin-top: 0; color: var(--gronn); border: 0; }
+.sjekkliste ul{ list-style: none; margin: 0; padding: 0; }
+.sjekkliste li{
+  padding-left: 1.8rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+.sjekkliste li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 1.05rem;
+  height: 1.05rem;
+  border: 2px solid var(--gronn);
+  border-radius: 3px;
+  background: #fff;
+}
+
+/* ---------- Fasit ---------- */
+.fasit-kapittel h3{ margin-top: 1.4rem; }
+ol.fasit{ counter-reset: none; }
+ol.fasitliste{
+  columns: 2;
+  column-gap: 2rem;
+  padding-left: 1.7rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+}
+ol.fasitliste > li{
+  margin-bottom: 0.3rem;
+  break-inside: avoid;
+}
+
+/* =========================================================
+   NETTVERSJON
+   ========================================================= */
+@media screen{
+  body{
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 5rem;
+  }
+  .kunprint{ display: none !important; }
+
+  .toppnav{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--graa-kant);
+    margin: -1.5rem -1.5rem 1.5rem;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.88rem;
+  }
+  .toppnav .merke{ font-weight: 700; color: var(--blaa); }
+  .toppnav a{ color: var(--tekst-svak); text-decoration: none; }
+  .toppnav a:hover{ color: var(--blaa); text-decoration: underline; }
+
+  .innhold-nett{
+    border: 1px solid var(--graa-kant);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.8rem;
+    background: var(--graa-lys);
+  }
+  .innhold-nett h3{ margin-top: 0; }
+  .innhold-nett ol{ margin: 0; padding-left: 1.3rem; }
+  .innhold-nett li{ margin-bottom: 0.28rem; }
+  .innhold-nett a{ color: var(--blaa); text-decoration: none; }
+  .innhold-nett a:hover{ text-decoration: underline; }
+
+  /* Fasitknapp – kun på skjerm */
+  .fasitknapp{
+    display: inline-block;
+    margin-top: 0.45rem;
+    padding: 0.22rem 0.7rem;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--blaa);
+    background: #fff;
+    border: 1px solid var(--blaa-kant);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .fasitknapp:hover{ background: var(--blaa-lys); }
+  .fasitsvar{
+    display: none;
+    margin-top: 0.4rem;
+    padding: 0.4rem 0.75rem;
+    background: var(--gronn-lys);
+    border-left: 4px solid var(--gronn);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95rem;
+  }
+  .fasitsvar.vis{ display: block; }
+
+  .tilbake-topp{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--tekst-svak);
+    font-size: 0.88rem;
+    text-decoration: none;
+  }
+}
+
+/* =========================================================
+   UTSKRIFTSVERSJON
+   ========================================================= */
+@page{
+  size: A4;
+  margin: 20mm 18mm 18mm 18mm;
+
+  @bottom-center{
+    content: counter(page);
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 9pt;
+    color: #5a6272;
+  }
+  @top-right{
+    content: string(kapittelnavn);
+    font-family: "Source Sans 3", Arial, sans-serif;
+    font-size: 8.5pt;
+    color: #5a6272;
+  }
+}
+@page:first{
+  @top-right{ content: ""; }
+  @bottom-center{ content: ""; }
+}
+
+@media print{
+  .kunnett{ display: none !important; }
+  .toppnav, .innhold-nett, .fasitknapp, .fasitsvar, .tilbake-topp{ display: none !important; }
+
+  html{ font-size: 10.5pt; }
+  body{ max-width: none; padding: 0; }
+
+  h1.kapittel-tittel{ string-set: kapittelnavn content(); }
+
+  .nyside{ break-before: page; page-break-before: always; }
+
+  h2{ break-before: auto; }
+  .eksempel, .oppgavebolk, figure, .regel, table.ordliste,
+  .delmaal, .maalboks, .sjekkliste{
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+}
+
+/* ---------- Ekte brøkstrek ---------- */
+.brok{
+  display: inline-block;
+  vertical-align: -0.48em;
+  text-align: center;
+  font-family: "Cambria Math", Cambria, Georgia, serif;
+  line-height: 1.14;
+  margin: 0 0.12em;
+  white-space: nowrap;
+}
+.brok > .t{ display: block; padding: 0 0.3em 0.04em; }
+.brok > .n{ display: block; padding: 0.04em 0.3em 0; border-top: 1.1px solid currentColor; }
+
+.rute{
+  display: inline-block;
+  width: 0.78em; height: 0.86em;
+  border: 1.2px solid currentColor;
+  vertical-align: -0.08em;
+  margin: 0 0.08em;
+}
+
+/* ---------- Kapittelåpning (fyller hele siden) ---------- */
+.kapittelapning{
+  --kap: #b04a2f;
+  position: relative;
+  min-height: 232mm;
+  break-before: page;
+  page-break-before: always;
+  break-after: page;
+  page: apning;
+  display: block;
+}
+.kapittelapning .flate{
+  background: var(--kap);
+  color: #fff;
+  border-radius: 10px;
+  padding: 14mm 16mm 13mm;
+  margin-bottom: 8mm;
+}
+.kapittelapning .kapittelnr{
+  font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+  opacity: 0.85; margin: 0 0 0.45rem;
+}
+.kapittelapning h1{
+  font-size: 2.6rem; line-height: 1.06; font-weight: 800;
+  margin: 0 0 0.9rem; color: #fff; letter-spacing: -0.015em;
+}
+.kapittelapning .ingress{
+  font-size: 1rem; line-height: 1.5; margin: 0; max-width: 44em; opacity: 0.95;
+}
+.kapittelapning .illustrasjon{
+  margin: 0 0 8mm;
+  text-align: center;
+}
+.kapittelapning .illustrasjon svg,
+.kapittelapning .illustrasjon img{
+  width: 100%; max-width: 155mm; height: auto;
+}
+.kapittelapning .illtekst{
+  font-size: 0.85rem; color: var(--tekst-svak); margin: 2mm 0 0; font-style: italic;
+}
+.kapittelapning .idette{
+  font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--kap);
+  margin: 0 0 0.5rem; padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--kap);
+}
+ol.delkapitler{
+  list-style: none; margin: 0; padding: 0; font-size: 0.98rem;
+}
+ol.delkapitler li{
+  display: flex; align-items: baseline; gap: 0.7rem;
+  padding: 0.36rem 0; border-bottom: 1px solid var(--graa-kant);
+}
+ol.delkapitler li .dknr{
+  font-weight: 700; color: var(--kap); min-width: 2.6rem;
+}
+
+/* ---------- Innholdsfortegnelse ---------- */
+.innhold-side{ break-before: page; page-break-before: always; page: apning; }
+.innhold-side h1{
+  font-size: 2.2rem; font-weight: 800; color: var(--tekst);
+  margin: 0 0 1.6rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--tekst);
+}
+.toc-kap{ margin-bottom: 1.5rem; break-inside: avoid; }
+.toc-kap > .rad{
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-size: 1.18rem; font-weight: 700; padding: 0.35rem 0;
+}
+.toc-kap > .rad .nr{
+  color: #fff; background: var(--kap, #b04a2f);
+  border-radius: 5px; padding: 0.06em 0.5em; font-size: 0.86rem;
+}
+.toc-kap > .rad .prikker{
+  flex: 1; border-bottom: 2px dotted var(--graa-kant); transform: translateY(-0.25em);
+}
+.toc-kap ol{ list-style: none; margin: 0.25rem 0 0; padding: 0 0 0 2.4rem; }
+.toc-kap ol li{
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-size: 0.98rem; padding: 0.22rem 0; color: var(--tekst-svak);
+}
+.toc-kap ol li .dknr{ min-width: 2.4rem; font-weight: 600; color: var(--tekst); }
+.toc-kap ol li .prikker{
+  flex: 1; border-bottom: 1px dotted var(--graa-kant); transform: translateY(-0.25em);
+}
+.toc-note{
+  margin-top: 2rem; padding: 0.9rem 1.1rem;
+  background: var(--graa-lys); border: 1px solid var(--graa-kant); border-radius: 8px;
+  font-size: 0.92rem; color: var(--tekst-svak);
+}
+
+@page apning{ @top-right{ content: ""; } }
+@page blank{ @top-right{ content: ""; } @bottom-center{ content: ""; } }
+.fyllside{ page: blank; break-after: page; page-break-after: always; height: 2mm; }
+
+/* ---------- Kodeutdrag ---------- */
+code{
+  font-family: "Consolas","DejaVu Sans Mono",monospace;
+  font-size: 0.92em;
+  color: #1f4e5f;
+  line-height: 1.7;
+}
+.kodeboks{
+  background: #f2f4f6;
+  border: 1px solid #d6d9de;
+  border-left: 4px solid #3f4550;
+  border-radius: 0 6px 6px 0;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+}
+
+/* =========================================================
+   Naturfag: forsøk, datatabeller og koble-oppgaver.
+   Brukes ikke av matematikk, og endrer ingenting der.
+   ========================================================= */
+.forsok{
+  background: var(--gronn-lys);
+  border: 1px solid var(--gronn-kant);
+  border-left: 5px solid var(--gronn);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0 1.2rem;
+  break-inside: avoid;
+}
+.forsok .etikett{
+  display: block; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #1f5c23; margin-bottom: 0.35rem;
+}
+.forsok .trinn{ margin: 0.4rem 0 0.6rem; padding-left: 1.3rem; }
+.forsok .underoverskrift{ font-weight: 700; margin: 0.4rem 0 0.1rem; }
+.forsok ul{ margin: 0; padding-left: 1.15rem; }
+
+table.datatabell{
+  border-collapse: collapse; margin: 1rem 0 1.3rem;
+  font-size: 0.95rem; break-inside: avoid; min-width: 18rem;
+}
+table.datatabell caption{
+  caption-side: bottom; text-align: left; font-size: 0.88rem;
+  color: var(--tekst-svak); padding-top: 0.4rem;
+}
+table.datatabell th, table.datatabell td{
+  border: 1px solid var(--graa-kant); padding: 0.35rem 0.7rem; text-align: left;
+}
+table.datatabell thead th{ background: var(--kap, #3d6b35); color: #fff; }
+table.datatabell tbody th{ background: var(--graa-lys); font-weight: 600; }
+table.datatabell td{ font-variant-numeric: tabular-nums; }
+table.datatabell td.tallcelle{ text-align: right; }
+table.datatabell caption{ max-width: 32rem; }
+
+.koble{
+  display: grid; grid-template-columns: minmax(8rem, auto) 1fr;
+  gap: 0.3rem 1.6rem; margin: 0.5rem 0 0.2rem;
+}
+.koble ol, .koble ul{ margin: 0; padding-left: 1.4rem; }
+.koble ul{ list-style: none; padding-left: 0; }
+.koble li{ margin-bottom: 0.2rem; }
+.koble .parh strong{ display: inline-block; width: 1.4rem; }
+.ordvalg{ white-space: nowrap; }
+@media screen and (max-width: 560px){
+  .koble{ grid-template-columns: 1fr; }
+  .koble ul{ margin-top: 0.4rem; }
+}
+/* Lang delkapittelliste: to spalter, så kapittelåpningen holder seg på én side. */
+ol.delkapitler.to{ columns: 2; column-gap: 2rem; }
+ol.delkapitler.to li{ break-inside: avoid; }
+
+/* Modelltekster (kapittel 8): kommentar ved hvert avsnitt */
+.modelltekst .mt-rad { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 1rem;
+  border-top: 1px dashed #dccb96; padding: .45rem 0; }
+.modelltekst .mt-rad p { margin: 0; }
+.modelltekst .mt-merk { font-size: .86em; color: #6b5a2a; border-left: 3px solid #e0c46a; padding-left: .6rem; }
+@media (max-width: 640px) { .modelltekst .mt-rad { grid-template-columns: 1fr; gap: .3rem; } }
+@media print { .modelltekst .mt-rad { grid-template-columns: 2fr 1fr; } }
+
+/* Modul 4-tekster: lengre fagtekst i egen ramme */
+.m4tekst { border-left: 4px solid var(--teal); background: #f3faf8; padding: .6rem 1rem .4rem; margin: 1.2rem 0; border-radius: 0 8px 8px 0; }
+.m4tekst h3 { margin-top: .2rem; }
+.m4tekst .m4kilder { font-size: .85em; color: #4b5a58; }

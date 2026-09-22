@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9. Statistikk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html" aria-current="page"><span class="nr">9</span><span>Statistikk</span></a></li><li class="dk"><a href="#d9-1">9.1 Å samle og ordne data</a></li><li class="dk"><a href="#d9-2">9.2 Diagrammer</a></li><li class="dk"><a href="#d9-3">9.3 Sentralmål</a></li><li class="dk"><a href="#d9-4">9.4 Variasjonsbredde og spredning</a></li><li class="dk"><a href="#d9-5">9.5 Å vurdere statistikk kritisk</a></li><li class="dk"><a href="#d9-6">9.6 Sannsynlighet</a></li><li class="dk"><a href="#d9-7">9.7 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#64452f">
+
+
+<section class="kapittelapning" style="--kap:#64452f">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 9</p>
+    <h1 class="kapittel-tittel">Statistikk</h1>
+    <p class="ingress">
+      Hver dag møter du tall som skal overbevise deg om noe: en meningsmåling, en reklame,
+      en nyhetssak om priser. Statistikk handler like mye om å <em>lese</em> slike tall kritisk
+      som om å regne dem ut. I dette kapitlet lærer du å ordne og presentere data, finne
+      sentralmål og spredning, vurdere framstillinger — og regne ut sannsynlighet.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Frekvenstabell, stolpediagram, sektordiagram og sentralmål">
+  <!-- frekvenstabell -->
+  <text x="104" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#64452f" text-anchor="middle">FREKVENSTABELL</text>
+  <rect x="30" y="42" width="150" height="150" rx="6" fill="#f4efea" stroke="#64452f" stroke-width="1.4"/>
+  <line x1="30" y1="66" x2="180" y2="66" stroke="#64452f" stroke-width="1.2"/>
+  <line x1="118" y1="42" x2="118" y2="192" stroke="#64452f" stroke-opacity="0.5"/>
+  <text x="70" y="59" font-family="Arial" font-size="10.5" font-weight="bold" fill="#64452f" text-anchor="middle">Reisemåte</text>
+  <text x="149" y="59" font-family="Arial" font-size="10.5" font-weight="bold" fill="#64452f" text-anchor="middle">Antall</text>
+  <g font-family="Arial" font-size="11" fill="#1f2430">
+    <text x="42" y="90">Buss</text>      <text x="149" y="90" text-anchor="middle">9</text>
+    <text x="42" y="118">Bil</text>       <text x="149" y="118" text-anchor="middle">6</text>
+    <text x="42" y="146">Sykkel</text>    <text x="149" y="146" text-anchor="middle">3</text>
+    <text x="42" y="174">Går</text>       <text x="149" y="174" text-anchor="middle">2</text>
+  </g>
+  <text x="104" y="212" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">20 elever spurt</text>
+
+  <line x1="200" y1="20" x2="200" y2="252" stroke="#d6d9de"/>
+
+  <!-- stolpediagram -->
+  <text x="300" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#64452f" text-anchor="middle">STOLPEDIAGRAM</text>
+  <line x1="234" y1="180" x2="374" y2="180" stroke="#1f2430" stroke-width="1.6"/>
+  <line x1="234" y1="180" x2="234" y2="52" stroke="#1f2430" stroke-width="1.6"/>
+  <g fill="#64452f">
+    <rect x="246" y="72" width="24" height="108"/>
+    <rect x="280" y="108" width="24" height="72"/>
+    <rect x="314" y="144" width="24" height="36"/>
+    <rect x="348" y="156" width="24" height="24"/>
+  </g>
+  <g font-family="Arial" font-size="9" fill="#5a6272" text-anchor="middle">
+    <text x="258" y="194">buss</text><text x="292" y="194">bil</text>
+    <text x="326" y="194">syk.</text><text x="360" y="194">går</text>
+  </g>
+  <g font-family="Arial" font-size="9" fill="#5a6272" text-anchor="end">
+    <text x="230" y="184">0</text><text x="230" y="148">3</text>
+    <text x="230" y="112">6</text><text x="230" y="76">9</text>
+  </g>
+  <text x="300" y="212" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">sammenligner kategorier</text>
+
+  <line x1="394" y1="20" x2="394" y2="252" stroke="#d6d9de"/>
+
+  <!-- sektordiagram -->
+  <text x="516" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#64452f" text-anchor="middle">SEKTORDIAGRAM</text>
+  <g transform="translate(490,120)">
+    <path d="M 0 0 L 0 -58 A 58 58 0 0 1 55 18 Z" fill="#64452f"/>
+    <path d="M 0 0 L 55 18 A 58 58 0 0 1 -18 55 Z" fill="#a08163"/>
+    <path d="M 0 0 L -18 55 A 58 58 0 0 1 -57 12 Z" fill="#c9b39c"/>
+    <path d="M 0 0 L -57 12 A 58 58 0 0 1 0 -58 Z" fill="#e4d9cd"/>
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#64452f" stroke-width="1.4"/>
+  </g>
+  <g font-family="Arial" font-size="10" fill="#1f2430">
+    <rect x="560" y="76" width="10" height="10" fill="#64452f"/><text x="576" y="85">buss 45 %</text>
+    <rect x="560" y="96" width="10" height="10" fill="#a08163"/><text x="576" y="105">bil 30 %</text>
+    <rect x="560" y="116" width="10" height="10" fill="#c9b39c"/><text x="576" y="125">syk. 15 %</text>
+    <rect x="560" y="136" width="10" height="10" fill="#e4d9cd"/><text x="576" y="145">går 10 %</text>
+  </g>
+  <text x="516" y="212" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">viser deler av en helhet</text>
+
+  <!-- sentralmål -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="292" font-family="Arial" font-size="11" font-weight="bold" fill="#64452f">SENTRALMÅL</text>
+  <text x="30" y="310" font-family="DejaVu Serif" font-size="13" fill="#1f2430">5  7  7  9  12</text>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430">
+    <text x="180" y="302">gjennomsnitt 8</text>
+    <text x="330" y="302">median 7</text>
+    <text x="450" y="302">typetall 7</text>
+  </g>
+  <text x="180" y="316" font-family="Arial" font-size="9.5" fill="#5a6272">summen delt på antallet</text>
+  <text x="330" y="316" font-family="Arial" font-size="9.5" fill="#5a6272">den midterste</text>
+  <text x="450" y="316" font-family="Arial" font-size="9.5" fill="#5a6272">den vanligste</text>
+</svg>
+<p class="illtekst">De samme dataene kan ordnes i en tabell, vises som stolper eller som sektorer — og oppsummeres med sentralmål. Hvilken framstilling du velger, avgjør hva leseren legger merke til.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">9.1</span><span>Å samle og ordne data</span></li>
+    <li><span class="dknr">9.2</span><span>Diagrammer</span></li>
+    <li><span class="dknr">9.3</span><span>Sentralmål</span></li>
+    <li><span class="dknr">9.4</span><span>Variasjonsbredde og spredning</span></li>
+    <li><span class="dknr">9.5</span><span>Å vurdere statistikk kritisk</span></li>
+    <li><span class="dknr">9.6</span><span>Sannsynlighet</span></li>
+    <li><span class="dknr">9.7</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-9.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>ordne, gruppere og presentere data med og uten digitale verktøy, og begrunne valg av framstilling</li>
+      <li>finne sentralmål og variasjonsbredde med og uten digitale verktøy, og forholde seg kritisk til resultatene</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>planlegge og gjennomføre datainnsamling ved bruk av observasjoner og spørreundersøkelser, presentere resultatene ved bruk av passende diagrammer, sentralmål og spredningsmål, og forklare og begrunne valg som er gjort</li>
+      <li>tolke og kritisk vurdere statistiske framstillinger fra ulike kilder, og argumentere for hvordan framstillinger av tall og data kan brukes for å fremme ulike synspunkter</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4S — deltakeren skal kunne</p>
+    <ul>
+      <li>beskrive utfallsrom og regne ut sannsynlighet i enkle spill</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Sannsynlighet er et mål i modul 4S hos Udir, ikke i modul 3 eller 4Y. Det står i samme temaperiode som statistikk i årsplanen, og er derfor tatt med som delkapittel 9.6.</p>
+</section>
+
+<!-- ============================================================
+     9.1 Å SAMLE OG ORDNE DATA
+     ============================================================ -->
+<section id="k91">
+<h2 id="d9-1">9.1 Å samle og ordne data</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>sortere et datasett fra minst til størst</li>
+    <li>lage og lese en frekvenstabell</li>
+    <li>gruppere data når det er mange verdier</li>
+    <li>vurdere om et utvalg gir et pålitelig bilde</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>data</td><td></td><td>Vi samlet inn data fra 20 elever.</td></tr>
+    <tr><td>frekvens</td><td></td><td>Frekvensen til tallet 2 er sju.</td></tr>
+    <tr><td>datasett</td><td></td><td>Datasettet består av 15 tall.</td></tr>
+    <tr><td>utvalg</td><td></td><td>Utvalget var på 250 personer.</td></tr>
+    <tr><td>å gruppere</td><td></td><td>Vi grupperer aldrene i intervaller.</td></tr>
+    <tr><td>undersøkelse</td><td></td><td>Undersøkelsen ble gjort på jobben.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Rådata er tall i tilfeldig rekkefølge, og de sier lite i seg selv. Første steg er alltid å
+  <strong>ordne</strong> dem — sortere, telle opp og sette dem i tabell. Da ser du med én gang
+  hva som er vanlig og hva som er sjeldent.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rådata blir til frekvenstabell">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#f4efea" stroke="#d8c9bb"/>
+
+  <text x="120" y="42" font-family="Arial" font-size="11.5" font-weight="bold" fill="#64452f" text-anchor="middle">RÅDATA</text>
+  <text x="120" y="72" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">1  2  0  3  1</text>
+  <text x="120" y="96" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">1  2  4  0  1</text>
+  <text x="120" y="120" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">2  2  1  3  0</text>
+  <text x="120" y="150" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">antall søsken, 15 elever</text>
+
+  <path d="M 226 92 L 274 92" stroke="#64452f" stroke-width="2" marker-end="url(#p9)"/>
+  <defs><marker id="p9" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#64452f"/></marker></defs>
+  <text x="250" y="82" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">tell opp</text>
+
+  <text x="430" y="42" font-family="Arial" font-size="11.5" font-weight="bold" fill="#64452f" text-anchor="middle">FREKVENSTABELL</text>
+  <rect x="320" y="52" width="220" height="112" fill="#fff" stroke="#64452f" stroke-width="1.3"/>
+  <line x1="320" y1="76" x2="540" y2="76" stroke="#64452f" stroke-width="1.2"/>
+  <line x1="430" y1="52" x2="430" y2="164" stroke="#64452f" stroke-opacity="0.5"/>
+  <g font-family="Arial" font-size="10.5" font-weight="bold" fill="#64452f" text-anchor="middle">
+    <text x="375" y="69">Antall søsken</text><text x="485" y="69">Frekvens</text>
+  </g>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">
+    <text x="375" y="94">0</text><text x="485" y="94">3</text>
+    <text x="375" y="112">1</text><text x="485" y="112">5</text>
+    <text x="375" y="130">2</text><text x="485" y="130">4</text>
+    <text x="375" y="148">3</text><text x="485" y="148">2</text>
+  </g>
+  <text x="556" y="112" font-family="Arial" font-size="10" fill="#5a6272">+ 4 → 1</text>
+</svg>
+<figcaption>Figur 9.1 &nbsp;Frekvensen er hvor mange ganger hver verdi forekommer. Summen av frekvensene må bli lik antallet som er undersøkt.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Kontroll</span>
+  <p style="margin-bottom:0;">Legg alltid sammen frekvensene til slutt. Blir summen ulik
+  antall personer du har spurt, har du telt feil et sted.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>15 elever ble spurt hvor mange søsken de har. Svarene var:<br>
+        <span class="matte">1, 2, 0, 3, 1, 1, 2, 4, 0, 1, 2, 2, 1, 3, 0</span>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en frekvenstabell.</li>
+          <li><span class="bokstav">b)</span>Hvor mange elever har ett søsken?</li>
+          <li><span class="bokstav">c)</span>Kontroller at frekvensene til sammen blir 15.</li>
+        </ul>
+      </li>
+      <li>Sorter tallene fra minst til størst:
+        <span class="matte">7, 3, 9, 3, 5, 8, 3</span></li>
+      <li>Sorter tallene fra minst til størst: <span class="matte">8, 4, 11, 4, 6, 9, 2</span></li>
+      <li>I en frekvenstabell står det: rød 6, blå 9, grønn 5.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange svarte til sammen?</li>
+          <li><span class="bokstav">b)</span>Hvilken farge var vanligst?</li>
+        </ul>
+      </li>
+      <li>I en frekvenstabell står det: gul 7, grønn 4, svart 11.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange svarte til sammen?</li>
+          <li><span class="bokstav">b)</span>Hvilken farge var vanligst?</li>
+        </ul>
+      </li>
+      <li>Hva er frekvensen til tallet 4 i datasettet
+        <span class="matte">4, 2, 4, 5, 4, 1</span>?</li>
+      <li>Hva er frekvensen til tallet 3 i datasettet <span class="matte">3, 5, 3, 2, 3, 3, 7</span>?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>20 personer ble spurt hvor mange kopper kaffe de drikker daglig:<br>
+        <span class="matte">2, 0, 3, 1, 2, 2, 4, 1, 0, 2, 3, 2, 1, 5, 2, 3, 0, 1, 2, 4</span>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en frekvenstabell.</li>
+          <li><span class="bokstav">b)</span>Hvor mange drikker mer enn to kopper?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent er det?</li>
+        </ul>
+      </li>
+      <li>40 personer er delt i aldersgrupper: 18–29 år: 12 · 30–44 år: 15 · 45–59 år: 9 · 60 år og over: 4.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor andel er under 30 år?</li>
+          <li><span class="bokstav">b)</span>Hvorfor er det praktisk å gruppere aldre i stedet for å liste hvert enkelt årstall?</li>
+        </ul>
+      </li>
+      <li>Hvorfor er det viktig å oppgi hvor mange som er spurt,
+        når man presenterer resultatet av en undersøkelse?</li>
+      <li>Lag et spørsmål du kunne stilt i en undersøkelse i klassen.
+        Forklar hvordan du ville ordnet svarene.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="12" class="oppgaver" style="counter-reset: oppg 11;">
+      <li>To undersøkelser stiller samme spørsmål. Den ene spør 20 personer,
+        den andre 500. Begge finner at 60 % svarer ja.
+        Hvilken vil du stole mest på? Begrunn svaret.</li>
+      <li>En undersøkelse om treningsvaner ble gjennomført utenfor et treningssenter.
+        Hva er problemet med et slikt utvalg?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="14" class="oppgaver" style="counter-reset: oppg 13;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Undersøkelsen ble sendt på e-post til alle 800 ansatte. 250 svarte,
+          og av disse svarte 165 at de er fornøyde med arbeidsplassen.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent av dem som svarte, er fornøyde?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent av alle ansatte svarte i det hele tatt?</li>
+          <li><span class="bokstav">c)</span>Hvorfor kan det være et problem at bare noen av de ansatte svarte? Nevn to grunner.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     9.2 DIAGRAMMER
+     ============================================================ -->
+<section id="k92" class="nyside">
+<h2 id="d9-2">9.2 Diagrammer</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>lese av verdier fra stolpe-, linje- og sektordiagram</li>
+    <li>velge diagramtype ut fra hva du vil vise</li>
+    <li>regne om fra prosent til grader i et sektordiagram</li>
+    <li>begrunne valget av framstilling</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>stolpediagram</td><td></td><td>Stolpediagrammet viser antall per dag.</td></tr>
+    <tr><td>linjediagram</td><td></td><td>Linjediagrammet viser utviklingen.</td></tr>
+    <tr><td>sektordiagram</td><td></td><td>Sektordiagrammet viser andeler.</td></tr>
+    <tr><td>akse</td><td></td><td>Y-aksen starter på null.</td></tr>
+    <tr><td>å lese av</td><td></td><td>Jeg leser av verdien på aksen.</td></tr>
+  </tbody>
+</table>
+
+<div class="regel">
+  <span class="etikett">Velg riktig diagram</span>
+  <ul>
+    <li><strong>Stolpediagram</strong> — når du skal sammenligne kategorier som ikke henger sammen, for eksempel fire ulike fag.</li>
+    <li><strong>Linjediagram</strong> — når du skal vise en utvikling over tid, for eksempel temperatur gjennom uka.</li>
+    <li><strong>Sektordiagram</strong> — når du skal vise hvordan en helhet er fordelt, for eksempel et budsjett.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">I et sektordiagram svarer hele sirkelen til 100 % og til 360°.
+  Én prosent er altså 3,6 grader.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fra prosent til grader i et sektordiagram">
+  <rect x="16" y="14" width="588" height="152" rx="8" fill="#f4efea" stroke="#d8c9bb"/>
+  <text x="310" y="42" font-family="Arial" font-size="12" font-weight="bold" fill="#64452f" text-anchor="middle">FRA PROSENT TIL GRADER</text>
+
+  <g transform="translate(120,104)">
+    <path d="M 0 0 L 0 -48 A 48 48 0 1 1 -48 0 Z" fill="#64452f"/>
+    <path d="M 0 0 L -48 0 A 48 48 0 0 1 0 -48 Z" fill="#e4d9cd"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#64452f" stroke-width="1.4"/>
+  </g>
+  <text x="120" y="168" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">75 % og 25 %</text>
+
+  <g font-family="DejaVu Serif" font-size="15" fill="#1f2430">
+    <text x="220" y="80">100 % &nbsp;=&nbsp; 360°</text>
+    <text x="220" y="110">1 % &nbsp;=&nbsp; 3,6°</text>
+    <text x="220" y="140">75 % &nbsp;=&nbsp; 75 · 3,6° = 270°</text>
+  </g>
+
+  <line x1="440" y1="56" x2="440" y2="152" stroke="#d8c9bb"/>
+  <text x="524" y="86" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Kontroller til slutt:</text>
+  <text x="524" y="106" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">alle sektorene skal</text>
+  <text x="524" y="126" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">bli 360° til sammen.</text>
+</svg>
+<figcaption>Figur 9.2 &nbsp;Hele sirkelen er 360 grader. Del prosenten på 100 og gang med 360, eller gang rett med 3,6.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="15" class="oppgaver" style="counter-reset: oppg 14;">
+      <li>Hvilken diagramtype passer best?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>hvor mange elever som har valgt hvert av fire fag</li>
+          <li><span class="bokstav">b)</span>temperaturen hver dag gjennom en uke</li>
+          <li><span class="bokstav">c)</span>hvordan et månedsbudsjett er fordelt</li>
+        </ul>
+      </li>
+      <li>Et stolpediagram viser antall besøkende: mandag 12, tirsdag 8, onsdag 15, torsdag 10.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilken dag hadde flest besøkende?</li>
+          <li><span class="bokstav">b)</span>Hvor mange besøkende var det til sammen?</li>
+        </ul>
+      </li>
+      <li>Et stolpediagram viser antall solgte kopper: mandag 20, tirsdag 14, onsdag 9, torsdag 25.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilken dag ble det solgt flest kopper?</li>
+          <li><span class="bokstav">b)</span>Hvor mange kopper ble solgt til sammen?</li>
+        </ul>
+      </li>
+      <li>Et sektordiagram er delt i fire like store deler.
+        Hvor mange prosent er hver del?</li>
+      <li>Et sektordiagram er delt i 5 like store deler. Hvor mange prosent er hver del?</li>
+      <li>Et sektordiagram viser at 50 % går til bolig.
+        Hvor mange grader er den sektoren?</li>
+      <li>Et sektordiagram viser at 25 % går til mat. Hvor mange grader er den sektoren?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="22" class="oppgaver" style="counter-reset: oppg 21;">
+      <li>En tabell viser antall solgte enheter: januar 120, februar 95, mars 140, april 160.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilken diagramtype ville du valgt, og hvorfor?</li>
+          <li><span class="bokstav">b)</span>Hvor mange enheter ble solgt til sammen?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent økte salget fra januar til april?</li>
+        </ul>
+      </li>
+      <li>90 elever fordeler seg på tre valgfag: A har 45, B har 30 og C har 15.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent er hvert valgfag?</li>
+          <li><span class="bokstav">b)</span>Hvor mange grader blir hver sektor i et sektordiagram?</li>
+        </ul>
+      </li>
+      <li>Forklar forskjellen på et stolpediagram og et linjediagram,
+        og gi et eksempel på når du ville brukt hvert av dem.</li>
+      <li>Et diagram mangler tallene på y-aksen.
+        Hvorfor er det et problem for den som skal tolke diagrammet?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="26" class="oppgaver" style="counter-reset: oppg 25;">
+      <li>Et stolpediagram over lønn starter y-aksen på 30 000 kroner i stedet for på null.
+        Hvordan påvirker det inntrykket av forskjellene mellom stolpene?</li>
+      <li>Lag et sektordiagram som viser hvordan du bruker et døgn:
+        søvn 8 timer, jobb eller skole 7 timer, fritid 6 timer, annet 3 timer.
+        Regn først ut hvor mange grader hver sektor skal ha.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="28" class="oppgaver" style="counter-reset: oppg 27;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift viser omsetningen i et stolpediagram der y-aksen starter på
+          4,8 millioner kroner. Stolpene viser 5,0 — 5,1 — 5,2 millioner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent har omsetningen økt fra første til siste stolpe?</li>
+          <li><span class="bokstav">b)</span>Hvorfor kan diagrammet gi inntrykk av mye kraftigere vekst enn dette?</li>
+          <li><span class="bokstav">c)</span>Hvordan ville diagrammet sett ut hvis y-aksen startet på null?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     9.3 SENTRALMÅL
+     ============================================================ -->
+<section id="k93" class="nyside">
+<h2 id="d9-3">9.3 Sentralmål</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut gjennomsnittet av et datasett</li>
+    <li>finne medianen, også når antallet er et partall</li>
+    <li>finne typetallet</li>
+    <li>vurdere hvilket sentralmål som beskriver dataene best</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>sentralmål</td><td></td><td>Gjennomsnitt er et sentralmål.</td></tr>
+    <tr><td>gjennomsnitt</td><td></td><td>Gjennomsnittet er 8.</td></tr>
+    <tr><td>median</td><td></td><td>Medianen er den midterste verdien.</td></tr>
+    <tr><td>typetall</td><td></td><td>Typetallet er det som går oftest igjen.</td></tr>
+    <tr><td>ekstremverdi</td><td></td><td>Én ekstremverdi drar gjennomsnittet opp.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Et sentralmål er ett tall som skal si noe om hele datasettet. Vi har tre av dem, og de svarer
+  på litt ulike spørsmål. Derfor kan det samme datasettet beskrives på tre måter — og valget
+  av sentralmål kan endre inntrykket kraftig.
+</p>
+
+<div class="regel">
+  <span class="etikett">De tre sentralmålene</span>
+  <ul>
+    <li><strong>Gjennomsnitt:</strong> legg sammen alle tallene og del på hvor mange de er.</li>
+    <li><strong>Median:</strong> sorter tallene, og ta den midterste. Er antallet et partall, tar du gjennomsnittet av de to midterste.</li>
+    <li><strong>Typetall:</strong> den verdien som forekommer flest ganger. Et datasett kan ha flere typetall, eller ingen.</li>
+  </ul>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ni lønninger der én ekstremverdi drar gjennomsnittet opp">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#f4efea" stroke="#d8c9bb"/>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#64452f" text-anchor="middle">NI MÅNEDSLØNNER, I TUSEN KRONER</text>
+
+  <line x1="50" y1="120" x2="570" y2="120" stroke="#1f2430" stroke-width="1.6"/>
+  <g fill="#64452f">
+    <circle cx="66" cy="120" r="6"/><circle cx="82" cy="120" r="6"/><circle cx="82" cy="106" r="6"/>
+    <circle cx="98" cy="120" r="6"/><circle cx="114" cy="120" r="6"/><circle cx="130" cy="120" r="6"/>
+    <circle cx="146" cy="120" r="6"/><circle cx="178" cy="120" r="6"/>
+  </g>
+  <circle cx="546" cy="120" r="6" fill="#c62828"/>
+  <g font-family="Arial" font-size="9.5" fill="#5a6272" text-anchor="middle">
+    <text x="66" y="140">34</text><text x="114" y="140">36</text><text x="178" y="140">41</text>
+    <text x="546" y="140">95</text>
+  </g>
+
+  <line x1="114" y1="98" x2="114" y2="70" stroke="#2e7d32" stroke-width="1.6"/>
+  <text x="114" y="62" font-family="Arial" font-size="10.5" fill="#2e7d32" text-anchor="middle">median 37</text>
+  <line x1="216" y1="98" x2="216" y2="86" stroke="#c62828" stroke-width="1.6"/>
+  <text x="216" y="78" font-family="Arial" font-size="10.5" fill="#c62828" text-anchor="middle">gjennomsnitt 43,3</text>
+
+  <text x="310" y="170" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Én høy lønn drar gjennomsnittet opp, men flytter nesten ikke medianen.</text>
+</svg>
+<figcaption>Figur 9.3 &nbsp;Åtte av de ni tjener under gjennomsnittet. Medianen beskriver den «vanlige» lønnen bedre.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Median med partall antall</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Finn medianen i datasettet 12, 15, 15, 18, 20, 22, 25, 29.</p>
+    <ol class="trinn">
+      <li>Tallene er allerede sortert, og det er 8 tall — altså et partall.</li>
+      <li>De to midterste er nummer 4 og 5: <span class="matte">18</span> og <span class="matte">20</span></li>
+      <li>Ta gjennomsnittet av dem: <span class="matte">(18 + 20) : 2 = 19</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Medianen er 19.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="29" class="oppgaver" style="counter-reset: oppg 28;">
+      <li>Finn gjennomsnittet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 6, 8</li><li><span class="bokstav">b)</span>10, 20, 30, 40</li>
+          <li><span class="bokstav">c)</span>5, 5, 5</li>
+        </ul>
+      </li>
+      <li>Finn gjennomsnittet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3, 5, 7</li>
+          <li><span class="bokstav">b)</span>12, 16, 20, 24</li>
+          <li><span class="bokstav">c)</span>9, 9, 9, 9</li>
+        </ul>
+      </li>
+      <li>Finn medianen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3, 7, 9</li><li><span class="bokstav">b)</span>2, 4, 6, 8, 10</li>
+          <li><span class="bokstav">c)</span>1, 1, 5, 9, 12</li>
+        </ul>
+      </li>
+      <li>Finn medianen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 8, 15</li>
+          <li><span class="bokstav">b)</span>1, 3, 5, 7, 9</li>
+          <li><span class="bokstav">c)</span>2, 2, 6, 10, 20</li>
+        </ul>
+      </li>
+      <li>Finn typetallet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2, 3, 3, 5</li><li><span class="bokstav">b)</span>7, 8, 8, 8, 9</li>
+          <li><span class="bokstav">c)</span>1, 2, 2, 3, 3</li>
+        </ul>
+      </li>
+      <li>Finn typetallet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 4, 7, 9</li>
+          <li><span class="bokstav">b)</span>2, 6, 6, 6, 11</li>
+          <li><span class="bokstav">c)</span>5, 5, 8, 8, 12</li>
+        </ul>
+      </li>
+      <li>Datasettet er 6, 8, 10, 12.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet.</li><li><span class="bokstav">b)</span>Finn medianen.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="36" class="oppgaver" style="counter-reset: oppg 35;">
+      <li>En elev fikk karakterene 3, 4, 4, 5, 2, 4 og 6.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet.</li><li><span class="bokstav">b)</span>Finn medianen.</li>
+          <li><span class="bokstav">c)</span>Finn typetallet.</li>
+        </ul>
+      </li>
+      <li>Fem personer har årslønn 380 000, 410 000, 395 000, 420 000 og 1 800 000 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet.</li><li><span class="bokstav">b)</span>Finn medianen.</li>
+          <li><span class="bokstav">c)</span>Hvilket sentralmål beskriver best en vanlig lønn her? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>Åtte målinger ga 12, 15, 15, 18, 20, 22, 25 og 29.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet.</li><li><span class="bokstav">b)</span>Finn medianen.</li>
+        </ul>
+      </li>
+      <li>En elev har karakterene 4, 3, 5 og 4.
+        Hva må hun få på den neste prøven for at gjennomsnittet skal bli nøyaktig 4?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Gjennomsnittet av fem tall er 12. Fire av tallene er 8, 10, 14 og 16.
+        Hva er det femte tallet?</li>
+      <li>Forklar hvorfor medianen ofte gir et bedre bilde av lønnsnivået
+        enn gjennomsnittet gjør.</li>
+      <li>Kan typetallet være større enn både gjennomsnittet og medianen?
+        Lag et datasett som viser det.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="43" class="oppgaver" style="counter-reset: oppg 42;">
+      <li>En avdeling har ni ansatte med månedslønn i tusen kroner:<br>
+        <span class="matte">34, 35, 35, 36, 37, 38, 39, 41, 95</span>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet.</li>
+          <li><span class="bokstav">b)</span>Finn medianen.</li>
+          <li><span class="bokstav">c)</span>I en lønnsforhandling vil arbeidsgiver og ansatte kanskje bruke hvert sitt tall. Hvem bruker hvilket, og hvorfor?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Gjennomsnittsprisen på bolig i kommunen steg fra 3,2 til 3,6 millioner kroner.
+          Medianprisen steg fra 2,9 til 3,0 millioner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent steg gjennomsnittsprisen?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent steg medianprisen?</li>
+          <li><span class="bokstav">c)</span>Hva kan forklare at de to tallene er så ulike?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     9.4 VARIASJONSBREDDE OG SPREDNING
+     ============================================================ -->
+<section id="k94" class="nyside">
+<h2 id="d9-4">9.4 Variasjonsbredde og spredning</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut variasjonsbredden i et datasett</li>
+    <li>forklare hva spredning forteller om dataene</li>
+    <li>sammenligne to datasett med samme gjennomsnitt</li>
+  </ul>
+</div>
+
+<p>
+  Gjennomsnittet alene er ikke nok. To grupper kan ha nøyaktig samme gjennomsnitt og likevel
+  være helt forskjellige. <strong>Variasjonsbredden</strong> forteller hvor spredt tallene er:
+  den er avstanden fra den minste til den største verdien.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="To datasett med samme gjennomsnitt men ulik spredning">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#f4efea" stroke="#d8c9bb"/>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#64452f" text-anchor="middle">SAMME GJENNOMSNITT, ULIK SPREDNING</text>
+
+  <text x="56" y="76" font-family="Arial" font-size="11" font-weight="bold" fill="#64452f">Klasse A</text>
+  <line x1="140" y1="72" x2="540" y2="72" stroke="#1f2430" stroke-width="1.4"/>
+  <g fill="#64452f">
+    <circle cx="300" cy="72" r="7"/><circle cx="308" cy="72" r="7"/><circle cx="316" cy="72" r="7"/>
+    <circle cx="324" cy="72" r="7"/><circle cx="332" cy="72" r="7"/>
+  </g>
+  <text x="556" y="76" font-family="Arial" font-size="10.5" fill="#5a6272">spenn 0</text>
+
+  <text x="56" y="126" font-family="Arial" font-size="11" font-weight="bold" fill="#64452f">Klasse B</text>
+  <line x1="140" y1="122" x2="540" y2="122" stroke="#1f2430" stroke-width="1.4"/>
+  <g fill="#64452f">
+    <circle cx="180" cy="122" r="7"/><circle cx="260" cy="122" r="7"/><circle cx="316" cy="122" r="7"/>
+    <circle cx="372" cy="122" r="7"/><circle cx="492" cy="122" r="7"/>
+  </g>
+  <text x="556" y="126" font-family="Arial" font-size="10.5" fill="#5a6272">spenn 6</text>
+
+  <line x1="316" y1="56" x2="316" y2="138" stroke="#c62828" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <text x="316" y="154" font-family="Arial" font-size="10.5" fill="#c62828" text-anchor="middle">begge har gjennomsnitt 4</text>
+</svg>
+<figcaption>Figur 9.4 &nbsp;Variasjonsbredden er største verdi minus minste verdi. Den sier noe gjennomsnittet ikke sier.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="45" class="oppgaver" style="counter-reset: oppg 44;">
+      <li>Finn variasjonsbredden.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3, 7, 12</li><li><span class="bokstav">b)</span>20, 25, 30, 40</li>
+          <li><span class="bokstav">c)</span>5, 5, 5</li>
+        </ul>
+      </li>
+      <li>Finn variasjonsbredden.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 9, 15</li>
+          <li><span class="bokstav">b)</span>30, 35, 45, 60</li>
+          <li><span class="bokstav">c)</span>8, 8, 8</li>
+        </ul>
+      </li>
+      <li>Temperaturene en uke var −5, 2, 7 og 10 grader.
+        Hva er variasjonsbredden?</li>
+      <li>Temperaturene en uke var −8, −2, 4, 11 grader. Hva er variasjonsbredden?</li>
+      <li>Et datasett har største verdi 48 og variasjonsbredde 31.
+        Hva er den minste verdien?</li>
+      <li>Et datasett har største verdi 62 og variasjonsbredde 45. Hva er den minste verdien?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="51" class="oppgaver" style="counter-reset: oppg 50;">
+      <li>To klasser har begge gjennomsnitt 4 på en prøve.<br>
+        Klasse A: <span class="matte">4, 4, 4, 4, 4</span>. Klasse B: <span class="matte">1, 3, 4, 5, 7</span>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn variasjonsbredden i begge klassene.</li>
+          <li><span class="bokstav">b)</span>Hva forteller forskjellen om de to klassene?</li>
+        </ul>
+      </li>
+      <li>Sju målinger ga 18, 22, 19, 25, 21, 30 og 17.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn variasjonsbredden.</li>
+          <li><span class="bokstav">b)</span>Finn gjennomsnittet med to desimaler.</li>
+          <li><span class="bokstav">c)</span>Finn medianen.</li>
+        </ul>
+      </li>
+      <li>Hvorfor holder det ikke å oppgi bare gjennomsnittet
+        når man skal beskrive et datasett?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="54" class="oppgaver" style="counter-reset: oppg 53;">
+      <li>Lag to datasett med fem tall i hvert. Begge skal ha gjennomsnitt 10.
+        Det ene skal ha variasjonsbredde 0, det andre variasjonsbredde 16.</li>
+      <li>En elev sier at et datasett med stor variasjonsbredde
+        alltid har et stort gjennomsnitt.
+        Lag et eksempel som viser at det ikke stemmer.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="56" class="oppgaver" style="counter-reset: oppg 55;">
+      <li>To maskiner produserer bolter som skal være 50 mm lange.
+        Fem bolter fra hver måles.<br>
+        Maskin A: <span class="matte">50, 50, 51, 49, 50</span>.
+        Maskin B: <span class="matte">47, 53, 50, 48, 52</span>.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet for begge maskinene.</li>
+          <li><span class="bokstav">b)</span>Finn variasjonsbredden for begge.</li>
+          <li><span class="bokstav">c)</span>Hvilken maskin ville du valgt til presisjonsarbeid? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     9.5 Å VURDERE STATISTIKK KRITISK
+     ============================================================ -->
+<section id="k95" class="nyside">
+<h2 id="d9-5">9.5 Å vurdere statistikk kritisk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>stille de riktige spørsmålene til en statistisk påstand</li>
+    <li>oppdage når en y-akse gir et misvisende inntrykk</li>
+    <li>skille mellom prosent og antall</li>
+    <li>vurdere hvem som har laget framstillingen, og hvorfor</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>misvisende</td><td></td><td>Diagrammet er misvisende.</td></tr>
+    <tr><td>kilde</td><td></td><td>Hvem er kilden til tallene?</td></tr>
+    <tr><td>å vinkle</td><td></td><td>Tallene er vinklet til fordel for én side.</td></tr>
+    <tr><td>utgangspunkt</td><td></td><td>Hva var utgangspunktet før økningen?</td></tr>
+    <tr><td>å stille spørsmål ved</td><td></td><td>Jeg stiller spørsmål ved utvalget.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Tall lyver ikke, men de kan presenteres slik at de forteller én bestemt historie. Det er
+  fullt lovlig — og helt vanlig — å velge den framstillingen som passer ens eget budskap.
+  Derfor er det din jobb som leser å stille noen faste spørsmål.
+</p>
+
+<div class="regel">
+  <span class="etikett">Fire spørsmål å alltid stille</span>
+  <ul>
+    <li>Hvor mange er spurt, og <em>hvem</em> er spurt?</li>
+    <li>Starter y-aksen på null? Hvis ikke, ser forskjellene større ut enn de er.</li>
+    <li>Er tallet oppgitt i prosent eller i antall — og hva er utgangspunktet?</li>
+    <li>Hvem har laget framstillingen, og hva tjener de på at du tror på den?</li>
+  </ul>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Samme tall vist med y-akse fra null og fra 4,8">
+  <rect x="16" y="14" width="288" height="172" rx="8" fill="#fdecec" stroke="#f0c4c4"/>
+  <rect x="316" y="14" width="288" height="172" rx="8" fill="#eaf5eb" stroke="#bcdcbe"/>
+  <text x="160" y="38" font-family="Arial" font-size="11.5" font-weight="bold" fill="#c62828" text-anchor="middle">Y-AKSE FRA 4,8</text>
+  <text x="460" y="38" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Y-AKSE FRA 0</text>
+
+  <line x1="70" y1="150" x2="250" y2="150" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="70" y1="150" x2="70" y2="56" stroke="#1f2430" stroke-width="1.4"/>
+  <g fill="#c62828">
+    <rect x="92" y="102" width="34" height="48"/>
+    <rect x="142" y="80" width="34" height="70"/>
+    <rect x="192" y="58" width="34" height="92"/>
+  </g>
+  <text x="64" y="154" font-family="Arial" font-size="9" fill="#5a6272" text-anchor="end">4,8</text>
+  <text x="160" y="172" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">ser ut som kraftig vekst</text>
+
+  <line x1="370" y1="150" x2="550" y2="150" stroke="#1f2430" stroke-width="1.4"/>
+  <line x1="370" y1="150" x2="370" y2="56" stroke="#1f2430" stroke-width="1.4"/>
+  <g fill="#2e7d32">
+    <rect x="392" y="63" width="34" height="87"/>
+    <rect x="442" y="61" width="34" height="89"/>
+    <rect x="492" y="59" width="34" height="91"/>
+  </g>
+  <text x="364" y="154" font-family="Arial" font-size="9" fill="#5a6272" text-anchor="end">0</text>
+  <text x="460" y="172" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">veksten er 4 prosent</text>
+</svg>
+<figcaption>Figur 9.5 &nbsp;Nøyaktig de samme tallene — 5,0, 5,1 og 5,2 millioner. Bare y-aksen er endret.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="57" class="oppgaver" style="counter-reset: oppg 56;">
+      <li>En reklame sier: «80 % var fornøyde.»
+        Hvilken opplysning mangler før du kan vurdere påstanden?</li>
+      <li>En overskrift sier: «Halvparten av de spurte er misfornøyde.» Hvilken opplysning mangler før du kan vurdere påstanden?</li>
+      <li>En avis skriver at «dobbelt så mange» har fått en sykdom.
+        Hva må du vite for å vurdere om det er mye eller lite?</li>
+      <li>En annonse sier at en vare er «50 % billigere enn hos konkurrenten». Hva må du vite for å vurdere påstanden?</li>
+      <li>To diagrammer viser nøyaktig de samme tallene,
+        men det ene ser mye brattere ut enn det andre.
+        Hva er sannsynligvis forskjellen?</li>
+      <li>Et stolpediagram har en y-akse som starter på 90 i stedet for 0. Hva gjør det med inntrykket?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="63" class="oppgaver" style="counter-reset: oppg 62;">
+      <li>En reklame sier: «9 av 10 tannleger anbefaler produktet.»
+        Skriv tre spørsmål du ville stilt før du tror på påstanden.</li>
+      <li>En undersøkelse om lesevaner ble gjennomført på et bibliotek.
+        Hva er problemet med utvalget, og hvordan ville du gjort det i stedet?</li>
+      <li>Et diagram viser at salget økte fra 5,0 til 5,2 millioner kroner.
+        Y-aksen starter på 4,8 millioner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent er økningen?</li>
+          <li><span class="bokstav">b)</span>Hvorfor ser den mye større ut i diagrammet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="66" class="oppgaver" style="counter-reset: oppg 65;">
+      <li>De samme tallene kan presenteres som «kuttet 7 stillinger»
+        eller som «kuttet 5 % av staben».
+        Hvem ville brukt hvilken formulering, og hvorfor?</li>
+      <li>En overskrift lyder: «Prisen tredoblet på ti år!»
+        Nevn tre ting du burde undersøke før du tror på den.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="68" class="oppgaver" style="counter-reset: oppg 67;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «I 2015 hadde 18 % av innbyggerne elbil. I 2025 er tallet 62 %.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosentpoeng har andelen økt?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent har andelen økt? Rund av til hele prosent.</li>
+          <li><span class="bokstav">c)</span>Hvilket av de to tallene ville en elbilforhandler brukt, og hvilket ville en kritiker brukt? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     9.6 SANNSYNLIGHET
+     ============================================================ -->
+<section id="k96" class="nyside">
+<h2 id="d9-6">9.6 Sannsynlighet</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>beskrive utfallsrommet i en enkel situasjon</li>
+    <li>regne ut sannsynligheten for et utfall</li>
+    <li>skrive sannsynlighet som brøk, desimaltall og prosent</li>
+    <li>forklare hvorfor tidligere kast ikke påvirker det neste</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>sannsynlighet</td><td></td><td>Sannsynligheten er <span class="brok"><span class="t">1</span><span class="n">6</span></span>.</td></tr>
+    <tr><td>utfall</td><td></td><td>Å få en sekser er ett utfall.</td></tr>
+    <tr><td>utfallsrom</td><td></td><td>Utfallsrommet har seks utfall.</td></tr>
+    <tr><td>gunstige utfall</td><td></td><td>Det er tre gunstige utfall.</td></tr>
+    <tr><td>tilfeldig</td><td></td><td>En kule trekkes tilfeldig.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Utfallsrommet</strong> er alle utfall som kan skje. Er alle utfallene like sannsynlige,
+  finner du sannsynligheten ved å dele antall gunstige utfall på antall mulige utfall.
+  Svaret ligger alltid mellom 0 og 1.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Utfallsrommet til en terning og sannsynligheten for partall">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#f4efea" stroke="#d8c9bb"/>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#64452f" text-anchor="middle">UTFALLSROMMET TIL EN TERNING</text>
+
+  <g>
+    <rect x="76" y="56" width="40" height="40" rx="6" fill="#fff" stroke="#64452f" stroke-width="1.4"/>
+    <rect x="130" y="56" width="40" height="40" rx="6" fill="#64452f" fill-opacity="0.35" stroke="#64452f" stroke-width="1.4"/>
+    <rect x="184" y="56" width="40" height="40" rx="6" fill="#fff" stroke="#64452f" stroke-width="1.4"/>
+    <rect x="238" y="56" width="40" height="40" rx="6" fill="#64452f" fill-opacity="0.35" stroke="#64452f" stroke-width="1.4"/>
+    <rect x="292" y="56" width="40" height="40" rx="6" fill="#fff" stroke="#64452f" stroke-width="1.4"/>
+    <rect x="346" y="56" width="40" height="40" rx="6" fill="#64452f" fill-opacity="0.35" stroke="#64452f" stroke-width="1.4"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="18" fill="#1f2430" text-anchor="middle">
+    <text x="96" y="83">1</text><text x="150" y="83">2</text><text x="204" y="83">3</text>
+    <text x="258" y="83">4</text><text x="312" y="83">5</text><text x="366" y="83">6</text>
+  </g>
+  <text x="231" y="116" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">seks mulige utfall — tre av dem er partall</text>
+
+  <text x="231" y="150" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">P(partall) = 3 / 6 = 1 / 2 = 0,5 = 50 %</text>
+
+  <line x1="420" y1="54" x2="420" y2="150" stroke="#d8c9bb"/>
+  <text x="512" y="76" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">sannsynlighet =</text>
+  <text x="512" y="102" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">gunstige</text>
+  <line x1="470" y1="108" x2="554" y2="108" stroke="#1f2430" stroke-width="1.6"/>
+  <text x="512" y="128" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">mulige</text>
+</svg>
+<figcaption>Figur 9.6 &nbsp;Sannsynligheten kan skrives som brøk, desimaltall eller prosent — akkurat som i kapittel 4.3.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="69" class="oppgaver" style="counter-reset: oppg 68;">
+      <li>Skriv opp utfallsrommet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>et kast med en terning</li>
+          <li><span class="bokstav">b)</span>et kast med en mynt</li>
+          <li><span class="bokstav">c)</span>trekke én kule fra en pose med én rød, én blå og én grønn</li>
+        </ul>
+      </li>
+      <li>Skriv opp utfallsrommet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>et kast med en firesidet terning</li>
+          <li><span class="bokstav">b)</span>trekke én kule fra en pose med én gul og én svart</li>
+          <li><span class="bokstav">c)</span>trekke ett kort merket A, B, C eller D</li>
+        </ul>
+      </li>
+      <li>Du kaster en terning. Hva er sannsynligheten for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>å få en sekser</li><li><span class="bokstav">b)</span>å få et partall</li>
+          <li><span class="bokstav">c)</span>å få et tall større enn 4</li>
+        </ul>
+      </li>
+      <li>Du kaster en terning. Hva er sannsynligheten for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>å få en toer</li>
+          <li><span class="bokstav">b)</span>å få et oddetall</li>
+          <li><span class="bokstav">c)</span>å få et tall mindre enn 3</li>
+        </ul>
+      </li>
+      <li>I en pose er det 4 røde og 6 blå kuler.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kuler er det til sammen?</li>
+          <li><span class="bokstav">b)</span>Hva er sannsynligheten for å trekke en rød?</li>
+        </ul>
+      </li>
+      <li>I en pose er det 3 grønne og 7 gule kuler.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kuler er det til sammen?</li>
+          <li><span class="bokstav">b)</span>Hva er sannsynligheten for å trekke en grønn?</li>
+        </ul>
+      </li>
+      <li>Hva er sannsynligheten for å få kron når du kaster en mynt?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="76" class="oppgaver" style="counter-reset: oppg 75;">
+      <li>En pose har 3 røde, 5 blå og 2 grønne kuler.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kuler er det til sammen?</li>
+          <li><span class="bokstav">b)</span>Hva er sannsynligheten for å trekke en blå?</li>
+          <li><span class="bokstav">c)</span>Hva er sannsynligheten for å trekke en kule som ikke er grønn?</li>
+        </ul>
+      </li>
+      <li>Du kaster en terning. Hva er sannsynligheten for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>å få 1 eller 2</li><li><span class="bokstav">b)</span>å ikke få 6</li>
+          <li><span class="bokstav">c)</span>å få et tall under 3</li>
+        </ul>
+      </li>
+      <li>I en klasse på 25 elever er 15 jenter. En elev trekkes tilfeldig.
+        Hva er sannsynligheten for at det blir en jente?
+        Skriv svaret som brøk, desimaltall og prosent.</li>
+      <li>Et lotteri har 200 lodd, og 8 av dem gir gevinst.
+        Hva er sannsynligheten for gevinst?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="80" class="oppgaver" style="counter-reset: oppg 79;">
+      <li>En elev har kastet terning fem ganger uten å få sekser.
+        Han sier at sannsynligheten for sekser nå er større enn <span class="brok"><span class="t">1</span><span class="n">6</span></span>.
+        Har han rett? Begrunn svaret.</li>
+      <li>I en pose er det bare røde og blå kuler.
+        Sannsynligheten for å trekke rød er 0,3.
+        Hva er sannsynligheten for å trekke blå?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="82" class="oppgaver" style="counter-reset: oppg 81;">
+      <li>Du kaster to mynter samtidig.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv opp alle mulige utfall.</li>
+          <li><span class="bokstav">b)</span>Hva er sannsynligheten for to kron?</li>
+          <li><span class="bokstav">c)</span>Hva er sannsynligheten for én av hver?</li>
+          <li><span class="bokstav">d)</span>Mange tror svaret i c) er <span class="brok"><span class="t">1</span><span class="n">3</span></span>. Forklar hvorfor det er feil.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     9.7 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k97" class="nyside">
+<h2 id="d9-7">9.7 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="83" class="oppgaver" style="counter-reset: oppg 82;">
+      <li>Datasettet er 4, 6, 6, 8, 11.
+        Finn gjennomsnittet, medianen og typetallet.</li>
+      <li>Finn variasjonsbredden i datasettet
+        <span class="matte">12, 19, 8, 25, 14</span>.</li>
+      <li>En pose har 5 røde og 15 blå kuler.
+        Hva er sannsynligheten for å trekke en rød?</li>
+      <li>En tabell viser verdiene 20, 35, 15 og 30.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er summen?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent utgjør hver verdi?</li>
+        </ul>
+      </li>
+      <li>Hvilken diagramtype passer best for å vise
+        utviklingen i strømprisen gjennom et år?</li>
+      <li>12 personer ble spurt, og 9 svarte ja.
+        Hvor mange prosent er det?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="89" class="oppgaver" style="counter-reset: oppg 88;">
+      <li><span class="m4merke">M4</span> En bedrift har elleve ansatte.
+        Månedslønnene i tusen kroner er:<br>
+        <span class="matte">32, 33, 34, 34, 35, 36, 37, 38, 40, 42, 120</span>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Finn gjennomsnittet med én desimal.</li>
+          <li><span class="bokstav">b)</span>Finn medianen.</li>
+          <li><span class="bokstav">c)</span>Finn variasjonsbredden.</li>
+          <li><span class="bokstav">d)</span>Hvilket tall gir best bilde av lønnsnivået? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «I en undersøkelse blant 400 personer svarte 92 at de sykler til jobb.
+          Året etter svarte 115 av 460 spurte det samme.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent syklet det første året?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent syklet det andre året?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosentpoeng har andelen økt, og hvor mange prosent?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Du kaster en terning to ganger.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange mulige utfall finnes det til sammen?</li>
+          <li><span class="bokstav">b)</span>Hva er sannsynligheten for to seksere?</li>
+          <li><span class="bokstav">c)</span>Hva er sannsynligheten for at summen blir 12?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Et diagram viser at antall ansatte gikk fra 240 til 252.
+        Y-aksen starter på 235.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent er økningen?</li>
+          <li><span class="bokstav">b)</span>Hvordan ville du laget diagrammet for å gi et riktig inntrykk?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan ordne data i en frekvenstabell og kontrollere at summen stemmer. <em>(9.1)</em></li>
+    <li>Jeg kan velge riktig diagramtype og begrunne valget. <em>(9.2)</em></li>
+    <li>Jeg kan finne gjennomsnitt, median og typetall. <em>(9.3)</em></li>
+    <li>Jeg kan regne ut variasjonsbredden og forklare hva den forteller. <em>(9.4)</em></li>
+    <li>Jeg vet hvilke spørsmål jeg skal stille til en statistisk påstand. <em>(9.5)</em></li>
+    <li>Jeg kan beskrive et utfallsrom og regne ut sannsynlighet. <em>(9.6)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 9</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>9.1 Å samle og ordne data</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 0→3, 1→5, 2→4, 3→2, 4→1</span><span class="d">b) 5 elever</span>
+<span class="d">c) 3+5+4+2+1 = 15 ✓</span></li>
+<li>3, 3, 3, 5, 7, 8, 9</li>
+<li>2, 4, 4, 6, 8, 9, 11</li>
+<li><span class="d">a) 20</span><span class="d">b) blå</span></li>
+<li><span class="d">a) 22</span><span class="d">b) svart</span></li>
+<li>Frekvensen er <strong>3</strong></li>
+<li>Frekvensen er 4</li>
+<li><span class="d">a) 0→3, 1→4, 2→7, 3→3, 4→2, 5→1</span><span class="d">b) 6 personer</span><span class="d">c) 30 %</span><br/>
+</li>
+<li><span class="d">a) 30 %</span><span class="d">b) </span><br/>
+</li>
+<li> Forventet: 60 % av 5 personer og 60 % av 5 000 er
+    like i prosent, men helt ulike i pålitelighet. Uten antallet vet man ikke hvor mye tilfeldigheter
+    kan ha påvirket resultatet.</li>
+<li> Vurder om spørsmålet er entydig, om svaralternativene
+    dekker alt, og om eleven har en plan for å telle opp — for eksempel en frekvenstabell.</li>
+<li><strong>Undersøkelsen med 500.</strong>
+</li>
+<li>Utvalget er skjevt. De som går på treningssenter, trener per definisjon mer enn
+    gjennomsnittet.
+    </li>
+<li><span class="d">a) 66 %</span><span class="d">b) 31,25 %</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.2 Diagrammer</h3>
+<ol class="fasit" start="15" style="counter-reset: fas 14;">
+<li><span class="d">a) stolpediagram</span><span class="d">b) linjediagram</span><span class="d">c) sektordiagram</span></li>
+<li><span class="d">a) onsdag</span><span class="d">b) 45 besøkende</span></li>
+<li><span class="d">a) torsdag</span><span class="d">b) 68 kopper</span></li>
+<li><strong>25 %</strong></li>
+<li>20 %</li>
+<li>0,5 · 360 = <strong>180°</strong></li>
+<li>0,25 · 360 = 90°</li>
+<li><span class="d">a) </span><span class="d">b) 515 enheter</span><span class="d">c) 33,3 %</span><br/>
+</li>
+<li><span class="d">a) 50 %, 33,3 % og 16,7 %</span><span class="d">b) 180°, 120° og 60°</span></li>
+<li> Forventet: stolper brukes til kategorier som ikke
+    henger sammen, linjer til noe som utvikler seg over tid. Linjen mellom to punkter antyder
+    at det finnes verdier imellom — derfor passer den til temperatur, men ikke til fag.</li>
+<li> Uten tall på aksen kan man se at én stolpe er høyere
+    enn en annen, men ikke hvor mye. Forskjellen kan være på to enheter eller to tusen.</li>
+<li> Forskjellene mellom stolpene blir kraftig forstørret.
+    En lønnsforskjell på et par tusen kroner kan se ut som en dobling.</li>
+<li>Søvn <strong>120°</strong> · jobb eller skole <strong>105°</strong> ·
+    fritid <strong>90°</strong> · annet <strong>45°</strong>
+</li>
+<li><span class="d">a) 4 %</span><span class="d">b) </span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.3 Sentralmål</h3>
+<ol class="fasit" start="29" style="counter-reset: fas 28;">
+<li><span class="d">a) 6</span><span class="d">b) 25</span><span class="d">c) 5</span></li>
+<li><span class="d">a) 5</span><span class="d">b) 18</span><span class="d">c) 9</span></li>
+<li><span class="d">a) 7</span><span class="d">b) 6</span><span class="d">c) 5</span></li>
+<li><span class="d">a) 8</span><span class="d">b) 5</span><span class="d">c) 6</span></li>
+<li><span class="d">a) 3</span><span class="d">b) 8</span><span class="d">c) 2 og 3</span>
+</li>
+<li><span class="d">a) 4</span><span class="d">b) 6</span><span class="d">c) 5 og 8</span></li>
+<li><span class="d">a) 9</span><span class="d">b) 9</span></li>
+<li><span class="d">a) 4</span><span class="d">b) 4</span><span class="d">c) 4</span>
+</li>
+<li><span class="d">a) 681 000 kr</span><span class="d">b) 410 000 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 19,5</span><span class="d">b) 19</span></li>
+<li>Summen er 16, og for gjennomsnitt 4 på fem prøver må summen bli 20.
+    Hun må få <strong>4</strong>.</li>
+<li>Summen skal være 60, og de fire tallene er 48. Det femte er <strong>12</strong>.</li>
+<li> Forventet: noen få svært høye lønninger drar
+    gjennomsnittet opp, mens medianen viser hva den midterste faktisk tjener. Medianen påvirkes
+    ikke av hvor høy den høyeste lønnen er.</li>
+<li><strong>Ja.</strong> Et eksempel er <span class="matte">0, 5, 10, 20, 35, 35, 35</span>:
+    gjennomsnittet er 20, medianen er 20, og typetallet er 35.
+    </li>
+<li><span class="d">a) ca. 43 333 kr</span><span class="d">b) 37 000 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 12,5 %</span><span class="d">b) ca. 3,4 %</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.4 Variasjonsbredde og spredning</h3>
+<ol class="fasit" start="45" style="counter-reset: fas 44;">
+<li><span class="d">a) 9</span><span class="d">b) 20</span><span class="d">c) 0</span></li>
+<li><span class="d">a) 11</span><span class="d">b) 30</span><span class="d">c) 0</span></li>
+<li>10 − (−5) = <strong>15 grader</strong></li>
+<li>11 − (−8) = 19 grader</li>
+<li>48 − 31 = <strong>17</strong></li>
+<li>62 − 45 = 17</li>
+<li><span class="d">a) klasse A: 0, klasse B: 6</span><span class="d">b) </span><br/>
+</li>
+<li><span class="d">a) 13</span><span class="d">b) 21,71</span><span class="d">c) 21</span></li>
+<li> Forventet: gjennomsnittet sier hvor tyngdepunktet
+    ligger, men ikke hvor spredt tallene er. To datasett med samme gjennomsnitt kan være helt
+    ulike, slik oppgave 51 viser.</li>
+<li> For eksempel
+    <span class="matte">10, 10, 10, 10, 10</span> og <span class="matte">2, 8, 10, 12, 18</span>.
+    Kontroller at begge summerer til 50, og at det andre har spenn 18 − 2 = 16.</li>
+<li> For eksempel
+    <span class="matte">0, 1, 1, 1, 20</span>: variasjonsbredden er 20, men gjennomsnittet er
+    bare 4,6. Én stor verdi gir stor spredning uten å gjøre gjennomsnittet stort.</li>
+<li><span class="d">a) begge har gjennomsnitt 50 mm</span><span class="d">b) A: 2 mm, B: 6 mm</span>
+<span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.5 Å vurdere statistikk kritisk</h3>
+<ol class="fasit" start="57" style="counter-reset: fas 56;">
+<li><strong>Hvor mange som er spurt</strong> — og gjerne også hvem.
+    </li>
+<li>Hvor mange som er spurt. Halvparten av 8 personer er 4 stykker.</li>
+<li><strong>Utgangspunktet.</strong>
+</li>
+<li>Hva varen koster hos konkurrenten. Uten utgangspunktet sier prosenten ingenting om hvor mange kroner du sparer.</li>
+<li><strong>Y-aksen.</strong>
+</li>
+<li>Forskjellene mellom stolpene ser mye større ut enn de er.</li>
+<li> Gode spørsmål: Hvor mange tannleger er spurt?
+    Hvem betalte for undersøkelsen? Hva ble de spurt om — anbefaler de dette framfor alle
+    andre produkter, eller bare framfor ingenting? Godkjenn tre relevante spørsmål.</li>
+<li> De som er på biblioteket, leser mer enn folk flest,
+    så resultatet blir for høyt. Bedre: trekke tilfeldig fra folkeregisteret, eller spørre på et
+    sted der alle typer mennesker ferdes.</li>
+<li><span class="d">a) 4 %</span><span class="d">b) </span><br/>
+</li>
+<li> Forventet: ledelsen ville sagt «5 % av staben»,
+    fordi det høres lite ut. Fagforeningen ville sagt «7 stillinger», fordi det er konkrete
+    mennesker. Begge er riktige beskrivelser av det samme.</li>
+<li> Tre ting som bør nevnes: Hva var utgangspunktet i
+    kroner? Er tallene justert for prisstigning? Hvilke priser er målt — gjennomsnitt eller
+    median, og for hvilket område?</li>
+<li><span class="d">a) 44 prosentpoeng</span><span class="d">b) ca. 244 %</span>
+<span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.6 Sannsynlighet</h3>
+<ol class="fasit" start="69" style="counter-reset: fas 68;">
+<li><span class="d">a) {1, 2, 3, 4, 5, 6}</span><span class="d">b) {kron, mynt}</span><span class="d">c) {rød, blå, grønn}</span></li>
+<li><span class="d">a) {1, 2, 3, 4}</span><span class="d">b) {gul, svart}</span><span class="d">c) {A, B, C, D}</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">3</span></span></span>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">6</span></span></span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">3</span></span></span></li>
+<li><span class="d">a) 10 kuler</span><span class="d">b) <span class="brok"><span class="t">4</span><span class="n">10</span></span> = <span class="brok"><span class="t">2</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) 10 kuler</span><span class="d">b) <span class="brok"><span class="t">3</span><span class="n">10</span></span></span></li>
+<li><span class="brok"><span class="t">1</span><span class="n">2</span></span></li>
+<li><span class="d">a) 10 kuler</span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">10</span></span> = <span class="brok"><span class="t">1</span><span class="n">2</span></span></span><span class="d">c) <span class="brok"><span class="t">8</span><span class="n">10</span></span> = <span class="brok"><span class="t">4</span><span class="n">5</span></span></span></li>
+<li><span class="d">a) <span class="brok"><span class="t">2</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">3</span></span></span><span class="d">b) <span class="brok"><span class="t">5</span><span class="n">6</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">6</span></span> = <span class="brok"><span class="t">1</span><span class="n">3</span></span></span></li>
+<li><span class="brok"><span class="t">15</span><span class="n">25</span></span> = <span class="brok"><span class="t">3</span><span class="n">5</span></span> = 0,6 = <strong>60 %</strong></li>
+<li><span class="brok"><span class="t">8</span><span class="n">200</span></span> = <span class="brok"><span class="t">1</span><span class="n">25</span></span> = 0,04 = <strong>4 %</strong></li>
+<li><strong>Nei.</strong>
+</li>
+<li>1 − 0,3 = <strong>0,7</strong></li>
+<li><span class="d">a) KK, KM, MK, MM</span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">4</span></span></span><span class="d">c) <span class="brok"><span class="t">2</span><span class="n">4</span></span> = <span class="brok"><span class="t">1</span><span class="n">2</span></span></span>
+<span class="d">d) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>9.7 Blandede oppgaver</h3>
+<ol class="fasit" start="83" style="counter-reset: fas 82;">
+<li>Gjennomsnitt <strong>7</strong> · median <strong>6</strong> · typetall <strong>6</strong></li>
+<li>25 − 8 = <strong>17</strong></li>
+<li><span class="brok"><span class="t">5</span><span class="n">20</span></span> = <strong><span class="brok"><span class="t">1</span><span class="n">4</span></span></strong>, altså 25 %</li>
+<li><span class="d">a) 100</span><span class="d">b) 20 %, 35 %, 15 % og 30 %</span></li>
+<li><strong>Linjediagram</strong>, fordi prisen utvikler seg over tid.</li>
+<li>9 : 12 = 0,75, altså <strong>75 %</strong></li>
+<li><span class="d">a) ca. 43,7 tusen kroner</span><span class="d">b) 36 tusen</span>
+<span class="d">c) 88 tusen</span><span class="d">d) </span><br/>
+</li>
+<li><span class="d">a) 23 %</span><span class="d">b) 25 %</span>
+<span class="d">c) 2 prosentpoeng, altså ca. 8,7 %</span></li>
+<li><span class="d">a) 36 utfall</span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">36</span></span></span><span class="d">c) <span class="brok"><span class="t">1</span><span class="n">36</span></span></span><br/>
+</li>
+<li><span class="d">a) 5 %</span><span class="d">b) </span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-8.html"><span class="etikett">Forrige kapittel</span><strong>8. Geometri</strong></a><a class="neste" href="kapittel-10.html"><span class="etikett">Neste kapittel</span><strong>10. Temaer for modul 4</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

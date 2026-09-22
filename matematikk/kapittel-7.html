@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7. Målinger — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html" aria-current="page"><span class="nr">7</span><span>Målinger</span></a></li><li class="dk"><a href="#d7-1">7.1 Måleenheter og måleredskaper</a></li><li class="dk"><a href="#d7-2">7.2 Lengde, masse og volum</a></li><li class="dk"><a href="#d7-3">7.3 Å gjøre om mellom enheter</a></li><li class="dk"><a href="#d7-4">7.4 Tid og tidsforskjeller</a></li><li class="dk"><a href="#d7-5">7.5 Fart, strekning og tid</a></li><li class="dk"><a href="#d7-6">7.6 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#8c2f39">
+
+
+<section class="kapittelapning" style="--kap:#8c2f39">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 7</p>
+    <h1 class="kapittel-tittel">Målinger</h1>
+    <p class="ingress">
+      Å måle riktig er ikke bare et spørsmål om tall — det handler om å velge riktig redskap og
+      riktig enhet. En snekker som blander millimeter og centimeter, får en dør som ikke passer.
+      I dette kapitlet lærer du å måle lengde, masse, volum og tid, gjøre om mellom enheter,
+      og regne med strekning, fart og tid.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Måleredskaper, enhetstrapp, klokke og fartstrekant">
+  <!-- måleredskaper -->
+  <text x="96" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8c2f39" text-anchor="middle">REDSKAP OG STØRRELSE</text>
+
+  <rect x="30" y="44" width="132" height="34" rx="6" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+  <g stroke="#8c2f39" stroke-width="1.6" fill="none">
+    <rect x="40" y="55" width="34" height="12"/>
+    <path d="M 46 55 v 5 M 52 55 v 8 M 58 55 v 5 M 64 55 v 8"/>
+  </g>
+  <text x="120" y="65" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">lengde</text>
+
+  <rect x="30" y="84" width="132" height="34" rx="6" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+  <g stroke="#8c2f39" stroke-width="1.6" fill="none">
+    <path d="M 42 110 h 30 M 57 110 v -8"/>
+    <path d="M 45 102 a 12 12 0 0 1 24 0 z"/>
+  </g>
+  <text x="120" y="105" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">masse</text>
+
+  <rect x="30" y="124" width="132" height="34" rx="6" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+  <g stroke="#8c2f39" stroke-width="1.6" fill="none">
+    <path d="M 48 130 v 20 h 18 v -20"/>
+    <path d="M 48 140 h 18 M 48 145 h 10"/>
+  </g>
+  <text x="120" y="145" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">volum</text>
+
+  <rect x="30" y="164" width="132" height="34" rx="6" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+  <g stroke="#8c2f39" stroke-width="1.6" fill="none">
+    <circle cx="57" cy="181" r="12"/>
+    <path d="M 57 181 v -7 M 57 181 l 5 4"/>
+  </g>
+  <text x="120" y="185" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">tid</text>
+
+  <line x1="188" y1="20" x2="188" y2="252" stroke="#d6d9de"/>
+
+  <!-- enhetstrapp -->
+  <text x="330" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8c2f39" text-anchor="middle">ENHETSTRAPPA</text>
+  <g>
+    <rect x="216" y="150" width="66" height="26" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+    <rect x="246" y="124" width="66" height="26" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+    <rect x="276" y="98" width="66" height="26" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+    <rect x="306" y="72" width="66" height="26" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+    <rect x="336" y="46" width="66" height="26" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.3"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">
+    <text x="249" y="168">mm</text><text x="279" y="142">cm</text><text x="309" y="116">dm</text>
+    <text x="339" y="90">m</text><text x="369" y="64">km</text>
+  </g>
+  <path d="M 420 60 L 420 168" stroke="#8c2f39" stroke-width="1.6" marker-end="url(#ned7)"/>
+  <path d="M 440 168 L 440 60" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#opp7)"/>
+  <defs>
+    <marker id="ned7" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,0 L4,7 z" fill="#8c2f39"/></marker>
+    <marker id="opp7" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,0 L4,7 z" fill="#2e7d32"/></marker>
+  </defs>
+  <text x="420" y="186" font-family="Arial" font-size="10.5" fill="#8c2f39" text-anchor="middle">· 10</text>
+  <text x="452" y="52" font-family="Arial" font-size="10.5" fill="#2e7d32" text-anchor="middle">: 10</text>
+  <text x="330" y="204" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">ett trinn ned er ganger ti</text>
+  <text x="330" y="220" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">— km er 1 000 ganger større enn m</text>
+
+  <line x1="486" y1="20" x2="486" y2="252" stroke="#d6d9de"/>
+
+  <!-- fart og tid -->
+  <text x="562" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8c2f39" text-anchor="middle">FART, VEI OG TID</text>
+  <path d="M 562 44 L 620 130 L 504 130 Z" fill="#f8ecee" stroke="#8c2f39" stroke-width="1.6"/>
+  <line x1="521" y1="102" x2="603" y2="102" stroke="#8c2f39" stroke-width="1.4"/>
+  <line x1="562" y1="102" x2="562" y2="130" stroke="#8c2f39" stroke-width="1.4"/>
+  <text x="562" y="90" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">s</text>
+  <text x="538" y="122" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">v</text>
+  <text x="588" y="122" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">t</text>
+  <text x="562" y="150" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">dekk til det du søker</text>
+
+  <rect x="502" y="164" width="120" height="60" rx="7" fill="#8c2f39"/>
+  <text x="562" y="186" font-family="DejaVu Serif" font-size="13" fill="#fff" text-anchor="middle">180 km på 2,5 t</text>
+  <text x="562" y="210" font-family="DejaVu Serif" font-size="17" font-weight="bold" fill="#fff" text-anchor="middle">72 km/t</text>
+
+  <!-- faste sammenhenger -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="298" font-family="Arial" font-size="11" font-weight="bold" fill="#8c2f39">HUSK</text>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430">
+    <text x="110" y="298">1 m = 100 cm</text>
+    <text x="248" y="298">1 kg = 1 000 g</text>
+    <text x="392" y="298">1 l = 10 dl</text>
+    <text x="506" y="298">1 time = 60 min</text>
+  </g>
+</svg>
+<p class="illtekst">Velg redskap etter hva du skal måle, og enhet etter hvor stort det er. Enhetstrappa knytter enhetene sammen, og fartstrekanten viser hvordan strekning, fart og tid henger sammen.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">7.1</span><span>Måleenheter og måleredskaper</span></li>
+    <li><span class="dknr">7.2</span><span>Lengde, masse og volum</span></li>
+    <li><span class="dknr">7.3</span><span>Å gjøre om mellom enheter</span></li>
+    <li><span class="dknr">7.4</span><span>Tid og tidsforskjeller</span></li>
+    <li><span class="dknr">7.5</span><span>Fart, strekning og tid</span></li>
+    <li><span class="dknr">7.6</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-7.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>velge passende måleredskaper og måleenheter, måle og forklare sammenhenger og regne om mellom ulike måleenheter, alt knyttet til praktiske situasjoner</li>
+      <li>gjøre overslag over og beregne tidsforskjeller og regne med strekning, fart og tid</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>utforske og løse problemer knyttet til arbeidslivet som handler om måling, og velge hensiktsmessige måleenheter</li>
+      <li>utforske volumbegrepet, måleenheter for volum og formler for volum av rette prismer og rette sylindre</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Av volummålet dekkes måleenhetene her; selve volumformlene hører til kapittel 8 om geometri.</p>
+</section>
+
+<!-- ============================================================
+     7.1 MÅLEENHETER OG MÅLEREDSKAPER
+     ============================================================ -->
+<section id="k71">
+<h2 id="d7-1">7.1 Måleenheter og måleredskaper</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>vite hvilket redskap som brukes til hvilken måling</li>
+    <li>velge en enhet som passer til størrelsen</li>
+    <li>vurdere om et oppgitt mål er rimelig</li>
+    <li>anslå lengder, masser og volumer uten å måle</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>å måle</td><td></td><td>Jeg måler lengden på bordet.</td></tr>
+    <tr><td>måleenhet</td><td></td><td>Meter er en måleenhet.</td></tr>
+    <tr><td>måleredskap</td><td></td><td>Målebåndet er et måleredskap.</td></tr>
+    <tr><td>masse / vekt</td><td></td><td>Pakken har en masse på 850 gram.</td></tr>
+    <tr><td>volum</td><td></td><td>Flasken har et volum på 1,5 liter.</td></tr>
+    <tr><td>å anslå</td><td></td><td>Jeg anslår at døra er 2 meter høy.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Før du måler, må du bestemme deg for to ting: <strong>hvilket redskap</strong> du skal bruke,
+  og <strong>hvilken enhet</strong> du skal oppgi svaret i. Begge valgene styres av hvor stort
+  det du måler er, og hvor nøyaktig svaret må bli.
+</p>
+
+<div class="regel">
+  <span class="etikett">Velg enhet etter størrelsen</span>
+  <table class="data" style="margin:0.5rem auto 0;">
+    <tr><th>Størrelse</th><th>Små ting</th><th>Vanlige ting</th><th>Store ting</th></tr>
+    <tr><th>Lengde</th><td>mm</td><td>cm og m</td><td>km</td></tr>
+    <tr><th>Masse</th><td>g</td><td>kg</td><td>tonn</td></tr>
+    <tr><th>Volum</th><td>ml og cl</td><td>dl og liter</td><td>m³</td></tr>
+    <tr><th>Tid</th><td>sekund</td><td>minutt og time</td><td>døgn og år</td></tr>
+  </table>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Er målet rimelig?</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En elev skriver at en bil veier 15 kg. Kan det stemme?</p>
+    <ol class="trinn">
+      <li>Tenk på noe du vet vekten av: en sekk poteter veier omtrent 10 kg.</li>
+      <li>En bil kan umulig veie like mye som halvannen potetsekk.</li>
+      <li>En vanlig personbil veier omtrent 1 500 kg, altså 1,5 tonn.</li>
+    </ol>
+    <p class="svarlinje">Svar: Nei. Eleven har sannsynligvis ment 1 500 kg og glemt to nuller.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Hva måler du med redskapet?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>målebånd</li><li><span class="bokstav">b)</span>vekt</li>
+          <li><span class="bokstav">c)</span>målebeger</li><li><span class="bokstav">d)</span>klokke</li>
+        </ul>
+      </li>
+      <li>Hva måler du med redskapet?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>tommestokk</li>
+          <li><span class="bokstav">b)</span>badevekt</li>
+          <li><span class="bokstav">c)</span>litermål</li>
+          <li><span class="bokstav">d)</span>stoppeklokke</li>
+        </ul>
+      </li>
+      <li>Hvilken enhet passer best?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>lengden av et klasserom</li>
+          <li><span class="bokstav">b)</span>massen av et eple</li>
+          <li><span class="bokstav">c)</span>innholdet i en brusflaske</li>
+          <li><span class="bokstav">d)</span>avstanden mellom Oslo og Bergen</li>
+        </ul>
+      </li>
+      <li>Hvilken enhet passer best?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>høyden på et hus</li>
+          <li><span class="bokstav">b)</span>massen av en sekk poteter</li>
+          <li><span class="bokstav">c)</span>innholdet i en kaffekopp</li>
+          <li><span class="bokstav">d)</span>lengden av en fotballbane</li>
+        </ul>
+      </li>
+      <li>Skriv riktig enhet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>En person veier 78 ___</li>
+          <li><span class="bokstav">b)</span>En blyant er 17 ___ lang</li>
+          <li><span class="bokstav">c)</span>En melkekartong rommer 1 ___</li>
+        </ul>
+      </li>
+      <li>Er dette rimelig? Svar ja eller nei.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>En dør er 2 m høy</li><li><span class="bokstav">b)</span>En bil veier 15 kg</li>
+          <li><span class="bokstav">c)</span>Et glass rommer 2 dl</li><li><span class="bokstav">d)</span>En fotballbane er 100 cm lang</li>
+        </ul>
+      </li>
+      <li>Er dette rimelig? Svar ja eller nei.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Et brød veier 700 g</li>
+          <li><span class="bokstav">b)</span>En kaffekopp rommer 5 liter</li>
+          <li><span class="bokstav">c)</span>En buss er 12 m lang</li>
+          <li><span class="bokstav">d)</span>En blyant er 17 m lang</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Hvilken enhet ville du valgt?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>tykkelsen på en metallplate</li>
+          <li><span class="bokstav">b)</span>mengden maling i et spann</li>
+          <li><span class="bokstav">c)</span>massen av mel i en oppskrift</li>
+          <li><span class="bokstav">d)</span>lengden på en arbeidsdag</li>
+        </ul>
+      </li>
+      <li>Anslå uten å måle, og skriv med enhet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>høyden på en dør</li>
+          <li><span class="bokstav">b)</span>massen av én liter melk</li>
+          <li><span class="bokstav">c)</span>lengden på en personbil</li>
+        </ul>
+      </li>
+      <li>En snekker skal måle en list på omtrent 2,4 meter.
+        Hvilket måleredskap passer best, og hvorfor?</li>
+      <li>Hvorfor oppgir vi kroppsvekt i kilogram og ikke i gram?
+        Skriv 78 kg i gram, og bruk det i forklaringen din.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="12" class="oppgaver" style="counter-reset: oppg 11;">
+      <li>En oppskrift sier «2 dl melk». En elev måler opp 2 liter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange desiliter er 2 liter?</li>
+          <li><span class="bokstav">b)</span>Hvor mange ganger for mye melk er det?</li>
+        </ul>
+      </li>
+      <li>Nevn tre situasjoner fra arbeidslivet der det får konsekvenser om man velger feil
+        måleenhet. Forklar kort hva som kan gå galt i hver av dem.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="14" class="oppgaver" style="counter-reset: oppg 13;">
+      <li>På en byggetegning står lengden på en bjelke som 4 800 mm.
+        Leverandøren selger bjelker i meter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange meter er bjelken?</li>
+          <li><span class="bokstav">b)</span>Hvorfor bruker byggetegninger millimeter og ikke meter?</li>
+          <li><span class="bokstav">c)</span>Hvor mange meter bjelke trengs til 12 slike?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En lastebil kan laste 7,5 tonn. Hver pall veier 285 kilogram.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kilogram er 7,5 tonn?</li>
+          <li><span class="bokstav">b)</span>Hvor mange hele paller kan lastebilen ta?</li>
+          <li><span class="bokstav">c)</span>Hvor mye ledig kapasitet er det igjen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     7.2 LENGDE, MASSE OG VOLUM
+     ============================================================ -->
+<section id="k72" class="nyside">
+<h2 id="d7-2">7.2 Lengde, masse og volum</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>kjenne sammenhengene mellom de vanligste enhetene</li>
+    <li>regne med lengder, masser og volumer i praktiske oppgaver</li>
+    <li>legge sammen mål som er oppgitt i ulike enheter</li>
+  </ul>
+</div>
+
+<p>
+  De tre størrelsene henger sammen på samme måte: hver enhet er ti eller tusen ganger større
+  enn den neste. Lærer du sammenhengene under, dekker du det aller meste du møter til daglig.
+</p>
+
+<div class="regel">
+  <span class="etikett">De viktigste sammenhengene</span>
+  <table class="data" style="margin:0.5rem auto 0;">
+    <tr><th>Lengde</th><td>1 km = 1 000 m</td><td>1 m = 100 cm</td><td>1 cm = 10 mm</td></tr>
+    <tr><th>Masse</th><td>1 tonn = 1 000 kg</td><td>1 kg = 1 000 g</td><td>1 g = 1 000 mg</td></tr>
+    <tr><th>Volum</th><td>1 l = 10 dl</td><td>1 dl = 10 cl</td><td>1 l = 1 000 ml</td></tr>
+  </table>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="En liter delt i desiliter og milliliter">
+  <rect x="16" y="14" width="588" height="142" rx="8" fill="#f8ecee" stroke="#e3c2c6"/>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#8c2f39" text-anchor="middle">ÉN LITER DELT OPP</text>
+
+  <rect x="60" y="56" width="500" height="30" fill="none" stroke="#8c2f39" stroke-width="1.8"/>
+  <g stroke="#8c2f39" stroke-width="1.2">
+    <line x1="110" y1="56" x2="110" y2="86"/><line x1="160" y1="56" x2="160" y2="86"/>
+    <line x1="210" y1="56" x2="210" y2="86"/><line x1="260" y1="56" x2="260" y2="86"/>
+    <line x1="310" y1="56" x2="310" y2="86"/><line x1="360" y1="56" x2="360" y2="86"/>
+    <line x1="410" y1="56" x2="410" y2="86"/><line x1="460" y1="56" x2="460" y2="86"/>
+    <line x1="510" y1="56" x2="510" y2="86"/>
+  </g>
+  <rect x="60" y="56" width="50" height="30" fill="#8c2f39" fill-opacity="0.35"/>
+  <text x="85" y="76" font-family="DejaVu Serif" font-size="12" fill="#1f2430" text-anchor="middle">1 dl</text>
+  <text x="310" y="106" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">1 liter = 10 desiliter</text>
+  <text x="310" y="132" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">1 dl = 100 ml &nbsp;·&nbsp; 1 liter = 1 000 ml</text>
+</svg>
+<figcaption>Figur 7.1 &nbsp;Desiliter og milliliter er begge deler av literen — men de er ikke like store deler.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; Legg sammen ulike enheter</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Fire pakker veier 850 g, 1,2 kg, 0,75 kg og 900 g. Hvor mye veier de til sammen?</p>
+    <ol class="trinn">
+      <li>Velg én enhet å regne i. Her passer kilogram best.</li>
+      <li>Gjør om gramtallene: <span class="matte">850 g = 0,85 kg</span> og <span class="matte">900 g = 0,9 kg</span></li>
+      <li>Legg sammen: <span class="matte">0,85 + 1,2 + 0,75 + 0,9 = 3,7</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Pakkene veier 3,7 kg til sammen.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="16" class="oppgaver" style="counter-reset: oppg 15;">
+      <li>Hvor mange centimeter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 m</li><li><span class="bokstav">b)</span>2 m</li>
+          <li><span class="bokstav">c)</span>0,5 m</li><li><span class="bokstav">d)</span>3,5 m</li>
+        </ul>
+      </li>
+      <li>Hvor mange centimeter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 m</li>
+          <li><span class="bokstav">b)</span>0,25 m</li>
+          <li><span class="bokstav">c)</span>7 m</li>
+          <li><span class="bokstav">d)</span>1,8 m</li>
+        </ul>
+      </li>
+      <li>Hvor mange gram er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 kg</li><li><span class="bokstav">b)</span>2 kg</li>
+          <li><span class="bokstav">c)</span>0,5 kg</li><li><span class="bokstav">d)</span>1,25 kg</li>
+        </ul>
+      </li>
+      <li>Hvor mange gram er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 kg</li>
+          <li><span class="bokstav">b)</span>0,25 kg</li>
+          <li><span class="bokstav">c)</span>5 kg</li>
+          <li><span class="bokstav">d)</span>2,5 kg</li>
+        </ul>
+      </li>
+      <li>Hvor mange desiliter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 l</li><li><span class="bokstav">b)</span>2 l</li>
+          <li><span class="bokstav">c)</span>0,5 l</li><li><span class="bokstav">d)</span>1,5 l</li>
+        </ul>
+      </li>
+      <li>Hvor mange desiliter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 l</li>
+          <li><span class="bokstav">b)</span>0,4 l</li>
+          <li><span class="bokstav">c)</span>2,5 l</li>
+          <li><span class="bokstav">d)</span>10 l</li>
+        </ul>
+      </li>
+      <li>Hvor mange millimeter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 cm</li><li><span class="bokstav">b)</span>5 cm</li>
+          <li><span class="bokstav">c)</span>12 cm</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="23" class="oppgaver" style="counter-reset: oppg 22;">
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>250 cm til meter</li><li><span class="bokstav">b)</span>1 500 m til kilometer</li>
+          <li><span class="bokstav">c)</span>750 g til kilogram</li><li><span class="bokstav">d)</span>2 500 ml til liter</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3,2 km til meter</li><li><span class="bokstav">b)</span>0,45 kg til gram</li>
+          <li><span class="bokstav">c)</span>4 dl til milliliter</li><li><span class="bokstav">d)</span>65 mm til centimeter</li>
+        </ul>
+      </li>
+      <li>En oppskrift trenger 300 g mel, 2 dl melk og 50 g smør.
+        Skriv mengdene i kilogram og liter.</li>
+      <li>En løper løper 5 runder på en bane som er 400 meter.
+        Hvor mange kilometer løper hun?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="27" class="oppgaver" style="counter-reset: oppg 26;">
+      <li>Fire pakker veier 850 g, 1,2 kg, 0,75 kg og 900 g.
+        Hvor mye veier de til sammen? Oppgi svaret i kilogram.</li>
+      <li>En flaske rommer 1,5 liter.
+        Hvor mange glass på 2,5 dl får du av flasken?</li>
+      <li>En elev skriver at 1 500 g er det samme som 15 kg.
+        Forklar hva som er feil, og gi riktig svar.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="30" class="oppgaver" style="counter-reset: oppg 29;">
+      <li>Et rom er 4,5 m langt og 3,2 m bredt. Gulvbelegg selges per kvadratmeter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er gulvarealet?</li>
+          <li><span class="bokstav">b)</span>Snekkeren bestiller 10 % ekstra til kapp. Hvor mange kvadratmeter blir det?</li>
+          <li><span class="bokstav">c)</span>Belegget koster 289 kroner per kvadratmeter, og selges i hele kvadratmeter. Hva blir prisen?</li>
+        </ul>
+      </li>
+      <li>En malingsspann rommer 10 liter, og én liter dekker 12 kvadratmeter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort areal dekker ett spann?</li>
+          <li><span class="bokstav">b)</span>Et rom har 46 m² veggflate og skal males med to strøk. Hvor mange liter maling går med?</li>
+          <li><span class="bokstav">c)</span>Holder ett spann? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En vannbeholder rommer 0,8 kubikkmeter. Én kubikkmeter er 1 000 liter.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange liter rommer beholderen?</li>
+          <li><span class="bokstav">b)</span>Den fylles med 25 liter i minuttet. Hvor lang tid tar det å fylle den?</li>
+          <li><span class="bokstav">c)</span>Hvor mange kanner på 5 liter kan fylles av innholdet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     7.3 Å GJØRE OM MELLOM ENHETER
+     ============================================================ -->
+<section id="k73" class="nyside">
+<h2 id="d7-3">7.3 Å gjøre om mellom enheter</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>bruke enhetstrappa til å gjøre om mellom enheter</li>
+    <li>avgjøre om du skal gange eller dele</li>
+    <li>sammenligne mål som er oppgitt i ulike enheter</li>
+    <li>bruke målestokk på en tegning <span class="m4merke">M4</span></li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>å gjøre om</td><td></td><td>Jeg gjør om fra meter til centimeter.</td></tr>
+    <tr><td>enhetstrapp</td><td></td><td>Enhetstrappa viser sammenhengen.</td></tr>
+    <tr><td>et trinn</td><td></td><td>Ett trinn ned er å gange med ti.</td></tr>
+    <tr><td>målestokk</td><td></td><td>Tegningen har målestokk 1:50.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Å gjøre om betyr å bytte enhet uten å endre selve mengden. Regelen er kort: går du til en
+  <strong>mindre</strong> enhet, blir tallet <strong>større</strong> — og motsatt. Kjenner du
+  den regelen, har du en kontroll på om du ganget eller delte riktig vei.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Enhetstrappa for lengde med ganging og deling">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#f8ecee" stroke="#e3c2c6"/>
+
+  <g>
+    <rect x="56" y="140" width="76" height="28" fill="#fff" stroke="#8c2f39" stroke-width="1.4"/>
+    <rect x="96" y="112" width="76" height="28" fill="#fff" stroke="#8c2f39" stroke-width="1.4"/>
+    <rect x="136" y="84" width="76" height="28" fill="#fff" stroke="#8c2f39" stroke-width="1.4"/>
+    <rect x="176" y="56" width="76" height="28" fill="#fff" stroke="#8c2f39" stroke-width="1.4"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">
+    <text x="94" y="160">mm</text><text x="134" y="132">cm</text>
+    <text x="174" y="104">dm</text><text x="214" y="76">m</text>
+  </g>
+  <text x="290" y="70" font-family="Arial" font-size="11" fill="#5a6272">1 m</text>
+  <text x="290" y="98" font-family="Arial" font-size="11" fill="#5a6272">10 dm</text>
+  <text x="290" y="126" font-family="Arial" font-size="11" fill="#5a6272">100 cm</text>
+  <text x="290" y="154" font-family="Arial" font-size="11" fill="#5a6272">1 000 mm</text>
+  <text x="290" y="46" font-family="Arial" font-size="11" fill="#5a6272">samme lengde:</text>
+
+  <line x1="368" y1="34" x2="368" y2="176" stroke="#e3c2c6"/>
+
+  <rect x="392" y="48" width="192" height="52" rx="7" fill="#fff" stroke="#8c2f39" stroke-width="1.3"/>
+  <text x="488" y="70" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8c2f39" text-anchor="middle">TIL MINDRE ENHET</text>
+  <text x="488" y="90" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">tallet blir større — gang</text>
+
+  <rect x="392" y="112" width="192" height="52" rx="7" fill="#fff" stroke="#2e7d32" stroke-width="1.3"/>
+  <text x="488" y="134" font-family="Arial" font-size="11.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">TIL STØRRE ENHET</text>
+  <text x="488" y="154" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">tallet blir mindre — del</text>
+</svg>
+<figcaption>Figur 7.2 &nbsp;Mindre enhet gir flere av dem. 1 meter er 1 000 millimeter, men bare 0,001 kilometer.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Kontroller retningen</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Skriv 3,2 km i meter.</p>
+    <ol class="trinn">
+      <li>Meter er en <em>mindre</em> enhet enn kilometer, så tallet må bli større.</li>
+      <li>Fra km til m er det 1 000 ganger: <span class="matte">3,2 · 1 000 = 3 200</span></li>
+      <li>Kontroll: 3 200 er større enn 3,2 — det stemmer med regelen.</li>
+    </ol>
+    <p class="svarlinje">Svar: 3,2 km = 3 200 m</p>
+  </div>
+</div>
+
+<div class="regel">
+  <span class="etikett">Areal er annerledes</span>
+  <p style="margin-bottom:0;">For areal er hvert trinn <strong>100 ganger</strong>, ikke 10.
+  En kvadratmeter er 100 cm · 100 cm = 10 000 cm², ikke 100 cm².
+  Du møter dette igjen i kapittel 8 om geometri.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="33" class="oppgaver" style="counter-reset: oppg 32;">
+      <li>Skal du gange eller dele? Med hvilket tall?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>fra meter til centimeter</li><li><span class="bokstav">b)</span>fra gram til kilogram</li>
+          <li><span class="bokstav">c)</span>fra liter til milliliter</li><li><span class="bokstav">d)</span>fra millimeter til centimeter</li>
+        </ul>
+      </li>
+      <li>Skal du gange eller dele? Med hvilket tall?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>fra kilometer til meter</li>
+          <li><span class="bokstav">b)</span>fra milliliter til liter</li>
+          <li><span class="bokstav">c)</span>fra centimeter til millimeter</li>
+          <li><span class="bokstav">d)</span>fra kilogram til gram</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4 m til cm</li><li><span class="bokstav">b)</span>7 km til m</li>
+          <li><span class="bokstav">c)</span>3 kg til g</li><li><span class="bokstav">d)</span>2 l til ml</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6 m til cm</li>
+          <li><span class="bokstav">b)</span>3 km til m</li>
+          <li><span class="bokstav">c)</span>5 kg til g</li>
+          <li><span class="bokstav">d)</span>4 l til ml</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>800 cm til m</li><li><span class="bokstav">b)</span>5 000 m til km</li>
+          <li><span class="bokstav">c)</span>2 000 g til kg</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>450 cm til m</li>
+          <li><span class="bokstav">b)</span>7 000 m til km</li>
+          <li><span class="bokstav">c)</span>3 500 g til kg</li>
+        </ul>
+      </li>
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>25 mm til cm</li><li><span class="bokstav">b)</span>340 cm til m</li>
+          <li><span class="bokstav">c)</span>1 200 ml til l</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>0,75 km til m</li><li><span class="bokstav">b)</span>12,5 cm til mm</li>
+          <li><span class="bokstav">c)</span>0,3 kg til g</li><li><span class="bokstav">d)</span>45 cl til dl</li>
+        </ul>
+      </li>
+      <li>Sorter fra minst til størst. Gjør om til samme enhet først.<br>
+        <span class="matte">0,5 m</span> &nbsp; <span class="matte">45 cm</span> &nbsp;
+        <span class="matte">520 mm</span> &nbsp; <span class="matte">0,004 km</span></li>
+      <li>Regn ut, og oppgi svaret i den enheten som passer best.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2 m + 45 cm</li><li><span class="bokstav">b)</span>1,5 kg + 800 g</li>
+          <li><span class="bokstav">c)</span>0,5 l + 3 dl</li>
+        </ul>
+      </li>
+      <li>En rull med ledning er 50 meter. Det klippes av fire biter på 3,2 m
+        og tre biter på 250 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye ledning er klippet av til sammen?</li>
+          <li><span class="bokstav">b)</span>Hvor mye er igjen på rullen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>En elev skriver at 2,5 km er det samme som 250 m.
+        Forklar hvorfor det ikke kan stemme, og gi riktig svar.</li>
+      <li>Forklar hvorfor 1 m² ikke er 100 cm², men 10 000 cm².
+        Tegn gjerne et kvadrat og sett på målene.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>En tegning har målestokk 1:50. Det betyr at 1 cm på tegningen svarer til
+        50 cm i virkeligheten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>En vegg er 8 cm på tegningen. Hvor lang er den i virkeligheten?</li>
+          <li><span class="bokstav">b)</span>Et vindu er 1,2 m bredt. Hvor bredt blir det på tegningen?</li>
+          <li><span class="bokstav">c)</span>Hvorfor bruker man målestokk i stedet for å tegne i full størrelse?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et rør har innvendig diameter 32 mm. Det leveres i lengder på 4 meter,
+          og prisen er 148 kroner per meter.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange centimeter er diameteren?</li>
+          <li><span class="bokstav">b)</span>Hva koster én lengde?</li>
+          <li><span class="bokstav">c)</span>En jobb krever 27 meter rør. Hvor mange hele lengder må kjøpes, og hva koster det?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     7.4 TID OG TIDSFORSKJELLER
+     ============================================================ -->
+<section id="k74" class="nyside">
+<h2 id="d7-4">7.4 Tid og tidsforskjeller</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne om mellom timer, minutter og sekunder</li>
+    <li>finne tiden som har gått mellom to klokkeslett</li>
+    <li>skrive om mellom desimaltimer og timer og minutter</li>
+    <li>regne ut arbeidstid med pauser</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>klokkeslett</td><td></td><td>Vakten begynner klokka 07.30.</td></tr>
+    <tr><td>tidsforskjell</td><td></td><td>Tidsforskjellen er 6 timer.</td></tr>
+    <tr><td>desimaltimer</td><td></td><td>7,5 timer er 7 timer og 30 minutter.</td></tr>
+    <tr><td>pause</td><td></td><td>Pausen varer 30 minutter.</td></tr>
+    <tr><td>arbeidstid</td><td></td><td>Arbeidstiden er 7 timer og 50 minutter.</td></tr>
+  </tbody>
+</table>
+
+<div class="regel">
+  <span class="etikett">Pass på</span>
+  <p style="margin-bottom:0;">Tid følger <strong>ikke</strong> titallssystemet. En time er 60
+  minutter, ikke 100. Derfor er 1,5 timer det samme som 1 time og 30 minutter — ikke
+  1 time og 50 minutter. Dette er den vanligste feilen når man regner ut lønn etter timelister.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tidslinje fra kvart på ni til tjue over to">
+  <rect x="16" y="14" width="588" height="152" rx="8" fill="#f8ecee" stroke="#e3c2c6"/>
+  <text x="310" y="42" font-family="Arial" font-size="12" font-weight="bold" fill="#8c2f39" text-anchor="middle">FRA 08.45 TIL 14.20</text>
+
+  <line x1="70" y1="86" x2="550" y2="86" stroke="#1f2430" stroke-width="2"/>
+  <g stroke="#1f2430" stroke-width="1.6">
+    <line x1="70" y1="76" x2="70" y2="96"/><line x1="470" y1="76" x2="470" y2="96"/>
+    <line x1="550" y1="76" x2="550" y2="96"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">
+    <text x="70" y="114">08.45</text><text x="470" y="114">14.45</text><text x="550" y="114">14.20</text>
+  </g>
+  <path d="M 70 66 h 400" stroke="#8c2f39" stroke-width="1.6" marker-end="url(#t7)"/>
+  <defs><marker id="t7" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#8c2f39"/></marker></defs>
+  <text x="270" y="60" font-family="Arial" font-size="11.5" fill="#8c2f39" text-anchor="middle">6 hele timer</text>
+  <path d="M 550 66 h -80" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#t7b)"/>
+  <defs><marker id="t7b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#2e7d32"/></marker></defs>
+  <text x="510" y="60" font-family="Arial" font-size="11.5" fill="#2e7d32" text-anchor="middle">− 25 min</text>
+
+  <text x="310" y="146" font-family="DejaVu Serif" font-size="16" font-weight="bold" fill="#1f2430" text-anchor="middle">6 timer − 25 minutter = 5 timer og 35 minutter</text>
+</svg>
+<figcaption>Figur 7.3 &nbsp;Gå først til samme minuttall, og juster deretter. Det er lettere enn å låne 60 minutter.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Desimaltimer</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En timeliste viser 3,75 timer. Hvor mange timer og minutter er det?</p>
+    <ol class="trinn">
+      <li>Hele timer: <span class="matte">3</span></li>
+      <li>Desimaldelen er 0,75 av en time: <span class="matte">0,75 · 60 = 45</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 3,75 timer er 3 timer og 45 minutter.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>Hvor mange minutter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 time</li><li><span class="bokstav">b)</span>2 timer</li>
+          <li><span class="bokstav">c)</span>0,5 time</li><li><span class="bokstav">d)</span>1,5 time</li>
+        </ul>
+      </li>
+      <li>Hvor mange minutter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 timer</li>
+          <li><span class="bokstav">b)</span>0,25 time</li>
+          <li><span class="bokstav">c)</span>2,5 time</li>
+          <li><span class="bokstav">d)</span>4 timer</li>
+        </ul>
+      </li>
+      <li>Skriv som timer og minutter.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>90 min</li><li><span class="bokstav">b)</span>135 min</li>
+          <li><span class="bokstav">c)</span>200 min</li>
+        </ul>
+      </li>
+      <li>Skriv som timer og minutter.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>75 min</li>
+          <li><span class="bokstav">b)</span>150 min</li>
+          <li><span class="bokstav">c)</span>260 min</li>
+        </ul>
+      </li>
+      <li>Hvor lang tid er det fra
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>09.00 til 11.00</li><li><span class="bokstav">b)</span>08.30 til 10.00</li>
+          <li><span class="bokstav">c)</span>13.15 til 15.45</li>
+        </ul>
+      </li>
+      <li>Hvor lang tid er det fra
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>10.00 til 13.00</li>
+          <li><span class="bokstav">b)</span>07.45 til 09.15</li>
+          <li><span class="bokstav">c)</span>12.20 til 14.05</li>
+        </ul>
+      </li>
+      <li>Hva er klokka
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2 timer etter 14.00</li><li><span class="bokstav">b)</span>45 min etter 09.30</li>
+          <li><span class="bokstav">c)</span>1 time og 20 min etter 16.50</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="55" class="oppgaver" style="counter-reset: oppg 54;">
+      <li>Hvor lang tid er det fra
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>08.45 til 14.20</li><li><span class="bokstav">b)</span>07.20 til 15.05</li>
+          <li><span class="bokstav">c)</span>22.40 til 06.15 neste dag</li>
+        </ul>
+      </li>
+      <li>Skriv som timer og minutter.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2,5 t</li><li><span class="bokstav">b)</span>3,25 t</li>
+          <li><span class="bokstav">c)</span>0,75 t</li><li><span class="bokstav">d)</span>4,2 t</li>
+        </ul>
+      </li>
+      <li>Skriv som desimaltimer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>1 time og 30 min</li><li><span class="bokstav">b)</span>2 timer og 45 min</li>
+          <li><span class="bokstav">c)</span>3 timer og 15 min</li>
+        </ul>
+      </li>
+      <li>En arbeidsdag varer fra 07.30 til 15.30, med 30 minutters pause.
+        Hvor mange timer arbeid er det?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="59" class="oppgaver" style="counter-reset: oppg 58;">
+      <li>En arbeider stempler inn 06.50 og ut 15.20. Pausen er på 40 minutter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang tid var hun på jobb?</li>
+          <li><span class="bokstav">b)</span>Hvor lang var arbeidstiden uten pause?</li>
+          <li><span class="bokstav">c)</span>Skriv arbeidstiden som desimaltimer med to desimaler.</li>
+        </ul>
+      </li>
+      <li>En elev regner 2 timer og 45 minutter pluss 1 time og 30 minutter,
+        og svarer 3 timer og 75 minutter.
+        Forklar hva som er feil, og skriv svaret riktig.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="61" class="oppgaver" style="counter-reset: oppg 60;">
+      <li>En turnusuke ser slik ut:
+        <table class="data">
+          <tr><th>Dag</th><th>Man</th><th>Tir</th><th>Ons</th><th>Tor</th><th>Fre</th></tr>
+          <tr><td>Arbeidstid</td><td>7 t 30</td><td>8 t 15</td><td>6 t 45</td><td>7 t 30</td><td>5 t</td></tr>
+        </table>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange timer er dette til sammen?</li>
+          <li><span class="bokstav">b)</span>Timelønnen er 248 kroner. Hva blir lønnen for uka?</li>
+          <li><span class="bokstav">c)</span>Full stilling er 37,5 timer i uka. Hvor mange timer over eller under er dette?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et fly går fra Oslo klokka 10.35 og lander i New York klokka 12.50 lokal tid.
+          Klokka i New York er 6 timer bak klokka i Oslo.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er klokka i Oslo når flyet lander?</li>
+          <li><span class="bokstav">b)</span>Hvor lenge varer flyturen?</li>
+          <li><span class="bokstav">c)</span>Hvorfor kan man ikke bare trekke 10.35 fra 12.50?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     7.5 FART, STREKNING OG TID
+     ============================================================ -->
+<section id="k75" class="nyside">
+<h2 id="d7-5">7.5 Fart, strekning og tid</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut strekning når du kjenner fart og tid</li>
+    <li>regne ut fart når du kjenner strekning og tid</li>
+    <li>regne ut tid når du kjenner strekning og fart</li>
+    <li>gjøre overslag og vurdere om svaret er rimelig</li>
+  </ul>
+</div>
+
+<p>
+  De tre størrelsene strekning, fart og tid henger sammen i én formel. Kjenner du to av dem,
+  finner du alltid den tredje.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fartstrekanten med de tre formlene">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#f8ecee" stroke="#e3c2c6"/>
+
+  <path d="M 130 40 L 200 140 L 60 140 Z" fill="#fff" stroke="#8c2f39" stroke-width="1.8"/>
+  <line x1="82" y1="108" x2="178" y2="108" stroke="#8c2f39" stroke-width="1.5"/>
+  <line x1="130" y1="108" x2="130" y2="140" stroke="#8c2f39" stroke-width="1.5"/>
+  <text x="130" y="94" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">s</text>
+  <text x="104" y="130" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">v</text>
+  <text x="156" y="130" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">t</text>
+  <text x="130" y="162" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">dekk til det du søker</text>
+
+  <g font-family="DejaVu Serif" font-size="16" fill="#1f2430">
+    <text x="270" y="62">s = v · t</text>
+    <text x="270" y="102">v = s : t</text>
+    <text x="270" y="142">t = s : v</text>
+  </g>
+  <g font-family="Arial" font-size="11" fill="#5a6272">
+    <text x="384" y="62">strekning = fart · tid</text>
+    <text x="384" y="102">fart = strekning : tid</text>
+    <text x="384" y="142">tid = strekning : fart</text>
+  </g>
+
+  <line x1="530" y1="34" x2="530" y2="156" stroke="#e3c2c6"/>
+  <text x="568" y="80" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">Farten</text>
+  <text x="568" y="96" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">måles i</text>
+  <text x="568" y="116" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">km/t</text>
+</svg>
+<figcaption>Figur 7.4 &nbsp;Dekk til størrelsen du leter etter, så viser trekanten hvordan de to andre skal kombineres.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 5 &nbsp;·&nbsp; Gjennomsnittsfart</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En bil kjører 180 km på 2,5 timer. Hva er gjennomsnittsfarten?</p>
+    <ol class="trinn">
+      <li>Vi søker farten, så vi dekker til v i trekanten. Da står s over t.</li>
+      <li>Overslag: 180 km på 2 timer ville vært 90 km/t, så svaret blir litt lavere.</li>
+      <li>Regn ut: <span class="matte">180 : 2,5 = 72</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Gjennomsnittsfarten er 72 km/t.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="63" class="oppgaver" style="counter-reset: oppg 62;">
+      <li>Regn ut strekningen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>60 km/t i 2 timer</li><li><span class="bokstav">b)</span>80 km/t i 3 timer</li>
+          <li><span class="bokstav">c)</span>50 km/t i 4 timer</li>
+        </ul>
+      </li>
+      <li>Regn ut strekningen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>70 km/t i 3 timer</li>
+          <li><span class="bokstav">b)</span>90 km/t i 2 timer</li>
+          <li><span class="bokstav">c)</span>40 km/t i 5 timer</li>
+        </ul>
+      </li>
+      <li>Regn ut farten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>100 km på 2 timer</li><li><span class="bokstav">b)</span>240 km på 3 timer</li>
+          <li><span class="bokstav">c)</span>90 km på 1,5 time</li>
+        </ul>
+      </li>
+      <li>Regn ut farten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>150 km på 3 timer</li>
+          <li><span class="bokstav">b)</span>200 km på 4 timer</li>
+          <li><span class="bokstav">c)</span>120 km på 1,5 time</li>
+        </ul>
+      </li>
+      <li>Regn ut tiden.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>120 km i 60 km/t</li><li><span class="bokstav">b)</span>300 km i 75 km/t</li>
+        </ul>
+      </li>
+      <li>Regn ut tiden.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>240 km i 80 km/t</li>
+          <li><span class="bokstav">b)</span>350 km i 70 km/t</li>
+        </ul>
+      </li>
+      <li>En bil kjører i 90 km/t. Hvor langt kommer den på
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 time</li><li><span class="bokstav">b)</span>2 timer</li>
+          <li><span class="bokstav">c)</span>0,5 time</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="70" class="oppgaver" style="counter-reset: oppg 69;">
+      <li>Regn ut det som mangler.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>180 km på 2,5 timer — farten?</li>
+          <li><span class="bokstav">b)</span>70 km/t i 3,5 timer — strekningen?</li>
+          <li><span class="bokstav">c)</span>210 km i 70 km/t — tiden?</li>
+        </ul>
+      </li>
+      <li>En sykkeltur på 36 km tok 2 timer og 24 minutter.
+        Hva var gjennomsnittsfarten?</li>
+      <li>En buss holder 65 km/t. Hvor lang tid bruker den på 156 km?
+        Oppgi svaret både som desimaltimer og som timer og minutter.</li>
+      <li>En lastebil kjører fra 08.00 til 12.30 og tilbakelegger 315 km.
+        Hva er gjennomsnittsfarten?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="74" class="oppgaver" style="counter-reset: oppg 73;">
+      <li>En elev skal finne farten når en bil kjører 150 km på 2,5 timer,
+        og svarer 375 km/t. Forklar feilen, og gi riktig svar.</li>
+      <li>En tur er 240 km lang. Første halvdel kjøres i 80 km/t,
+        andre halvdel i 60 km/t.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang tid tar første halvdel?</li>
+          <li><span class="bokstav">b)</span>Hvor lang tid tar andre halvdel?</li>
+          <li><span class="bokstav">c)</span>Hva er gjennomsnittsfarten for hele turen? Er den 70 km/t?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="76" class="oppgaver" style="counter-reset: oppg 75;">
+      <li>En yrkessjåfør kan kjøre maksimalt 9 timer per dag.
+        Ruten er 640 km, og gjennomsnittsfarten er 72 km/t.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang tid tar kjøringen? Oppgi svaret i timer og minutter.</li>
+          <li><span class="bokstav">b)</span>Er kjøretiden innenfor grensen?</li>
+          <li><span class="bokstav">c)</span>Med 45 minutters lovpålagt pause, hvor lang blir arbeidsdagen?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et tog bruker 4 timer og 20 minutter på strekningen Oslo–Trondheim, som er 552 km.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er togets gjennomsnittsfart? Rund av til én desimal.</li>
+          <li><span class="bokstav">b)</span>En bil kjører samme strekning i 85 km/t. Hvor lang tid bruker den?</li>
+          <li><span class="bokstav">c)</span>Hvor mye raskere er toget?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     7.6 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k76" class="nyside">
+<h2 id="d7-6">7.6 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="78" class="oppgaver" style="counter-reset: oppg 77;">
+      <li>Skriv om.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3,5 m til cm</li><li><span class="bokstav">b)</span>2 400 g til kg</li>
+          <li><span class="bokstav">c)</span>0,75 l til dl</li>
+        </ul>
+      </li>
+      <li>Hvor lang tid er det fra 09.40 til 14.15?</li>
+      <li>En bil kjører 55 km/t i 4 timer. Hvor langt kjører den?</li>
+      <li>Skriv som desimaltimer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2 timer og 15 min</li><li><span class="bokstav">b)</span>45 min</li>
+        </ul>
+      </li>
+      <li>Fire pakker veier 1,2 kg, 850 g, 0,4 kg og 1 350 g.
+        Hvor mye veier de til sammen i kilogram?</li>
+      <li>En flaske rommer 1,5 liter. Hvor mange glass på 3 dl får du?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="84" class="oppgaver" style="counter-reset: oppg 83;">
+      <li><span class="m4merke">M4</span> En håndverker kjører 48 km til jobb, jobber
+        6 timer og 30 minutter, og kjører 48 km tilbake. Gjennomsnittsfarten er 60 km/t.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang tid bruker han på kjøring til sammen?</li>
+          <li><span class="bokstav">b)</span>Hvor lenge er han borte fra hjemmet?</li>
+          <li><span class="bokstav">c)</span>Han tar 640 kroner per arbeidstime og 6,50 kroner per kjørte kilometer. Hva blir regningen?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Et basseng er 12,5 m langt, 6 m bredt og 1,4 m dypt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kubikkmeter vann rommer det?</li>
+          <li><span class="bokstav">b)</span>Hvor mange liter er det?</li>
+          <li><span class="bokstav">c)</span>Det fylles med 350 liter i minuttet. Hvor lang tid tar det?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En tegning i målestokk 1:100 viser et rom
+        som er 4,2 cm langt og 3,5 cm bredt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er rommet i virkeligheten?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er gulvarealet?</li>
+          <li><span class="bokstav">c)</span>Med 10 % ekstra til kapp: hvor mange hele kvadratmeter gulvbelegg må kjøpes, og hva koster det når prisen er 349 kroner per kvadratmeter?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En bil bruker 0,62 liter drivstoff per mil,
+        og drivstoffet koster 22,90 kroner per liter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye drivstoff går med på 34 mil?</li>
+          <li><span class="bokstav">b)</span>Hva koster turen?</li>
+          <li><span class="bokstav">c)</span>Hva koster én mil?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan velge riktig måleredskap og riktig enhet. <em>(7.1)</em></li>
+    <li>Jeg kan sammenhengene mellom de vanligste enhetene. <em>(7.2)</em></li>
+    <li>Jeg vet om jeg skal gange eller dele når jeg gjør om enheter. <em>(7.3)</em></li>
+    <li>Jeg kan regne ut tiden mellom to klokkeslett. <em>(7.4)</em></li>
+    <li>Jeg kan skrive om mellom desimaltimer og timer og minutter. <em>(7.4)</em></li>
+    <li>Jeg kan regne med strekning, fart og tid. <em>(7.5)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 7</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>7.1 Måleenheter og måleredskaper</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) lengde</span><span class="d">b) masse</span><span class="d">c) volum</span><span class="d">d) tid</span></li>
+<li><span class="d">a) lengde</span><span class="d">b) masse</span><span class="d">c) volum</span><span class="d">d) tid</span></li>
+<li><span class="d">a) meter</span><span class="d">b) gram</span><span class="d">c) liter eller desiliter</span><span class="d">d) kilometer</span></li>
+<li><span class="d">a) meter</span><span class="d">b) kilogram</span><span class="d">c) desiliter</span><span class="d">d) meter</span></li>
+<li><span class="d">a) kg</span><span class="d">b) cm</span><span class="d">c) liter</span></li>
+<li><span class="d">a) ja</span><span class="d">b) nei</span><span class="d">c) ja</span><span class="d">d) nei</span><br/>
+</li>
+<li><span class="d">a) ja</span><span class="d">b) nei</span><span class="d">c) ja</span><span class="d">d) nei</span></li>
+<li><span class="d">a) millimeter</span><span class="d">b) liter</span><span class="d">c) gram</span><span class="d">d) timer</span></li>
+<li> Forventet størrelsesorden:
+    a) omtrent 2 meter, b) omtrent 1 kilogram, c) omtrent 4–5 meter.</li>
+<li> Forventet: målebånd eller tommestokk, fordi en linjal
+    på 30 cm er altfor kort og måtte flyttes mange ganger — hver flytting gir ny risiko for feil.</li>
+<li>78 kg = <strong>78 000 g</strong>.
+    </li>
+<li><span class="d">a) 20 dl</span><span class="d">b) 10 ganger for mye</span></li>
+<li> Eksempler som bør godkjennes: medisindosering der
+    milligram forveksles med gram, byggetegninger der millimeter leses som centimeter, og
+    lastevekt der kilo forveksles med tonn. Begrunnelsen skal si hva konsekvensen blir.</li>
+<li><span class="d">a) 4,8 meter</span><span class="d">b) </span><span class="d">c) 57,6 meter</span><br/>
+</li>
+<li><span class="d">a) 7 500 kg</span><span class="d">b) 26 paller</span><span class="d">c) 90 kg</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>7.2 Lengde, masse og volum</h3>
+<ol class="fasit" start="16" style="counter-reset: fas 15;">
+<li><span class="d">a) 100 cm</span><span class="d">b) 200 cm</span><span class="d">c) 50 cm</span><span class="d">d) 350 cm</span></li>
+<li><span class="d">a) 400 cm</span><span class="d">b) 25 cm</span><span class="d">c) 700 cm</span><span class="d">d) 180 cm</span></li>
+<li><span class="d">a) 1 000 g</span><span class="d">b) 2 000 g</span><span class="d">c) 500 g</span><span class="d">d) 1 250 g</span></li>
+<li><span class="d">a) 3 000 g</span><span class="d">b) 250 g</span><span class="d">c) 5 000 g</span><span class="d">d) 2 500 g</span></li>
+<li><span class="d">a) 10 dl</span><span class="d">b) 20 dl</span><span class="d">c) 5 dl</span><span class="d">d) 15 dl</span></li>
+<li><span class="d">a) 30 dl</span><span class="d">b) 4 dl</span><span class="d">c) 25 dl</span><span class="d">d) 100 dl</span></li>
+<li><span class="d">a) 10 mm</span><span class="d">b) 50 mm</span><span class="d">c) 120 mm</span></li>
+<li><span class="d">a) 2,5 m</span><span class="d">b) 1,5 km</span><span class="d">c) 0,75 kg</span><span class="d">d) 2,5 l</span></li>
+<li><span class="d">a) 3 200 m</span><span class="d">b) 450 g</span><span class="d">c) 400 ml</span><span class="d">d) 6,5 cm</span></li>
+<li>0,3 kg mel · 0,2 liter melk · 0,05 kg smør</li>
+<li>5 · 400 = 2 000 m = <strong>2 km</strong></li>
+<li>0,85 + 1,2 + 0,75 + 0,9 = <strong>3,7 kg</strong></li>
+<li>1,5 liter er 15 dl, og 15 : 2,5 = <strong>6 glass</strong></li>
+<li>1 500 g er <strong>1,5 kg</strong>, ikke 15 kg.
+    </li>
+<li><span class="d">a) 14,4 m²</span><span class="d">b) 15,84 m²</span><span class="d">c) 4 624 kr</span><br/>
+</li>
+<li><span class="d">a) 120 m²</span><span class="d">b) 7,67 liter</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 800 liter</span><span class="d">b) 32 minutter</span><span class="d">c) 160 kanner</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>7.3 Å gjøre om mellom enheter</h3>
+<ol class="fasit" start="33" style="counter-reset: fas 32;">
+<li><span class="d">a) gange med 100</span><span class="d">b) dele på 1 000</span>
+<span class="d">c) gange med 1 000</span><span class="d">d) dele på 10</span></li>
+<li><span class="d">a) gange med 1 000</span><span class="d">b) dele på 1 000</span><span class="d">c) gange med 10</span><span class="d">d) gange med 1 000</span></li>
+<li><span class="d">a) 400 cm</span><span class="d">b) 7 000 m</span><span class="d">c) 3 000 g</span><span class="d">d) 2 000 ml</span></li>
+<li><span class="d">a) 600 cm</span><span class="d">b) 3 000 m</span><span class="d">c) 5 000 g</span><span class="d">d) 4 000 ml</span></li>
+<li><span class="d">a) 8 m</span><span class="d">b) 5 km</span><span class="d">c) 2 kg</span></li>
+<li><span class="d">a) 4,5 m</span><span class="d">b) 7 km</span><span class="d">c) 3,5 kg</span></li>
+<li><span class="d">a) 2,5 cm</span><span class="d">b) 3,4 m</span><span class="d">c) 1,2 l</span></li>
+<li><span class="d">a) 750 m</span><span class="d">b) 125 mm</span><span class="d">c) 300 g</span><span class="d">d) 4,5 dl</span></li>
+<li>I millimeter: 45 cm = 450, 0,5 m = 500, 520 mm = 520, 0,004 km = 4 000.<br/>
+    Rekkefølge: <strong>45 cm, 0,5 m, 520 mm, 0,004 km</strong></li>
+<li><span class="d">a) 2,45 m</span><span class="d">b) 2,3 kg</span><span class="d">c) 0,8 l</span></li>
+<li><span class="d">a) 20,3 m</span><span class="d">b) 29,7 m</span><br/>
+</li>
+<li>2,5 km er <strong>2 500 m</strong>.
+    </li>
+<li> Forventet: et kvadrat med side 1 m har
+    sider på 100 cm. Arealet er 100 · 100 = 10 000 cm². Fordi begge sidene gjøres om, ganges
+    det med 100 to ganger.</li>
+<li><span class="d">a) 400 cm, altså 4 m</span><span class="d">b) 2,4 cm</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 3,2 cm</span><span class="d">b) 592 kr</span><span class="d">c) 7 lengder, 4 144 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>7.4 Tid og tidsforskjeller</h3>
+<ol class="fasit" start="48" style="counter-reset: fas 47;">
+<li><span class="d">a) 60 min</span><span class="d">b) 120 min</span><span class="d">c) 30 min</span><span class="d">d) 90 min</span></li>
+<li><span class="d">a) 180 min</span><span class="d">b) 15 min</span><span class="d">c) 150 min</span><span class="d">d) 240 min</span></li>
+<li><span class="d">a) 1 t 30 min</span><span class="d">b) 2 t 15 min</span><span class="d">c) 3 t 20 min</span></li>
+<li><span class="d">a) 1 t 15 min</span><span class="d">b) 2 t 30 min</span><span class="d">c) 4 t 20 min</span></li>
+<li><span class="d">a) 2 timer</span><span class="d">b) 1 t 30 min</span><span class="d">c) 2 t 30 min</span></li>
+<li><span class="d">a) 3 timer</span><span class="d">b) 1 t 30 min</span><span class="d">c) 1 t 45 min</span></li>
+<li><span class="d">a) 16.00</span><span class="d">b) 10.15</span><span class="d">c) 18.10</span></li>
+<li><span class="d">a) 5 t 35 min</span><span class="d">b) 7 t 45 min</span><span class="d">c) 7 t 35 min</span><br/>
+</li>
+<li><span class="d">a) 2 t 30 min</span><span class="d">b) 3 t 15 min</span><span class="d">c) 45 min</span><span class="d">d) 4 t 12 min</span><br/>
+</li>
+<li><span class="d">a) 1,5 t</span><span class="d">b) 2,75 t</span><span class="d">c) 3,25 t</span></li>
+<li>Fra 07.30 til 15.30 er 8 timer, minus 30 minutters pause: <strong>7,5 timer</strong></li>
+<li><span class="d">a) 8 t 30 min</span><span class="d">b) 7 t 50 min</span><span class="d">c) 7,83 timer</span><br/>
+</li>
+<li>75 minutter er mer enn en time. Svaret skal skrives om:
+    3 timer og 75 minutter = <strong>4 timer og 15 minutter</strong>.</li>
+<li><span class="d">a) 35 timer</span><span class="d">b) 8 680 kr</span><span class="d">c) 2,5 timer under</span><br/>
+</li>
+<li><span class="d">a) 18.50</span><span class="d">b) 8 t 15 min</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>7.5 Fart, strekning og tid</h3>
+<ol class="fasit" start="63" style="counter-reset: fas 62;">
+<li><span class="d">a) 120 km</span><span class="d">b) 240 km</span><span class="d">c) 200 km</span></li>
+<li><span class="d">a) 210 km</span><span class="d">b) 180 km</span><span class="d">c) 200 km</span></li>
+<li><span class="d">a) 50 km/t</span><span class="d">b) 80 km/t</span><span class="d">c) 60 km/t</span></li>
+<li><span class="d">a) 50 km/t</span><span class="d">b) 50 km/t</span><span class="d">c) 80 km/t</span></li>
+<li><span class="d">a) 2 timer</span><span class="d">b) 4 timer</span></li>
+<li><span class="d">a) 3 timer</span><span class="d">b) 5 timer</span></li>
+<li><span class="d">a) 90 km</span><span class="d">b) 180 km</span><span class="d">c) 45 km</span></li>
+<li><span class="d">a) 72 km/t</span><span class="d">b) 245 km</span><span class="d">c) 3 timer</span></li>
+<li>2 timer og 24 minutter er 2,4 timer. 36 : 2,4 = <strong>15 km/t</strong></li>
+<li>156 : 65 = 2,4 timer = <strong>2 timer og 24 minutter</strong></li>
+<li>Fra 08.00 til 12.30 er 4,5 timer. 315 : 4,5 = <strong>70 km/t</strong></li>
+<li>Eleven har ganget i stedet for å dele. Riktig: 150 : 2,5 = <strong>60 km/t</strong>.
+    </li>
+<li><span class="d">a) 1,5 timer</span><span class="d">b) 2 timer</span><span class="d">c) ca. 68,6 km/t — nei</span><br/>
+</li>
+<li><span class="d">a) ca. 8 t 53 min</span><span class="d">b) ja</span><span class="d">c) ca. 9 t 38 min</span><br/>
+</li>
+<li><span class="d">a) ca. 127,4 km/t</span><span class="d">b) ca. 6 t 30 min</span><span class="d">c) ca. 2 t 10 min raskere</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>7.6 Blandede oppgaver</h3>
+<ol class="fasit" start="78" style="counter-reset: fas 77;">
+<li><span class="d">a) 350 cm</span><span class="d">b) 2,4 kg</span><span class="d">c) 7,5 dl</span></li>
+<li><strong>4 timer og 35 minutter</strong></li>
+<li>55 · 4 = <strong>220 km</strong></li>
+<li><span class="d">a) 2,25 timer</span><span class="d">b) 0,75 time</span></li>
+<li>1,2 + 0,85 + 0,4 + 1,35 = <strong>3,8 kg</strong></li>
+<li>15 dl : 3 dl = <strong>5 glass</strong></li>
+<li><span class="d">a) 1 t 36 min</span><span class="d">b) 8 t 6 min</span><span class="d">c) 4 784 kr</span><br/>
+</li>
+<li><span class="d">a) 105 m³</span><span class="d">b) 105 000 liter</span><span class="d">c) 300 minutter, altså 5 timer</span></li>
+<li><span class="d">a) 4,2 m × 3,5 m</span><span class="d">b) 14,7 m²</span><span class="d">c) 17 m², 5 933 kr</span><br/>
+</li>
+<li><span class="d">a) 21,08 liter</span><span class="d">b) 482,73 kr</span><span class="d">c) 14,20 kr per mil</span></li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-6.html"><span class="etikett">Forrige kapittel</span><strong>6. Bokstavregning</strong></a><a class="neste" href="kapittel-8.html"><span class="etikett">Neste kapittel</span><strong>8. Geometri</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

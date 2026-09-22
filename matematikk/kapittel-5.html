@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5. Prosent — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html" aria-current="page"><span class="nr">5</span><span>Prosent</span></a></li><li class="dk"><a href="#d5-1">5.1 Hva prosent er</a></li><li class="dk"><a href="#d5-2">5.2 Prosent av et tall</a></li><li class="dk"><a href="#d5-3">5.3 Hvor mange prosent utgjør delen?</a></li><li class="dk"><a href="#d5-4">5.4 Prosentvis økning og reduksjon</a></li><li class="dk"><a href="#d5-5">5.5 Vekstfaktor og gjentatt endring</a></li><li class="dk"><a href="#d5-6">5.6 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#3f3a7d">
+
+
+<section class="kapittelapning" style="--kap:#3f3a7d">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 5</p>
+    <h1 class="kapittel-tittel">Prosent</h1>
+    <p class="ingress">
+      Prosent er språket vi bruker når noe skal sammenlignes: rabatt i butikken, rente på lånet,
+      skatt på lønna, oppslutning i en måling. I dette kapitlet lærer du å regne prosent av en
+      mengde, finne ut hvor mange prosent en del utgjør, og regne ut hvor mye noe har økt eller
+      sunket — og hvorfor det ikke alltid går tilbake dit det startet.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prosent som hundredeler, rabatt og økning, og vekstfaktor">
+  <!-- 100-rutenett -->
+  <text x="106" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f3a7d" text-anchor="middle">HUNDREDELER</text>
+  <g>
+    <rect x="46" y="40" width="120" height="120" fill="#fff" stroke="#3f3a7d" stroke-width="1.8"/>
+    <rect x="46" y="40" width="60" height="60" fill="#3f3a7d" fill-opacity="0.55"/>
+    <g stroke="#3f3a7d" stroke-opacity="0.45" stroke-width="0.9">
+      <line x1="58" y1="40" x2="58" y2="160"/><line x1="70" y1="40" x2="70" y2="160"/>
+      <line x1="82" y1="40" x2="82" y2="160"/><line x1="94" y1="40" x2="94" y2="160"/>
+      <line x1="106" y1="40" x2="106" y2="160"/><line x1="118" y1="40" x2="118" y2="160"/>
+      <line x1="130" y1="40" x2="130" y2="160"/><line x1="142" y1="40" x2="142" y2="160"/>
+      <line x1="154" y1="40" x2="154" y2="160"/>
+      <line x1="46" y1="52" x2="166" y2="52"/><line x1="46" y1="64" x2="166" y2="64"/>
+      <line x1="46" y1="76" x2="166" y2="76"/><line x1="46" y1="88" x2="166" y2="88"/>
+      <line x1="46" y1="100" x2="166" y2="100"/><line x1="46" y1="112" x2="166" y2="112"/>
+      <line x1="46" y1="124" x2="166" y2="124"/><line x1="46" y1="136" x2="166" y2="136"/>
+      <line x1="46" y1="148" x2="166" y2="148"/>
+    </g>
+  </g>
+  <text x="106" y="184" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">25 av 100</text>
+  <text x="106" y="210" font-family="DejaVu Serif" font-size="22" font-weight="bold" fill="#3f3a7d" text-anchor="middle">= 25 %</text>
+  <text x="106" y="234" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">prosent betyr hundredeler</text>
+
+  <line x1="204" y1="20" x2="204" y2="252" stroke="#d6d9de"/>
+
+  <!-- prisendring -->
+  <text x="330" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f3a7d" text-anchor="middle">NED OG OPP</text>
+
+  <rect x="238" y="46" width="82" height="46" rx="7" fill="#eceaf5" stroke="#3f3a7d" stroke-width="1.4"/>
+  <text x="279" y="68" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">800 kr</text>
+  <text x="279" y="84" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">før</text>
+
+  <path d="M 328 60 L 372 60" stroke="#c62828" stroke-width="2" marker-end="url(#pr)"/>
+  <defs><marker id="pr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#c62828"/></marker></defs>
+  <text x="350" y="52" font-family="Arial" font-size="11" font-weight="bold" fill="#c62828" text-anchor="middle">−20 %</text>
+  <rect x="380" y="46" width="82" height="46" rx="7" fill="#fdecec" stroke="#c62828" stroke-width="1.4"/>
+  <text x="421" y="68" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">640 kr</text>
+  <text x="421" y="84" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">etter rabatt</text>
+
+  <rect x="238" y="112" width="82" height="46" rx="7" fill="#eceaf5" stroke="#3f3a7d" stroke-width="1.4"/>
+  <text x="279" y="134" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">800 kr</text>
+  <text x="279" y="150" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">før</text>
+
+  <path d="M 328 126 L 372 126" stroke="#2e7d32" stroke-width="2" marker-end="url(#pg3)"/>
+  <defs><marker id="pg3" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#2e7d32"/></marker></defs>
+  <text x="350" y="118" font-family="Arial" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="middle">+15 %</text>
+  <rect x="380" y="112" width="82" height="46" rx="7" fill="#eaf5eb" stroke="#2e7d32" stroke-width="1.4"/>
+  <text x="421" y="134" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">920 kr</text>
+  <text x="421" y="150" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">etter økning</text>
+
+  <!-- vekstfaktor -->
+  <text x="350" y="192" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f3a7d" text-anchor="middle">VEKSTFAKTOR</text>
+  <rect x="238" y="204" width="224" height="46" rx="7" fill="#f5f6f8" stroke="#d6d9de"/>
+  <text x="350" y="224" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">−20 %  →  · 0,80</text>
+  <text x="350" y="242" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">+15 %  →  · 1,15</text>
+
+  <line x1="496" y1="20" x2="496" y2="252" stroke="#d6d9de"/>
+
+  <!-- tre skrivemåter -->
+  <text x="568" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#3f3a7d" text-anchor="middle">SAMME MENGDE</text>
+  <g font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">
+    <text x="568" y="62">1/4</text>
+    <text x="568" y="96">0,25</text>
+    <text x="568" y="130">25 %</text>
+  </g>
+  <g stroke="#3f3a7d" stroke-width="1.2">
+    <line x1="568" y1="70" x2="568" y2="82"/><line x1="568" y1="104" x2="568" y2="116"/>
+  </g>
+  <text x="568" y="158" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">tre skrivemåter</text>
+  <text x="568" y="172" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">for det samme</text>
+
+  <rect x="512" y="196" width="112" height="54" rx="7" fill="#eceaf5" stroke="#3f3a7d" stroke-width="1.3"/>
+  <text x="568" y="218" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">1 % av 850</text>
+  <text x="568" y="238" font-family="DejaVu Serif" font-size="16" font-weight="bold" fill="#3f3a7d" text-anchor="middle">= 8,50</text>
+
+  <!-- prosentlinje -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="300" font-family="Arial" font-size="11" font-weight="bold" fill="#3f3a7d">DELEN AV DET HELE</text>
+  <rect x="176" y="288" width="380" height="20" fill="none" stroke="#3f3a7d" stroke-width="1.4"/>
+  <rect x="176" y="288" width="114" height="20" fill="#3f3a7d" fill-opacity="0.45"/>
+  <text x="233" y="303" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">30 %</text>
+  <text x="176" y="284" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">0 %</text>
+  <text x="556" y="284" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">100 %</text>
+  <text x="588" y="303" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">det hele</text>
+</svg>
+<p class="illtekst">Prosent betyr hundredeler. Det samme tallet kan skrives som brøk, desimaltall eller prosent — og vekstfaktoren gjør økning og reduksjon til én enkelt multiplikasjon.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">5.1</span><span>Hva prosent er</span></li>
+    <li><span class="dknr">5.2</span><span>Prosent av et tall</span></li>
+    <li><span class="dknr">5.3</span><span>Hvor mange prosent utgjør delen?</span></li>
+    <li><span class="dknr">5.4</span><span>Prosentvis økning og reduksjon</span></li>
+    <li><span class="dknr">5.5</span><span>Vekstfaktor og gjentatt endring</span></li>
+    <li><span class="dknr">5.6</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-5.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>regne ut prosent av en mengde eller en størrelse, regne ut prosentvis endring og regne ut hvor mange prosent delen utgjør av det hele</li>
+      <li>representere og bruke brøk, desimaltall og prosent på ulike måter, utforske de matematiske sammenhengene mellom disse representasjonsformene og vurdere i hvilke situasjoner ulike representasjoner er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>sammenligne og bruke tall representert som desimaltall, prosent, brøker, potenser og kvadratrøtter i praktiske situasjoner, og vurdere hvilke representasjoner som er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Modul 3-målet har tre deler, og de tre delene svarer til delkapittel 5.2, 5.3 og 5.4. Vekstfaktor i 5.5 er ikke nevnt i læreplanen, men er tatt med som en metode som gjør gjentatt endring håndterbar på modul 4-nivå.</p>
+</section>
+
+<!-- ============================================================
+     5.1 HVA PROSENT ER
+     ============================================================ -->
+<section id="k51">
+<h2 id="d5-1">5.1 Hva prosent er</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare at prosent betyr hundredeler</li>
+    <li>gjøre om mellom brøk, desimaltall og prosent</li>
+    <li>regne ut 1 %, 10 %, 25 % og 50 % i hodet</li>
+    <li>bygge andre prosenter av disse</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>prosent</td><td></td><td>Tjue prosent av elevene.</td></tr>
+    <tr><td>hundredel</td><td></td><td>Én prosent er én hundredel.</td></tr>
+    <tr><td>det hele</td><td></td><td>Det hele er 100 prosent.</td></tr>
+    <tr><td>rabatt / avslag</td><td></td><td>Butikken gir 20 prosent rabatt.</td></tr>
+    <tr><td>andel</td><td></td><td>Andelen kvinner er 60 prosent.</td></tr>
+    <tr><td>rente</td><td></td><td>Renten på lånet er 4 prosent.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Ordet prosent betyr <strong>hundredeler</strong>. Når vi sier 25 %, mener vi 25 av 100 like
+  deler. Derfor er 100 % alltid det hele — enten det hele er en pizza, en lønn eller
+  en befolkning.
+</p>
+
+<div class="regel">
+  <span class="etikett">Sammenhengen</span>
+  <table class="data" style="margin:0.5rem auto 0;">
+    <tr><th>Prosent</th><td>1 %</td><td>10 %</td><td>20 %</td><td>25 %</td><td>50 %</td><td>100 %</td></tr>
+    <tr><th>Brøk</th><td><span class="brok"><span class="t">1</span><span class="n">100</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">10</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">5</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">4</span></span></td><td><span class="brok"><span class="t">1</span><span class="n">2</span></span></td><td>1</td></tr>
+    <tr><th>Desimaltall</th><td>0,01</td><td>0,1</td><td>0,2</td><td>0,25</td><td>0,5</td><td>1</td></tr>
+  </table>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoderegning med ti prosent og en prosent">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#eceaf5" stroke="#c5c1e0"/>
+  <text x="310" y="42" font-family="Arial" font-size="12.5" font-weight="bold" fill="#3f3a7d" text-anchor="middle">BYGG PROSENTEN AV BITER DU KAN I HODET</text>
+
+  <g>
+    <rect x="46" y="58" width="122" height="46" rx="7" fill="#fff" stroke="#3f3a7d" stroke-width="1.4"/>
+    <text x="107" y="78" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">10 %</text>
+    <text x="107" y="96" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">del på 10</text>
+
+    <rect x="182" y="58" width="122" height="46" rx="7" fill="#fff" stroke="#3f3a7d" stroke-width="1.4"/>
+    <text x="243" y="78" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">1 %</text>
+    <text x="243" y="96" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">del på 100</text>
+
+    <rect x="318" y="58" width="122" height="46" rx="7" fill="#fff" stroke="#3f3a7d" stroke-width="1.4"/>
+    <text x="379" y="78" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">50 %</text>
+    <text x="379" y="96" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">halvparten</text>
+
+    <rect x="454" y="58" width="122" height="46" rx="7" fill="#fff" stroke="#3f3a7d" stroke-width="1.4"/>
+    <text x="515" y="78" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">25 %</text>
+    <text x="515" y="96" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">halvparten to ganger</text>
+  </g>
+
+  <text x="310" y="136" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">15 % av 400 &nbsp;=&nbsp; 10 % + 5 % &nbsp;=&nbsp; 40 + 20 &nbsp;=&nbsp; 60</text>
+  <text x="310" y="160" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">5 % er halvparten av 10 %. Slik kan du bygge nesten hvilken som helst prosent i hodet.</text>
+</svg>
+<figcaption>Figur 5.1 &nbsp;Fire prosenter du bør kunne i hodet — og hvordan du setter dem sammen.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Prosent i hodet</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut 5 % av 600 i hodet.</p>
+    <ol class="trinn">
+      <li>Start med 10 %: del på 10. <span class="matte">600 : 10 = 60</span></li>
+      <li>5 % er halvparten av 10 %: <span class="matte">60 : 2 = 30</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 5 % av 600 er 30.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Skriv som prosent.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>25 av 100</li><li><span class="bokstav">b)</span>60 av 100</li>
+          <li><span class="bokstav">c)</span>8 av 100</li><li><span class="bokstav">d)</span>100 av 100</li>
+        </ul>
+      </li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>40 av 100</li>
+          <li><span class="bokstav">b)</span>75 av 100</li>
+          <li><span class="bokstav">c)</span>12 av 100</li>
+          <li><span class="bokstav">d)</span>3 av 100</li>
+        </ul>
+      </li>
+      <li>Skriv som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>50 %</li><li><span class="bokstav">b)</span>25 %</li>
+          <li><span class="bokstav">c)</span>10 %</li><li><span class="bokstav">d)</span>1 %</li>
+        </ul>
+      </li>
+      <li>Skriv som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>20 %</li>
+          <li><span class="bokstav">b)</span>75 %</li>
+          <li><span class="bokstav">c)</span>5 %</li>
+          <li><span class="bokstav">d)</span>100 %</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>10 % av 200</li><li><span class="bokstav">b)</span>10 % av 45</li>
+          <li><span class="bokstav">c)</span>50 % av 80</li><li><span class="bokstav">d)</span>25 % av 40</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>1 % av 300</li><li><span class="bokstav">b)</span>1 % av 850</li>
+          <li><span class="bokstav">c)</span>10 % av 1 200</li><li><span class="bokstav">d)</span>50 % av 150</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>10 % av 60</li>
+          <li><span class="bokstav">b)</span>10 % av 350</li>
+          <li><span class="bokstav">c)</span>50 % av 24</li>
+          <li><span class="bokstav">d)</span>25 % av 80</li>
+          <li><span class="bokstav">e)</span>1 % av 700</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>20 % av 350</li><li><span class="bokstav">b)</span>5 % av 600</li>
+          <li><span class="bokstav">c)</span>30 % av 200</li><li><span class="bokstav">d)</span>75 % av 80</li>
+        </ul>
+      </li>
+      <li>Skriv som brøk og som desimaltall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>50 %</li><li><span class="bokstav">b)</span>25 %</li>
+          <li><span class="bokstav">c)</span>20 %</li><li><span class="bokstav">d)</span>75 %</li>
+        </ul>
+      </li>
+      <li>En klasse har 25 elever, og 40 % av dem er gutter. Hvor mange gutter er det?</li>
+      <li>En jakke koster 900 kroner, og butikken gir 10 % rabatt.
+        Hvor mye er rabatten i kroner?</li>
+      <li>Regn ut 15 % av 400 i hodet.
+        Vis hvordan du bruker 10 % og 5 % til å komme fram til svaret.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>En vare koster 250 kroner. Regn ut i hodet.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>10 %</li><li><span class="bokstav">b)</span>5 %</li>
+          <li><span class="bokstav">c)</span>1 %</li><li><span class="bokstav">d)</span>16 %</li>
+        </ul>
+      </li>
+      <li>Forklar hvorfor 50 % av 80 gir samme svar som 80 % av 50.
+        Regn ut begge, og prøv å forklare hvorfor det alltid er slik.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="15" class="oppgaver" style="counter-reset: oppg 14;">
+      <li>En kommune har 12 400 innbyggere. I løpet av et år flytter 3 % av dem.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange flytter?</li>
+          <li><span class="bokstav">b)</span>25 % av dem som flytter, er under 20 år. Hvor mange er det?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent av alle innbyggerne utgjør denne gruppen?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Strømprisen økte fra 87 øre til 1,14 kroner per kilowattime.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor er økningen i øre?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er økningen? Rund av til hele prosent.</li>
+          <li><span class="bokstav">c)</span>En avis skriver at prisen steg med 27 %. Hva kan avisen ha forvekslet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     5.2 PROSENT AV ET TALL
+     ============================================================ -->
+<section id="k52" class="nyside">
+<h2 id="d5-2">5.2 Prosent av et tall</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut en hvilken som helst prosent av et tall</li>
+    <li>bruke desimaltall som metode på kalkulator</li>
+    <li>kontrollere svaret med et overslag</li>
+    <li>bruke prosentregning i praktiske situasjoner</li>
+  </ul>
+</div>
+
+<p>
+  Nå går vi fra hoderegning til nøyaktig utregning. Det finnes to metoder, og de gir alltid
+  samme svar. Velg den som passer tallene best.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="To metoder for å regne prosent av et tall">
+  <rect x="16" y="14" width="288" height="172" rx="8" fill="#eceaf5" stroke="#c5c1e0"/>
+  <rect x="316" y="14" width="288" height="172" rx="8" fill="#eceaf5" stroke="#c5c1e0"/>
+
+  <text x="160" y="42" font-family="Arial" font-size="12" font-weight="bold" fill="#3f3a7d" text-anchor="middle">METODE 1 · via 1 %</text>
+  <text x="460" y="42" font-family="Arial" font-size="12" font-weight="bold" fill="#3f3a7d" text-anchor="middle">METODE 2 · via desimaltall</text>
+
+  <text x="160" y="70" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">18 % av 450</text>
+  <text x="460" y="70" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">18 % av 450</text>
+
+  <text x="160" y="100" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">450 : 100 = 4,5</text>
+  <text x="160" y="122" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">én prosent</text>
+  <text x="160" y="148" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">4,5 · 18 = 81</text>
+
+  <text x="460" y="100" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">18 % = 0,18</text>
+  <text x="460" y="122" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">flytt kommaet to plasser</text>
+  <text x="460" y="148" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">450 · 0,18 = 81</text>
+
+  <rect x="112" y="158" width="96" height="22" rx="5" fill="#3f3a7d"/>
+  <text x="160" y="174" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">= 81</text>
+  <rect x="412" y="158" width="96" height="22" rx="5" fill="#3f3a7d"/>
+  <text x="460" y="174" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">= 81</text>
+</svg>
+<figcaption>Figur 5.2 &nbsp;Begge metodene gir samme svar. Metode 2 er raskest på kalkulator.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Kontroller alltid</span>
+  <p style="margin-bottom:0;">Gjør et overslag før du regner: 18 % er litt under 20 %, og 20 % av
+  450 er 90. Svaret bør altså ligge litt under 90. Får du 810 eller 8,1, har du bommet på
+  komma — den vanligste feilen i prosentregning.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; Skatt av lønn</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En arbeider tjener 42 000 kroner i måneden. Skatten er 32 %. Hvor mye betaler hun i skatt?</p>
+    <ol class="trinn">
+      <li>Overslag: 30 % av 42 000 er omtrent 12 600. Svaret bør ligge litt over.</li>
+      <li>Gjør prosenten om til desimaltall: <span class="matte">32 % = 0,32</span></li>
+      <li>Regn ut: <span class="matte">42 000 · 0,32 = 13 440</span></li>
+      <li>Svaret ligger litt over overslaget, som forventet.</li>
+    </ol>
+    <p class="svarlinje">Svar: Hun betaler 13 440 kroner i skatt.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="17" class="oppgaver" style="counter-reset: oppg 16;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>20 % av 150</li><li><span class="bokstav">b)</span>30 % av 60</li>
+          <li><span class="bokstav">c)</span>40 % av 200</li><li><span class="bokstav">d)</span>60 % av 50</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>20 % av 300</li>
+          <li><span class="bokstav">b)</span>30 % av 90</li>
+          <li><span class="bokstav">c)</span>40 % av 150</li>
+          <li><span class="bokstav">d)</span>60 % av 200</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>15 % av 200</li><li><span class="bokstav">b)</span>35 % av 400</li>
+          <li><span class="bokstav">c)</span>80 % av 250</li><li><span class="bokstav">d)</span>90 % av 70</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>15 % av 400</li>
+          <li><span class="bokstav">b)</span>35 % av 200</li>
+          <li><span class="bokstav">c)</span>80 % av 150</li>
+          <li><span class="bokstav">d)</span>90 % av 40</li>
+        </ul>
+      </li>
+      <li>Skriv prosenten som desimaltall, og regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>12 % av 300</li><li><span class="bokstav">b)</span>45 % av 80</li>
+          <li><span class="bokstav">c)</span>7 % av 900</li>
+        </ul>
+      </li>
+      <li>Skriv prosenten som desimaltall, og regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>8 % av 250</li>
+          <li><span class="bokstav">b)</span>24 % av 50</li>
+          <li><span class="bokstav">c)</span>6 % av 900</li>
+        </ul>
+      </li>
+      <li>En vare koster 1 200 kroner. Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>25 %</li><li><span class="bokstav">b)</span>10 %</li>
+          <li><span class="bokstav">c)</span>5 %</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="24" class="oppgaver" style="counter-reset: oppg 23;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>18 % av 450</li><li><span class="bokstav">b)</span>8 % av 2 500</li>
+          <li><span class="bokstav">c)</span>65 % av 340</li><li><span class="bokstav">d)</span>2,5 % av 800</li>
+        </ul>
+      </li>
+      <li>En arbeider tjener 42 000 kroner i måneden, og skatten er 32 %.
+        Hvor mye betaler hun i skatt?</li>
+      <li>En butikk selger 340 varer om dagen. 15 % av dem blir levert tilbake.
+        Hvor mange varer er det?</li>
+      <li>Et lån på 250 000 kroner har 4,5 % rente i året.
+        Hvor mye må låntakeren betale i rente det første året?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="28" class="oppgaver" style="counter-reset: oppg 27;">
+      <li>En vare koster 640 kroner. I prisen er merverdiavgift på 25 % allerede inkludert.
+        Hvor mye koster varen uten merverdiavgift?</li>
+      <li>En klasse har 28 elever. På mandag var 75 % til stede, på tirsdag 50 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange var til stede på mandag?</li>
+          <li><span class="bokstav">b)</span>Hvor mange var til stede på tirsdag?</li>
+          <li><span class="bokstav">c)</span>Hvor mange flere var det på mandag?</li>
+        </ul>
+      </li>
+      <li>To butikker selger samme vare til 800 kroner.
+        Butikk A gir 30 % avslag. Butikk B gir 250 kroner i avslag.
+        Hvilken butikk er billigst? Vis utregningen.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="31" class="oppgaver" style="counter-reset: oppg 30;">
+      <li>En bedrift har utgifter på 1 850 000 kroner i året.
+        Lønn utgjør 62 % og husleie 14 %. Resten er andre utgifter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye går til lønn?</li>
+          <li><span class="bokstav">b)</span>Hvor mye går til husleie?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent, og hvor mange kroner, er andre utgifter?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Av 1 240 søkere fikk 868 tilbud om plass.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent av søkerne fikk tilbud?</li>
+          <li><span class="bokstav">b)</span>Hvor mange fikk avslag, både i antall og i prosent?</li>
+          <li><span class="bokstav">c)</span>Neste år øker antall søkere med 15 %, men antall plasser er det samme. Hvor mange prosent får da tilbud? Rund av til én desimal.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     5.3 HVOR MANGE PROSENT UTGJØR DELEN?
+     ============================================================ -->
+<section id="k53" class="nyside">
+<h2 id="d5-3">5.3 Hvor mange prosent utgjør delen?</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut hvor mange prosent en del utgjør av det hele</li>
+    <li>vite hvilket tall som skal deles på hvilket</li>
+    <li>sammenligne andeler av ulike store grupper</li>
+    <li>skille mellom prosent og prosentpoeng</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>delen</td><td></td><td>Delen er 18 av 60.</td></tr>
+    <tr><td>det hele</td><td></td><td>Det hele er 60.</td></tr>
+    <tr><td>å utgjøre</td><td></td><td>Delen utgjør 30 prosent.</td></tr>
+    <tr><td>å sammenligne</td><td></td><td>Vi sammenligner de to gruppene.</td></tr>
+    <tr><td>prosentpoeng</td><td></td><td>Andelen økte med 5 prosentpoeng.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Her går vi motsatt vei av forrige delkapittel: nå kjenner vi både delen og det hele, og skal
+  finne prosenten. Det vanskeligste er ikke regningen, men å holde styr på hvilket tall som
+  er hvilket.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Delen delt på det hele ganget med hundre">
+  <rect x="16" y="14" width="588" height="152" rx="8" fill="#eceaf5" stroke="#c5c1e0"/>
+
+  <text x="120" y="60" font-family="Arial" font-size="12" font-weight="bold" fill="#3f3a7d" text-anchor="middle">DELEN</text>
+  <text x="120" y="88" font-family="DejaVu Serif" font-size="26" fill="#1f2430" text-anchor="middle">18</text>
+  <line x1="82" y1="98" x2="158" y2="98" stroke="#1f2430" stroke-width="2.4"/>
+  <text x="120" y="126" font-family="DejaVu Serif" font-size="26" fill="#1f2430" text-anchor="middle">60</text>
+  <text x="120" y="150" font-family="Arial" font-size="12" font-weight="bold" fill="#3f3a7d" text-anchor="middle">DET HELE</text>
+
+  <text x="196" y="98" font-family="DejaVu Serif" font-size="22" fill="#5a6272" text-anchor="middle">=</text>
+  <text x="258" y="98" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">0,3</text>
+
+  <path d="M 300 92 L 356 92" stroke="#3f3a7d" stroke-width="2" marker-end="url(#pp)"/>
+  <defs><marker id="pp" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#3f3a7d"/></marker></defs>
+  <text x="328" y="82" font-family="Arial" font-size="11" fill="#3f3a7d" text-anchor="middle">· 100</text>
+
+  <rect x="368" y="74" width="106" height="40" rx="7" fill="#3f3a7d"/>
+  <text x="421" y="100" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">30 %</text>
+
+  <text x="540" y="88" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Delen står alltid</text>
+  <text x="540" y="104" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">over brøkstreken.</text>
+
+  <text x="310" y="42" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">«Hvor mange prosent er 18 av 60?»</text>
+</svg>
+<figcaption>Figur 5.3 &nbsp;Del delen på det hele, og gang med 100.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Kontroll</span>
+  <p style="margin-bottom:0;">Er delen mindre enn halvparten av det hele, må svaret bli under 50 %.
+  Er delen større enn det hele, må svaret bli over 100 %. Får du et svar som bryter med dette,
+  har du sannsynligvis delt feil vei.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Poeng på en prøve</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En elev fikk 34 av 40 poeng. Hvor mange prosent er det?</p>
+    <ol class="trinn">
+      <li>Delen er 34, det hele er 40.</li>
+      <li>Del: <span class="matte">34 : 40 = 0,85</span></li>
+      <li>Gang med 100: <span class="matte">0,85 · 100 = 85</span></li>
+      <li>Kontroll: 34 er nesten hele 40, så svaret skal ligge høyt. Det stemmer.</li>
+    </ol>
+    <p class="svarlinje">Svar: Eleven fikk 85 %.</p>
+  </div>
+</div>
+
+<div class="regel">
+  <span class="etikett">Prosent eller prosentpoeng?</span>
+  <p style="margin-bottom:0;">Går en andel fra 30 % til 35 %, har den økt med
+  <strong>5 prosentpoeng</strong>. Men den har økt med <strong>omtrent 17 %</strong>,
+  siden 5 av 30 er 17 %. Begge deler er riktige — de svarer bare på to ulike spørsmål.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="33" class="oppgaver" style="counter-reset: oppg 32;">
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>25 av 100</li><li><span class="bokstav">b)</span>5 av 10</li>
+          <li><span class="bokstav">c)</span>3 av 4</li><li><span class="bokstav">d)</span>1 av 5</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>50 av 100</li>
+          <li><span class="bokstav">b)</span>2 av 10</li>
+          <li><span class="bokstav">c)</span>1 av 4</li>
+          <li><span class="bokstav">d)</span>4 av 5</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>20 av 50</li><li><span class="bokstav">b)</span>15 av 30</li>
+          <li><span class="bokstav">c)</span>12 av 60</li><li><span class="bokstav">d)</span>9 av 90</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>10 av 50</li>
+          <li><span class="bokstav">b)</span>6 av 30</li>
+          <li><span class="bokstav">c)</span>9 av 60</li>
+          <li><span class="bokstav">d)</span>8 av 80</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>18 av 60</li><li><span class="bokstav">b)</span>7 av 20</li>
+          <li><span class="bokstav">c)</span>24 av 80</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>21 av 70</li>
+          <li><span class="bokstav">b)</span>9 av 20</li>
+          <li><span class="bokstav">c)</span>36 av 80</li>
+        </ul>
+      </li>
+      <li>I en klasse på 25 elever er 15 jenter. Hvor mange prosent av elevene er jenter?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>7 av 40</li><li><span class="bokstav">b)</span>33 av 55</li>
+          <li><span class="bokstav">c)</span>51 av 68</li><li><span class="bokstav">d)</span>84 av 350</li>
+        </ul>
+      </li>
+      <li>En elev fikk 34 av 40 poeng på en prøve. Hvor mange prosent er det?</li>
+      <li>En bil kostet 320 000 kroner ny. Etter tre år er den verdt 224 000 kroner.
+        Hvor mange prosent av kjøpsprisen er den verdt nå?</li>
+      <li>Av 480 ansatte i en bedrift jobber 132 deltid.
+        Hvor mange prosent er det?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>I klasse A fikk 8 av 20 elever full score. I klasse B fikk 11 av 30 full score.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent er det i hver klasse?</li>
+          <li><span class="bokstav">b)</span>Hvilken klasse har størst andel med full score?</li>
+          <li><span class="bokstav">c)</span>Hvorfor holder det ikke å sammenligne 8 og 11 direkte?</li>
+        </ul>
+      </li>
+      <li>En elev skal regne ut hvor mange prosent 12 er av 48, og svarer 400 %.
+        Forklar hva eleven har gjort feil, og regn ut riktig svar.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>En kommune har 8 600 boliger, og 1 462 av dem har solceller.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent av boligene har solceller?</li>
+          <li><span class="bokstav">b)</span>Målet er at 25 % skal ha det innen fem år. Hvor mange flere boliger må da få solceller?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent må antallet solcelleanlegg øke for å nå målet? Rund av til hele prosent.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «I fjor svarte 240 av 800 spurte at de sykler til jobb.
+          I år svarte 315 av 900 det samme.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange prosent syklet i fjor, og hvor mange i år?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosentpoeng har andelen økt?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent har andelen økt? Rund av til én desimal, og forklar forskjellen fra svaret i b).</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     5.4 PROSENTVIS ØKNING OG REDUKSJON
+     ============================================================ -->
+<section id="k54" class="nyside">
+<h2 id="d5-4">5.4 Prosentvis økning og reduksjon</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut ny pris etter rabatt eller påslag</li>
+    <li>regne ut hvor mange prosent noe har økt eller sunket</li>
+    <li>forklare hvorfor lik prosent opp og ned ikke gir samme beløp</li>
+  </ul>
+</div>
+
+<p>
+  Når noe endrer seg, må du alltid holde styr på <strong>hva prosenten regnes av</strong>.
+  Det er nesten alltid det opprinnelige tallet — det som var før endringen.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Prisen ned tjue prosent og prosentvis endring regnet ut">
+  <rect x="16" y="14" width="288" height="162" rx="8" fill="#fdecec" stroke="#f0c4c4"/>
+  <rect x="316" y="14" width="288" height="162" rx="8" fill="#eaf5eb" stroke="#bcdcbe"/>
+
+  <text x="160" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">NY PRIS ETTER RABATT</text>
+  <text x="160" y="68" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">800 kr, 20 % rabatt</text>
+  <text x="160" y="96" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">20 % av 800 = 160</text>
+  <text x="160" y="120" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">800 − 160 = 640</text>
+  <rect x="106" y="132" width="108" height="26" rx="5" fill="#c62828"/>
+  <text x="160" y="150" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">640 kr</text>
+
+  <text x="460" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">HVOR MYE HAR DET ØKT?</text>
+  <text x="460" y="68" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">32 000 kr → 33 600 kr</text>
+  <text x="460" y="96" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">endring: 1 600 kr</text>
+  <text x="460" y="120" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">1 600 : 32 000 = 0,05</text>
+  <rect x="406" y="132" width="108" height="26" rx="5" fill="#2e7d32"/>
+  <text x="460" y="150" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">5 %</text>
+</svg>
+<figcaption>Figur 5.4 &nbsp;Til venstre kjenner du prosenten, til høyre skal du finne den. Legg merke til at du deler på det <em>opprinnelige</em> tallet.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Prosentvis endring</span>
+  <p style="margin-bottom:0;">Endringen deles på det opprinnelige tallet, og ganges med 100:<br>
+  <span class="matte">(nytt tall − gammelt tall) : gammelt tall · 100</span></p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Opp og ned med samme prosent</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En genser koster 400 kroner. Prisen settes opp 25 %, og senere ned 25 %. Er prisen tilbake på 400?</p>
+    <ol class="trinn">
+      <li>Opp: 25 % av 400 = 100, så ny pris er <span class="matte">400 + 100 = 500</span></li>
+      <li>Ned: nå regnes 25 % av <em>500</em>, ikke av 400. Det blir 125.</li>
+      <li>Pris til slutt: <span class="matte">500 − 125 = 375</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Nei — prisen er 375 kroner, altså 25 kroner lavere enn i starten.</p>
+    <p style="margin-top:0.7rem;font-size:0.95rem;color:#5a6272;">
+      Grunnen er at de to prosentene regnes av ulike beløp. Dette er en av de vanligste
+      misforståelsene i prosentregning, og den dukker opp i butikker, i lønnsoppgjør og
+      i nyhetsartikler.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>Regn ut ny pris etter 10 % rabatt.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>200 kr</li><li><span class="bokstav">b)</span>450 kr</li>
+          <li><span class="bokstav">c)</span>1 000 kr</li>
+        </ul>
+      </li>
+      <li>Regn ut ny pris etter 10 % rabatt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>300 kr</li>
+          <li><span class="bokstav">b)</span>650 kr</li>
+          <li><span class="bokstav">c)</span>2 000 kr</li>
+        </ul>
+      </li>
+      <li>Regn ut ny pris etter 20 % rabatt.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>500 kr</li><li><span class="bokstav">b)</span>250 kr</li>
+          <li><span class="bokstav">c)</span>90 kr</li>
+        </ul>
+      </li>
+      <li>Regn ut ny pris etter 25 % rabatt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>400 kr</li>
+          <li><span class="bokstav">b)</span>160 kr</li>
+          <li><span class="bokstav">c)</span>80 kr</li>
+        </ul>
+      </li>
+      <li>Regn ut ny verdi etter 10 % økning.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>300</li><li><span class="bokstav">b)</span>1 500</li>
+          <li><span class="bokstav">c)</span>80</li>
+        </ul>
+      </li>
+      <li>Regn ut ny verdi etter 20 % økning.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>500</li>
+          <li><span class="bokstav">b)</span>250</li>
+          <li><span class="bokstav">c)</span>45</li>
+        </ul>
+      </li>
+      <li>En vare koster 600 kroner og settes ned med 25 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye er rabatten i kroner?</li>
+          <li><span class="bokstav">b)</span>Hva er den nye prisen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="55" class="oppgaver" style="counter-reset: oppg 54;">
+      <li>Regn ut ny pris.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>850 kr, ned 15 %</li>
+          <li><span class="bokstav">b)</span>1 240 kr, ned 30 %</li>
+          <li><span class="bokstav">c)</span>480 kr, opp 25 %</li>
+        </ul>
+      </li>
+      <li>En lønn på 34 000 kroner øker med 4 %. Hva blir den nye lønnen?</li>
+      <li>Prisen på en vare gikk fra 250 kroner til 300 kroner.
+        Hvor mange prosent er økningen?</li>
+      <li>Verdien på en bil gikk fra 180 000 kroner til 144 000 kroner.
+        Hvor mange prosent er reduksjonen?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="59" class="oppgaver" style="counter-reset: oppg 58;">
+      <li>En vare settes ned fra 900 kroner til 675 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor er reduksjonen i kroner?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er reduksjonen?</li>
+        </ul>
+      </li>
+      <li>En genser koster 400 kroner. Prisen settes opp 25 %, og senere ned 25 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er prisen etter økningen?</li>
+          <li><span class="bokstav">b)</span>Hva er prisen etter reduksjonen?</li>
+          <li><span class="bokstav">c)</span>Hvorfor er prisen ikke tilbake på 400 kroner?</li>
+        </ul>
+      </li>
+      <li>En butikk reklamerer med «50 % avslag + 20 % ekstra». En kunde tror det betyr
+        70 % avslag til sammen. Varen koster 800 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva blir prisen etter begge avslagene?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er det samlede avslaget?</li>
+          <li><span class="bokstav">c)</span>Har kunden rett? Forklar.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="62" class="oppgaver" style="counter-reset: oppg 61;">
+      <li>En bedrift hadde 240 ansatte. Antallet økte med 25 %, og året etter gikk det ned 10 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange ansatte var det etter økningen?</li>
+          <li><span class="bokstav">b)</span>Hvor mange var det etter reduksjonen?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent har antallet endret seg fra starten?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Kommunens budsjett øker fra 486 millioner til 522 millioner kroner.
+          Prisstigningen i samfunnet er 4 %.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor er økningen i millioner kroner?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er økningen? Rund av til én desimal.</li>
+          <li><span class="bokstav">c)</span>Har kommunen fått mer å rutte med enn før? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     5.5 VEKSTFAKTOR OG GJENTATT ENDRING
+     ============================================================ -->
+<section id="k55" class="nyside">
+<h2 id="d5-5">5.5 Vekstfaktor og gjentatt endring</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skrive en økning eller reduksjon som en vekstfaktor</li>
+    <li>regne ut ny verdi med én multiplikasjon</li>
+    <li>regne med gjentatt endring over flere år</li>
+    <li>forklare hvorfor to påfølgende endringer ikke bare kan legges sammen</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>vekstfaktor</td><td></td><td>Vekstfaktoren er 1,15.</td></tr>
+    <tr><td>gjentatt endring</td><td></td><td>Prisen øker fem år på rad.</td></tr>
+    <tr><td>renters rente</td><td></td><td>Renten regnes av et større beløp hvert år.</td></tr>
+    <tr><td>verditap</td><td></td><td>Maskinen har et verditap på 18 prosent.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  I forrige delkapittel gjorde du to regnestykker: først fant du endringen, så la du den til
+  eller trakk den fra. <strong>Vekstfaktoren</strong> gjør det samme i én operasjon — og det er
+  det som gjør gjentatt endring over mange år overkommelig.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vekstfaktor for økning og reduksjon">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#eceaf5" stroke="#c5c1e0"/>
+
+  <text x="160" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">ØKNING</text>
+  <text x="460" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">REDUKSJON</text>
+
+  <text x="160" y="68" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">100 % + 15 % = 115 %</text>
+  <text x="160" y="94" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#2e7d32" text-anchor="middle">vekstfaktor 1,15</text>
+  <text x="160" y="122" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">800 · 1,15 = 920</text>
+
+  <text x="460" y="68" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">100 % − 20 % = 80 %</text>
+  <text x="460" y="94" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#c62828" text-anchor="middle">vekstfaktor 0,80</text>
+  <text x="460" y="122" font-family="DejaVu Serif" font-size="14" fill="#5a6272" text-anchor="middle">800 · 0,80 = 640</text>
+
+  <line x1="310" y1="30" x2="310" y2="136" stroke="#c5c1e0"/>
+  <text x="310" y="160" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Er faktoren større enn 1, øker verdien. Er den mindre enn 1, synker den.</text>
+</svg>
+<figcaption>Figur 5.5 &nbsp;Vekstfaktoren er den nye verdien uttrykt som andel av den gamle.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Gjentatt endring</span>
+  <p style="margin-bottom:0;">Skjer den samme endringen flere ganger, ganger du med vekstfaktoren
+  like mange ganger — altså opphøyer den i en potens (se kapittel 3.3):<br>
+  <span class="matte">10 000 · 1,03⁴ = 11 255,09</span> &nbsp; etter fire år med 3 % rente.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="64" class="oppgaver" style="counter-reset: oppg 63;">
+      <li>Skriv vekstfaktoren.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>økning på 10 %</li><li><span class="bokstav">b)</span>økning på 25 %</li>
+          <li><span class="bokstav">c)</span>reduksjon på 10 %</li><li><span class="bokstav">d)</span>reduksjon på 25 %</li>
+        </ul>
+      </li>
+      <li>Skriv vekstfaktoren.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>økning på 20 %</li>
+          <li><span class="bokstav">b)</span>økning på 8 %</li>
+          <li><span class="bokstav">c)</span>reduksjon på 20 %</li>
+          <li><span class="bokstav">d)</span>reduksjon på 5 %</li>
+        </ul>
+      </li>
+      <li>Skriv vekstfaktoren.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>+5 %</li><li><span class="bokstav">b)</span>+50 %</li>
+          <li><span class="bokstav">c)</span>−5 %</li><li><span class="bokstav">d)</span>−40 %</li>
+        </ul>
+      </li>
+      <li>Skriv vekstfaktoren.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>+15 %</li>
+          <li><span class="bokstav">b)</span>+100 %</li>
+          <li><span class="bokstav">c)</span>−10 %</li>
+          <li><span class="bokstav">d)</span>−35 %</li>
+        </ul>
+      </li>
+      <li>Regn ut med vekstfaktor.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>400 opp 20 %</li><li><span class="bokstav">b)</span>400 ned 20 %</li>
+        </ul>
+      </li>
+      <li>Regn ut med vekstfaktor.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>300 opp 10 %</li>
+          <li><span class="bokstav">b)</span>300 ned 10 %</li>
+          <li><span class="bokstav">c)</span>800 opp 25 %</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="70" class="oppgaver" style="counter-reset: oppg 69;">
+      <li>Regn ut med vekstfaktor.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>1 500 opp 8 %</li><li><span class="bokstav">b)</span>960 ned 15 %</li>
+          <li><span class="bokstav">c)</span>250 opp 40 %</li>
+        </ul>
+      </li>
+      <li>En vare til 640 kroner settes ned 25 %, og deretter ytterligere 20 %.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster varen etter det første avslaget?</li>
+          <li><span class="bokstav">b)</span>Hva koster den etter det andre?</li>
+          <li><span class="bokstav">c)</span>Hva blir den samlede vekstfaktoren, og hvor mange prosent er det samlede avslaget?</li>
+        </ul>
+      </li>
+      <li>Hvilken vekstfaktor svarer til et samlet avslag på 40 %?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="73" class="oppgaver" style="counter-reset: oppg 72;">
+      <li>På en konto står det 20 000 kroner, og renten er 2 % i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mye står på kontoen etter ett år?</li>
+          <li><span class="bokstav">b)</span>Hvor mye står det etter tre år?</li>
+          <li><span class="bokstav">c)</span>Hvor mye rente er det til sammen?</li>
+        </ul>
+      </li>
+      <li>En bedrift øker prisene med 10 % to år på rad.
+        En kunde sier at prisene har økt med 20 % til sammen.
+        Har kunden rett? Vis utregningen.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="75" class="oppgaver" style="counter-reset: oppg 74;">
+      <li>En by har 45 000 innbyggere, og folketallet vokser med 1,5 % i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange innbyggere er det etter ett år?</li>
+          <li><span class="bokstav">b)</span>Hvor mange er det etter ti år? Rund av til nærmeste hele innbygger.</li>
+          <li><span class="bokstav">c)</span>Hvor mange år går det før folketallet passerer 50 000?</li>
+        </ul>
+      </li>
+      <li>En maskin koster 380 000 kroner ny, og faller 18 % i verdi hvert år.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er den verdt etter ett år?</li>
+          <li><span class="bokstav">b)</span>Hva er den verdt etter tre år?</li>
+          <li><span class="bokstav">c)</span>Hvor mye har den mistet i verdi til sammen på tre år?</li>
+        </ul>
+      </li>
+      <li>Sammenlign to situasjoner:
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>500 kroner settes opp 10 %, og deretter ned 10 %.</li>
+          <li><span class="bokstav">b)</span>500 kroner settes ned 10 %, og deretter opp 10 %.</li>
+          <li><span class="bokstav">c)</span>Regn ut begge. Hvorfor blir svaret det samme, og hvorfor er det ikke 500?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     5.6 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k56" class="nyside">
+<h2 id="d5-6">5.6 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="78" class="oppgaver" style="counter-reset: oppg 77;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>20 % av 450</li><li><span class="bokstav">b)</span>15 % av 300</li>
+          <li><span class="bokstav">c)</span>8 % av 250</li>
+        </ul>
+      </li>
+      <li>Hvor mange prosent er
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>12 av 48</li><li><span class="bokstav">b)</span>27 av 90</li>
+          <li><span class="bokstav">c)</span>45 av 60</li>
+        </ul>
+      </li>
+      <li>En vare koster 750 kroner og settes ned 20 %. Hva er den nye prisen?</li>
+      <li>Skriv som prosent.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span>0,35</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">1</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+      <li>En lønn økte fra 28 000 kroner til 29 400 kroner.
+        Hvor mange prosent er økningen?</li>
+      <li>Skriv vekstfaktoren.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>+12 %</li><li><span class="bokstav">b)</span>−35 %</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="84" class="oppgaver" style="counter-reset: oppg 83;">
+      <li><span class="m4merke">M4</span> En butikk kjøper inn en vare for 320 kroner
+        og selger den for 480 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor er fortjenesten i kroner?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er fortjenesten av innkjøpsprisen?</li>
+          <li><span class="bokstav">c)</span>Hvor mange prosent er den av salgsprisen? Hvorfor er de to svarene forskjellige?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> 25 000 kroner settes i banken med 3,5 % rente i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er vekstfaktoren?</li>
+          <li><span class="bokstav">b)</span>Hvor mye står på kontoen etter fem år?</li>
+          <li><span class="bokstav">c)</span>Hvor mye har beløpet vokst i kroner?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Antall elever ved skolen har gått ned fra 420 til 357.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange færre elever er det?</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er nedgangen?</li>
+          <li><span class="bokstav">c)</span>Hvis nedgangen fortsetter med samme prosent, omtrent hvor mange elever er det om ett år til?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En vare koster 1 250 kroner, og merverdiavgiften
+        på 25 % er inkludert i prisen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva koster varen uten merverdiavgift?</li>
+          <li><span class="bokstav">b)</span>Hvor mye utgjør merverdiavgiften i kroner?</li>
+          <li><span class="bokstav">c)</span>Hvorfor er ikke merverdiavgiften 25 % av 1 250 kroner?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg vet at prosent betyr hundredeler, og kan regne 1 %, 10 %, 25 % og 50 % i hodet. <em>(5.1)</em></li>
+    <li>Jeg kan regne ut en hvilken som helst prosent av et tall. <em>(5.2)</em></li>
+    <li>Jeg kan finne ut hvor mange prosent en del utgjør av det hele. <em>(5.3)</em></li>
+    <li>Jeg kjenner forskjellen på prosent og prosentpoeng. <em>(5.3)</em></li>
+    <li>Jeg kan regne ut ny pris etter rabatt, og hvor mange prosent noe har endret seg. <em>(5.4)</em></li>
+    <li>Jeg kan bruke vekstfaktor, også når endringen skjer flere ganger. <em>(5.5)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 5</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>5.1 Hva prosent er</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 25 %</span><span class="d">b) 60 %</span><span class="d">c) 8 %</span><span class="d">d) 100 %</span></li>
+<li><span class="d">a) 40 %</span><span class="d">b) 75 %</span><span class="d">c) 12 %</span><span class="d">d) 3 %</span></li>
+<li><span class="d">a) 0,5</span><span class="d">b) 0,25</span><span class="d">c) 0,1</span><span class="d">d) 0,01</span></li>
+<li><span class="d">a) 0,2</span><span class="d">b) 0,75</span><span class="d">c) 0,05</span><span class="d">d) 1</span></li>
+<li><span class="d">a) 20</span><span class="d">b) 4,5</span><span class="d">c) 40</span><span class="d">d) 10</span></li>
+<li><span class="d">a) 3</span><span class="d">b) 8,5</span><span class="d">c) 120</span><span class="d">d) 75</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 35</span><span class="d">c) 12</span><span class="d">d) 20</span><span class="d">e) 7</span></li>
+<li><span class="d">a) 70</span><span class="d">b) 30</span><span class="d">c) 60</span><span class="d">d) 60</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">1</span><span class="n">2</span></span> og 0,5</span><span class="d">b) <span class="brok"><span class="t">1</span><span class="n">4</span></span> og 0,25</span>
+<span class="d">c) <span class="brok"><span class="t">1</span><span class="n">5</span></span> og 0,2</span><span class="d">d) <span class="brok"><span class="t">3</span><span class="n">4</span></span> og 0,75</span></li>
+<li>40 % av 25 = <strong>10 gutter</strong></li>
+<li>10 % av 900 = <strong>90 kroner</strong></li>
+<li>10 % av 400 = 40, og 5 % er halvparten, altså 20. Til sammen <strong>60</strong>.</li>
+<li><span class="d">a) 25</span><span class="d">b) 12,5</span><span class="d">c) 2,5</span><span class="d">d) 40</span><br/>
+</li>
+<li>Begge gir <strong>40</strong>.
+    </li>
+<li><span class="d">a) 372 personer</span><span class="d">b) 93 personer</span><span class="d">c) 0,75 %</span></li>
+<li><span class="d">a) 27 øre</span><span class="d">b) 31 %</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>5.2 Prosent av et tall</h3>
+<ol class="fasit" start="17" style="counter-reset: fas 16;">
+<li><span class="d">a) 30</span><span class="d">b) 18</span><span class="d">c) 80</span><span class="d">d) 30</span></li>
+<li><span class="d">a) 60</span><span class="d">b) 27</span><span class="d">c) 60</span><span class="d">d) 120</span></li>
+<li><span class="d">a) 30</span><span class="d">b) 140</span><span class="d">c) 200</span><span class="d">d) 63</span></li>
+<li><span class="d">a) 60</span><span class="d">b) 70</span><span class="d">c) 120</span><span class="d">d) 36</span></li>
+<li><span class="d">a) 0,12 · 300 = 36</span><span class="d">b) 0,45 · 80 = 36</span><span class="d">c) 0,07 · 900 = 63</span></li>
+<li><span class="d">a) 0,08 · 250 = 20</span><span class="d">b) 0,24 · 50 = 12</span><span class="d">c) 0,06 · 900 = 54</span></li>
+<li><span class="d">a) 300 kr</span><span class="d">b) 120 kr</span><span class="d">c) 60 kr</span></li>
+<li><span class="d">a) 81</span><span class="d">b) 200</span><span class="d">c) 221</span><span class="d">d) 20</span></li>
+<li>0,32 · 42 000 = <strong>13 440 kroner</strong></li>
+<li>0,15 · 340 = <strong>51 varer</strong></li>
+<li>0,045 · 250 000 = <strong>11 250 kroner</strong></li>
+<li>640 : 1,25 = <strong>512 kroner</strong>
+</li>
+<li><span class="d">a) 21 elever</span><span class="d">b) 14 elever</span><span class="d">c) 7 flere</span></li>
+<li>Butikk A: 30 % av 800 = 240 i avslag, pris 560 kr.<br/>
+    Butikk B: 250 kr i avslag, pris 550 kr.<br/>
+<strong>Butikk B er billigst, med 10 kroner.</strong></li>
+<li><span class="d">a) 1 147 000 kr</span><span class="d">b) 259 000 kr</span><span class="d">c) 24 %, altså 444 000 kr</span></li>
+<li><span class="d">a) 70 %</span><span class="d">b) 372 fikk avslag, altså 30 %</span><span class="d">c) 60,9 %</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>5.3 Hvor mange prosent utgjør delen?</h3>
+<ol class="fasit" start="33" style="counter-reset: fas 32;">
+<li><span class="d">a) 25 %</span><span class="d">b) 50 %</span><span class="d">c) 75 %</span><span class="d">d) 20 %</span></li>
+<li><span class="d">a) 50 %</span><span class="d">b) 20 %</span><span class="d">c) 25 %</span><span class="d">d) 80 %</span></li>
+<li><span class="d">a) 40 %</span><span class="d">b) 50 %</span><span class="d">c) 20 %</span><span class="d">d) 10 %</span></li>
+<li><span class="d">a) 20 %</span><span class="d">b) 20 %</span><span class="d">c) 15 %</span><span class="d">d) 10 %</span></li>
+<li><span class="d">a) 30 %</span><span class="d">b) 35 %</span><span class="d">c) 30 %</span></li>
+<li><span class="d">a) 30 %</span><span class="d">b) 45 %</span><span class="d">c) 45 %</span></li>
+<li>15 : 25 = 0,6, altså <strong>60 %</strong></li>
+<li><span class="d">a) 17,5 %</span><span class="d">b) 60 %</span><span class="d">c) 75 %</span><span class="d">d) 24 %</span></li>
+<li>34 : 40 = 0,85, altså <strong>85 %</strong></li>
+<li>224 000 : 320 000 = 0,7, altså <strong>70 %</strong></li>
+<li>132 : 480 = 0,275, altså <strong>27,5 %</strong></li>
+<li><span class="d">a) klasse A 40 %, klasse B ca. 36,7 %</span><span class="d">b) klasse A</span>
+<span class="d">c) </span><br/>
+</li>
+<li>Eleven har delt feil vei og regnet 48 : 12 i stedet for 12 : 48.
+    Riktig svar er 12 : 48 = 0,25, altså <strong>25 %</strong>.
+    </li>
+<li><span class="d">a) 17 %</span><span class="d">b) 688 boliger</span><span class="d">c) 47 %</span><br/>
+</li>
+<li><span class="d">a) 30 % i fjor og 35 % i år</span><span class="d">b) 5 prosentpoeng</span>
+<span class="d">c) ca. 16,7 %</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>5.4 Prosentvis økning og reduksjon</h3>
+<ol class="fasit" start="48" style="counter-reset: fas 47;">
+<li><span class="d">a) 180 kr</span><span class="d">b) 405 kr</span><span class="d">c) 900 kr</span></li>
+<li><span class="d">a) 270 kr</span><span class="d">b) 585 kr</span><span class="d">c) 1 800 kr</span></li>
+<li><span class="d">a) 400 kr</span><span class="d">b) 200 kr</span><span class="d">c) 72 kr</span></li>
+<li><span class="d">a) 300 kr</span><span class="d">b) 120 kr</span><span class="d">c) 60 kr</span></li>
+<li><span class="d">a) 330</span><span class="d">b) 1 650</span><span class="d">c) 88</span></li>
+<li><span class="d">a) 600</span><span class="d">b) 300</span><span class="d">c) 54</span></li>
+<li><span class="d">a) 150 kr</span><span class="d">b) 450 kr</span></li>
+<li><span class="d">a) 722,50 kr</span><span class="d">b) 868 kr</span><span class="d">c) 600 kr</span></li>
+<li>34 000 · 1,04 = <strong>35 360 kroner</strong></li>
+<li>Endringen er 50 kr. 50 : 250 = 0,2, altså <strong>20 % økning</strong></li>
+<li>Endringen er 36 000 kr. 36 000 : 180 000 = 0,2, altså <strong>20 % reduksjon</strong></li>
+<li><span class="d">a) 225 kr</span><span class="d">b) 25 %</span></li>
+<li><span class="d">a) 500 kr</span><span class="d">b) 375 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 320 kr</span><span class="d">b) 60 %</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 300 ansatte</span><span class="d">b) 270 ansatte</span><span class="d">c) 12,5 % økning</span><br/>
+</li>
+<li><span class="d">a) 36 millioner kroner</span><span class="d">b) 7,4 %</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>5.5 Vekstfaktor og gjentatt endring</h3>
+<ol class="fasit" start="64" style="counter-reset: fas 63;">
+<li><span class="d">a) 1,10</span><span class="d">b) 1,25</span><span class="d">c) 0,90</span><span class="d">d) 0,75</span></li>
+<li><span class="d">a) 1,20</span><span class="d">b) 1,08</span><span class="d">c) 0,80</span><span class="d">d) 0,95</span></li>
+<li><span class="d">a) 1,05</span><span class="d">b) 1,50</span><span class="d">c) 0,95</span><span class="d">d) 0,60</span></li>
+<li><span class="d">a) 1,15</span><span class="d">b) 2,00</span><span class="d">c) 0,90</span><span class="d">d) 0,65</span></li>
+<li><span class="d">a) 400 · 1,20 = 480</span><span class="d">b) 400 · 0,80 = 320</span></li>
+<li><span class="d">a) 300 · 1,10 = 330</span><span class="d">b) 300 · 0,90 = 270</span><span class="d">c) 800 · 1,25 = 1 000</span></li>
+<li><span class="d">a) 1 620</span><span class="d">b) 816</span><span class="d">c) 350</span></li>
+<li><span class="d">a) 480 kr</span><span class="d">b) 384 kr</span><span class="d">c) 0,75 · 0,80 = 0,60, altså 40 % samlet avslag</span></li>
+<li>Vekstfaktoren er <strong>0,60</strong></li>
+<li><span class="d">a) 20 400 kr</span><span class="d">b) 21 224,16 kr</span><span class="d">c) 1 224,16 kr</span><br/>
+</li>
+<li>1,10 · 1,10 = 1,21, altså <strong>21 % — ikke 20 %.</strong>
+</li>
+<li><span class="d">a) 45 675 innbyggere</span><span class="d">b) ca. 52 224 innbyggere</span><span class="d">c) 8 år</span><br/>
+</li>
+<li><span class="d">a) 311 600 kr</span><span class="d">b) 209 519,84 kr</span><span class="d">c) 170 480,16 kr</span><br/>
+</li>
+<li><span class="d">a) 495 kr</span><span class="d">b) 495 kr</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>5.6 Blandede oppgaver</h3>
+<ol class="fasit" start="78" style="counter-reset: fas 77;">
+<li><span class="d">a) 90</span><span class="d">b) 45</span><span class="d">c) 20</span></li>
+<li><span class="d">a) 25 %</span><span class="d">b) 30 %</span><span class="d">c) 75 %</span></li>
+<li>750 · 0,80 = <strong>600 kroner</strong></li>
+<li><span class="d">a) 75 %</span><span class="d">b) 35 %</span><span class="d">c) 12,5 %</span></li>
+<li>Endringen er 1 400 kr. 1 400 : 28 000 = 0,05, altså <strong>5 %</strong></li>
+<li><span class="d">a) 1,12</span><span class="d">b) 0,65</span></li>
+<li><span class="d">a) 160 kr</span><span class="d">b) 50 %</span><span class="d">c) ca. 33,3 %</span><br/>
+</li>
+<li><span class="d">a) 1,035</span><span class="d">b) 29 692,16 kr</span><span class="d">c) 4 692,16 kr</span></li>
+<li><span class="d">a) 63 elever</span><span class="d">b) 15 %</span><span class="d">c) ca. 303 elever</span><br/>
+</li>
+<li><span class="d">a) 1 000 kr</span><span class="d">b) 250 kr</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-4.html"><span class="etikett">Forrige kapittel</span><strong>4. Brøk</strong></a><a class="neste" href="kapittel-6.html"><span class="etikett">Neste kapittel</span><strong>6. Bokstavregning</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

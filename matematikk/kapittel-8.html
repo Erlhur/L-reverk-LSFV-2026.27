@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8. Geometri — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html" aria-current="page"><span class="nr">8</span><span>Geometri</span></a></li><li class="dk"><a href="#d8-1">8.1 Figurer og vinkler</a></li><li class="dk"><a href="#d8-2">8.2 Omkrets og areal</a></li><li class="dk"><a href="#d8-3">8.3 Sammensatte figurer</a></li><li class="dk"><a href="#d8-4">8.4 Sirkelen</a></li><li class="dk"><a href="#d8-5">8.5 Pytagoras&#x27; setning</a></li><li class="dk"><a href="#d8-6">8.6 Volum</a></li><li class="dk"><a href="#d8-7">8.7 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#5c6b23">
+
+
+<section class="kapittelapning" style="--kap:#5c6b23">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 8</p>
+    <h1 class="kapittel-tittel">Geometri</h1>
+    <p class="ingress">
+      Geometri er faget for alle som skal bygge, male, legge gulv eller planlegge et rom.
+      Hvor mye maling trengs til veggene? Hvor langt gjerde går det rundt tomta? Er hjørnet
+      virkelig rett? I dette kapitlet regner du med vinkler, omkrets, areal, sirkler,
+      Pytagoras' setning og volum — alt knyttet til situasjoner du kan møte i praksis.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vinkler, areal, sirkel, Pytagoras og volum">
+  <!-- vinkler -->
+  <text x="96" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23" text-anchor="middle">VINKLER</text>
+  <path d="M 40 120 L 40 56 L 150 120 Z" fill="#eef1e0" stroke="#5c6b23" stroke-width="1.6"/>
+  <path d="M 40 108 h 12 v 12" fill="none" stroke="#5c6b23" stroke-width="1.3"/>
+  <g font-family="DejaVu Serif" font-size="12" fill="#1f2430">
+    <text x="56" y="72">32°</text><text x="118" y="112">58°</text>
+  </g>
+  <text x="96" y="146" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">32 + 58 + 90 = 180°</text>
+  <text x="96" y="166" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">vinkelsummen i en trekant</text>
+
+  <line x1="184" y1="20" x2="184" y2="252" stroke="#d6d9de"/>
+
+  <!-- areal -->
+  <text x="286" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23" text-anchor="middle">OMKRETS OG AREAL</text>
+  <rect x="212" y="46" width="148" height="86" fill="#eef1e0" stroke="#5c6b23" stroke-width="1.6"/>
+  <text x="286" y="86" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">A = l · b</text>
+  <text x="286" y="108" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">O = 2(l + b)</text>
+  <text x="286" y="40" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">l</text>
+  <text x="202" y="94" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">b</text>
+
+  <path d="M 212 210 L 286 152 L 360 210 Z" fill="#eef1e0" stroke="#5c6b23" stroke-width="1.6"/>
+  <line x1="286" y1="152" x2="286" y2="210" stroke="#5c6b23" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="298" y="188" font-family="DejaVu Serif" font-size="12" fill="#5a6272">h</text>
+  <text x="286" y="224" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">g</text>
+  <text x="286" y="244" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">A = g · h : 2</text>
+
+  <line x1="386" y1="20" x2="386" y2="252" stroke="#d6d9de"/>
+
+  <!-- sirkel -->
+  <text x="466" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23" text-anchor="middle">SIRKEL</text>
+  <circle cx="466" cy="94" r="44" fill="#eef1e0" stroke="#5c6b23" stroke-width="1.8"/>
+  <line x1="422" y1="94" x2="510" y2="94" stroke="#5c6b23" stroke-width="1.4"/>
+  <line x1="466" y1="94" x2="466" y2="50" stroke="#5c6b23" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <circle cx="466" cy="94" r="3" fill="#5c6b23"/>
+  <text x="488" y="88" font-family="DejaVu Serif" font-size="12" fill="#5a6272">r</text>
+  <text x="444" y="112" font-family="DejaVu Serif" font-size="12" fill="#5a6272">d</text>
+  <text x="466" y="158" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">O = π · d</text>
+  <text x="466" y="178" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">A = π · r²</text>
+  <text x="466" y="200" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">π ≈ 3,14</text>
+
+  <line x1="546" y1="20" x2="546" y2="252" stroke="#d6d9de"/>
+
+  <!-- pytagoras -->
+  <text x="594" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23" text-anchor="middle">PYTAGORAS</text>
+  <path d="M 562 128 L 562 62 L 620 128 Z" fill="#eef1e0" stroke="#5c6b23" stroke-width="1.6"/>
+  <path d="M 562 116 h 12 v 12" fill="none" stroke="#5c6b23" stroke-width="1.2"/>
+  <g font-family="DejaVu Serif" font-size="12" fill="#1f2430">
+    <text x="550" y="98">a</text><text x="588" y="142">b</text><text x="596" y="90">c</text>
+  </g>
+  <text x="594" y="176" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">a² + b² = c²</text>
+  <text x="594" y="198" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">bare i rettvinklede</text>
+  <text x="594" y="212" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">trekanter</text>
+
+  <!-- volum -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="298" font-family="Arial" font-size="11" font-weight="bold" fill="#5c6b23">VOLUM</text>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430">
+    <text x="92" y="298">V = grunnflate · høyde</text>
+    <text x="292" y="298">sylinder: V = π · r² · h</text>
+    <text x="466" y="298">1 m³ = 1 000 liter</text>
+  </g>
+</svg>
+<p class="illtekst">Fem verktøy i geometrien: vinkelsummen, formlene for omkrets og areal, sirkelen med π, Pytagoras' setning for rettvinklede trekanter, og volum som grunnflate ganger høyde.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">8.1</span><span>Figurer og vinkler</span></li>
+    <li><span class="dknr">8.2</span><span>Omkrets og areal</span></li>
+    <li><span class="dknr">8.3</span><span>Sammensatte figurer</span></li>
+    <li><span class="dknr">8.4</span><span>Sirkelen</span></li>
+    <li><span class="dknr">8.5</span><span>Pytagoras' setning</span></li>
+    <li><span class="dknr">8.6</span><span>Volum</span></li>
+    <li><span class="dknr">8.7</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-8.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">25 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>gjøre beregninger med vinkler og vinkelsummer i todimensjonale figurer</li>
+      <li>regne ut og sammenligne areal av enkle og sammensatte geometriske figurer og regne ut omkrets</li>
+      <li>måle diameter og omkrets til sirkler, og utforske og beskrive sammenhengen mellom diameter og omkrets</li>
+      <li>undersøke og bruke Pytagoras' setning til å finne hypotenusen i rettvinklede trekanter</li>
+      <li>forstørre og forminske geometriske figurer og regne med målestokk på kart og arbeidstegninger</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>utforske volumbegrepet, måleenheter for volum og formler for volum av rette prismer og rette sylindre</li>
+      <li>bruke Pytagoras’ læresetning og formlikhet til å løse praktiske problemer</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Målestokk er behandlet i kapittel 7.3, og brukes videre i oppgavene her.</p>
+</section>
+
+<!-- ============================================================
+     8.1 FIGURER OG VINKLER
+     ============================================================ -->
+<section id="k81">
+<h2 id="d8-1">8.1 Figurer og vinkler</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>navngi mangekanter og telle kanter og hjørner</li>
+    <li>kjenne igjen spisse, rette og stumpe vinkler</li>
+    <li>bruke at vinkelsummen i en trekant er 180 grader</li>
+    <li>regne ut vinkelsummen i firkanter og andre mangekanter</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>vinkel</td><td></td><td>Vinkelen er 45 grader.</td></tr>
+    <tr><td>rett vinkel</td><td></td><td>Hjørnet har en rett vinkel.</td></tr>
+    <tr><td>vinkelsum</td><td></td><td>Vinkelsummen i en trekant er 180 grader.</td></tr>
+    <tr><td>mangekant</td><td></td><td>En femkant er en mangekant.</td></tr>
+    <tr><td>kant og hjørne</td><td></td><td>Firkanten har fire kanter og fire hjørner.</td></tr>
+    <tr><td>likebeint trekant</td><td></td><td>To sider er like lange.</td></tr>
+  </tbody>
+</table>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spiss, rett og stump vinkel, og vinkelsummen i en trekant">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+
+  <g stroke="#5c6b23" stroke-width="2" fill="none">
+    <path d="M 60 116 L 130 116 M 60 116 L 116 78"/>
+    <path d="M 60 116 a 26 26 0 0 1 22 -14" stroke-width="1.3"/>
+    <path d="M 190 116 L 260 116 M 190 116 L 190 60"/>
+    <path d="M 190 104 h 12 v 12" stroke-width="1.3"/>
+    <path d="M 320 116 L 390 116 M 320 116 L 282 66"/>
+    <path d="M 346 116 a 26 26 0 0 1 -22 -20" stroke-width="1.3"/>
+    <path d="M 450 116 L 580 116"/>
+    <path d="M 490 116 a 25 25 0 0 1 -25 -25" stroke-width="0" />
+    <path d="M 515 116 a 0 0 0 0 0 0 0"/>
+  </g>
+  <circle cx="515" cy="116" r="3.5" fill="#5c6b23" stroke="none"/>
+  <path d="M 490 116 a 25 25 0 0 1 50 0" fill="none" stroke="#5c6b23" stroke-width="1.3"/>
+
+  <g font-family="Arial" font-size="11.5" fill="#1f2430" text-anchor="middle">
+    <text x="92" y="144">spiss</text><text x="222" y="144">rett</text>
+    <text x="352" y="144">stump</text><text x="515" y="144">strak</text>
+  </g>
+  <g font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">
+    <text x="92" y="160">under 90°</text><text x="222" y="160">90°</text>
+    <text x="352" y="160">mellom 90° og 180°</text><text x="515" y="160">180°</text>
+  </g>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#5c6b23" text-anchor="middle">FIRE SLAGS VINKLER</text>
+</svg>
+<figcaption>Figur 8.1 &nbsp;Vinkler måles i grader. Den rette vinkelen på 90° markeres med en liten firkant.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Vinkelsummer</span>
+  <ul>
+    <li>I en <strong>trekant</strong> er summen av vinklene alltid <strong>180°</strong>.</li>
+    <li>I en <strong>firkant</strong> er summen <strong>360°</strong>.</li>
+    <li>Hver ny kant legger til 180°: femkant 540°, sekskant 720°.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Forklaringen er enkel: en firkant kan deles i to trekanter,
+  en femkant i tre, og så videre.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Den siste vinkelen</div>
+  <div class="kropp">
+    <p class="oppgavetekst">To vinkler i en trekant er 65° og 48°. Hvor stor er den tredje?</p>
+    <ol class="trinn">
+      <li>Summen skal bli 180°.</li>
+      <li>Legg sammen de kjente: <span class="matte">65 + 48 = 113</span></li>
+      <li>Trekk fra: <span class="matte">180 − 113 = 67</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Den tredje vinkelen er 67°.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Hvor mange kanter og hjørner har figuren?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>trekant</li><li><span class="bokstav">b)</span>firkant</li>
+          <li><span class="bokstav">c)</span>femkant</li><li><span class="bokstav">d)</span>sekskant</li>
+        </ul>
+      </li>
+      <li>Hvor mange kanter og hjørner har figuren?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>sjukant</li>
+          <li><span class="bokstav">b)</span>åttekant</li>
+          <li><span class="bokstav">c)</span>nikant</li>
+          <li><span class="bokstav">d)</span>tikant</li>
+        </ul>
+      </li>
+      <li>Hva slags vinkel er dette?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>45°</li><li><span class="bokstav">b)</span>90°</li>
+          <li><span class="bokstav">c)</span>120°</li><li><span class="bokstav">d)</span>180°</li>
+        </ul>
+      </li>
+      <li>Hva slags vinkel er dette?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>75°</li>
+          <li><span class="bokstav">b)</span>100°</li>
+          <li><span class="bokstav">c)</span>90°</li>
+          <li><span class="bokstav">d)</span>180°</li>
+        </ul>
+      </li>
+      <li>Regn ut den siste vinkelen i trekanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>60° og 70°</li><li><span class="bokstav">b)</span>90° og 45°</li>
+          <li><span class="bokstav">c)</span>30° og 30°</li>
+        </ul>
+      </li>
+      <li>Regn ut den siste vinkelen i trekanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>80° og 55°</li>
+          <li><span class="bokstav">b)</span>100° og 40°</li>
+          <li><span class="bokstav">c)</span>45° og 45°</li>
+        </ul>
+      </li>
+      <li>Regn ut den siste vinkelen i firkanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>90°, 90° og 90°</li><li><span class="bokstav">b)</span>100°, 80° og 100°</li>
+        </ul>
+      </li>
+      <li>Regn ut den siste vinkelen i firkanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>70°, 110° og 70°</li>
+          <li><span class="bokstav">b)</span>90°, 120° og 60°</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="9" class="oppgaver" style="counter-reset: oppg 8;">
+      <li>Regn ut den siste vinkelen i trekanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>65° og 48°</li><li><span class="bokstav">b)</span>112° og 23°</li>
+          <li><span class="bokstav">c)</span>90° og 37°</li>
+        </ul>
+      </li>
+      <li>En likebeint trekant har en toppvinkel på 40°.
+        De to andre vinklene er like store. Hvor store er de?</li>
+      <li>I en likesidet trekant er alle sidene like lange, og alle vinklene like store.
+        Hvor stor er hver vinkel?</li>
+      <li>Tre vinkler i en firkant er 85°, 95° og 110°.
+        Hvor stor er den fjerde?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>Vinklene i en trekant forholder seg som 1 : 2 : 3.
+        Det betyr at den andre er dobbelt så stor som den første, og den tredje tre ganger så stor.
+        Hvor store er vinklene?</li>
+      <li>En elev sier at en trekant kan ha to rette vinkler.
+        Forklar hvorfor det ikke er mulig.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="15" class="oppgaver" style="counter-reset: oppg 14;">
+      <li>Et tak har form som en likebeint trekant. Vinkelen på toppen er 96°.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor store er de to andre vinklene?</li>
+          <li><span class="bokstav">b)</span>Hva blir de andre vinklene hvis toppvinkelen økes til 110°?</li>
+          <li><span class="bokstav">c)</span>Blir taket brattere eller slakere når toppvinkelen øker? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>En femkant kan deles i tre trekanter ved å trekke linjer fra ett hjørne.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er vinkelsummen i en femkant?</li>
+          <li><span class="bokstav">b)</span>I en regulær femkant er alle vinklene like store. Hvor store er de?</li>
+          <li><span class="bokstav">c)</span>Hva er vinkelsummen i en sekskant?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     8.2 OMKRETS OG AREAL
+     ============================================================ -->
+<section id="k82" class="nyside">
+<h2 id="d8-2">8.2 Omkrets og areal</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skille mellom omkrets og areal</li>
+    <li>regne ut omkrets og areal av rektangler og kvadrater</li>
+    <li>regne ut arealet av trekanter</li>
+    <li>bruke omkrets og areal i praktiske oppgaver</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>omkrets</td><td></td><td>Omkretsen er 20 meter.</td></tr>
+    <tr><td>areal</td><td></td><td>Arealet er 24 kvadratmeter.</td></tr>
+    <tr><td>grunnlinje</td><td></td><td>Grunnlinjen i trekanten er 12 cm.</td></tr>
+    <tr><td>høyde</td><td></td><td>Høyden står vinkelrett på grunnlinjen.</td></tr>
+    <tr><td>kvadratmeter</td><td></td><td>Rommet er på 27 kvadratmeter.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>Omkrets</strong> er lengden rundt figuren — det du måler når du skal sette opp et gjerde.
+  <strong>Areal</strong> er flaten inni — det du regner ut når du skal kjøpe gulvbelegg.
+  Omkrets måles i meter, areal i kvadratmeter.
+</p>
+
+<div class="regel">
+  <span class="etikett">Formler</span>
+  <ul>
+    <li>Rektangel: <span class="matte">O = 2 · (l + b)</span> &nbsp;og&nbsp; <span class="matte">A = l · b</span></li>
+    <li>Kvadrat med side s: <span class="matte">O = 4s</span> &nbsp;og&nbsp; <span class="matte">A = s²</span></li>
+    <li>Trekant: <span class="matte">A = g · h : 2</span>, der g er grunnlinjen og h er høyden</li>
+  </ul>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trekantens areal er halvparten av rektangelets">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+  <text x="310" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#5c6b23" text-anchor="middle">DERFOR DELER VI PÅ TO</text>
+
+  <rect x="70" y="56" width="150" height="86" fill="#fff" stroke="#5c6b23" stroke-width="1.6"/>
+  <path d="M 70 142 L 145 56 L 220 142 Z" fill="#5c6b23" fill-opacity="0.3" stroke="#5c6b23" stroke-width="1.6"/>
+  <text x="145" y="164" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">trekanten dekker halve rektangelet</text>
+
+  <text x="300" y="104" font-family="DejaVu Serif" font-size="22" fill="#5a6272" text-anchor="middle">→</text>
+
+  <text x="450" y="80" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">rektangel: A = g · h</text>
+  <text x="450" y="112" font-family="DejaVu Serif" font-size="16" font-weight="bold" fill="#5c6b23" text-anchor="middle">trekant: A = g · h : 2</text>
+  <text x="450" y="142" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">g er grunnlinjen, h er høyden</text>
+</svg>
+<figcaption>Figur 8.2 &nbsp;Trekanten har alltid halve arealet av rektangelet med samme grunnlinje og høyde.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; Gjerde rundt en hage</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En hage er 12 m lang og 9 m bred. Det skal settes gjerde rundt, og gjerdet koster 189 kroner per meter. Hva koster det?</p>
+    <ol class="trinn">
+      <li>Gjerdet følger omkretsen: <span class="matte">O = 2 · (12 + 9) = 2 · 21 = 42</span></li>
+      <li>Det trengs altså 42 meter gjerde.</li>
+      <li>Pris: <span class="matte">42 · 189 = 7 938</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Gjerdet koster 7 938 kroner.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="17" class="oppgaver" style="counter-reset: oppg 16;">
+      <li>Regn ut omkretsen av rektangelet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>5 cm og 3 cm</li><li><span class="bokstav">b)</span>8 cm og 2 cm</li>
+          <li><span class="bokstav">c)</span>10 cm og 10 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut omkretsen av rektangelet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6 cm og 4 cm</li>
+          <li><span class="bokstav">b)</span>9 cm og 3 cm</li>
+          <li><span class="bokstav">c)</span>12 cm og 5 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet av de samme rektanglene.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>5 cm og 3 cm</li><li><span class="bokstav">b)</span>8 cm og 2 cm</li>
+          <li><span class="bokstav">c)</span>10 cm og 10 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet av de samme rektanglene.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6 cm og 4 cm</li>
+          <li><span class="bokstav">b)</span>9 cm og 3 cm</li>
+          <li><span class="bokstav">c)</span>12 cm og 5 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet av trekanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>g = 6, h = 4</li><li><span class="bokstav">b)</span>g = 10, h = 5</li>
+          <li><span class="bokstav">c)</span>g = 8, h = 3</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet av trekanten.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>g = 12, h = 5</li>
+          <li><span class="bokstav">b)</span>g = 7, h = 4</li>
+          <li><span class="bokstav">c)</span>g = 9, h = 6</li>
+        </ul>
+      </li>
+      <li>Et kvadrat har side 7 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er omkretsen?</li><li><span class="bokstav">b)</span>Hva er arealet?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="24" class="oppgaver" style="counter-reset: oppg 23;">
+      <li>Et rom er 6,0 m langt og 4,5 m bredt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er omkretsen?</li><li><span class="bokstav">b)</span>Hva er arealet?</li>
+        </ul>
+      </li>
+      <li>En trekantet gavlvegg har grunnlinje 7,2 m og høyde 3,5 m.
+        Hvor stort er arealet?</li>
+      <li>Et rektangel har areal 48 m² og lengde 8 m. Hvor bredt er det?</li>
+      <li>En hage er 12 m × 9 m, og det skal settes gjerde rundt.
+        Gjerdet koster 189 kroner per meter. Hva koster gjerdet?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="28" class="oppgaver" style="counter-reset: oppg 27;">
+      <li>Et rektangel har omkrets 30 cm og lengde 9 cm.
+        Finn bredden og arealet.</li>
+      <li>To rektangler har begge omkrets 24 cm. Det ene er 8 cm × 4 cm,
+        det andre er 6 cm × 6 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut arealet av begge.</li>
+          <li><span class="bokstav">b)</span>Hvilket har størst areal?</li>
+          <li><span class="bokstav">c)</span>Hva sier dette om sammenhengen mellom omkrets og areal?</li>
+        </ul>
+      </li>
+      <li>Forklar hvorfor 1 m² er 10 000 cm² og ikke 100 cm².
+        Se gjerne tilbake på kapittel 7.3.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="31" class="oppgaver" style="counter-reset: oppg 30;">
+      <li>Et rom er 5,4 m langt, 4,2 m bredt, og takhøyden er 2,4 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er gulvarealet?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er veggarealet til sammen?</li>
+          <li><span class="bokstav">c)</span>Rommet har to vinduer på 1,8 m² hver og en dør på 1,9 m². Hvor stort areal skal males?</li>
+        </ul>
+      </li>
+      <li>Gulvbelegg koster 349 kroner per kvadratmeter og selges i hele kvadratmeter.
+        Rommet fra oppgave 31 skal ha nytt belegg, og det bestilles 8 % ekstra til kapp.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kvadratmeter må bestilles?</li>
+          <li><span class="bokstav">b)</span>Hva blir prisen?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En tomt er 32 meter lang og 25 meter bred. Prisen er 1 450 kroner per kvadratmeter.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er arealet?</li>
+          <li><span class="bokstav">b)</span>Hva koster tomta?</li>
+          <li><span class="bokstav">c)</span>En annen tomt er 40 m × 20 m. Har den samme areal? Har den samme omkrets?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     8.3 SAMMENSATTE FIGURER
+     ============================================================ -->
+<section id="k83" class="nyside">
+<h2 id="d8-3">8.3 Sammensatte figurer</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>dele en figur opp i rektangler og trekanter</li>
+    <li>regne ut arealet ved å legge sammen eller trekke fra</li>
+    <li>velge den enkleste oppdelingen</li>
+  </ul>
+</div>
+
+<p>
+  Rom og tomter er sjelden perfekte rektangler. Løsningen er alltid den samme: del figuren opp
+  i deler du kjenner formelen for, regn ut hver del, og legg sammen. Noen ganger er det
+  enklere å regne ut hele rektangelet og <em>trekke fra</em> det som mangler.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="En L-formet flate regnet ut på to måter">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+
+  <g>
+    <path d="M 60 50 L 220 50 L 220 110 L 150 110 L 150 160 L 60 160 Z"
+          fill="#5c6b23" fill-opacity="0.25" stroke="#5c6b23" stroke-width="1.8"/>
+    <line x1="150" y1="50" x2="150" y2="110" stroke="#5c6b23" stroke-width="1.2" stroke-dasharray="4 3"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="11" fill="#5a6272" text-anchor="middle">
+    <text x="140" y="44">8 m</text><text x="50" y="108">5 m</text>
+    <text x="185" y="124">3 m</text><text x="232" y="82">2 m</text>
+  </g>
+  <text x="140" y="182" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">L-formet stue</text>
+
+  <line x1="272" y1="34" x2="272" y2="170" stroke="#ccd4a8"/>
+
+  <text x="360" y="60" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23">MÅTE 1 — trekk fra</text>
+  <text x="360" y="82" font-family="DejaVu Serif" font-size="14" fill="#1f2430">8 · 5 − 3 · 2 = 40 − 6</text>
+  <rect x="352" y="92" width="80" height="24" rx="5" fill="#5c6b23"/>
+  <text x="392" y="109" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">= 34 m²</text>
+
+  <text x="360" y="140" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23">MÅTE 2 — legg sammen</text>
+  <text x="360" y="162" font-family="DejaVu Serif" font-size="14" fill="#1f2430">8 · 3 + 5 · 2 = 24 + 10 = 34 m²</text>
+</svg>
+<figcaption>Figur 8.3 &nbsp;Begge måtene gir samme svar. Velg den som gir enklest regnestykke.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="34" class="oppgaver" style="counter-reset: oppg 33;">
+      <li>En figur er satt sammen av to rektangler: ett på 4 cm × 3 cm og ett på 2 cm × 3 cm.
+        Hvor stort er arealet til sammen?</li>
+      <li>En figur er satt sammen av to rektangler: ett på 5 cm × 4 cm og ett på 3 cm × 4 cm. Hvor stort er arealet til sammen?</li>
+      <li>Fra et rektangel på 10 cm × 6 cm skjæres et kvadrat på 2 cm × 2 cm ut.
+        Hvor stort er arealet som er igjen?</li>
+      <li>Fra et rektangel på 12 cm × 8 cm skjæres et kvadrat på 3 cm × 3 cm ut. Hvor stort er arealet som er igjen?</li>
+      <li>En figur består av et rektangel på 6 cm × 4 cm med en trekant på toppen.
+        Trekanten har grunnlinje 6 cm og høyde 3 cm. Hvor stort er hele arealet?</li>
+      <li>En figur består av et rektangel på 8 cm × 5 cm med en trekant på toppen. Trekanten har grunnlinje 8 cm og høyde 4 cm. Hvor stort er hele arealet?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>En L-formet stue er 8 m × 5 m, men et hjørne på 3 m × 2 m er ikke en del av rommet.
+        Hvor stort er gulvarealet?</li>
+      <li>En gavlvegg består av et rektangel på 7 m × 2,4 m med en trekant på toppen.
+        Trekanten har grunnlinje 7 m og høyde 1,8 m. Hvor stort er hele veggarealet?</li>
+      <li>En terrasse er 5 m × 4 m. Midt på står en grill som dekker 1 m².
+        Hvor stort areal er ledig?</li>
+      <li>Et gulv er 6 m × 4 m. Et teppe på 3 m × 2 m ligger oppå.
+        Hvor mye av gulvet er synlig?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>Fra et kvadrat på 6 cm × 6 cm fjernes en trekant med grunnlinje 6 cm og høyde 4 cm.
+        Hvor stort areal er igjen?</li>
+      <li>En elev skal regne ut arealet av en L-formet stue og ganger bare
+        den ytterste lengden med den ytterste bredden.
+        Forklar hvorfor svaret blir for stort.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>Et lager er 18 m × 12 m. I det ene hjørnet er det skilt ut et kontor på 6 m × 4 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er hele bygget?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er kontoret?</li>
+          <li><span class="bokstav">c)</span>Hvor stort er lagerarealet?</li>
+          <li><span class="bokstav">d)</span>Lagergulvet skal males, og én liter maling dekker 8 m². Hvor mange liter trengs?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     8.4 SIRKELEN
+     ============================================================ -->
+<section id="k84" class="nyside">
+<h2 id="d8-4">8.4 Sirkelen</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>bruke begrepene radius og diameter riktig</li>
+    <li>forklare hva π er, og hvor tallet kommer fra</li>
+    <li>regne ut omkretsen av en sirkel</li>
+    <li>regne ut arealet av en sirkel</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>sirkel</td><td></td><td>Bordplaten er en sirkel.</td></tr>
+    <tr><td>radius</td><td></td><td>Radien er 4 centimeter.</td></tr>
+    <tr><td>diameter</td><td></td><td>Diameteren er dobbelt så lang som radien.</td></tr>
+    <tr><td>sentrum</td><td></td><td>Radien går fra sentrum til kanten.</td></tr>
+    <tr><td>pi</td><td></td><td>Pi er omtrent 3,14.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Deler du omkretsen av en hvilken som helst sirkel på diameteren, får du alltid det samme
+  tallet: omtrent 3,14. Dette tallet kalles <strong>pi</strong> og skrives med den greske
+  bokstaven π. Sammenhengen gjelder for alle sirkler, uansett størrelse.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Radius og diameter, og forholdet mellom omkrets og diameter">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+
+  <circle cx="112" cy="100" r="60" fill="#fff" stroke="#5c6b23" stroke-width="2"/>
+  <line x1="52" y1="100" x2="172" y2="100" stroke="#5c6b23" stroke-width="1.5"/>
+  <line x1="112" y1="100" x2="112" y2="40" stroke="#c62828" stroke-width="1.8" stroke-dasharray="4 3"/>
+  <circle cx="112" cy="100" r="3.5" fill="#5c6b23"/>
+  <text x="126" y="74" font-family="DejaVu Serif" font-size="13" fill="#c62828">r</text>
+  <text x="80" y="118" font-family="DejaVu Serif" font-size="13" fill="#5c6b23">d</text>
+  <text x="112" y="182" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">d = 2 · r</text>
+
+  <line x1="212" y1="34" x2="212" y2="170" stroke="#ccd4a8"/>
+
+  <text x="410" y="46" font-family="Arial" font-size="12" font-weight="bold" fill="#5c6b23" text-anchor="middle">OMKRETSEN DELT PÅ DIAMETEREN</text>
+  <g font-family="DejaVu Serif" font-size="13" fill="#1f2430">
+    <text x="248" y="76">bøtte:</text><text x="360" y="76">O = 94 cm, d = 30 cm</text><text x="530" y="76">→ 3,13</text>
+    <text x="248" y="102">kopp:</text><text x="360" y="102">O = 25 cm, d = 8 cm</text><text x="530" y="102">→ 3,13</text>
+    <text x="248" y="128">hjul:</text><text x="360" y="128">O = 207 cm, d = 66 cm</text><text x="530" y="128">→ 3,14</text>
+  </g>
+  <rect x="330" y="142" width="160" height="26" rx="5" fill="#5c6b23"/>
+  <text x="410" y="160" font-family="DejaVu Serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">alltid π ≈ 3,14</text>
+</svg>
+<figcaption>Figur 8.4 &nbsp;Forholdet mellom omkrets og diameter er det samme for alle sirkler. Det er dette tallet vi kaller π.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Formler for sirkelen</span>
+  <ul>
+    <li>Diameter: <span class="matte">d = 2 · r</span></li>
+    <li>Omkrets: <span class="matte">O = π · d</span> &nbsp;eller&nbsp; <span class="matte">O = 2 · π · r</span></li>
+    <li>Areal: <span class="matte">A = π · r²</span></li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Vi regner med <span class="matte">π = 3,14</span> i dette kapitlet.
+  Legg merke til at arealformelen bruker <em>radius</em>, ikke diameter.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Omkrets og areal</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En rund bordplate har diameter 8 dm. Regn ut omkretsen og arealet.</p>
+    <ol class="trinn">
+      <li>Omkretsen bruker diameteren direkte: <span class="matte">O = 3,14 · 8 = 25,12</span></li>
+      <li>Arealet bruker radius, så vi finner den først: <span class="matte">r = 8 : 2 = 4</span></li>
+      <li>Regn ut: <span class="matte">A = 3,14 · 4² = 3,14 · 16 = 50,24</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Omkretsen er 25,12 dm og arealet er 50,24 dm².</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="47" class="oppgaver" style="counter-reset: oppg 46;">
+      <li>Finn diameteren når radien er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 cm</li><li><span class="bokstav">b)</span>5 cm</li>
+          <li><span class="bokstav">c)</span>7,5 cm</li>
+        </ul>
+      </li>
+      <li>Finn diameteren når radien er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 cm</li>
+          <li><span class="bokstav">b)</span>9 cm</li>
+          <li><span class="bokstav">c)</span>6,5 cm</li>
+        </ul>
+      </li>
+      <li>Finn radien når diameteren er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>10 cm</li><li><span class="bokstav">b)</span>24 cm</li>
+          <li><span class="bokstav">c)</span>9 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut omkretsen. Bruk π = 3,14.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>d = 10 cm</li><li><span class="bokstav">b)</span>d = 4 cm</li>
+          <li><span class="bokstav">c)</span>d = 20 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut omkretsen. Bruk π = 3,14.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>d = 6 cm</li>
+          <li><span class="bokstav">b)</span>d = 12 cm</li>
+          <li><span class="bokstav">c)</span>d = 30 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet. Bruk π = 3,14.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>r = 2 cm</li><li><span class="bokstav">b)</span>r = 5 cm</li>
+          <li><span class="bokstav">c)</span>r = 10 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut arealet. Bruk π = 3,14.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>r = 3 cm</li>
+          <li><span class="bokstav">b)</span>r = 4 cm</li>
+          <li><span class="bokstav">c)</span>r = 6 cm</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="54" class="oppgaver" style="counter-reset: oppg 53;">
+      <li>Regn ut både omkrets og areal.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>r = 3 cm</li><li><span class="bokstav">b)</span>d = 12 cm</li>
+        </ul>
+      </li>
+      <li>En rund bordplate har diameter 1,2 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang er omkretsen?</li><li><span class="bokstav">b)</span>Hvor stort er arealet?</li>
+        </ul>
+      </li>
+      <li>Et sykkelhjul har diameter 66 cm.
+        Hvor langt går sykkelen på én omdreining?</li>
+      <li>Et rundt basseng har radius 2,5 m.
+        Hvor stort er overflatearealet?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="58" class="oppgaver" style="counter-reset: oppg 57;">
+      <li>Mål omkretsen og diameteren på tre runde gjenstander, for eksempel en kopp,
+        en bøtte og et lokk. Del omkretsen på diameteren hver gang.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva blir svarene?</li>
+          <li><span class="bokstav">b)</span>Hva heter tallet du får?</li>
+          <li><span class="bokstav">c)</span>Hvorfor blir svarene ikke helt like?</li>
+        </ul>
+      </li>
+      <li>En rund pizza har diameter 30 cm. En annen har diameter 40 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut arealet av begge.</li>
+          <li><span class="bokstav">b)</span>Hvor mange ganger større er den store?</li>
+          <li><span class="bokstav">c)</span>Den store koster dobbelt så mye. Lønner det seg å kjøpe den? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="60" class="oppgaver" style="counter-reset: oppg 59;">
+      <li>Et rundt basseng har diameter 6 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang er omkretsen?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er bunnarealet?</li>
+          <li><span class="bokstav">c)</span>Det skal settes gjerde rundt med 0,5 m klaring hele veien. Hvor langt gjerde trengs?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et sykkelhjul har diameter 70 cm. Sykkelen kjører en strekning på 2 kilometer.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor langt går hjulet på én omdreining?</li>
+          <li><span class="bokstav">b)</span>Hvor mange omdreininger blir det på 2 kilometer? Rund av til nærmeste hele.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     8.5 PYTAGORAS' SETNING
+     ============================================================ -->
+<section id="k85" class="nyside">
+<h2 id="d8-5">8.5 Pytagoras' setning</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>kjenne igjen en rettvinklet trekant og navngi sidene</li>
+    <li>finne hypotenusen når du kjenner de to katetene</li>
+    <li>finne en katet når du kjenner hypotenusen og den andre kateten</li>
+    <li>bruke setningen i praktiske situasjoner</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>rettvinklet trekant</td><td></td><td>Trekanten har en rett vinkel.</td></tr>
+    <tr><td>hypotenus</td><td></td><td>Hypotenusen er den lengste siden.</td></tr>
+    <tr><td>katet</td><td></td><td>De to katetene danner den rette vinkelen.</td></tr>
+    <tr><td>diagonal</td><td></td><td>Diagonalen går fra hjørne til hjørne.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Pytagoras' setning gjelder bare i <strong>rettvinklede</strong> trekanter. Den knytter sammen
+  de tre sidene, slik at du alltid kan finne den tredje når du kjenner to. Setningen brukes
+  daglig på byggeplasser — blant annet for å kontrollere at et hjørne virkelig er rett.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rettvinklet trekant med kateter og hypotenus, og et regneeksempel">
+  <rect x="16" y="14" width="588" height="182" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+
+  <path d="M 70 160 L 70 60 L 190 160 Z" fill="#fff" stroke="#5c6b23" stroke-width="2"/>
+  <path d="M 70 148 h 12 v 12" fill="none" stroke="#5c6b23" stroke-width="1.4"/>
+  <text x="58" y="112" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">a</text>
+  <text x="130" y="178" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">b</text>
+  <text x="142" y="102" font-family="DejaVu Serif" font-size="14" fill="#c62828" text-anchor="middle">c</text>
+  <text x="130" y="42" font-family="Arial" font-size="10.5" fill="#c62828" text-anchor="middle">hypotenusen er alltid lengst</text>
+
+  <line x1="232" y1="34" x2="232" y2="176" stroke="#ccd4a8"/>
+
+  <text x="420" y="52" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#5c6b23" text-anchor="middle">a² + b² = c²</text>
+
+  <text x="290" y="90" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23">EKSEMPEL</text>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430">
+    <text x="290" y="114">a = 3 og b = 4</text>
+    <text x="290" y="138">c² = 3² + 4² = 9 + 16 = 25</text>
+    <text x="290" y="162">c = √25 = 5</text>
+  </g>
+  <text x="290" y="184" font-family="Arial" font-size="10.5" fill="#5a6272">Husk siste steg: du må ta kvadratroten av c².</text>
+</svg>
+<figcaption>Figur 8.5 &nbsp;De to korte sidene kalles kateter, den lange kalles hypotenus. Setningen gjelder bare når vinkelen mellom katetene er rett.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Vanlig feil</span>
+  <p style="margin-bottom:0;">Hypotenusen er <strong>ikke</strong> summen av de to katetene.
+  Med a = 3 og b = 4 er c ikke 7, men 5. Sidene i en trekant er alltid slik at den lengste
+  er kortere enn de to andre til sammen — ellers ville ikke trekanten kunne lukkes.</p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="62" class="oppgaver" style="counter-reset: oppg 61;">
+      <li>Regn ut hypotenusen c.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>a = 3, b = 4</li><li><span class="bokstav">b)</span>a = 6, b = 8</li>
+          <li><span class="bokstav">c)</span>a = 5, b = 12</li>
+        </ul>
+      </li>
+      <li>Regn ut hypotenusen c.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>a = 8, b = 15</li>
+          <li><span class="bokstav">b)</span>a = 9, b = 12</li>
+          <li><span class="bokstav">c)</span>a = 7, b = 24</li>
+        </ul>
+      </li>
+      <li>Regn ut hypotenusen c. Rund av til én desimal.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>a = 2, b = 3</li><li><span class="bokstav">b)</span>a = 4, b = 7</li>
+          <li><span class="bokstav">c)</span>a = 5, b = 5</li>
+        </ul>
+      </li>
+      <li>Regn ut hypotenusen c. Rund av til én desimal.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>a = 3, b = 5</li>
+          <li><span class="bokstav">b)</span>a = 6, b = 6</li>
+          <li><span class="bokstav">c)</span>a = 2, b = 8</li>
+        </ul>
+      </li>
+      <li>Er trekanten rettvinklet? Kontroller med setningen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>sidene 3, 4 og 5</li><li><span class="bokstav">b)</span>sidene 5, 6 og 7</li>
+        </ul>
+      </li>
+      <li>Er trekanten rettvinklet? Kontroller med setningen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>sidene 6, 8 og 10</li>
+          <li><span class="bokstav">b)</span>sidene 4, 5 og 6</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="68" class="oppgaver" style="counter-reset: oppg 67;">
+      <li>En stige står 1,5 m fra veggen og når 3,6 m opp på veggen.
+        Hvor lang er stigen?</li>
+      <li>Et rektangel er 8 cm langt og 6 cm bredt. Hvor lang er diagonalen?</li>
+      <li>En tomt er 40 m × 30 m. Hvor lang er den korteste veien
+        tvers over tomta, fra hjørne til hjørne?</li>
+      <li>En TV-skjerm er 120 cm bred og 68 cm høy.
+        Skjermstørrelsen oppgis som lengden på diagonalen.
+        Hvor stor er skjermen? Rund av til én desimal.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="72" class="oppgaver" style="counter-reset: oppg 71;">
+      <li>En rettvinklet trekant har hypotenus 13 cm og en katet på 5 cm.
+        Finn den andre kateten.</li>
+      <li>En elev regner ut hypotenusen ved å legge sammen katetene,
+        og får 7 når a = 3 og b = 4.
+        Forklar hvorfor det ikke kan stemme, og gi riktig svar.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="74" class="oppgaver" style="counter-reset: oppg 73;">
+      <li>En takstol har grunnlinje 8 m, og høyden i midten er 3 m.
+        Takflaten går fra hvert hjørne opp til toppen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang er halve grunnlinjen?</li>
+          <li><span class="bokstav">b)</span>Hvor lang er én takflate?</li>
+          <li><span class="bokstav">c)</span>Materialet koster 385 kroner per meter. Hva koster begge takflatene til sammen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     8.6 VOLUM
+     ============================================================ -->
+<section id="k86" class="nyside">
+<h2 id="d8-6">8.6 Volum</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva volum er</li>
+    <li>regne ut volumet av en kasse og andre rette prismer</li>
+    <li>regne ut volumet av en sylinder</li>
+    <li>gjøre om mellom kubikkmeter og liter</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>volum</td><td></td><td>Volumet er 24 kubikkcentimeter.</td></tr>
+    <tr><td>grunnflate</td><td></td><td>Grunnflaten er 12 kvadratcentimeter.</td></tr>
+    <tr><td>prisme</td><td></td><td>En kasse er et rett prisme.</td></tr>
+    <tr><td>sylinder</td><td></td><td>Tanken har form som en sylinder.</td></tr>
+    <tr><td>kubikkmeter</td><td></td><td>Rommet har 48 kubikkmeter luft.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Volum er hvor mye plass en gjenstand fyller. For alle rette prismer og sylindre gjelder
+  den samme enkle tanken: regn ut arealet av grunnflaten, og gang med høyden.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Volum av kasse og sylinder">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#eef1e0" stroke="#ccd4a8"/>
+
+  <g stroke="#5c6b23" stroke-width="1.8" fill="none">
+    <path d="M 60 100 L 150 100 L 150 158 L 60 158 Z" fill="#fff"/>
+    <path d="M 60 100 L 92 74 L 182 74 L 150 100"/>
+    <path d="M 182 74 L 182 132 L 150 158"/>
+  </g>
+  <text x="105" y="134" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">grunnflate</text>
+  <text x="105" y="178" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">V = l · b · h</text>
+
+  <line x1="230" y1="34" x2="230" y2="172" stroke="#ccd4a8"/>
+
+  <g stroke="#5c6b23" stroke-width="1.8" fill="none">
+    <ellipse cx="320" cy="82" rx="44" ry="14" fill="#fff"/>
+    <path d="M 276 82 L 276 146"/><path d="M 364 82 L 364 146"/>
+    <path d="M 276 146 a 44 14 0 0 0 88 0" fill="#fff"/>
+  </g>
+  <line x1="320" y1="82" x2="364" y2="82" stroke="#c62828" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <text x="342" y="76" font-family="DejaVu Serif" font-size="12" fill="#c62828" text-anchor="middle">r</text>
+  <text x="386" y="118" font-family="DejaVu Serif" font-size="12" fill="#5a6272">h</text>
+  <text x="320" y="178" font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">V = π · r² · h</text>
+
+  <line x1="428" y1="34" x2="428" y2="172" stroke="#ccd4a8"/>
+
+  <text x="516" y="70" font-family="Arial" font-size="11.5" font-weight="bold" fill="#5c6b23" text-anchor="middle">FELLES TANKE</text>
+  <rect x="452" y="84" width="128" height="34" rx="6" fill="#5c6b23"/>
+  <text x="516" y="106" font-family="DejaVu Serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">grunnflate · høyde</text>
+  <text x="516" y="140" font-family="DejaVu Serif" font-size="13" fill="#1f2430" text-anchor="middle">1 m³ = 1 000 liter</text>
+</svg>
+<figcaption>Figur 8.6 &nbsp;Både kassen og sylinderen følger samme regel — bare grunnflaten regnes ut på hver sin måte.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="75" class="oppgaver" style="counter-reset: oppg 74;">
+      <li>Regn ut volumet av kassen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3 cm × 2 cm × 4 cm</li><li><span class="bokstav">b)</span>5 cm × 5 cm × 5 cm</li>
+          <li><span class="bokstav">c)</span>10 cm × 4 cm × 2 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut volumet av kassen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4 cm × 3 cm × 5 cm</li>
+          <li><span class="bokstav">b)</span>2 cm × 2 cm × 2 cm</li>
+          <li><span class="bokstav">c)</span>6 cm × 5 cm × 3 cm</li>
+        </ul>
+      </li>
+      <li>Regn ut volumet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>grunnflate 12 cm², høyde 5 cm</li>
+          <li><span class="bokstav">b)</span>grunnflate 30 m², høyde 2,5 m</li>
+        </ul>
+      </li>
+      <li>Regn ut volumet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>grunnflate 20 cm², høyde 4 cm</li>
+          <li><span class="bokstav">b)</span>grunnflate 15 m², høyde 3,2 m</li>
+        </ul>
+      </li>
+      <li>Hvor mange liter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 m³</li><li><span class="bokstav">b)</span>2,5 m³</li>
+          <li><span class="bokstav">c)</span>0,4 m³</li>
+        </ul>
+      </li>
+      <li>Hvor mange liter er
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 m³</li>
+          <li><span class="bokstav">b)</span>0,25 m³</li>
+          <li><span class="bokstav">c)</span>1,5 m³</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="81" class="oppgaver" style="counter-reset: oppg 80;">
+      <li>En sylinder har radius 4 cm og høyde 10 cm.
+        Regn ut volumet med π = 3,14.</li>
+      <li>En vanntank har form som en sylinder med diameter 1,2 m og høyde 1,5 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kubikkmeter rommer den?</li>
+          <li><span class="bokstav">b)</span>Hvor mange liter er det?</li>
+        </ul>
+      </li>
+      <li>Et rom er 5 m langt, 4 m bredt og 2,4 m høyt.
+        Hvor mange kubikkmeter luft er det i rommet?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="84" class="oppgaver" style="counter-reset: oppg 83;">
+      <li>To beholdere skal sammenlignes. Den ene er en kasse på
+        30 cm × 20 cm × 25 cm. Den andre er en sylinder med radius 15 cm og høyde 25 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut volumet av begge.</li>
+          <li><span class="bokstav">b)</span>Hvilken rommer mest?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="85" class="oppgaver" style="counter-reset: oppg 84;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et betongfundament er 3,2 meter langt, 0,8 meter bredt og 0,5 meter dypt.
+          Betong koster 1 850 kroner per kubikkmeter.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kubikkmeter betong trengs?</li>
+          <li><span class="bokstav">b)</span>Hva koster betongen?</li>
+          <li><span class="bokstav">c)</span>Det bestilles alltid 10 % ekstra. Hva blir prisen da?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     8.7 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k87" class="nyside">
+<h2 id="d8-7">8.7 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="86" class="oppgaver" style="counter-reset: oppg 85;">
+      <li>En trekant har vinklene 55° og 65°. Hvor stor er den tredje?</li>
+      <li>Et rektangel er 9 m langt og 6 m bredt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er omkretsen?</li><li><span class="bokstav">b)</span>Hva er arealet?</li>
+        </ul>
+      </li>
+      <li>En sirkel har radius 4 cm.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva er omkretsen?</li><li><span class="bokstav">b)</span>Hva er arealet?</li>
+        </ul>
+      </li>
+      <li>En rettvinklet trekant har kateter på 9 cm og 12 cm.
+        Hvor lang er hypotenusen?</li>
+      <li>En trekant har grunnlinje 14 cm og høyde 6 cm. Hvor stort er arealet?</li>
+      <li>En kasse er 6 dm × 4 dm × 3 dm.
+        Hvor mange kubikkdesimeter er det, og hvor mange liter?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="92" class="oppgaver" style="counter-reset: oppg 91;">
+      <li><span class="m4merke">M4</span> Et rom er 4,8 m langt, 3,6 m bredt,
+        og takhøyden er 2,5 m.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er gulvarealet?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er veggarealet til sammen?</li>
+          <li><span class="bokstav">c)</span>Hvor mange kubikkmeter luft er det i rommet?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En sirkelrund plen har diameter 14 m.
+        Gressfrø dekker 25 m² per kilo, og selges i hele kilo.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stor er plenen?</li>
+          <li><span class="bokstav">b)</span>Hvor mange kilo frø må kjøpes?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En tegning i målestokk 1:50 viser et rom
+        som er 9 cm langt og 7 cm bredt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er rommet i virkeligheten?</li>
+          <li><span class="bokstav">b)</span>Hvor stort er gulvarealet?</li>
+          <li><span class="bokstav">c)</span>Hvor lang er omkretsen?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En stige på 5 m settes mot en vegg,
+        med foten 1,4 m fra veggen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor høyt opp på veggen når stigen?</li>
+          <li><span class="bokstav">b)</span>En vanlig sikkerhetsregel sier at foten bør stå omtrent en firedel av stigelengden fra veggen. Hvor langt fra veggen ville det vært?</li>
+          <li><span class="bokstav">c)</span>Står stigen brattere eller slakere enn regelen anbefaler?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan regne ut manglende vinkler i trekanter og firkanter. <em>(8.1)</em></li>
+    <li>Jeg vet forskjellen på omkrets og areal, og kan regne ut begge. <em>(8.2)</em></li>
+    <li>Jeg kan dele en sammensatt figur opp og finne arealet. <em>(8.3)</em></li>
+    <li>Jeg kan regne ut omkrets og areal av en sirkel. <em>(8.4)</em></li>
+    <li>Jeg kan bruke Pytagoras' setning til å finne en side i en rettvinklet trekant. <em>(8.5)</em></li>
+    <li>Jeg kan regne ut volumet av en kasse og en sylinder. <em>(8.6)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 8</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>8.1 Figurer og vinkler</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 3 og 3</span><span class="d">b) 4 og 4</span><span class="d">c) 5 og 5</span><span class="d">d) 6 og 6</span>
+</li>
+<li><span class="d">a) 7 og 7</span><span class="d">b) 8 og 8</span><span class="d">c) 9 og 9</span><span class="d">d) 10 og 10</span></li>
+<li><span class="d">a) spiss</span><span class="d">b) rett</span><span class="d">c) stump</span><span class="d">d) strak</span></li>
+<li><span class="d">a) spiss</span><span class="d">b) stump</span><span class="d">c) rett</span><span class="d">d) strak</span></li>
+<li><span class="d">a) 50°</span><span class="d">b) 45°</span><span class="d">c) 120°</span></li>
+<li><span class="d">a) 45°</span><span class="d">b) 40°</span><span class="d">c) 90°</span></li>
+<li><span class="d">a) 90°</span><span class="d">b) 80°</span></li>
+<li><span class="d">a) 110°</span><span class="d">b) 90°</span></li>
+<li><span class="d">a) 67°</span><span class="d">b) 45°</span><span class="d">c) 53°</span></li>
+<li>(180 − 40) : 2 = <strong>70° hver</strong></li>
+<li>180 : 3 = <strong>60°</strong></li>
+<li>360 − 290 = <strong>70°</strong></li>
+<li>Kall den minste x. Da er x + 2x + 3x = 180, altså 6x = 180 og x = 30.<br/>
+    Vinklene er <strong>30°, 60° og 90°</strong>.
+    </li>
+<li>To rette vinkler er allerede 180°, og da er hele vinkelsummen brukt opp.
+    Den tredje vinkelen måtte blitt 0°, og da ville ikke figuren vært en trekant.</li>
+<li><span class="d">a) 42° hver</span><span class="d">b) 35° hver</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 540°</span><span class="d">b) 108°</span><span class="d">c) 720°</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.2 Omkrets og areal</h3>
+<ol class="fasit" start="17" style="counter-reset: fas 16;">
+<li><span class="d">a) 16 cm</span><span class="d">b) 20 cm</span><span class="d">c) 40 cm</span></li>
+<li><span class="d">a) 20 cm</span><span class="d">b) 24 cm</span><span class="d">c) 34 cm</span></li>
+<li><span class="d">a) 15 cm²</span><span class="d">b) 16 cm²</span><span class="d">c) 100 cm²</span>
+</li>
+<li><span class="d">a) 24 cm²</span><span class="d">b) 27 cm²</span><span class="d">c) 60 cm²</span></li>
+<li><span class="d">a) 12</span><span class="d">b) 25</span><span class="d">c) 12</span></li>
+<li><span class="d">a) 30</span><span class="d">b) 14</span><span class="d">c) 27</span></li>
+<li><span class="d">a) 28 cm</span><span class="d">b) 49 cm²</span></li>
+<li><span class="d">a) 21 m</span><span class="d">b) 27 m²</span></li>
+<li>7,2 · 3,5 : 2 = <strong>12,6 m²</strong></li>
+<li>48 : 8 = <strong>6 m</strong></li>
+<li>Omkretsen er 2 · (12 + 9) = 42 m. 42 · 189 = <strong>7 938 kroner</strong></li>
+<li>2 · (9 + b) = 30 gir b = <strong>6 cm</strong>. Arealet er 9 · 6 = <strong>54 cm²</strong></li>
+<li><span class="d">a) 32 cm² og 36 cm²</span><span class="d">b) kvadratet</span><span class="d">c) </span><br/>
+</li>
+<li>Et kvadrat med side 1 m har sider på 100 cm, og 100 · 100 = <strong>10 000 cm²</strong>.
+    </li>
+<li><span class="d">a) 22,68 m²</span><span class="d">b) 46,08 m²</span><span class="d">c) 40,58 m²</span><br/>
+</li>
+<li><span class="d">a) 25 m²</span><span class="d">b) 8 725 kr</span><br/>
+</li>
+<li><span class="d">a) 800 m²</span><span class="d">b) 1 160 000 kr</span>
+<span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.3 Sammensatte figurer</h3>
+<ol class="fasit" start="34" style="counter-reset: fas 33;">
+<li>12 + 6 = <strong>18 cm²</strong></li>
+<li>20 + 12 = 32 cm²</li>
+<li>60 − 4 = <strong>56 cm²</strong></li>
+<li>96 − 9 = 87 cm²</li>
+<li>24 + 9 = <strong>33 cm²</strong></li>
+<li>40 + 16 = 56 cm²</li>
+<li>40 − 6 = <strong>34 m²</strong>
+</li>
+<li>16,8 + 6,3 = <strong>23,1 m²</strong></li>
+<li>20 − 1 = <strong>19 m²</strong></li>
+<li>24 − 6 = <strong>18 m²</strong></li>
+<li>36 − 12 = <strong>24 cm²</strong></li>
+<li>Eleven regner da arealet av hele rektangelet, altså også den delen som er skåret bort.
+    Svaret blir for stort med akkurat det arealet som mangler.
+    </li>
+<li><span class="d">a) 216 m²</span><span class="d">b) 24 m²</span><span class="d">c) 192 m²</span><span class="d">d) 24 liter</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.4 Sirkelen</h3>
+<ol class="fasit" start="47" style="counter-reset: fas 46;">
+<li><span class="d">a) 6 cm</span><span class="d">b) 10 cm</span><span class="d">c) 15 cm</span></li>
+<li><span class="d">a) 8 cm</span><span class="d">b) 18 cm</span><span class="d">c) 13 cm</span></li>
+<li><span class="d">a) 5 cm</span><span class="d">b) 12 cm</span><span class="d">c) 4,5 cm</span></li>
+<li><span class="d">a) 31,4 cm</span><span class="d">b) 12,56 cm</span><span class="d">c) 62,8 cm</span></li>
+<li><span class="d">a) 18,84 cm</span><span class="d">b) 37,68 cm</span><span class="d">c) 94,2 cm</span></li>
+<li><span class="d">a) 12,56 cm²</span><span class="d">b) 78,5 cm²</span><span class="d">c) 314 cm²</span></li>
+<li><span class="d">a) 28,26 cm²</span><span class="d">b) 50,24 cm²</span><span class="d">c) 113,04 cm²</span></li>
+<li><span class="d">a) O = 18,84 cm og A = 28,26 cm²</span><span class="d">b) O = 37,68 cm og A = 113,04 cm²</span><br/>
+</li>
+<li><span class="d">a) 3,768 m</span><span class="d">b) 1,13 m²</span></li>
+<li>3,14 · 66 = <strong>207,24 cm</strong>, altså omtrent 2,07 meter per omdreining</li>
+<li>3,14 · 2,5² = <strong>19,625 m²</strong></li>
+<li> Alle tre svarene skal ligge nær 3,14.
+    Tallet heter pi. At svarene ikke blir helt like, skyldes måleunøyaktighet — særlig når man
+    måler omkretsen med et bøyelig målebånd.</li>
+<li><span class="d">a) 706,5 cm² og 1 256 cm²</span><span class="d">b) ca. 1,78 ganger større</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 18,84 m</span><span class="d">b) 28,26 m²</span><span class="d">c) 21,98 m</span><br/>
+</li>
+<li><span class="d">a) 219,8 cm, altså ca. 2,20 m</span><span class="d">b) ca. 910 omdreininger</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.5 Pytagoras' setning</h3>
+<ol class="fasit" start="62" style="counter-reset: fas 61;">
+<li><span class="d">a) 5</span><span class="d">b) 10</span><span class="d">c) 13</span></li>
+<li><span class="d">a) 17</span><span class="d">b) 15</span><span class="d">c) 25</span></li>
+<li><span class="d">a) 3,6</span><span class="d">b) 8,1</span><span class="d">c) 7,1</span></li>
+<li><span class="d">a) 5,8</span><span class="d">b) 8,5</span><span class="d">c) 8,2</span></li>
+<li><span class="d">a) ja — 9 + 16 = 25</span><span class="d">b) nei — 25 + 36 = 61, ikke 49</span></li>
+<li><span class="d">a) ja — 36 + 64 = 100</span><span class="d">b) nei — 16 + 25 = 41, ikke 36</span></li>
+<li>√(1,5² + 3,6²) = √15,21 = <strong>3,9 m</strong></li>
+<li>√(64 + 36) = <strong>10 cm</strong></li>
+<li>√(1 600 + 900) = <strong>50 m</strong></li>
+<li>√(14 400 + 4 624) = √19 024 ≈ <strong>137,9 cm</strong></li>
+<li>√(169 − 25) = √144 = <strong>12 cm</strong>
+</li>
+<li>Riktig svar er <strong>5</strong>.
+    </li>
+<li><span class="d">a) 4 m</span><span class="d">b) 5 m</span><span class="d">c) 3 850 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.6 Volum</h3>
+<ol class="fasit" start="75" style="counter-reset: fas 74;">
+<li><span class="d">a) 24 cm³</span><span class="d">b) 125 cm³</span><span class="d">c) 80 cm³</span></li>
+<li><span class="d">a) 60 cm³</span><span class="d">b) 8 cm³</span><span class="d">c) 90 cm³</span></li>
+<li><span class="d">a) 60 cm³</span><span class="d">b) 75 m³</span></li>
+<li><span class="d">a) 80 cm³</span><span class="d">b) 48 m³</span></li>
+<li><span class="d">a) 1 000 l</span><span class="d">b) 2 500 l</span><span class="d">c) 400 l</span></li>
+<li><span class="d">a) 3 000 l</span><span class="d">b) 250 l</span><span class="d">c) 1 500 l</span></li>
+<li>3,14 · 4² · 10 = 3,14 · 16 · 10 = <strong>502,4 cm³</strong></li>
+<li><span class="d">a) ca. 1,70 m³</span><span class="d">b) ca. 1 696 liter</span><br/>
+</li>
+<li>5 · 4 · 2,4 = <strong>48 m³</strong></li>
+<li><span class="d">a) kassen 15 000 cm³, sylinderen 17 662,5 cm³</span><span class="d">b) sylinderen</span>
+</li>
+<li><span class="d">a) 1,28 m³</span><span class="d">b) 2 368 kr</span><span class="d">c) 2 604,80 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>8.7 Blandede oppgaver</h3>
+<ol class="fasit" start="86" style="counter-reset: fas 85;">
+<li>180 − 120 = <strong>60°</strong></li>
+<li><span class="d">a) 30 m</span><span class="d">b) 54 m²</span></li>
+<li><span class="d">a) 25,12 cm</span><span class="d">b) 50,24 cm²</span></li>
+<li>√(81 + 144) = √225 = <strong>15 cm</strong></li>
+<li>14 · 6 : 2 = <strong>42 cm²</strong></li>
+<li>6 · 4 · 3 = <strong>72 dm³</strong>, som er <strong>72 liter</strong></li>
+<li><span class="d">a) 17,28 m²</span><span class="d">b) 42 m²</span><span class="d">c) 43,2 m³</span><br/>
+</li>
+<li><span class="d">a) 153,86 m²</span><span class="d">b) 7 kilo</span><br/>
+</li>
+<li><span class="d">a) 4,5 m × 3,5 m</span><span class="d">b) 15,75 m²</span><span class="d">c) 16 m</span></li>
+<li><span class="d">a) 4,8 m</span><span class="d">b) 1,25 m</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-7.html"><span class="etikett">Forrige kapittel</span><strong>7. Målinger</strong></a><a class="neste" href="kapittel-9.html"><span class="etikett">Neste kapittel</span><strong>9. Statistikk</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

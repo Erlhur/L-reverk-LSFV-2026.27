@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 2. Sammensatte regneuttrykk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html" aria-current="page"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li class="dk"><a href="#d2-1">2.1 Regnerekkefølgen i lengre uttrykk</a></li><li class="dk"><a href="#d2-2">2.2 Parenteser inni parenteser</a></li><li class="dk"><a href="#d2-3">2.3 Brøkstreken som divisjonstegn</a></li><li class="dk"><a href="#d2-4">2.4 De tre regnelovene</a></li><li class="dk"><a href="#d2-5">2.5 Fra tekst til regneuttrykk</a></li><li class="dk"><a href="#d2-6">2.6 Regneuttrykk på kalkulator</a></li><li class="dk"><a href="#d2-7">2.7 Blandede oppgaver</a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#7a2e52">
+<section class="kapittelapning" style="--kap:#7a2e52">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 2</p>
+    <h1 class="kapittel-tittel">Sammensatte regneuttrykk</h1>
+    <p class="ingress">21 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-2.html">←
+  Til kapittel 2: Sammensatte regneuttrykk</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 2, "tittel": "Sammensatte regneuttrykk", "farge": "#7a2e52", "aktiviteter": [{"id": "k2a1", "type": "sorter", "oppgave": "Sett reglene i riktig rekkefølge. Det som kommer først, først.", "retning": "stigende", "elementer": [{"vis": "Parenteser", "verdi": 1}, {"vis": "Potenser", "verdi": 2}, {"vis": "Gange og dele", "verdi": 3}, {"vis": "Pluss og minus", "verdi": 4}], "hint": "Parentesene løser du alltid først.", "forklaring": "Denne rekkefølgen gjelder alltid, uansett hvor langt uttrykket er.", "rekkefolge": true}, {"id": "k2a2", "type": "velg", "oppgave": "Hva er 2 + 3 · 4?", "alternativer": [{"vis": "14", "riktig": true}, {"vis": "20", "riktig": false}, {"vis": "24", "riktig": false}, {"vis": "9", "riktig": false}], "hint": "Gange kommer før pluss.", "forklaring": "3 · 4 = 12 først, så 2 + 12 = 14. Svarer du 20, har du lagt sammen først."}, {"id": "k2a3", "type": "par", "oppgave": "Koble hvert uttrykk til svaret sitt.", "par": [{"v": "(2 + 3) · 4", "h": "20", "verdi": 20}, {"v": "2 + 3 · 4", "h": "14", "verdi": 14}, {"v": "12 − (2 + 3)", "h": "7", "verdi": 7}, {"v": "(12 − 2) + 3", "h": "13", "verdi": 13}], "hint": "Løs det som står inni parentesen først."}, {"id": "k2a4", "type": "kurver", "oppgave": "Dra hvert uttrykk til svaret sitt.", "kurver": ["Svaret er 12", "Svaret er 20"], "brikker": [{"vis": "4 · 3", "kurv": 0}, {"vis": "2 + 5 · 2", "kurv": 0}, {"vis": "(2 + 3) · 4", "kurv": 1}, {"vis": "30 − 2 · 5", "kurv": 1}, {"vis": "6 · 2", "kurv": 0}, {"vis": "4 · (2 + 3)", "kurv": 1}], "hint": "Husk rekkefølgen: parentes, så gange, så pluss og minus.", "prov": ["v == 12", "v == 20"]}, {"id": "k2a5", "type": "velg", "oppgave": "Hvilke uttrykk gir 24?", "alternativer": [{"vis": "4 · (2 + 4)", "riktig": true}, {"vis": "4 · 2 + 4", "riktig": false}, {"vis": "(10 − 4) · 4", "riktig": true}, {"vis": "10 − 4 · 4", "riktig": false}], "hint": "Regn ut hvert uttrykk for seg. To av dem gir 24."}, {"id": "k2a6", "type": "velg", "oppgave": "Hva er (8 − 3) · 2?", "alternativer": [{"vis": "10", "riktig": true}, {"vis": "13", "riktig": false}, {"vis": "16", "riktig": false}, {"vis": "2", "riktig": false}], "hint": "Parentesen først: 8 − 3 = 5.", "forklaring": "5 · 2 = 10. Uten parentes ville det blitt 8 − 6 = 2."}, {"id": "k2a7", "type": "par", "oppgave": "Brøkstreken betyr «del på». Koble hvert uttrykk til svaret.", "par": [{"v": "{6 + 4/2}", "h": "5", "verdi": 5}, {"v": "{18/4 + 2}", "h": "3", "verdi": 3}, {"v": "{20 + 4/3}", "h": "8", "verdi": 8}, {"v": "{9 + 3/12}", "h": "1", "verdi": 1}], "hint": "Regn ut over streken og under streken hver for seg først.", "forklaring": "Brøkstreken virker som en parentes rundt både telleren og nevneren."}, {"id": "k2a8", "type": "sorter", "oppgave": "Sett uttrykkene i rekkefølge etter verdi. Minst først.", "retning": "stigende", "elementer": [{"vis": "20 : 4", "verdi": 5}, {"vis": "3 + 4", "verdi": 7}, {"vis": "2 · 2 · 2", "verdi": 8}, {"vis": "3 · 4", "verdi": 12}, {"vis": "20 − 4", "verdi": 16}], "hint": "Regn ut hvert uttrykk før du sorterer."}, {"id": "k2a9", "type": "velg", "oppgave": "Hvor må parentesen stå for at 2 + 3 · 4 skal bli 20?", "alternativer": [{"vis": "(2 + 3) · 4", "riktig": true}, {"vis": "2 + (3 · 4)", "riktig": false}, {"vis": "2 + 3 · (4)", "riktig": false}, {"vis": "(2 + 3 · 4)", "riktig": false}], "hint": "Du må legge sammen 2 og 3 før du ganger.", "forklaring": "5 · 4 = 20. De tre andre gir 14."}, {"id": "k2a10", "type": "kurver", "oppgave": "Kan du bytte om på tallene uten at svaret endrer seg?", "kurver": ["Kan bytte om", "Kan ikke bytte om"], "brikker": [{"vis": "5 + 3", "kurv": 0}, {"vis": "5 · 3", "kurv": 0}, {"vis": "2 + 7", "kurv": 0}, {"vis": "5 − 3", "kurv": 1}, {"vis": "5 : 3", "kurv": 1}, {"vis": "10 − 4", "kurv": 1}], "hint": "Prøv å bytte om og regn ut begge veier.", "forklaring": "Pluss og gange kan byttes om. Minus og dele kan ikke — 5 − 3 er ikke 3 − 5."}, {"id": "k2a11", "type": "tallinje", "oppgave": "Sett merket på svaret av 3 · 4 − 2.", "fra": 0, "til": 20, "mal": 10, "hint": "Gange først: 3 · 4 = 12.", "hakk": 5, "fest": 1, "toleranse": 0.5}, {"id": "k2a12", "type": "velg", "oppgave": "Hva er 6 + 2 · 3?", "alternativer": [{"vis": "12", "riktig": true}, {"vis": "24", "riktig": false}, {"vis": "18", "riktig": false}, {"vis": "11", "riktig": false}], "hint": "Gange kommer før pluss.", "forklaring": "2 · 3 = 6, og 6 + 6 = 12."}, {"id": "k2a13", "type": "par", "oppgave": "Koble hvert uttrykk til svaret sitt.", "par": [{"v": "6 + 2 · 3", "h": "12", "verdi": 12}, {"v": "4 · 3 − 5", "h": "7", "verdi": 7}, {"v": "20 − 2 · 8", "h": "4", "verdi": 4}, {"v": "9 + 4 · 2", "h": "17", "verdi": 17}], "hint": "Gange og dele først, så pluss og minus."}, {"id": "k2a14", "type": "velg", "oppgave": "Hva er (6 + 2) · 3?", "alternativer": [{"vis": "24", "riktig": true}, {"vis": "12", "riktig": false}, {"vis": "20", "riktig": false}, {"vis": "18", "riktig": false}], "hint": "Parentesen først.", "forklaring": "6 + 2 = 8, og 8 · 3 = 24. Uten parentes blir svaret 12."}, {"id": "k2a15", "type": "kurver", "oppgave": "Blir svaret 24 eller 8?", "kurver": ["Svaret er 24", "Svaret er 8"], "brikker": [{"vis": "(6 + 2) · 3", "kurv": 0}, {"vis": "3 · (5 + 3)", "kurv": 0}, {"vis": "4 · (3 + 3)", "kurv": 0}, {"vis": "4 · (3 − 1)", "kurv": 1}, {"vis": "(10 − 6) · 2", "kurv": 1}, {"vis": "2 · (7 − 3)", "kurv": 1}], "hint": "Regn ut parentesen først.", "forklaring": "Parentesen forteller hva som skal regnes ut først.", "prov": ["v == 24", "v == 8"]}, {"id": "k2a16", "type": "sorter", "oppgave": "Sett uttrykkene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "20 − 2 · 8", "verdi": 4}, {"vis": "4 · 3 − 5", "verdi": 7}, {"vis": "6 + 2 · 3", "verdi": 12}, {"vis": "9 + 4 · 2", "verdi": 17}, {"vis": "(6 + 2) · 3", "verdi": 24}], "hint": "Regn ut hvert uttrykk for seg først."}, {"id": "k2a17", "type": "par", "oppgave": "Koble hver brøk til svaret sitt.", "par": [{"v": "{8 + 4/3}", "h": "4", "verdi": 4}, {"v": "{30 − 6/4}", "h": "6", "verdi": 6}, {"v": "{60/3 · 4}", "h": "5", "verdi": 5}, {"v": "{45/10 − 5}", "h": "9", "verdi": 9}], "hint": "Brøkstreken er et deletegn. Regn ut over og under først.", "forklaring": "Brøkstreken holder teller og nevner samlet, som en usynlig parentes."}, {"id": "k2a18", "type": "kurver", "oppgave": "Hvilken regnelov er brukt?", "kurver": ["Kommutativ lov", "Assosiativ lov"], "brikker": [{"vis": "5 · 8 = 8 · 5", "kurv": 0}, {"vis": "12 + 7 = 7 + 12", "kurv": 0}, {"vis": "a + b = b + a", "kurv": 0}, {"vis": "(3 + 4) + 6 = 3 + (4 + 6)", "kurv": 1}, {"vis": "(2 · 5) · 4 = 2 · (5 · 4)", "kurv": 1}], "hint": "Bytter tallene plass, eller flytter bare parentesen seg?", "forklaring": "Kommutativ: tallene bytter plass. Assosiativ: parentesen flyttes."}, {"id": "k2a19", "type": "velg", "oppgave": "Hva er 4 · 23 · 25?", "alternativer": [{"vis": "2 300", "riktig": true}, {"vis": "2 030", "riktig": false}, {"vis": "23 000", "riktig": false}, {"vis": "1 150", "riktig": false}], "hint": "Gang 4 og 25 først. Da får du 100.", "forklaring": "4 · 25 = 100, og 100 · 23 = 2 300."}, {"id": "k2a20", "type": "velg", "oppgave": "Hvilket uttrykk betyr «summen av 9 og 6, ganget med 4»?", "alternativer": [{"vis": "(9 + 6) · 4", "riktig": true}, {"vis": "9 + 6 · 4", "riktig": false}, {"vis": "9 · 4 + 6", "riktig": false}, {"vis": "(9 · 6) + 4", "riktig": false}], "hint": "Summen skal regnes ut før du ganger.", "forklaring": "Summen av 9 og 6 er 15, og 15 · 4 = 60."}, {"id": "k2a21", "type": "velg", "oppgave": "Omtrent hvor mye er (402 − 198) : 4?", "alternativer": [{"vis": "50", "riktig": true}, {"vis": "5", "riktig": false}, {"vis": "500", "riktig": false}, {"vis": "100", "riktig": false}], "hint": "Rund av til 400 − 200 først.", "forklaring": "200 : 4 = 50. Nøyaktig blir det 51."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><a class="forrige" href="interaktiv-kapittel-1.html"><span class="etikett">Forrige kapittel</span><strong>1. Tallregning</strong></a><a class="neste" href="interaktiv-kapittel-3.html"><span class="etikett">Neste kapittel</span><strong>3. Potenser, kvadratrot og faktorisering</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

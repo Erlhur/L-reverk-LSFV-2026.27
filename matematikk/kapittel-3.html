@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3. Potenser, kvadratrot og faktorisering — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html" aria-current="page"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li class="dk"><a href="#d3-1">3.1 Potenser</a></li><li class="dk"><a href="#d3-2">3.2 Kvadrattall og kvadratrot</a></li><li class="dk"><a href="#d3-3">3.3 Regneregler for potenser</a></li><li class="dk"><a href="#d3-4">3.4 Tierpotenser og standardform</a></li><li class="dk"><a href="#d3-5">3.5 Primtall og faktorisering</a></li><li class="dk"><a href="#d3-6">3.6 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#8a5f14">
+
+
+<section class="kapittelapning" style="--kap:#8a5f14">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 3</p>
+    <h1 class="kapittel-tittel">Potenser, kvadratrot og faktorisering</h1>
+    <p class="ingress">
+      Noen tall blir så store at det er upraktisk å skrive dem ut. Andre ganger trenger du å
+      gå motsatt vei: du kjenner arealet av et kvadratisk rom og vil vite hvor lang siden er.
+      I dette kapitlet møter du potenser som en kortform for gjentatt multiplikasjon,
+      kvadratroten som den motsatte regningen, og faktorisering som verktøyet for å ta tall fra
+      hverandre.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kvadrattall, potens som gjentatt multiplikasjon, faktortre og tierpotenser">
+  <!-- kvadrattall og kvadratrot -->
+  <text x="86" y="30" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">KVADRATTALL</text>
+  <g fill="#8a5f14">
+    <circle cx="38" cy="52" r="6"/><circle cx="60" cy="52" r="6"/><circle cx="82" cy="52" r="6"/><circle cx="104" cy="52" r="6"/>
+    <circle cx="38" cy="74" r="6"/><circle cx="60" cy="74" r="6"/><circle cx="82" cy="74" r="6"/><circle cx="104" cy="74" r="6"/>
+    <circle cx="38" cy="96" r="6"/><circle cx="60" cy="96" r="6"/><circle cx="82" cy="96" r="6"/><circle cx="104" cy="96" r="6"/>
+    <circle cx="38" cy="118" r="6"/><circle cx="60" cy="118" r="6"/><circle cx="82" cy="118" r="6"/><circle cx="104" cy="118" r="6"/>
+  </g>
+  <rect x="26" y="40" width="90" height="90" rx="6" fill="none" stroke="#8a5f14" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="71" y="152" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">4 · 4 = 4² = 16</text>
+  <path d="M 128 88 q 26 -22 0 -44" fill="none" stroke="#5a6272" stroke-width="1.4" marker-end="url(#p3a)"/>
+  <path d="M 128 96 q 26 22 0 44" fill="none" stroke="#5a6272" stroke-width="1.4" marker-end="url(#p3a)"/>
+  <defs><marker id="p3a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#5a6272"/></marker></defs>
+  <text x="176" y="52" font-family="DejaVu Serif" font-size="15" fill="#5a6272">4² = 16</text>
+  <text x="176" y="138" font-family="DejaVu Serif" font-size="15" fill="#5a6272">√16 = 4</text>
+  <text x="176" y="96" font-family="Arial" font-size="10.5" fill="#5a6272">motsatt vei</text>
+
+  <!-- potens som gjentatt multiplikasjon -->
+  <line x1="266" y1="24" x2="266" y2="176" stroke="#d6d9de"/>
+  <text x="404" y="30" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">GJENTATT MULTIPLIKASJON</text>
+  <g>
+    <rect x="298" y="46" width="30" height="30" rx="5" fill="#fdf6e8" stroke="#8a5f14" stroke-width="1.3"/>
+    <text x="313" y="67" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">2</text>
+    <text x="338" y="67" font-family="DejaVu Serif" font-size="15" fill="#5a6272" text-anchor="middle">·</text>
+    <rect x="350" y="46" width="30" height="30" rx="5" fill="#fdf6e8" stroke="#8a5f14" stroke-width="1.3"/>
+    <text x="365" y="67" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">2</text>
+    <text x="390" y="67" font-family="DejaVu Serif" font-size="15" fill="#5a6272" text-anchor="middle">·</text>
+    <rect x="402" y="46" width="30" height="30" rx="5" fill="#fdf6e8" stroke="#8a5f14" stroke-width="1.3"/>
+    <text x="417" y="67" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">2</text>
+    <text x="442" y="67" font-family="DejaVu Serif" font-size="15" fill="#5a6272" text-anchor="middle">·</text>
+    <rect x="454" y="46" width="30" height="30" rx="5" fill="#fdf6e8" stroke="#8a5f14" stroke-width="1.3"/>
+    <text x="469" y="67" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">2</text>
+  </g>
+  <text x="504" y="67" font-family="DejaVu Serif" font-size="17" fill="#5a6272">=</text>
+  <text x="556" y="70" font-family="DejaVu Serif" font-size="30" font-weight="bold" fill="#8a5f14" text-anchor="middle">2⁴</text>
+  <text x="556" y="92" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">= 16</text>
+  <text x="391" y="98" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">fire like faktorer</text>
+
+  <!-- faktortre -->
+  <text x="404" y="128" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">FAKTORISERING</text>
+  <text x="404" y="150" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">24</text>
+  <g stroke="#8a5f14" stroke-width="1.3">
+    <line x1="396" y1="156" x2="366" y2="176"/><line x1="412" y1="156" x2="442" y2="176"/>
+    <line x1="358" y1="192" x2="336" y2="210"/><line x1="374" y1="192" x2="396" y2="210"/>
+  </g>
+  <text x="362" y="190" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">4</text>
+  <text x="446" y="190" font-family="DejaVu Serif" font-size="16" fill="#8a5f14" text-anchor="middle" font-weight="bold">6</text>
+  <text x="332" y="226" font-family="DejaVu Serif" font-size="16" fill="#8a5f14" text-anchor="middle" font-weight="bold">2</text>
+  <text x="400" y="226" font-family="DejaVu Serif" font-size="16" fill="#8a5f14" text-anchor="middle" font-weight="bold">2</text>
+  <g stroke="#8a5f14" stroke-width="1.3">
+    <line x1="442" y1="196" x2="424" y2="212"/><line x1="452" y1="196" x2="470" y2="212"/>
+  </g>
+  <text x="420" y="228" font-family="DejaVu Serif" font-size="16" fill="#8a5f14" text-anchor="middle" font-weight="bold">2</text>
+  <text x="474" y="228" font-family="DejaVu Serif" font-size="16" fill="#8a5f14" text-anchor="middle" font-weight="bold">3</text>
+  <text x="404" y="252" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">24 = 2 · 2 · 2 · 3 = 2³ · 3</text>
+
+  <!-- tierpotenser -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="296" font-family="Arial" font-size="11" font-weight="bold" fill="#8a5f14">TIERPOTENSER</text>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430">
+    <text x="150" y="298">10¹ = 10</text>
+    <text x="250" y="298">10² = 100</text>
+    <text x="360" y="298">10³ = 1 000</text>
+    <text x="490" y="298">10⁶ = 1 000 000</text>
+  </g>
+  <text x="320" y="318" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">4 500 000 skrives kort som 4,5 · 10⁶ — det kalles standardform</text>
+</svg>
+<p class="illtekst">Fire sider av samme sak: kvadrattall og kvadratrot, potens som kortform for gjentatt multiplikasjon, faktorisering ned til primtall, og tierpotenser til store tall.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">3.1</span><span>Potenser</span></li>
+    <li><span class="dknr">3.2</span><span>Kvadrattall og kvadratrot</span></li>
+    <li><span class="dknr">3.3</span><span>Regneregler for potenser</span></li>
+    <li><span class="dknr">3.4</span><span>Tierpotenser og standardform</span></li>
+    <li><span class="dknr">3.5</span><span>Primtall og faktorisering</span></li>
+    <li><span class="dknr">3.6</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-3.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>beskrive sammenhengen mellom gjentatt multiplikasjon og potenser og mellom kvadrattall og kvadratrøtter</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>sammenligne og bruke tall representert som desimaltall, prosent, brøker, potenser og kvadratrøtter i praktiske situasjoner, og vurdere hvilke representasjoner som er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Tillegg for alle nivåer — fra skolens årsplan</p>
+    <ul>
+      <li>skrive tall på standardform og utvidet form og forklare sammenhengen mellom dem</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">De to første målene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Det siste er hentet fra skolens egen årsplan, der det er ført opp som tillegg for alle nivåer, ikke som et læreplanmål fra Udir.</p>
+</section>
+
+<!-- ============================================================
+     3.1 POTENSER
+     ============================================================ -->
+<section id="k31">
+<h2 id="d3-1">3.1 Potenser</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva grunntall og eksponent betyr</li>
+    <li>skrive gjentatt multiplikasjon som potens, og motsatt</li>
+    <li>regne ut enkle potenser</li>
+    <li>bruke potenser i regneuttrykk med riktig rekkefølge</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>potens</td><td></td><td>2⁴ er en potens.</td></tr>
+    <tr><td>grunntall</td><td></td><td>Grunntallet i 2⁴ er 2.</td></tr>
+    <tr><td>eksponent</td><td></td><td>Eksponenten forteller hvor mange faktorer det er.</td></tr>
+    <tr><td>faktor</td><td></td><td>2⁴ har fire like faktorer.</td></tr>
+    <tr><td>i andre / i tredje</td><td></td><td>Fem i andre er 25.</td></tr>
+    <tr><td>å doble</td><td></td><td>Tallet dobler seg hver time.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Når det samme tallet ganges med seg selv mange ganger, blir det tungvint å skrive alt ut.
+  Da bruker vi en <strong>potens</strong>. Potensen er ikke en ny regneart — det er bare en
+  kortform for multiplikasjon.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grunntall og eksponent forklart">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#fdf6e8" stroke="#e8d4a8"/>
+
+  <text x="150" y="86" font-family="DejaVu Serif" font-size="48" fill="#1f2430" text-anchor="middle">2</text>
+  <text x="188" y="62" font-family="DejaVu Serif" font-size="30" fill="#8a5f14" text-anchor="middle" font-weight="bold">4</text>
+
+  <path d="M 150 104 L 150 132" stroke="#5a6272" stroke-width="1.4" marker-end="url(#pg)"/>
+  <path d="M 196 74 L 244 108" stroke="#8a5f14" stroke-width="1.4" marker-end="url(#pg2)"/>
+  <defs>
+    <marker id="pg" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,0 L4,7 z" fill="#5a6272"/></marker>
+    <marker id="pg2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#8a5f14"/></marker>
+  </defs>
+  <text x="150" y="150" font-family="Arial" font-size="12" fill="#5a6272" text-anchor="middle">grunntall</text>
+  <text x="150" y="166" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">tallet som ganges</text>
+  <text x="286" y="122" font-family="Arial" font-size="12" fill="#8a5f14">eksponent</text>
+  <text x="286" y="138" font-family="Arial" font-size="10.5" fill="#5a6272">hvor mange faktorer</text>
+
+  <line x1="330" y1="30" x2="330" y2="160" stroke="#e8d4a8"/>
+  <text x="470" y="60" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">2⁴ = 2 · 2 · 2 · 2 = 16</text>
+  <text x="470" y="94" font-family="Arial" font-size="12" fill="#5a6272" text-anchor="middle">Leses: «to i fjerde»</text>
+  <rect x="366" y="112" width="208" height="34" rx="6" fill="#fff" stroke="#c62828" stroke-width="1.3"/>
+  <text x="470" y="134" font-family="DejaVu Serif" font-size="15" fill="#c62828" text-anchor="middle">2⁴ er ikke 2 · 4</text>
+</svg>
+<figcaption>Figur 3.1 &nbsp;Eksponenten teller hvor mange like faktorer det er — den skal ikke ganges med grunntallet.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Husk</span>
+  <ul>
+    <li><span class="matte">a² </span> leses «i andre» og kalles også kvadrattall</li>
+    <li><span class="matte">a³ </span> leses «i tredje»</li>
+    <li>Et tall opphøyd i 1 er tallet selv: <span class="matte">7¹ = 7</span></li>
+  </ul>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Fra multiplikasjon til potens</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Skriv <span class="matte">5 · 5 · 5</span> som potens, og regn ut.</p>
+    <ol class="trinn">
+      <li>Grunntallet er 5, og det står tre like faktorer.</li>
+      <li>Skriv som potens: <span class="matte">5³</span></li>
+      <li>Regn ut: <span class="matte">5 · 5 = 25</span>, og <span class="matte">25 · 5 = 125</span></li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="matte">5 · 5 · 5 = 5³ = 125</span></p>
+  </div>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; Potens i et regneuttrykk</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte">3 + 2³</span> og <span class="matte">(3 + 2)²</span>.</p>
+    <ol class="trinn">
+      <li>Potenser kommer før pluss og minus: <span class="matte">2³ = 8</span>, så <span class="matte">3 + 8 = 11</span></li>
+      <li>Parenteser kommer før potenser: <span class="matte">3 + 2 = 5</span>, så <span class="matte">5² = 25</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 11 og 25</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Skriv som potens.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>4 · 4 · 4</li><li><span class="bokstav">b)</span>7 · 7</li>
+          <li><span class="bokstav">c)</span>2 · 2 · 2 · 2 · 2</li><li><span class="bokstav">d)</span>10 · 10 · 10 · 10</li>
+        </ul>
+      </li>
+      <li>Skriv som potens.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6 · 6 · 6</li>
+          <li><span class="bokstav">b)</span>9 · 9</li>
+          <li><span class="bokstav">c)</span>3 · 3 · 3 · 3</li>
+          <li><span class="bokstav">d)</span>10 · 10 · 10 · 10 · 10</li>
+        </ul>
+      </li>
+      <li>Skriv som gjentatt multiplikasjon, og regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3²</li><li><span class="bokstav">b)</span>5³</li>
+          <li><span class="bokstav">c)</span>2⁴</li><li><span class="bokstav">d)</span>10³</li>
+        </ul>
+      </li>
+      <li>Skriv som gjentatt multiplikasjon, og regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4²</li>
+          <li><span class="bokstav">b)</span>2³</li>
+          <li><span class="bokstav">c)</span>5²</li>
+          <li><span class="bokstav">d)</span>10⁴</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2²</li><li><span class="bokstav">b)</span>4²</li>
+          <li><span class="bokstav">c)</span>6²</li><li><span class="bokstav">d)</span>9²</li>
+          <li><span class="bokstav">e)</span>12²</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3²</li>
+          <li><span class="bokstav">b)</span>5²</li>
+          <li><span class="bokstav">c)</span>7²</li>
+          <li><span class="bokstav">d)</span>8²</li>
+          <li><span class="bokstav">e)</span>10²</li>
+          <li><span class="bokstav">f)</span>11²</li>
+        </ul>
+      </li>
+      <li>Hva er størst?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3³ eller 3 · 3</li><li><span class="bokstav">b)</span>2⁵ eller 5 · 2</li>
+          <li><span class="bokstav">c)</span>10² eller 2¹⁰</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2³ · 2</li><li><span class="bokstav">b)</span>5² + 3²</li>
+          <li><span class="bokstav">c)</span>4³ − 4²</li><li><span class="bokstav">d)</span>10² · 10</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1⁴</li><li><span class="bokstav">b)</span>6¹</li>
+          <li><span class="bokstav">c)</span>7²</li><li><span class="bokstav">d)</span>2⁶</li>
+        </ul>
+      </li>
+      <li>Regn ut. Husk regnerekkefølgen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 + 2³</li><li><span class="bokstav">b)</span>(3 + 2)²</li>
+          <li><span class="bokstav">c)</span>5 · 2²</li><li><span class="bokstav">d)</span>(5 · 2)²</li>
+        </ul>
+      </li>
+      <li>En bakteriekultur dobler seg hver time. Etter én time er det 2 bakterier,
+        etter to timer 4.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange er det etter 5 timer?</li>
+          <li><span class="bokstav">b)</span>Skriv antallet etter 8 timer som potens, og regn det ut.</li>
+        </ul>
+      </li>
+      <li>Et kvadratisk rom har sider på 4 meter.
+        Skriv arealet som potens, og regn det ut.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>En elev skriver <span class="matte">5³ = 15</span>. Forklar hva eleven har misforstått,
+        og regn ut riktig svar.</li>
+      <li>På et lager står paller som er kvadratiske, 1,2 meter på hver side.
+        Skriv arealet av én palle som potens, og regn det ut med to desimaler.</li>
+      <li>Ordne tallene fra minst til størst: <span class="matte">2⁵</span>,
+        <span class="matte">5²</span>, <span class="matte">3³</span>, <span class="matte">4²</span>.
+        Vis utregningen.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="16" class="oppgaver" style="counter-reset: oppg 15;">
+      <li>10 000 kroner settes i banken med 3 % rente i året. Etter ett år har beløpet blitt
+        ganget med 1,03. Etter to år er det ganget med 1,03 to ganger.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv beløpet etter 4 år som et uttrykk med potens.</li>
+          <li><span class="bokstav">b)</span>Regn ut beløpet med kalkulator.</li>
+          <li><span class="bokstav">c)</span>Hvorfor blir svaret mer enn 10 000 + 4 · 300 kroner? Forklar.</li>
+        </ul>
+      </li>
+      <li>Hvilket tall er størst, <span class="matte">2¹⁰</span> eller <span class="matte">10³</span>?
+        Regn ut begge. Forklar hvorfor mange gjetter feil på denne.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     3.2 KVADRATTALL OG KVADRATROT
+     ============================================================ -->
+<section id="k32" class="nyside">
+<h2 id="d3-2">3.2 Kvadrattall og kvadratrot</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>kjenne igjen kvadrattallene opp til 144</li>
+    <li>forklare at kvadratrot er den motsatte regningen av å opphøye i andre</li>
+    <li>finne sidelengden i et kvadrat når du kjenner arealet</li>
+    <li>anslå kvadratroten av tall som ikke er kvadrattall</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>kvadrat</td><td></td><td>Rommet er et kvadrat.</td></tr>
+    <tr><td>kvadrattall</td><td></td><td>16 er et kvadrattall.</td></tr>
+    <tr><td>kvadratrot</td><td></td><td>Kvadratroten av 49 er 7.</td></tr>
+    <tr><td>sidelengde</td><td></td><td>Sidelengden er 6 meter.</td></tr>
+    <tr><td>areal</td><td></td><td>Arealet er 36 kvadratmeter.</td></tr>
+    <tr><td>å anslå</td><td></td><td>Jeg anslår at svaret ligger mellom 7 og 8.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Et <strong>kvadrattall</strong> er et tall du får når du ganger et helt tall med seg selv.
+  <strong>Kvadratroten</strong> går motsatt vei: den svarer på spørsmålet «hvilket tall ganget
+  med seg selv gir dette?»
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kvadrattall som prikkefirkanter og kvadratrot som motsatt regning">
+  <g fill="#8a5f14">
+    <circle cx="40" cy="60" r="5"/>
+    <circle cx="86" cy="52" r="5"/><circle cx="102" cy="52" r="5"/>
+    <circle cx="86" cy="68" r="5"/><circle cx="102" cy="68" r="5"/>
+    <circle cx="150" cy="44" r="5"/><circle cx="166" cy="44" r="5"/><circle cx="182" cy="44" r="5"/>
+    <circle cx="150" cy="60" r="5"/><circle cx="166" cy="60" r="5"/><circle cx="182" cy="60" r="5"/>
+    <circle cx="150" cy="76" r="5"/><circle cx="166" cy="76" r="5"/><circle cx="182" cy="76" r="5"/>
+    <circle cx="238" cy="36" r="5"/><circle cx="254" cy="36" r="5"/><circle cx="270" cy="36" r="5"/><circle cx="286" cy="36" r="5"/>
+    <circle cx="238" cy="52" r="5"/><circle cx="254" cy="52" r="5"/><circle cx="270" cy="52" r="5"/><circle cx="286" cy="52" r="5"/>
+    <circle cx="238" cy="68" r="5"/><circle cx="254" cy="68" r="5"/><circle cx="270" cy="68" r="5"/><circle cx="286" cy="68" r="5"/>
+    <circle cx="238" cy="84" r="5"/><circle cx="254" cy="84" r="5"/><circle cx="270" cy="84" r="5"/><circle cx="286" cy="84" r="5"/>
+  </g>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430" text-anchor="middle">
+    <text x="40" y="106">1² = 1</text><text x="94" y="106">2² = 4</text>
+    <text x="166" y="106">3² = 9</text><text x="262" y="106">4² = 16</text>
+  </g>
+  <text x="150" y="130" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">kvadrattallene lager perfekte firkanter</text>
+
+  <line x1="336" y1="24" x2="336" y2="150" stroke="#d6d9de"/>
+
+  <rect x="374" y="34" width="72" height="72" fill="#fdf6e8" stroke="#8a5f14" stroke-width="1.6"/>
+  <text x="410" y="76" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">36 m²</text>
+  <text x="410" y="124" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">areal kjent</text>
+  <text x="360" y="76" font-family="Arial" font-size="12" fill="#8a5f14" text-anchor="middle">?</text>
+  <text x="410" y="28" font-family="Arial" font-size="12" fill="#8a5f14" text-anchor="middle">?</text>
+
+  <path d="M 462 70 L 500 70" stroke="#8a5f14" stroke-width="2" marker-end="url(#pk)"/>
+  <defs><marker id="pk" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#8a5f14"/></marker></defs>
+  <text x="556" y="62" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">√36 = 6</text>
+  <text x="556" y="86" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">siden er 6 meter</text>
+
+  <rect x="24" y="156" width="572" height="42" rx="6" fill="#f5f6f8" stroke="#d6d9de"/>
+  <text x="310" y="182" font-family="DejaVu Serif" font-size="14.5" fill="#1f2430" text-anchor="middle">1 &nbsp; 4 &nbsp; 9 &nbsp; 16 &nbsp; 25 &nbsp; 36 &nbsp; 49 &nbsp; 64 &nbsp; 81 &nbsp; 100 &nbsp; 121 &nbsp; 144</text>
+</svg>
+<figcaption>Figur 3.2 &nbsp;Kvadrattallene, og kvadratroten som veien tilbake fra areal til sidelengde.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Fra areal til sidelengde</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Et kvadratisk rom har et areal på 49 m². Hvor lang er hver side?</p>
+    <ol class="trinn">
+      <li>I et kvadrat er areal = side · side.</li>
+      <li>Vi leter etter tallet som ganget med seg selv gir 49.</li>
+      <li><span class="matte">7 · 7 = 49</span>, altså <span class="matte">√49 = 7</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Hver side er 7 meter.</p>
+  </div>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Når svaret ikke er et helt tall</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Anslå <span class="matte">√50</span>, og regn deretter ut på kalkulator.</p>
+    <ol class="trinn">
+      <li>Finn kvadrattallene på hver side: <span class="matte">49</span> og <span class="matte">64</span></li>
+      <li><span class="matte">√49 = 7</span> og <span class="matte">√64 = 8</span>, så svaret ligger mellom 7 og 8.</li>
+      <li>50 ligger like over 49, så svaret ligger like over 7.</li>
+      <li>Kalkulator: <span class="matte">√50 = 7,0710…</span> ≈ 7,07</li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="matte">√50 ≈ 7,07</span></p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="18" class="oppgaver" style="counter-reset: oppg 17;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>√4</li><li><span class="bokstav">b)</span>√9</li>
+          <li><span class="bokstav">c)</span>√25</li><li><span class="bokstav">d)</span>√64</li>
+          <li><span class="bokstav">e)</span>√100</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>√1</li>
+          <li><span class="bokstav">b)</span>√16</li>
+          <li><span class="bokstav">c)</span>√36</li>
+          <li><span class="bokstav">d)</span>√49</li>
+          <li><span class="bokstav">e)</span>√81</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>11²</li><li><span class="bokstav">b)</span>√121</li>
+          <li><span class="bokstav">c)</span>12²</li><li><span class="bokstav">d)</span>√144</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>13²</li>
+          <li><span class="bokstav">b)</span>√169</li>
+          <li><span class="bokstav">c)</span>14²</li>
+          <li><span class="bokstav">d)</span>√196</li>
+        </ul>
+      </li>
+      <li>Hvilke av disse tallene er kvadrattall?
+        <span class="matte">16, 20, 36, 45, 81, 90</span></li>
+      <li>Hvilke av disse tallene er kvadrattall? <span class="matte">25, 30, 64, 70, 100, 110</span></li>
+      <li>Et kvadratisk rom har et areal på 49 m². Hvor lang er hver side?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="25" class="oppgaver" style="counter-reset: oppg 24;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>√16 + √9</li><li><span class="bokstav">b)</span>√36 · 2</li>
+          <li><span class="bokstav">c)</span>√81 − √16</li><li><span class="bokstav">d)</span>√25 · √4</li>
+        </ul>
+      </li>
+      <li>Mellom hvilke to hele tall ligger kvadratroten?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>√20</li><li><span class="bokstav">b)</span>√50</li>
+          <li><span class="bokstav">c)</span>√90</li><li><span class="bokstav">d)</span>√200</li>
+        </ul>
+      </li>
+      <li>Bruk kalkulator. Rund av til to desimaler.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>√20</li><li><span class="bokstav">b)</span>√50</li>
+          <li><span class="bokstav">c)</span>√7</li><li><span class="bokstav">d)</span>√150</li>
+        </ul>
+      </li>
+      <li>Et kvadratisk teppe har et areal på 12,25 m². Hvor lang er siden?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="29" class="oppgaver" style="counter-reset: oppg 28;">
+      <li>En elev påstår at <span class="matte">√16 + √9 = √25</span>.
+        Regn ut begge sider, og avgjør om påstanden stemmer.</li>
+      <li>Et kvadratisk område på 400 m² skal gjerdes inn.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang er hver side?</li>
+          <li><span class="bokstav">b)</span>Hvor langt gjerde trengs?</li>
+          <li><span class="bokstav">c)</span>Gjerdet koster 249 kroner per meter. Hva blir totalprisen?</li>
+        </ul>
+      </li>
+      <li>Forklar hvorfor kvadratroten av et tall som er større enn 1, alltid blir mindre
+        enn tallet selv. Bruk minst ett eksempel.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="32" class="oppgaver" style="counter-reset: oppg 31;">
+      <li>En kvadratisk terrasse skal ha et areal på 30 m².
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor lang blir hver side? Rund av til to desimaler.</li>
+          <li><span class="bokstav">b)</span>Kantlist selges i hele meter. Hvor mange meter må kjøpes?</li>
+          <li><span class="bokstav">c)</span>Hva blir arealet hvis sidelengden rundes opp til 5,5 meter?</li>
+        </ul>
+      </li>
+      <li>Fire kvadratiske rom har arealene 9 m², 16 m², 20 m² og 25 m².
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvilke av rommene har hele meter som sidelengde?</li>
+          <li><span class="bokstav">b)</span>Regn ut sidelengden i det siste rommet med to desimaler.</li>
+          <li><span class="bokstav">c)</span>En snekker sier: «Dobler jeg sidelengden, blir arealet dobbelt så stort.» Stemmer det? Vis med et eksempel.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     3.3 REGNEREGLER FOR POTENSER
+     ============================================================ -->
+<section id="k33" class="nyside">
+<h2 id="d3-3">3.3 Regneregler for potenser</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>gange og dele potenser med samme grunntall</li>
+    <li>regne ut en potens av en potens</li>
+    <li>forklare hvorfor et tall opphøyd i null blir 1</li>
+    <li>begrunne reglene med gjentatt multiplikasjon</li>
+  </ul>
+</div>
+
+<p>
+  Reglene under er ikke noe du trenger å pugge blindt. De følger direkte av at en potens bare
+  er gjentatt multiplikasjon — og du kan alltid finne dem tilbake ved å skrive faktorene ut.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hvorfor to i tredje ganger to i andre blir to i femte">
+  <rect x="16" y="14" width="588" height="142" rx="8" fill="#fdf6e8" stroke="#e8d4a8"/>
+  <text x="310" y="42" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">2³ · 2²</text>
+  <text x="310" y="76" font-family="DejaVu Serif" font-size="18" fill="#1f2430" text-anchor="middle">= (2 · 2 · 2) · (2 · 2)</text>
+  <rect x="176" y="60" width="92" height="22" rx="4" fill="none" stroke="#8a5f14" stroke-width="1.3"/>
+  <rect x="284" y="60" width="66" height="22" rx="4" fill="none" stroke="#8a5f14" stroke-width="1.3"/>
+  <text x="222" y="98" font-family="Arial" font-size="10.5" fill="#8a5f14" text-anchor="middle">3 faktorer</text>
+  <text x="317" y="98" font-family="Arial" font-size="10.5" fill="#8a5f14" text-anchor="middle">2 faktorer</text>
+  <text x="310" y="126" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">= 2⁵ &nbsp; fordi det til sammen er 3 + 2 = 5 faktorer</text>
+  <text x="310" y="146" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Grunntallet er det samme hele veien — det er bare antallet faktorer som legges sammen.</text>
+</svg>
+<figcaption>Figur 3.3 &nbsp;Skriv faktorene ut, så ser du regelen av seg selv.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Regneregler — samme grunntall</span>
+  <ul>
+    <li>Gange: legg sammen eksponentene &nbsp;→&nbsp; <span class="matte">2³ · 2² = 2⁵</span></li>
+    <li>Dele: trekk fra eksponentene &nbsp;→&nbsp; <span class="matte">2⁶ : 2² = 2⁴</span></li>
+    <li>Potens av potens: gang eksponentene &nbsp;→&nbsp; <span class="matte">(2²)³ = 2⁶</span></li>
+    <li>Opphøyd i null: alltid 1 &nbsp;→&nbsp; <span class="matte">3⁰ = 1</span></li>
+  </ul>
+</div>
+
+<div class="regel">
+  <span class="etikett">Advarsel</span>
+  <p style="margin-bottom:0;">Reglene gjelder bare når <strong>grunntallet er det samme</strong>.
+  Grunntallet skal aldri endres: <span class="matte">2³ · 2² = 2⁵</span>, ikke
+  <span class="matte">4⁵</span>. Og <span class="matte">2³ · 3²</span> kan ikke slås sammen
+  i det hele tatt — der må du regne hver potens for seg.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 5 &nbsp;·&nbsp; Skriv som én potens</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Skriv <span class="matte">(10² · 10³) : 10⁴</span> som én potens, og regn ut.</p>
+    <ol class="trinn">
+      <li>Parentesen først. Gange gir addisjon av eksponentene: <span class="matte">10² · 10³ = 10⁵</span></li>
+      <li>Deling gir subtraksjon: <span class="matte">10⁵ : 10⁴ = 10¹</span></li>
+      <li>Regn ut: <span class="matte">10¹ = 10</span></li>
+    </ol>
+    <p class="svarlinje">Svar: <span class="matte">10¹ = 10</span></p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="34" class="oppgaver" style="counter-reset: oppg 33;">
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2³ · 2²</li><li><span class="bokstav">b)</span>5 · 5⁴</li>
+          <li><span class="bokstav">c)</span>10² · 10³</li><li><span class="bokstav">d)</span>3⁴ · 3</li>
+        </ul>
+      </li>
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3² · 3³</li>
+          <li><span class="bokstav">b)</span>7 · 7²</li>
+          <li><span class="bokstav">c)</span>10⁴ · 10²</li>
+          <li><span class="bokstav">d)</span>2⁵ · 2</li>
+        </ul>
+      </li>
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2⁶ : 2²</li><li><span class="bokstav">b)</span>10⁵ : 10³</li>
+          <li><span class="bokstav">c)</span>7⁴ : 7</li><li><span class="bokstav">d)</span>5⁵ : 5⁴</li>
+        </ul>
+      </li>
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3⁵ : 3²</li>
+          <li><span class="bokstav">b)</span>10⁶ : 10²</li>
+          <li><span class="bokstav">c)</span>2⁷ : 2³</li>
+          <li><span class="bokstav">d)</span>6⁴ : 6³</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3⁰</li><li><span class="bokstav">b)</span>10⁰</li>
+          <li><span class="bokstav">c)</span>2³ · 2⁰</li><li><span class="bokstav">d)</span>4⁰ · 5</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>5⁰</li>
+          <li><span class="bokstav">b)</span>7⁰</li>
+          <li><span class="bokstav">c)</span>3² · 3⁰</li>
+          <li><span class="bokstav">d)</span>9⁰ · 4</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>(2²)³</li><li><span class="bokstav">b)</span>(10³)²</li>
+          <li><span class="bokstav">c)</span>(5²)²</li><li><span class="bokstav">d)</span>(3¹)⁴</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2³ · 2²</li><li><span class="bokstav">b)</span>10⁴ : 10²</li>
+          <li><span class="bokstav">c)</span>(2³)²</li><li><span class="bokstav">d)</span>6² : 6</li>
+        </ul>
+      </li>
+      <li>Skriv faktorene ut, og forklar med egne ord hvorfor
+        <span class="matte">2³ · 2² = 2⁵</span>.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="43" class="oppgaver" style="counter-reset: oppg 42;">
+      <li>En elev skriver <span class="matte">2³ · 2² = 4⁵</span>.
+        Forklar hva som er feil, og gi riktig svar.</li>
+      <li>Regn ut begge uttrykkene i hvert par, og sammenlign svarene.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>(2 · 3)² &nbsp;og&nbsp; 2² · 3²</li>
+          <li><span class="bokstav">b)</span>(2 + 3)² &nbsp;og&nbsp; 2² + 3²</li>
+          <li><span class="bokstav">c)</span>Hva forteller dette deg om når du kan «flytte» eksponenten inn i en parentes?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="45" class="oppgaver" style="counter-reset: oppg 44;">
+      <li>Skriv som én potens, og regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>(10² · 10³) : 10⁴</li>
+          <li><span class="bokstav">b)</span>(3³ · 3²) : 3⁴</li>
+        </ul>
+      </li>
+      <li>En datamaskin lagrer informasjon i bits. Med <span class="matte">n</span> bits kan den
+        skille mellom <span class="matte">2ⁿ</span> ulike kombinasjoner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange kombinasjoner gir 8 bits?</li>
+          <li><span class="bokstav">b)</span>Hvor mange gir 16 bits?</li>
+          <li><span class="bokstav">c)</span>Hvor mange ganger flere kombinasjoner gir 16 bits enn 8 bits? Bruk regnereglene i stedet for å dele de store tallene.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     3.4 TIERPOTENSER OG STANDARDFORM
+     ============================================================ -->
+<section id="k34" class="nyside">
+<h2 id="d3-4">3.4 Tierpotenser og standardform</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>skrive runde tall som tierpotenser</li>
+    <li>skrive store og små tall på standardform</li>
+    <li>gjøre om fra standardform til vanlig tall</li>
+    <li>skrive tall på utvidet form</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>tierpotens</td><td></td><td>1 000 er tierpotensen 10³.</td></tr>
+    <tr><td>standardform</td><td></td><td>4 500 000 er 4,5 · 10⁶ på standardform.</td></tr>
+    <tr><td>utvidet form</td><td></td><td>526 = 5 · 100 + 2 · 10 + 6.</td></tr>
+    <tr><td>million</td><td></td><td>En million er 10⁶.</td></tr>
+    <tr><td>å forkorte</td><td></td><td>Standardform forkorter lange tall.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Antall nuller i et rundt tall er akkurat det samme som eksponenten i tierpotensen.
+  Det gjør tierpotensene til et praktisk verktøy når tallene blir svært store eller svært små.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Standardform forklart med kommaflytting">
+  <rect x="16" y="14" width="588" height="82" rx="8" fill="#fdf6e8" stroke="#e8d4a8"/>
+  <text x="60" y="46" font-family="DejaVu Serif" font-size="24" fill="#1f2430">4 500 000</text>
+  <text x="212" y="46" font-family="DejaVu Serif" font-size="24" fill="#5a6272">=</text>
+  <text x="330" y="46" font-family="DejaVu Serif" font-size="24" fill="#8a5f14" font-weight="bold">4,5 · 10⁶</text>
+  <path d="M 176 58 q -40 26 -80 0" fill="none" stroke="#8a5f14" stroke-width="1.5" marker-end="url(#ps)"/>
+  <defs><marker id="ps" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L6,3 L0,6 z" fill="#8a5f14"/></marker></defs>
+  <text x="136" y="86" font-family="Arial" font-size="10.5" fill="#8a5f14" text-anchor="middle">kommaet flyttes 6 plasser</text>
+  <text x="470" y="42" font-family="Arial" font-size="11" fill="#5a6272">Tallet foran skal ligge</text>
+  <text x="470" y="58" font-family="Arial" font-size="11" fill="#5a6272">mellom 1 og 10.</text>
+
+  <rect x="16" y="106" width="286" height="80" rx="8" fill="#f5f6f8" stroke="#d6d9de"/>
+  <rect x="318" y="106" width="286" height="80" rx="8" fill="#f5f6f8" stroke="#d6d9de"/>
+  <text x="159" y="130" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">STORE TALL</text>
+  <text x="461" y="130" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">SMÅ TALL</text>
+  <g font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">
+    <text x="159" y="154">240 000 = 2,4 · 10⁵</text>
+    <text x="159" y="176">62 000 000 = 6,2 · 10⁷</text>
+    <text x="461" y="154">0,004 = 4 · 10⁻³</text>
+    <text x="461" y="176">0,000 12 = 1,2 · 10⁻⁴</text>
+  </g>
+</svg>
+<figcaption>Figur 3.4 &nbsp;Positiv eksponent for store tall, negativ for små.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Utvidet form</span>
+  <p style="margin-bottom:0;">Utvidet form viser hva hvert siffer er verdt:<br>
+  <span class="matte">3 048 = 3 · 1 000 + 0 · 100 + 4 · 10 + 8</span><br>
+  Med tierpotenser: <span class="matte">3 · 10³ + 0 · 10² + 4 · 10¹ + 8</span></p>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="47" class="oppgaver" style="counter-reset: oppg 46;">
+      <li>Skriv som tierpotens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>100</li><li><span class="bokstav">b)</span>10 000</li>
+          <li><span class="bokstav">c)</span>1 000 000</li><li><span class="bokstav">d)</span>10</li>
+        </ul>
+      </li>
+      <li>Skriv som tierpotens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>1 000</li>
+          <li><span class="bokstav">b)</span>100 000</li>
+          <li><span class="bokstav">c)</span>10 000 000</li>
+          <li><span class="bokstav">d)</span>1</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>10³</li><li><span class="bokstav">b)</span>10⁵</li>
+          <li><span class="bokstav">c)</span>3 · 10²</li><li><span class="bokstav">d)</span>7 · 10⁴</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>10⁴</li>
+          <li><span class="bokstav">b)</span>10⁶</li>
+          <li><span class="bokstav">c)</span>5 · 10³</li>
+          <li><span class="bokstav">d)</span>9 · 10²</li>
+        </ul>
+      </li>
+      <li>Skriv på standardform.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>5 000</li><li><span class="bokstav">b)</span>240 000</li>
+          <li><span class="bokstav">c)</span>62 000 000</li>
+        </ul>
+      </li>
+      <li>Skriv på standardform.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>8 000</li>
+          <li><span class="bokstav">b)</span>350 000</li>
+          <li><span class="bokstav">c)</span>41 000 000</li>
+          <li><span class="bokstav">d)</span>900</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="53" class="oppgaver" style="counter-reset: oppg 52;">
+      <li>Skriv som vanlig tall.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3,5 · 10³</li><li><span class="bokstav">b)</span>1,2 · 10⁶</li>
+          <li><span class="bokstav">c)</span>9,04 · 10⁴</li>
+        </ul>
+      </li>
+      <li>Skriv på standardform.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>84 500</li><li><span class="bokstav">b)</span>7 300 000</li>
+          <li><span class="bokstav">c)</span>0,004</li>
+        </ul>
+      </li>
+      <li>Skriv på utvidet form.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>526</li><li><span class="bokstav">b)</span>3 048</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="56" class="oppgaver" style="counter-reset: oppg 55;">
+      <li>Norge har omtrent 5 600 000 innbyggere. Skriv tallet på standardform.</li>
+      <li>Avstanden fra jorda til sola er omtrent 150 000 000 km.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv avstanden på standardform.</li>
+          <li><span class="bokstav">b)</span>Lyset bruker omtrent 500 sekunder på strekningen. Omtrent hvor langt går lyset på ett sekund?</li>
+          <li><span class="bokstav">c)</span>Skriv svaret fra b) på standardform.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="58" class="oppgaver" style="counter-reset: oppg 57;">
+      <li>Et virus er omtrent 0,000 000 12 meter stort.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv målet på standardform.</li>
+          <li><span class="bokstav">b)</span>Hvorfor er standardform mer hensiktsmessig enn desimaltall her? Begrunn svaret.</li>
+        </ul>
+      </li>
+      <li>Sorter tallene fra minst til størst. Skriv dem først som vanlige tall.
+        <span class="matte">3,2 · 10⁵</span> &nbsp; <span class="matte">9,8 · 10⁴</span> &nbsp;
+        <span class="matte">1,1 · 10⁶</span> &nbsp; <span class="matte">4,5 · 10⁵</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     3.5 PRIMTALL OG FAKTORISERING
+     ============================================================ -->
+<section id="k35" class="nyside">
+<h2 id="d3-5">3.5 Primtall og faktorisering</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>avgjøre om et tall er et primtall</li>
+    <li>finne alle faktorene til et tall</li>
+    <li>faktorisere et tall i primtall og skrive svaret med potenser</li>
+    <li>bruke faktorisering til å finne største felles faktor og minste felles multiplum</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>primtall</td><td></td><td>7 er et primtall.</td></tr>
+    <tr><td>faktor</td><td></td><td>3 er en faktor i 12.</td></tr>
+    <tr><td>å faktorisere</td><td></td><td>Jeg faktoriserer 24 i primtall.</td></tr>
+    <tr><td>går opp i</td><td></td><td>4 går opp i 12.</td></tr>
+    <tr><td>felles faktor</td><td></td><td>6 er en felles faktor for 12 og 18.</td></tr>
+    <tr><td>multiplum</td><td></td><td>24 er et multiplum av 8.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Et <strong>primtall</strong> er et tall større enn 1 som bare kan deles på 1 og seg selv.
+  De første er 2, 3, 5, 7, 11, 13, 17, 19 og 23. Alle andre hele tall kan skrives som et
+  produkt av primtall — det kalles å <strong>faktorisere</strong>.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Faktortre for 60 og resultatet skrevet med potenser">
+  <rect x="16" y="14" width="360" height="182" rx="8" fill="#fdf6e8" stroke="#e8d4a8"/>
+  <text x="196" y="40" font-family="DejaVu Serif" font-size="22" fill="#1f2430" text-anchor="middle">60</text>
+  <g stroke="#8a5f14" stroke-width="1.5">
+    <line x1="184" y1="48" x2="140" y2="72"/><line x1="208" y1="48" x2="252" y2="72"/>
+    <line x1="130" y1="90" x2="100" y2="114"/><line x1="150" y1="90" x2="180" y2="114"/>
+    <line x1="242" y1="90" x2="212" y2="114"/><line x1="262" y1="90" x2="292" y2="114"/>
+  </g>
+  <text x="134" y="88" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">6</text>
+  <text x="256" y="88" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">10</text>
+  <g font-family="DejaVu Serif" font-size="19" font-weight="bold" fill="#8a5f14" text-anchor="middle">
+    <text x="96" y="132">2</text><text x="184" y="132">3</text>
+    <text x="208" y="132">2</text><text x="296" y="132">5</text>
+  </g>
+  <g font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">
+    <text x="96" y="148">primtall</text><text x="184" y="148">primtall</text>
+    <text x="208" y="148">primtall</text><text x="296" y="148">primtall</text>
+  </g>
+  <text x="196" y="180" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">60 = 2 · 3 · 2 · 5 = 2² · 3 · 5</text>
+
+  <rect x="392" y="14" width="212" height="182" rx="8" fill="#f5f6f8" stroke="#d6d9de"/>
+  <text x="498" y="40" font-family="Arial" font-size="11.5" font-weight="bold" fill="#8a5f14" text-anchor="middle">SLIK GJØR DU</text>
+  <g font-family="Arial" font-size="11" fill="#1f2430">
+    <text x="406" y="66">1 · Del på det minste primtallet</text>
+    <text x="418" y="82" fill="#5a6272">som går opp — prøv 2, så 3, så 5</text>
+    <text x="406" y="108">2 · Fortsett med svaret</text>
+    <text x="418" y="124" fill="#5a6272">til alt er primtall</text>
+    <text x="406" y="150">3 · Samle like faktorer</text>
+    <text x="418" y="166" fill="#5a6272">som potenser</text>
+  </g>
+</svg>
+<figcaption>Figur 3.5 &nbsp;Et faktortre. Grener som er primtall, deles ikke videre.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Hva du bruker det til</span>
+  <ul>
+    <li><strong>Største felles faktor</strong> — de faktorene tallene har felles. Brukes til å forkorte brøker.</li>
+    <li><strong>Minste felles multiplum</strong> — det minste tallet begge går opp i. Brukes til å finne fellesnevner.</li>
+  </ul>
+  <p style="margin:0.5rem 0 0;">Begge deler får du bruk for i kapittel 4 om brøk.</p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 6 &nbsp;·&nbsp; Største felles faktor</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Finn største felles faktor for 24 og 36.</p>
+    <ol class="trinn">
+      <li>Faktoriser begge: <span class="matte">24 = 2 · 2 · 2 · 3</span> og <span class="matte">36 = 2 · 2 · 3 · 3</span></li>
+      <li>Se hvilke faktorer de har felles: to 2-ere og én 3-er.</li>
+      <li>Gang de felles faktorene: <span class="matte">2 · 2 · 3 = 12</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Største felles faktor er 12.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="60" class="oppgaver" style="counter-reset: oppg 59;">
+      <li>Er tallet et primtall? Svar ja eller nei.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>7</li><li><span class="bokstav">b)</span>9</li>
+          <li><span class="bokstav">c)</span>11</li><li><span class="bokstav">d)</span>15</li>
+          <li><span class="bokstav">e)</span>17</li><li><span class="bokstav">f)</span>21</li>
+        </ul>
+      </li>
+      <li>Er tallet et primtall? Svar ja eller nei.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>13</li>
+          <li><span class="bokstav">b)</span>25</li>
+          <li><span class="bokstav">c)</span>19</li>
+          <li><span class="bokstav">d)</span>27</li>
+          <li><span class="bokstav">e)</span>23</li>
+          <li><span class="bokstav">f)</span>33</li>
+        </ul>
+      </li>
+      <li>Skriv alle faktorene til tallet.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>12</li><li><span class="bokstav">b)</span>18</li>
+          <li><span class="bokstav">c)</span>20</li>
+        </ul>
+      </li>
+      <li>Skriv alle faktorene til tallet.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>16</li>
+          <li><span class="bokstav">b)</span>24</li>
+          <li><span class="bokstav">c)</span>30</li>
+        </ul>
+      </li>
+      <li>Faktoriser i primtall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>8</li><li><span class="bokstav">b)</span>12</li>
+          <li><span class="bokstav">c)</span>18</li><li><span class="bokstav">d)</span>20</li>
+        </ul>
+      </li>
+      <li>Faktoriser i primtall. Skriv svaret med potenser der du kan.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>24</li><li><span class="bokstav">b)</span>30</li>
+          <li><span class="bokstav">c)</span>36</li>
+        </ul>
+      </li>
+      <li>Faktoriser i primtall. Skriv svaret med potenser der du kan.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>40</li>
+          <li><span class="bokstav">b)</span>42</li>
+          <li><span class="bokstav">c)</span>48</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="67" class="oppgaver" style="counter-reset: oppg 66;">
+      <li>Faktoriser i primtall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>45</li><li><span class="bokstav">b)</span>56</li>
+          <li><span class="bokstav">c)</span>60</li><li><span class="bokstav">d)</span>84</li>
+        </ul>
+      </li>
+      <li>Finn største felles faktor.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>12 og 18</li><li><span class="bokstav">b)</span>24 og 36</li>
+          <li><span class="bokstav">c)</span>20 og 30</li>
+        </ul>
+      </li>
+      <li>Finn minste felles multiplum.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>4 og 6</li><li><span class="bokstav">b)</span>6 og 8</li>
+          <li><span class="bokstav">c)</span>10 og 15</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="70" class="oppgaver" style="counter-reset: oppg 69;">
+      <li>36 kaker skal fordeles i esker med like mange i hver eske.
+        Det skal være mer enn én kake i hver eske, og mer enn én eske.
+        Hvilke antall per eske er mulige?</li>
+      <li>Forklar hvorfor 1 ikke regnes som et primtall.
+        Bruk definisjonen øverst i delkapitlet i svaret ditt.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="72" class="oppgaver" style="counter-reset: oppg 71;">
+      <li>Et gulv er 240 cm × 180 cm og skal dekkes med like store kvadratiske fliser
+        uten at noen flis må kappes.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Faktoriser begge målene i primtall.</li>
+          <li><span class="bokstav">b)</span>Hvor stor kan den største flisen være?</li>
+          <li><span class="bokstav">c)</span>Hvor mange fliser trengs da?</li>
+        </ul>
+      </li>
+      <li>To busslinjer går fra samme holdeplass. Den ene går hvert 12. minutt,
+        den andre hvert 18. minutt. Begge går klokken 08.00.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Når går de samtidig neste gang?</li>
+          <li><span class="bokstav">b)</span>Hvor mange ganger går de samtidig mellom 08.00 og 11.00, medregnet avgangen 08.00?</li>
+          <li><span class="bokstav">c)</span>Vis med faktorisering hvordan du kom fram til svaret i a).</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     3.6 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k36" class="nyside">
+<h2 id="d3-6">3.6 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="74" class="oppgaver" style="counter-reset: oppg 73;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3²</li><li><span class="bokstav">b)</span>2⁴</li>
+          <li><span class="bokstav">c)</span>√49</li><li><span class="bokstav">d)</span>√100</li>
+        </ul>
+      </li>
+      <li>Skriv som én potens.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4² · 4³</li><li><span class="bokstav">b)</span>10⁶ : 10²</li>
+          <li><span class="bokstav">c)</span>(2²)⁴</li>
+        </ul>
+      </li>
+      <li>Skriv på standardform.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>45 000</li><li><span class="bokstav">b)</span>2 600 000</li>
+        </ul>
+      </li>
+      <li>Faktoriser i primtall.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>40</li><li><span class="bokstav">b)</span>63</li>
+        </ul>
+      </li>
+      <li>Et kvadratisk rom har et areal på 64 m².
+        Hvor lang er hver side, og hvor lang er omkretsen?</li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>2³ + 3²</li><li><span class="bokstav">b)</span>5² − √16</li>
+          <li><span class="bokstav">c)</span>(2 + 3)²</li><li><span class="bokstav">d)</span>√36 · 2²</li>
+        </ul>
+      </li>
+      <li>Finn minste felles multiplum for 8 og 12.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="81" class="oppgaver" style="counter-reset: oppg 80;">
+      <li><span class="m4merke">M4</span> 25 000 kroner settes i banken og vokser med 4 % i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv beløpet etter 5 år som et uttrykk med potens.</li>
+          <li><span class="bokstav">b)</span>Regn ut beløpet.</li>
+          <li><span class="bokstav">c)</span>Hvor mye mer er dette enn om du hadde lagt til 1 000 kroner hvert år?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Jordas omkrets ved ekvator er omtrent
+        <span class="matte">4,0 · 10⁴</span> km. Et fly holder en fart på 900 km/t.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv omkretsen som vanlig tall.</li>
+          <li><span class="bokstav">b)</span>Hvor lang tid ville flyet brukt på å fly hele veien rundt? Rund av til én desimal.</li>
+          <li><span class="bokstav">c)</span>Skriv svaret om til døgn og timer.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Vis at <span class="matte">2⁵ · 5⁵ = 10⁵</span>.
+        Forklar hvilken regel du bruker, og regn ut svaret.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg vet hva grunntall og eksponent er, og kan regne ut enkle potenser. <em>(3.1)</em></li>
+    <li>Jeg kjenner kvadrattallene og kan finne sidelengden når jeg vet arealet. <em>(3.2)</em></li>
+    <li>Jeg kan gange og dele potenser med samme grunntall. <em>(3.3)</em></li>
+    <li>Jeg kan skrive store og små tall på standardform. <em>(3.4)</em></li>
+    <li>Jeg kan faktorisere et tall i primtall. <em>(3.5)</em></li>
+    <li>Jeg kan finne største felles faktor og minste felles multiplum. <em>(3.5)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 3</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>3.1 Potenser</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 4³</span><span class="d">b) 7²</span><span class="d">c) 2⁵</span><span class="d">d) 10⁴</span></li>
+<li><span class="d">a) 6³</span><span class="d">b) 9²</span><span class="d">c) 3⁴</span><span class="d">d) 10⁵</span></li>
+<li><span class="d">a) 3 · 3 = 9</span><span class="d">b) 5 · 5 · 5 = 125</span>
+<span class="d">c) 2 · 2 · 2 · 2 = 16</span><span class="d">d) 10 · 10 · 10 = 1 000</span></li>
+<li><span class="d">a) 4 · 4 = 16</span><span class="d">b) 2 · 2 · 2 = 8</span><span class="d">c) 5 · 5 = 25</span><span class="d">d) 10 · 10 · 10 · 10 = 10 000</span></li>
+<li><span class="d">a) 4</span><span class="d">b) 16</span><span class="d">c) 36</span><span class="d">d) 81</span><span class="d">e) 144</span></li>
+<li><span class="d">a) 9</span><span class="d">b) 25</span><span class="d">c) 49</span><span class="d">d) 64</span><span class="d">e) 100</span><span class="d">f) 121</span></li>
+<li><span class="d">a) 3³ = 27 er størst (3 · 3 = 9)</span><span class="d">b) 2⁵ = 32 er størst (5 · 2 = 10)</span><br/>
+<span class="d">c) 2¹⁰ = 1 024 er størst (10² = 100)</span>
+</li>
+<li><span class="d">a) 16</span><span class="d">b) 34</span><span class="d">c) 48</span><span class="d">d) 1 000</span></li>
+<li><span class="d">a) 1</span><span class="d">b) 6</span><span class="d">c) 49</span><span class="d">d) 64</span></li>
+<li><span class="d">a) 11</span><span class="d">b) 25</span><span class="d">c) 20</span><span class="d">d) 100</span></li>
+<li><span class="d">a) 2⁵ = 32 bakterier</span><span class="d">b) 2⁸ = 256 bakterier</span></li>
+<li>4² = <strong>16 m²</strong></li>
+<li>Eleven har ganget 5 · 3 i stedet for å bruke tre like faktorer.
+    Riktig: 5 · 5 · 5 = <strong>125</strong>.</li>
+<li>1,2² = <strong>1,44 m²</strong></li>
+<li>4² = 16, 5² = 25, 3³ = 27, 2⁵ = 32.
+    Rekkefølge: <strong>4², 5², 3³, 2⁵</strong></li>
+<li><span class="d">a) 10 000 · 1,03⁴</span><span class="d">b) 11 255,09 kr</span><span class="d">c) </span><br/>
+</li>
+<li>2¹⁰ = 1 024 og 10³ = 1 000. <strong>2¹⁰ er størst.</strong>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>3.2 Kvadrattall og kvadratrot</h3>
+<ol class="fasit" start="18" style="counter-reset: fas 17;">
+<li><span class="d">a) 2</span><span class="d">b) 3</span><span class="d">c) 5</span><span class="d">d) 8</span><span class="d">e) 10</span></li>
+<li><span class="d">a) 1</span><span class="d">b) 4</span><span class="d">c) 6</span><span class="d">d) 7</span><span class="d">e) 9</span></li>
+<li><span class="d">a) 121</span><span class="d">b) 11</span><span class="d">c) 144</span><span class="d">d) 12</span></li>
+<li><span class="d">a) 169</span><span class="d">b) 13</span><span class="d">c) 196</span><span class="d">d) 14</span></li>
+<li>Kvadrattall: <strong>16, 36 og 81</strong>  (4², 6² og 9²)</li>
+<li>Kvadrattall: 25, 64 og 100 (5², 8² og 10²)</li>
+<li>√49 = <strong>7 meter</strong></li>
+<li><span class="d">a) 7</span><span class="d">b) 12</span><span class="d">c) 5</span><span class="d">d) 10</span></li>
+<li><span class="d">a) mellom 4 og 5</span><span class="d">b) mellom 7 og 8</span>
+<span class="d">c) mellom 9 og 10</span><span class="d">d) mellom 14 og 15</span></li>
+<li><span class="d">a) 4,47</span><span class="d">b) 7,07</span><span class="d">c) 2,65</span><span class="d">d) 12,25</span></li>
+<li>√12,25 = <strong>3,5 meter</strong></li>
+<li>√16 + √9 = 4 + 3 = 7, mens √25 = 5. <strong>Påstanden stemmer ikke.</strong>
+</li>
+<li><span class="d">a) 20 meter</span><span class="d">b) 80 meter</span><span class="d">c) 19 920 kr</span></li>
+<li> Forventet: når du ganger et tall større enn 1 med
+    seg selv, blir svaret større enn tallet. Kvadratroten går motsatt vei og må derfor være
+    mindre. Eksempel: 9 · 9 = 81, altså √81 = 9, og 9 er mindre enn 81.</li>
+<li><span class="d">a) √30 ≈ 5,48 meter</span><span class="d">b) 22 meter</span><span class="d">c) 30,25 m²</span><br/>
+</li>
+<li><span class="d">a) rommene på 9, 16 og 25 m² (sider 3, 4 og 5 meter)</span>
+<span class="d">b) √20 ≈ 4,47 meter</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>3.3 Regneregler for potenser</h3>
+<ol class="fasit" start="34" style="counter-reset: fas 33;">
+<li><span class="d">a) 2⁵</span><span class="d">b) 5⁵</span><span class="d">c) 10⁵</span><span class="d">d) 3⁵</span></li>
+<li><span class="d">a) 3⁵</span><span class="d">b) 7³</span><span class="d">c) 10⁶</span><span class="d">d) 2⁶</span></li>
+<li><span class="d">a) 2⁴</span><span class="d">b) 10²</span><span class="d">c) 7³</span><span class="d">d) 5¹ = 5</span></li>
+<li><span class="d">a) 3³</span><span class="d">b) 10⁴</span><span class="d">c) 2⁴</span><span class="d">d) 6¹ = 6</span></li>
+<li><span class="d">a) 1</span><span class="d">b) 1</span><span class="d">c) 8</span><span class="d">d) 5</span></li>
+<li><span class="d">a) 1</span><span class="d">b) 1</span><span class="d">c) 9</span><span class="d">d) 4</span></li>
+<li><span class="d">a) 2⁶</span><span class="d">b) 10⁶</span><span class="d">c) 5⁴</span><span class="d">d) 3⁴</span></li>
+<li><span class="d">a) 32</span><span class="d">b) 100</span><span class="d">c) 64</span><span class="d">d) 6</span></li>
+<li> Forventet: 2³ · 2² = (2 · 2 · 2) · (2 · 2). Til sammen
+    er det fem 2-ere som ganges, altså 2⁵. Eksponentene legges sammen fordi antall faktorer
+    legges sammen.</li>
+<li>Grunntallet skal ikke endres. Riktig er <strong>2⁵ = 32</strong>, ikke 4⁵.
+    </li>
+<li><span class="d">a) 36 og 36 — like</span><span class="d">b) 25 og 13 — ulike</span>
+<span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 10¹ = 10</span><span class="d">b) 3¹ = 3</span></li>
+<li><span class="d">a) 2⁸ = 256</span><span class="d">b) 2¹⁶ = 65 536</span><span class="d">c) 2⁸ = 256 ganger flere</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>3.4 Tierpotenser og standardform</h3>
+<ol class="fasit" start="47" style="counter-reset: fas 46;">
+<li><span class="d">a) 10²</span><span class="d">b) 10⁴</span><span class="d">c) 10⁶</span><span class="d">d) 10¹</span></li>
+<li><span class="d">a) 10³</span><span class="d">b) 10⁵</span><span class="d">c) 10⁷</span><span class="d">d) 10⁰</span></li>
+<li><span class="d">a) 1 000</span><span class="d">b) 100 000</span><span class="d">c) 300</span><span class="d">d) 70 000</span></li>
+<li><span class="d">a) 10 000</span><span class="d">b) 1 000 000</span><span class="d">c) 5 000</span><span class="d">d) 900</span></li>
+<li><span class="d">a) 5 · 10³</span><span class="d">b) 2,4 · 10⁵</span><span class="d">c) 6,2 · 10⁷</span></li>
+<li><span class="d">a) 8 · 10³</span><span class="d">b) 3,5 · 10⁵</span><span class="d">c) 4,1 · 10⁷</span><span class="d">d) 9 · 10²</span></li>
+<li><span class="d">a) 3 500</span><span class="d">b) 1 200 000</span><span class="d">c) 90 400</span></li>
+<li><span class="d">a) 8,45 · 10⁴</span><span class="d">b) 7,3 · 10⁶</span><span class="d">c) 4 · 10⁻³</span></li>
+<li><span class="d">a) 5 · 100 + 2 · 10 + 6</span><span class="d">b) 3 · 1 000 + 0 · 100 + 4 · 10 + 8</span></li>
+<li>5,6 · 10⁶ innbyggere</li>
+<li><span class="d">a) 1,5 · 10⁸ km</span><span class="d">b) 300 000 km per sekund</span><span class="d">c) 3 · 10⁵ km/s</span></li>
+<li><span class="d">a) 1,2 · 10⁻⁷ meter</span><span class="d">b) </span><br/>
+</li>
+<li>9,8 · 10⁴ = 98 000 · 3,2 · 10⁵ = 320 000 · 4,5 · 10⁵ = 450 000 · 1,1 · 10⁶ = 1 100 000<br/>
+    Rekkefølge: <strong>9,8 · 10⁴, 3,2 · 10⁵, 4,5 · 10⁵, 1,1 · 10⁶</strong></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>3.5 Primtall og faktorisering</h3>
+<ol class="fasit" start="60" style="counter-reset: fas 59;">
+<li><span class="d">a) ja</span><span class="d">b) nei (3 · 3)</span><span class="d">c) ja</span>
+<span class="d">d) nei (3 · 5)</span><span class="d">e) ja</span><span class="d">f) nei (3 · 7)</span></li>
+<li><span class="d">a) ja</span><span class="d">b) nei (5 · 5)</span><span class="d">c) ja</span><span class="d">d) nei (3 · 9)</span><span class="d">e) ja</span><span class="d">f) nei (3 · 11)</span></li>
+<li><span class="d">a) 1, 2, 3, 4, 6, 12</span><span class="d">b) 1, 2, 3, 6, 9, 18</span><span class="d">c) 1, 2, 4, 5, 10, 20</span></li>
+<li><span class="d">a) 1, 2, 4, 8, 16</span><span class="d">b) 1, 2, 3, 4, 6, 8, 12, 24</span><span class="d">c) 1, 2, 3, 5, 6, 10, 15, 30</span></li>
+<li><span class="d">a) 2 · 2 · 2 = 2³</span><span class="d">b) 2 · 2 · 3 = 2² · 3</span>
+<span class="d">c) 2 · 3 · 3 = 2 · 3²</span><span class="d">d) 2 · 2 · 5 = 2² · 5</span></li>
+<li><span class="d">a) 2³ · 3</span><span class="d">b) 2 · 3 · 5</span><span class="d">c) 2² · 3²</span></li>
+<li><span class="d">a) 2³ · 5</span><span class="d">b) 2 · 3 · 7</span><span class="d">c) 2⁴ · 3</span></li>
+<li><span class="d">a) 3² · 5</span><span class="d">b) 2³ · 7</span><span class="d">c) 2² · 3 · 5</span><span class="d">d) 2² · 3 · 7</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 12</span><span class="d">c) 10</span></li>
+<li><span class="d">a) 12</span><span class="d">b) 24</span><span class="d">c) 30</span></li>
+<li>Mulige antall per eske: <strong>2, 3, 4, 6, 9, 12 og 18</strong>.
+    </li>
+<li> Forventet: et primtall skal ha nøyaktig to ulike
+    faktorer, 1 og seg selv. Tallet 1 har bare én faktor — 1 og «seg selv» er det samme tallet.
+    Godkjenn også svar som peker på at faktorisering ville blitt tvetydig hvis 1 var med, siden
+    man kunne ganget med 1 så mange ganger man ville.</li>
+<li><span class="d">a) 240 = 2⁴ · 3 · 5  og  180 = 2² · 3² · 5</span><br/>
+<span class="d">b) 60 cm × 60 cm</span><span class="d">c) 12 fliser</span><br/>
+</li>
+<li><span class="d">a) klokken 08.36</span><span class="d">b) 6 ganger</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>3.6 Blandede oppgaver</h3>
+<ol class="fasit" start="74" style="counter-reset: fas 73;">
+<li><span class="d">a) 9</span><span class="d">b) 16</span><span class="d">c) 7</span><span class="d">d) 10</span></li>
+<li><span class="d">a) 4⁵</span><span class="d">b) 10⁴</span><span class="d">c) 2⁸</span></li>
+<li><span class="d">a) 4,5 · 10⁴</span><span class="d">b) 2,6 · 10⁶</span></li>
+<li><span class="d">a) 2³ · 5</span><span class="d">b) 3² · 7</span></li>
+<li>√64 = 8 meter. Omkrets: 4 · 8 = <strong>32 meter</strong></li>
+<li><span class="d">a) 17</span><span class="d">b) 21</span><span class="d">c) 25</span><span class="d">d) 24</span></li>
+<li>MFM(8, 12) = <strong>24</strong>  </li>
+<li><span class="d">a) 25 000 · 1,04⁵</span><span class="d">b) 30 416,32 kr</span><span class="d">c) 416,32 kr mer</span><br/>
+</li>
+<li><span class="d">a) 40 000 km</span><span class="d">b) 44,4 timer</span><span class="d">c) 1 døgn og 20,4 timer</span></li>
+<li>2⁵ · 5⁵ = (2 · 5)⁵ = 10⁵ = <strong>100 000</strong>.
+    </li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-2.html"><span class="etikett">Forrige kapittel</span><strong>2. Sammensatte regneuttrykk</strong></a><a class="neste" href="kapittel-4.html"><span class="etikett">Neste kapittel</span><strong>4. Brøk</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

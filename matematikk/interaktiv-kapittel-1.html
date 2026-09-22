@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 1. Tallregning — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html" aria-current="page"><span class="nr">1</span><span>Tallregning</span></a></li><li class="dk"><a href="#d1-1">1.1 Overslagsregning og hoderegning</a></li><li class="dk"><a href="#d1-2">1.2 Regning med hele tall og desimaltall</a></li><li class="dk"><a href="#d1-3">1.3 Divisjon</a></li><li class="dk"><a href="#d1-4">1.4 Tekstoppgaver med de fire regneartene</a></li><li class="dk"><a href="#d1-5">1.5 Regnerekkefølgen</a></li><li class="dk"><a href="#d1-6">1.6 Regning med negative tall</a></li><li class="dk"><a href="#d1-7">1.7 Blandede oppgaver</a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#b04a2f">
+<section class="kapittelapning" style="--kap:#b04a2f">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 1</p>
+    <h1 class="kapittel-tittel">Tallregning</h1>
+    <p class="ingress">21 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-1.html">←
+  Til kapittel 1: Tallregning</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 1, "tittel": "Tallregning", "farge": "#b04a2f", "aktiviteter": [{"id": "k1a1", "type": "sorter", "oppgave": "Sett tallene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "0,25", "verdi": 0.25}, {"vis": "0,3", "verdi": 0.3}, {"vis": "0,9", "verdi": 0.9}, {"vis": "1,05", "verdi": 1.05}, {"vis": "1,2", "verdi": 1.2}], "hint": "Se på tallet foran komma først. Er de like, se på det første tallet etter komma.", "forklaring": "0,3 er større enn 0,25, selv om 25 er et større tall enn 3."}, {"id": "k1a2", "type": "tallinje", "oppgave": "Sett merket på 2,5.", "fra": 0, "til": 5, "mal": 2.5, "hint": "2,5 ligger midt mellom 2 og 3.", "hakk": 1, "fest": 0.25, "toleranse": 0.15}, {"id": "k1a3", "type": "kurver", "oppgave": "Dra hvert regnestykke til svaret det ligger nærmest.", "kurver": ["Omtrent 100", "Omtrent 1000"], "brikker": [{"vis": "98 + 5", "kurv": 0}, {"vis": "51 · 2", "kurv": 0}, {"vis": "990 + 12", "kurv": 1}, {"vis": "497 · 2", "kurv": 1}, {"vis": "34 + 71", "kurv": 0}, {"vis": "249 · 4", "kurv": 1}], "hint": "Rund av til hele tiere eller hundrere før du regner.", "forklaring": "Et overslag trenger ikke være nøyaktig. Det skal bare vise omtrent hvor svaret ligger.", "prov": ["abs(v - 100) < abs(v - 1000)", "abs(v - 1000) < abs(v - 100)"]}, {"id": "k1a4", "type": "velg", "oppgave": "Omtrent hvor mye er 19 · 21?", "alternativer": [{"vis": "40", "riktig": false}, {"vis": "400", "riktig": true}, {"vis": "4000", "riktig": false}, {"vis": "40 000", "riktig": false}], "hint": "19 er nesten 20, og 21 er nesten 20.", "forklaring": "20 · 20 = 400. Det riktige svaret er 399."}, {"id": "k1a5", "type": "par", "oppgave": "Koble hvert regnestykke til svaret sitt.", "par": [{"v": "25 · 4", "h": "100", "verdi": 100}, {"v": "120 : 4", "h": "30", "verdi": 30}, {"v": "36 + 47", "h": "83", "verdi": 83}, {"v": "90 − 38", "h": "52", "verdi": 52}]}, {"id": "k1a6", "type": "velg", "oppgave": "Rund av 3 847 til nærmeste hundre.", "alternativer": [{"vis": "3 800", "riktig": true}, {"vis": "3 900", "riktig": false}, {"vis": "3 850", "riktig": false}, {"vis": "4 000", "riktig": false}], "hint": "Se på tallet på tierplassen. Er det under 5, runder du ned.", "forklaring": "Tierplassen er 4, altså under 5. Da blir det 3 800."}, {"id": "k1a7", "type": "tallinje", "oppgave": "Sett merket på 0,75.", "fra": 0, "til": 1, "mal": 0.75, "hint": "0,75 er det samme som tre fjerdedeler.", "hakk": 0.25, "fest": 0.05, "toleranse": 0.03}, {"id": "k1a8", "type": "par", "oppgave": "Koble hvert delestykke til svaret sitt.", "par": [{"v": "72 : 8", "h": "9", "verdi": 9}, {"v": "144 : 12", "h": "12", "verdi": 12}, {"v": "150 : 5", "h": "30", "verdi": 30}, {"v": "480 : 6", "h": "80", "verdi": 80}], "hint": "Tenk: hvor mange ganger går det siste tallet opp i det første?"}, {"id": "k1a9", "type": "kurver", "oppgave": "Blir svaret positivt eller negativt?", "kurver": ["Positivt svar", "Negativt svar"], "brikker": [{"vis": "-3 + 7", "kurv": 0}, {"vis": "10 − 4", "kurv": 0}, {"vis": "-5 + 12", "kurv": 0}, {"vis": "5 − 8", "kurv": 1}, {"vis": "-2 − 4", "kurv": 1}, {"vis": "-9 + 2", "kurv": 1}], "hint": "Er tallet du trekker fra størst, havner du under null.", "prov": ["v > 0", "v < 0"]}, {"id": "k1a10", "type": "sorter", "oppgave": "Sett tallene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "-5", "verdi": -5}, {"vis": "-2", "verdi": -2}, {"vis": "0", "verdi": 0}, {"vis": "3", "verdi": 3}, {"vis": "7", "verdi": 7}], "hint": "På tallinja ligger de negative tallene til venstre for null.", "forklaring": "-5 er mindre enn -2, fordi den ligger lenger til venstre."}, {"id": "k1a11", "type": "velg", "oppgave": "Hvilke regnestykker gir 100?", "alternativer": [{"vis": "25 · 4", "riktig": true}, {"vis": "1000 : 10", "riktig": true}, {"vis": "20 · 4", "riktig": false}, {"vis": "90 + 20", "riktig": false}], "hint": "Regn ut hvert stykke for seg. To av dem gir 100."}, {"id": "k1a12", "type": "velg", "oppgave": "Rund av 472 til nærmeste tier.", "alternativer": [{"vis": "470", "riktig": true}, {"vis": "480", "riktig": false}, {"vis": "400", "riktig": false}, {"vis": "500", "riktig": false}], "hint": "Se på sifferet på enerplassen. Er det under 5, runder du ned.", "forklaring": "Enerplassen er 2, altså under 5. Da blir det 470."}, {"id": "k1a13", "type": "par", "oppgave": "Koble hvert tall til nærmeste tier.", "par": [{"v": "38", "h": "40", "verdi": 40}, {"v": "64", "h": "60", "verdi": 60}, {"v": "175", "h": "180", "verdi": 180}, {"v": "421", "h": "420", "verdi": 420}], "hint": "Er eneren 5 eller mer, runder du opp.", "kobling": "(v + 5) // 10 * 10"}, {"id": "k1a14", "type": "kurver", "oppgave": "Rundes tallet opp eller ned til nærmeste tier?", "kurver": ["Rundes ned", "Rundes opp"], "brikker": [{"vis": "62", "kurv": 0}, {"vis": "351", "kurv": 0}, {"vis": "2 674", "kurv": 0}, {"vis": "87", "kurv": 1}, {"vis": "495", "kurv": 1}, {"vis": "1 208", "kurv": 1}], "hint": "Bare sifferet på enerplassen bestemmer.", "forklaring": "495 runder opp til 500, fordi eneren er 5.", "prov": ["v % 10 < 5", "v % 10 >= 5"]}, {"id": "k1a15", "type": "velg", "oppgave": "Rund av 1 250 til nærmeste hundrer.", "alternativer": [{"vis": "1 300", "riktig": true}, {"vis": "1 200", "riktig": false}, {"vis": "1 250", "riktig": false}, {"vis": "1 000", "riktig": false}], "hint": "Se på sifferet på tierplassen.", "forklaring": "Tierplassen er 5, og da runder vi opp. Svaret er 1 300."}, {"id": "k1a16", "type": "par", "oppgave": "Koble hvert tall til nærmeste hundrer.", "par": [{"v": "380", "h": "400", "verdi": 400}, {"v": "640", "h": "600", "verdi": 600}, {"v": "1 250", "h": "1 300", "verdi": 1300}, {"v": "2 908", "h": "2 900", "verdi": 2900}], "hint": "Tierplassen bestemmer om du runder opp eller ned.", "kobling": "(v + 50) // 100 * 100"}, {"id": "k1a17", "type": "velg", "oppgave": "Hvilke tall blir 500 når du runder av til nærmeste hundrer?", "alternativer": [{"vis": "462", "riktig": true}, {"vis": "549", "riktig": true}, {"vis": "449", "riktig": false}, {"vis": "551", "riktig": false}], "hint": "Alle tall fra 450 til 549 havner på 500."}, {"id": "k1a18", "type": "par", "oppgave": "Koble hvert desimaltall til nærmeste hele tall.", "par": [{"v": "2,4", "h": "2", "verdi": 2}, {"v": "7,6", "h": "8", "verdi": 8}, {"v": "15,5", "h": "16", "verdi": 16}, {"v": "0,82", "h": "1", "verdi": 1}], "hint": "Se på det første sifferet etter komma.", "kobling": "(v * 2 + 1) // 2"}, {"id": "k1a19", "type": "tallinje", "oppgave": "Sett merket der 63 havner når du runder av til nærmeste tier.", "fra": 0, "til": 100, "mal": 60, "hint": "63 ligger nærmere 60 enn 70.", "hakk": 10, "fest": 5, "toleranse": 2}, {"id": "k1a20", "type": "kurver", "oppgave": "Omtrent hvor stor blir summen?", "kurver": ["Omtrent 60", "Omtrent 120"], "brikker": [{"vis": "38 + 21", "kurv": 0}, {"vis": "19 + 43", "kurv": 0}, {"vis": "29 + 33", "kurv": 0}, {"vis": "71 + 48", "kurv": 1}, {"vis": "52 + 68", "kurv": 1}, {"vis": "77 + 45", "kurv": 1}], "hint": "Rund av begge tallene til nærmeste tier før du legger sammen.", "forklaring": "38 + 21 blir omtrent 40 + 20, altså 60.", "prov": ["abs(v - 60) < abs(v - 120)", "abs(v - 120) < abs(v - 60)"]}, {"id": "k1a21", "type": "velg", "oppgave": "Omtrent hvor mye koster tre brød til 29 kroner?", "alternativer": [{"vis": "90 kr", "riktig": true}, {"vis": "60 kr", "riktig": false}, {"vis": "120 kr", "riktig": false}, {"vis": "900 kr", "riktig": false}], "hint": "Rund 29 opp til 30 først.", "forklaring": "3 · 30 = 90. Nøyaktig blir det 87 kroner."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><span class="tom"></span><a class="neste" href="interaktiv-kapittel-2.html"><span class="etikett">Neste kapittel</span><strong>2. Sammensatte regneuttrykk</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

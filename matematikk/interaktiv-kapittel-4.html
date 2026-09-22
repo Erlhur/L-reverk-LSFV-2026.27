@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 4. Brøk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html" aria-current="page"><span class="nr">4</span><span>Brøk</span></a></li><li class="dk"><a href="#d4-1">4.1 Hva en brøk er</a></li><li class="dk"><a href="#d4-2">4.2 Utvide og forkorte</a></li><li class="dk"><a href="#d4-3">4.3 Brøk, desimaltall og prosent</a></li><li class="dk"><a href="#d4-4">4.4 Addisjon og subtraksjon av brøk</a></li><li class="dk"><a href="#d4-5">4.5 Multiplikasjon og divisjon av brøk</a></li><li class="dk"><a href="#d4-6">4.6 Blandede oppgaver</a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#2f6b4f">
+<section class="kapittelapning" style="--kap:#2f6b4f">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 4</p>
+    <h1 class="kapittel-tittel">Brøk</h1>
+    <p class="ingress">22 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-4.html">←
+  Til kapittel 4: Brøk</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 4, "tittel": "Brøk", "farge": "#2f6b4f", "aktiviteter": [{"id": "k4a1", "type": "brokfigur", "oppgave": "Fargelegg {3/8} av sirkelen.", "form": "sirkel", "deler": 8, "mal": 3, "hint": "Nevneren 8 sier hvor mange deler sirkelen har. Telleren 3 sier hvor mange du skal fargelegge.", "forklaring": "Nevneren gir navnet på delene, telleren teller dem."}, {"id": "k4a2", "type": "brokfigur", "oppgave": "Fargelegg {5/6} av rektangelet.", "form": "rektangel", "deler": 6, "mal": 5, "hint": "Figuren har 6 like deler. Du skal fargelegge 5 av dem."}, {"id": "k4a3", "type": "tallinje", "oppgave": "Sett merket på {3/4}.", "fra": 0, "til": 1, "mal": 0.75, "hint": "Del strekningen fra 0 til 1 i fire like deler. {3/4} er tre av dem.", "forklaring": "{3/4} ligger midt mellom {1/2} og 1.", "hakk": 0.25, "fest": 0.125, "toleranse": 0.06}, {"id": "k4a4", "type": "par", "oppgave": "Koble hver brøk til prosenten som betyr det samme.", "par": [{"v": "{1/2}", "h": "50 %", "verdi": 0.5}, {"v": "{1/4}", "h": "25 %", "verdi": 0.25}, {"v": "{3/4}", "h": "75 %", "verdi": 0.75}, {"v": "{1/5}", "h": "20 %", "verdi": 0.2}, {"v": "{1/10}", "h": "10 %", "verdi": 0.1}], "hint": "Gjør brøken om til hundredeler. {1/2} er det samme som {50/100}."}, {"id": "k4a5", "type": "sorter", "oppgave": "Sett brøkene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "{1/8}", "verdi": 0.125}, {"vis": "{1/4}", "verdi": 0.25}, {"vis": "{1/2}", "verdi": 0.5}, {"vis": "{3/4}", "verdi": 0.75}, {"vis": "{7/8}", "verdi": 0.875}], "hint": "Jo større nevner, desto mindre er hver del — når telleren er den samme."}, {"id": "k4a6", "type": "kurver", "oppgave": "Er brøken mindre eller større enn {1/2}?", "kurver": ["Mindre enn {1/2}", "Større enn {1/2}"], "brikker": [{"vis": "{1/3}", "kurv": 0}, {"vis": "{1/4}", "kurv": 0}, {"vis": "{2/5}", "kurv": 0}, {"vis": "{2/3}", "kurv": 1}, {"vis": "{3/4}", "kurv": 1}, {"vis": "{5/8}", "kurv": 1}], "hint": "En brøk er {1/2} når telleren er halvparten av nevneren.", "forklaring": "I {2/5} måtte telleren vært 2,5 for at brøken skulle vært en halv. Den er 2, altså mindre.", "prov": ["v < 0.5", "v > 0.5"]}, {"id": "k4a7", "type": "brokfigur", "oppgave": "Fargelegg {1/4} av strimmelen.", "form": "strimmel", "deler": 4, "mal": 1, "hint": "Strimmelen har 4 like deler. Du skal fargelegge 1 av dem."}, {"id": "k4a8", "type": "par", "oppgave": "Koble hver brøk til den forkortede formen.", "par": [{"v": "{2/4}", "h": "{1/2}", "verdi": 0.5}, {"v": "{2/6}", "h": "{1/3}", "verdi": 0.3333333333333333}, {"v": "{3/12}", "h": "{1/4}", "verdi": 0.25}, {"v": "{8/10}", "h": "{4/5}", "verdi": 0.8}], "hint": "Del telleren og nevneren på det samme tallet.", "forklaring": "Brøken har samme verdi før og etter forkorting — bare tallene blir mindre."}, {"id": "k4a9", "type": "velg", "oppgave": "Hvor mye er {1/2} + {1/4}?", "alternativer": [{"vis": "{3/4}", "riktig": true}, {"vis": "{2/6}", "riktig": false}, {"vis": "{1/6}", "riktig": false}, {"vis": "{2/4}", "riktig": false}], "hint": "Gjør om {1/2} til {2/4} først, så nevnerne blir like.", "forklaring": "{2/4} + {1/4} = {3/4}. Nevnerne skal aldri legges sammen."}, {"id": "k4a10", "type": "kurver", "oppgave": "Er brøken mindre eller større enn 1?", "kurver": ["Mindre enn 1", "Større enn 1"], "brikker": [{"vis": "{3/4}", "kurv": 0}, {"vis": "{2/3}", "kurv": 0}, {"vis": "{5/8}", "kurv": 0}, {"vis": "{5/4}", "kurv": 1}, {"vis": "{7/5}", "kurv": 1}, {"vis": "{9/8}", "kurv": 1}], "hint": "Er telleren større enn nevneren, er brøken større enn 1.", "forklaring": "En brøk der telleren er størst, kalles en uekte brøk.", "prov": ["v < 1", "v > 1"]}, {"id": "k4a11", "type": "tallinje", "oppgave": "Sett merket på {2/5}.", "fra": 0, "til": 1, "mal": 0.4, "hint": "Strekningen er delt i fem like deler. {2/5} er to av dem.", "hakk": 0.2, "fest": 0.1, "toleranse": 0.05}, {"id": "k4a12", "type": "sorter", "oppgave": "Sett brøkene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "{1/8}", "verdi": 0.125}, {"vis": "{1/5}", "verdi": 0.2}, {"vis": "{1/3}", "verdi": 0.3333333333333333}, {"vis": "{1/2}", "verdi": 0.5}], "hint": "Telleren er 1 i alle. Da bestemmer nevneren alene.", "forklaring": "Jo flere deler det hele er delt i, desto mindre blir hver del."}, {"id": "k4a13", "type": "par", "oppgave": "Koble hver brøk til den utvidede formen.", "par": [{"v": "{1/2}", "h": "{3/6}", "verdi": 0.5}, {"v": "{2/3}", "h": "{6/9}", "verdi": 0.6666666666666666}, {"v": "{3/5}", "h": "{9/15}", "verdi": 0.6}, {"v": "{4/7}", "h": "{12/21}", "verdi": 0.5714285714285714}], "hint": "Gang teller og nevner med det samme tallet.", "forklaring": "Brøken har samme verdi før og etter utvidingen."}, {"id": "k4a14", "type": "par", "oppgave": "Koble hver brøk til den forkortede formen.", "par": [{"v": "{4/6}", "h": "{2/3}", "verdi": 0.6666666666666666}, {"v": "{5/10}", "h": "{1/2}", "verdi": 0.5}, {"v": "{9/12}", "h": "{3/4}", "verdi": 0.75}, {"v": "{8/20}", "h": "{2/5}", "verdi": 0.4}], "hint": "Del teller og nevner på det samme tallet."}, {"id": "k4a15", "type": "velg", "oppgave": "Hvor mye er {2/7} + {3/7}?", "alternativer": [{"vis": "{5/7}", "riktig": true}, {"vis": "{5/14}", "riktig": false}, {"vis": "{6/7}", "riktig": false}, {"vis": "{1/7}", "riktig": false}], "hint": "Nevnerne er like. Legg bare sammen tellerne.", "forklaring": "2 + 3 = 5, og nevneren 7 blir stående."}, {"id": "k4a16", "type": "kurver", "oppgave": "Hvor mange prosent er brøken?", "kurver": ["25 %", "50 %", "75 %"], "brikker": [{"vis": "{1/4}", "kurv": 0}, {"vis": "{2/8}", "kurv": 0}, {"vis": "{1/2}", "kurv": 1}, {"vis": "{3/6}", "kurv": 1}, {"vis": "{3/4}", "kurv": 2}, {"vis": "{6/8}", "kurv": 2}], "hint": "Forkort brøken først.", "forklaring": "{2/8} forkortes til {1/4}, som er 25 %.", "prov": ["v == 0.25", "v == 0.5", "v == 0.75"]}, {"id": "k4a17", "type": "sorter", "oppgave": "Sett brøkene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "{1/6}", "verdi": 0.16666666666666666}, {"vis": "{2/5}", "verdi": 0.4}, {"vis": "{1/2}", "verdi": 0.5}, {"vis": "{5/8}", "verdi": 0.625}, {"vis": "{4/5}", "verdi": 0.8}], "hint": "Gjør dem om til desimaltall hvis du står fast."}, {"id": "k4a18", "type": "par", "oppgave": "Koble hver brøk til desimaltallet.", "par": [{"v": "{1/10}", "h": "0,1", "verdi": 0.1}, {"v": "{2/5}", "h": "0,4", "verdi": 0.4}, {"v": "{7/10}", "h": "0,7", "verdi": 0.7}, {"v": "{4/5}", "h": "0,8", "verdi": 0.8}], "hint": "Del telleren på nevneren."}, {"id": "k4a19", "type": "velg", "oppgave": "Hvor mye er {1/3} · {1/4}?", "alternativer": [{"vis": "{1/12}", "riktig": true}, {"vis": "{2/7}", "riktig": false}, {"vis": "{1/7}", "riktig": false}, {"vis": "{2/12}", "riktig": false}], "hint": "Gang teller med teller og nevner med nevner.", "forklaring": "1 · 1 = 1 og 3 · 4 = 12."}, {"id": "k4a20", "type": "tallinje", "oppgave": "Sett merket på {3/5}.", "fra": 0, "til": 1, "mal": 0.6, "hint": "Strekningen er delt i fem like deler. {3/5} er tre av dem.", "hakk": 0.2, "fest": 0.1, "toleranse": 0.05}, {"id": "k4a21", "type": "brokfigur", "oppgave": "Fargelegg {2/3} av sirkelen.", "form": "sirkel", "deler": 3, "mal": 2, "hint": "Sirkelen har 3 like deler. Du skal fargelegge 2 av dem."}, {"id": "k4a22", "type": "velg", "oppgave": "Hvor mye er {3/4} av 16?", "alternativer": [{"vis": "12", "riktig": true}, {"vis": "4", "riktig": false}, {"vis": "20", "riktig": false}, {"vis": "48", "riktig": false}], "hint": "Del 16 på 4 først, og gang svaret med 3.", "forklaring": "16 : 4 = 4, og 4 · 3 = 12."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><a class="forrige" href="interaktiv-kapittel-3.html"><span class="etikett">Forrige kapittel</span><strong>3. Potenser, kvadratrot og faktorisering</strong></a><a class="neste" href="interaktiv-kapittel-5.html"><span class="etikett">Neste kapittel</span><strong>5. Prosent</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

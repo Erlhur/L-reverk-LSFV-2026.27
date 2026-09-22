@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6. Bokstavregning — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html" aria-current="page"><span class="nr">6</span><span>Bokstavregning</span></a></li><li class="dk"><a href="#d6-1">6.1 Bokstaver i matematikk</a></li><li class="dk"><a href="#d6-2">6.2 Sette tall inn i uttrykk og formler</a></li><li class="dk"><a href="#d6-3">6.3 Trekke sammen like ledd</a></li><li class="dk"><a href="#d6-4">6.4 Gange ut parenteser</a></li><li class="dk"><a href="#d6-5">6.5 Mønstre og formler</a></li><li class="dk"><a href="#d6-6">6.6 Likninger</a></li><li class="dk"><a href="#d6-7">6.7 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#0f5f6e">
+
+
+<section class="kapittelapning" style="--kap:#0f5f6e">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 6</p>
+    <h1 class="kapittel-tittel">Bokstavregning</h1>
+    <p class="ingress">
+      En bokstav i matematikken er ikke noe mystisk — den står bare for et tall du ennå ikke
+      kjenner, eller et tall som kan variere. Med bokstaver kan du skrive én formel som gjelder
+      for alle tilfeller: timelønn ganger antall timer, startpris pluss pris per kilometer.
+      I dette kapitlet lærer du å lage slike uttrykk, regne med dem, og løse likninger.
+    </p>
+  </div>
+
+<div class="illustrasjon">
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bokstavuttrykk, formel med innsetting, mønster og likning som vektskål">
+  <!-- uttrykk fra en situasjon -->
+  <text x="106" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#0f5f6e" text-anchor="middle">FRA SITUASJON TIL UTTRYKK</text>
+  <g>
+    <rect x="36" y="46" width="40" height="34" rx="4" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.5"/>
+    <text x="56" y="69" font-family="DejaVu Serif" font-size="15" fill="#0f5f6e" text-anchor="middle">a</text>
+    <rect x="84" y="46" width="40" height="34" rx="4" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.5"/>
+    <text x="104" y="69" font-family="DejaVu Serif" font-size="15" fill="#0f5f6e" text-anchor="middle">a</text>
+    <rect x="132" y="46" width="40" height="34" rx="4" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.5"/>
+    <text x="152" y="69" font-family="DejaVu Serif" font-size="15" fill="#0f5f6e" text-anchor="middle">a</text>
+  </g>
+  <g fill="#0f5f6e">
+    <circle cx="46" cy="100" r="7"/><circle cx="66" cy="100" r="7"/>
+  </g>
+  <text x="104" y="105" font-family="Arial" font-size="10.5" fill="#5a6272">2 løse bøker</text>
+  <text x="106" y="98" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="start"> </text>
+  <text x="106" y="134" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">3 esker med a bøker, og 2 i tillegg</text>
+  <rect x="46" y="146" width="120" height="34" rx="6" fill="#0f5f6e"/>
+  <text x="106" y="169" font-family="DejaVu Serif" font-size="19" font-weight="bold" fill="#fff" text-anchor="middle">3a + 2</text>
+
+  <line x1="204" y1="20" x2="204" y2="252" stroke="#d6d9de"/>
+
+  <!-- formel med innsetting -->
+  <text x="330" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#0f5f6e" text-anchor="middle">FORMEL OG INNSETTING</text>
+  <rect x="240" y="44" width="120" height="70" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.6"/>
+  <text x="300" y="86" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">A = l · b</text>
+  <text x="300" y="36" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">l</text>
+  <text x="230" y="84" font-family="DejaVu Serif" font-size="12" fill="#5a6272" text-anchor="middle">b</text>
+
+  <path d="M 372 78 L 404 78" stroke="#0f5f6e" stroke-width="1.8" marker-end="url(#pa6)"/>
+  <defs><marker id="pa6" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#0f5f6e"/></marker></defs>
+  <text x="388" y="66" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">sett inn</text>
+
+  <text x="464" y="62" font-family="DejaVu Serif" font-size="14" fill="#5a6272">l = 6</text>
+  <text x="464" y="82" font-family="DejaVu Serif" font-size="14" fill="#5a6272">b = 4</text>
+  <text x="464" y="108" font-family="DejaVu Serif" font-size="17" font-weight="bold" fill="#0f5f6e">A = 24</text>
+
+  <!-- mønster -->
+  <text x="330" y="146" font-family="Arial" font-size="11.5" font-weight="bold" fill="#0f5f6e" text-anchor="middle">MØNSTER BLIR FORMEL</text>
+  <g stroke="#0f5f6e" stroke-width="2" stroke-linecap="round">
+    <path d="M 250 168 h 22 M 250 190 h 22 M 250 168 v 22 M 272 168 v 22"/>
+    <path d="M 306 168 h 22 M 306 190 h 22 M 306 168 v 22 M 328 168 v 22 M 328 168 h 22 M 328 190 h 22 M 350 168 v 22"/>
+    <path d="M 384 168 h 22 M 384 190 h 22 M 384 168 v 22 M 406 168 v 22 M 406 168 h 22 M 406 190 h 22 M 428 168 v 22 M 428 168 h 22 M 428 190 h 22 M 450 168 v 22"/>
+  </g>
+  <g font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">
+    <text x="261" y="206">4</text><text x="328" y="206">7</text><text x="417" y="206">10</text>
+  </g>
+  <rect x="286" y="216" width="128" height="30" rx="6" fill="#0f5f6e"/>
+  <text x="350" y="237" font-family="DejaVu Serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">3n + 1</text>
+
+  <line x1="496" y1="20" x2="496" y2="140" stroke="#d6d9de"/>
+
+  <!-- likning som vektskål -->
+  <text x="568" y="28" font-family="Arial" font-size="11.5" font-weight="bold" fill="#0f5f6e" text-anchor="middle">LIKNING</text>
+  <line x1="516" y1="60" x2="620" y2="60" stroke="#0f5f6e" stroke-width="2.4"/>
+  <path d="M 568 60 L 568 96 M 552 96 h 32" stroke="#0f5f6e" stroke-width="2.4" fill="none"/>
+  <rect x="518" y="42" width="42" height="16" rx="3" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.3"/>
+  <text x="539" y="55" font-family="DejaVu Serif" font-size="12" fill="#1f2430" text-anchor="middle">x + 3</text>
+  <rect x="578" y="42" width="42" height="16" rx="3" fill="#e0eff1" stroke="#0f5f6e" stroke-width="1.3"/>
+  <text x="599" y="55" font-family="DejaVu Serif" font-size="12" fill="#1f2430" text-anchor="middle">8</text>
+  <text x="568" y="118" font-family="DejaVu Serif" font-size="15" fill="#1f2430" text-anchor="middle">x + 3 = 8</text>
+  <rect x="524" y="128" width="88" height="26" rx="5" fill="#0f5f6e"/>
+  <text x="568" y="146" font-family="DejaVu Serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">x = 5</text>
+  <text x="568" y="176" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">like mye på</text>
+  <text x="568" y="190" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">begge sider</text>
+
+  <!-- skriveregler -->
+  <line x1="24" y1="272" x2="616" y2="272" stroke="#d6d9de"/>
+  <text x="30" y="298" font-family="Arial" font-size="11" font-weight="bold" fill="#0f5f6e">SKRIVEREGLER</text>
+  <g font-family="DejaVu Serif" font-size="14" fill="#1f2430">
+    <text x="160" y="298">3 · a  skrives  3a</text>
+    <text x="320" y="298">a · a  skrives  a²</text>
+    <text x="470" y="298">1 · x  skrives  x</text>
+  </g>
+</svg>
+<p class="illtekst">En bokstav står for et tall. Med bokstaver kan du beskrive en situasjon som ett uttrykk, sette tall inn i en formel, finne mønsteret i en figurrekke — og løse likninger.</p>
+</div>
+
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">6.1</span><span>Bokstaver i matematikk</span></li>
+    <li><span class="dknr">6.2</span><span>Sette tall inn i uttrykk og formler</span></li>
+    <li><span class="dknr">6.3</span><span>Trekke sammen like ledd</span></li>
+    <li><span class="dknr">6.4</span><span>Gange ut parenteser</span></li>
+    <li><span class="dknr">6.5</span><span>Mønstre og formler</span></li>
+    <li><span class="dknr">6.6</span><span>Likninger</span></li>
+    <li><span class="dknr">6.7</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-6.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>lage og regne med enkle formler og algebrauttrykk knyttet til praktiske situasjoner</li>
+      <li>bruke figurer, ord og formler til å utforske og beskrive strukturer og endringer i geometriske mønstre og tallmønstre</li>
+      <li>lage, løse og forklare enkle ligninger knyttet til praktiske situasjoner</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>bruke og forklare formler knyttet til hverdagsliv og yrkesliv</li>
+      <li>formulere og løse problemer fra hverdag og arbeidsliv ved bruk av likninger eller likningssett</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir). Læreplanen har også mål om funksjoner og grafer i samme temaperiode. De er ikke tatt med her, siden funksjoner hører til i et eget kapittel senere i boka.</p>
+</section>
+
+<!-- ============================================================
+     6.1 BOKSTAVER I MATEMATIKK
+     ============================================================ -->
+<section id="k61">
+<h2 id="d6-1">6.1 Bokstaver i matematikk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva en bokstav står for i et uttrykk</li>
+    <li>bruke skrivereglene: 3 · a skrives 3a, og a · a skrives a²</li>
+    <li>lage et uttrykk som beskriver en praktisk situasjon</li>
+    <li>skille mellom ledd og faktorer</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>uttrykk</td><td></td><td>3a + 2 er et uttrykk.</td></tr>
+    <tr><td>variabel</td><td></td><td>Bokstaven a er en variabel.</td></tr>
+    <tr><td>ledd</td><td></td><td>Uttrykket har to ledd.</td></tr>
+    <tr><td>koeffisient</td><td></td><td>Koeffisienten i 3a er 3.</td></tr>
+    <tr><td>ukjent</td><td></td><td>Vi kaller det ukjente tallet x.</td></tr>
+    <tr><td>å stå for</td><td></td><td>Bokstaven står for antall timer.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Når vi ikke vet hvor mange bøker det er i en eske, kaller vi antallet <span class="matte">a</span>.
+  Da kan vi likevel skrive ned hvor mange bøker tre esker inneholder: <span class="matte">3a</span>.
+  Uttrykket gjelder uansett hva <span class="matte">a</span> viser seg å være — og det er nettopp
+  poenget med bokstavregning.
+</p>
+
+<div class="regel">
+  <span class="etikett">Skriveregler</span>
+  <ul>
+    <li>Gangetegnet mellom tall og bokstav sløyfes: <span class="matte">3 · a</span> skrives <span class="matte">3a</span></li>
+    <li>Gangetegnet mellom bokstaver sløyfes også: <span class="matte">a · b</span> skrives <span class="matte">ab</span></li>
+    <li>Tallet 1 skrives ikke: <span class="matte">1 · x</span> skrives <span class="matte">x</span></li>
+    <li>En bokstav ganget med seg selv blir en potens: <span class="matte">a · a</span> skrives <span class="matte">a²</span></li>
+    <li>Tallet skrives alltid først: <span class="matte">3a</span>, ikke <span class="matte">a3</span></li>
+  </ul>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ledd og koeffisient i et uttrykk">
+  <rect x="16" y="14" width="588" height="152" rx="8" fill="#e0eff1" stroke="#b0d4da"/>
+
+  <text x="150" y="72" font-family="DejaVu Serif" font-size="34" fill="#0f5f6e" text-anchor="middle">3</text>
+  <text x="182" y="72" font-family="DejaVu Serif" font-size="34" fill="#1f2430" text-anchor="middle">a</text>
+  <text x="224" y="72" font-family="DejaVu Serif" font-size="30" fill="#1f2430" text-anchor="middle">+</text>
+  <text x="266" y="72" font-family="DejaVu Serif" font-size="34" fill="#1f2430" text-anchor="middle">2</text>
+
+  <rect x="128" y="44" width="76" height="38" rx="5" fill="none" stroke="#0f5f6e" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <rect x="246" y="44" width="40" height="38" rx="5" fill="none" stroke="#0f5f6e" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <text x="166" y="100" font-family="Arial" font-size="11" fill="#0f5f6e" text-anchor="middle">første ledd</text>
+  <text x="266" y="100" font-family="Arial" font-size="11" fill="#0f5f6e" text-anchor="middle">andre ledd</text>
+
+  <path d="M 150 88 L 150 122" stroke="#5a6272" stroke-width="1.3" marker-end="url(#pn6)"/>
+  <defs><marker id="pn6" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+    <path d="M0,0 L8,0 L4,7 z" fill="#5a6272"/></marker></defs>
+  <text x="150" y="140" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">koeffisient</text>
+
+  <line x1="330" y1="30" x2="330" y2="150" stroke="#b0d4da"/>
+  <text x="470" y="56" font-family="Arial" font-size="12" fill="#5a6272" text-anchor="middle">Uttrykket 3a + 2 betyr:</text>
+  <text x="470" y="82" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">3 · a + 2</text>
+  <text x="470" y="110" font-family="Arial" font-size="12" fill="#5a6272" text-anchor="middle">Er a = 7, blir uttrykket</text>
+  <text x="470" y="134" font-family="DejaVu Serif" font-size="16" font-weight="bold" fill="#0f5f6e" text-anchor="middle">3 · 7 + 2 = 23</text>
+</svg>
+<figcaption>Figur 6.1 &nbsp;Ledd skilles av pluss og minus. Tallet foran bokstaven kalles koeffisienten.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Fra ord til uttrykk</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En taxi tar 65 kroner i startpris og 18 kroner per kilometer. Skriv et uttrykk for prisen på en tur på k kilometer.</p>
+    <ol class="trinn">
+      <li>Startprisen er fast og kommer uansett: <span class="matte">65</span></li>
+      <li>Hver kilometer koster 18 kroner, så k kilometer koster <span class="matte">18 · k = 18k</span></li>
+      <li>Legg sammen: <span class="matte">65 + 18k</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Prisen er 65 + 18k kroner.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Skriv uten gangetegn.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 · a</li><li><span class="bokstav">b)</span>5 · x</li>
+          <li><span class="bokstav">c)</span>2 · y</li><li><span class="bokstav">d)</span>7 · n</li>
+        </ul>
+      </li>
+      <li>Skriv uten gangetegn.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>6 · b</li>
+          <li><span class="bokstav">b)</span>4 · m</li>
+          <li><span class="bokstav">c)</span>8 · t</li>
+          <li><span class="bokstav">d)</span>2 · k</li>
+        </ul>
+      </li>
+      <li>Skriv med gangetegn.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4b</li><li><span class="bokstav">b)</span>9m</li>
+          <li><span class="bokstav">c)</span>ab</li><li><span class="bokstav">d)</span>2xy</li>
+        </ul>
+      </li>
+      <li>Skriv med gangetegn.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>7c</li>
+          <li><span class="bokstav">b)</span>3p</li>
+          <li><span class="bokstav">c)</span>xy</li>
+          <li><span class="bokstav">d)</span>5ab</li>
+        </ul>
+      </li>
+      <li>Skriv som uttrykk. Kall tallet x.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>et tall pluss 7</li><li><span class="bokstav">b)</span>et tall minus 3</li>
+          <li><span class="bokstav">c)</span>det dobbelte av et tall</li><li><span class="bokstav">d)</span>et tall delt på 4</li>
+        </ul>
+      </li>
+      <li>Hvor mange ledd har uttrykket?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3x + 5</li><li><span class="bokstav">b)</span>2a</li>
+          <li><span class="bokstav">c)</span>4x + 2y − 7</li><li><span class="bokstav">d)</span>a + b</li>
+        </ul>
+      </li>
+      <li>Hvor mange ledd har uttrykket?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2a + 7</li>
+          <li><span class="bokstav">b)</span>5x</li>
+          <li><span class="bokstav">c)</span>3a + 2b + c</li>
+          <li><span class="bokstav">d)</span>x − y + 4</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Skriv som uttrykk. Kall tallet x.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>fem mer enn et tall</li>
+          <li><span class="bokstav">b)</span>tre ganger et tall, pluss 2</li>
+          <li><span class="bokstav">c)</span>et tall ganget med seg selv</li>
+          <li><span class="bokstav">d)</span>halvparten av et tall</li>
+        </ul>
+      </li>
+      <li>En eske inneholder a bøker. Skriv et uttrykk for antall bøker i
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4 esker</li>
+          <li><span class="bokstav">b)</span>4 esker og 3 løse bøker</li>
+          <li><span class="bokstav">c)</span>4 esker, men 2 bøker er tatt ut</li>
+        </ul>
+      </li>
+      <li>En arbeider tjener k kroner per time. Skriv uttrykk for lønnen etter
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>5 timer</li><li><span class="bokstav">b)</span>7,5 timer</li>
+          <li><span class="bokstav">c)</span>t timer</li>
+        </ul>
+      </li>
+      <li>Hva er koeffisienten?
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>6x</li><li><span class="bokstav">b)</span>x</li>
+          <li><span class="bokstav">c)</span>−3y</li><li><span class="bokstav">d)</span>0,5a</li>
+        </ul>
+      </li>
+      <li>Skriv kortere.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + x + x</li><li><span class="bokstav">b)</span>a · a</li>
+          <li><span class="bokstav">c)</span>y · y · y</li><li><span class="bokstav">d)</span>5 · m</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>Forklar forskjellen på <span class="matte">3x</span> og <span class="matte">x³</span>.
+        Sett inn x = 2 i begge, og sammenlign svarene.</li>
+      <li>Et rektangel har lengden l og bredden b. Skriv uttrykk for
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>omkretsen</li><li><span class="bokstav">b)</span>arealet</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="15" class="oppgaver" style="counter-reset: oppg 14;">
+      <li>En bedrift betaler f kroner i fast avgift hver måned, pluss p kroner
+        for hver enhet de produserer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv et uttrykk for kostnaden ved n enheter.</li>
+          <li><span class="bokstav">b)</span>Regn ut kostnaden når f = 12 000, p = 45 og n = 300.</li>
+          <li><span class="bokstav">c)</span>Hvordan ser uttrykket ut hvis den faste avgiften faller bort?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En taxi tar 65 kroner i startpris og 18 kroner per kilometer.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv et uttrykk for prisen på en tur på k kilometer.</li>
+          <li><span class="bokstav">b)</span>Hva koster en tur på 12 kilometer?</li>
+          <li><span class="bokstav">c)</span>Omtrent hvor langt kan du kjøre for 400 kroner? Rund av til én desimal.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     6.2 SETTE TALL INN I UTTRYKK OG FORMLER
+     ============================================================ -->
+<section id="k62" class="nyside">
+<h2 id="d6-2">6.2 Sette tall inn i uttrykk og formler</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>sette et tall inn i et uttrykk og regne det ut</li>
+    <li>bruke regnerekkefølgen riktig ved innsetting</li>
+    <li>bruke vanlige formler fra hverdag og arbeidsliv</li>
+    <li>snu en formel for å finne en annen størrelse</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>formel</td><td></td><td>Formelen for areal er A = l · b.</td></tr>
+    <tr><td>å sette inn</td><td></td><td>Jeg setter inn x = 4.</td></tr>
+    <tr><td>å erstatte</td><td></td><td>Bokstaven erstattes med tallet.</td></tr>
+    <tr><td>størrelse</td><td></td><td>Vi regner ut en ukjent størrelse.</td></tr>
+    <tr><td>å snu formelen</td><td></td><td>Jeg snur formelen for å finne I.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Å sette inn betyr å bytte ut bokstaven med et tall. Deretter regner du som vanlig — med
+  regnerekkefølgen fra kapittel 2. Det er der de fleste feilene skjer.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Innsetting av x lik fire i uttrykket to x pluss sju">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#e0eff1" stroke="#b0d4da"/>
+  <text x="310" y="42" font-family="Arial" font-size="12" font-weight="bold" fill="#0f5f6e" text-anchor="middle">SETT INN x = 4 I UTTRYKKET 2x + 7</text>
+
+  <text x="120" y="80" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">2x + 7</text>
+  <path d="M 172 74 L 214 74" stroke="#0f5f6e" stroke-width="1.8" marker-end="url(#pi6)"/>
+  <defs><marker id="pi6" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#0f5f6e"/></marker></defs>
+  <text x="193" y="62" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">bytt ut x</text>
+  <text x="290" y="80" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">2 · 4 + 7</text>
+  <path d="M 348 74 L 390 74" stroke="#0f5f6e" stroke-width="1.8" marker-end="url(#pi6)"/>
+  <text x="369" y="62" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">gange først</text>
+  <text x="446" y="80" font-family="DejaVu Serif" font-size="20" fill="#1f2430" text-anchor="middle">8 + 7</text>
+  <rect x="496" y="60" width="86" height="28" rx="5" fill="#0f5f6e"/>
+  <text x="539" y="80" font-family="DejaVu Serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">= 15</text>
+
+  <rect x="46" y="112" width="528" height="46" rx="6" fill="#fff8e1" stroke="#ffe082"/>
+  <text x="310" y="132" font-family="Arial" font-size="11.5" fill="#8d6708" text-anchor="middle">Sett alltid parentes rundt negative tall når du setter inn:</text>
+  <text x="310" y="150" font-family="DejaVu Serif" font-size="14" fill="#8d6708" text-anchor="middle">x² når x = −3 blir (−3)² = 9, ikke −3² = −9</text>
+</svg>
+<figcaption>Figur 6.2 &nbsp;Bytt ut bokstaven, og regn deretter i riktig rekkefølge.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; En formel fra arbeidslivet</div>
+  <div class="kropp">
+    <p class="oppgavetekst">En elektriker bruker formelen P = U · I, der P er effekt i watt, U er spenning i volt og I er strøm i ampere. Regn ut P når U = 230 og I = 10.</p>
+    <ol class="trinn">
+      <li>Sett inn tallene: <span class="matte">P = 230 · 10</span></li>
+      <li>Regn ut: <span class="matte">P = 2 300</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Effekten er 2 300 watt.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="17" class="oppgaver" style="counter-reset: oppg 16;">
+      <li>Regn ut når x = 3.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + 5</li><li><span class="bokstav">b)</span>2x</li>
+          <li><span class="bokstav">c)</span>3x − 1</li><li><span class="bokstav">d)</span>x²</li>
+        </ul>
+      </li>
+      <li>Regn ut når x = 4.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + 6</li>
+          <li><span class="bokstav">b)</span>3x</li>
+          <li><span class="bokstav">c)</span>2x − 5</li>
+          <li><span class="bokstav">d)</span>x²</li>
+        </ul>
+      </li>
+      <li>Regn ut når a = 5.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4a</li><li><span class="bokstav">b)</span>a + 12</li>
+          <li><span class="bokstav">c)</span>20 − a</li><li><span class="bokstav">d)</span>a : 5</li>
+        </ul>
+      </li>
+      <li>Regn ut når a = 10.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>5a</li>
+          <li><span class="bokstav">b)</span>a + 8</li>
+          <li><span class="bokstav">c)</span>25 − a</li>
+          <li><span class="bokstav">d)</span>a : 2</li>
+        </ul>
+      </li>
+      <li>Regn ut når x = 2 og y = 6.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + y</li><li><span class="bokstav">b)</span>xy</li>
+          <li><span class="bokstav">c)</span>y − x</li><li><span class="bokstav">d)</span>3x + y</li>
+        </ul>
+      </li>
+      <li>Regn ut når x = 3 og y = 5.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + y</li>
+          <li><span class="bokstav">b)</span>xy</li>
+          <li><span class="bokstav">c)</span>y − x</li>
+          <li><span class="bokstav">d)</span>2x + y</li>
+        </ul>
+      </li>
+      <li>Bruk formelen A = l · b. Regn ut A når
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>l = 5 og b = 3</li><li><span class="bokstav">b)</span>l = 8 og b = 2,5</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="24" class="oppgaver" style="counter-reset: oppg 23;">
+      <li>Regn ut når x = 4.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2x + 7</li><li><span class="bokstav">b)</span>5x − 3</li>
+          <li><span class="bokstav">c)</span>x² + 1</li><li><span class="bokstav">d)</span>3(x + 2)</li>
+        </ul>
+      </li>
+      <li>Regn ut når a = 3 og b = 5.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2a + 3b</li><li><span class="bokstav">b)</span>ab − 4</li>
+          <li><span class="bokstav">c)</span>a² + b²</li><li><span class="bokstav">d)</span>(a + b)²</li>
+        </ul>
+      </li>
+      <li>Omkretsen av et rektangel er O = 2l + 2b.
+        Regn ut O når l = 7 og b = 4,5.</li>
+      <li>Formelen for strekning er s = v · t, der v er farten og t er tiden.
+        En bil kjører i 80 km/t i 2,5 timer. Hvor langt kjører den?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="28" class="oppgaver" style="counter-reset: oppg 27;">
+      <li>Regn ut når x = −2. Husk parentes.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3x</li><li><span class="bokstav">b)</span>x + 5</li>
+          <li><span class="bokstav">c)</span>x²</li><li><span class="bokstav">d)</span>2x − 1</li>
+        </ul>
+      </li>
+      <li>En elev setter x = 3 inn i uttrykket <span class="matte">2x²</span> og svarer 36.
+        Forklar hva eleven har gjort feil, og regn ut riktig svar.</li>
+      <li>Arealet av en trekant er A = <span class="brok"><span class="t">g · h</span><span class="n">2</span></span>, der g er grunnlinjen og h er høyden.
+        Regn ut arealet når g = 12 og h = 7.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="31" class="oppgaver" style="counter-reset: oppg 30;">
+      <li>En elektriker bruker formelen P = U · I.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut P når U = 230 volt og I = 10 ampere.</li>
+          <li><span class="bokstav">b)</span>En ovn bruker 1 380 watt ved 230 volt. Hvor stor er strømmen I?</li>
+          <li><span class="bokstav">c)</span>Forklar hvordan du snudde formelen for å finne I.</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift regner ut transportkostnaden med formelen K = 850 + 12,50 · d,
+          der d er antall kilometer og K er kostnaden i kroner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva blir kostnaden ved 240 kilometer?</li>
+          <li><span class="bokstav">b)</span>Hva betyr tallene 850 og 12,50 i praksis?</li>
+          <li><span class="bokstav">c)</span>Hvor langt kan bedriften kjøre for 5 000 kroner? Rund av til hele kilometer.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     6.3 TREKKE SAMMEN LIKE LEDD
+     ============================================================ -->
+<section id="k63" class="nyside">
+<h2 id="d6-3">6.3 Trekke sammen like ledd</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>kjenne igjen ledd som er like</li>
+    <li>trekke sammen ledd med samme bokstav</li>
+    <li>forenkle uttrykk med flere ulike bokstaver</li>
+    <li>forklare hvorfor 3x + 2 ikke kan skrives kortere</li>
+  </ul>
+</div>
+
+<p>
+  Du kan bare legge sammen ting som er av samme slag. Tre epler pluss fem epler blir åtte epler,
+  men tre epler pluss fem pærer blir ikke åtte av noe. På samme måte er
+  <span class="matte">3a + 5a = 8a</span>, mens <span class="matte">3a + 5b</span> må stå som
+  det er.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bare ledd med samme bokstav kan trekkes sammen">
+  <rect x="16" y="14" width="288" height="152" rx="8" fill="#eaf5eb" stroke="#bcdcbe"/>
+  <rect x="316" y="14" width="288" height="152" rx="8" fill="#fdecec" stroke="#f0c4c4"/>
+
+  <text x="160" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">SAMME BOKSTAV — GÅR</text>
+  <text x="460" y="40" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">ULIKE BOKSTAVER — GÅR IKKE</text>
+
+  <g fill="#2e7d32">
+    <rect x="48" y="58" width="18" height="24" rx="3"/><rect x="72" y="58" width="18" height="24" rx="3"/>
+    <rect x="96" y="58" width="18" height="24" rx="3"/>
+    <rect x="140" y="58" width="18" height="24" rx="3"/><rect x="164" y="58" width="18" height="24" rx="3"/>
+    <rect x="188" y="58" width="18" height="24" rx="3"/><rect x="212" y="58" width="18" height="24" rx="3"/>
+    <rect x="236" y="58" width="18" height="24" rx="3"/>
+  </g>
+  <text x="122" y="76" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">+</text>
+  <text x="160" y="106" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">3a + 5a</text>
+  <text x="160" y="136" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#2e7d32" text-anchor="middle">= 8a</text>
+
+  <g>
+    <rect x="352" y="58" width="18" height="24" rx="3" fill="#c62828"/>
+    <rect x="376" y="58" width="18" height="24" rx="3" fill="#c62828"/>
+    <rect x="400" y="58" width="18" height="24" rx="3" fill="#c62828"/>
+    <circle cx="458" cy="70" r="11" fill="#5a6272"/><circle cx="486" cy="70" r="11" fill="#5a6272"/>
+    <circle cx="514" cy="70" r="11" fill="#5a6272"/><circle cx="542" cy="70" r="11" fill="#5a6272"/>
+    <circle cx="570" cy="70" r="11" fill="#5a6272"/>
+  </g>
+  <text x="432" y="76" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">+</text>
+  <text x="460" y="106" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">3a + 5b</text>
+  <text x="460" y="136" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#c62828" text-anchor="middle">= 3a + 5b</text>
+</svg>
+<figcaption>Figur 6.3 &nbsp;Ulike bokstaver står for ulike ting. De kan ikke slås sammen til ett ledd.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Regel</span>
+  <ul>
+    <li>Ledd er like når de har <strong>samme bokstav i samme potens</strong>:
+      <span class="matte">4x</span> og <span class="matte">7x</span> er like,
+      men <span class="matte">4x</span> og <span class="matte">4x²</span> er det ikke.</li>
+    <li>Trekk sammen ved å legge sammen koeffisientene. Bokstaven står stille.</li>
+    <li>Et tall uten bokstav kan bare trekkes sammen med et annet tall uten bokstav.</li>
+  </ul>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Flere slags ledd</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Forenkle <span class="matte">5a + 3b − 2a + b</span>.</p>
+    <ol class="trinn">
+      <li>Sorter leddene etter bokstav: <span class="matte">5a − 2a</span> og <span class="matte">3b + b</span></li>
+      <li>Husk at <span class="matte">b</span> betyr <span class="matte">1b</span>.</li>
+      <li>Trekk sammen: <span class="matte">5a − 2a = 3a</span> og <span class="matte">3b + 1b = 4b</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 3a + 4b</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="33" class="oppgaver" style="counter-reset: oppg 32;">
+      <li>Trekk sammen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2x + 3x</li><li><span class="bokstav">b)</span>5a − 2a</li>
+          <li><span class="bokstav">c)</span>4y + y</li><li><span class="bokstav">d)</span>7m − 7m</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4x + 2x</li>
+          <li><span class="bokstav">b)</span>7a − 3a</li>
+          <li><span class="bokstav">c)</span>6y + y</li>
+          <li><span class="bokstav">d)</span>5m − 5m</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3a + 2a + 4a</li><li><span class="bokstav">b)</span>8x − 3x − 2x</li>
+          <li><span class="bokstav">c)</span>2b + 5b − b</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2a + 4a + 3a</li>
+          <li><span class="bokstav">b)</span>10x − 4x − 3x</li>
+          <li><span class="bokstav">c)</span>3b + 6b − b</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>4x + 3 + 2x</li><li><span class="bokstav">b)</span>5 + 3a + 2</li>
+          <li><span class="bokstav">c)</span>7y − 2 − 3y</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>5x + 4 + 3x</li>
+          <li><span class="bokstav">b)</span>7 + 2a + 3</li>
+          <li><span class="bokstav">c)</span>9y − 5 − 4y</li>
+        </ul>
+      </li>
+      <li>Kan leddene trekkes sammen? Svar ja eller nei.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3x og 5x</li><li><span class="bokstav">b)</span>3x og 5y</li>
+          <li><span class="bokstav">c)</span>2a og a</li><li><span class="bokstav">d)</span>4x og 4</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="40" class="oppgaver" style="counter-reset: oppg 39;">
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>4x + 3 + 2x − 1</li><li><span class="bokstav">b)</span>5a + 3b − 2a + b</li>
+          <li><span class="bokstav">c)</span>6m − 2n − m + 5n</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>2x + 3y + 4x − y</li><li><span class="bokstav">b)</span>7a − 3 − 2a + 8</li>
+          <li><span class="bokstav">c)</span>5p + 2q − 5p + 3q</li>
+        </ul>
+      </li>
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>x² + 3x + 2x²</li><li><span class="bokstav">b)</span>4a² − a² + 5</li>
+          <li><span class="bokstav">c)</span>2y² + y − y² + 3y</li>
+        </ul>
+      </li>
+      <li>Et rektangel har sidene x og 3.
+        Skriv et uttrykk for omkretsen, og forenkle det.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="44" class="oppgaver" style="counter-reset: oppg 43;">
+      <li>En elev skriver <span class="matte">3x + 2 = 5x</span>.
+        Forklar hva som er feil. Sett gjerne inn et tall for x for å vise det.</li>
+      <li>Tre like kvadrater med side a legges etter hverandre på en rekke,
+        slik at nabokvadratene deler side.
+        Skriv et uttrykk for omkretsen av hele figuren, og forenkle det.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="46" class="oppgaver" style="counter-reset: oppg 45;">
+      <li>En bedrift har tre avdelinger. Avdeling A har x ansatte,
+        avdeling B har dobbelt så mange som A, og avdeling C har 12 flere enn A.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv et forenklet uttrykk for antall ansatte til sammen.</li>
+          <li><span class="bokstav">b)</span>Hvor mange ansatte er det når x = 15?</li>
+          <li><span class="bokstav">c)</span>Bedriften har 92 ansatte. Hvor mange er det i avdeling A?</li>
+        </ul>
+      </li>
+      <li>Forenkle.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>5a + 2b − 3a + 4b − b</li>
+          <li><span class="bokstav">b)</span>2x² + 3x − x² + 5 − 2x</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     6.4 GANGE UT PARENTESER
+     ============================================================ -->
+<section id="k64" class="nyside">
+<h2 id="d6-4">6.4 Gange ut parenteser</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>gange et tall inn i en parentes</li>
+    <li>gange en bokstav inn i en parentes</li>
+    <li>håndtere minus foran en parentes</li>
+    <li>gange ut og trekke sammen i samme oppgave</li>
+  </ul>
+</div>
+
+<p>
+  Dette er den distributive lov fra kapittel 2.4 — nå med bokstaver i stedet for tall.
+  Regelen er den samme: tallet utenfor parentesen skal ganges med <strong>hvert eneste ledd</strong>
+  inni.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arealmodell som viser at tre ganger parentesen x pluss to blir tre x pluss seks">
+  <rect x="16" y="14" width="588" height="162" rx="8" fill="#e0eff1" stroke="#b0d4da"/>
+
+  <rect x="60" y="56" width="150" height="70" fill="#0f5f6e" fill-opacity="0.28" stroke="#0f5f6e" stroke-width="1.6"/>
+  <rect x="210" y="56" width="60" height="70" fill="#0f5f6e" fill-opacity="0.6" stroke="#0f5f6e" stroke-width="1.6"/>
+  <text x="135" y="98" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">3x</text>
+  <text x="240" y="98" font-family="DejaVu Serif" font-size="17" fill="#1f2430" text-anchor="middle">6</text>
+  <text x="135" y="48" font-family="DejaVu Serif" font-size="13" fill="#5a6272" text-anchor="middle">x</text>
+  <text x="240" y="48" font-family="DejaVu Serif" font-size="13" fill="#5a6272" text-anchor="middle">2</text>
+  <text x="48" y="96" font-family="DejaVu Serif" font-size="13" fill="#5a6272" text-anchor="middle">3</text>
+  <text x="165" y="150" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">bredden er x + 2, høyden er 3</text>
+
+  <line x1="310" y1="34" x2="310" y2="156" stroke="#b0d4da"/>
+
+  <text x="460" y="70" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">3(x + 2)</text>
+  <text x="460" y="102" font-family="DejaVu Serif" font-size="17" fill="#5a6272" text-anchor="middle">= 3 · x + 3 · 2</text>
+  <text x="460" y="134" font-family="DejaVu Serif" font-size="20" font-weight="bold" fill="#0f5f6e" text-anchor="middle">= 3x + 6</text>
+</svg>
+<figcaption>Figur 6.4 &nbsp;Hele rektangelet har samme areal som de to delene til sammen.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Minus foran parentesen</span>
+  <p style="margin-bottom:0;">Står det minus foran, skifter <strong>alle</strong> leddene fortegn —
+  akkurat som i kapittel 2.2:<br>
+  <span class="matte">−(x + 4) = −x − 4</span> &nbsp;og&nbsp; <span class="matte">−(a − 2) = −a + 2</span></p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Gang ut og trekk sammen</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Forenkle <span class="matte">3(a + 2) − 2(a − 1)</span>.</p>
+    <ol class="trinn">
+      <li>Gang ut den første parentesen: <span class="matte">3a + 6</span></li>
+      <li>Gang ut den andre. Husk at minus foran gjelder begge ledd:
+        <span class="matte">−2a + 2</span></li>
+      <li>Sett sammen: <span class="matte">3a + 6 − 2a + 2</span></li>
+      <li>Trekk sammen like ledd: <span class="matte">a + 8</span></li>
+    </ol>
+    <p class="svarlinje">Svar: a + 8</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2(x + 3)</li><li><span class="bokstav">b)</span>3(a + 1)</li>
+          <li><span class="bokstav">c)</span>4(y + 2)</li><li><span class="bokstav">d)</span>5(m + 4)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3(x + 4)</li>
+          <li><span class="bokstav">b)</span>2(a + 6)</li>
+          <li><span class="bokstav">c)</span>5(y + 1)</li>
+          <li><span class="bokstav">d)</span>6(m + 3)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3(x − 2)</li><li><span class="bokstav">b)</span>2(a − 5)</li>
+          <li><span class="bokstav">c)</span>4(b − 1)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4(x − 3)</li>
+          <li><span class="bokstav">b)</span>5(a − 2)</li>
+          <li><span class="bokstav">c)</span>3(b − 6)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x(x + 2)</li><li><span class="bokstav">b)</span>a(a − 3)</li>
+          <li><span class="bokstav">c)</span>2x(x + 1)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x(x + 5)</li>
+          <li><span class="bokstav">b)</span>a(a − 2)</li>
+          <li><span class="bokstav">c)</span>3x(x + 2)</li>
+        </ul>
+      </li>
+      <li>Gang ut og trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>2(x + 1) + 3x</li><li><span class="bokstav">b)</span>3(a + 2) − a</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="55" class="oppgaver" style="counter-reset: oppg 54;">
+      <li>Gang ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>5(2x + 3)</li><li><span class="bokstav">b)</span>4(3a − 2)</li>
+          <li><span class="bokstav">c)</span>6(x + y)</li><li><span class="bokstav">d)</span>3(2m − 4n)</li>
+        </ul>
+      </li>
+      <li>Gang ut og trekk sammen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>2(x + 3) + 4(x − 1)</li>
+          <li><span class="bokstav">b)</span>3(a + 2) − 2(a − 1)</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>−(x + 4)</li><li><span class="bokstav">b)</span>−(a − 2)</li>
+          <li><span class="bokstav">c)</span>−2(y + 3)</li>
+        </ul>
+      </li>
+      <li>Et rektangel har lengden (x + 3) og bredden 4.
+        Skriv et uttrykk for arealet, og gang det ut.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="59" class="oppgaver" style="counter-reset: oppg 58;">
+      <li>En elev skriver <span class="matte">3(x + 2) = 3x + 2</span>.
+        Forklar hva eleven har glemt, og gi riktig svar.</li>
+      <li>Rektangel A har sidene 5 og (x + 2). Rektangel B har arealet 5x + 10.
+        Er de like store? Begrunn svaret.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="61" class="oppgaver" style="counter-reset: oppg 60;">
+      <li>Gang ut og trekk sammen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>3(2x + 1) − 2(x − 4)</li>
+          <li><span class="bokstav">b)</span>x(x + 3) − 2(x + 3)</li>
+        </ul>
+      </li>
+      <li>En hage er (x + 4) meter lang og x meter bred.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv et uttrykk for arealet, og gang det ut.</li>
+          <li><span class="bokstav">b)</span>Hvor stort er arealet når x = 6?</li>
+          <li><span class="bokstav">c)</span>Skriv et forenklet uttrykk for omkretsen.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     6.5 MØNSTRE OG FORMLER
+     ============================================================ -->
+<section id="k65" class="nyside">
+<h2 id="d6-5">6.5 Mønstre og formler</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>finne ut hvor mye et mønster øker med hver gang</li>
+    <li>fortsette et tallmønster eller et figurmønster</li>
+    <li>lage en formel for figur nummer n</li>
+    <li>bruke formelen til å finne en figur langt ute i rekka</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>mønster</td><td></td><td>Mønsteret øker med 3 hver gang.</td></tr>
+    <tr><td>figurnummer</td><td></td><td>Figur nummer 4 har 13 fyrstikker.</td></tr>
+    <tr><td>å øke med</td><td></td><td>Tallrekka øker med 5.</td></tr>
+    <tr><td>tallrekke</td><td></td><td>Tallrekka er 5, 8, 11, 14.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Når et mønster øker med det samme tallet hver gang, kan du skrive en formel som gir deg
+  hvilken som helst figur — uten å tegne alle figurene fram dit.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fyrstikkmønster som blir til formelen tre n pluss en">
+  <rect x="16" y="14" width="588" height="182" rx="8" fill="#e0eff1" stroke="#b0d4da"/>
+
+  <g stroke="#0f5f6e" stroke-width="2.6" stroke-linecap="round">
+    <path d="M 56 56 h 34 M 56 90 h 34 M 56 56 v 34 M 90 56 v 34"/>
+    <path d="M 168 56 h 34 M 168 90 h 34 M 168 56 v 34 M 202 56 v 34 M 202 56 h 34 M 202 90 h 34 M 236 56 v 34"/>
+    <path d="M 314 56 h 34 M 314 90 h 34 M 314 56 v 34 M 348 56 v 34 M 348 56 h 34 M 348 90 h 34 M 382 56 v 34 M 382 56 h 34 M 382 90 h 34 M 416 56 v 34"/>
+  </g>
+  <g font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">
+    <text x="73" y="110">figur 1</text><text x="202" y="110">figur 2</text><text x="365" y="110">figur 3</text>
+  </g>
+  <g font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">
+    <text x="73" y="132">4</text><text x="202" y="132">7</text><text x="365" y="132">10</text>
+  </g>
+  <g font-family="Arial" font-size="11" fill="#0f5f6e" text-anchor="middle">
+    <text x="138" y="150">+3</text><text x="284" y="150">+3</text>
+  </g>
+  <path d="M 100 138 q 38 14 76 0" fill="none" stroke="#0f5f6e" stroke-width="1.3"/>
+  <path d="M 232 138 q 52 14 104 0" fill="none" stroke="#0f5f6e" stroke-width="1.3"/>
+
+  <rect x="452" y="52" width="132" height="88" rx="8" fill="#0f5f6e"/>
+  <text x="518" y="80" font-family="Arial" font-size="11" fill="#b0d4da" text-anchor="middle">FORMEL</text>
+  <text x="518" y="112" font-family="DejaVu Serif" font-size="24" font-weight="bold" fill="#fff" text-anchor="middle">3n + 1</text>
+
+  <text x="310" y="178" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Mønsteret øker med 3, så formelen inneholder 3n. Figur 1 har 4, og 3 · 1 = 3 — derfor må vi legge til 1.</text>
+</svg>
+<figcaption>Figur 6.5 &nbsp;Økningen blir tallet foran n. Det som mangler i figur 1, blir konstantleddet.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Slik finner du formelen</span>
+  <ul>
+    <li>Finn hvor mye mønsteret øker med hver gang. Det tallet ganges med n.</li>
+    <li>Sjekk figur 1. Er den større eller mindre enn økningen? Differansen legges til eller trekkes fra.</li>
+    <li>Kontroller formelen på figur 2 og 3 før du bruker den videre.</li>
+  </ul>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="63" class="oppgaver" style="counter-reset: oppg 62;">
+      <li>Hva er neste tall?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3, 6, 9, 12</li><li><span class="bokstav">b)</span>5, 10, 15</li>
+          <li><span class="bokstav">c)</span>2, 4, 8, 16</li><li><span class="bokstav">d)</span>20, 17, 14</li>
+        </ul>
+      </li>
+      <li>Hva er neste tall?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 8, 12, 16</li>
+          <li><span class="bokstav">b)</span>7, 14, 21</li>
+          <li><span class="bokstav">c)</span>3, 9, 27</li>
+          <li><span class="bokstav">d)</span>30, 25, 20</li>
+        </ul>
+      </li>
+      <li>Hvor mye øker eller minker mønsteret med hver gang?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>4, 9, 14, 19</li><li><span class="bokstav">b)</span>100, 90, 80</li>
+        </ul>
+      </li>
+      <li>Hvor mye øker eller minker mønsteret med hver gang?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6, 11, 16, 21</li>
+          <li><span class="bokstav">b)</span>50, 44, 38</li>
+        </ul>
+      </li>
+      <li>Figur 1 har 3 prikker, figur 2 har 5 og figur 3 har 7.
+        Hvor mange prikker har figur 4 og figur 5?</li>
+      <li>Figur 1 har 4 prikker, figur 2 har 7 og figur 3 har 10. Hvor mange prikker har figur 4 og figur 5?</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="69" class="oppgaver" style="counter-reset: oppg 68;">
+      <li>Tallrekka er 5, 8, 11, 14, …
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv de to neste tallene.</li>
+          <li><span class="bokstav">b)</span>Lag en formel for tall nummer n.</li>
+          <li><span class="bokstav">c)</span>Hvilket tall er nummer 10?</li>
+        </ul>
+      </li>
+      <li>I et fyrstikkmønster bruker figur 1 fire fyrstikker, figur 2 sju og figur 3 ti.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange fyrstikker bruker figur 4?</li>
+          <li><span class="bokstav">b)</span>Lag en formel for figur nummer n.</li>
+          <li><span class="bokstav">c)</span>Hvor mange fyrstikker bruker figur 20?</li>
+        </ul>
+      </li>
+      <li>Et mønster starter slik: 2, 6, 10, 14, …
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en formel for tall nummer n.</li>
+          <li><span class="bokstav">b)</span>Hvilket tall er nummer 12?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="72" class="oppgaver" style="counter-reset: oppg 71;">
+      <li>Tallrekka er 1, 4, 9, 16, …
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hva slags tall er dette? Se gjerne i kapittel 3.2.</li>
+          <li><span class="bokstav">b)</span>Skriv formelen for tall nummer n.</li>
+          <li><span class="bokstav">c)</span>Hvilket tall er nummer 8?</li>
+        </ul>
+      </li>
+      <li>En elev sier at formelen for mønsteret 3, 5, 7, 9 er <span class="matte">n + 2</span>.
+        Kontroller formelen på de tre første tallene, og finn den riktige formelen.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="74" class="oppgaver" style="counter-reset: oppg 73;">
+      <li>Et gulv legges i et mønster der figur 1 har 8 fliser, figur 2 har 13 og figur 3 har 18.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en formel for figur nummer n.</li>
+          <li><span class="bokstav">b)</span>Hvor mange fliser har figur 15?</li>
+          <li><span class="bokstav">c)</span>Hvilken figur består av 103 fliser?</li>
+        </ul>
+      </li>
+      <li>En bedrift har faste kostnader på 4 500 kroner og 260 kroner per produsert enhet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv en formel for kostnaden K ved n enheter.</li>
+          <li><span class="bokstav">b)</span>Hva koster det å produsere 25 enheter?</li>
+          <li><span class="bokstav">c)</span>Hvor mange hele enheter kan produseres for 20 000 kroner?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     6.6 LIKNINGER
+     ============================================================ -->
+<section id="k66" class="nyside">
+<h2 id="d6-6">6.6 Likninger</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare hva likhetstegnet betyr i en likning</li>
+    <li>løse likninger med én ukjent</li>
+    <li>kontrollere svaret ved å sette det inn</li>
+    <li>lage en likning ut fra en praktisk situasjon</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>likning</td><td></td><td>Jeg løser likningen.</td></tr>
+    <tr><td>den ukjente</td><td></td><td>Den ukjente er x.</td></tr>
+    <tr><td>venstre side</td><td></td><td>Venstre side er 2x + 5.</td></tr>
+    <tr><td>å løse</td><td></td><td>Løsningen er x = 6.</td></tr>
+    <tr><td>å kontrollere</td><td></td><td>Jeg kontrollerer ved å sette inn.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  En likning er som en vektskål i balanse. Så lenge du gjør <strong>nøyaktig det samme på begge
+  sider</strong>, holder balansen. Målet er å få den ukjente alene på den ene siden.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Likningen to x pluss fem er lik sytten løst i to trinn">
+  <rect x="16" y="14" width="588" height="172" rx="8" fill="#e0eff1" stroke="#b0d4da"/>
+
+  <text x="150" y="44" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">2x + 5 = 17</text>
+  <text x="150" y="76" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">trekk fra 5 på begge sider</text>
+  <text x="150" y="106" font-family="DejaVu Serif" font-size="19" fill="#1f2430" text-anchor="middle">2x = 12</text>
+  <text x="150" y="138" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">del på 2 på begge sider</text>
+  <rect x="98" y="148" width="104" height="28" rx="5" fill="#0f5f6e"/>
+  <text x="150" y="168" font-family="DejaVu Serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">x = 6</text>
+
+  <line x1="310" y1="30" x2="310" y2="170" stroke="#b0d4da"/>
+
+  <text x="460" y="44" font-family="Arial" font-size="12" font-weight="bold" fill="#0f5f6e" text-anchor="middle">KONTROLL</text>
+  <text x="460" y="76" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">2 · 6 + 5</text>
+  <text x="460" y="104" font-family="DejaVu Serif" font-size="16" fill="#1f2430" text-anchor="middle">= 12 + 5 = 17</text>
+  <text x="460" y="136" font-family="Arial" font-size="11.5" fill="#2e7d32" text-anchor="middle">Høyre side er 17 — det stemmer.</text>
+  <text x="460" y="164" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">Kontroller alltid. Det tar ti sekunder.</text>
+</svg>
+<figcaption>Figur 6.6 &nbsp;Gjør det samme på begge sider, ett trinn om gangen — og kontroller til slutt.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="76" class="oppgaver" style="counter-reset: oppg 75;">
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + 4 = 9</li><li><span class="bokstav">b)</span>x + 7 = 15</li>
+          <li><span class="bokstav">c)</span>x − 3 = 10</li><li><span class="bokstav">d)</span>x − 5 = 2</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + 6 = 11</li>
+          <li><span class="bokstav">b)</span>x + 9 = 20</li>
+          <li><span class="bokstav">c)</span>x − 4 = 12</li>
+          <li><span class="bokstav">d)</span>x − 8 = 1</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2x = 10</li><li><span class="bokstav">b)</span>5x = 30</li>
+          <li><span class="bokstav">c)</span>3x = 27</li><li><span class="bokstav">d)</span>4x = 20</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3x = 12</li>
+          <li><span class="bokstav">b)</span>6x = 42</li>
+          <li><span class="bokstav">c)</span>2x = 18</li>
+          <li><span class="bokstav">d)</span>7x = 35</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x : 2 = 6</li><li><span class="bokstav">b)</span>x : 3 = 4</li>
+          <li><span class="bokstav">c)</span>x : 5 = 10</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x : 4 = 3</li>
+          <li><span class="bokstav">b)</span>x : 2 = 8</li>
+          <li><span class="bokstav">c)</span>x : 10 = 6</li>
+        </ul>
+      </li>
+      <li>Sett inn og kontroller. Er x = 4 løsningen?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>x + 5 = 9</li><li><span class="bokstav">b)</span>3x = 15</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="83" class="oppgaver" style="counter-reset: oppg 82;">
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2x + 3 = 11</li><li><span class="bokstav">b)</span>3x − 4 = 14</li>
+          <li><span class="bokstav">c)</span>5x + 2 = 27</li><li><span class="bokstav">d)</span>4x − 6 = 10</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>2x + 7 = x + 12</li><li><span class="bokstav">b)</span>5x − 3 = 3x + 9</li>
+          <li><span class="bokstav">c)</span>4x + 1 = 2x + 9</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3(x + 2) = 18</li><li><span class="bokstav">b)</span>2(x − 1) = 10</li>
+        </ul>
+      </li>
+      <li>Sara tenker på et tall. Hun ganger det med 4 og legger til 6.
+        Svaret blir 30. Sett opp en likning, og finn tallet.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="87" class="oppgaver" style="counter-reset: oppg 86;">
+      <li>En elev løser <span class="matte">3x = 12</span> og svarer x = 36.
+        Forklar hva eleven har gjort feil, og gi riktig svar.</li>
+      <li>En taxi tar 65 kroner i startpris og 18 kroner per kilometer.
+        En tur kostet 281 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en likning for turen.</li>
+          <li><span class="bokstav">b)</span>Hvor mange kilometer var turen?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="89" class="oppgaver" style="counter-reset: oppg 88;">
+      <li>To mobilabonnement: abonnement A koster 199 kroner i måneden pluss 2 kroner per GB.
+        Abonnement B koster 149 kroner pluss 4 kroner per GB.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en likning for når de koster like mye.</li>
+          <li><span class="bokstav">b)</span>Ved hvor mange GB koster de like mye?</li>
+          <li><span class="bokstav">c)</span>Hvilket abonnement lønner seg ved 40 GB?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift har 4 500 kroner i faste kostnader per uke og 260 kroner i kostnad
+          per produsert enhet. Ukesbudsjettet er 20 000 kroner.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en likning for hvor mange enheter budsjettet dekker.</li>
+          <li><span class="bokstav">b)</span>Løs likningen.</li>
+          <li><span class="bokstav">c)</span>Hvor mange hele enheter kan bedriften produsere? Forklar hvorfor svaret må rundes ned.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     6.7 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k67" class="nyside">
+<h2 id="d6-7">6.7 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="91" class="oppgaver" style="counter-reset: oppg 90;">
+      <li>Trekk sammen.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>3x + 5x</li><li><span class="bokstav">b)</span>4a + 2b − a</li>
+          <li><span class="bokstav">c)</span>2y + 3 − y + 1</li>
+        </ul>
+      </li>
+      <li>Gang ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3(x + 5)</li><li><span class="bokstav">b)</span>2(a − 4)</li>
+          <li><span class="bokstav">c)</span>x(x + 1)</li>
+        </ul>
+      </li>
+      <li>Regn ut når x = 5.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2x + 3</li><li><span class="bokstav">b)</span>x² − 5</li>
+          <li><span class="bokstav">c)</span>3(x − 2)</li>
+        </ul>
+      </li>
+      <li>Løs likningen.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>x + 9 = 14</li><li><span class="bokstav">b)</span>4x = 32</li>
+          <li><span class="bokstav">c)</span>2x + 5 = 19</li>
+        </ul>
+      </li>
+      <li>Skriv som uttrykk: «Et tall ganget med 3, minus 7.»</li>
+      <li>Mønsteret er 4, 7, 10, 13, …
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Lag en formel for tall nummer n.</li>
+          <li><span class="bokstav">b)</span>Hvilket tall er nummer 9?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="97" class="oppgaver" style="counter-reset: oppg 96;">
+      <li><span class="m4merke">M4</span> Et rektangel har lengden (x + 5) og bredden 3.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv arealet som et utganget uttrykk.</li>
+          <li><span class="bokstav">b)</span>Skriv omkretsen som et forenklet uttrykk.</li>
+          <li><span class="bokstav">c)</span>Regn ut areal og omkrets når x = 7.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> En håndverker tar 750 kroner i oppmøte
+        og 620 kroner per time. Regningen ble 4 470 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Sett opp en likning.</li>
+          <li><span class="bokstav">b)</span>Hvor mange timer jobbet håndverkeren?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> To firmaer gir pris på samme jobb.
+        Firma A: <span class="matte">900 + 480t</span>. Firma B: <span class="matte">1 500 + 380t</span>.
+        Her er t antall timer.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Ved hvor mange timer koster de like mye?</li>
+          <li><span class="bokstav">b)</span>Hvilket firma er billigst ved 4 timer?</li>
+          <li><span class="bokstav">c)</span>Hvilket firma er billigst ved 10 timer?</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Forklar med egne ord hvorfor
+        <span class="matte">2(x + 3)</span> ikke er det samme som <span class="matte">2x + 3</span>.
+        Sett inn x = 5 i begge for å vise det.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg vet hva en bokstav står for, og kan skrive et uttrykk til en situasjon. <em>(6.1)</em></li>
+    <li>Jeg kan sette tall inn i et uttrykk eller en formel og regne det ut. <em>(6.2)</em></li>
+    <li>Jeg kan trekke sammen like ledd. <em>(6.3)</em></li>
+    <li>Jeg kan gange ut en parentes, også når det står minus foran. <em>(6.4)</em></li>
+    <li>Jeg kan finne formelen til et mønster. <em>(6.5)</em></li>
+    <li>Jeg kan løse en likning og kontrollere svaret. <em>(6.6)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 6</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>6.1 Bokstaver i matematikk</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 3a</span><span class="d">b) 5x</span><span class="d">c) 2y</span><span class="d">d) 7n</span></li>
+<li><span class="d">a) 6b</span><span class="d">b) 4m</span><span class="d">c) 8t</span><span class="d">d) 2k</span></li>
+<li><span class="d">a) 4 · b</span><span class="d">b) 9 · m</span><span class="d">c) a · b</span><span class="d">d) 2 · x · y</span></li>
+<li><span class="d">a) 7 · c</span><span class="d">b) 3 · p</span><span class="d">c) x · y</span><span class="d">d) 5 · a · b</span></li>
+<li><span class="d">a) x + 7</span><span class="d">b) x − 3</span><span class="d">c) 2x</span><span class="d">d) x : 4</span></li>
+<li><span class="d">a) 2 ledd</span><span class="d">b) 1 ledd</span><span class="d">c) 3 ledd</span><span class="d">d) 2 ledd</span></li>
+<li><span class="d">a) 2 ledd</span><span class="d">b) 1 ledd</span><span class="d">c) 3 ledd</span><span class="d">d) 3 ledd</span></li>
+<li><span class="d">a) x + 5</span><span class="d">b) 3x + 2</span><span class="d">c) x²</span><span class="d">d) x : 2</span></li>
+<li><span class="d">a) 4a</span><span class="d">b) 4a + 3</span><span class="d">c) 4a − 2</span></li>
+<li><span class="d">a) 5k</span><span class="d">b) 7,5k</span><span class="d">c) kt</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 1</span><span class="d">c) −3</span><span class="d">d) 0,5</span>
+</li>
+<li><span class="d">a) 3x</span><span class="d">b) a²</span><span class="d">c) y³</span><span class="d">d) 5m</span></li>
+<li>3x betyr 3 · x, mens x³ betyr x · x · x.<br/>
+    Med x = 2: 3x = <strong>6</strong> og x³ = <strong>8</strong>.
+    </li>
+<li><span class="d">a) 2l + 2b</span><span class="d">b) l · b</span>
+</li>
+<li><span class="d">a) f + pn</span><span class="d">b) 25 500 kr</span><span class="d">c) pn</span><br/>
+</li>
+<li><span class="d">a) 65 + 18k</span><span class="d">b) 281 kr</span><span class="d">c) ca. 18,6 km</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.2 Sette tall inn i uttrykk og formler</h3>
+<ol class="fasit" start="17" style="counter-reset: fas 16;">
+<li><span class="d">a) 8</span><span class="d">b) 6</span><span class="d">c) 8</span><span class="d">d) 9</span></li>
+<li><span class="d">a) 10</span><span class="d">b) 12</span><span class="d">c) 3</span><span class="d">d) 16</span></li>
+<li><span class="d">a) 20</span><span class="d">b) 17</span><span class="d">c) 15</span><span class="d">d) 1</span></li>
+<li><span class="d">a) 50</span><span class="d">b) 18</span><span class="d">c) 15</span><span class="d">d) 5</span></li>
+<li><span class="d">a) 8</span><span class="d">b) 12</span><span class="d">c) 4</span><span class="d">d) 12</span></li>
+<li><span class="d">a) 8</span><span class="d">b) 15</span><span class="d">c) 2</span><span class="d">d) 11</span></li>
+<li><span class="d">a) 15</span><span class="d">b) 20</span></li>
+<li><span class="d">a) 15</span><span class="d">b) 17</span><span class="d">c) 17</span><span class="d">d) 18</span></li>
+<li><span class="d">a) 21</span><span class="d">b) 11</span><span class="d">c) 34</span><span class="d">d) 64</span>
+</li>
+<li>O = 2 · 7 + 2 · 4,5 = 14 + 9 = <strong>23</strong></li>
+<li>s = 80 · 2,5 = <strong>200 km</strong></li>
+<li><span class="d">a) −6</span><span class="d">b) 3</span><span class="d">c) 4</span><span class="d">d) −5</span>
+</li>
+<li>Eleven har regnet (2 · 3)² = 36. Potensen gjelder bare x, ikke koeffisienten.
+    Riktig: 2 · 3² = 2 · 9 = <strong>18</strong>.</li>
+<li>A = (12 · 7) : 2 = 84 : 2 = <strong>42</strong></li>
+<li><span class="d">a) 2 300 watt</span><span class="d">b) 6 ampere</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 3 850 kr</span><span class="d">b) </span><span class="d">c) 332 km</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.3 Trekke sammen like ledd</h3>
+<ol class="fasit" start="33" style="counter-reset: fas 32;">
+<li><span class="d">a) 5x</span><span class="d">b) 3a</span><span class="d">c) 5y</span><span class="d">d) 0</span></li>
+<li><span class="d">a) 6x</span><span class="d">b) 4a</span><span class="d">c) 7y</span><span class="d">d) 0</span></li>
+<li><span class="d">a) 9a</span><span class="d">b) 3x</span><span class="d">c) 6b</span></li>
+<li><span class="d">a) 9a</span><span class="d">b) 3x</span><span class="d">c) 8b</span></li>
+<li><span class="d">a) 6x + 3</span><span class="d">b) 3a + 7</span><span class="d">c) 4y − 2</span></li>
+<li><span class="d">a) 8x + 4</span><span class="d">b) 2a + 10</span><span class="d">c) 5y − 5</span></li>
+<li><span class="d">a) ja</span><span class="d">b) nei</span><span class="d">c) ja</span><span class="d">d) nei</span></li>
+<li><span class="d">a) 6x + 2</span><span class="d">b) 3a + 4b</span><span class="d">c) 5m + 3n</span></li>
+<li><span class="d">a) 6x + 2y</span><span class="d">b) 5a + 5</span><span class="d">c) 5q</span></li>
+<li><span class="d">a) 3x² + 3x</span><span class="d">b) 3a² + 5</span><span class="d">c) y² + 4y</span>
+</li>
+<li>2x + 2 · 3 = <strong>2x + 6</strong></li>
+<li>3x og 2 er ulike ledd og kan ikke slås sammen.
+    </li>
+<li><strong>8a</strong>
+</li>
+<li><span class="d">a) 4x + 12</span><span class="d">b) 72 ansatte</span><span class="d">c) 20 ansatte</span><br/>
+</li>
+<li><span class="d">a) 2a + 5b</span><span class="d">b) x² + x + 5</span></li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.4 Gange ut parenteser</h3>
+<ol class="fasit" start="48" style="counter-reset: fas 47;">
+<li><span class="d">a) 2x + 6</span><span class="d">b) 3a + 3</span><span class="d">c) 4y + 8</span><span class="d">d) 5m + 20</span></li>
+<li><span class="d">a) 3x + 12</span><span class="d">b) 2a + 12</span><span class="d">c) 5y + 5</span><span class="d">d) 6m + 18</span></li>
+<li><span class="d">a) 3x − 6</span><span class="d">b) 2a − 10</span><span class="d">c) 4b − 4</span></li>
+<li><span class="d">a) 4x − 12</span><span class="d">b) 5a − 10</span><span class="d">c) 3b − 18</span></li>
+<li><span class="d">a) x² + 2x</span><span class="d">b) a² − 3a</span><span class="d">c) 2x² + 2x</span></li>
+<li><span class="d">a) x² + 5x</span><span class="d">b) a² − 2a</span><span class="d">c) 3x² + 6x</span></li>
+<li><span class="d">a) 5x + 2</span><span class="d">b) 2a + 6</span></li>
+<li><span class="d">a) 10x + 15</span><span class="d">b) 12a − 8</span><span class="d">c) 6x + 6y</span><span class="d">d) 6m − 12n</span></li>
+<li><span class="d">a) 6x + 2</span><span class="d">b) a + 8</span><br/>
+</li>
+<li><span class="d">a) −x − 4</span><span class="d">b) −a + 2</span><span class="d">c) −2y − 6</span></li>
+<li>4(x + 3) = <strong>4x + 12</strong></li>
+<li>Eleven har bare ganget 3 med x og glemt leddet 2.
+    Riktig: <strong>3x + 6</strong>.
+    </li>
+<li><strong>Ja, de er like store.</strong> 5(x + 2) = 5x + 10, altså nøyaktig samme uttrykk.
+    </li>
+<li><span class="d">a) 4x + 11</span><span class="d">b) x² + x − 6</span><br/>
+</li>
+<li><span class="d">a) x² + 4x</span><span class="d">b) 60 m²</span><span class="d">c) 4x + 8</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.5 Mønstre og formler</h3>
+<ol class="fasit" start="63" style="counter-reset: fas 62;">
+<li><span class="d">a) 15</span><span class="d">b) 20</span><span class="d">c) 32</span><span class="d">d) 11</span>
+</li>
+<li><span class="d">a) 20</span><span class="d">b) 28</span><span class="d">c) 81</span><span class="d">d) 15</span></li>
+<li><span class="d">a) øker med 5</span><span class="d">b) minker med 10</span></li>
+<li><span class="d">a) øker med 5</span><span class="d">b) minker med 6</span></li>
+<li>Figur 4 har <strong>9</strong> prikker, figur 5 har <strong>11</strong>.</li>
+<li>Figur 4 har 13 prikker, figur 5 har 16.</li>
+<li><span class="d">a) 17 og 20</span><span class="d">b) 3n + 2</span><span class="d">c) 32</span></li>
+<li><span class="d">a) 13 fyrstikker</span><span class="d">b) 3n + 1</span><span class="d">c) 61 fyrstikker</span></li>
+<li><span class="d">a) 4n − 2</span><span class="d">b) 46</span></li>
+<li><span class="d">a) kvadrattall</span><span class="d">b) n²</span><span class="d">c) 64</span></li>
+<li>Formelen n + 2 gir 3 for n = 1, men 4 for n = 2 — og mønsteret sier 5.
+    Formelen stemmer altså bare på det første tallet.
+    Riktig formel er <strong>2n + 1</strong>.
+    </li>
+<li><span class="d">a) 5n + 3</span><span class="d">b) 78 fliser</span><span class="d">c) figur 20</span><br/>
+</li>
+<li><span class="d">a) K = 4 500 + 260n</span><span class="d">b) 11 000 kr</span><span class="d">c) 59 enheter</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.6 Likninger</h3>
+<ol class="fasit" start="76" style="counter-reset: fas 75;">
+<li><span class="d">a) x = 5</span><span class="d">b) x = 8</span><span class="d">c) x = 13</span><span class="d">d) x = 7</span></li>
+<li><span class="d">a) x = 5</span><span class="d">b) x = 11</span><span class="d">c) x = 16</span><span class="d">d) x = 9</span></li>
+<li><span class="d">a) x = 5</span><span class="d">b) x = 6</span><span class="d">c) x = 9</span><span class="d">d) x = 5</span></li>
+<li><span class="d">a) x = 4</span><span class="d">b) x = 7</span><span class="d">c) x = 9</span><span class="d">d) x = 5</span></li>
+<li><span class="d">a) x = 12</span><span class="d">b) x = 12</span><span class="d">c) x = 50</span></li>
+<li><span class="d">a) x = 12</span><span class="d">b) x = 16</span><span class="d">c) x = 60</span></li>
+<li><span class="d">a) ja</span><span class="d">b) nei — løsningen er x = 5</span></li>
+<li><span class="d">a) x = 4</span><span class="d">b) x = 6</span><span class="d">c) x = 5</span><span class="d">d) x = 4</span></li>
+<li><span class="d">a) x = 5</span><span class="d">b) x = 6</span><span class="d">c) x = 4</span>
+</li>
+<li><span class="d">a) x = 4</span><span class="d">b) x = 6</span>
+</li>
+<li>4x + 6 = 30, som gir 4x = 24 og <strong>x = 6</strong>.</li>
+<li>Eleven har ganget med 3 i stedet for å dele på 3.
+    Riktig: 12 : 3 = <strong>x = 4</strong>.
+    </li>
+<li><span class="d">a) 65 + 18k = 281</span><span class="d">b) 12 kilometer</span></li>
+<li><span class="d">a) 199 + 2g = 149 + 4g</span><span class="d">b) 25 GB</span><span class="d">c) abonnement A</span><br/>
+</li>
+<li><span class="d">a) 4 500 + 260n = 20 000</span><span class="d">b) n = 59,6</span><span class="d">c) 59 enheter</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>6.7 Blandede oppgaver</h3>
+<ol class="fasit" start="91" style="counter-reset: fas 90;">
+<li><span class="d">a) 8x</span><span class="d">b) 3a + 2b</span><span class="d">c) y + 4</span></li>
+<li><span class="d">a) 3x + 15</span><span class="d">b) 2a − 8</span><span class="d">c) x² + x</span></li>
+<li><span class="d">a) 13</span><span class="d">b) 20</span><span class="d">c) 9</span></li>
+<li><span class="d">a) x = 5</span><span class="d">b) x = 8</span><span class="d">c) x = 7</span></li>
+<li>3x − 7</li>
+<li><span class="d">a) 3n + 1</span><span class="d">b) 28</span></li>
+<li><span class="d">a) 3x + 15</span><span class="d">b) 2x + 16</span><span class="d">c) areal 36, omkrets 30</span><br/>
+</li>
+<li><span class="d">a) 750 + 620t = 4 470</span><span class="d">b) 6 timer</span></li>
+<li><span class="d">a) 6 timer</span><span class="d">b) firma A</span><span class="d">c) firma B</span><br/>
+</li>
+<li>2(x + 3) betyr at både x og 3 skal ganges med 2, mens 2x + 3 bare ganger x.<br/>
+    Med x = 5: 2(5 + 3) = <strong>16</strong>, mens 2 · 5 + 3 = <strong>13</strong>.</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-5.html"><span class="etikett">Forrige kapittel</span><strong>5. Prosent</strong></a><a class="neste" href="kapittel-7.html"><span class="etikett">Neste kapittel</span><strong>7. Målinger</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

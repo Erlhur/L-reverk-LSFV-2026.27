@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matematikk — modul 3 og 4</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side" style="grid-template-columns:1fr;">
+<main class="innhold">
+  <h1 class="kapittel-tittel" style="color:#123252;">Matematikk</h1>
+  <p style="font-size:1.05rem;color:#5a6272;max-width:44rem;">
+    Forberedende opplæring for voksne, modul 3 og 4. Elleve kapitler med forklaringer,
+    eksempler og 1040 oppgaver på fire nivåer. Hver oppgave har et svar du kan hente
+    fram når du har prøvd selv. Velg et kapittel for å begynne.
+  </p>
+  <div class="kapittelrutenett"><a href="kapittel-1.html" style="--kap:#b04a2f"><span class="nr">Kapittel 1</span><strong>Tallregning</strong><span class="antall">7 delkapitler · 115 oppgaver</span></a><a href="kapittel-2.html" style="--kap:#7a2e52"><span class="nr">Kapittel 2</span><strong>Sammensatte regneuttrykk</strong><span class="antall">7 delkapitler · 105 oppgaver</span></a><a href="kapittel-3.html" style="--kap:#8a5f14"><span class="nr">Kapittel 3</span><strong>Potenser, kvadratrot og faktorisering</strong><span class="antall">6 delkapitler · 83 oppgaver</span></a><a href="kapittel-4.html" style="--kap:#2f6b4f"><span class="nr">Kapittel 4</span><strong>Brøk</strong><span class="antall">6 delkapitler · 91 oppgaver</span></a><a href="kapittel-5.html" style="--kap:#3f3a7d"><span class="nr">Kapittel 5</span><strong>Prosent</strong><span class="antall">6 delkapitler · 87 oppgaver</span></a><a href="kapittel-6.html" style="--kap:#0f5f6e"><span class="nr">Kapittel 6</span><strong>Bokstavregning</strong><span class="antall">7 delkapitler · 100 oppgaver</span></a><a href="kapittel-7.html" style="--kap:#8c2f39"><span class="nr">Kapittel 7</span><strong>Målinger</strong><span class="antall">6 delkapitler · 87 oppgaver</span></a><a href="kapittel-8.html" style="--kap:#5c6b23"><span class="nr">Kapittel 8</span><strong>Geometri</strong><span class="antall">7 delkapitler · 95 oppgaver</span></a><a href="kapittel-9.html" style="--kap:#64452f"><span class="nr">Kapittel 9</span><strong>Statistikk</strong><span class="antall">7 delkapitler · 92 oppgaver</span></a><a href="kapittel-10.html" style="--kap:#3a4b5c"><span class="nr">Kapittel 10</span><strong>Temaer for modul 4</strong><span class="antall">7 delkapitler · 99 oppgaver</span></a><a href="kapittel-11.html" style="--kap:#3f4550"><span class="nr">Kapittel 11</span><strong>Digitale verktøy</strong><span class="antall">6 delkapitler · 86 oppgaver</span></a></div>
+  <p style="margin-top:2rem;"><a class="ovlenke" href="interaktiv.html">
+    Øv på skjerm — 239 oppgaver du klikker og drar i →</a></p>
+  <p style="margin-top:.8rem;"></p>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

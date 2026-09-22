@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 5. Prosent — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html" aria-current="page"><span class="nr">5</span><span>Prosent</span></a></li><li class="dk"><a href="#d5-1">5.1 Hva prosent er</a></li><li class="dk"><a href="#d5-2">5.2 Prosent av et tall</a></li><li class="dk"><a href="#d5-3">5.3 Hvor mange prosent utgjør delen?</a></li><li class="dk"><a href="#d5-4">5.4 Prosentvis økning og reduksjon</a></li><li class="dk"><a href="#d5-5">5.5 Vekstfaktor og gjentatt endring</a></li><li class="dk"><a href="#d5-6">5.6 Blandede oppgaver</a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#3f3a7d">
+<section class="kapittelapning" style="--kap:#3f3a7d">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 5</p>
+    <h1 class="kapittel-tittel">Prosent</h1>
+    <p class="ingress">21 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-5.html">←
+  Til kapittel 5: Prosent</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 5, "tittel": "Prosent", "farge": "#3f3a7d", "aktiviteter": [{"id": "k5a1", "type": "rutenett", "oppgave": "Fargelegg 25 % av rutenettet.", "bredde": 10, "hoyde": 10, "mal": 25, "hint": "Rutenettet har 100 ruter. 25 % betyr 25 av 100.", "forklaring": "Prosent betyr hundredeler. 25 % = {25/100} = {1/4}.", "enhet": "av 100 ruter"}, {"id": "k5a2", "type": "par", "oppgave": "Koble hver prosent til brøken som betyr det samme.", "par": [{"v": "50 %", "h": "{1/2}", "verdi": 0.5}, {"v": "25 %", "h": "{1/4}", "verdi": 0.25}, {"v": "10 %", "h": "{1/10}", "verdi": 0.1}, {"v": "20 %", "h": "{1/5}", "verdi": 0.2}, {"v": "75 %", "h": "{3/4}", "verdi": 0.75}]}, {"id": "k5a3", "type": "tallinje", "oppgave": "Sett merket på 60 %.", "fra": 0, "til": 100, "mal": 60, "hint": "60 % ligger litt over midten.", "hakk": 25, "fest": 5, "toleranse": 3, "etikett": "prosent"}, {"id": "k5a4", "type": "velg", "oppgave": "Hvor mye er 25 % av 80?", "alternativer": [{"vis": "20", "riktig": true}, {"vis": "25", "riktig": false}, {"vis": "40", "riktig": false}, {"vis": "55", "riktig": false}], "hint": "25 % er det samme som {1/4}. Del 80 på 4.", "forklaring": "80 : 4 = 20."}, {"id": "k5a5", "type": "kurver", "oppgave": "Går prisen opp eller ned?", "kurver": ["Prisen går ned", "Prisen går opp"], "brikker": [{"vis": "20 % rabatt", "kurv": 0}, {"vis": "50 % avslag", "kurv": 0}, {"vis": "salg -30 %", "kurv": 0}, {"vis": "10 % påslag", "kurv": 1}, {"vis": "moms 25 %", "kurv": 1}, {"vis": "prisøkning 5 %", "kurv": 1}], "hint": "Rabatt og avslag trekker fra. Påslag og moms legger til."}, {"id": "k5a6", "type": "rutenett", "oppgave": "Fargelegg 60 % av rutenettet.", "bredde": 10, "hoyde": 10, "mal": 60, "hint": "60 % betyr 60 av 100 ruter.", "enhet": "av 100 ruter"}, {"id": "k5a7", "type": "velg", "oppgave": "Hvor mye er 10 % av 250?", "alternativer": [{"vis": "25", "riktig": true}, {"vis": "10", "riktig": false}, {"vis": "50", "riktig": false}, {"vis": "2,5", "riktig": false}], "hint": "10 % finner du ved å dele på 10.", "forklaring": "250 : 10 = 25."}, {"id": "k5a8", "type": "par", "oppgave": "Koble hver oppgave til svaret sitt.", "par": [{"v": "50 % av 40", "h": "20", "verdi": 20}, {"v": "25 % av 40", "h": "10", "verdi": 10}, {"v": "10 % av 40", "h": "4", "verdi": 4}, {"v": "75 % av 40", "h": "30", "verdi": 30}], "hint": "50 % er halvparten, 25 % er en firedel, 10 % er en tidel."}, {"id": "k5a9", "type": "sorter", "oppgave": "Sett verdiene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "{1/20}", "verdi": 0.05}, {"vis": "10 %", "verdi": 0.1}, {"vis": "{1/4}", "verdi": 0.25}, {"vis": "0,5", "verdi": 0.5}, {"vis": "80 %", "verdi": 0.8}], "hint": "Gjør alle om til prosent først.", "forklaring": "{1/20} = 5 %, {1/4} = 25 % og 0,5 = 50 %."}, {"id": "k5a10", "type": "kurver", "oppgave": "Er verdien mindre eller mer enn 50 %?", "kurver": ["Mindre enn 50 %", "Mer enn 50 %"], "brikker": [{"vis": "20 %", "kurv": 0}, {"vis": "{1/4}", "kurv": 0}, {"vis": "0,3", "kurv": 0}, {"vis": "70 %", "kurv": 1}, {"vis": "{4/5}", "kurv": 1}, {"vis": "0,6", "kurv": 1}], "hint": "50 % er det samme som en halv, altså 0,5.", "prov": ["v < 0.5", "v > 0.5"]}, {"id": "k5a11", "type": "par", "oppgave": "Koble hver endring til vekstfaktoren.", "par": [{"v": "10 % økning", "h": "1,1", "verdi": 1.1}, {"v": "20 % økning", "h": "1,2", "verdi": 1.2}, {"v": "10 % rabatt", "h": "0,9", "verdi": 0.9}, {"v": "25 % rabatt", "h": "0,75", "verdi": 0.75}], "hint": "Økning: legg prosenten til 1. Rabatt: trekk den fra 1.", "forklaring": "Med vekstfaktor ganger du bare én gang: 800 kr · 0,75 = 600 kr."}, {"id": "k5a12", "type": "velg", "oppgave": "Hvor mye er 20 % av 300?", "alternativer": [{"vis": "60", "riktig": true}, {"vis": "30", "riktig": false}, {"vis": "150", "riktig": false}, {"vis": "600", "riktig": false}], "hint": "10 % av 300 er 30.", "forklaring": "20 % er dobbelt så mye som 10 %, altså 60."}, {"id": "k5a13", "type": "par", "oppgave": "Koble hver prosent til desimaltallet.", "par": [{"v": "20 %", "h": "0,2", "verdi": 0.2}, {"v": "75 %", "h": "0,75", "verdi": 0.75}, {"v": "5 %", "h": "0,05", "verdi": 0.05}, {"v": "100 %", "h": "1", "verdi": 1}], "hint": "Del prosenten på 100."}, {"id": "k5a14", "type": "par", "oppgave": "Koble hvert desimaltall til prosenten.", "par": [{"v": "0,4", "h": "40 %", "verdi": 0.4}, {"v": "0,07", "h": "7 %", "verdi": 0.07}, {"v": "1,5", "h": "150 %", "verdi": 1.5}, {"v": "0,9", "h": "90 %", "verdi": 0.9}], "hint": "Gang desimaltallet med 100.", "forklaring": "1,5 er mer enn det hele, altså 150 %."}, {"id": "k5a15", "type": "kurver", "oppgave": "Er vekstfaktoren over eller under 1?", "kurver": ["Over 1", "Under 1"], "brikker": [{"vis": "1,20", "kurv": 0}, {"vis": "1,08", "kurv": 0}, {"vis": "2,00", "kurv": 0}, {"vis": "0,80", "kurv": 1}, {"vis": "0,95", "kurv": 1}, {"vis": "0,65", "kurv": 1}], "hint": "Over 1 betyr økning. Under 1 betyr nedgang.", "forklaring": "Vekstfaktoren 0,80 betyr 20 % rabatt.", "prov": ["v > 1", "v < 1"]}, {"id": "k5a16", "type": "velg", "oppgave": "Hva er vekstfaktoren ved 15 % økning?", "alternativer": [{"vis": "1,15", "riktig": true}, {"vis": "0,15", "riktig": false}, {"vis": "1,5", "riktig": false}, {"vis": "15", "riktig": false}], "hint": "Legg prosenten til 1.", "forklaring": "1 + 0,15 = 1,15."}, {"id": "k5a17", "type": "velg", "oppgave": "Hvor mange prosent er 21 av 70?", "alternativer": [{"vis": "30 %", "riktig": true}, {"vis": "21 %", "riktig": false}, {"vis": "49 %", "riktig": false}, {"vis": "70 %", "riktig": false}], "hint": "Del 21 på 70 først.", "forklaring": "21 : 70 = 0,3, altså 30 %."}, {"id": "k5a18", "type": "sorter", "oppgave": "Sett verdiene i rekkefølge. Minst først.", "retning": "stigende", "elementer": [{"vis": "5 %", "verdi": 0.05}, {"vis": "{1/5}", "verdi": 0.2}, {"vis": "0,35", "verdi": 0.35}, {"vis": "60 %", "verdi": 0.6}, {"vis": "{3/4}", "verdi": 0.75}], "hint": "Gjør alle om til prosent først."}, {"id": "k5a19", "type": "velg", "oppgave": "En vare koster 400 kr og settes ned 25 %. Hva er ny pris?", "alternativer": [{"vis": "300 kr", "riktig": true}, {"vis": "100 kr", "riktig": false}, {"vis": "375 kr", "riktig": false}, {"vis": "500 kr", "riktig": false}], "hint": "Rabatten er 100 kr.", "forklaring": "400 − 100 = 300 kr. Du kan også regne 400 · 0,75."}, {"id": "k5a20", "type": "tallinje", "oppgave": "Sett merket på 35 %.", "fra": 0, "til": 100, "mal": 35, "hint": "35 % ligger mellom 25 % og 50 %.", "hakk": 25, "fest": 5, "toleranse": 3, "etikett": "prosent"}, {"id": "k5a21", "type": "velg", "oppgave": "Hvor mye er 10 % av 350?", "alternativer": [{"vis": "35", "riktig": true}, {"vis": "3,5", "riktig": false}, {"vis": "350", "riktig": false}, {"vis": "105", "riktig": false}], "hint": "10 % finner du ved å dele på 10.", "forklaring": "350 : 10 = 35."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><a class="forrige" href="interaktiv-kapittel-4.html"><span class="etikett">Forrige kapittel</span><strong>4. Brøk</strong></a><a class="neste" href="interaktiv-kapittel-6.html"><span class="etikett">Neste kapittel</span><strong>6. Bokstavregning</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2. Sammensatte regneuttrykk — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Matematikk</a><a href="interaktiv.html">Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="kapittel-2.html" aria-current="page"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li class="dk"><a href="#d2-1">2.1 Regnerekkefølgen i lengre uttrykk</a></li><li class="dk"><a href="#d2-2">2.2 Parenteser inni parenteser</a></li><li class="dk"><a href="#d2-3">2.3 Brøkstreken som divisjonstegn</a></li><li class="dk"><a href="#d2-4">2.4 De tre regnelovene</a></li><li class="dk"><a href="#d2-5">2.5 Fra tekst til regneuttrykk</a></li><li class="dk"><a href="#d2-6">2.6 Regneuttrykk på kalkulator</a></li><li class="dk"><a href="#d2-7">2.7 Blandede oppgaver</a></li><li class="dk fasitlenke"><a href="#fasit">Fasit</a></li><li style="--kap:#8a5f14"><a href="kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="kapittel-11.html"><span class="nr">11</span><span>Digitale verktøy</span></a></li></ol></aside>
+<main class="innhold" style="--kap:#7a2e52">
+
+
+<section class="kapittelapning" style="--kap:#7a2e52">
+  <div class="flate">
+    <p class="kapittelnr">Kapittel 2</p>
+    <h1 class="kapittel-tittel">Sammensatte regneuttrykk</h1>
+    <p class="ingress">En regning fra en håndverker, en strømfaktura eller et tilbud i butikken består sjelden av
+    ett enkelt regnestykke. Som oftest må flere ting regnes ut og settes sammen. I dette kapitlet
+    lærer du å skrive hele situasjonen som ett uttrykk, regne det ut i riktig rekkefølge, og
+    kontrollere at svaret er rimelig.</p>
+  </div><div class="illustrasjon">
+<svg viewBox="0 0 640 332" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fra faktura til ett regneuttrykk, regnet ut i riktig rekkefølge">
+  <!-- fakturaen -->
+  <rect x="16" y="18" width="176" height="132" rx="7" fill="#faf3f6" stroke="#7a2e52" stroke-width="1.6"/>
+  <text x="104" y="40" font-family="Arial" font-size="11.5" font-weight="bold" fill="#7a2e52" text-anchor="middle">FAKTURA</text>
+  <line x1="32" y1="50" x2="176" y2="50" stroke="#7a2e52" stroke-opacity="0.4"/>
+  <g font-family="Arial" font-size="11" fill="#1f2430">
+    <text x="32" y="70">6,5 timer à 945</text>
+    <text x="32" y="92">Materialer</text>   <text x="176" y="92" text-anchor="end">4 380</text>
+    <text x="32" y="114">Kjøring</text>     <text x="176" y="114" text-anchor="end">650</text>
+    <text x="32" y="136" fill="#7a2e52">+ 25 % mva</text>
+  </g>
+
+  <path d="M 202 84 L 244 84" stroke="#7a2e52" stroke-width="2.2" marker-end="url(#p2)"/>
+  <defs><marker id="p2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#7a2e52"/></marker></defs>
+  <text x="223" y="74" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">blir</text>
+
+  <!-- ett uttrykk -->
+  <rect x="254" y="52" width="370" height="64" rx="8" fill="#fff" stroke="#7a2e52" stroke-width="2"/>
+  <text x="439" y="82" font-family="Cambria,Georgia,serif" font-size="19" fill="#1f2430" text-anchor="middle">(6,5 · 945 + 4 380 + 650) · 1,25</text>
+  <text x="439" y="104" font-family="Arial" font-size="10.5" fill="#7a2e52" text-anchor="middle">hele situasjonen som ett regneuttrykk</text>
+
+  <!-- trinnene -->
+  <text x="40" y="174" font-family="Arial" font-size="11" font-weight="bold" fill="#7a2e52">REGNET UT I RIKTIG REKKEFØLGE</text>
+  <line x1="40" y1="180" x2="430" y2="180" stroke="#7a2e52" stroke-width="1.2"/>
+
+  <g>
+    <circle cx="54" cy="204" r="11" fill="#7a2e52"/>
+    <text x="54" y="208" font-family="Arial" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+    <text x="76" y="200" font-family="Arial" font-size="11" fill="#5a6272">Parentesen først</text>
+    <text x="76" y="218" font-family="Cambria,Georgia,serif" font-size="14" fill="#1f2430">6 142,50 + 4 380 + 650 = 11 172,50</text>
+  </g>
+  <g>
+    <circle cx="54" cy="250" r="11" fill="#7a2e52"/>
+    <text x="54" y="254" font-family="Arial" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+    <text x="76" y="246" font-family="Arial" font-size="11" fill="#5a6272">Så gangingen</text>
+    <text x="76" y="264" font-family="Cambria,Georgia,serif" font-size="14" fill="#1f2430">11 172,50 · 1,25</text>
+  </g>
+  <g>
+    <circle cx="54" cy="296" r="11" fill="#7a2e52"/>
+    <text x="54" y="300" font-family="Arial" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+    <text x="76" y="292" font-family="Arial" font-size="11" fill="#5a6272">Kontroller med overslag</text>
+    <text x="76" y="310" font-family="Cambria,Georgia,serif" font-size="14" fill="#1f2430">11 000 · 1,25 = 13 750 — rimelig</text>
+  </g>
+
+  <rect x="452" y="182" width="172" height="130" rx="10" fill="#7a2e52"/>
+  <text x="538" y="218" font-family="Arial" font-size="11.5" fill="#efdde6" text-anchor="middle">SVAR</text>
+  <text x="538" y="256" font-family="Cambria,Georgia,serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">13 965,63</text>
+  <text x="538" y="280" font-family="Arial" font-size="12" fill="#efdde6" text-anchor="middle">kroner</text>
+  <line x1="480" y1="292" x2="596" y2="292" stroke="#efdde6" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="538" y="306" font-family="Arial" font-size="10" fill="#efdde6" text-anchor="middle">inkludert mva</text>
+</svg>
+<p class="illtekst">Fra en virkelig regning til ett samlet uttrykk — og videre gjennom regnerekkefølgen til ett svar.</p>
+</div>
+  <p class="idette">I dette kapitlet</p>
+  <ol class="delkapitler">
+    <li><span class="dknr">2.1</span><span>Regnerekkefølgen i lengre uttrykk</span></li>
+    <li><span class="dknr">2.2</span><span>Parenteser inni parenteser</span></li>
+    <li><span class="dknr">2.3</span><span>Brøkstreken som divisjonstegn</span></li>
+    <li><span class="dknr">2.4</span><span>De tre regnelovene</span></li>
+    <li><span class="dknr">2.5</span><span>Fra tekst til regneuttrykk</span></li>
+    <li><span class="dknr">2.6</span><span>Regneuttrykk på kalkulator</span></li>
+    <li><span class="dknr">2.7</span><span>Blandede oppgaver</span></li>
+  </ol>
+</section>
+<p class="ovbanner"><a href="interaktiv-kapittel-2.html"><span class="ikon" aria-hidden="true">▶</span><span><strong>Øv på skjerm</strong><span class="under">21 oppgaver du klikker og drar i. Du får svar med en gang.</span></span></a></p>
+
+<section class="maalboks">
+  <h3>Kompetansemål i dette kapitlet</h3>
+
+  <div class="maalgruppe m3">
+    <p class="maaltittel">Modul 3 — deltakeren skal kunne</p>
+    <ul>
+      <li>regne med sammensatte regneuttrykk med tall og bruke og samtale om den distributive og assosiative lov brukt på talluttrykk</li>
+      <li>bruke og samtale om skriftlig regning med hele tall og desimaltall i addisjon, subtraksjon, enkel multiplikasjon og enkel divisjon og bruke digitale verktøy i beregninger</li>
+    </ul>
+  </div>
+
+  <div class="maalgruppe m4">
+    <p class="maaltittel">Modul 4Y — deltakeren skal kunne</p>
+    <ul>
+      <li>lese og hente ut matematisk informasjon fra ulike typer tekster fra hverdagsliv, arbeidsliv og samfunnsliv, og bruke informasjonen til å gjøre hensiktsmessige beregninger</li>
+      <li>sammenligne og bruke tall representert som desimaltall, prosent, brøker, potenser og kvadratrøtter i praktiske situasjoner, og vurdere hvilke representasjoner som er hensiktsmessige</li>
+    </ul>
+  </div>
+
+  <p class="maalkilde">Kompetansemålene er gjengitt ordrett fra læreplanen for forberedende opplæring for voksne, matematikk (Udir).</p>
+</section>
+
+<!-- ============================================================
+     2.1 REGNEREKKEFØLGEN I LENGRE UTTRYKK
+     ============================================================ -->
+<section id="k21">
+<h2 id="d2-1">2.1 Regnerekkefølgen i lengre uttrykk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut uttrykk med mange ledd i riktig rekkefølge</li>
+    <li>skrive ett trinn per linje slik at utregningen er lett å følge</li>
+    <li>kjenne igjen og forklare de vanligste feilene</li>
+    <li>bruke overslag til å kontrollere svaret</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>regneuttrykk</td><td></td><td>Jeg skriver situasjonen som ett regneuttrykk.</td></tr>
+    <tr><td>ledd</td><td></td><td>Uttrykket har tre ledd.</td></tr>
+    <tr><td>faktor</td><td></td><td>I 4 · 5 er 4 og 5 faktorer.</td></tr>
+    <tr><td>verdien av uttrykket</td><td></td><td>Verdien av uttrykket er 27.</td></tr>
+    <tr><td>å forenkle</td><td></td><td>Jeg forenkler uttrykket trinn for trinn.</td></tr>
+    <tr><td>trinn</td><td></td><td>Jeg skriver ett trinn på hver linje.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  I kapittel 1 lærte du rekkefølgen. Nå blir uttrykkene lengre, og da er det ikke rekkefølgen
+  i seg selv som er vanskelig — det er å holde orden. Regelen er den samme uansett hvor langt
+  uttrykket er.
+</p>
+
+<div class="regel">
+  <span class="etikett">Regnerekkefølgen</span>
+  <ul>
+    <li>Parenteser</li>
+    <li>Potenser og kvadratrøtter</li>
+    <li>Gange og dele, fra venstre mot høyre</li>
+    <li>Pluss og minus, fra venstre mot høyre</li>
+  </ul>
+</div>
+
+<div class="regel">
+  <span class="etikett">Arbeidsmåte</span>
+  <p style="margin-bottom:0;">Skriv <strong>ett trinn per linje</strong>. Alt du ikke har rørt,
+  skriver du av uendret. Da ser både du og læreren nøyaktig hvor det eventuelt gikk galt.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Et langt regneuttrykk brytes ned trinn for trinn">
+  <rect x="16" y="14" width="588" height="192" rx="8" fill="#fbfcfe" stroke="#b8d0e6"/>
+  <text x="42" y="46" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">48</text>
+  <text x="76" y="46" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">−</text>
+  <text x="104" y="46" font-family="Cambria,Georgia,serif" font-size="21" fill="#6a1b9a" font-weight="bold">6 · 5</text>
+  <text x="158" y="46" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">+</text>
+  <text x="186" y="46" font-family="Cambria,Georgia,serif" font-size="21" fill="#6a1b9a" font-weight="bold">36 : 4</text>
+  <text x="330" y="46" font-family="Arial" font-size="12" fill="#6a1b9a">gange og dele først</text>
+  <rect x="98" y="28" width="56" height="24" rx="4" fill="none" stroke="#6a1b9a" stroke-width="1.4"/>
+  <rect x="180" y="28" width="70" height="24" rx="4" fill="none" stroke="#6a1b9a" stroke-width="1.4"/>
+
+  <text x="42" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#5a6272">=</text>
+  <text x="72" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">48</text>
+  <text x="106" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">−</text>
+  <text x="134" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#6a1b9a" font-weight="bold">30</text>
+  <text x="172" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">+</text>
+  <text x="200" y="94" font-family="Cambria,Georgia,serif" font-size="21" fill="#6a1b9a" font-weight="bold">9</text>
+  <text x="330" y="94" font-family="Arial" font-size="12" fill="#2e7d32">nå bare pluss og minus</text>
+
+  <text x="42" y="142" font-family="Cambria,Georgia,serif" font-size="21" fill="#5a6272">=</text>
+  <text x="72" y="142" font-family="Cambria,Georgia,serif" font-size="21" fill="#2e7d32" font-weight="bold">18</text>
+  <text x="110" y="142" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">+</text>
+  <text x="138" y="142" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">9</text>
+  <text x="330" y="142" font-family="Arial" font-size="12" fill="#2e7d32">fra venstre mot høyre</text>
+
+  <text x="42" y="190" font-family="Cambria,Georgia,serif" font-size="21" fill="#5a6272">=</text>
+  <text x="72" y="190" font-family="Cambria,Georgia,serif" font-size="24" fill="#1f2430" font-weight="bold">27</text>
+  <rect x="60" y="170" width="54" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4"/>
+  <text x="72" y="190" font-family="Cambria,Georgia,serif" font-size="24" fill="#1f2430" font-weight="bold">27</text>
+</svg>
+<figcaption>Figur 2.1 &nbsp;Ett trinn per linje. Det som ikke er regnet ut ennå, skrives av uendret.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 1 &nbsp;·&nbsp; Fire ledd</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte">5 · 8 − 24 : 3 + 2 · 7</span>.</p>
+    <ol class="trinn">
+      <li>Gange og dele først:<br>
+        <span class="matte">5 · 8 = 40</span>, <span class="matte">24 : 3 = 8</span>, <span class="matte">2 · 7 = 14</span></li>
+      <li>Skriv uttrykket på nytt: <span class="matte">40 − 8 + 14</span></li>
+      <li>Pluss og minus fra venstre: <span class="matte">40 − 8 = 32</span>, så <span class="matte">32 + 14 = 46</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 46</p>
+  </div>
+</div>
+
+<h3>De vanligste feilene</h3>
+
+<figure>
+<svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="To vanlige feil ved sammensatte regneuttrykk">
+  <rect x="16" y="14" width="288" height="172" rx="8" fill="#f3e5f5" stroke="#ce93d8"/>
+  <rect x="316" y="14" width="288" height="172" rx="8" fill="#e8f5e9" stroke="#a5d6a7"/>
+  <text x="160" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="middle">FEIL — regnet fra venstre</text>
+  <text x="460" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">RIKTIG — gange først</text>
+
+  <g font-family="Cambria,Georgia,serif" font-size="19" fill="#1f2430" text-anchor="middle">
+    <text x="160" y="76">20 − 4 · 3</text>
+    <text x="160" y="106">= 16 · 3</text>
+    <text x="160" y="136">= 48</text>
+    <text x="460" y="76">20 − 4 · 3</text>
+    <text x="460" y="106">= 20 − 12</text>
+    <text x="460" y="136">= 8</text>
+  </g>
+  <line x1="118" y1="128" x2="202" y2="128" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="160" y="166" font-family="Arial" font-size="11.5" fill="#6a1b9a" text-anchor="middle">Her ble 20 − 4 regnet ut først.</text>
+  <text x="460" y="166" font-family="Arial" font-size="11.5" fill="#2e7d32" text-anchor="middle">Minus gjelder bare tallet 12.</text>
+</svg>
+<figcaption>Figur 2.2 &nbsp;Den vanligste feilen er å regne fra venstre uten å se på regneartene.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol class="oppgaver" style="counter-reset: oppg 0;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>7 + 2 · 5</li><li><span class="bokstav">b)</span>20 − 3 · 4</li>
+          <li><span class="bokstav">c)</span>6 · 3 + 4</li><li><span class="bokstav">d)</span>30 : 5 + 7</li>
+          <li><span class="bokstav">e)</span>18 − 12 : 4</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>9 + 4 · 3</li>
+          <li><span class="bokstav">b)</span>25 − 5 · 4</li>
+          <li><span class="bokstav">c)</span>8 · 2 + 6</li>
+          <li><span class="bokstav">d)</span>40 : 8 + 9</li>
+          <li><span class="bokstav">e)</span>21 − 15 : 3</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 · 5 + 2 · 3</li><li><span class="bokstav">b)</span>9 · 2 − 6 · 2</li>
+          <li><span class="bokstav">c)</span>24 : 4 + 15 : 3</li><li><span class="bokstav">d)</span>10 + 3 · 6 − 8</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 · 6 + 4 · 2</li>
+          <li><span class="bokstav">b)</span>7 · 3 − 5 · 3</li>
+          <li><span class="bokstav">c)</span>30 : 5 + 20 : 4</li>
+          <li><span class="bokstav">d)</span>12 + 2 · 7 − 9</li>
+        </ul>
+      </li>
+      <li>Regn ut, og legg merke til hvor viktig parentesen er.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>100 − 25 − 25</li><li><span class="bokstav">b)</span>100 − (25 − 25)</li>
+          <li><span class="bokstav">c)</span>36 : 6 : 3</li><li><span class="bokstav">d)</span>36 : (6 : 3)</li>
+        </ul>
+      </li>
+      <li>Regn ut, og legg merke til hvor viktig parentesen er.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>80 − 30 − 20</li>
+          <li><span class="bokstav">b)</span>80 − (30 − 20)</li>
+          <li><span class="bokstav">c)</span>48 : 4 : 2</li>
+          <li><span class="bokstav">d)</span>48 : (4 : 2)</li>
+        </ul>
+      </li>
+      <li>Regn ut. Skriv ett trinn på hver linje.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>12 + 4 · 5 − 8</li><li><span class="bokstav">b)</span>50 − 6 · 4 + 2</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="8" class="oppgaver" style="counter-reset: oppg 7;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>8 · 7 − 45 : 9 + 3</li><li><span class="bokstav">b)</span>5 · (12 − 4) + 6 · 3</li>
+          <li><span class="bokstav">c)</span>72 : 8 + 4 · 6 − 10</li><li><span class="bokstav">d)</span>3 · 9 − 2 · 8 + 40 : 5</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>120 − 4 · 15 + 30 : 6</li><li><span class="bokstav">b)</span>6 · 12 − 8 · 5 − 2</li>
+          <li><span class="bokstav">c)</span>90 : 9 + 7 · 4 − 18</li><li><span class="bokstav">d)</span>15 · 4 − 100 : 5</li>
+        </ul>
+      </li>
+      <li>Sett inn parenteser slik at regnestykket blir riktig.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>6 + 4 · 5 = 50</li>
+          <li><span class="bokstav">b)</span>24 : 6 + 2 = 3</li>
+          <li><span class="bokstav">c)</span>20 − 8 : 4 = 3</li>
+        </ul>
+      </li>
+      <li>En kafé selger 3 kanner kaffe til 145 kroner per kanne og 5 kakestykker til 62 kroner
+        per stykk. Kunden har en rabattkupong på 100 kroner.
+        Skriv ett regneuttrykk for hva kunden må betale, og regn ut.</li>
+      <li>Sjekk utregningene. Hvilke er riktige, og hvilke er feil? Rett opp feilene.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>10 + 5 · 2 = 30</li><li><span class="bokstav">b)</span>30 : 3 · 2 = 20</li>
+          <li><span class="bokstav">c)</span>40 − 10 − 10 = 40</li><li><span class="bokstav">d)</span>2 + 3 · 4 − 5 = 9</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="13" class="oppgaver" style="counter-reset: oppg 12;">
+      <li>En rørlegger jobber 3 timer mandag, 5 timer tirsdag og 4 timer onsdag.
+        Timeprisen er 890 kroner, og i tillegg kommer materialer for 2 340 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv hele regningen som ett uttrykk.</li>
+          <li><span class="bokstav">b)</span>Regn ut hva kunden må betale.</li>
+          <li><span class="bokstav">c)</span>En kollega regner i stedet 3 · 890 + 5 · 890 + 4 · 890 + 2 340. Får han samme svar? Forklar hvorfor.</li>
+        </ul>
+      </li>
+      <li>To elever regner ut <span class="matte">60 − 4 · 5 + 10</span>.
+        Sara svarer 30. Ivan svarer 50. Hvem har rett, og hva har den andre gjort?</li>
+      <li>Lag et regneuttrykk med minst tre ulike regnearter som gir svaret 100.
+        Vis utregningen trinn for trinn, og bytt uttrykk med en medelev.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="16" class="oppgaver" style="counter-reset: oppg 15;">
+      <li>Et firma leier ut stillas. Prisen er 1 250 kroner for oppsett, 340 kroner per dag
+        og 890 kroner for henting. En kunde leier i 12 dager og får 15 % rabatt på dagsprisen.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv hele regningen som ett uttrykk.</li>
+          <li><span class="bokstav">b)</span>Regn ut totalprisen.</li>
+          <li><span class="bokstav">c)</span>Hvorfor må rabatten stå sammen med dagsprisen, og ikke utenfor hele uttrykket? Regn ut begge deler og sammenlign.</li>
+        </ul>
+      </li>
+      <li>Les teksten og hent ut informasjonen du trenger.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En bedrift kjøper inn 240 kontorstoler. Prisen er 1 490 kroner per stol.
+          Ved kjøp av mer enn 200 stoler gis 12 % rabatt på hele ordren.
+          Frakt kommer i tillegg med 8 500 kroner, og fraktprisen omfattes ikke av rabatten.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk for hva bedriften må betale.</li>
+          <li><span class="bokstav">b)</span>Regn ut totalprisen.</li>
+          <li><span class="bokstav">c)</span>Hva blir prisen per stol når frakten er regnet med?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     2.2 PARENTESER INNI PARENTESER
+     ============================================================ -->
+<section id="k22" class="nyside">
+<h2 id="d2-2">2.2 Parenteser inni parenteser</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>regne ut uttrykk med flere parentesnivåer</li>
+    <li>arbeide innenfra og ut</li>
+    <li>bruke hakeparentes for å skille nivåene fra hverandre</li>
+    <li>forklare hva som skjer med fortegnene når du fjerner en parentes</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>parentes</td><td></td><td>Jeg regner ut parentesen først.</td></tr>
+    <tr><td>hakeparentes</td><td></td><td>Hakeparentesen er den ytterste.</td></tr>
+    <tr><td>innerst / ytterst</td><td></td><td>Jeg begynner med den innerste parentesen.</td></tr>
+    <tr><td>nivå</td><td></td><td>Uttrykket har to parentesnivåer.</td></tr>
+    <tr><td>fortegn</td><td></td><td>Fortegnet endrer seg når parentesen fjernes.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Når en parentes står inne i en annen parentes, begynner du alltid <strong>innerst</strong>.
+  For at det skal bli lettere å se hvilken parentes som hører sammen med hvilken, skriver vi
+  ofte den ytterste som en hakeparentes: <span class="matte">[ ]</span>.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regning av uttrykk med parentes inni parentes, innenfra og ut">
+  <rect x="16" y="14" width="588" height="202" rx="8" fill="#fbfcfe" stroke="#b8d0e6"/>
+
+  <text x="46" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">100 −</text>
+  <text x="122" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#1d4e89" font-weight="bold">[</text>
+  <text x="140" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">2 ·</text>
+  <text x="182" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#6a1b9a" font-weight="bold">(15 + 5)</text>
+  <text x="290" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">− 10</text>
+  <text x="348" y="56" font-family="Cambria,Georgia,serif" font-size="22" fill="#1d4e89" font-weight="bold">]</text>
+  <rect x="176" y="36" width="112" height="28" rx="4" fill="none" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="400" y="52" font-family="Arial" font-size="12" fill="#6a1b9a">1 · innerste parentes</text>
+
+  <text x="46" y="106" font-family="Cambria,Georgia,serif" font-size="22" fill="#5a6272">=</text>
+  <text x="76" y="106" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">100 −</text>
+  <text x="152" y="106" font-family="Cambria,Georgia,serif" font-size="22" fill="#1d4e89" font-weight="bold">[</text>
+  <text x="170" y="106" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">2 · 20 − 10</text>
+  <text x="300" y="106" font-family="Cambria,Georgia,serif" font-size="22" fill="#1d4e89" font-weight="bold">]</text>
+  <rect x="146" y="86" width="162" height="28" rx="4" fill="none" stroke="#1d4e89" stroke-width="1.5"/>
+  <text x="400" y="102" font-family="Arial" font-size="12" fill="#1d4e89">2 · hakeparentesen</text>
+
+  <text x="46" y="156" font-family="Cambria,Georgia,serif" font-size="22" fill="#5a6272">=</text>
+  <text x="76" y="156" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430">100 − 30</text>
+  <text x="400" y="152" font-family="Arial" font-size="12" fill="#2e7d32">3 · til slutt minus</text>
+
+  <text x="46" y="200" font-family="Cambria,Georgia,serif" font-size="22" fill="#5a6272">=</text>
+  <rect x="68" y="180" width="56" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4"/>
+  <text x="80" y="200" font-family="Cambria,Georgia,serif" font-size="24" fill="#1f2430" font-weight="bold">70</text>
+</svg>
+<figcaption>Figur 2.3 &nbsp;Arbeid deg utover, ett parentesnivå om gangen.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 2 &nbsp;·&nbsp; To parentesnivåer</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte">4 · [12 − (3 + 5)]</span>.</p>
+    <ol class="trinn">
+      <li>Innerste parentes: <span class="matte">3 + 5 = 8</span></li>
+      <li>Nå står det <span class="matte">4 · [12 − 8]</span></li>
+      <li>Hakeparentesen: <span class="matte">12 − 8 = 4</span></li>
+      <li>Til slutt: <span class="matte">4 · 4 = 16</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 16</p>
+  </div>
+</div>
+
+<h3>Fortegn foran en parentes</h3>
+
+<div class="regel">
+  <span class="etikett">Regel</span>
+  <ul>
+    <li>Står det <strong>pluss</strong> foran parentesen, beholder alle ledd fortegnet sitt:<br>
+      <span class="matte">40 + (8 − 3) = 40 + 8 − 3</span></li>
+    <li>Står det <strong>minus</strong> foran parentesen, bytter alle ledd fortegn:<br>
+      <span class="matte">40 − (8 − 3) = 40 − 8 + 3</span></li>
+  </ul>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hva skjer med fortegnene når en parentes med minus foran fjernes">
+  <rect x="16" y="14" width="288" height="162" rx="8" fill="#e8f5e9" stroke="#a5d6a7"/>
+  <rect x="316" y="14" width="288" height="162" rx="8" fill="#fff8e1" stroke="#ffe082"/>
+  <text x="160" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">PLUSS foran</text>
+  <text x="460" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#8d6708" text-anchor="middle">MINUS foran</text>
+
+  <text x="160" y="80" font-family="Cambria,Georgia,serif" font-size="20" fill="#1f2430" text-anchor="middle">40 + (8 − 3)</text>
+  <text x="160" y="112" font-family="Cambria,Georgia,serif" font-size="20" fill="#2e7d32" text-anchor="middle">= 40 + 8 − 3</text>
+  <text x="160" y="144" font-family="Cambria,Georgia,serif" font-size="20" fill="#1f2430" text-anchor="middle" font-weight="bold">= 45</text>
+  <text x="160" y="168" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="middle">fortegnene beholdes</text>
+
+  <text x="460" y="80" font-family="Cambria,Georgia,serif" font-size="20" fill="#1f2430" text-anchor="middle">40 − (8 − 3)</text>
+  <text x="460" y="112" font-family="Cambria,Georgia,serif" font-size="20" fill="#8d6708" text-anchor="middle">= 40 − 8 + 3</text>
+  <text x="460" y="144" font-family="Cambria,Georgia,serif" font-size="20" fill="#1f2430" text-anchor="middle" font-weight="bold">= 35</text>
+  <text x="460" y="168" font-family="Arial" font-size="11" fill="#8d6708" text-anchor="middle">begge fortegn snus</text>
+</svg>
+<figcaption>Figur 2.4 &nbsp;Minus foran en parentes snur fortegnet til <em>alle</em> leddene inni.</figcaption>
+</figure>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="18" class="oppgaver" style="counter-reset: oppg 17;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>3 · (4 + 2)</li><li><span class="bokstav">b)</span>(10 − 4) · 5</li>
+          <li><span class="bokstav">c)</span>2 · (9 − 3) + 1</li><li><span class="bokstav">d)</span>20 − (6 + 4)</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 · (5 + 3)</li>
+          <li><span class="bokstav">b)</span>(12 − 5) · 3</li>
+          <li><span class="bokstav">c)</span>3 · (8 − 2) + 4</li>
+          <li><span class="bokstav">d)</span>25 − (9 + 6)</li>
+        </ul>
+      </li>
+      <li>Regn ut. Begynn innerst.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>5 · [8 − (2 + 3)]</li><li><span class="bokstav">b)</span>2 · [10 − (4 + 4)]</li>
+          <li><span class="bokstav">c)</span>[12 + (3 · 2)] : 3</li><li><span class="bokstav">d)</span>[20 − (5 + 5)] · 2</li>
+        </ul>
+      </li>
+      <li>Regn ut. Begynn innerst.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4 · [9 − (3 + 2)]</li>
+          <li><span class="bokstav">b)</span>3 · [12 − (5 + 4)]</li>
+          <li><span class="bokstav">c)</span>[10 + (4 · 3)] : 2</li>
+          <li><span class="bokstav">d)</span>[30 − (8 + 7)] · 2</li>
+        </ul>
+      </li>
+      <li>Fjern parentesen, og regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>30 − (10 + 5)</li><li><span class="bokstav">b)</span>30 − (10 − 5)</li>
+          <li><span class="bokstav">c)</span>40 + (8 − 3)</li><li><span class="bokstav">d)</span>40 − (8 − 3)</li>
+        </ul>
+      </li>
+      <li>Fjern parentesen, og regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>50 − (20 + 10)</li>
+          <li><span class="bokstav">b)</span>50 − (20 − 10)</li>
+          <li><span class="bokstav">c)</span>60 + (9 − 4)</li>
+          <li><span class="bokstav">d)</span>60 − (9 − 4)</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>(6 + 4) · (9 − 5)</li><li><span class="bokstav">b)</span>(12 − 3) : (1 + 2)</li>
+          <li><span class="bokstav">c)</span>(5 + 5) · (5 − 5)</li><li><span class="bokstav">d)</span>(8 + 2) : (8 − 6)</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="25" class="oppgaver" style="counter-reset: oppg 24;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>6 · [20 − (3 · 4)]</li><li><span class="bokstav">b)</span>100 − [5 · (8 + 2)]</li>
+          <li><span class="bokstav">c)</span>[48 : (2 · 3)] + 7</li><li><span class="bokstav">d)</span>3 · [(15 − 7) · 2]</li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>200 − [3 · (25 + 15) − 20]</li><li><span class="bokstav">b)</span>[(9 + 6) · 4] : 5</li>
+          <li><span class="bokstav">c)</span>5 · [12 − (18 : 3)]</li><li><span class="bokstav">d)</span>[100 − (4 · 15)] : 8</li>
+        </ul>
+      </li>
+      <li>Regn ut både <span class="matte">24 − (6 + 2)</span> og <span class="matte">24 − 6 + 2</span>.
+        Forklar hvorfor svarene blir forskjellige.</li>
+      <li>Tre venner spiser ute. Maten koster 189 kroner per person og drikken 65 kroner per person.
+        De får 150 kroner i avslag på hele regningen, og deler resten likt.
+        Skriv ett uttrykk for hva hver av dem betaler, og regn ut.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="29" class="oppgaver" style="counter-reset: oppg 28;">
+      <li>Sett inn parenteser slik at uttrykket får den verdien som er oppgitt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4 + 6 · 2 − 1 = 19</li>
+          <li><span class="bokstav">b)</span>4 + 6 · 2 − 1 = 10</li>
+          <li><span class="bokstav">c)</span>20 − 8 : 4 + 2 = 5</li>
+          <li><span class="bokstav">d)</span>20 − 8 : 4 + 2 = 16</li>
+        </ul>
+      </li>
+      <li>En elev skriver <span class="matte">60 − (15 + 5) = 60 − 15 + 5 = 50</span>.
+        Forklar hvilken regel hun har brutt, og regn ut riktig svar.</li>
+      <li>Lag et uttrykk med minst to parentesnivåer som gir svaret 24.
+        Bytt uttrykk med en medelev og kontroller hverandres svar.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="32" class="oppgaver" style="counter-reset: oppg 31;">
+      <li>En byggeplass leier tre maskiner i 6 dager: gravemaskin til 4 200 kroner per dag,
+        lift til 1 850 kroner per dag og kompressor til 640 kroner per dag.
+        Firmaet får 10 % rabatt på leien, og betaler i tillegg 3 500 kroner i frakt uten rabatt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv hele regningen som ett uttrykk.</li>
+          <li><span class="bokstav">b)</span>Regn ut totalprisen.</li>
+          <li><span class="bokstav">c)</span>Hva ville prisen blitt hvis rabatten også gjaldt frakten? Hvor mye utgjør forskjellen?</li>
+        </ul>
+      </li>
+      <li>Les teksten og finn uttrykket.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En skole kjøper 3 klassesett med nettbrett. Hvert sett inneholder 28 nettbrett,
+          og prisen er 2 690 kroner per nettbrett. Det kommer en miljøavgift på 4 % av
+          kjøpesummen. Skolen har et gavekort på 15 000 kroner som trekkes fra til slutt.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk for hva skolen må betale.</li>
+          <li><span class="bokstav">b)</span>Regn ut beløpet.</li>
+          <li><span class="bokstav">c)</span>Hvorfor spiller det en rolle om gavekortet trekkes fra før eller etter at miljøavgiften er lagt til? Regn ut begge muligheter.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     2.3 BRØKSTREKEN SOM DIVISJONSTEGN
+     ============================================================ -->
+<section id="k23" class="nyside">
+<h2 id="d2-3">2.3 Brøkstreken som divisjonstegn</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>forklare at brøkstreken betyr det samme som divisjonstegnet</li>
+    <li>regne ut teller og nevner hver for seg før du deler</li>
+    <li>skrive om mellom brøkstrek og kolon</li>
+    <li>bruke brøkstrek til å regne ut gjennomsnitt</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>brøkstrek</td><td></td><td>Brøkstreken betyr «delt på».</td></tr>
+    <tr><td>teller</td><td></td><td>Telleren står over brøkstreken.</td></tr>
+    <tr><td>nevner</td><td></td><td>Nevneren står under brøkstreken.</td></tr>
+    <tr><td>usynlig parentes</td><td></td><td>Det er en usynlig parentes rundt telleren.</td></tr>
+    <tr><td>gjennomsnitt</td><td></td><td>Gjennomsnittet er summen delt på antallet.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  En brøkstrek betyr nøyaktig det samme som divisjonstegnet. Men brøkstreken har én egenskap
+  som er lett å overse: den virker som en <strong>usynlig parentes</strong> rundt hele telleren
+  og rundt hele nevneren. Alt over streken regnes ut først, alt under streken regnes ut først —
+  og helt til slutt deler du.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Brøkstrek med usynlige parenteser rundt teller og nevner">
+  <rect x="16" y="14" width="588" height="182" rx="8" fill="#fbfcfe" stroke="#b8d0e6"/>
+
+  <text x="120" y="72" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430" text-anchor="middle">12 + 8</text>
+  <line x1="66" y1="86" x2="174" y2="86" stroke="#1f2430" stroke-width="2.2"/>
+  <text x="120" y="118" font-family="Cambria,Georgia,serif" font-size="22" fill="#1f2430" text-anchor="middle">2 + 3</text>
+  <rect x="62" y="50" width="116" height="30" rx="6" fill="none" stroke="#6a1b9a" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="62" y="94" width="116" height="30" rx="6" fill="none" stroke="#00695c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="196" y="66" font-family="Arial" font-size="11.5" fill="#6a1b9a">usynlig parentes</text>
+  <text x="196" y="118" font-family="Arial" font-size="11.5" fill="#00695c">usynlig parentes</text>
+
+  <text x="322" y="96" font-family="Cambria,Georgia,serif" font-size="22" fill="#5a6272">=</text>
+
+  <text x="392" y="96" font-family="Cambria,Georgia,serif" font-size="20" fill="#1f2430">(12 + 8) : (2 + 3)</text>
+
+  <text x="120" y="166" font-family="Cambria,Georgia,serif" font-size="20" fill="#2e7d32" text-anchor="middle" font-weight="bold">= 20 : 5 = 4</text>
+  <text x="420" y="166" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Begge skrivemåtene betyr det samme.</text>
+</svg>
+<figcaption>Figur 2.5 &nbsp;Brøkstreken samler telleren for seg og nevneren for seg.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">To skrivemåter for det samme</span>
+  <p>I boka bruker vi brøkstreken, slik den skrives for hånd og i lærebøker.
+  Men på kalkulator og i regneark finnes ikke brøkstreken — der må du skrive uttrykket
+  på én linje, med parenteser rundt teller og nevner:</p>
+  <p style="margin-bottom:0;text-align:center;">
+  <span class="matte">(12 + 8) / (2 + 3)</span> &nbsp;&nbsp;betyr det samme som&nbsp;&nbsp;
+  <span class="matte">(12 + 8) : (2 + 3)</span></p>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 3 &nbsp;·&nbsp; Teller og nevner hver for seg</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte"><span class="brok"><span class="t">8 · 9 − 12</span><span class="n">2 · 5</span></span></span>.</p>
+    <ol class="trinn">
+      <li>Telleren: <span class="matte">8 · 9 = 72</span>, så <span class="matte">72 − 12 = 60</span></li>
+      <li>Nevneren: <span class="matte">2 · 5 = 10</span></li>
+      <li>Del til slutt: <span class="matte">60 : 10 = 6</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 6</p>
+  </div>
+</div>
+
+<div class="regel">
+  <span class="etikett">Vanlig feil</span>
+  <p style="margin-bottom:0;"><span class="matte"><span class="brok"><span class="t">12 + 8</span><span class="n">2</span></span></span> er <strong>ikke</strong>
+  det samme som <span class="matte">12 + 8 : 2</span>.<br>
+  Det første er <span class="matte">20 : 2 = 10</span>. Det andre er <span class="matte">12 + 4 = 16</span>.
+  Uten parentes deler du bare det siste tallet.</p>
+</div>
+
+<h3>Gjennomsnitt</h3>
+
+<p>
+  Gjennomsnitt er den vanligste bruken av brøkstrek i hverdagen: du legger sammen alle tallene
+  og deler på hvor mange de er.
+</p>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 4 &nbsp;·&nbsp; Gjennomsnitt</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Fire målinger av temperaturen ga 12, 18, 21 og 29 grader. Hva er gjennomsnittet?</p>
+    <ol class="trinn">
+      <li>Skriv uttrykket: <span class="matte"><span class="brok"><span class="t">12 + 18 + 21 + 29</span><span class="n">4</span></span></span></li>
+      <li>Telleren: <span class="matte">12 + 18 + 21 + 29 = 80</span></li>
+      <li>Del på antallet: <span class="matte">80 : 4 = 20</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Gjennomsnittet er 20 grader.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="34" class="oppgaver" style="counter-reset: oppg 33;">
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">10 + 2</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">20 − 5</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">6 · 4</span><span class="n">8</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">30 : 2</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">8 + 4</span><span class="n">3</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">30 − 6</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5 · 6</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">40 : 2</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">24</span><span class="n">2 + 4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">36</span><span class="n">9 − 3</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">50</span><span class="n">2 · 5</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">18</span><span class="n">12 − 9</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">36</span><span class="n">3 + 3</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">45</span><span class="n">10 − 5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">60</span><span class="n">3 · 4</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">28</span><span class="n">11 − 4</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">8 + 4</span><span class="n">3 + 3</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">20 − 4</span><span class="n">2 + 2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5 · 6</span><span class="n">15 − 5</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">100 − 40</span><span class="n">4 + 6</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv med kolon i stedet for brøkstrek, og regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">14 + 6</span><span class="n">5</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">9 · 4</span><span class="n">6</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">45</span><span class="n">2 + 7</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut gjennomsnittet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>4, 6 og 8</li>
+          <li><span class="bokstav">b)</span>10, 12, 14 og 16</li>
+          <li><span class="bokstav">c)</span>3, 7, 5 og 9</li>
+          <li><span class="bokstav">d)</span>20, 30 og 25</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="41" class="oppgaver" style="counter-reset: oppg 40;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">3 · 12 + 4</span><span class="n">8</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">60 − 5 · 4</span><span class="n">10</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">7 · 8</span><span class="n">3 + 4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">144 : 12</span><span class="n">2 · 2</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">25 + 35</span><span class="n">12 − 7</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">8 · 9 − 12</span><span class="n">2 · 5</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">200 : 4</span><span class="n">3 + 2</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">15 · 4 + 20</span><span class="n">16 : 2</span></span></li>
+        </ul>
+      </li>
+      <li>En gruppe på 4 voksne og 5 barn deler en regning. Maten kostet 620 kroner og
+        drikken 280 kroner. Skriv uttrykket med brøkstrek, og regn ut hva hver person betaler.</li>
+      <li>En elev fikk poengsummene 34, 41, 28 og 45 på fire prøver.
+        Skriv uttrykket for gjennomsnittet, og regn det ut.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="45" class="oppgaver" style="counter-reset: oppg 44;">
+      <li>En elev skal regne <span class="matte"><span class="brok"><span class="t">20 + 10</span><span class="n">5</span></span></span>, men skriver
+        <span class="matte">20 + 10 : 5</span> og får 22. Forklar feilen, og regn ut riktig svar.</li>
+      <li>Fire arbeidere jobbet henholdsvis 7, 9, 6 og 10 timer. Timelønnen er 245 kroner.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk med brøkstrek for gjennomsnittlig lønn per arbeider.</li>
+          <li><span class="bokstav">b)</span>Regn ut beløpet.</li>
+          <li><span class="bokstav">c)</span>Hvorfor er gjennomsnittet her ikke det samme som det noen av dem faktisk fikk utbetalt?</li>
+        </ul>
+      </li>
+      <li>Hvilket tall må stå i ruten?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">□ + 12</span><span class="n">4</span></span> = 7</li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">36</span><span class="n">□ − 2</span></span> = 9</li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">5 · □</span><span class="n">3</span></span> = 10</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="48" class="oppgaver" style="counter-reset: oppg 47;">
+      <li>En bil har kjørt to lengre turer. På den første brukte den 48 liter drivstoff på 52 mil,
+        på den andre 37 liter på 68 mil.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv samlet forbruk per mil som ett brøkuttrykk.</li>
+          <li><span class="bokstav">b)</span>Regn ut forbruket per mil med to desimaler.</li>
+          <li><span class="bokstav">c)</span>Drivstoffet koster 23,40 kroner per liter. Hva koster én mil?</li>
+        </ul>
+      </li>
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «I en undersøkelse ble 480 personer spurt om reisevanene sine.
+          312 av dem svarte at de bruker kollektivtransport minst én gang i uken.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv andelen som brøk, og regn den ut som desimaltall.</li>
+          <li><span class="bokstav">b)</span>Hvor mange prosent er dette?</li>
+          <li><span class="bokstav">c)</span>En journalist skriver at «nesten to av tre bruker kollektivtransport». Er det en dekkende beskrivelse? Begrunn svaret med utregning.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+<!-- ============================================================
+     2.4 DE TRE REGNELOVENE
+     ============================================================ -->
+<section id="k24" class="nyside">
+<h2 id="d2-4">2.4 De tre regnelovene</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>navngi og forklare den kommutative, assosiative og distributive lov</li>
+    <li>bruke lovene til å regne raskere i hodet</li>
+    <li>vise med eksempler at lovene ikke gjelder for subtraksjon og divisjon</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>kommutativ</td><td></td><td>Addisjon er kommutativ: 3 + 5 = 5 + 3.</td></tr>
+    <tr><td>assosiativ</td><td></td><td>Jeg kan gruppere faktorene som jeg vil.</td></tr>
+    <tr><td>distributiv</td><td></td><td>Jeg deler opp tallet og ganger hver del.</td></tr>
+    <tr><td>å bytte om</td><td></td><td>Jeg bytter om på faktorene.</td></tr>
+    <tr><td>å gruppere</td><td></td><td>Jeg grupperer 25 og 4 sammen.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  De tre regnelovene er ikke pensum for å pugges utenat — de er verktøy. De forteller deg
+  hva du har lov til å gjøre med et uttrykk for å gjøre regningen enklere.
+</p>
+
+<figure>
+<svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="De tre regnelovene forklart med figurer">
+  <rect x="10" y="14" width="200" height="222" rx="8" fill="#e8f5e9" stroke="#a5d6a7"/>
+  <rect x="222" y="14" width="200" height="222" rx="8" fill="#e8f0f8" stroke="#b8d0e6"/>
+  <rect x="434" y="14" width="196" height="222" rx="8" fill="#f3e5f5" stroke="#ce93d8"/>
+
+  <text x="110" y="40" font-family="Arial" font-size="12.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">KOMMUTATIV</text>
+  <text x="110" y="58" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">rekkefølgen spiller ingen rolle</text>
+  <rect x="36" y="76" width="72" height="42" fill="#a5d6a7" fill-opacity="0.6" stroke="#2e7d32"/>
+  <text x="72" y="103" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">3 · 7</text>
+  <rect x="126" y="76" width="42" height="72" fill="#a5d6a7" fill-opacity="0.6" stroke="#2e7d32"/>
+  <text x="147" y="117" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">7 · 3</text>
+  <text x="110" y="178" font-family="Cambria,Georgia,serif" font-size="16" fill="#1f2430" text-anchor="middle">begge = 21</text>
+  <text x="110" y="206" font-family="Cambria,Georgia,serif" font-size="15" fill="#2e7d32" text-anchor="middle">a + b = b + a</text>
+  <text x="110" y="226" font-family="Cambria,Georgia,serif" font-size="15" fill="#2e7d32" text-anchor="middle">a · b = b · a</text>
+
+  <text x="322" y="40" font-family="Arial" font-size="12.5" font-weight="bold" fill="#1d4e89" text-anchor="middle">ASSOSIATIV</text>
+  <text x="322" y="58" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">du velger hva du grupperer</text>
+  <text x="322" y="90" font-family="Cambria,Georgia,serif" font-size="17" fill="#1f2430" text-anchor="middle">4 · 17 · 25</text>
+  <rect x="252" y="104" width="140" height="26" rx="4" fill="#fff" stroke="#1d4e89" stroke-dasharray="4 3"/>
+  <text x="322" y="122" font-family="Cambria,Georgia,serif" font-size="15" fill="#1d4e89" text-anchor="middle">(4 · 25) · 17</text>
+  <text x="322" y="152" font-family="Cambria,Georgia,serif" font-size="16" fill="#1f2430" text-anchor="middle">= 100 · 17</text>
+  <text x="322" y="178" font-family="Cambria,Georgia,serif" font-size="17" font-weight="bold" fill="#1f2430" text-anchor="middle">= 1 700</text>
+  <text x="322" y="214" font-family="Cambria,Georgia,serif" font-size="14" fill="#1d4e89" text-anchor="middle">(a · b) · c = a · (b · c)</text>
+
+  <text x="532" y="40" font-family="Arial" font-size="12.5" font-weight="bold" fill="#6a1b9a" text-anchor="middle">DISTRIBUTIV</text>
+  <text x="532" y="58" font-family="Arial" font-size="10.5" fill="#5a6272" text-anchor="middle">del opp og gang hver del</text>
+  <rect x="462" y="76" width="90" height="46" fill="#ce93d8" fill-opacity="0.45" stroke="#6a1b9a"/>
+  <rect x="552" y="76" width="34" height="46" fill="#ce93d8" fill-opacity="0.8" stroke="#6a1b9a"/>
+  <text x="507" y="104" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">6 · 10</text>
+  <text x="569" y="104" font-family="Arial" font-size="11" fill="#1f2430" text-anchor="middle">6 · 3</text>
+  <text x="507" y="70" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">10</text>
+  <text x="569" y="70" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">3</text>
+  <text x="450" y="103" font-family="Arial" font-size="10" fill="#5a6272" text-anchor="middle">6</text>
+  <text x="532" y="148" font-family="Cambria,Georgia,serif" font-size="16" fill="#1f2430" text-anchor="middle">6 · 13 = 60 + 18</text>
+  <text x="532" y="176" font-family="Cambria,Georgia,serif" font-size="17" font-weight="bold" fill="#1f2430" text-anchor="middle">= 78</text>
+  <text x="532" y="214" font-family="Cambria,Georgia,serif" font-size="14" fill="#6a1b9a" text-anchor="middle">a · (b + c) = a · b + a · c</text>
+</svg>
+<figcaption>Figur 2.6 &nbsp;De tre lovene gjelder for addisjon og multiplikasjon.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Advarsel — lovene gjelder ikke for minus og deling</span>
+  <ul>
+    <li><span class="matte">8 − 3</span> er ikke det samme som <span class="matte">3 − 8</span></li>
+    <li><span class="matte">12 : 4</span> er ikke det samme som <span class="matte">4 : 12</span></li>
+    <li><span class="matte">(20 − 8) − 3 = 9</span>, men <span class="matte">20 − (8 − 3) = 15</span></li>
+    <li><span class="matte">(48 : 6) : 2 = 4</span>, men <span class="matte">48 : (6 : 2) = 16</span></li>
+  </ul>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 5 &nbsp;·&nbsp; Assosiativ lov gjør regningen lett</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte">4 · 17 · 25</span> i hodet.</p>
+    <ol class="trinn">
+      <li>Se etter to faktorer som gir et rundt tall: <span class="matte">4 · 25 = 100</span></li>
+      <li>Grupper dem sammen: <span class="matte">(4 · 25) · 17</span></li>
+      <li>Regn ut: <span class="matte">100 · 17 = 1 700</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 1 700</p>
+  </div>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 6 &nbsp;·&nbsp; Distributiv lov begge veier</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte">7 · 98</span> i hodet.</p>
+    <ol class="trinn">
+      <li>98 ligger nær 100. Skriv <span class="matte">98 = 100 − 2</span></li>
+      <li>Del opp: <span class="matte">7 · (100 − 2) = 7 · 100 − 7 · 2</span></li>
+      <li>Regn ut: <span class="matte">700 − 14 = 686</span></li>
+    </ol>
+    <p class="svarlinje">Svar: 686</p>
+    <p style="margin-top:0.7rem;font-size:0.95rem;color:#5a6272;">
+      Loven virker også motsatt vei: <span class="matte">12 · 15 + 12 · 5 = 12 · (15 + 5) = 12 · 20 = 240</span>.
+      Da samler du i stedet for å dele opp.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="50" class="oppgaver" style="counter-reset: oppg 49;">
+      <li>Hvilken lov er brukt?
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>6 + 9 = 9 + 6</li><li><span class="bokstav">b)</span>2 · (4 · 5) = (2 · 4) · 5</li>
+          <li><span class="bokstav">c)</span>3 · (10 + 2) = 3 · 10 + 3 · 2</li><li><span class="bokstav">d)</span>7 · 4 = 4 · 7</li>
+        </ul>
+      </li>
+      <li>Hvilken lov er brukt?
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>5 · 8 = 8 · 5</li>
+          <li><span class="bokstav">b)</span>(3 + 4) + 6 = 3 + (4 + 6)</li>
+          <li><span class="bokstav">c)</span>4 · (20 + 3) = 4 · 20 + 4 · 3</li>
+          <li><span class="bokstav">d)</span>12 + 7 = 7 + 12</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet ved å gruppere lurt.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>2 · 37 · 5</li><li><span class="bokstav">b)</span>25 · 13 · 4</li>
+          <li><span class="bokstav">c)</span>50 · 17 · 2</li><li><span class="bokstav">d)</span>20 · 9 · 5</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet ved å gruppere lurt.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 · 23 · 25</li>
+          <li><span class="bokstav">b)</span>2 · 19 · 50</li>
+          <li><span class="bokstav">c)</span>5 · 17 · 20</li>
+          <li><span class="bokstav">d)</span>25 · 7 · 8</li>
+        </ul>
+      </li>
+      <li>Bruk den distributive lov.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>5 · 103</li><li><span class="bokstav">b)</span>4 · 98</li>
+          <li><span class="bokstav">c)</span>6 · 201</li><li><span class="bokstav">d)</span>9 · 99</li>
+        </ul>
+      </li>
+      <li>Bruk den distributive lov.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>7 · 102</li>
+          <li><span class="bokstav">b)</span>3 · 97</li>
+          <li><span class="bokstav">c)</span>8 · 101</li>
+          <li><span class="bokstav">d)</span>6 · 98</li>
+        </ul>
+      </li>
+      <li>Er dette riktig? Svar ja eller nei.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>10 − 4 = 4 − 10</li><li><span class="bokstav">b)</span>20 : 5 = 5 : 20</li>
+          <li><span class="bokstav">c)</span>3 + 8 = 8 + 3</li><li><span class="bokstav">d)</span>(10 − 3) − 2 = 10 − (3 − 2)</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="57" class="oppgaver" style="counter-reset: oppg 56;">
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>4 · 23 · 25</li><li><span class="bokstav">b)</span>5 · 46 · 2</li>
+          <li><span class="bokstav">c)</span>8 · 125 · 7</li><li><span class="bokstav">d)</span>2 · 49 · 50</li>
+        </ul>
+      </li>
+      <li>Bruk den distributive lov. I <span class="matte">a)</span> og <span class="matte">c)</span>
+        deler du opp, i <span class="matte">b)</span> og <span class="matte">d)</span> samler du.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>7 · (20 + 6)</li><li><span class="bokstav">b)</span>12 · 15 + 12 · 5</li>
+          <li><span class="bokstav">c)</span>9 · (30 − 2)</li><li><span class="bokstav">d)</span>25 · 8 − 25 · 4</li>
+        </ul>
+      </li>
+      <li>Regn ut i hodet.
+        <ul class="deloppgaver smal">
+          <li><span class="bokstav">a)</span>15 · 102</li><li><span class="bokstav">b)</span>30 · 99</li>
+          <li><span class="bokstav">c)</span>12 · 205</li><li><span class="bokstav">d)</span>40 · 98</li>
+        </ul>
+      </li>
+      <li>En butikk får inn 24 kasser med 15 flasker i hver.
+        Vis to ulike måter å regne ut totalen på, og forklar hvilken lov du bruker i hver av dem.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="61" class="oppgaver" style="counter-reset: oppg 60;">
+      <li>Forklar med et eget eksempel hvorfor den assosiative lov <em>ikke</em> gjelder for divisjon.
+        Vis utregningen for begge grupperingene.</li>
+      <li>En elev skriver <span class="matte">30 − (8 + 5) = 30 − 8 + 5</span>.
+        Hvilken regel har hun brukt feil? Regn ut riktig svar.</li>
+      <li>En hall har 18 rader med 24 seter.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut antall seter ved å dele 24 opp i 20 + 4.</li>
+          <li><span class="bokstav">b)</span>Regn ut det samme med oppstilt multiplikasjon.</li>
+          <li><span class="bokstav">c)</span>Hvilken metode synes du er raskest her? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="64" class="oppgaver" style="counter-reset: oppg 63;">
+      <li>En bedrift kjøper arbeidstøy til 45 ansatte. Hver ansatt får 3 T-skjorter til 189 kroner
+        per stykk og 2 bukser til 549 kroner per stykk.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv uttrykket på to måter — én med parentes og én uten.</li>
+          <li><span class="bokstav">b)</span>Vis at begge gir samme svar.</li>
+          <li><span class="bokstav">c)</span>Hvilken form er raskest å regne ut, og hvilken lov bygger den på?</li>
+        </ul>
+      </li>
+      <li>Vis hvordan <span class="matte">99 · 99</span> kan regnes ut i hodet med den distributive lov.
+        Prøv deretter samme metode på <span class="matte">999 · 999</span> og forklar mønsteret du ser.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     2.5 FRA TEKST TIL REGNEUTTRYKK
+     ============================================================ -->
+<section id="k25" class="nyside">
+<h2 id="d2-5">2.5 Fra tekst til regneuttrykk</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>oversette en tekst til ett samlet regneuttrykk</li>
+    <li>kjenne igjen hvilke formuleringer som krever parentes</li>
+    <li>kontrollere at uttrykket faktisk svarer på spørsmålet som stilles</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>summen av</td><td></td><td>Summen av 12 og 8 er 20.</td></tr>
+    <tr><td>produktet av</td><td></td><td>Produktet av 3 og 5 er 15.</td></tr>
+    <tr><td>hver av dem</td><td></td><td>Hver av dem betaler 204 kroner.</td></tr>
+    <tr><td>etter at</td><td></td><td>Etter at rabatten er trukket fra …</td></tr>
+    <tr><td>til sammen</td><td></td><td>De betaler 955 kroner til sammen.</td></tr>
+  </tbody>
+</table>
+
+<figure>
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Setning oversatt til regneuttrykk del for del">
+  <rect x="16" y="14" width="608" height="172" rx="8" fill="#fbfcfe" stroke="#b8d0e6"/>
+
+  <text x="40" y="48" font-family="Arial" font-size="13" fill="#1f2430">«Åtte skjermer til</text>
+  <text x="164" y="48" font-family="Arial" font-size="13" fill="#6a1b9a" font-weight="bold">2 450 kroner per stykk</text>
+  <text x="318" y="48" font-family="Arial" font-size="13" fill="#1f2430">,</text>
+  <text x="40" y="72" font-family="Arial" font-size="13" fill="#1d4e89" font-weight="bold">minus 2 000 kroner i rabatt</text>
+  <text x="222" y="72" font-family="Arial" font-size="13" fill="#1f2430">,</text>
+  <text x="40" y="96" font-family="Arial" font-size="13" fill="#00695c" font-weight="bold">delt likt på 4 avdelinger</text>
+  <text x="200" y="96" font-family="Arial" font-size="13" fill="#1f2430">.»</text>
+
+  <path d="M 320 106 L 320 122" stroke="#5a6272" stroke-width="1.6" marker-end="url(#ned)"/>
+  <defs><marker id="ned" markerWidth="9" markerHeight="9" refX="4" refY="7" orient="auto">
+    <path d="M0,0 L8,0 L4,8 z" fill="#5a6272"/></marker></defs>
+
+  <text x="120" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">(</text>
+  <text x="134" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#6a1b9a" font-weight="bold">8 · 2 450</text>
+  <text x="232" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#1d4e89" font-weight="bold">− 2 000</text>
+  <text x="322" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430">)</text>
+  <text x="340" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#00695c" font-weight="bold">: 4</text>
+  <text x="400" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#5a6272">=</text>
+  <text x="430" y="152" font-family="Cambria,Georgia,serif" font-size="21" fill="#1f2430" font-weight="bold">4 400</text>
+
+  <text x="320" y="176" font-family="Arial" font-size="11.5" fill="#5a6272" text-anchor="middle">Parentesen kommer av at hele beløpet skal deles — ikke bare rabatten.</text>
+</svg>
+<figcaption>Figur 2.7 &nbsp;Ta én setningsdel om gangen, og sett parentes der hele beløpet skal behandles samlet.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Formuleringer som gir parentes</span>
+  <ul>
+    <li>«summen av … ganget med …» → <span class="matte">(a + b) · c</span></li>
+    <li>«… delt likt på …» når flere ting skal deles → <span class="matte">(a + b) : c</span></li>
+    <li>«etter at rabatten er trukket fra» → rabatten inn i parentesen</li>
+    <li>«hver av dem betaler» → hele summen i parentes, deretter deling</li>
+  </ul>
+</div>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 7 &nbsp;·&nbsp; Når parentesen ikke trengs</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Fem personer kjøper hver sin billett til 320 kroner. I tillegg deler de en parkeringsavgift på 180 kroner likt. Hva betaler hver person?</p>
+    <ol class="trinn">
+      <li>Billetten er personlig — den skal <em>ikke</em> deles: <span class="matte">320</span></li>
+      <li>Parkeringen deles på fem: <span class="matte">180 : 5 = 36</span></li>
+      <li>Legg sammen: <span class="matte">320 + 180 : 5 = 320 + 36</span></li>
+    </ol>
+    <p class="svarlinje">Svar: Hver person betaler 356 kroner.</p>
+    <p style="margin-top:0.7rem;font-size:0.95rem;color:#5a6272;">
+      Legg merke til at det ikke skal være parentes her. Uttrykket
+      <span class="matte">(320 + 180) : 5</span> ville betydd at også billetten ble delt på fem.</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="66" class="oppgaver" style="counter-reset: oppg 65;">
+      <li>Skriv som regneuttrykk. Du skal ikke regne ut ennå.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>summen av 12 og 8, ganget med 3</li>
+          <li><span class="bokstav">b)</span>12 ganget med 8, pluss 3</li>
+          <li><span class="bokstav">c)</span>40 minus produktet av 3 og 5</li>
+          <li><span class="bokstav">d)</span>60 delt på summen av 2 og 4</li>
+        </ul>
+      </li>
+      <li>Regn ut uttrykkene du skrev i oppgave 66.</li>
+      <li>Skriv som regneuttrykk, og regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>summen av 9 og 6, ganget med 4</li>
+          <li><span class="bokstav">b)</span>9 ganget med 6, pluss 4</li>
+          <li><span class="bokstav">c)</span>100 minus produktet av 4 og 7</li>
+          <li><span class="bokstav">d)</span>80 delt på summen av 3 og 5</li>
+        </ul>
+      </li>
+      <li>To personer kjøper hver sin genser til 349 kroner.
+        Skriv ett uttrykk for hva de betaler til sammen, og regn ut.</li>
+      <li>Fire venner deler en pizza til 289 kroner og en brus til 39 kroner likt.
+        Skriv ett uttrykk og regn ut hva hver betaler.</li>
+      <li>Tre personer kjøper hver sin billett til 189 kroner. Skriv ett uttrykk for hva de betaler til sammen, og regn ut.</li>
+      <li>Fem venner deler en regning på 620 kroner for mat og 130 kroner for drikke likt. Skriv ett uttrykk og regn ut hva hver betaler.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="73" class="oppgaver" style="counter-reset: oppg 72;">
+      <li>Skriv ett uttrykk og regn ut.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Tre bøker til 259 kroner og to hefter til 89 kroner.</li>
+          <li><span class="bokstav">b)</span>500 kroner minus tre billetter til 145 kroner.</li>
+          <li><span class="bokstav">c)</span>1 200 kroner delt likt på 4 voksne og 2 barn.</li>
+        </ul>
+      </li>
+      <li>En familie kjøper 4 kinobilletter til 165 kroner og 2 poser popcorn til 85 kroner.
+        De har et gavekort på 300 kroner.
+        Skriv ett uttrykk for hva de må betale selv, og regn ut.</li>
+      <li>Seks kolleger deler en gave som koster 1 490 kroner. De får 200 kroner i rabatt.
+        Skriv ett uttrykk og regn ut hva hver betaler.</li>
+      <li>Skriv en tekstoppgave som passer til uttrykket
+        <span class="matte">(5 · 240 + 350) : 5</span>. Regn deretter ut svaret.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="77" class="oppgaver" style="counter-reset: oppg 76;">
+      <li>Uttrykket <span class="matte">3 · 450 + 2 · 275 − 500</span> beskriver et innkjøp.
+        Skriv en tekst som passer, forklar hva hvert tall betyr, og regn ut svaret.</li>
+      <li>En bedrift regner slik: <span class="matte">(12 · 860 + 4 500) : 6</span>.
+        Hva kan de ha regnet ut? Forklar hvert steg, og regn ut svaret.</li>
+      <li>To elever setter opp uttrykk for samme oppgave:
+        «Fem personer kjøper billett til 240 kroner hver, og deler i tillegg et busskort
+        på 600 kroner likt.»
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Ali skriver 240 + 600 : 5. Regn ut.</li>
+          <li><span class="bokstav">b)</span>Nora skriver (5 · 240 + 600) : 5. Regn ut.</li>
+          <li><span class="bokstav">c)</span>Hvem har rett? Forklar hva svaret ditt betyr.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="80" class="oppgaver" style="counter-reset: oppg 79;">
+      <li>Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «Et idrettslag arrangerer turnering. De leier hall for 8 500 kroner og kjøper premier
+          for 3 200 kroner. Maten koster 45 kroner per deltaker. Det er 120 deltakere,
+          og hver av dem betaler 250 kroner i påmeldingsavgift.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk for overskuddet.</li>
+          <li><span class="bokstav">b)</span>Regn ut overskuddet.</li>
+          <li><span class="bokstav">c)</span>Hvor mange deltakere må laget minst ha for å gå i null?</li>
+        </ul>
+      </li>
+      <li>En strømregning består av et fastledd på 89 kroner, et forbruk på 1 240 kWh
+        til 0,94 kroner per kWh, nettleie på 0,42 kroner per kWh, og 25 % merverdiavgift
+        som legges på hele beløpet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk for regningen.</li>
+          <li><span class="bokstav">b)</span>Regn ut hva kunden må betale.</li>
+          <li><span class="bokstav">c)</span>Hvor mange kroner utgjør merverdiavgiften?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     2.6 REGNEUTTRYKK PÅ KALKULATOR
+     ============================================================ -->
+<section id="k26" class="nyside">
+<h2 id="d2-6">2.6 Regneuttrykk på kalkulator</h2>
+
+<div class="delmaal">
+  <span class="etikett">Delmål — etter dette delkapitlet kan du</span>
+  <ul>
+    <li>taste inn sammensatte uttrykk riktig</li>
+    <li>bruke parentestastene når uttrykket har brøkstrek</li>
+    <li>kontrollere svaret med et overslag i hodet</li>
+    <li>kjenne igjen de vanligste tastefeilene</li>
+  </ul>
+</div>
+
+<table class="ordliste">
+  <thead>
+    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>å taste inn</td><td></td><td>Jeg taster inn hele uttrykket.</td></tr>
+    <tr><td>parentestast</td><td></td><td>Parentestastene ligger over tallene.</td></tr>
+    <tr><td>display / skjerm</td><td></td><td>Displayet viser 4 400.</td></tr>
+    <tr><td>tastefeil</td><td></td><td>Jeg gjorde en tastefeil.</td></tr>
+    <tr><td>å kontrollere</td><td></td><td>Jeg kontrollerer svaret med et overslag.</td></tr>
+  </tbody>
+</table>
+
+<p>
+  Kalkulatoren følger nøyaktig samme regnerekkefølge som du gjør. Derfor kan du taste inn
+  hele uttrykket i én omgang. Men kalkulatoren ser ikke brøkstreker — den ser bare tegn etter
+  hverandre. Derfor må du selv sette parentesene.
+</p>
+
+<figure>
+<svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kalkulator med parentestastene markert">
+  <rect x="196" y="14" width="228" height="234" rx="14" fill="#f5f6f8" stroke="#5a6272" stroke-width="1.6"/>
+  <rect x="212" y="30" width="196" height="42" rx="5" fill="#1f2430"/>
+  <text x="396" y="60" font-family="DejaVu Sans Mono, monospace" font-size="19" fill="#8ee6c8" text-anchor="end">(24+16)/(3+5)</text>
+
+  <g>
+    <rect x="212" y="84" width="44" height="30" rx="5" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+    <text x="234" y="105" font-family="Arial" font-size="16" font-weight="bold" fill="#8d6708" text-anchor="middle">(</text>
+    <rect x="262" y="84" width="44" height="30" rx="5" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+    <text x="284" y="105" font-family="Arial" font-size="16" font-weight="bold" fill="#8d6708" text-anchor="middle">)</text>
+    <rect x="312" y="84" width="44" height="30" rx="5" fill="#e8f0f8" stroke="#b8d0e6"/>
+    <text x="334" y="105" font-family="Arial" font-size="15" fill="#1f2430" text-anchor="middle">÷</text>
+    <rect x="362" y="84" width="44" height="30" rx="5" fill="#e8f0f8" stroke="#b8d0e6"/>
+    <text x="384" y="105" font-family="Arial" font-size="15" fill="#1f2430" text-anchor="middle">×</text>
+  </g>
+  <g font-family="Arial" font-size="15" fill="#1f2430" text-anchor="middle">
+    <rect x="212" y="122" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="234" y="143">7</text>
+    <rect x="262" y="122" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="284" y="143">8</text>
+    <rect x="312" y="122" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="334" y="143">9</text>
+    <rect x="362" y="122" width="44" height="30" rx="5" fill="#e8f0f8" stroke="#b8d0e6"/><text x="384" y="143">−</text>
+    <rect x="212" y="160" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="234" y="181">4</text>
+    <rect x="262" y="160" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="284" y="181">5</text>
+    <rect x="312" y="160" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="334" y="181">6</text>
+    <rect x="362" y="160" width="44" height="30" rx="5" fill="#e8f0f8" stroke="#b8d0e6"/><text x="384" y="181">+</text>
+    <rect x="212" y="198" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="234" y="219">1</text>
+    <rect x="262" y="198" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="284" y="219">2</text>
+    <rect x="312" y="198" width="44" height="30" rx="5" fill="#fff" stroke="#d6d9de"/><text x="334" y="219">3</text>
+    <rect x="362" y="198" width="44" height="30" rx="5" fill="#2e7d32" stroke="#2e7d32"/>
+    <text x="384" y="219" fill="#ffffff" font-weight="bold">=</text>
+  </g>
+  <path d="M 190 99 L 150 99" stroke="#f9a825" stroke-width="2" marker-end="url(#pilk)"/>
+  <defs><marker id="pilk" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+    <path d="M0,0 L7,3.2 L0,6.4 z" fill="#f9a825"/></marker></defs>
+  <text x="144" y="94" font-family="Arial" font-size="12" font-weight="bold" fill="#8d6708" text-anchor="end">parentestastene</text>
+  <text x="144" y="112" font-family="Arial" font-size="11" fill="#5a6272" text-anchor="end">— disse må du bruke</text>
+  <text x="430" y="52" font-family="Arial" font-size="12" fill="#5a6272">displayet viser</text>
+  <text x="430" y="70" font-family="Arial" font-size="12" fill="#5a6272">hele uttrykket</text>
+  <text x="440" y="150" font-family="Cambria,Georgia,serif" font-size="22" font-weight="bold" fill="#2e7d32">= 5</text>
+</svg>
+<figcaption>Figur 2.8 &nbsp;Hele uttrykket tastes inn i én omgang. Parentesene setter du selv.</figcaption>
+</figure>
+
+<div class="regel">
+  <span class="etikett">Regel for brøkstrek på kalkulator</span>
+  <p style="margin-bottom:0;">Sett parentes rundt <strong>hele telleren</strong> og rundt
+  <strong>hele nevneren</strong>, også når du synes de ser enkle ut.
+  Det koster to tastetrykk, og fjerner den vanligste feilkilden.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Riktig og feil tasting av et brøkuttrykk">
+  <rect x="16" y="14" width="288" height="162" rx="8" fill="#f3e5f5" stroke="#ce93d8"/>
+  <rect x="316" y="14" width="288" height="162" rx="8" fill="#e8f5e9" stroke="#a5d6a7"/>
+  <text x="160" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="middle">FEIL — uten parentes</text>
+  <text x="460" y="40" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">RIKTIG — med parentes</text>
+
+  <rect x="46" y="56" width="228" height="30" rx="4" fill="#1f2430"/>
+  <text x="264" y="77" font-family="DejaVu Sans Mono, monospace" font-size="15" fill="#e08a8a" text-anchor="end">120 / 4 × 3</text>
+  <rect x="346" y="56" width="228" height="30" rx="4" fill="#1f2430"/>
+  <text x="564" y="77" font-family="DejaVu Sans Mono, monospace" font-size="15" fill="#8ee6c8" text-anchor="end">120 / ( 4 × 3 )</text>
+
+  <text x="160" y="118" font-family="Cambria,Georgia,serif" font-size="20" fill="#6a1b9a" text-anchor="middle">= 30 · 3 = 90</text>
+  <text x="460" y="118" font-family="Cambria,Georgia,serif" font-size="20" fill="#2e7d32" text-anchor="middle">= 120 : 12 = 10</text>
+
+  <text x="160" y="156" font-family="Arial" font-size="11.5" fill="#6a1b9a" text-anchor="middle">Kalkulatoren delte bare på 4,</text>
+  <text x="160" y="172" font-family="Arial" font-size="11.5" fill="#6a1b9a" text-anchor="middle">og ganget deretter med 3.</text>
+  <text x="460" y="156" font-family="Arial" font-size="11.5" fill="#2e7d32" text-anchor="middle">Parentesen samler hele nevneren</text>
+  <text x="460" y="172" font-family="Arial" font-size="11.5" fill="#2e7d32" text-anchor="middle">før divisjonen utføres.</text>
+</svg>
+<figcaption>Figur 2.9 &nbsp;Uten parentes deler kalkulatoren bare på det første tallet under streken.</figcaption>
+</figure>
+
+<div class="eksempel">
+  <div class="hode">Eksempel 8 &nbsp;·&nbsp; Overslag først, kalkulator etterpå</div>
+  <div class="kropp">
+    <p class="oppgavetekst">Regn ut <span class="matte"><span class="brok"><span class="t">85 + 35</span><span class="n">4 · 3</span></span></span>.</p>
+    <ol class="trinn">
+      <li>Overslag i hodet: telleren er omtrent 120, nevneren er 12. Svaret bør ligge nær 10.</li>
+      <li>Tast inn: <span class="matte">( 85 + 35 ) ÷ ( 4 × 3 ) =</span></li>
+      <li>Displayet viser 10. Det stemmer med overslaget.</li>
+    </ol>
+    <p class="svarlinje">Svar: 10</p>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-a">
+  <div class="hode"><span>A &nbsp;·&nbsp; Kom i gang</span><span class="nivaa">Nivå 1</span></div>
+  <div class="kropp">
+    <ol start="82" class="oppgaver" style="counter-reset: oppg 81;">
+      <li>Skriv opp hvilke taster du må trykke på, i riktig rekkefølge.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">15 + 9</span><span class="n">4</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">36</span><span class="n">2 + 4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">8 · 5</span><span class="n">2 + 3</span></span></li>
+        </ul>
+      </li>
+      <li>Skriv opp hvilke taster du må trykke på, i riktig rekkefølge.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">20 + 8</span><span class="n">7</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">48</span><span class="n">3 + 3</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">9 · 6</span><span class="n">2 + 1</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut med kalkulator.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">144 + 56</span><span class="n">8</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">25 · 12</span><span class="n">4 + 2</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">900 − 300</span><span class="n">5 · 4</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">63 + 27</span><span class="n">10 − 4</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut med kalkulator.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">128 + 72</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">30 · 14</span><span class="n">3 + 4</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">800 − 200</span><span class="n">4 · 5</span></span></li>
+          <li><span class="bokstav">d)</span><span class="brok"><span class="t">81 + 39</span><span class="n">12 − 4</span></span></li>
+        </ul>
+      </li>
+      <li>Gjør et overslag i hodet først, og regn deretter med kalkulator.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">298 + 402</span><span class="n">7</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">49 · 21</span><span class="n">3 · 7</span></span></li>
+        </ul>
+      </li>
+      <li>Gjør et overslag i hodet først, og regn deretter med kalkulator.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">402 − 198</span><span class="n">4</span></span></li>
+          <li><span class="bokstav">b)</span><span class="brok"><span class="t">596 + 604</span><span class="n">8</span></span></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>B &nbsp;·&nbsp; Øv mer</span><span class="nivaa">Nivå 2</span></div>
+  <div class="kropp">
+    <ol start="88" class="oppgaver" style="counter-reset: oppg 87;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span><span class="brok"><span class="t">1 250 + 850</span><span class="n">6 · 5</span></span></li><li><span class="bokstav">b)</span><span class="brok"><span class="t">48 · 25 − 200</span><span class="n">8</span></span></li>
+          <li><span class="bokstav">c)</span><span class="brok"><span class="t">3 600 : 9</span><span class="n">2 + 3</span></span></li><li><span class="bokstav">d)</span><span class="brok"><span class="t">17 · 23 + 9</span><span class="n">10</span></span></li>
+        </ul>
+      </li>
+      <li>En elev skal regne <span class="matte"><span class="brok"><span class="t">200</span><span class="n">4 + 6</span></span></span>, men taster inn
+        <span class="matte">200 / 4 + 6</span> og får 56. Hva er riktig svar, og hva gikk galt?</li>
+      <li>Regn ut gjennomsnittet av tallene 128, 143, 96, 187 og 156.</li>
+      <li>En bil kjørte tre turer: 148 km, 267 km og 95 km, på til sammen 7 timer.
+        Skriv ett uttrykk for gjennomsnittsfarten, og regn det ut med kalkulator.
+        Rund av til én desimal.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>C &nbsp;·&nbsp; Tenk og løs</span><span class="nivaa">Nivå 3</span></div>
+  <div class="kropp">
+    <ol start="92" class="oppgaver" style="counter-reset: oppg 91;">
+      <li>Avgjør uten kalkulator om <span class="matte"><span class="brok"><span class="t">480 + 120</span><span class="n">5 · 4</span></span></span>
+        er større enn, mindre enn eller lik 30. Kontroller deretter med kalkulator.</li>
+      <li>En elev får 0,3333333 på displayet.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Foreslå et uttrykk som kan gi dette svaret.</li>
+          <li><span class="bokstav">b)</span>Hvorfor viser ikke displayet et helt nøyaktig svar?</li>
+          <li><span class="bokstav">c)</span>Hvordan ville du skrevet svaret helt nøyaktig?</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-m4">
+  <div class="hode"><span>M4 &nbsp;·&nbsp; Utfordring</span><span class="nivaa">Modul 4</span></div>
+  <div class="kropp">
+    <ol start="94" class="oppgaver" style="counter-reset: oppg 93;">
+      <li>En håndverker fakturerer 6,5 timer til 945 kroner per time, materialer for 4 380 kroner
+        og kjøring på 42 km til 4,90 kroner per km. På hele beløpet legges 25 % merverdiavgift.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv hele regningen som ett uttrykk.</li>
+          <li><span class="bokstav">b)</span>Regn ut sluttsummen med kalkulator.</li>
+          <li><span class="bokstav">c)</span>Gjør et overslag i hodet, og vurder om svaret ditt er rimelig.</li>
+        </ul>
+      </li>
+      <li>Tabellen viser strømforbruket i en leilighet gjennom fire vintermåneder.
+        <table class="data">
+          <tr><th>Måned</th><th>Des</th><th>Jan</th><th>Feb</th><th>Mar</th></tr>
+          <tr><td>Forbruk (kWh)</td><td>1 890</td><td>2 340</td><td>1 750</td><td>1 120</td></tr>
+        </table>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Regn ut gjennomsnittlig månedsforbruk.</li>
+          <li><span class="bokstav">b)</span>Hva ville årsforbruket vært hvis alle årets måneder var som gjennomsnittet?</li>
+          <li><span class="bokstav">c)</span>Er det et rimelig anslag for et helt år? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<!-- ============================================================
+     2.7 BLANDEDE OPPGAVER
+     ============================================================ -->
+<section id="k27" class="nyside">
+<h2 id="d2-7">2.7 Blandede oppgaver</h2>
+
+<p>Her møter du alle delkapitlene om hverandre.</p>
+
+<div class="oppgavebolk bolk-b">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 1–2</span></div>
+  <div class="kropp">
+    <ol start="96" class="oppgaver" style="counter-reset: oppg 95;">
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>30 − 4 · 6</li><li><span class="bokstav">b)</span>(30 − 4) · 6</li>
+          <li><span class="bokstav">c)</span>48 : (2 · 3)</li><li><span class="bokstav">d)</span><span class="brok"><span class="t">18 + 12</span><span class="n">5</span></span></li>
+        </ul>
+      </li>
+      <li>Regn ut.
+        <ul class="deloppgaver">
+          <li><span class="bokstav">a)</span>5 · [14 − (3 + 5)]</li><li><span class="bokstav">b)</span><span class="brok"><span class="t">72 − 12</span><span class="n">2 · 5</span></span></li>
+          <li><span class="bokstav">c)</span>3 · 102</li><li><span class="bokstav">d)</span>4 · 25 · 9</li>
+        </ul>
+      </li>
+      <li>Tre kolleger deler utgiften til en gave på 890 kroner og et kort på 49 kroner.
+        Skriv ett uttrykk og regn ut hva hver betaler.</li>
+      <li>Sett inn parenteser slik at regnestykket blir riktig.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>8 + 2 · 5 = 50</li>
+          <li><span class="bokstav">b)</span>36 : 6 + 3 = 4</li>
+        </ul>
+      </li>
+      <li>Regn ut gjennomsnittet av 45, 52, 38 og 65.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="oppgavebolk bolk-c">
+  <div class="hode"><span>Blandet repetisjon</span><span class="nivaa">Nivå 3 og modul 4</span></div>
+  <div class="kropp">
+    <ol start="101" class="oppgaver" style="counter-reset: oppg 100;">
+      <li>En kantine kjøper 15 kasser epler til 289 kroner per kasse og 8 kasser pærer
+        til 342 kroner per kasse. De får 500 kroner i rabatt.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Skriv ett uttrykk for totalprisen.</li>
+          <li><span class="bokstav">b)</span>Regn ut beløpet.</li>
+          <li><span class="bokstav">c)</span>Utgiften deles likt på 4 avdelinger. Hva betaler hver avdeling?</li>
+        </ul>
+      </li>
+      <li>Vis at <span class="matte">12 · 25 · 4</span> kan regnes ut på tre ulike måter.
+        Hvilken er raskest i hodet, og hvilken lov bygger den på?</li>
+      <li>En elev skal regne <span class="matte"><span class="brok"><span class="t">60 + 40</span><span class="n">2 + 3</span></span></span>,
+        men taster inn <span class="matte">60 + 40 / 2 + 3</span> og får 83.
+        Forklar feilen, og gi riktig svar.</li>
+      <li><span class="m4merke">M4</span> Et treningsstudio har 340 medlemmer.
+        45 % av dem har årskort til 3 890 kroner. Resten har månedskort til 449 kroner
+        som de betaler 12 ganger i året.
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor mange har årskort?</li>
+          <li><span class="bokstav">b)</span>Skriv ett uttrykk for studioets årlige inntekt fra medlemskap.</li>
+          <li><span class="bokstav">c)</span>Regn ut inntekten.</li>
+        </ul>
+      </li>
+      <li><span class="m4merke">M4</span> Les teksten.
+        <div style="background:#f5f6f8;border:1px solid #d6d9de;border-radius:6px;padding:0.7rem 0.9rem;margin:0.5rem 0;font-size:0.95rem;">
+          «En kommune bruker 1 250 kroner per innbygger på kultur. Kommunen har 14 800 innbyggere.
+          Neste år øker kulturbudsjettet med 6 %, samtidig som folketallet ventes å øke med 300.»
+        </div>
+        <ul class="deloppgaver brei">
+          <li><span class="bokstav">a)</span>Hvor stort er kulturbudsjettet i år?</li>
+          <li><span class="bokstav">b)</span>Hvor stort blir det neste år?</li>
+          <li><span class="bokstav">c)</span>Hvor mye blir det per innbygger neste år?</li>
+          <li><span class="bokstav">d)</span>Får hver innbygger mer eller mindre enn i år? Begrunn svaret.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="sjekkliste">
+  <h3>Sjekk deg selv</h3>
+  <p style="margin-bottom:0.6rem;">Kryss av for det du får til. Er du usikker på noe, gå tilbake til delkapitlet.</p>
+  <ul>
+    <li>Jeg kan regne ut lange uttrykk i riktig rekkefølge og skrive ett trinn per linje. <em>(2.1)</em></li>
+    <li>Jeg kan regne uttrykk med parentes inni parentes, og vet hva minus foran en parentes gjør. <em>(2.2)</em></li>
+    <li>Jeg vet at brøkstreken virker som en parentes rundt teller og nevner. <em>(2.3)</em></li>
+    <li>Jeg kan navnene på de tre regnelovene og bruker dem til å regne raskere. <em>(2.4)</em></li>
+    <li>Jeg kan gjøre om en tekst til ett samlet regneuttrykk. <em>(2.5)</em></li>
+    <li>Jeg taster inn sammensatte uttrykk riktig på kalkulator og kontrollerer med overslag. <em>(2.6)</em></li>
+  </ul>
+</div>
+</section>
+
+
+<section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 2</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
+<h3>2.1 Regnerekkefølgen i lengre uttrykk</h3>
+<ol class="fasit" style="counter-reset: fas 0;">
+<li><span class="d">a) 17</span><span class="d">b) 8</span><span class="d">c) 22</span><span class="d">d) 13</span><span class="d">e) 15</span></li>
+<li><span class="d">a) 21</span><span class="d">b) 5</span><span class="d">c) 22</span><span class="d">d) 14</span><span class="d">e) 16</span></li>
+<li><span class="d">a) 26</span><span class="d">b) 6</span><span class="d">c) 11</span><span class="d">d) 20</span></li>
+<li><span class="d">a) 26</span><span class="d">b) 6</span><span class="d">c) 11</span><span class="d">d) 17</span></li>
+<li><span class="d">a) 50</span><span class="d">b) 100</span><span class="d">c) 2</span><span class="d">d) 18</span>
+</li>
+<li><span class="d">a) 30</span><span class="d">b) 70</span><span class="d">c) 6</span><span class="d">d) 24</span></li>
+<li><span class="d">a) 24</span><span class="d">b) 28</span></li>
+<li><span class="d">a) 54</span><span class="d">b) 58</span><span class="d">c) 23</span><span class="d">d) 19</span></li>
+<li><span class="d">a) 65</span><span class="d">b) 30</span><span class="d">c) 20</span><span class="d">d) 40</span></li>
+<li><span class="d">a) (6 + 4) · 5</span><span class="d">b) 24 : (6 + 2)</span><span class="d">c) (20 − 8) : 4</span></li>
+<li>3 · 145 + 5 · 62 − 100 = 435 + 310 − 100 = <strong>645 kr</strong></li>
+<li><span class="d">a) Feil — riktig 20</span><span class="d">b) Riktig</span>
+<span class="d">c) Feil — riktig 20</span><span class="d">d) Riktig</span></li>
+<li><span class="d">a) (3 + 5 + 4) · 890 + 2 340</span><span class="d">b) 13 020 kr</span><span class="d">c) </span><br/>
+</li>
+<li><strong>Ivan har rett: 50.</strong> Sara har regnet 60 − (4 · 5 + 10) = 30, altså satt en
+    parentes som ikke står der. Minus gjelder bare leddet 4 · 5.</li>
+<li> Kontroller at uttrykket faktisk inneholder tre ulike
+    regnearter og gir 100. Eksempel: 4 · 30 − 40 : 2 = 120 − 20 = 100.</li>
+<li><span class="d">a) 1 250 + 12 · 340 · 0,85 + 890</span><span class="d">b) 5 608 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 240 · 1 490 · 0,88 + 8 500</span><span class="d">b) 323 188 kr</span><span class="d">c) 1 346,62 kr per stol</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.2 Parenteser inni parenteser</h3>
+<ol class="fasit" start="18" style="counter-reset: fas 17;">
+<li><span class="d">a) 18</span><span class="d">b) 30</span><span class="d">c) 13</span><span class="d">d) 10</span></li>
+<li><span class="d">a) 32</span><span class="d">b) 21</span><span class="d">c) 22</span><span class="d">d) 10</span></li>
+<li><span class="d">a) 15</span><span class="d">b) 4</span><span class="d">c) 6</span><span class="d">d) 20</span></li>
+<li><span class="d">a) 16</span><span class="d">b) 9</span><span class="d">c) 11</span><span class="d">d) 30</span></li>
+<li><span class="d">a) 15</span><span class="d">b) 25</span><span class="d">c) 45</span><span class="d">d) 35</span></li>
+<li><span class="d">a) 20</span><span class="d">b) 40</span><span class="d">c) 65</span><span class="d">d) 55</span></li>
+<li><span class="d">a) 40</span><span class="d">b) 3</span><span class="d">c) 0</span><span class="d">d) 5</span></li>
+<li><span class="d">a) 48</span><span class="d">b) 50</span><span class="d">c) 15</span><span class="d">d) 48</span></li>
+<li><span class="d">a) 100</span><span class="d">b) 12</span><span class="d">c) 30</span><span class="d">d) 5</span></li>
+<li>16 og 20. </li>
+<li>(3 · 189 + 3 · 65 − 150) : 3 = (567 + 195 − 150) : 3 = 612 : 3 = <strong>204 kr per person</strong></li>
+<li><span class="d">a) (4 + 6) · 2 − 1</span><span class="d">b) 4 + 6 · (2 − 1)</span>
+<span class="d">c) (20 − 8) : 4 + 2</span><span class="d">d) 20 − (8 : 4 + 2)</span></li>
+<li>Minus foran parentesen snur fortegnet til <em>begge</em> leddene:
+    60 − (15 + 5) = 60 − 15 − 5 = <strong>40</strong>.</li>
+<li> Eksempel: 4 · [10 − (2 + 2)] = 24, eller [3 · (5 + 3)] = 24.</li>
+<li><span class="d">a) [6 · (4 200 + 1 850 + 640)] · 0,9 + 3 500</span><span class="d">b) 39 626 kr</span><span class="d">c) 39 276 kr, forskjell 350 kr</span><br/>
+</li>
+<li><span class="d">a) 3 · 28 · 2 690 · 1,04 − 15 000</span><span class="d">b) 219 998,40 kr</span><span class="d">c) 219 398,40 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.3 Brøkstreken som divisjonstegn</h3>
+<ol class="fasit" start="34" style="counter-reset: fas 33;">
+<li><span class="d">a) 3</span><span class="d">b) 5</span><span class="d">c) 3</span><span class="d">d) 3</span></li>
+<li><span class="d">a) 4</span><span class="d">b) 6</span><span class="d">c) 3</span><span class="d">d) 4</span></li>
+<li><span class="d">a) 4</span><span class="d">b) 6</span><span class="d">c) 5</span><span class="d">d) 6</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 9</span><span class="d">c) 5</span><span class="d">d) 4</span></li>
+<li><span class="d">a) 2</span><span class="d">b) 4</span><span class="d">c) 3</span><span class="d">d) 6</span></li>
+<li><span class="d">a) 20 : 5 = 4</span><span class="d">b) 36 : 6 = 6</span><span class="d">c) 45 : 9 = 5</span></li>
+<li><span class="d">a) 6</span><span class="d">b) 13</span><span class="d">c) 6</span><span class="d">d) 25</span></li>
+<li><span class="d">a) 5</span><span class="d">b) 4</span><span class="d">c) 8</span><span class="d">d) 3</span></li>
+<li><span class="d">a) 12</span><span class="d">b) 6</span><span class="d">c) 10</span><span class="d">d) 10</span></li>
+<li><span class="brok"><span class="t">620 + 280</span><span class="n">4 + 5</span></span> = 900 : 9 = <strong>100 kr per person</strong></li>
+<li><span class="brok"><span class="t">34 + 41 + 28 + 45</span><span class="n">4</span></span> = 148 : 4 = <strong>37 poeng</strong></li>
+<li>Uten parentes deles bare det siste tallet: 20 + 10 : 5 = 20 + 2 = 22.
+    Brøkstreken samler hele telleren, så riktig svar er 30 : 5 = <strong>6</strong>.</li>
+<li><span class="d">a) (7 + 9 + 6 + 10) · <span class="brok"><span class="t">245</span><span class="n">4</span></span></span><span class="d">b) 1 960 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 16</span><span class="d">b) 6</span><span class="d">c) 6</span></li>
+<li><span class="d">a) <span class="brok"><span class="t">48 + 37</span><span class="n">52 + 68</span></span></span><span class="d">b) 0,71 liter per mil</span><span class="d">c) ca. 16,58 kr</span><br/>
+</li>
+<li><span class="d">a) <span class="brok"><span class="t">312</span><span class="n">480</span></span> = 0,65</span><span class="d">b) 65 %</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.4 De tre regnelovene</h3>
+<ol class="fasit" start="50" style="counter-reset: fas 49;">
+<li><span class="d">a) kommutativ</span><span class="d">b) assosiativ</span>
+<span class="d">c) distributiv</span><span class="d">d) kommutativ</span></li>
+<li><span class="d">a) kommutativ</span><span class="d">b) assosiativ</span><span class="d">c) distributiv</span><span class="d">d) kommutativ</span></li>
+<li><span class="d">a) 370</span><span class="d">b) 1 300</span><span class="d">c) 1 700</span><span class="d">d) 900</span></li>
+<li><span class="d">a) 2 300</span><span class="d">b) 1 900</span><span class="d">c) 1 700</span><span class="d">d) 1 400</span></li>
+<li><span class="d">a) 515</span><span class="d">b) 392</span><span class="d">c) 1 206</span><span class="d">d) 891</span></li>
+<li><span class="d">a) 714</span><span class="d">b) 291</span><span class="d">c) 808</span><span class="d">d) 588</span></li>
+<li><span class="d">a) nei</span><span class="d">b) nei</span><span class="d">c) ja</span><span class="d">d) nei (5 mot 9)</span></li>
+<li><span class="d">a) 2 300</span><span class="d">b) 460</span><span class="d">c) 7 000</span><span class="d">d) 4 900</span></li>
+<li><span class="d">a) 182</span><span class="d">b) 240</span><span class="d">c) 252</span><span class="d">d) 100</span></li>
+<li><span class="d">a) 1 530</span><span class="d">b) 2 970</span><span class="d">c) 2 460</span><span class="d">d) 3 920</span></li>
+<li>360 flasker. </li>
+<li> Eksempel: (48 : 6) : 2 = 4, men 48 : (6 : 2) = 16.
+    Grupperingen endrer svaret, altså er divisjon ikke assosiativ.</li>
+<li>Hun har brukt regelen for minus foran parentes feil. Begge leddene skal skifte fortegn:
+    30 − 8 − 5 = <strong>17</strong>.</li>
+<li><span class="d">a) 18 · 20 + 18 · 4 = 360 + 72 = 432</span><span class="d">b) 432</span><span class="d">c) </span></li>
+<li><span class="d">a) 45 · (3 · 189 + 2 · 549) og 45 · 3 · 189 + 45 · 2 · 549</span>
+<span class="d">b) begge gir 74 925 kr</span><span class="d">c) </span><br/>
+</li>
+<li>99 · 99 = 99 · (100 − 1) = 9 900 − 99 = <strong>9 801</strong>.<br/>
+    999 · 999 = 999 · (1 000 − 1) = 999 000 − 999 = <strong>998 001</strong>.
+    </li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.5 Fra tekst til regneuttrykk</h3>
+<ol class="fasit" start="66" style="counter-reset: fas 65;">
+<li><span class="d">a) (12 + 8) · 3</span><span class="d">b) 12 · 8 + 3</span>
+<span class="d">c) 40 − 3 · 5</span><span class="d">d) 60 : (2 + 4)</span></li>
+<li><span class="d">a) 60</span><span class="d">b) 99</span><span class="d">c) 25</span><span class="d">d) 10</span></li>
+<li><span class="d">a) (9 + 6) · 4 = 60</span><span class="d">b) 9 · 6 + 4 = 58</span><span class="d">c) 100 − 4 · 7 = 72</span><span class="d">d) 80 : (3 + 5) = 10</span></li>
+<li>2 · 349 = <strong>698 kr</strong></li>
+<li>(289 + 39) : 4 = 328 : 4 = <strong>82 kr per person</strong></li>
+<li>3 · 189 = 567 kr</li>
+<li>(620 + 130) : 5 = 750 : 5 = 150 kr per person</li>
+<li><span class="d">a) 3 · 259 + 2 · 89 = 955 kr</span><span class="d">b) 500 − 3 · 145 = 65 kr</span>
+<span class="d">c) 1 200 : (4 + 2) = 200 kr</span></li>
+<li>4 · 165 + 2 · 85 − 300 = 660 + 170 − 300 = <strong>530 kr</strong></li>
+<li>(1 490 − 200) : 6 = 1 290 : 6 = <strong>215 kr per person</strong></li>
+<li> Svaret er (1 200 + 350) : 5 = 1 550 : 5 = <strong>310</strong>.
+    Kontroller at teksten faktisk gir fem like poster pluss én felles post som deles på fem.</li>
+<li> Svaret er 1 350 + 550 − 500 = <strong>1 400</strong>.
+    Teksten må forklare tre av én vare, to av en annen, og et fradrag på 500.</li>
+<li>12 · 860 = 10 320; + 4 500 = 14 820; : 6 = <strong>2 470</strong>.
+    </li>
+<li><span class="d">a) 360 kr</span><span class="d">b) 360 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 120 · 250 − (8 500 + 3 200 + 120 · 45)</span><span class="d">b) 12 900 kr</span><span class="d">c) 58 deltakere</span><br/>
+</li>
+<li><span class="d">a) (89 + 1 240 · (0,94 + 0,42)) · 1,25</span><span class="d">b) 2 219,25 kr</span><span class="d">c) 443,85 kr</span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.6 Regneuttrykk på kalkulator</h3>
+<ol class="fasit" start="82" style="counter-reset: fas 81;">
+<li><br/>
+<span class="d">a) ( 15 + 9 ) ÷ 4 =</span><span class="d">b) 36 ÷ ( 2 + 4 ) =</span>
+<span class="d">c) ( 8 × 5 ) ÷ ( 2 + 3 ) =</span></li>
+<li><br/><span class="d">a) ( 20 + 8 ) ÷ 7 =</span><span class="d">b) 48 ÷ ( 3 + 3 ) =</span><span class="d">c) ( 9 × 6 ) ÷ ( 2 + 1 ) =</span></li>
+<li><span class="d">a) 25</span><span class="d">b) 50</span><span class="d">c) 30</span><span class="d">d) 15</span></li>
+<li><span class="d">a) 25</span><span class="d">b) 60</span><span class="d">c) 30</span><span class="d">d) 15</span></li>
+<li><span class="d">a) overslag 700 : 7 = 100 · nøyaktig 100</span>
+<span class="d">b) overslag 1 000 : 20 = 50 · nøyaktig 49</span></li>
+<li><span class="d">a) overslag 200 : 4 = 50 · nøyaktig 51</span><span class="d">b) overslag 1 200 : 8 = 150 · nøyaktig 150</span></li>
+<li><span class="d">a) 70</span><span class="d">b) 125</span><span class="d">c) 80</span><span class="d">d) 40</span></li>
+<li>Riktig svar er <strong>20</strong>. Uten parentes delte kalkulatoren 200 på 4 og la deretter
+    til 6: 50 + 6 = 56. Nevneren må stå i parentes.</li>
+<li>(128 + 143 + 96 + 187 + 156) : 5 = 710 : 5 = <strong>142</strong></li>
+<li><span class="brok"><span class="t">148 + 267 + 95</span><span class="n">7</span></span> = 510 : 7 = 72,857… ≈ <strong>72,9 km/t</strong></li>
+<li><strong>Nøyaktig lik 30.</strong> Telleren er 600, nevneren 20, og 600 : 20 = 30.
+    </li>
+<li> <span class="d">a) f.eks. 1 : 3, eller 4 : 12, eller (5 + 5) : 30</span><br/>
+</li>
+<li><span class="d">a) (6,5 · 945 + 4 380 + 42 · 4,90) · 1,25</span><span class="d">b) 13 410,38 kr</span><span class="d">c) </span><br/>
+</li>
+<li><span class="d">a) 1 775 kWh</span><span class="d">b) 21 300 kWh</span><span class="d">c) </span><br/>
+</li>
+</ol>
+</section><section class="fasitseksjon">
+<h3>2.7 Blandede oppgaver</h3>
+<ol class="fasit" start="96" style="counter-reset: fas 95;">
+<li><span class="d">a) 6</span><span class="d">b) 156</span><span class="d">c) 8</span><span class="d">d) 6</span></li>
+<li><span class="d">a) 30</span><span class="d">b) 6</span><span class="d">c) 306</span><span class="d">d) 900</span></li>
+<li>(890 + 49) : 3 = 939 : 3 = <strong>313 kr per person</strong></li>
+<li><span class="d">a) (8 + 2) · 5</span><span class="d">b) 36 : (6 + 3)</span></li>
+<li>(45 + 52 + 38 + 65) : 4 = 200 : 4 = <strong>50</strong></li>
+<li><span class="d">a) 15 · 289 + 8 · 342 − 500</span><span class="d">b) 6 571 kr</span><span class="d">c) 1 642,75 kr</span><br/>
+</li>
+<li>Alle tre gir 1 200: (25 · 4) · 12 = 100 · 12, (12 · 25) · 4 = 300 · 4, (12 · 4) · 25 = 48 · 25.
+    </li>
+<li>Riktig svar er <strong>20</strong>. Uten parenteser regnet kalkulatoren bare 40 : 2 = 20,
+    og la deretter til 60 og 3: 60 + 20 + 3 = 83. Både teller og nevner må stå i parentes.</li>
+<li><span class="d">a) 153 medlemmer</span><span class="d">b) 153 · 3 890 + 187 · 449 · 12</span><span class="d">c) 1 602 726 kr</span><br/>
+</li>
+<li><span class="d">a) 18 500 000 kr</span><span class="d">b) 19 610 000 kr</span>
+<span class="d">c) 1 298,68 kr</span><span class="d">d) </span><br/>
+</li>
+</ol>
+</section></section>
+<nav class="blaing"><a class="forrige" href="kapittel-1.html"><span class="etikett">Forrige kapittel</span><strong>1. Tallregning</strong></a><a class="neste" href="kapittel-3.html"><span class="etikett">Neste kapittel</span><strong>3. Potenser, kvadratrot og faktorisering</strong></a></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>

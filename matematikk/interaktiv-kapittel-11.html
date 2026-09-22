@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Øv · 11. Digitale verktøy — Matematikk</title>
+<link rel="stylesheet" href="../css/bok.css">
+<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/interaktiv.css">
+<script src="../js/interaktiv.js" defer></script>
+</head>
+<body>
+<header class="topplinje">
+  <div class="innmat">
+    <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
+    <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a></nav>
+    <div class="visningsbryter" role="group" aria-label="Velg visning">
+      <button type="button" data-vis="auto">Automatisk</button>
+      <button type="button" data-vis="pc">PC</button>
+      <button type="button" data-vis="mobil">Mobil</button>
+    </div>
+  </div>
+</header>
+<div class="side">
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#b04a2f"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Tallregning</span></a></li><li style="--kap:#7a2e52"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Sammensatte regneuttrykk</span></a></li><li style="--kap:#8a5f14"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Potenser, kvadratrot og faktorisering</span></a></li><li style="--kap:#2f6b4f"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Brøk</span></a></li><li style="--kap:#3f3a7d"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Prosent</span></a></li><li style="--kap:#0f5f6e"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Bokstavregning</span></a></li><li style="--kap:#8c2f39"><a href="interaktiv-kapittel-7.html"><span class="nr">7</span><span>Målinger</span></a></li><li style="--kap:#5c6b23"><a href="interaktiv-kapittel-8.html"><span class="nr">8</span><span>Geometri</span></a></li><li style="--kap:#64452f"><a href="interaktiv-kapittel-9.html"><span class="nr">9</span><span>Statistikk</span></a></li><li style="--kap:#3a4b5c"><a href="interaktiv-kapittel-10.html"><span class="nr">10</span><span>Temaer for modul 4</span></a></li><li style="--kap:#3f4550"><a href="interaktiv-kapittel-11.html" aria-current="page"><span class="nr">11</span><span>Digitale verktøy</span></a></li><li class="dk"><a href="#d11-1">11.1 Regneark — formler og cellereferanser</a></li><li class="dk"><a href="#d11-2">11.2 Regneark — HVIS og diagram</a></li><li class="dk"><a href="#d11-3">11.3 GeoGebra</a></li><li class="dk"><a href="#d11-4">11.4 Scratch</a></li><li class="dk"><a href="#d11-5">11.5 Python</a></li><li class="dk"><a href="#d11-6">11.6 Blandede oppgaver</a></li></ol></aside>
+<main class="innhold" style="--kap:#3f4550">
+<section class="kapittelapning" style="--kap:#3f4550">
+  <div class="flate">
+    <p class="kapittelnr">Øv · kapittel 11</p>
+    <h1 class="kapittel-tittel">Digitale verktøy</h1>
+    <p class="ingress">21 oppgaver du klikker og drar i.
+    Du kan prøve så mange ganger du vil, og du får svar med en gang.</p>
+  </div>
+</section>
+<div class="aktintro">
+  <p>Disse oppgavene finnes bare her, ikke i boka. Du trenger ikke skrive noe —
+  trykk, dra og slipp. Står du fast, er det et hint under hver oppgave.</p>
+  <p style="margin-top:.6rem;"><a class="tilbake" href="kapittel-11.html">←
+  Til kapittel 11: Digitale verktøy</a></p>
+</div>
+<noscript><div class="ingenskript"><p>Disse oppgavene trenger JavaScript.
+Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div></noscript>
+<script type="application/json" id="aktiviteter">{"kapittel": 11, "tittel": "Digitale verktøy", "farge": "#3f4550", "aktiviteter": [{"id": "11a1", "type": "par", "oppgave": "Koble hver formel til svaret regnearket viser.", "par": [{"v": "=2+3", "h": "5", "verdi": 5}, {"v": "=4*3", "h": "12", "verdi": 12}, {"v": "=SUMMER(1;2;3)", "h": "6", "verdi": 6}, {"v": "=10-2", "h": "8", "verdi": 8}], "hint": "En formel i regneark begynner alltid med =.", "forklaring": "Stjerne betyr gange, og SUMMER legger sammen alt du skriver inn."}, {"id": "11a2", "type": "kurver", "oppgave": "Hvilket program hører hver ting til?", "kurver": ["Regneark", "GeoGebra", "Scratch"], "brikker": [{"vis": "celle A1", "kurv": 0}, {"vis": "=SUMMER()", "kurv": 0}, {"vis": "glidebryter", "kurv": 1}, {"vis": "graf av en funksjon", "kurv": 1}, {"vis": "gjenta 10 ganger", "kurv": 2}, {"vis": "figuren beveger seg", "kurv": 2}], "hint": "Regneark har celler, GeoGebra tegner, Scratch styrer en figur."}, {"id": "11a3", "type": "velg", "oppgave": "Hvilken celle er i kolonne B, rad 3?", "alternativer": [{"vis": "B3", "riktig": true}, {"vis": "3B", "riktig": false}, {"vis": "C3", "riktig": false}, {"vis": "B4", "riktig": false}], "hint": "Bokstaven står først, tallet sist.", "forklaring": "Kolonnen er en bokstav og raden er et tall: B3."}, {"id": "11a4", "type": "sorter", "oppgave": "Sett blokkene i riktig rekkefølge.", "retning": "stigende", "elementer": [{"vis": "Når grønt flagg trykkes", "verdi": 1}, {"vis": "Gå 10 steg", "verdi": 2}, {"vis": "Vent 1 sekund", "verdi": 3}, {"vis": "Si «Hei!»", "verdi": 4}], "hint": "Et skript starter alltid med at noe skjer — for eksempel at flagget trykkes.", "rekkefolge": true}, {"id": "11a5", "type": "velg", "oppgave": "Hva gjør =SUMMER(A1:A5)?", "alternativer": [{"vis": "Legger sammen A1 til A5", "riktig": true}, {"vis": "Ganger A1 med A5", "riktig": false}, {"vis": "Teller hvor mange celler det er", "riktig": false}, {"vis": "Finner det største tallet", "riktig": false}], "hint": "Kolon mellom to celler betyr «alt fra … til …»."}, {"id": "11a6", "type": "par", "oppgave": "Koble hver Python-linje til det den skriver ut.", "par": [{"v": "print(2 + 3)", "h": "5", "verdi": 5}, {"v": "print(4 * 3)", "h": "12", "verdi": 12}, {"v": "print(10 - 4)", "h": "6", "verdi": 6}, {"v": "print(2 ** 3)", "h": "8", "verdi": 8}], "hint": "Stjerne er gange. To stjerner er potens.", "forklaring": "2 ** 3 betyr 2³ = 2 · 2 · 2 = 8."}, {"id": "11a7", "type": "velg", "oppgave": "Hva skriver print(3 * 4) ut?", "alternativer": [{"vis": "12", "riktig": true}, {"vis": "34", "riktig": false}, {"vis": "7", "riktig": false}, {"vis": "3 * 4", "riktig": false}], "hint": "Python regner ut det som står inni parentesen."}, {"id": "11a8", "type": "sorter", "oppgave": "Sett linjene i riktig rekkefølge.", "retning": "stigende", "elementer": [{"vis": "tall = 5", "verdi": 1}, {"vis": "dobbel = tall * 2", "verdi": 2}, {"vis": "print(dobbel)", "verdi": 3}], "hint": "Du må lage en verdi før du kan bruke den.", "forklaring": "Python leser ovenfra og ned. Brukes noe før det finnes, blir det feil.", "rekkefolge": true}, {"id": "11a9", "type": "velg", "oppgave": "=HVIS(A1>10; \"Ja\"; \"Nei\"). A1 er 15. Hva står i cella?", "alternativer": [{"vis": "Ja", "riktig": true}, {"vis": "Nei", "riktig": false}, {"vis": "15", "riktig": false}, {"vis": "10", "riktig": false}], "hint": "Er testen sann, får du det første svaret.", "forklaring": "15 er større enn 10, altså er testen sann, og svaret blir «Ja»."}, {"id": "11a10", "type": "par", "oppgave": "Koble hvert ord i GeoGebra til det det lager.", "par": [{"v": "Punkt", "h": "(2, 3)"}, {"v": "Linje", "h": "y = 2x"}, {"v": "Sirkel", "h": "midtpunkt og radius"}, {"v": "Glidebryter", "h": "en verdi du kan endre"}]}, {"id": "11a11", "type": "velg", "oppgave": "=A1+A2 står i A3. Du kopierer den til B3. Hva står der?", "alternativer": [{"vis": "=B1+B2", "riktig": true}, {"vis": "=A1+A2", "riktig": false}, {"vis": "=B3+B4", "riktig": false}, {"vis": "=A3+B3", "riktig": false}], "hint": "Cellereferansene flytter seg like mye som formelen gjør.", "forklaring": "Formelen flyttes én kolonne mot høyre, så A blir B."}, {"id": "11a12", "type": "velg", "oppgave": "Hvilken celle er i kolonne E, rad 10?", "alternativer": [{"vis": "E10", "riktig": true}, {"vis": "10E", "riktig": false}, {"vis": "E1", "riktig": false}, {"vis": "D10", "riktig": false}], "hint": "Bokstaven først, tallet sist."}, {"id": "11a13", "type": "par", "oppgave": "Koble hver formel til svaret regnearket viser.", "par": [{"v": "=4+9", "h": "13", "verdi": 13}, {"v": "=6*7", "h": "42", "verdi": 42}, {"v": "=SUMMER(2;3;5)", "h": "10", "verdi": 10}, {"v": "=20-8", "h": "12", "verdi": 12}], "hint": "Stjerne betyr gange."}, {"id": "11a14", "type": "velg", "oppgave": "Hvilken formel legger sammen C1 og D1?", "alternativer": [{"vis": "=C1+D1", "riktig": true}, {"vis": "=C1*D1", "riktig": false}, {"vis": "C1+D1", "riktig": false}, {"vis": "=C1-D1", "riktig": false}], "hint": "En formel må begynne med likhetstegn.", "forklaring": "Uten = tolker regnearket det bare som tekst."}, {"id": "11a15", "type": "velg", "oppgave": "En HVIS-formel gir «Ja» når tallet er over 20. Hva gir den ved 20?", "alternativer": [{"vis": "Nei", "riktig": true}, {"vis": "Ja", "riktig": false}, {"vis": "20", "riktig": false}, {"vis": "Ingenting", "riktig": false}], "hint": "Er 20 over 20?", "forklaring": "20 er ikke over 20. Da slår den andre delen inn."}, {"id": "11a16", "type": "par", "oppgave": "Koble hvert tegn til betydningen.", "par": [{"v": "&gt;", "h": "større enn"}, {"v": "&lt;", "h": "mindre enn"}, {"v": "&gt;=", "h": "større enn eller lik"}, {"v": "&lt;&gt;", "h": "ulik"}], "hint": "Den spisse enden peker mot det minste tallet."}, {"id": "11a17", "type": "velg", "oppgave": "Hvordan skriver du punktet (−2, 4) i GeoGebra?", "alternativer": [{"vis": "A=(-2,4)", "riktig": true}, {"vis": "A=(4,-2)", "riktig": false}, {"vis": "A=-2,4", "riktig": false}, {"vis": "A=[-2,4]", "riktig": false}], "hint": "Navn, likhetstegn og så koordinatene i parentes.", "forklaring": "x-verdien står først, y-verdien sist."}, {"id": "11a18", "type": "kurver", "oppgave": "Heller grafen oppover eller nedover?", "kurver": ["Oppover", "Nedover"], "brikker": [{"vis": "f(x)=3x+2", "kurv": 0}, {"vis": "g(x)=0,5x−1", "kurv": 0}, {"vis": "k(x)=x", "kurv": 0}, {"vis": "h(x)=−5x", "kurv": 1}, {"vis": "p(x)=−x+4", "kurv": 1}, {"vis": "q(x)=−2x", "kurv": 1}], "hint": "Se på fortegnet foran x.", "forklaring": "Negativt stigningstall gir en graf som synker."}, {"id": "11a19", "type": "velg", "oppgave": "Teller settes til 0 og endres med 5 fire ganger. Hva står i teller?", "alternativer": [{"vis": "20", "riktig": true}, {"vis": "5", "riktig": false}, {"vis": "9", "riktig": false}, {"vis": "45", "riktig": false}], "hint": "Legg til 5 fire ganger.", "forklaring": "4 · 5 = 20."}, {"id": "11a20", "type": "sorter", "oppgave": "Sett kodelinjene i riktig rekkefølge.", "retning": "stigende", "elementer": [{"vis": "x = 5", "verdi": 1}, {"vis": "y = x + 3", "verdi": 2}, {"vis": "print(y)", "verdi": 3}], "hint": "Variabelen må få en verdi før den kan brukes.", "forklaring": "Python leser linjene ovenfra og ned.", "rekkefolge": true}, {"id": "11a21", "type": "velg", "oppgave": "Hva skriver print(5 ** 3) ut?", "alternativer": [{"vis": "125", "riktig": true}, {"vis": "15", "riktig": false}, {"vis": "53", "riktig": false}, {"vis": "8", "riktig": false}], "hint": "To stjerner betyr opphøyd i.", "forklaring": "5 · 5 · 5 = 125."}]}</script>
+<div class="aktliste" data-kilde="aktiviteter"></div>
+<nav class="blaing"><a class="forrige" href="interaktiv-kapittel-10.html"><span class="etikett">Forrige kapittel</span><strong>10. Temaer for modul 4</strong></a><span class="tom"></span></nav>
+</main>
+</div>
+<script>
+(function () {
+  // ---- visningsbryter: valget lagres i nettadressen og følger med videre ----
+  var valg = new URLSearchParams(location.search).get('vis') || 'auto';
+  if (valg !== 'pc' && valg !== 'mobil') valg = 'auto';
+
+  document.body.classList.toggle('vis-pc', valg === 'pc');
+  document.body.classList.toggle('vis-mobil', valg === 'mobil');
+
+  document.querySelectorAll('.visningsbryter button').forEach(function (b) {
+    b.setAttribute('aria-pressed', b.dataset.vis === valg ? 'true' : 'false');
+    b.addEventListener('click', function () {
+      var u = new URL(location.href);
+      if (b.dataset.vis === 'auto') u.searchParams.delete('vis');
+      else u.searchParams.set('vis', b.dataset.vis);
+      location.href = u.toString();
+    });
+  });
+
+  if (valg !== 'auto') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href');
+      if (!h || h.charAt(0) === '#' || /^[a-z]+:/i.test(h)) return;
+      a.setAttribute('href', h + (h.indexOf('?') > -1 ? '&' : '?') + 'vis=' + valg);
+    });
+  }
+
+  // ---- animerte figurer (samfunnsfag): spilles av første gang de kommer til syne ----
+  var anim = document.querySelectorAll('g[id^="anim-"]');
+  if (anim.length && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (inn) {
+      inn.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var sv = e.target.ownerSVGElement;
+        if (sv && sv.setCurrentTime) { sv.setCurrentTime(0); sv.unpauseAnimations(); }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    anim.forEach(function (g) {
+      var sv = g.ownerSVGElement;
+      if (sv && sv.pauseAnimations) { sv.pauseAnimations(); sv.setCurrentTime(0); }
+      obs.observe(g);
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
