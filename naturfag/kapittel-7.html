@@ -2173,43 +2173,38 @@
 </script>
 <script>
 (function () {
-  if (!('speechSynthesis' in window)) return;
-  var synth = window.speechSynthesis, stemme = null, stemmer = [], fart = 0.9, aktiv = null, koe = [];
+  var harTale = 'speechSynthesis' in window;
+  var synth = harTale ? window.speechSynthesis : null;
+  var stemme = null, stemmer = [], fart = 0.9, aktiv = null, koe = [], lyd = null, innlest = null;
   var LAGRET = 'lytt-stemme';
+
+  // ---------- innleste lydfiler (lages med lag_lyd.py og ligger i lyd/ på nettstedet) ----------
+  function rot() { return /\/(matematikk|naturfag|samfunnsfag)\/[^\/]*$/.test(location.pathname) ? '../' : ''; }
+  if (location.protocol !== 'file:' && window.fetch) {
+    fetch(rot() + 'lyd/lyd.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) { if (j && j.filer) innlest = new Set(j.filer); }).catch(function () {});
+  }
+  function hash(t) {
+    if (!window.crypto || !crypto.subtle) return Promise.resolve(null);
+    return crypto.subtle.digest('SHA-1', new TextEncoder().encode(t)).then(function (b) {
+      return Array.from(new Uint8Array(b)).map(function (x) { return x.toString(16).padStart(2, '0'); }).join('').slice(0, 16);
+    });
+  }
+
+  // ---------- stemmer i nettleseren ----------
   function norsk(x) { return /^(nb|no|nn)(-|_|$)/i.test(x.lang) || /norsk|norwegian|bokmål/i.test(x.name); }
-  // Rangering: nevrale og nettbaserte stemmer høres mest naturlige ut (Edge: «Online (Natural)», Chrome: «Google»).
   function poeng(x) {
     var p = 0, n = x.name || '';
     if (/natural|neural|online/i.test(n)) p += 6;
     if (/pernille|finn|iselin/i.test(n)) p += 2;
     if (/google/i.test(n)) p += 4;
     if (x.localService === false) p += 1;
-    if (/^(nb|no)/i.test(x.lang)) p += 1;       // bokmål foran nynorsk
-    if (/espeak|compact/i.test(n)) p -= 5;      // enkle robotstemmer
+    if (/^(nb|no)/i.test(x.lang)) p += 1;
+    if (/espeak|compact/i.test(n)) p -= 5;
     return p;
   }
-  function velgStemme() {
-    stemmer = synth.getVoices().filter(norsk).sort(function (a, b) { return poeng(b) - poeng(a); });
-    var ønsket = null;
-    try { ønsket = localStorage.getItem(LAGRET); } catch (e) {}
-    stemme = stemmer.find(function (x) { return x.name === ønsket; }) || stemmer[0] || null;
-    fyllVelger();
-  }
-  function fyllVelger() {
-    var v = stripe.querySelector('.lytt-stemme');
-    if (!v) return;
-    v.innerHTML = stemmer.map(function (x, i) {
-      var navn = x.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*?\)\s*/g, ' ').replace(/Online|Natural|Norwegian|Norsk|Bokmål|bokmål/gi, '').replace(/[-–]\s*$/, '').trim();
-      var leverandor = (x.name.match(/^(Microsoft|Google|Apple|Chrome OS|ChromeOS)/i) || [''])[0];
-      if (!navn) navn = leverandor || ('Stemme ' + (i + 1));
-      else if (leverandor && !/natural|neural/i.test(x.name)) navn = leverandor + ' ' + navn;
-      return '<option value="' + i + '"' + (x === stemme ? ' selected' : '') + '>' + navn +
-             (/natural|neural/i.test(x.name) ? ' (naturlig)' : '') + '</option>';
-    }).join('');
-    v.hidden = stemmer.length < 2;
-  }
 
-  // kontrollstripe
+  // ---------- kontrollstripe ----------
   var stripe = document.createElement('div');
   stripe.className = 'lytt-stripe';
   stripe.setAttribute('role', 'region');
@@ -2218,45 +2213,98 @@
     '<select class="lytt-stemme" aria-label="Velg stemme" hidden></select>' +
     '<button type="button" class="lytt-fart">Saktere</button>' +
     '<button type="button" class="lytt-stopp">Stopp</button>';
-  document.addEventListener('DOMContentLoaded', function () { document.body.appendChild(stripe); });
-  if (document.body) document.body.appendChild(stripe);
-  function melding(t) {
+  function festStripe() { if (!stripe.parentNode && document.body) document.body.appendChild(stripe); }
+  festStripe(); document.addEventListener('DOMContentLoaded', festStripe);
+
+  function velgStemme() {
+    if (!harTale) return;
+    stemmer = synth.getVoices().filter(norsk).sort(function (a, b) { return poeng(b) - poeng(a); });
+    var ønsket = null;
+    try { ønsket = localStorage.getItem(LAGRET); } catch (e) {}
+    stemme = stemmer.find(function (x) { return x.name === ønsket; }) || stemmer[0] || null;
+    var v = stripe.querySelector('.lytt-stemme');
+    v.innerHTML = stemmer.map(function (x, i) {
+      var navn = x.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*\(.*?\)\s*/g, ' ')
+        .replace(/Online|Natural|Norwegian|Norsk|Bokmål|bokmål/gi, '').replace(/[-–]\s*$/, '').trim();
+      var lev = (x.name.match(/^(Microsoft|Google|Apple|Chrome OS|ChromeOS)/i) || [''])[0];
+      if (!navn) navn = lev || ('Stemme ' + (i + 1));
+      else if (lev && !/natural|neural/i.test(x.name)) navn = lev + ' ' + navn;
+      return '<option value="' + i + '"' + (x === stemme ? ' selected' : '') + '>' + navn +
+             (/natural|neural/i.test(x.name) ? ' (naturlig)' : '') + '</option>';
+    }).join('');
+    v.hidden = stemmer.length < 2;
+  }
+  velgStemme();
+  if (harTale && synth.onvoiceschanged !== undefined) synth.onvoiceschanged = velgStemme;
+
+  function melding(t, medStemme) {
     stripe.querySelector('.lytt-status').textContent = t;
+    stripe.querySelector('.lytt-stemme').hidden = !medStemme || stemmer.length < 2;
     stripe.classList.add('vis');
   }
   function stopp() {
-    koe = []; synth.cancel();
+    koe = [];
+    if (harTale) synth.cancel();
+    if (lyd) { lyd.pause(); lyd = null; }
     if (aktiv) aktiv.classList.remove('lytt-leser');
     aktiv = null; stripe.classList.remove('vis');
   }
+  function ferdig() { if (aktiv) aktiv.classList.remove('lytt-leser'); aktiv = null; lyd = null; stripe.classList.remove('vis'); }
   stripe.addEventListener('change', function (e) {
     if (!e.target.classList.contains('lytt-stemme')) return;
     stemme = stemmer[+e.target.value] || stemme;
     try { localStorage.setItem(LAGRET, stemme.name); } catch (err) {}
-    if (aktiv) { var el = aktiv, t = el._lyttTekst; stopp(); les(el, t); }   // start på nytt med ny stemme
+    if (aktiv && !lyd) { var el = aktiv, t = el._lyttTekst; stopp(); les(el, t); }
   });
-  velgStemme();
-  if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = velgStemme;
   stripe.addEventListener('click', function (e) {
     if (e.target.classList.contains('lytt-stopp')) stopp();
     if (e.target.classList.contains('lytt-fart')) {
       fart = fart > 0.8 ? 0.7 : 0.9;
       e.target.textContent = fart > 0.8 ? 'Saktere' : 'Normal fart';
+      if (lyd) lyd.playbackRate = fart > 0.8 ? 1 : 0.8;
     }
   });
 
+  // ---------- tekst og utvalg (samme regler brukes når manuset til innlesing lages) ----------
   function tekstFra(el) {
     var k = el.cloneNode(true);
-    k.querySelectorAll('.lytt-knapp, svg, script, style, .svar, .fasit, [aria-hidden="true"]').forEach(function (x) { x.remove(); });
+    k.querySelectorAll('.lytt-knapp, svg, script, style, .svar, .fasit, .media-papir, [aria-hidden="true"]').forEach(function (x) { x.remove(); });
     return (k.innerText || k.textContent || '').replace(/\s+/g, ' ').trim();
   }
+  function ordkortTekst(k) {
+    return [k.querySelector('h4'), k.querySelector('.forkl'), k.querySelector('.eks')].filter(Boolean)
+      .map(function (x) { return tekstFra(x).replace(/[.!?]+$/, ''); }).join('. ') + '.';
+  }
+  function blokker(rot) {
+    var ut = [];
+    rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main ol.oppgaver > li').forEach(function (el) {
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
+      var t = tekstFra(el);
+      if (t.length < 3) return;
+      ut.push({ el: el, type: el.tagName === 'LI' ? 'oppgave' : 'tekst', tekst: t, hvor: 'foran' });
+    });
+    rot.querySelectorAll('main .ordkort').forEach(function (k) {
+      ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
+      var c = tr.cells && tr.cells[0];
+      if (c) ut.push({ el: c, type: 'ord', tekst: tekstFra(c), hvor: 'celle' });
+      var s = tr.cells && tr.cells[tr.cells.length - 1];
+      if (s && s !== c && tekstFra(s).length > 3) ut.push({ el: s, type: 'ord', tekst: tekstFra(s), hvor: 'foran' });
+    });
+    return ut;
+  }
+  // brukes av lag_lytt_manus.py for å lage manuset til innlesing
+  window.lyttManus = function () { return blokker(document).map(function (b) { return { type: b.type, tekst: b.tekst }; }); };
+
+  // ---------- opplesing ----------
   function setninger(t) {
-    // Chrome stopper lange ytringer, så teksten deles i setninger
     var d = t.split(/(?<=[.!?…:])\s+(?=[A-ZÆØÅ«"(])/);
     return d.length ? d : [t];
   }
   function neste() {
-    if (!koe.length) { if (aktiv) aktiv.classList.remove('lytt-leser'); aktiv = null; stripe.classList.remove('vis'); return; }
+    if (!koe.length) { ferdig(); return; }
     var u = new SpeechSynthesisUtterance(koe.shift());
     u.lang = stemme ? stemme.lang : 'nb-NO';
     try { if (stemme) u.voice = stemme; } catch (e) {}
@@ -2264,69 +2312,64 @@
     u.onend = neste; u.onerror = neste;
     synth.speak(u);
   }
-  function les(el, tekst) {
-    if (!stemmer.length) velgStemme();
-    if (!stemme) {
-      melding('Denne maskinen har ingen norsk stemme. På Chromebook kan du bruke «Velg for å høre».');
+  function snakk(el, tekst) {
+    if (!harTale || (!stemme && (velgStemme(), !stemme))) {
+      melding('Denne maskinen har ingen norsk stemme. På Chromebook kan du bruke «Velg for å høre».', false);
       setTimeout(function () { stripe.classList.remove('vis'); }, 6000);
+      aktiv = null; el.classList.remove('lytt-leser');
       return;
     }
-    var samme = aktiv === el;
-    stopp();
-    if (samme) return;              // andre klikk på samme knapp stopper
-    aktiv = el; el._lyttTekst = tekst; el.classList.add('lytt-leser');
-    melding('Leser opp …');
-    koe = setninger(tekst || tekstFra(el));
+    melding('Leser opp …', true);
+    koe = setninger(tekst);
     neste();
   }
+  function les(el, tekst) {
+    var samme = aktiv === el;
+    stopp();
+    if (samme) return;
+    tekst = tekst || tekstFra(el);
+    aktiv = el; el._lyttTekst = tekst; el.classList.add('lytt-leser');
+    if (!innlest) { snakk(el, tekst); return; }
+    hash(tekst).then(function (id) {
+      if (aktiv !== el) return;
+      if (id && innlest.has(id)) {
+        lyd = new Audio(rot() + 'lyd/' + id + '.mp3');
+        lyd.playbackRate = fart > 0.8 ? 1 : 0.8;
+        lyd.onended = ferdig;
+        lyd.onerror = function () { lyd = null; snakk(el, tekst); };
+        melding('Spiller av …', false);
+        lyd.play().catch(function () { lyd = null; snakk(el, tekst); });
+      } else snakk(el, tekst);
+    });
+  }
 
-  function knapp(el) {
-    if (el.querySelector(':scope > .lytt-knapp')) return;
+  // ---------- knapper ----------
+  var IKON = '<' + 'svg view' + 'Box="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></' + 'svg>';
+  function knapp(mål, el, tekst) {
+    if (mål.querySelector(':scope > .lytt-knapp')) return;
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'lytt-knapp';
     b.setAttribute('aria-label', 'Les opp'); b.title = 'Les opp';
-    b.innerHTML = '<' + 'svg view' + 'Box="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></' + 'svg>';
-    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); les(el); });
-    el.insertBefore(b, el.firstChild);
+    b.innerHTML = IKON;
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); les(el, tekst); });
+    mål.insertBefore(b, mål.firstChild);
   }
-
-  function klargjor(rot) {
-    var sel = ['main p', 'main .regel', 'main .forsok', 'main .delmaal', 'main ol.oppgaver > li'];
-    rot.querySelectorAll(sel.join(',')).forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
-      if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
-      if (tekstFra(el).length < 3) return;
-      knapp(el);
-    });
-    // ordkortene på ordlistesiden: én knapp som leser det norske ordet, forklaringen og eksempelsetningen
-    rot.querySelectorAll('main .ordkort').forEach(function (k) {
-      var h = k.querySelector('h4');
-      if (!h || h.querySelector('.lytt-knapp')) return;
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'lytt-knapp'; b.setAttribute('aria-label', 'Les opp på norsk'); b.title = 'Les opp på norsk';
-      b.innerHTML = '<' + 'svg view' + 'Box="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></' + 'svg>';
-      b.addEventListener('click', function (e) {
-        e.preventDefault(); e.stopPropagation();
-        var t = [h, k.querySelector('.forkl'), k.querySelector('.eks')].filter(Boolean).map(function (x) { return tekstFra(x).replace(/[.!?]+$/, ''); }).join('. ') + '.';
-        les(k, t);
-      });
-      h.insertBefore(b, h.firstChild);
-    });
-    // ordene i ordlista: klikk på ordet for å høre det
-    rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
-      var c = tr.cells && tr.cells[0];
-      if (!c || c.classList.contains('lytt-ord')) return;
-      c.classList.add('lytt-ord'); c.title = 'Klikk for å høre ordet'; c.tabIndex = 0;
-      var h = function () { les(c, tekstFra(c)); };
-      c.addEventListener('click', h);
-      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h(); } });
-      var s = tr.cells[tr.cells.length - 1];
-      if (s && s !== c && tekstFra(s).length > 3) knapp(s);
+  function klargjor(rotEl) {
+    blokker(rotEl).forEach(function (b) {
+      if (b.hvor === 'foran') knapp(b.el, b.el, b.tekst);
+      else if (b.hvor === 'h4') { var h = b.el.querySelector('h4'); if (h) knapp(h, b.el, b.tekst); }
+      else if (b.hvor === 'celle' && !b.el.classList.contains('lytt-ord')) {
+        var c = b.el;
+        c.classList.add('lytt-ord'); c.title = 'Klikk for å høre ordet'; c.tabIndex = 0;
+        var h = function () { les(c, b.tekst); };
+        c.addEventListener('click', h);
+        c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h(); } });
+      }
     });
   }
   function start() { klargjor(document); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
-  window.addEventListener('pagehide', function () { synth.cancel(); });
+  window.addEventListener('pagehide', function () { if (harTale) synth.cancel(); if (lyd) lyd.pause(); });
   window.addEventListener('hashchange', stopp);
 })();
 </script>
