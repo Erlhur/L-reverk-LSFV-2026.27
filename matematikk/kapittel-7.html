@@ -176,19 +176,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>å måle</td><td></td><td>Jeg måler lengden på bordet.</td></tr>
-    <tr><td>måleenhet</td><td></td><td>Meter er en måleenhet.</td></tr>
-    <tr><td>måleredskap</td><td></td><td>Målebåndet er et måleredskap.</td></tr>
-    <tr><td>masse / vekt</td><td></td><td>Pakken har en masse på 850 gram.</td></tr>
-    <tr><td>volum</td><td></td><td>Flasken har et volum på 1,5 liter.</td></tr>
-    <tr><td>å anslå</td><td></td><td>Jeg anslår at døra er 2 meter høy.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">å måle</span><span class="ordbrikke">måleenhet</span><span class="ordbrikke">måleredskap</span><span class="ordbrikke">masse / vekt</span><span class="ordbrikke">volum</span><span class="ordbrikke">å anslå</span></div>
 
 <p>
   Før du måler, må du bestemme deg for to ting: <strong>hvilket redskap</strong> du skal bruke,
@@ -554,17 +542,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>å gjøre om</td><td></td><td>Jeg gjør om fra meter til centimeter.</td></tr>
-    <tr><td>enhetstrapp</td><td></td><td>Enhetstrappa viser sammenhengen.</td></tr>
-    <tr><td>et trinn</td><td></td><td>Ett trinn ned er å gange med ti.</td></tr>
-    <tr><td>målestokk</td><td></td><td>Tegningen har målestokk 1:50.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">å gjøre om</span><span class="ordbrikke">enhetstrapp</span><span class="ordbrikke">et trinn</span><span class="ordbrikke">målestokk</span></div>
 
 <p>
   Å gjøre om betyr å bytte enhet uten å endre selve mengden. Regelen er kort: går du til en
@@ -766,18 +744,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>klokkeslett</td><td></td><td>Vakten begynner klokka 07.30.</td></tr>
-    <tr><td>tidsforskjell</td><td></td><td>Tidsforskjellen er 6 timer.</td></tr>
-    <tr><td>desimaltimer</td><td></td><td>7,5 timer er 7 timer og 30 minutter.</td></tr>
-    <tr><td>pause</td><td></td><td>Pausen varer 30 minutter.</td></tr>
-    <tr><td>arbeidstid</td><td></td><td>Arbeidstiden er 7 timer og 50 minutter.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">klokkeslett</span><span class="ordbrikke">tidsforskjell</span><span class="ordbrikke">desimaltimer</span><span class="ordbrikke">pause</span><span class="ordbrikke">arbeidstid</span></div>
 
 <div class="regel">
   <span class="etikett">Pass på</span>
@@ -1532,6 +1499,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

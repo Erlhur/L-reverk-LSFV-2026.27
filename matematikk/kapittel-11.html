@@ -186,19 +186,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>celle</td><td></td><td>Tallet står i celle B2.</td></tr>
-    <tr><td>rad og kolonne</td><td></td><td>Kolonne B, rad 2.</td></tr>
-    <tr><td>formel</td><td></td><td>Formelen begynner med likhetstegn.</td></tr>
-    <tr><td>cellereferanse</td><td></td><td>B2 er en cellereferanse.</td></tr>
-    <tr><td>å kopiere nedover</td><td></td><td>Jeg kopierer formelen nedover.</td></tr>
-    <tr><td>område</td><td></td><td>Området er D2 til D10.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">celle</span><span class="ordbrikke">rad og kolonne</span><span class="ordbrikke">formel</span><span class="ordbrikke">cellereferanse</span><span class="ordbrikke">å kopiere nedover</span><span class="ordbrikke">område</span></div>
 
 <p>
   Et regneark er rutenett av celler. Hver celle har en adresse: bokstaven er kolonnen,
@@ -522,18 +510,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>skrivefelt</td><td></td><td>Jeg skriver funksjonen i skrivefeltet.</td></tr>
-    <tr><td>graf</td><td></td><td>Grafen vises til høyre.</td></tr>
-    <tr><td>skjæringspunkt</td><td></td><td>Skjæringspunktet er (2, 5).</td></tr>
-    <tr><td>glider</td><td></td><td>Jeg drar i glideren for a.</td></tr>
-    <tr><td>å måle</td><td></td><td>Jeg måler vinkelen i trekanten.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">skrivefelt</span><span class="ordbrikke">graf</span><span class="ordbrikke">skjæringspunkt</span><span class="ordbrikke">glider</span><span class="ordbrikke">å måle</span></div>
 
 <p>
   GeoGebra er både en tegneblokk og en kalkulator. Du skriver inn et punkt eller en funksjon,
@@ -660,18 +637,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>blokk</td><td></td><td>Jeg drar en blokk inn i programmet.</td></tr>
-    <tr><td>variabel</td><td></td><td>Variabelen heter teller.</td></tr>
-    <tr><td>løkke</td><td></td><td>Løkka gjentar det som står inni.</td></tr>
-    <tr><td>program</td><td></td><td>Programmet teller til ti.</td></tr>
-    <tr><td>å kjøre</td><td></td><td>Jeg kjører programmet.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">blokk</span><span class="ordbrikke">variabel</span><span class="ordbrikke">løkke</span><span class="ordbrikke">program</span><span class="ordbrikke">å kjøre</span></div>
 
 <p>
   I Scratch bygger du programmet av blokker du klikker sammen. Du slipper å skrive kode, og du
@@ -796,18 +762,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>kode</td><td></td><td>Koden skriver ut tallet.</td></tr>
-    <tr><td>variabel</td><td></td><td>Variabelen x har verdien 5.</td></tr>
-    <tr><td>løkke</td><td></td><td>For-løkka gjentar fire ganger.</td></tr>
-    <tr><td>å skrive ut</td><td></td><td>print skriver ut svaret.</td></tr>
-    <tr><td>innrykk</td><td></td><td>Linjene inni løkka har innrykk.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">kode</span><span class="ordbrikke">variabel</span><span class="ordbrikke">løkke</span><span class="ordbrikke">å skrive ut</span><span class="ordbrikke">innrykk</span></div>
 
 <p>
   I Python skriver du programmet som tekst i stedet for å klikke blokker sammen. Det er litt
@@ -1346,6 +1301,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

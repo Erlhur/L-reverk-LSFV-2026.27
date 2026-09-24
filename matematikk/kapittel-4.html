@@ -170,19 +170,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>brøk</td><td></td><td>Tre firedeler er en brøk.</td></tr>
-    <tr><td>teller</td><td></td><td>Telleren står over brøkstreken.</td></tr>
-    <tr><td>nevner</td><td></td><td>Nevneren står under brøkstreken.</td></tr>
-    <tr><td>en halv / en tredel</td><td></td><td>Jeg tok en halv liter.</td></tr>
-    <tr><td>andel</td><td></td><td>Andelen som sykler, er <span class="brok"><span class="t">3</span><span class="n">8</span></span>.</td></tr>
-    <tr><td>like deler</td><td></td><td>Kaka er delt i åtte like deler.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">brøk</span><span class="ordbrikke">teller</span><span class="ordbrikke">nevner</span><span class="ordbrikke">en halv / en tredel</span><span class="ordbrikke">andel</span><span class="ordbrikke">like deler</span></div>
 
 <p>
   En brøk forteller to ting. <strong>Nevneren</strong> sier hvor mange like deler det hele er
@@ -386,18 +374,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>å utvide</td><td></td><td>Jeg utvider brøken med 3.</td></tr>
-    <tr><td>å forkorte</td><td></td><td>Brøken kan forkortes med 4.</td></tr>
-    <tr><td>like store brøker</td><td></td><td><span class="brok"><span class="t">1</span><span class="n">2</span></span> og <span class="brok"><span class="t">3</span><span class="n">6</span></span> er like store.</td></tr>
-    <tr><td>fellesnevner</td><td></td><td>Fellesnevneren er 12.</td></tr>
-    <tr><td>så langt det går</td><td></td><td>Jeg forkortet så langt det går.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">å utvide</span><span class="ordbrikke">å forkorte</span><span class="ordbrikke">like store brøker</span><span class="ordbrikke">fellesnevner</span><span class="ordbrikke">så langt det går</span></div>
 
 <p>
   Å utvide og å forkorte endrer <em>hvordan brøken ser ut</em>, men ikke <em>hvor mye den er</em>.
@@ -601,18 +578,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>desimaltall</td><td></td><td>0,75 er et desimaltall.</td></tr>
-    <tr><td>prosent</td><td></td><td>75 prosent er det samme som <span class="brok"><span class="t">3</span><span class="n">4</span></span>.</td></tr>
-    <tr><td>å gjøre om</td><td></td><td>Jeg gjør om brøken til prosent.</td></tr>
-    <tr><td>skrivemåte</td><td></td><td>Prosent er en praktisk skrivemåte her.</td></tr>
-    <tr><td>hensiktsmessig</td><td></td><td>Brøk er mest hensiktsmessig i oppskrifter.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">desimaltall</span><span class="ordbrikke">prosent</span><span class="ordbrikke">å gjøre om</span><span class="ordbrikke">skrivemåte</span><span class="ordbrikke">hensiktsmessig</span></div>
 
 <p>
   Brøk, desimaltall og prosent er tre måter å skrive den samme mengden på. Hvilken du velger,
@@ -1626,6 +1592,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

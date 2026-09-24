@@ -170,19 +170,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>uttrykk</td><td></td><td>3a + 2 er et uttrykk.</td></tr>
-    <tr><td>variabel</td><td></td><td>Bokstaven a er en variabel.</td></tr>
-    <tr><td>ledd</td><td></td><td>Uttrykket har to ledd.</td></tr>
-    <tr><td>koeffisient</td><td></td><td>Koeffisienten i 3a er 3.</td></tr>
-    <tr><td>ukjent</td><td></td><td>Vi kaller det ukjente tallet x.</td></tr>
-    <tr><td>å stå for</td><td></td><td>Bokstaven står for antall timer.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">uttrykk</span><span class="ordbrikke">variabel</span><span class="ordbrikke">ledd</span><span class="ordbrikke">koeffisient</span><span class="ordbrikke">ukjent</span><span class="ordbrikke">å stå for</span></div>
 
 <p>
   Når vi ikke vet hvor mange bøker det er i en eske, kaller vi antallet <span class="matte">a</span>.
@@ -398,18 +386,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>formel</td><td></td><td>Formelen for areal er A = l · b.</td></tr>
-    <tr><td>å sette inn</td><td></td><td>Jeg setter inn x = 4.</td></tr>
-    <tr><td>å erstatte</td><td></td><td>Bokstaven erstattes med tallet.</td></tr>
-    <tr><td>størrelse</td><td></td><td>Vi regner ut en ukjent størrelse.</td></tr>
-    <tr><td>å snu formelen</td><td></td><td>Jeg snur formelen for å finne I.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">formel</span><span class="ordbrikke">å sette inn</span><span class="ordbrikke">å erstatte</span><span class="ordbrikke">størrelse</span><span class="ordbrikke">å snu formelen</span></div>
 
 <p>
   Å sette inn betyr å bytte ut bokstaven med et tall. Deretter regner du som vanlig — med
@@ -971,17 +948,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>mønster</td><td></td><td>Mønsteret øker med 3 hver gang.</td></tr>
-    <tr><td>figurnummer</td><td></td><td>Figur nummer 4 har 13 fyrstikker.</td></tr>
-    <tr><td>å øke med</td><td></td><td>Tallrekka øker med 5.</td></tr>
-    <tr><td>tallrekke</td><td></td><td>Tallrekka er 5, 8, 11, 14.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">mønster</span><span class="ordbrikke">figurnummer</span><span class="ordbrikke">å øke med</span><span class="ordbrikke">tallrekke</span></div>
 
 <p>
   Når et mønster øker med det samme tallet hver gang, kan du skrive en formel som gir deg
@@ -1147,18 +1114,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>likning</td><td></td><td>Jeg løser likningen.</td></tr>
-    <tr><td>den ukjente</td><td></td><td>Den ukjente er x.</td></tr>
-    <tr><td>venstre side</td><td></td><td>Venstre side er 2x + 5.</td></tr>
-    <tr><td>å løse</td><td></td><td>Løsningen er x = 6.</td></tr>
-    <tr><td>å kontrollere</td><td></td><td>Jeg kontrollerer ved å sette inn.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">likning</span><span class="ordbrikke">den ukjente</span><span class="ordbrikke">venstre side</span><span class="ordbrikke">å løse</span><span class="ordbrikke">å kontrollere</span></div>
 
 <p>
   En likning er som en vektskål i balanse. Så lenge du gjør <strong>nøyaktig det samme på begge
@@ -1739,6 +1695,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

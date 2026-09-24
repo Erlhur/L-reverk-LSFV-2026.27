@@ -12,6 +12,7 @@ Kjøres i mappa med nettstedet (den som er koblet til GitHub med GitHub Desktop)
 Valg:
     --typer tekst,ord          hva som skal leses inn (standard). Legg til «oppgave» for oppgavene også.
     --fag samfunnsfag          bare ett fag (standard: alle).
+    --kapittel 2               bare ett kapittel (krever --fag). Flere: --kapittel 1,2
     --maks-tegn 100000         stopp etter så mange tegn (fint for å fordele på flere måneder).
     --rydd                     slett lydfiler for tekster som ikke finnes lenger.
 
@@ -63,6 +64,7 @@ def main():
     a.add_argument('--modell', default='eleven_v3')
     a.add_argument('--typer', default='tekst,ord')
     a.add_argument('--fag', default=None)
+    a.add_argument('--kapittel', default=None, help='kapittelnummer, f.eks. 1 eller 1,2 (krever --fag)')
     a.add_argument('--maks-tegn', type=int, default=None)
     a.add_argument('--test', action='store_true')
     a.add_argument('--rydd', action='store_true')
@@ -96,8 +98,18 @@ def main():
         return
 
     typer = set(x.typer.split(','))
+    sider = None
+    if x.kapittel:
+        if not x.fag:
+            sys.exit('--kapittel må brukes sammen med --fag, for eksempel --fag naturfag --kapittel 1')
+        sider = {f'{x.fag}/kapittel-{k.strip()}.html' for k in x.kapittel.split(',')}
+        finnes_sider = {v['side'] for v in manus.values()}
+        mangler = sorted(sider - finnes_sider)
+        if mangler:
+            sys.exit(f'Fant ikke {", ".join(mangler)} i lytt_manus.json.')
     utvalg = [(i, v) for i, v in manus.items()
               if v['type'] in typer and (not x.fag or v['fag'] == x.fag)
+              and (sider is None or v['side'] in sider)
               and not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
     if x.maks_tegn:
         sum_, kort = 0, []
@@ -106,7 +118,7 @@ def main():
             kort.append((i, v)); sum_ += len(v['tekst'])
         utvalg = kort
     tegn = sum(len(v['tekst']) for _, v in utvalg)
-    print(f'{len(utvalg)} tekster mangler lydfil, til sammen {tegn:,} tegn'.replace(',', ' ') +
+    print(f'{len(utvalg)} tekster mangler lydfil, til sammen ' + f'{tegn:,}'.replace(',', ' ') + ' tegn' +
           f' (modell {x.modell}, typer: {", ".join(sorted(typer))}).')
     if utvalg and input('Starte innlesingen? Skriv ja: ').strip().lower() != 'ja':
         return

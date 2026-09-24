@@ -25,10 +25,10 @@
   <h1 class="kapittel-tittel" style="color:#123252;">Samfunnsfag</h1>
   <p style="font-size:1.05rem;color:#5a6272;max-width:44rem;">
     Forberedende opplæring for voksne, modul 3 og 4. Kapitlene følger årsplanen, med forklaringer,
-    figurer, aktiviteter og 1109 oppgaver på fire nivåer. Hver oppgave har et svar du kan hente
+    figurer, aktiviteter og 1110 oppgaver på fire nivåer. Hver oppgave har et svar du kan hente
     fram når du har prøvd selv. Velg et kapittel for å begynne.
   </p>
-  <div class="kapittelrutenett"><a href="kapittel-1.html" style="--kap:#34568b"><span class="nr">Kapittel 1</span><strong>Kilder, kildekritikk og digital dømmekraft</strong><span class="antall">11 delkapitler · 174 oppgaver</span></a><a href="kapittel-2.html" style="--kap:#8b2f3c"><span class="nr">Kapittel 2</span><strong>Demokrati, styresett og norsk historie</strong><span class="antall">17 delkapitler · 227 oppgaver</span></a><a href="kapittel-3.html" style="--kap:#5b3f86"><span class="nr">Kapittel 3</span><strong>Kultur, identitet, mangfold og urfolk</strong><span class="antall">10 delkapitler · 160 oppgaver</span></a><a href="kapittel-4.html" style="--kap:#2f6b5a"><span class="nr">Kapittel 4</span><strong>Arbeidsliv, teknologi og økonomi</strong><span class="antall">10 delkapitler · 154 oppgaver</span></a><a href="kapittel-5.html" style="--kap:#4f6b2a"><span class="nr">Kapittel 5</span><strong>Bærekraft, klima, levekår og geografi</strong><span class="antall">11 delkapitler · 174 oppgaver</span></a><a href="kapittel-6.html" style="--kap:#4a4f58"><span class="nr">Kapittel 6</span><strong>Konflikter, radikalisering, holocaust og forebygging</strong><span class="antall">11 delkapitler · 157 oppgaver</span></a><a href="kapittel-7.html" style="--kap:#7a4b1c"><span class="nr">Kapittel 7</span><strong>Skriving, prosjekt og eksamen</strong><span class="antall">8 delkapitler · 63 oppgaver</span></a></div>
+  <div class="kapittelrutenett"><a href="kapittel-1.html" style="--kap:#34568b"><span class="nr">Kapittel 1</span><strong>Kilder, kildekritikk og digital dømmekraft</strong><span class="antall">11 delkapitler · 175 oppgaver</span></a><a href="kapittel-2.html" style="--kap:#8b2f3c"><span class="nr">Kapittel 2</span><strong>Demokrati, styresett og norsk historie</strong><span class="antall">17 delkapitler · 227 oppgaver</span></a><a href="kapittel-3.html" style="--kap:#5b3f86"><span class="nr">Kapittel 3</span><strong>Kultur, identitet, mangfold og urfolk</strong><span class="antall">10 delkapitler · 160 oppgaver</span></a><a href="kapittel-4.html" style="--kap:#2f6b5a"><span class="nr">Kapittel 4</span><strong>Arbeidsliv, teknologi og økonomi</strong><span class="antall">10 delkapitler · 154 oppgaver</span></a><a href="kapittel-5.html" style="--kap:#4f6b2a"><span class="nr">Kapittel 5</span><strong>Bærekraft, klima, levekår og geografi</strong><span class="antall">11 delkapitler · 174 oppgaver</span></a><a href="kapittel-6.html" style="--kap:#4a4f58"><span class="nr">Kapittel 6</span><strong>Konflikter, radikalisering, holocaust og forebygging</strong><span class="antall">11 delkapitler · 157 oppgaver</span></a><a href="kapittel-7.html" style="--kap:#7a4b1c"><span class="nr">Kapittel 7</span><strong>Skriving, prosjekt og eksamen</strong><span class="antall">8 delkapitler · 63 oppgaver</span></a></div>
   <p style="margin-top:2rem;"><a class="ovlenke" href="interaktiv.html">
     Øv på skjerm — 95 oppgaver du klikker og drar i →</a></p>
   <p style="margin-top:.8rem;"><a class="ovlenke" href="ordliste.html">
@@ -198,6 +198,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

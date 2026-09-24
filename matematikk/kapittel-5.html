@@ -178,19 +178,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>prosent</td><td></td><td>Tjue prosent av elevene.</td></tr>
-    <tr><td>hundredel</td><td></td><td>Én prosent er én hundredel.</td></tr>
-    <tr><td>det hele</td><td></td><td>Det hele er 100 prosent.</td></tr>
-    <tr><td>rabatt / avslag</td><td></td><td>Butikken gir 20 prosent rabatt.</td></tr>
-    <tr><td>andel</td><td></td><td>Andelen kvinner er 60 prosent.</td></tr>
-    <tr><td>rente</td><td></td><td>Renten på lånet er 4 prosent.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">prosent</span><span class="ordbrikke">hundredel</span><span class="ordbrikke">det hele</span><span class="ordbrikke">rabatt / avslag</span><span class="ordbrikke">andel</span><span class="ordbrikke">rente</span></div>
 
 <p>
   Ordet prosent betyr <strong>hundredeler</strong>. Når vi sier 25 %, mener vi 25 av 100 like
@@ -578,18 +566,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>delen</td><td></td><td>Delen er 18 av 60.</td></tr>
-    <tr><td>det hele</td><td></td><td>Det hele er 60.</td></tr>
-    <tr><td>å utgjøre</td><td></td><td>Delen utgjør 30 prosent.</td></tr>
-    <tr><td>å sammenligne</td><td></td><td>Vi sammenligner de to gruppene.</td></tr>
-    <tr><td>prosentpoeng</td><td></td><td>Andelen økte med 5 prosentpoeng.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">delen</span><span class="ordbrikke">det hele</span><span class="ordbrikke">å utgjøre</span><span class="ordbrikke">å sammenligne</span><span class="ordbrikke">prosentpoeng</span></div>
 
 <p>
   Her går vi motsatt vei av forrige delkapittel: nå kjenner vi både delen og det hele, og skal
@@ -977,17 +954,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>vekstfaktor</td><td></td><td>Vekstfaktoren er 1,15.</td></tr>
-    <tr><td>gjentatt endring</td><td></td><td>Prisen øker fem år på rad.</td></tr>
-    <tr><td>renters rente</td><td></td><td>Renten regnes av et større beløp hvert år.</td></tr>
-    <tr><td>verditap</td><td></td><td>Maskinen har et verditap på 18 prosent.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">vekstfaktor</span><span class="ordbrikke">gjentatt endring</span><span class="ordbrikke">renters rente</span><span class="ordbrikke">verditap</span></div>
 
 <p>
   I forrige delkapittel gjorde du to regnestykker: først fant du endringen, så la du den til
@@ -1543,6 +1510,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];

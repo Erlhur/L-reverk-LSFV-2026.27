@@ -167,19 +167,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>potens</td><td></td><td>2⁴ er en potens.</td></tr>
-    <tr><td>grunntall</td><td></td><td>Grunntallet i 2⁴ er 2.</td></tr>
-    <tr><td>eksponent</td><td></td><td>Eksponenten forteller hvor mange faktorer det er.</td></tr>
-    <tr><td>faktor</td><td></td><td>2⁴ har fire like faktorer.</td></tr>
-    <tr><td>i andre / i tredje</td><td></td><td>Fem i andre er 25.</td></tr>
-    <tr><td>å doble</td><td></td><td>Tallet dobler seg hver time.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">potens</span><span class="ordbrikke">grunntall</span><span class="ordbrikke">eksponent</span><span class="ordbrikke">faktor</span><span class="ordbrikke">i andre / i tredje</span><span class="ordbrikke">å doble</span></div>
 
 <p>
   Når det samme tallet ganges med seg selv mange ganger, blir det tungvint å skrive alt ut.
@@ -392,19 +380,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>kvadrat</td><td></td><td>Rommet er et kvadrat.</td></tr>
-    <tr><td>kvadrattall</td><td></td><td>16 er et kvadrattall.</td></tr>
-    <tr><td>kvadratrot</td><td></td><td>Kvadratroten av 49 er 7.</td></tr>
-    <tr><td>sidelengde</td><td></td><td>Sidelengden er 6 meter.</td></tr>
-    <tr><td>areal</td><td></td><td>Arealet er 36 kvadratmeter.</td></tr>
-    <tr><td>å anslå</td><td></td><td>Jeg anslår at svaret ligger mellom 7 og 8.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">kvadrat</span><span class="ordbrikke">kvadrattall</span><span class="ordbrikke">kvadratrot</span><span class="ordbrikke">sidelengde</span><span class="ordbrikke">areal</span><span class="ordbrikke">å anslå</span></div>
 
 <p>
   Et <strong>kvadrattall</strong> er et tall du får når du ganger et helt tall med seg selv.
@@ -784,18 +760,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>tierpotens</td><td></td><td>1 000 er tierpotensen 10³.</td></tr>
-    <tr><td>standardform</td><td></td><td>4 500 000 er 4,5 · 10⁶ på standardform.</td></tr>
-    <tr><td>utvidet form</td><td></td><td>526 = 5 · 100 + 2 · 10 + 6.</td></tr>
-    <tr><td>million</td><td></td><td>En million er 10⁶.</td></tr>
-    <tr><td>å forkorte</td><td></td><td>Standardform forkorter lange tall.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">tierpotens</span><span class="ordbrikke">standardform</span><span class="ordbrikke">utvidet form</span><span class="ordbrikke">million</span><span class="ordbrikke">å forkorte</span></div>
 
 <p>
   Antall nuller i et rundt tall er akkurat det samme som eksponenten i tierpotensen.
@@ -961,19 +926,7 @@
   </ul>
 </div>
 
-<table class="ordliste">
-  <thead>
-    <tr><th>Norsk</th><th>På mitt språk</th><th>Setning du kan bruke</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>primtall</td><td></td><td>7 er et primtall.</td></tr>
-    <tr><td>faktor</td><td></td><td>3 er en faktor i 12.</td></tr>
-    <tr><td>å faktorisere</td><td></td><td>Jeg faktoriserer 24 i primtall.</td></tr>
-    <tr><td>går opp i</td><td></td><td>4 går opp i 12.</td></tr>
-    <tr><td>felles faktor</td><td></td><td>6 er en felles faktor for 12 og 18.</td></tr>
-    <tr><td>multiplum</td><td></td><td>24 er et multiplum av 8.</td></tr>
-  </tbody>
-</table>
+<div class="ordrekke"><p class="ordrekke-etikett">Ord i dette delkapitlet</p><span class="ordbrikke">primtall</span><span class="ordbrikke">faktor</span><span class="ordbrikke">å faktorisere</span><span class="ordbrikke">går opp i</span><span class="ordbrikke">felles faktor</span><span class="ordbrikke">multiplum</span></div>
 
 <p>
   Et <strong>primtall</strong> er et tall større enn 1 som bare kan deles på 1 og seg selv.
@@ -1552,6 +1505,13 @@
     });
     rot.querySelectorAll('main .ordkort').forEach(function (k) {
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
+    });
+    rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
+      if (b.classList.contains('lytt-ord')) return;
+      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
+      b.addEventListener('click', function () { les(b, tekstFra(b)); });
+      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];
