@@ -1039,6 +1039,174 @@
 "type": "tekst",
 "tekst": "Gjør oppgaven først. Finn så nummeret ditt her."
 },
+"608655509d0ea539": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "å runde av"
+},
+"ea6a6e5203639cfe": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "overslag"
+},
+"20b841ce7f50780c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "omtrent / cirka"
+},
+"633d5d4281384522": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "nøyaktig"
+},
+"cedc7e56a570fcc5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "rimelig"
+},
+"a144479ca2bd2744": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "hoderegning"
+},
+"f6f91c01e8cac22a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "siffer"
+},
+"f27c69201d38619c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "plassverdi"
+},
+"889069c1df9d3c22": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "desimaltall"
+},
+"77599f5c8b8032cd": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "tidel / hundredel"
+},
+"6dc63f4878348395": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "minnetall"
+},
+"12d43b2fc43df203": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "produkt"
+},
+"b8ce58d0a46b9360": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "å dividere / å dele"
+},
+"626baaf793029b29": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "dividend"
+},
+"d1f6dbde6e0e0c8c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "divisor"
+},
+"04970d99d57886a9": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "kvotient"
+},
+"27ad1672d8c97d74": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "rest"
+},
+"54536c301e4d0c09": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "å fordele likt"
+},
+"d59e0a6fe92f967f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "Addisjon +"
+},
+"c8e01f9740c7d59d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "Subtraksjon −"
+},
+"89444c61393349aa": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "Multiplikasjon ·"
+},
+"71aa0838ff5973c0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "Divisjon :"
+},
+"320779456ab9db60": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "negativt tall"
+},
+"1f9141bc21b6fe36": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "fortegn"
+},
+"5634d62a35cf03d9": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "kuldegrader"
+},
+"fbdf5d3d33d6d73c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "differanse / forskjell"
+},
+"61dbfa112b223d65": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "å stige / å synke"
+},
+"617dca046b603e3b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "ord",
+"tekst": "under null"
+},
 "d7cbccfd6365121c": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-10.html",
@@ -1807,6 +1975,168 @@
 "type": "oppgave",
 "tekst": "Les teksten. «To firmaer gir tilbud på en jobb. Firma A tar 8 500 kroner fast pluss 450 kroner per time. Firma B tar 3 200 kroner fast pluss 780 kroner per time.» a)Sett opp en funksjon for hvert firma. b)Ved hvor mange timer koster de omtrent like mye? c)Hvilket firma er billigst ved 10 timer? d)Hvilket firma er billigst ved 25 timer?"
 },
+"72981ecdf7b10b24": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "funksjon"
+},
+"9dd9bc463e1bf21b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "graf"
+},
+"4088c0b779990ff0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "stigningstall"
+},
+"276bc3fdacca58e2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "konstantledd"
+},
+"67600e1ff5504560": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "verditabell"
+},
+"7afb2721653e232b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "koordinatsystem"
+},
+"9e6b7b0d504ed8d2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "formlik"
+},
+"283eb412464559ba": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "forholdstall"
+},
+"5c42c1209543698a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "tilsvarende side"
+},
+"992cfa66b89d7233": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "å forstørre"
+},
+"b133073ce2e127d5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "skygge"
+},
+"03809f1a6e20cb59": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "bruttolønn"
+},
+"031443d18269d6d2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "nettolønn"
+},
+"eaea6204c9adf518": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "skattetrekk"
+},
+"dc27a71634faa319": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "feriepenger"
+},
+"cba5794e9a25bd3b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "overtid"
+},
+"9669ca66c65d6315": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "lønnsslipp"
+},
+"c1f836952391fba3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "budsjett"
+},
+"078187d1e76e7071": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "overskudd"
+},
+"b3826a0a08f8c39d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "rente"
+},
+"dec8b31fa6990959": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "avdrag"
+},
+"75aba468a9334304": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "restgjeld"
+},
+"50f10d772bf36898": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "kredittkort"
+},
+"945538e53faa1781": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "valuta"
+},
+"e61ffb6ba787fbba": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "valutakurs"
+},
+"48fa951760d23e79": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "å veksle"
+},
+"5873d7f7cee651eb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-10.html",
+"type": "ord",
+"tekst": "gebyr"
+},
 "e268d6cc8c3819b7": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-11.html",
@@ -2436,6 +2766,114 @@
 "side": "matematikk/kapittel-11.html",
 "type": "oppgave",
 "tekst": "De to firmatilbudene fra kapittel 10.7: f(x)=450x+8500 og g(x)=780x+3200. a)Tegn begge i GeoGebra. b)Finn skjæringspunktet. c)Forklar hva skjæringspunktet betyr for en kunde som skal velge firma."
+},
+"02edf232f634beb4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "celle"
+},
+"2ee4e5d12dd47026": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "rad og kolonne"
+},
+"79442d7b78dd2301": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "formel"
+},
+"42581a9756035250": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "cellereferanse"
+},
+"9db0c10bb0a72f01": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "å kopiere nedover"
+},
+"9f91b12e770bc2d1": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "område"
+},
+"9d16d16293f965d6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "skrivefelt"
+},
+"4518175142c11df5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "skjæringspunkt"
+},
+"3640347d2aca22f5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "glider"
+},
+"e8e07d159f57ff15": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "å måle"
+},
+"57a8e7a7108051fd": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "blokk"
+},
+"b91144d827f4ec32": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "variabel"
+},
+"ff77be36dcdfd3a8": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "løkke"
+},
+"81d9aeea0e1a408d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "program"
+},
+"a0c4066dd1cb8207": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "å kjøre"
+},
+"a47ec63d3a1c1fbb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "kode"
+},
+"95d2a8045c02aa71": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "å skrive ut"
+},
+"1ab5521cc9c6a7a5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "ord",
+"tekst": "innrykk"
 },
 "56a4d7a9fdc7f61c": {
 "fag": "matematikk",
@@ -3307,6 +3745,186 @@
 "type": "oppgave",
 "tekst": "M4 Les teksten. «En kommune bruker 1 250 kroner per innbygger på kultur. Kommunen har 14 800 innbyggere. Neste år øker kulturbudsjettet med 6 %, samtidig som folketallet ventes å øke med 300.» a)Hvor stort er kulturbudsjettet i år? b)Hvor stort blir det neste år? c)Hvor mye blir det per innbygger neste år? d)Får hver innbygger mer eller mindre enn i år? Begrunn svaret."
 },
+"5eb70e947762a447": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "regneuttrykk"
+},
+"1eef0bd581f22686": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "ledd"
+},
+"00c83c80a9b9390a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "faktor"
+},
+"dedf9615fced838d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "verdien av uttrykket"
+},
+"e820bd00de558e14": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å forenkle"
+},
+"07b621efd1a53b8a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "trinn"
+},
+"609ec89a203f6ac6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "parentes"
+},
+"889a7eb36f4bb7ac": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "hakeparentes"
+},
+"8a5a3484c1e4dd77": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "innerst / ytterst"
+},
+"ad2e31333e84d9f5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "nivå"
+},
+"83dc6e86f705ecb2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "brøkstrek"
+},
+"89c0d92410fbb36d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "teller"
+},
+"08c73a2cc72a1c02": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "nevner"
+},
+"7eeed26e70004919": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "usynlig parentes"
+},
+"6d3be49a05e4131f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "gjennomsnitt"
+},
+"5cdb91d0ebb0827d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "kommutativ"
+},
+"6f1ea96ecc7794c0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "assosiativ"
+},
+"032d48ed9400a343": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "distributiv"
+},
+"527a0a4a3dfc5112": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å bytte om"
+},
+"25750c4c52b5543e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å gruppere"
+},
+"69ec9d7c11077eed": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "summen av"
+},
+"a63e430f9a2f4593": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "produktet av"
+},
+"e3cb64c30f95e632": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "hver av dem"
+},
+"4cebc53041205e50": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "etter at"
+},
+"76f9c15cdfa9f20a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "til sammen"
+},
+"e949ec769abc3b04": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å taste inn"
+},
+"8ba4085aeccd4d7f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "parentestast"
+},
+"645f8de974fa7647": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "display / skjerm"
+},
+"67d0f8da20dbfeba": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "tastefeil"
+},
+"c01d443bc6fe182c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å kontrollere"
+},
 "180a5cd6d4f382ab": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -3984,6 +4602,132 @@
 "side": "matematikk/kapittel-3.html",
 "type": "oppgave",
 "tekst": "M4 Vis at 2⁵ · 5⁵ = 10⁵. Forklar hvilken regel du bruker, og regn ut svaret."
+},
+"ddcc4ad3a91c2e52": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "potens"
+},
+"ecbd381438a527c7": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "grunntall"
+},
+"544d6bffe1e35bec": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "eksponent"
+},
+"82e385de84a6e544": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "i andre / i tredje"
+},
+"010a4e7f6edfbe5a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "å doble"
+},
+"b2065b465890f3df": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "kvadrat"
+},
+"8217b82c5f3c0c0a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "kvadrattall"
+},
+"cfa31baa87462bbe": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "kvadratrot"
+},
+"92349ea49757f1ce": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "sidelengde"
+},
+"19c1d51af461101f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "areal"
+},
+"a2c79099eca4bf99": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "å anslå"
+},
+"7ffd361455c3ed10": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "tierpotens"
+},
+"6eb0e26a27e76cd0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "standardform"
+},
+"af500b4bffd8190e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "utvidet form"
+},
+"e8502058829cfba5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "million"
+},
+"da3e6220621d5b73": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "å forkorte"
+},
+"e0de8d999004bf22": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "primtall"
+},
+"dbec5d63a46c3fbc": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "å faktorisere"
+},
+"2ed2b90c03225c92": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "går opp i"
+},
+"b4e45dc3630571df": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "felles faktor"
+},
+"666ee268702c0140": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "multiplum"
 },
 "36346927bf660aa0": {
 "fag": "matematikk",
@@ -4705,6 +5449,78 @@
 "type": "oppgave",
 "tekst": "M4 Regn ut 23 : 49. Forklar hvorfor svaret blir større enn 23."
 },
+"994a4b2e2c9b01fd": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "brøk"
+},
+"8ac4f70c950ebdf2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "en halv / en tredel"
+},
+"a26ff78bb335b95f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "andel"
+},
+"e499d5aedb2478e8": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "like deler"
+},
+"dfe46409320d161e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "å utvide"
+},
+"9b2bdeda391a8121": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "like store brøker"
+},
+"1a58d9a4dd8c551b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "fellesnevner"
+},
+"6b67c8e4ed588738": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "så langt det går"
+},
+"b7a6a52656f4cc83": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "prosent"
+},
+"6c7c29fb5c82ac6b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "å gjøre om"
+},
+"4dc73edca3dec712": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "skrivemåte"
+},
+"1bbcbbe47bb8537e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "hensiktsmessig"
+},
 "260d5bc42480d1d3": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-5.html",
@@ -5394,6 +6210,72 @@
 "side": "matematikk/kapittel-5.html",
 "type": "oppgave",
 "tekst": "M4 En vare koster 1 250 kroner, og merverdiavgiften på 25 % er inkludert i prisen. a)Hva koster varen uten merverdiavgift? b)Hvor mye utgjør merverdiavgiften i kroner? c)Hvorfor er ikke merverdiavgiften 25 % av 1 250 kroner?"
+},
+"5ae2e859764fffaf": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "hundredel"
+},
+"377aa95eaa035383": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "det hele"
+},
+"1ee1152d0e75027e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "rabatt / avslag"
+},
+"e476a94544dc88bc": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "delen"
+},
+"d4c60b98e7f0f009": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "å utgjøre"
+},
+"ab8550897485f351": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "å sammenligne"
+},
+"ec25ce6db018a082": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "prosentpoeng"
+},
+"04d7cb3c5cfcac70": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "vekstfaktor"
+},
+"896deb1bf3086878": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "gjentatt endring"
+},
+"756e004f0957ac2d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "renters rente"
+},
+"179bc50456268451": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-5.html",
+"type": "ord",
+"tekst": "verditap"
 },
 "62702acf4f88f435": {
 "fag": "matematikk",
@@ -6157,6 +7039,102 @@
 "type": "oppgave",
 "tekst": "M4 Forklar med egne ord hvorfor 2(x + 3) ikke er det samme som 2x + 3. Sett inn x = 5 i begge for å vise det."
 },
+"005ad2cb4a93b626": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "uttrykk"
+},
+"dc3088998c135666": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "koeffisient"
+},
+"95ce386163261326": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "ukjent"
+},
+"9af0bfabc5ab87e0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å stå for"
+},
+"cdc5ee4ae0fd85a0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å sette inn"
+},
+"badbccfb94356583": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å erstatte"
+},
+"47a62aacf26bfd8d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "størrelse"
+},
+"228bbbee0fbabada": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å snu formelen"
+},
+"1d6d13c9e96c2088": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "mønster"
+},
+"8f7698aacf16d47d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "figurnummer"
+},
+"67789d8658da4b26": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å øke med"
+},
+"26ff9dc6fdd80c3f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "tallrekke"
+},
+"1092586eed6205fb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "likning"
+},
+"b119120caa653855": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "den ukjente"
+},
+"5cceee5568cedf0a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "venstre side"
+},
+"0d0995c186bf0403": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å løse"
+},
 "6b7b1727b61e73b6": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-7.html",
@@ -6834,6 +7812,78 @@
 "side": "matematikk/kapittel-7.html",
 "type": "oppgave",
 "tekst": "M4 En bil bruker 0,62 liter drivstoff per mil, og drivstoffet koster 22,90 kroner per liter. a)Hvor mye drivstoff går med på 34 mil? b)Hva koster turen? c)Hva koster én mil?"
+},
+"f2f3f0f56dbaf67d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "måleenhet"
+},
+"4aa78a9081c6faa6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "måleredskap"
+},
+"a93dfa4ba980ceb6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "masse / vekt"
+},
+"d7d01c81f53c7df1": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "volum"
+},
+"f5ee5fee55fa3adf": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "enhetstrapp"
+},
+"9799021016dbe652": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "et trinn"
+},
+"b79013711baaac64": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "målestokk"
+},
+"4b63a9b5d463e9af": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "klokkeslett"
+},
+"506c60ffc4aa1151": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "tidsforskjell"
+},
+"b7a73b85aaeb5692": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "desimaltimer"
+},
+"ef8d29955a725c39": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "pause"
+},
+"3de06a2945948551": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-7.html",
+"type": "ord",
+"tekst": "arbeidstid"
 },
 "a0f55152eaae6bf6": {
 "fag": "matematikk",
@@ -7555,6 +8605,144 @@
 "type": "oppgave",
 "tekst": "M4 En stige på 5 m settes mot en vegg, med foten 1,4 m fra veggen. a)Hvor høyt opp på veggen når stigen? b)En vanlig sikkerhetsregel sier at foten bør stå omtrent en firedel av stigelengden fra veggen. Hvor langt fra veggen ville det vært? c)Står stigen brattere eller slakere enn regelen anbefaler?"
 },
+"fbfa0deafb881c3a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "vinkel"
+},
+"cece26472fac4319": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "rett vinkel"
+},
+"6a8f9ba62ae0d5be": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "vinkelsum"
+},
+"0adf58476eb75d58": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "mangekant"
+},
+"99a5e510033c40bc": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "kant og hjørne"
+},
+"5050515c06beb35c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "likebeint trekant"
+},
+"a65d860b756dbed6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "omkrets"
+},
+"b93b1533d1ff0020": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "grunnlinje"
+},
+"988bfeeffb867bad": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "høyde"
+},
+"1077e9225c64c1ef": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "kvadratmeter"
+},
+"1f008235fccdb854": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "sirkel"
+},
+"ef7eea16aa4e15ba": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "radius"
+},
+"2bde05bb8f37e9c3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "diameter"
+},
+"71808f7badef6b66": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "sentrum"
+},
+"b02e5b66ace6dc3b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "pi"
+},
+"b4ffec19d9c272ab": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "rettvinklet trekant"
+},
+"589cec9bf7b4a49b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "hypotenus"
+},
+"57134de35dee4667": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "katet"
+},
+"6159f6bcbc29b103": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "diagonal"
+},
+"c2bb3bba14609ffd": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "grunnflate"
+},
+"b7335e6b5b83f3c0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "prisme"
+},
+"f89dcf7f692e49d4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "sylinder"
+},
+"ae7cd383885cb026": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "kubikkmeter"
+},
 "621414b8404619c5": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-9.html",
@@ -8232,6 +9420,150 @@
 "side": "matematikk/kapittel-9.html",
 "type": "oppgave",
 "tekst": "M4 Et diagram viser at antall ansatte gikk fra 240 til 252. Y-aksen starter på 235. a)Hvor mange prosent er økningen? b)Hvordan ville du laget diagrammet for å gi et riktig inntrykk?"
+},
+"a17c9aaa61e80a1b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "data"
+},
+"4ab17a34c283d662": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "frekvens"
+},
+"b66ad20ac8f29893": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "datasett"
+},
+"57bed6a76d8baeef": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "utvalg"
+},
+"ae3ea35e670204d5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "undersøkelse"
+},
+"676a79d27b8983a2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "stolpediagram"
+},
+"d8a5b0d9dc0d76e6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "linjediagram"
+},
+"3437fbca68736137": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "sektordiagram"
+},
+"6f3285437f6ce635": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "akse"
+},
+"c754c1a3799809d0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "å lese av"
+},
+"cb5ded384b70f0af": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "sentralmål"
+},
+"09f3246f599ac9a1": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "median"
+},
+"6669580058cc656f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "typetall"
+},
+"f4cab39d505f7967": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "ekstremverdi"
+},
+"2e0d707ebf1796a8": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "misvisende"
+},
+"981a8997b97e9aee": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "kilde"
+},
+"6baa9e5408708950": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "å vinkle"
+},
+"d6ffe6e14f3adb96": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "utgangspunkt"
+},
+"30e52738a6d9ee7f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "å stille spørsmål ved"
+},
+"883b56b1fea6a64e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "sannsynlighet"
+},
+"e659ac2dc76e1af7": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "utfall"
+},
+"baf9809ce904a89c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "utfallsrom"
+},
+"ad68f6cf3b1ceba2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "gunstige utfall"
+},
+"0a5b0b636bec67f4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-9.html",
+"type": "ord",
+"tekst": "tilfeldig"
 },
 "c149f564a3ece76b": {
 "fag": "naturfag",
@@ -10147,6 +11479,342 @@
 "type": "oppgave",
 "tekst": "M4 Du skal finne ut om et utslipp gjør en bekk dårligere. Lag en plan for undersøkelsen."
 },
+"1a56fe191d90c223": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "økologi"
+},
+"051143ba8e11933e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et økosystem"
+},
+"71bbda57cd2aff92": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en organisme"
+},
+"2bfd3c7ed073b517": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "levende (biotisk)"
+},
+"850810104403c362": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "ikke-levende (abiotisk)"
+},
+"c1f832d2bbe9b835": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en art"
+},
+"cdb55defd4be9b26": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en populasjon"
+},
+"9d15e594145cc73d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å observere"
+},
+"9f229da3d54aebde": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å registrere"
+},
+"9dc101ade788f1d6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en tabell"
+},
+"f8466852048c0a2f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et resultat"
+},
+"cfefe3f9a8a79a4c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en feilkilde"
+},
+"61ef7f6c38950cb1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en feltrapport"
+},
+"eb9755686f956043": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å produsere / en produsent"
+},
+"78d6d3652b39130c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en konsument (forbruker)"
+},
+"32dfae61b1ce1676": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en nedbryter"
+},
+"93d7f71ed24a0488": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "fotosyntese"
+},
+"c1a4145455b2117c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "næring"
+},
+"16970712a240d6cb": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "oksygen"
+},
+"007b545ab50a7c64": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "karbondioksid"
+},
+"a9bd34277f987f4e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en næringskjede"
+},
+"24d9bf454254151b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et ledd"
+},
+"0dc7c87e71d8956f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et næringsnett"
+},
+"c4a2d5b11c50a89c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å overføre"
+},
+"84197a3805455410": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en pil"
+},
+"0b06c194ea846749": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et kretsløp"
+},
+"f61578b1ea16efeb": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å fordampe / fordamping"
+},
+"880332f007fcad39": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "kondensering"
+},
+"6d7b348abf3b4076": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "nedbør"
+},
+"41600e178ac25fff": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "grunnvann"
+},
+"703667194b12a9b8": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et næringsstoff"
+},
+"e215881a79c491e4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en tilpasning"
+},
+"a47298577dbf64c4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å tilpasse seg"
+},
+"c46bab5362fe058a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "konkurranse"
+},
+"e13d424a98b3e71f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et byttedyr"
+},
+"790d85ea48817fee": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "bæreevne"
+},
+"a84f85622b8fcf79": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "kamuflasje"
+},
+"64f80cff447c1468": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "ferskvann"
+},
+"f2e60fbd76c7c76b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en larve"
+},
+"de4847fa954ac632": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en haletråd"
+},
+"69a8bbee76fb3179": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en indikatorart"
+},
+"4dc67ca4dd9f54a1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "vannkvalitet"
+},
+"425b28f36a43b285": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å sortere"
+},
+"207144c137be0dbe": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "biologisk mangfold"
+},
+"d4a6122d1f3453af": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "rødlista"
+},
+"54d9857619fe5683": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en naturressurs"
+},
+"4e6ae56f7bea3cc1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "fornybar"
+},
+"383964a9dce070d2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "ikke-fornybar"
+},
+"d9fd0caa09e0f7da": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et urfolk"
+},
+"499a9db3218299f4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "reindrift"
+},
+"e596af1f9dc8a4a2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å påvirke"
+},
+"c2ededb030cb5522": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "forurensning"
+},
+"b5d32c90c0433dfb": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "bærekraftig"
+},
+"512eea4f77cde0f7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et tiltak"
+},
+"fa302bb9e7947fd2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en miljøgift"
+},
+"db5da8f56d9b8979": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en fremmed art"
+},
 "4d4a2b0b40ff85e4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
@@ -11995,6 +13663,330 @@
 "type": "oppgave",
 "tekst": "M4 En pose potetgull på 100 g har 34 g fett og 50 g karbohydrater. Bruk energiverdiene fra oppgaven om grovbrødet (17 og 37 kJ per gram). Hvor mye energi fra fett og karbohydrater er det i posen?"
 },
+"b70bc4e108455a3c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en celle"
+},
+"63e4b917557c9bf6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "encellet"
+},
+"a45dbb81f33b89e6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "flercellet"
+},
+"89f7c1c0e120e8a9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et mikroskop"
+},
+"fcf33106e9c4ac0f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å forstørre / forstørrelse"
+},
+"c5767a5c99a792f9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et preparat"
+},
+"68d06c861eb70d91": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "cellemembran"
+},
+"c08d53e4b846d7f7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "cellekjerne"
+},
+"18261640b0d19425": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "cytoplasma (cellevæske)"
+},
+"edab9fd96bdd6be3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "mitokondrie"
+},
+"fe429c235026b470": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "cellevegg"
+},
+"354f3983f0cd089c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "kloroplast (grønnkorn)"
+},
+"0b94a2a96ccd845a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "vakuole (saftrom)"
+},
+"94f1737e8c6b7545": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en nervecelle"
+},
+"58cdea186531045f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et vev"
+},
+"5b374d84c4eff39c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et organ"
+},
+"b65942c545a1e088": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et organsystem"
+},
+"82c4209fdb1f48cc": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "celledeling (mitose)"
+},
+"ecbf02604648fa0b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "DNA"
+},
+"79dd87f97d1b845f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "diffusjon"
+},
+"f9fa40be1bdad1fd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "osmose"
+},
+"c1253df26f44e5ea": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en konsentrasjon"
+},
+"81558e6b7d42a331": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en løsning"
+},
+"a15148ffb722f84c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "masse"
+},
+"b90ab60fb4336bc5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "celleånding"
+},
+"c33cf256f399934d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "glukose (druesukker)"
+},
+"c5b507cc70d0618a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "energi"
+},
+"0a658f2dfcd3b13a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en prosess"
+},
+"9f278994974ca538": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "respirasjonssystemet"
+},
+"8e8a35c9b0e3b2ea": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "sirkulasjonssystemet"
+},
+"5c99911fceb43a82": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "fordøyelsessystemet"
+},
+"cde8cf6479b64117": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "nervesystemet"
+},
+"182c1dc55835e0b9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "utskillelsessystemet"
+},
+"ee53bb2e5280476d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å puste inn / ut"
+},
+"3b76c09b519e6060": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et luftrør"
+},
+"b48fb0bc5c64610e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en bronkie"
+},
+"930dcf5fec6fef8a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en lungeblære"
+},
+"7878ce7356a1eaf5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "mellomgulvet"
+},
+"d9c0d51502c96bb0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å utveksle"
+},
+"abe150944ddb6c8f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å fordøye / fordøyelse"
+},
+"a66e26703a30efca": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et enzym"
+},
+"47463c56ce8a3c2b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "tarmtotter"
+},
+"96676dc7df75a4a3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "karbohydrat"
+},
+"567997b584b149d5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en varedeklarasjon"
+},
+"2f0456bf10032038": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "blodet"
+},
+"0891c7fb3a0d9814": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "hjertet"
+},
+"b283a1ce410762f4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en arterie / pulsåre"
+},
+"25a97a11e7133f7c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en vene / blodåre"
+},
+"6ecf8794e745bfc4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en kapillær"
+},
+"1da09954fca6a5c7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "puls"
+},
+"6a9bbb59207f22e0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å samarbeide"
+},
+"2afb5b91561c9a98": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "vitale funksjoner"
+},
+"fa3ec25dec825ba8": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "avfallsstoff"
+},
+"553da0f589d339e6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "ord",
+"tekst": "melkesyre"
+},
 "b8522b01a4e9d578": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
@@ -13525,6 +15517,240 @@
 "type": "oppgave",
 "tekst": "M4 En plante var 40 mm før og 52 mm etter en uke. Hvor mange prosent vokste den?"
 },
+"ba8bf0e23b245cd4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "naturvitenskap"
+},
+"318febd2f6d4b580": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en påstand"
+},
+"925a61ef7bbc5a9b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en mening"
+},
+"906e0434de3f633d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å undersøke"
+},
+"039be2f68b1499ff": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et bevis"
+},
+"0b2e91121eea2182": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en teori"
+},
+"13b017a4444bfacd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en problemstilling"
+},
+"cdc4e28f0d644454": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en hypotese"
+},
+"c0807cd9c0f2fe19": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å begrunne"
+},
+"fc63cfce654a3591": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å teste"
+},
+"a0ad1fa11794a36a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en variabel"
+},
+"bb02cea7d16bba26": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "uavhengig variabel"
+},
+"5297b602d59b2bbc": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "avhengig variabel"
+},
+"9eb96d509979e91a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å holde likt"
+},
+"1175e55d76577e2e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en kontrollgruppe"
+},
+"3a70559f4f90e6e1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en enhet"
+},
+"1f1f5457117b150f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et måleinstrument"
+},
+"36d01654b9e575d5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å avlese"
+},
+"8ecaa148f27141fb": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et gjennomsnitt"
+},
+"d27148748620cfd1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et søylediagram"
+},
+"6491479189ffec5e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et linjediagram"
+},
+"e281fa65ac9838cf": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en akse"
+},
+"57dbb6b3cbea2027": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "usikker"
+},
+"cce9fb6ac31a8859": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å gjenta"
+},
+"1ca1b165ecd80efc": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en avvikende måling"
+},
+"7bf3315466cea468": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en konklusjon"
+},
+"04efdff56e69906d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en forsøksrapport"
+},
+"c1f7485ddaf79ab7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "utstyr"
+},
+"b1399eedeaadcc4f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en framgangsmåte"
+},
+"88802f4550748607": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å støtte"
+},
+"e235b8d0da49466f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en kilde"
+},
+"74a3611a64d0d393": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "kildekritikk"
+},
+"16aa5c4b774b0b27": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "pålitelig"
+},
+"5c0346b26616fbe4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en avsender"
+},
+"e2405172c9e30a6b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "saklig"
+},
+"c7e80bb82832d336": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å forske / en forsker"
+},
+"cb333f53f145703d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å publisere"
+},
+"b3855d8fe64f4e18": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "fagfellevurdering"
+},
+"b4816479420f21a4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å forkaste"
+},
 "cbda70acb5722aef": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-4.html",
@@ -15036,6 +17262,210 @@
 "side": "naturfag/kapittel-4.html",
 "type": "oppgave",
 "tekst": "M4 En bakterie deler seg hvert 20. minutt. Hvor mange bakterier er det etter 2 timer, hvis du starter med én?"
+},
+"d2ce12a1d05c5d0e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en egenskap"
+},
+"2fa3f667cdca4af1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et virveldyr"
+},
+"31ba8e591e8d90c2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en ryggrad"
+},
+"dba3311883accc75": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en bestemmelsesnøkkel"
+},
+"f1f8bec8d4df5622": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "variasjon"
+},
+"bbbd80d2a2b85107": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "å arve"
+},
+"522598e4206bd8fb": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "miljø"
+},
+"38f4e25768aa7538": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et individ"
+},
+"4ea1eb9a91e18de8": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "evolusjon"
+},
+"a6b678f614e591b3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "naturlig utvalg"
+},
+"fb1854c612b5f82c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en generasjon"
+},
+"d9e7b5cf41f9416a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et nebb"
+},
+"2c01cee208a78a8e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et fossil"
+},
+"0b96ba5e840ea5cf": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et jordlag"
+},
+"e0376dbb3275e6c5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "slektskap"
+},
+"5895b190943b9e37": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "resistent"
+},
+"ce624fd882b41a36": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "antibiotika"
+},
+"fd2556276e52dfac": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en milliard"
+},
+"d1982c9a9ff07ca6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en million"
+},
+"d2651a32c7ff8af1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en tidslinje"
+},
+"d4cefb651ddffdb4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "å dø ut"
+},
+"16a32d733416c256": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et gen"
+},
+"4853d5a3d269a14a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et kromosom"
+},
+"9c70ad5fec377158": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en mutasjon"
+},
+"7418a80582ded59e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en kjønnscelle"
+},
+"18abe41a47a1ec46": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "dominant"
+},
+"119fa5a21f6777fd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "recessiv"
+},
+"79d14085bb5f7bec": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et krysningsskjema"
+},
+"b54aad0def81a04f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en genvariant"
+},
+"8bfeeb41745c3c6c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "genteknologi"
+},
+"8f9b7eeb2a8fbe5d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "genmodifisert (GMO)"
+},
+"e2e0d644865f9367": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en gentest"
+},
+"cd44d46566d8b573": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et dilemma"
+},
+"40bf7b4e55b344b3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "ord",
+"tekst": "etikk"
 },
 "643375f4138dca4c": {
 "fag": "naturfag",
@@ -16608,6 +19038,282 @@
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
 "tekst": "M4 Velg ett kjemikalie du bruker hjemme eller på jobb. Beskriv faremerkene, hvilket HMS-krav som gjelder, og hvordan det skal kastes."
+},
+"40ae30d8aef23643": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et stoff"
+},
+"5b5d84751ed9a269": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å løse seg"
+},
+"fa2ada458a79c076": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "tetthet"
+},
+"f4216f4e2f10a2a6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et smeltepunkt"
+},
+"01052f09e4204983": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "fast stoff"
+},
+"ca3d3b4e5a98026c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en væske"
+},
+"f564e61a91c57986": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en gass"
+},
+"7da9493a10f34849": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en partikkel"
+},
+"7fe2b6145a6e8c9c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å smelte / smelting"
+},
+"8c722046ba1084c7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å kondensere / kondensering"
+},
+"8978ef30301f5c41": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et rent stoff"
+},
+"3e7c022f0c3021a6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en blanding"
+},
+"9ae94152fe972ae1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å filtrere"
+},
+"b0bb8397190842f1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å skille"
+},
+"3601d57a08b66103": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et atom"
+},
+"1b3ca77d444bad61": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et proton / et nøytron"
+},
+"dc72764b92540aab": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et elektron"
+},
+"8802249a1f5d25cd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et molekyl"
+},
+"15217228d11aa434": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et grunnstoff"
+},
+"0452c21252d920ff": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en kjemisk formel"
+},
+"e1c1a317680d89f9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "periodesystemet"
+},
+"6accc94a28d9eedd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "atomnummer"
+},
+"53125c909805e61b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en gruppe"
+},
+"c20a80342ab86fc4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en periode"
+},
+"379bbf87773bccec": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et metall"
+},
+"a69397e98c421f48": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en edelgass"
+},
+"c52ae7c3e7a938bf": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en kjemisk reaksjon"
+},
+"2345ae8e20bf4b57": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en reaktant"
+},
+"cbf0b0a14ca67aa2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et produkt"
+},
+"0be52e6a42437373": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å brenne / forbrenning"
+},
+"3a9b1de669341283": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å ruste"
+},
+"3bafb512dfbebc4a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en syre / sur"
+},
+"d054909eb395ef80": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en base / basisk"
+},
+"45112b9d3823701b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "nøytral"
+},
+"932636c3269e2409": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "pH"
+},
+"b45a8e508d9c58c0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en indikator"
+},
+"128daa5afcf8bb33": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "HMS"
+},
+"0d2e9251de5daf61": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et faremerke"
+},
+"dfe7223baa2c3955": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "verneutstyr"
+},
+"76d9ba064bf215b6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et sikkerhetsdatablad"
+},
+"96ddc3ddaa7cdad2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å oppbevare"
+},
+"5c77ba61c2b4bd69": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "avfall"
+},
+"ab9010c230e37fc9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å gjenvinne"
+},
+"b2fd8381a4eec044": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "farlig avfall"
+},
+"723abde76a8af033": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "forurensing"
+},
+"e2ff09891d2158ec": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "ord",
+"tekst": "mikroplast"
 },
 "358c6aec5fbccac4": {
 "fag": "naturfag",
@@ -18583,6 +21289,282 @@
 "type": "oppgave",
 "tekst": "M4 Ahmed veier 70 kg og har 0,5 promille. Etter hvor mange timer er han under 0,2 promille, hvis kroppen forbrenner 0,15 promille i timen?"
 },
+"321513a42563de3a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "helse"
+},
+"113333a38c3834b7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "fysisk / psykisk"
+},
+"231d9aef0c4c1ba5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en livsstil"
+},
+"8add701e7fcc391a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "smittsom"
+},
+"dea279bfee3278aa": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en livsstilssykdom"
+},
+"bc40485925bd5983": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en bakterie"
+},
+"50e4397ea0e87dd6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et virus"
+},
+"68b1c639a167e69e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en parasitt"
+},
+"74f64a8542dd2cf7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å formere seg"
+},
+"b92d0930265071bf": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "smitte / å smitte"
+},
+"be06c778aeaefd29": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "dråpesmitte"
+},
+"5dd39d79cb826eb1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "smittevern"
+},
+"801a94c32368d243": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å spre seg"
+},
+"2841450321404365": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en pandemi"
+},
+"d76d0360b3be0c98": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "immunforsvaret"
+},
+"9c8ca84f32ebe0c3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "hvite blodceller"
+},
+"03005e616cf5b762": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et antistoff"
+},
+"24a48aa55a9600b1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "betennelse"
+},
+"8e148becad102854": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "feber"
+},
+"6a9af6b00a2a6383": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "immun"
+},
+"2daf26d88432e311": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en vaksine"
+},
+"ae2a81fdef8916c2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å vaksinere"
+},
+"a1d53e3929ce45b1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "flokkimmunitet"
+},
+"0c6b81c46871e344": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "folkehelse"
+},
+"6523d68f664048c0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en bivirkning"
+},
+"1803ffffddb59ec0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et kosthold"
+},
+"62a2ea65a6500f5f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en porsjon"
+},
+"93917c0c4306141b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "fullkorn"
+},
+"bbf15a40ad17d061": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "tilsatt sukker"
+},
+"3d1079fc3ab5b854": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et kostråd"
+},
+"affdf758e19a7297": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et rusmiddel"
+},
+"a82635630b7af2bc": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "avhengig"
+},
+"3bc3823f21ebe2dd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "promille"
+},
+"8e3d4feadbd3b6cd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et legemiddel / en medisin"
+},
+"7695600d149c4d22": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en resept"
+},
+"3c05d1092e04f945": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en livsfase"
+},
+"835ea7110e52b994": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "puberteten"
+},
+"466b8ab0e0f9fa99": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et hormon"
+},
+"2b7a7e2882cce5ff": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "overgangsalderen"
+},
+"86eea8436d78dccc": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å eldes"
+},
+"01ce224d8e524ad9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "seksualitet"
+},
+"5722ffe70b1eb103": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å samtykke / samtykke"
+},
+"4f769651aac5e51e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en grense"
+},
+"c91eb8b52f94cdde": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "prevensjon"
+},
+"0fad7f2ad8054e0c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en kjønnssykdom"
+},
+"b61646f016483b31": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "ord",
+"tekst": "abort"
+},
 "e0e8f10e5d2d2136": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
@@ -20245,6 +23227,258 @@
 "type": "oppgave",
 "tekst": "M4 Hva har drivhuseffekten, energibruk og teknologi med hverandre å gjøre? Skriv et sammenhengende avsnitt."
 },
+"1155e885fd0dbcde": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en energiform"
+},
+"637f35888941ac04": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "bevegelsesenergi"
+},
+"352f3fafb7a8325b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "stillingsenergi"
+},
+"8ffa4f7bb540fce2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å omdanne"
+},
+"4a37176e211ebc84": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en energikjede"
+},
+"dfae2318247e4377": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en turbin"
+},
+"866599dabd4b7a5d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en generator"
+},
+"a9ed0a23409f574e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et magasin"
+},
+"b9b3c93a7e1c61ac": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "fossil"
+},
+"05b6e80010838fe7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et kraftverk"
+},
+"365c5b13f4aecaac": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en terawattime (TWh)"
+},
+"e48ca7f9e16da227": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en strømkrets"
+},
+"4755d2c94abb95e3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en leder"
+},
+"88acdfe93b61dea1": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en isolator"
+},
+"e846914308b96708": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "spenning (volt, V)"
+},
+"633861583d4bca09": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "effekt (watt, W)"
+},
+"bfc052360010beb0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "elsikkerhet"
+},
+"e9519c1b991580cd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en jordfeilbryter"
+},
+"19e88fb1a4a50f32": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en sikring"
+},
+"7422059c9ea38a52": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å overbelaste"
+},
+"f572ba420dec0ba8": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en elektriker"
+},
+"ed9762fbccd3d252": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en kilowattime (kWh)"
+},
+"11feff98258d50b6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "strømforbruk"
+},
+"f852d0ec5c900184": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å spare"
+},
+"f6848188f2bd87b4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en varmepumpe"
+},
+"ac547cc173763083": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "teknologi"
+},
+"6dfffdc4c03f757e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en oppfinnelse"
+},
+"038b06aaf4be975a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et materiale"
+},
+"c532b2ef7efccedf": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en funksjon"
+},
+"ec3b5d617ce69e7a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en form"
+},
+"64be7e02ae4d1745": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "drivhuseffekten"
+},
+"052f4e4374deec21": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en drivhusgass / klimagass"
+},
+"e0bd82dfa60eee47": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "atmosfæren"
+},
+"a4d87ec2f0cd3f72": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "varmestråling"
+},
+"f1ea4438e2d1d177": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "ppm"
+},
+"54ebb98f801c816f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "klima"
+},
+"4bc386f6a57d11e4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "vær"
+},
+"a0965ce95a88d061": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "global oppvarming"
+},
+"c9f4792c0d970b6f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "ekstremvær"
+},
+"db9a0e87b3a53874": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en konsekvens"
+},
+"8ef2b135c513477a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "bærekraft"
+},
+"01d334abddf0d365": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å drøfte"
+},
 "05433739ca4202cc": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-8.html",
@@ -21054,6 +24288,186 @@
 "side": "naturfag/kapittel-8.html",
 "type": "oppgave",
 "tekst": "(3 og 8) Velg et samfunnsaktuelt tema. Hold en samtale på fem minutter med en medelev der dere bruker naturfaglig kunnskap og vurderer kilder."
+},
+"81f04f6aedfa8e42": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en tekst"
+},
+"2092c3ccae330e4a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "et avsnitt"
+},
+"fe2b49586371a427": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en innledning"
+},
+"e8b2760ed9a667a5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en avslutning"
+},
+"d41f2720bab0f534": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "et fagord"
+},
+"8c80417a994568d2": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "å forklare"
+},
+"124a15b4301a5e0f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en årsak"
+},
+"cb8ad563453f8ac7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en virkning"
+},
+"1720f76530900639": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en observasjon"
+},
+"9e627dba8cce092a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "først / deretter / til slutt"
+},
+"2ddc90de33ac7d7e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "et argument"
+},
+"492eea1ce85b4684": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "et prosjekt"
+},
+"451dc1e7e10b7f26": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "samfunnsaktuell"
+},
+"5cfaef040ddc84b6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "bærekraftig utvikling"
+},
+"2d9d7f5a463a3945": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en ressurs"
+},
+"5ef5d35eef43b413": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "forbruk"
+},
+"eb4473f1ec3451fe": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "levekår"
+},
+"97f5638295af3690": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "FNs bærekraftsmål"
+},
+"867b32e83e4f0dfd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "demokrati"
+},
+"a6a7cc9ddd1c9f78": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en medborger"
+},
+"abc0a600179ef2c3": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en høring"
+},
+"e4c7060ff30214ac": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en debatt"
+},
+"70facd613cd4727b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "livsmestring"
+},
+"1500daa984282756": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en vane"
+},
+"165bd364fed980be": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "stress"
+},
+"35c05b8ff02f5c05": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "fysisk aktivitet"
+},
+"c4f269f485bbd446": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "eksamen"
+},
+"bf7837c9e7db007c": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "muntlig-praktisk"
+},
+"52b41396219ee3d8": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en forberedelsesdel"
+},
+"fc93772bf9c38f5e": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-8.html",
+"type": "ord",
+"tekst": "en sensor"
 },
 "d3813d1ea0a3631e": {
 "fag": "naturfag",
@@ -24913,6 +28327,282 @@
 "type": "oppgave",
 "tekst": "Drøft påstanden «Det er ikke mitt ansvar å sjekke det jeg deler, det er ansvaret til den som skrev det»."
 },
+"2e9e2a0886d8e546": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "informasjon"
+},
+"fcc635f324610125": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en primærkilde"
+},
+"9d24882a5af932b4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en sekundærkilde"
+},
+"31748f8aa3c76422": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et øyenvitne"
+},
+"0489222310ace50a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "statistikk"
+},
+"c43a6087cb1ceabd": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en søkemotor"
+},
+"40c54cf8c285c486": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et søkeord"
+},
+"f58c76294776e382": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et leksikon"
+},
+"ed4b636d3d7aab86": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en spørreundersøkelse"
+},
+"6ae815f4f98138ac": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et intervju"
+},
+"8ea691a3a64508c3": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "sponset"
+},
+"92add8e975907f3f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et formål"
+},
+"5360447a42f2841f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "relevant"
+},
+"05c70a39720599e6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "troverdig"
+},
+"13214ef74ceb5ebf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "ensidig"
+},
+"56a9cab7cc0cbf0b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "objektiv"
+},
+"46740501b0da7d5a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "egnet"
+},
+"00f269394954b837": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å lese på tvers"
+},
+"b4e0f268ad600d66": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et omvendt bildesøk"
+},
+"e76f0bc9bcd2459b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en faktasjekk"
+},
+"aa932a75d0e2d480": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "fakta"
+},
+"de93716cb9e55f14": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en vinkling"
+},
+"c42a4de271afff4f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et leserinnlegg"
+},
+"86f56b0379dec1cf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "pressefrihet"
+},
+"4e3eed64f27a08bc": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en falsk nyhet"
+},
+"86d797bcfe8aac5c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å spre"
+},
+"174489490e4ccd92": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "desinformasjon"
+},
+"b699b3931cd5640a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en konspirasjonsteori"
+},
+"85969fedd18906c8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "klikkagn"
+},
+"dfdd2093eebc21bf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å manipulere"
+},
+"56ab04a8ce33fa3b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en algoritme"
+},
+"8e3edea6da285cb9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en feed"
+},
+"577c2b3c4d9607be": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en filterboble"
+},
+"6c15c74362c30363": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et ekkokammer"
+},
+"20fe5f7b5183cd20": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å anbefale"
+},
+"a5dd761844e9647b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "digital dømmekraft"
+},
+"9de47cd65b339bbb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "personvern"
+},
+"839c17880e3ed525": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en personopplysning"
+},
+"1456d7ee25b91954": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et samtykke"
+},
+"a090cdb3c76d04e6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et digitalt fotavtrykk"
+},
+"070a83967006bae1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "svindel"
+},
+"db9ad9b5699842c2": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å oppgi"
+},
+"d8e2bbeffb0ede98": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "et sitat"
+},
+"117290982f1b54d1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "å referere"
+},
+"44246e2a38a406dc": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "en kildeliste"
+},
+"aeced8b728e2f8d8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-1.html",
+"type": "ord",
+"tekst": "plagiat"
+},
 "dd64524c8f8c5770": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
@@ -26959,6 +30649,498 @@
 "type": "oppgave",
 "tekst": "Velg en hendelse fra norsk historie og forklar hvordan den kan beskrives ulikt fra ulike ståsteder. Bruk kildekritikk fra kapittel 1."
 },
+"6cbbf3b4692dfb87": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et demokrati"
+},
+"e187e0896aba39f4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et diktatur"
+},
+"79c92f1cc888540c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en rettsstat"
+},
+"bca571de07f8d94e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et flertall"
+},
+"c329d83bda3d28e0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et mindretall"
+},
+"059e7783ae5aad6b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en menneskerettighet"
+},
+"59b77d1f46e167b5": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "Grunnloven"
+},
+"63a24a2f45c3b34f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "Stortinget"
+},
+"4cd37a67cc9aa696": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "regjeringen"
+},
+"0cbb73c3a9271284": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en statsråd"
+},
+"c2b54d91a2309b80": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en domstol"
+},
+"11f09335ce5c79de": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et statsoverhode"
+},
+"1330cc176a68a38e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et stortingsvalg"
+},
+"ed1df0a624780365": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et mandat"
+},
+"3c3744ea0d26acaa": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "parlamentarisme"
+},
+"ec50e4f331a1df54": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en koalisjonsregjering"
+},
+"18f8a7bdcac127f4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "opposisjonen"
+},
+"3791fad7d92e4e89": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å svelge en kamel"
+},
+"cd41bd1f3aa729a0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et parti"
+},
+"ae21b9c2ad3b4bf7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et partiprogram"
+},
+"3fecb59cfbc4fda8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en ideologi"
+},
+"0c7d7c340eae5d3f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en verdi"
+},
+"f825e5a06c6bc048": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en interesse"
+},
+"0895452e9e5f4bae": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en velger"
+},
+"010a61ee6a3ecec5": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en kommune"
+},
+"6575ad09edf2a47d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et fylke"
+},
+"bd6dfa72e046a0e1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et kommunestyre"
+},
+"e56fb7502bfed90e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en ordfører"
+},
+"4c6d540d5b7452e7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en frivillig organisasjon"
+},
+"dc4508d79afa9e2b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å delta"
+},
+"f556802df75868fb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "likeverd"
+},
+"9c7deb5b0f810119": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "likestilling"
+},
+"6e5a0f07a90d39b0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "diskriminering"
+},
+"534410349a1577c2": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et ombud"
+},
+"98ed112728873199": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "foreldrepermisjon"
+},
+"de9e2359736c190f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "velferd"
+},
+"e6b94e3daac2764f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "velferdsstaten"
+},
+"db379943143a7204": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "skatt"
+},
+"e2289e9b84c64377": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "folketrygden"
+},
+"cf3d1310ec040dcb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en stønad"
+},
+"b47b030843051892": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "NAV"
+},
+"bdb748249f65942d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et styresett"
+},
+"23ee7935e263084a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et monarki"
+},
+"3c0119830f7e24b1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en republikk"
+},
+"5f7b2330b2d68478": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en president"
+},
+"b41eb738a8224f2c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et ettpartisystem"
+},
+"dcbcb73af18a0371": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en rettighet"
+},
+"af070efeb70cd345": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en plikt"
+},
+"8f58a23586cb5c60": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en avtale"
+},
+"a920d739db6bcf24": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en konvensjon"
+},
+"63a5f58a3b197675": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "FN"
+},
+"668f04487bdde8fd": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "EØS"
+},
+"2252f442d5d9ab0d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en revolusjon"
+},
+"1b14e95b72ad4279": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en union"
+},
+"f00269117272b112": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å avstå"
+},
+"3aecf4958a56324f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en riksforsamling"
+},
+"87610dd0c2be09e4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "selvstendig"
+},
+"948e55c12ab8f7ef": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et bondesamfunn"
+},
+"8e01e19066360b0a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en husmann"
+},
+"386756b31b65a6a0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å utvandre"
+},
+"0c024a1f083e2f62": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en fabrikk"
+},
+"c9a0e175850c69ef": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "arbeiderbevegelsen"
+},
+"ed9ec83569bd574b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "stemmerett"
+},
+"c803b485fe018f09": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "selvstendighet"
+},
+"cb083fea54780927": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en folkeavstemning"
+},
+"ed5224c2895b008c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en krise"
+},
+"3458206c8cdf1af4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "arbeidsløshet"
+},
+"fa3e5006704d01a4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et kompromiss"
+},
+"45f2e194573a04bb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en okkupasjon"
+},
+"276119023839691d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "motstandsbevegelsen"
+},
+"748c5404e8cfd0ab": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "å deportere"
+},
+"3a95348dcc70997e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "frigjøringen"
+},
+"0392210eb8ab70c8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et oppgjør"
+},
+"fe7f84b8c6823e33": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "gjenreisning"
+},
+"1450b0d432b6a7a3": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en allianse"
+},
+"82a29b381721ca59": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "oljefunn"
+},
+"c925f53568c3a281": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "et fond"
+},
+"901305f05813c4d7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en innvandrer"
+},
+"6e7d404c79e57d61": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "arbeidsinnvandring"
+},
+"d33d39bf200c78a8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "en flyktning"
+},
+"b7bf6a1041f6aa14": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "familiegjenforening"
+},
+"abf75a9c9e1edfc8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "ord",
+"tekst": "mangfold"
+},
 "f60af52f40e7d1a7": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
@@ -28351,6 +32533,210 @@
 "type": "oppgave",
 "tekst": "Forklar hvordan isfjellmodellen kan brukes til å forstå konflikter på en arbeidsplass med ansatte fra mange land."
 },
+"eccc8ee499566de9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en kultur"
+},
+"dd84d017c599d844": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en norm"
+},
+"c7a41fa8b8b9003a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en tradisjon"
+},
+"9720a8366b2d3a8a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et kulturuttrykk"
+},
+"0945e1a31d18bc25": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "et kulturminne"
+},
+"0e7e716e9dd93b76": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en identitet"
+},
+"8e3c6920cb4bf4e1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å tilhøre"
+},
+"de6ac095878f89c2": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en rolle"
+},
+"150ec41515676fb2": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en forventning"
+},
+"a4fc788e872690ac": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "røtter"
+},
+"ed04578e2db393cc": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en minoritet"
+},
+"5d09229aee722b42": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "integrering"
+},
+"809ff5c149aeaab6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "religionsfrihet"
+},
+"a23b2b0e4c9b6e99": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "fordommer"
+},
+"b7e90d202eadf98e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en kjønnsrolle"
+},
+"72065948e30997b7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "seksuell orientering"
+},
+"a46645c156404d9c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "kjønnsidentitet"
+},
+"5e927c6e343b8508": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å respektere"
+},
+"4d54f0cd9c5119cb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "samtykke"
+},
+"24bb412ffe8b0693": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "tvang"
+},
+"53ae15f52055cb9e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "negativ sosial kontroll"
+},
+"b0953233394a0414": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "æresrelatert vold"
+},
+"252e8d4a29a1b71d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "Sápmi"
+},
+"ed529acbc401cac9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en reindriftsutøver"
+},
+"cf338705851812fb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "joik"
+},
+"b338533988a954af": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en kofte"
+},
+"ff0546190dddc2c7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "fornorsking"
+},
+"6b755a979f6639c9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en internatskole"
+},
+"0a4aacf94b10b09e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å konsultere"
+},
+"1e46409df849bbad": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en forsoning"
+},
+"aa6758158f03cdd5": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "en nasjonal minoritet"
+},
+"94ae6863f4a5627f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å diskriminere"
+},
+"3ede6fdf893a1d46": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å be om unnskyldning"
+},
+"c18195564beca0dc": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "ord",
+"tekst": "å bevare"
+},
 "7093ef016afe8145": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
@@ -29646,6 +34032,234 @@
 "side": "samfunnsfag/kapittel-4.html",
 "type": "oppgave",
 "tekst": "Temakobling: Hvordan henger fagforeningenes historie (kapittel 4.4) sammen med velferdsstaten og demokratiet (kapittel 2)?"
+},
+"179209c7bdaaec12": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en kompetanse"
+},
+"a7f74c3dba859dea": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "formell"
+},
+"58715553ef17fa3b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "uformell"
+},
+"bb191b42cda3491e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en CV"
+},
+"6802f7d12ee429e9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en søknad"
+},
+"de64eafac9fb129e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et jobbintervju"
+},
+"7c87226de38a7604": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en lønnsslipp"
+},
+"c1cbe5e80506b576": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et skattekort"
+},
+"40ac02dacf15586c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en arbeidsavtale"
+},
+"485ec5a77c6f15de": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et verneombud"
+},
+"ae9b2033555ea714": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "å si opp"
+},
+"e8abd2ee66f7d2f6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "Arbeidstilsynet"
+},
+"adab5ceb38a455c8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en fagforening"
+},
+"83b2e21c070426cb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en tillitsvalgt"
+},
+"8865641d97406846": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en tariffavtale"
+},
+"db8cce27ac8e49ae": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et lønnsoppgjør"
+},
+"770a1de4010e5390": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en streik"
+},
+"9f0da39126730b67": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "å mekle"
+},
+"1bdfa189244e0ffb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "svart arbeid"
+},
+"af5a0802c7fd251e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "sosial dumping"
+},
+"12ce501f4a540587": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "å unndra"
+},
+"0ec94cede24f3c96": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en straff"
+},
+"6f28dc0215785fdf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en omveltning"
+},
+"165e6f1147fef7d6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "automatisering"
+},
+"9a2ad58dec9be811": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "kunstig intelligens"
+},
+"c987961d8a5a714a": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "omstilling"
+},
+"768c2808ee8d3de1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "etterutdanning"
+},
+"6fbf7bc1cc790aca": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "økonomi"
+},
+"9c1cff1227f23dea": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "eksport"
+},
+"62fdfbd55d19b2a4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "import"
+},
+"01a84ee3930221cb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "inflasjon"
+},
+"d66b0b82371a4602": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "styringsrenten"
+},
+"522fed3e7256b8f6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "arbeidsledighet"
+},
+"2e70fa66c6a2599d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "videregående opplæring"
+},
+"1cdb115e642511e9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "et fagbrev"
+},
+"b0e4f1159c3e7487": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en praksiskandidat"
+},
+"1a73de1b54154b08": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "en fagskole"
+},
+"c0c643550513ee0d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "ord",
+"tekst": "karriereveiledning"
 },
 "2d6b875a0572096e": {
 "fag": "samfunnsfag",
@@ -31069,6 +35683,222 @@
 "type": "oppgave",
 "tekst": "Temakobling: Hvordan henger geografien i 5.1 sammen med norsk økonomi i kapittel 4.7?"
 },
+"756b9c1d938c287f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en landsdel"
+},
+"6a0d42380a3ccb88": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en fjord"
+},
+"ccc12ca473baa2bb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et fjell"
+},
+"2f6adfd7ee88896e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "kysten"
+},
+"8c5d159144579d26": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "Golfstrømmen"
+},
+"e46cb47d3082db39": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en verdensdel"
+},
+"d86e43032e7ac5e0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et hav"
+},
+"3daf39fe399f1eb7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en klimasone"
+},
+"ced8e98a0de530df": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "ekvator"
+},
+"84aeaf5c985a6ba6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en ørken"
+},
+"2fa68a31c33cdd90": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en jeger"
+},
+"76a28f3bb97fb892": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "bofast"
+},
+"fc5ac43cc7b9a5d5": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "urbanisering"
+},
+"661c2c4983dee88c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "demografi"
+},
+"74d420f2c1988a81": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "levealder"
+},
+"5a050c129ab15d15": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "migrasjon"
+},
+"f31dce28b7e05d85": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å flykte"
+},
+"dc225c84ee966fb6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "internt fordrevet"
+},
+"a46aa55383aa3a1d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en asylsøker"
+},
+"08908ab3c921e70d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "levestandard"
+},
+"df65f650f61a1efb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "livskvalitet"
+},
+"3b69a3fe79185375": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et forbruk"
+},
+"d3b47e89fecf1c89": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en koloni"
+},
+"c475c199e61123cf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "korrupsjon"
+},
+"a72846656cb76150": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en innlandsstat"
+},
+"46d6e3ed76689fa3": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "bistand"
+},
+"3191d80d943ad9f0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "handel"
+},
+"5568b1cef64b6de0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et bærekraftsmål"
+},
+"1e68c3d808796e10": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et fotavtrykk"
+},
+"3f77cd3628d8e28c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en klimagass"
+},
+"8888f66a25027178": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et utslipp"
+},
+"e5b1f56246d630fd": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et klimatiltak"
+},
+"2702a890f1049bcb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et klimamål"
+},
+"4bab166397a5547c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "en interessekonflikt"
+},
+"8982a661bf3a2d7e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "et hensyn"
+},
+"72e7f48a1b1240cf": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-5.html",
+"type": "ord",
+"tekst": "å veie"
+},
 "bfcd48860f5d7f08": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-6.html",
@@ -32449,6 +37279,216 @@
 "type": "oppgave",
 "tekst": "Temakobling: Hvordan kan fordommer (6.5), fiendebilder (6.1) og avhumanisering (6.8) henge sammen? Bruk et historisk eksempel."
 },
+"bf1f7f5dc5d4446c": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en konflikt"
+},
+"5d34c79372c3f989": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å trappe opp"
+},
+"0fbe97d1953c06ff": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et fiendebilde"
+},
+"2f33643d92b64cd6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å forhandle"
+},
+"aceab9d0eafc7705": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "mekling"
+},
+"79c6b74109931395": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en fredsavtale"
+},
+"55f1c44991f02031": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "forsoning"
+},
+"127dc18fb57264b4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en væpnet konflikt"
+},
+"7098084f37912c6e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en borgerkrig"
+},
+"e7db46eb8d57a04f": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en sivil"
+},
+"c7757eddc21a5962": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "humanitær"
+},
+"3daea54775633d60": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en sanksjon"
+},
+"9201aab754669266": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et ståsted"
+},
+"2e40902802d65ca6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et perspektiv"
+},
+"750a756bce4f05d7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å framstille"
+},
+"12e2c6bfcf14cd1b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en stereotypi"
+},
+"0963520d8c546cb6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en fordom"
+},
+"d0e69eb36e6a9a15": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "rasisme"
+},
+"ae668833f6cb1026": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "hverdagsrasisme"
+},
+"f86488e11c833e0e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en hatefull ytring"
+},
+"7cbe283aa78a2564": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "utenforskap"
+},
+"e26bf9ac39fdb972": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å inkludere"
+},
+"498b05570a600221": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et fellesskap"
+},
+"6b13ef0ce900103d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "antisemittisme"
+},
+"ad9958b5047c5e28": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en konsentrasjonsleir"
+},
+"0ad31b9ac2377e53": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en utryddelsesleir"
+},
+"acb65fbd41549e87": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å forfølge"
+},
+"f15e201d26c9d8cb": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "en tilskuer"
+},
+"6361902ad766b4fe": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "Folkemordkonvensjonen"
+},
+"527895d64713e7d2": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "å forebygge"
+},
+"517a77418de469ea": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et varselsignal"
+},
+"5e3f94c1d5fd8c2e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "radikalisering"
+},
+"e5e7f3fce6c16122": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "ekstremisme"
+},
+"10f9bb8fa0db73b6": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "terror"
+},
+"9b4988577240acb9": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-6.html",
+"type": "ord",
+"tekst": "et faresignal"
+},
 "a7719b8827c6d82d": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-7.html",
@@ -32982,6 +38022,114 @@
 "side": "samfunnsfag/kapittel-7.html",
 "type": "oppgave",
 "tekst": "Prøveeksamen: Forbered en presentasjon på 10 minutter om temaet «Å leve sammen i et mangfoldig demokrati». Bruk stoff fra minst tre kapitler."
+},
+"a8ec9f8793e83fe8": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en fagtekst"
+},
+"92b2b6212bcafd7d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "fordi"
+},
+"0b4ebb2463cb337d": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "derfor"
+},
+"d338f07cb12aa9df": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et motargument"
+},
+"fb164a1bd35b02f5": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å reflektere"
+},
+"31124d7783b06710": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en erfaring"
+},
+"f553d752071f39a1": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å uttrykke"
+},
+"4e6887acf5738f17": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en tilbakemelding"
+},
+"329094d6547743b4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et kriterium"
+},
+"3b5b7d1a07779359": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et utkast"
+},
+"5ae9e36c23cb3b0e": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å forbedre"
+},
+"d7616c7f69599f7b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en disposisjon"
+},
+"1c0b5a17094d6d88": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en presentasjon"
+},
+"4c89ac25948e2fb4": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "et kassekort"
+},
+"36d7d6d1082f2254": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en standpunktkarakter"
+},
+"49a7241d88f6aaa7": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en eksamen"
+},
+"8423cc615f5b0aea": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "en sammenheng"
+},
+"4fac3b133838e635": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-7.html",
+"type": "ord",
+"tekst": "å repetere"
 },
 "78c61a2226c0b8ab": {
 "fag": "samfunnsfag",

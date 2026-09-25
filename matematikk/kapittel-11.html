@@ -1195,10 +1195,12 @@
 
   // ---------- innleste lydfiler (lages med lag_lyd.py og ligger i lyd/ på nettstedet) ----------
   function rot() { return /\/(matematikk|naturfag|samfunnsfag)\/[^\/]*$/.test(location.pathname) ? '../' : ''; }
-  if (location.protocol !== 'file:' && window.fetch) {
-    fetch(rot() + 'lyd/lyd.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) { if (j && j.filer) innlest = new Set(j.filer); }).catch(function () {});
-  }
+  // Tekst og ord leses bare opp når det finnes innlest lyd. Oppgaver kan bruke nettleserens stemme.
+  var lydKlar = (location.protocol !== 'file:' && window.fetch)
+    ? fetch(rot() + 'lyd/lyd.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) { if (j && j.filer) innlest = new Set(j.filer); }).catch(function () {})
+    : Promise.resolve();
+  function nettleserTale(type) { return type === 'oppgave'; }
   function hash(t) {
     if (!window.crypto || !crypto.subtle) return Promise.resolve(null);
     return crypto.subtle.digest('SHA-1', new TextEncoder().encode(t)).then(function (b) {
@@ -1303,11 +1305,7 @@
       ut.push({ el: k, type: 'ord', tekst: ordkortTekst(k), hvor: 'h4' });
     });
     rot.querySelectorAll('main .ordbrikke').forEach(function (b) {
-      if (b.classList.contains('lytt-ord')) return;
-      b.classList.add('lytt-ord'); b.title = 'Klikk for å høre ordet'; b.tabIndex = 0;
-      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'ingen' });
-      b.addEventListener('click', function () { les(b, tekstFra(b)); });
-      b.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); les(b, tekstFra(b)); } });
+      ut.push({ el: b, type: 'ord', tekst: tekstFra(b), hvor: 'celle' });
     });
     rot.querySelectorAll('main table.ordliste tbody tr').forEach(function (tr) {
       var c = tr.cells && tr.cells[0];
@@ -1345,48 +1343,59 @@
     koe = setninger(tekst);
     neste();
   }
-  function les(el, tekst) {
+  function les(el, tekst, type) {
     var samme = aktiv === el;
     stopp();
     if (samme) return;
     tekst = tekst || tekstFra(el);
+    var reserve = nettleserTale(type) ? function () { lyd = null; snakk(el, tekst); } : function () { ferdig(); };
     aktiv = el; el._lyttTekst = tekst; el.classList.add('lytt-leser');
-    if (!innlest) { snakk(el, tekst); return; }
+    if (!innlest) { reserve(); return; }
     hash(tekst).then(function (id) {
       if (aktiv !== el) return;
       if (id && innlest.has(id)) {
         lyd = new Audio(rot() + 'lyd/' + id + '.mp3');
         lyd.playbackRate = fart > 0.8 ? 1 : 0.8;
         lyd.onended = ferdig;
-        lyd.onerror = function () { lyd = null; snakk(el, tekst); };
+        lyd.onerror = reserve;
         melding('Spiller av …', false);
-        lyd.play().catch(function () { lyd = null; snakk(el, tekst); });
-      } else snakk(el, tekst);
+        lyd.play().catch(reserve);
+      } else reserve();
     });
   }
 
   // ---------- knapper ----------
   var IKON = '<' + 'svg view' + 'Box="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a4.5 4.5 0 0 1 0 7M18.5 6a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></' + 'svg>';
-  function knapp(mål, el, tekst) {
+  function knapp(mål, el, tekst, type) {
     if (mål.querySelector(':scope > .lytt-knapp')) return;
     var b = document.createElement('button');
     b.type = 'button'; b.className = 'lytt-knapp';
     b.setAttribute('aria-label', 'Les opp'); b.title = 'Les opp';
     b.innerHTML = IKON;
-    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); les(el, tekst); });
+    b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); les(el, tekst, type); });
     mål.insertBefore(b, mål.firstChild);
   }
+  function feste(b) {
+    if (b.hvor === 'foran') knapp(b.el, b.el, b.tekst, b.type);
+    else if (b.hvor === 'h4') { var h = b.el.querySelector('h4'); if (h) knapp(h, b.el, b.tekst, b.type); }
+    else if (b.hvor === 'celle' && !b.el.classList.contains('lytt-ord')) {
+      var c = b.el;
+      c.classList.add('lytt-ord'); c.title = 'Klikk for å høre ordet'; c.tabIndex = 0;
+      var h = function () { les(c, b.tekst, b.type); };
+      c.addEventListener('click', h);
+      c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h(); } });
+    }
+  }
+  // Knapp bare der det kan leses opp: innlest lyd, eller oppgaver (nettleserens stemme).
   function klargjor(rotEl) {
-    blokker(rotEl).forEach(function (b) {
-      if (b.hvor === 'foran') knapp(b.el, b.el, b.tekst);
-      else if (b.hvor === 'h4') { var h = b.el.querySelector('h4'); if (h) knapp(h, b.el, b.tekst); }
-      else if (b.hvor === 'celle' && !b.el.classList.contains('lytt-ord')) {
-        var c = b.el;
-        c.classList.add('lytt-ord'); c.title = 'Klikk for å høre ordet'; c.tabIndex = 0;
-        var h = function () { les(c, b.tekst); };
-        c.addEventListener('click', h);
-        c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h(); } });
-      }
+    var alle = blokker(rotEl);
+    alle.filter(function (b) { return nettleserTale(b.type); }).forEach(feste);
+    lydKlar.then(function () {
+      if (!innlest) return;
+      alle.forEach(function (b) {
+        if (nettleserTale(b.type)) return;
+        hash(b.tekst).then(function (id) { if (id && innlest.has(id)) feste(b); });
+      });
     });
   }
   function start() { klargjor(document); }
