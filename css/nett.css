@@ -402,3 +402,54 @@ figure.foto svg { max-width: 560px; }
   figure.foto svg { max-width: 100%; }
 }
 @media (max-width: 1099px) { figure.foto { max-width: 560px; margin-left: auto; margin-right: auto; } }
+
+/* ==========================================================
+   Leseoppsett (25.09.2026)
+   Én lesespalte midt på siden: overskrift, tekst, bokser og figurer
+   står under hverandre med samme venstrekant, så overskriften står
+   rett over teksten den hører til. KI-bildene står under teksten de
+   hører til (ikke ved siden av), i samme størrelse gjennomgående.
+   Tegnede diagrammer vises i naturlig størrelse, ikke i hele bredden.
+   ========================================================== */
+.innhold > section:not(.kapittelapning),
+.innhold > .ovbanner,
+.innhold > .kapittelfasit{
+  max-width: 48rem; margin-left: auto; margin-right: auto;
+}
+.innhold > section > p,
+.innhold > p,
+.innhold > section > .delmaal{ max-width: none; margin-left: 0; margin-right: 0; }
+.innhold > section > h2,
+.innhold > section > h3{ margin-left: 0; margin-right: 0; }
+
+/* diagrammer: naturlig størrelse (build_nett setter bredden på hver figur), aldri bredere enn spalta */
+.innhold figure svg{ width: 100%; height: auto; max-width: 100%; }
+.innhold figure{ margin-left: auto; margin-right: auto; }
+.innhold figcaption{ max-width: 40rem; }
+
+/* KI-bilder: under teksten, samme størrelse overalt */
+figure.foto, figure.foto svg{ float: none; width: 100%; max-width: none; margin: 1.2em auto 1.4em; }
+@media (min-width: 1100px){
+  figure.foto{ float: none; width: 100%; margin: 1.2em auto 1.4em; }
+}
+/* på brede skjermer får bildene litt mer plass enn tekstspalta; viktige bilder (klassen «stor») enda mer */
+@media (min-width: 1320px){
+  body:not(.vis-mobil) .innhold > section > figure.stor{
+    width: 56rem; max-width: calc(100vw - 380px);
+    margin-left: 50%; transform: translateX(-50%);
+  }
+}
+@media print{ figure.foto, figure.stor{ width: 100% !important; transform: none !important; margin-left: 0 !important; } }
+/* smal skjerm: topplinja brytes over flere linjer, og lange svaralternativer får bryte linja */
+@media (max-width: 860px){
+  body:not(.vis-pc) .topplinje .innmat{ flex-wrap: wrap; }
+  body:not(.vis-pc) .ordvalg,
+  body:not(.vis-pc) ol.fasit .d{ white-space: normal; }
+}
+body.vis-mobil .topplinje .innmat{ flex-wrap: wrap; }
+body.vis-mobil .ordvalg, body.vis-mobil ol.fasit .d{ white-space: normal; }
+@media (max-width: 860px){
+  body:not(.vis-pc) .matte{ white-space: normal; }
+  body:not(.vis-pc) .innhold table.data{ display: block; overflow-x: auto; }
+  body:not(.vis-pc) .innhold code{ white-space: pre-wrap; word-break: break-word; }
+}

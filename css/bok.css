@@ -798,3 +798,27 @@ ol.delkapitler.to li{ break-inside: avoid; }
 .m4tekst { border-left: 4px solid var(--teal); background: #f3faf8; padding: .6rem 1rem .4rem; margin: 1.2rem 0; border-radius: 0 8px 8px 0; }
 .m4tekst h3 { margin-top: .2rem; }
 .m4tekst .m4kilder { font-size: .85em; color: #4b5a58; }
+
+/* ---- fargeord (25.09.2026) ----
+   Ord som står med farge i teksten, har samme farge i figuren ved siden av
+   (naturfag/figurer_forklaring.py og figurer_evo.punnett). Endres begge steder. */
+.f-gronn{ color: #2e7d4f; font-weight: 700; }
+.f-lilla{ color: #7b4a8c; font-weight: 700; }
+.f-blaa{ color: #2f6fa6; font-weight: 700; }
+.f-gul{ color: #a57a05; font-weight: 700; }
+.f-rod{ color: #c0392b; font-weight: 700; }
+.f-oransje{ color: #b8741a; font-weight: 700; }
+.stoff{ display: inline-block; padding: 0 .45em; border-radius: 5px; color: #fff; font-weight: 700;
+  line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.stoff-co2{ background: #5f6b78; }
+.stoff-vann{ background: #2f6fa6; }
+.stoff-sukker{ background: #b8741a; }
+.stoff-oksygen{ background: #c0392b; }
+.stoff-energi{ background: #c99a06; }
+.gen{ display: inline-block; min-width: 1.6em; padding: 0 .35em; border-radius: 5px; text-align: center;
+  font-weight: 700; border: 1px solid #8a6a1f; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.gen-gul{ background: #f4d98a; }
+.gen-gronn{ background: #b9dca8; }
+.fra-mor{ color: #c0392b; }
+.fra-far{ color: #2d5c7a; }
+.likning{ font-size: 1.05em; line-height: 2.1; }
