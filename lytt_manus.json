@@ -23263,6 +23263,18 @@
 "type": "tekst",
 "tekst": "Det blåser mer og jevnere ute på havet enn på land. Derfor satser mange land på havvind. Havvind tar ikke natur på land, og turbinene er langt unna der folk bor."
 },
+"ca93344617db37dd": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Kort fortalt: slik lager en vindturbin strøm Vinden får bladene til å snurre.Bladene snurrer en aksel inne i maskinhuset på toppen av tårnet.Akselen snurrer generatoren. Der blir bevegelse til elektrisk strøm.Strømmen går i en kabel på havbunnen til land."
+},
+"311670fba2314937": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Figur 7.22 viser hele veien fra vinden til strømmen kommer fram."
+},
 "4cc4325ce1fa7683": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
@@ -23304,6 +23316,24 @@
 "side": "naturfag/kapittel-7.html",
 "type": "tekst",
 "tekst": "En vindturbin gjør bevegelsesenergien i vinden om til elektrisk energi. Vinden får bladene til å rotere, og rotasjonen driver en generator i maskinhuset på toppen av tårnet. I generatoren beveger magneter seg i forhold til spoler av kobbertråd, og det blir indusert en elektrisk strøm. Det er samme prinsipp som i et vannkraftverk, men der er det rennende vann som driver turbinen."
+},
+"6741d25d64e218e0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Figur 7.25 viser hva som skjer inne i generatoren. Den samme idéen brukes i vannkraftverk og i sykkellykter med dynamo."
+},
+"3d26426c709108ad": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Undersøk selv · Lag strøm med en magnet og en spole Dere trenger en spole med mange runder kobbertråd, en sterk magnet og et amperemeter eller multimeter. Har dere en håndsveivgenerator, kan dere bruke den i tillegg. Koble spolen til måleren.Hold magneten stille inne i spolen. Viser måleren noe?Stikk magneten raskt inn i spolen og dra den ut igjen. Se på måleren.Gjør det sakte, og så fort. Prøv også med flere runder tråd eller en sterkere magnet.Sveiv håndsveivgeneratoren sakte og fort, med en lampe koblet til. Når lyser lampa sterkest? Snakk sammen Når blir det strøm, og når blir det ikke strøm?Hvordan ligner forsøket på generatoren i en vindturbin?"
+},
+"a26d619fdb1a51df": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Undersøk selv · Vindturbin i klasserommet Dere trenger en liten modell av en vindturbin, eller en liten motor med propell som brukes som generator, et voltmeter eller multimeter, en vifte og en tommestokk. Ikke ta i bladene mens de snurrer. Koble turbinen til voltmeteret.Sett vifta på laveste styrke, 50 cm fra turbinen. Skriv ned spenningen.Gjenta med middels og høyeste styrke.Flytt vifta til 25 cm og 100 cm. Mål igjen.Skriv resultatene i en tabell, og lag et søylediagram. Snakk sammen Hvordan påvirker vindstyrken hvor mye strøm turbinen gir? Sammenlign med figuren om vindstyrke og effekt.Hvorfor bygger man vindturbiner der det blåser mye, for eksempel ute på havet?"
 },
 "7090603b8c9c8901": {
 "fag": "naturfag",
@@ -23358,6 +23388,18 @@
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
 "tekst": "Hva gir Hywind Tampen strøm til?"
+},
+"cae200c3a0528c54": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "oppgave",
+"tekst": "Se på figur 7.22. Skriv stegene fra vind til strøm med dine egne ord."
+},
+"f1356baef2552dc7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "oppgave",
+"tekst": "Se på figur 7.25. Hva må til for at en generator skal lage strøm?"
 },
 "d2cbf019e18da008": {
 "fag": "naturfag",
