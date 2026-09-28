@@ -10411,11 +10411,17 @@
 "type": "tekst",
 "tekst": "Når flere trenger den samme maten, det samme vannet eller den samme plassen, blir det konkurranse. Trærne i en skog konkurrerer om lys. Harer konkurrerer med hverandre om gress. Konkurranse kan skje mellom individer av samme art og mellom ulike arter."
 },
-"1587ad7d0c9b1703": {
+"8d057b23a7356960": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Rovdyr og byttedyr påvirker hverandre. Når det er mange harer, får gaupene mye mat, og etter en tid blir det flere gauper. Da blir mange harer spist, og det blir færre av dem. Så får gaupene for lite mat, og det blir færre gauper igjen. Figur 1.12 viser et tenkt eksempel. Harene og gaupene står i samme diagram: Harene leser du på aksen til venstre, og gaupene på aksen til høyre. Legg merke til at toppen for gaupene kommer ett år etter toppen for harene."
+"tekst": "Rovdyr og byttedyr påvirker hverandre. Når det er mange harer, får gaupene mye mat, og etter en tid blir det flere gauper. Da blir mange harer spist, og det blir færre av dem. Så får gaupene for lite mat, og det blir færre gauper igjen. Slik går det i en bølge, som tar omtrent ti år."
+},
+"e1c4bca669346219": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "Det kjente eksemplet er fra skogene i Canada. Der lever kanadagaupa nesten bare av snøskoharer. Norske gauper spiser mest rådyr, sau og rein, så her følger de ikke harene på samme måte. Figur 1.12 viser et tenkt eksempel fra Canada. Harene og gaupene står i samme diagram: Harene leser du på aksen til venstre, og gaupene på aksen til høyre. Legg merke til at toppen for gaupene kommer ett år etter toppen for harene. Rovdyrene er ikke det eneste som styrer harene. Også mangel på mat og sykdom gjør at det blir færre harer."
 },
 "a6c10de5097c8381": {
 "fag": "naturfag",
@@ -10441,11 +10447,11 @@
 "type": "oppgave",
 "tekst": "Hvorfor er rypa hvit om vinteren?"
 },
-"fac1cac77b6ac8ec": {
+"acf2d9d6bc810017": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.12. a)Hvor mange harer var det i 2020? b)Hvor mange gauper var det i 2021? c)Hvilket år var det færrest harer?"
+"tekst": "Se på figur 1.12. a)Hvor mange harer var det i 2017? b)Hvor mange gauper var det i 2018? c)Hvilket år var det færrest harer?"
 },
 "2fc32f406cd4faee": {
 "fag": "naturfag",
@@ -10471,11 +10477,11 @@
 "type": "oppgave",
 "tekst": "Er påstanden sann eller usann? a)Isbjørnen har tykt fettlag fordi det er kaldt i Arktis. b)Kamelen er tilpasset snø. c)Konkurranse skjer bare mellom ulike arter."
 },
-"11ceb100c3a043bb": {
+"689cd52d1ecff38d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.12. a)Hvor mange færre harer var det i 2023 enn i 2020? b)Hvilket år var det flest gauper? c)Hvorfor kommer toppen for gaupene ett år etter toppen for harene?"
+"tekst": "Se på figur 1.12. a)Hvor mange færre harer var det i 2021 enn i 2017? b)Hvilket år var det flest gauper? c)Hvorfor kommer toppen for gaupene ett år etter toppen for harene?"
 },
 "68c072fb4bbc2ee9": {
 "fag": "naturfag",
@@ -10495,11 +10501,11 @@
 "type": "oppgave",
 "tekst": "Sorter artene etter om tilpasningen er til noe levende eller noe ikke-levende. Bruk tabell 1.2.isbjørn, kaktus, rype, kongeørn, rein"
 },
-"fdbf1acb87f4e8dd": {
+"f64d8a996d95db22": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Beskriv hva som skjer med harene og gaupene i figur 1.12 fra 2020 til 2024. Forklar sammenhengen."
+"tekst": "Beskriv hva som skjer med harene og gaupene i figur 1.12 fra 2017 til 2023. Forklar sammenhengen."
 },
 "582eeac1bb47686a": {
 "fag": "naturfag",
@@ -13201,6 +13207,12 @@
 "type": "tekst",
 "tekst": "Slik går et signal. Et signal går alltid samme vei gjennom nervecellen: inn gjennom dendrittene, videre gjennom cellekroppen og ut langs aksonet til nerveendene. Langs aksonet går signalet som en liten elektrisk strøm. Mellom nerveendene og neste celle er det et lite mellomrom, en synapse. Der blir signalet sendt videre med signalstoffer, som du leser om lenger ned."
 },
+"15e8cf0ba865ec1b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.25 er en mer virkelighetsnær tegning av en nervecelle. Delene har de samme fargene som i figur 2.24."
+},
 "c288f6480d7637ef": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
@@ -13219,17 +13231,29 @@
 "type": "tekst",
 "tekst": "Hjernen har tre hoveddeler. Storhjernen tar imot inntrykk fra sansene, styrer bevegelsene vi bestemmer oss for, og er der vi tenker, husker og snakker. Lillehjernen sørger for balanse og for at bevegelsene blir jevne. Hjernestammen styrer det vi ikke tenker på, som pust og hjerterytme."
 },
+"542dc1057d02ce9f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.26 viser hvor de tre delene ligger. Ryggmargen går videre ned fra hjernestammen, inne i ryggraden."
+},
 "ef344f8f081bd705": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
 "tekst": "Hvis du tar på en varm kokeplate, trekker du hånda til deg før du kjenner at det gjør vondt. Det er en refleks. Signalet går bare til ryggmargen og tilbake til musklene, uten å gå veien om hjernen. Reflekser beskytter oss fordi de er svært raske."
 },
-"ea8a778f94b15dd0": {
+"3af620f304cc2e86": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.25 viser refleksen steg for steg. Signalet går inn til ryggmargen med en sansenervecelle og rett ut igjen med en motorisk nervecelle. Signalet til hjernen kommer litt senere. Derfor har du trukket hånda bort før du kjenner at det gjør vondt."
+"tekst": "På figur 2.27 har mannen kommet borti en varm kokeplate. Armen bøyer seg og trekker hånda bort av seg selv, før han rekker å tenke."
+},
+"af8018a7a7fb1661": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.28 viser refleksen steg for steg. Signalet går inn til ryggmargen med en sansenervecelle og rett ut igjen med en motorisk nervecelle. Signalet til hjernen kommer litt senere. Derfor har du trukket hånda bort før du kjenner at det gjør vondt."
 },
 "89f9a0e7e66da4e1": {
 "fag": "naturfag",
@@ -13261,11 +13285,11 @@
 "type": "tekst",
 "tekst": "Nervesystemet samarbeider med hormonsystemet. Hormoner er signalstoffer som kjertler slipper ut i blodet. Ved fare slipper binyrene ut adrenalin, som forsterker virkningen av det sympatiske nervesystemet. Nervesignaler er raske og treffer bestemte steder. Hormoner virker langsommere, men kan påvirke mange organer samtidig og over lang tid."
 },
-"8fa77589ec54a093": {
+"4df4ac0d5131bf3a": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Kjertlene. Hormonene lages i kjertler. Figur 2.26 viser hvor de viktigste kjertlene ligger. Blodet frakter hormonene rundt i hele kroppen, men bare de cellene som har en «mottaker» for hormonet, reagerer på det. Hormonet passer i mottakeren omtrent som en nøkkel i en lås."
+"tekst": "Kjertlene. Hormonene lages i kjertler. Figur 2.29 viser hvor de viktigste kjertlene ligger. Blodet frakter hormonene rundt i hele kroppen, men bare de cellene som har en «mottaker» for hormonet, reagerer på det. Hormonet passer i mottakeren omtrent som en nøkkel i en lås."
 },
 "f129466b6327a93f": {
 "fag": "naturfag",
@@ -13273,11 +13297,11 @@
 "type": "tekst",
 "tekst": "Viktige kjertler og hormoner hypofysen (under hjernen) — lager veksthormon og hormoner som styrer de andre kjertlene.skjoldbruskkjertelen (foran på halsen) — lager tyroksin, som styrer hvor fort cellene bruker energi. Det kalles stoffskiftet.binyrene (på toppen av nyrene) — lager adrenalin ved stress og fare.bukspyttkjertelen — lager insulin og glukagon, som styrer blodsukkeret.eggstokkene lager østrogen og progesteron, og testiklene lager testosteron. Kjønnshormonene styrer puberteten og evnen til å få barn."
 },
-"9b22d81db96491d2": {
+"2da880d87907190b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Blodsukkeret holdes jevnt. Blodsukkeret er et godt eksempel på hvordan hormonene virker. Følg tallene i figur 2.27. (1) Når du har spist, stiger mengden sukker i blodet. (2) Da slipper bukspyttkjertelen ut insulin. Insulinet gjør at cellene tar opp sukker, og at leveren lagrer sukker. Da synker blodsukkeret igjen. (3) Når det har gått lang tid siden du spiste, synker blodsukkeret. (4) Da slipper bukspyttkjertelen ut glukagon, og leveren slipper ut sukker i blodet. Slik holder kroppen blodsukkeret passe høyt hele tiden."
+"tekst": "Blodsukkeret holdes jevnt. Blodsukkeret er et godt eksempel på hvordan hormonene virker. Følg tallene i figur 2.30. (1) Når du har spist, stiger mengden sukker i blodet. (2) Da slipper bukspyttkjertelen ut insulin. Insulinet gjør at cellene tar opp sukker, og at leveren lagrer sukker. Da synker blodsukkeret igjen. (3) Når det har gått lang tid siden du spiste, synker blodsukkeret. (4) Da slipper bukspyttkjertelen ut glukagon, og leveren slipper ut sukker i blodet. Slik holder kroppen blodsukkeret passe høyt hele tiden."
 },
 "3973733a963f87cf": {
 "fag": "naturfag",
@@ -13345,11 +13369,11 @@
 "type": "tekst",
 "tekst": "I celleåndingen skjer det motsatte. Cellene bruker oksygen til å bryte ned druesukker, og energien blir frigjort. Karbondioksid og vann blir til overs. Dette skjer i mitokondriene, både i dyreceller og planteceller."
 },
-"371b38dfd8b32437": {
+"7da1d91087e34281": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.28 viser hvordan stoffene går rundt i en ring mellom de to prosessene. Plantene har både bladgrønnkorn og mitokondrier, så de gjør begge deler: fotosyntese i lyset og celleånding hele døgnet. Dyr og mennesker har bare mitokondrier. Vi får druesukkeret fra maten og oksygenet fra lufta."
+"tekst": "Figur 2.31 viser hvordan stoffene går rundt i en ring mellom de to prosessene. Plantene har både bladgrønnkorn og mitokondrier, så de gjør begge deler: fotosyntese i lyset og celleånding hele døgnet. Dyr og mennesker har bare mitokondrier. Vi får druesukkeret fra maten og oksygenet fra lufta."
 },
 "e019c76ba9a81ebf": {
 "fag": "naturfag",
@@ -13386,6 +13410,12 @@
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
 "tekst": "Plantene tar inn CO₂ og slipper ut oksygen og vanndamp gjennom små åpninger på undersiden av bladene, spalteåpningene. Når det er varmt og tørt, lukker planten spalteåpningene for å spare vann. Da kommer det også mindre CO₂ inn, og fotosyntesen går saktere. Tørke kan derfor gi mindre avlinger, selv om det er mye sol."
+},
+"604b0f4093c0d53a": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.32 viser et blad forstørret mange ganger. Cellene øverst i bladet, der lyset kommer inn, er fulle av bladgrønnkorn. Spalteåpningene er på undersiden. Gjennom luftrommene inne i bladet kommer CO₂ fra spalteåpningene fram til cellene."
 },
 "70239bae3c5e4ceb": {
 "fag": "naturfag",
@@ -13429,11 +13459,11 @@
 "type": "tekst",
 "tekst": "Mange tror at stølheten dagen etter kommer av melkesyre. Det stemmer ikke. Stølhet kommer av bittesmå skader i musklene når de blir brukt på en ny eller uvant måte. Kroppen reparerer skadene, og musklene blir litt sterkere."
 },
-"4f01bf80e5a1005b": {
+"fd1dfa874ac563a7": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.29 viser hvorfor hvile er like viktig som selve treningen. Musklene blir ikke sterkere mens du trener, men mens de blir reparert etterpå. Kroppen trenger søvn og mat, særlig protein, for å reparere dem. Trener du hardt igjen før musklene er reparert, kan du bli sliten og skadet i stedet for sterkere."
+"tekst": "Figur 2.33 viser hvorfor hvile er like viktig som selve treningen. Musklene blir ikke sterkere mens du trener, men mens de blir reparert etterpå. Kroppen trenger søvn og mat, særlig protein, for å reparere dem. Trener du hardt igjen før musklene er reparert, kan du bli sliten og skadet i stedet for sterkere."
 },
 "de9a9104ce691d69": {
 "fag": "naturfag",
@@ -13447,6 +13477,12 @@
 "type": "tekst",
 "tekst": "Kroppen har tre typer muskelvev. Skjelettmusklene er festet til skjelettet med sener og styres av viljen. Glatt muskulatur finnes i tarmen, blodårene og livmoren, og arbeider uten at vi tenker på det. Hjertemuskelen trekker seg sammen hele livet uten pause. Musklene arbeider ofte i par: Når biceps trekker seg sammen og bøyer armen, slapper triceps av, og omvendt."
 },
+"5b8c1cc9e7c3ed46": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.34 viser musklene i overarmen. En muskel kan bare trekke, ikke skyve. Derfor trengs det én muskel for å bøye armen og en annen for å strekke den."
+},
 "d9324abfd4829765": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
@@ -13458,6 +13494,12 @@
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
 "tekst": "Oppvarming før trening gjør musklene varmere og mer smidige, og reduserer risikoen for skader. Etter hard trening trenger musklene hvile og næring, særlig protein og karbohydrater, for å reparere seg og bli sterkere."
+},
+"4ec9823b81717fb0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.35 viser de to delene: først trening, så hvile, søvn og mat."
 },
 "d6d4e7de47af538d": {
 "fag": "naturfag",
@@ -17719,17 +17761,17 @@
 "type": "tekst",
 "tekst": "Delmål — etter dette delkapitlet kan du skille mellom rene stoffer og blandinger forklare hva en løsning er velge metode for å skille en blanding"
 },
-"e01b8ccff62bb1de": {
+"f58d2c49c4de98ad": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Et rent stoff består av bare én type stoff, for eksempel rent vann eller gull. En blanding består av flere stoffer, for eksempel luft, melk og saltvann. Når et stoff løser seg helt i en væske, kaller vi blandingen en løsning. Saltvann er en løsning."
+"tekst": "Et rent stoff består av bare én type stoff, for eksempel rent vann eller gull. En blanding består av flere stoffer, for eksempel luft, melk og saltvann. Når et stoff løser seg helt i en væske, kaller vi blandingen en løsning. Saltvann er en løsning. Figur 5.4 viser noen rene stoffer og blandinger på et kjøkkenbord."
 },
-"119d8ae5980eefc7": {
+"1c8ac82293916579": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Figur 5.4 viser forskjellen med partikler. I et rent stoff er alle partiklene like. Det kan være et grunnstoff, der alle atomene er like, som i jern. Eller det kan være en kjemisk forbindelse, der alle molekylene er like, som i rent vann. I en blanding er det flere slags partikler. I en løsning er partiklene av det ene stoffet spredt jevnt mellom de andre, så du ikke kan se dem. Vann fra springen er egentlig en blanding, fordi det er litt salter og luft løst i det."
+"tekst": "Figur 5.5 viser forskjellen med partikler. I et rent stoff er alle partiklene like. Det kan være et grunnstoff, der alle atomene er like, som i jern. Eller det kan være en kjemisk forbindelse, der alle molekylene er like, som i rent vann. I en blanding er det flere slags partikler. I en løsning er partiklene av det ene stoffet spredt jevnt mellom de andre, så du ikke kan se dem. Vann fra springen er egentlig en blanding, fordi det er litt salter og luft løst i det."
 },
 "1233820bb35bfefa": {
 "fag": "naturfag",
@@ -17743,17 +17785,23 @@
 "type": "tekst",
 "tekst": "Slik skiller vi blandinger Filtrering — skiller et fast stoff som ikke løser seg, fra en væske.Fordamping — væsken forsvinner, og det oppløste stoffet blir igjen.Magnet — trekker ut jern fra en blanding.Destillasjon — væsken koker, og dampen blir til væske igjen i et annet kar."
 },
-"2c7fb47b688ced50": {
+"90042fb77505fae1": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Hvorfor virker metodene? Vi kan skille stoffer fordi de har ulike egenskaper, slik du lærte i 5.1. Et filter slipper gjennom vann og små partikler, men ikke store sandkorn. Vann koker ved 100 °C, men salt koker først ved over 1400 °C. Derfor fordamper vannet, og saltet blir igjen. Jern blir trukket mot en magnet, men sand og salt blir ikke det. Figur 5.5 viser hvilken egenskap hvert steg i forsøket under bruker."
+"tekst": "Figur 5.6 viser de fire metodene."
 },
-"b8a8f76f4ba26933": {
+"e76ec53a3a19aacc": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Ved destillasjon koker vi blandingen og kjøler ned dampen, så den blir til væske igjen i et annet kar. Slik kan man lage rent vann av sjøvann. Slik skiller man også sprit fra vann, fordi sprit koker ved lavere temperatur (78 °C) enn vann."
+"tekst": "Hvorfor virker metodene? Vi kan skille stoffer fordi de har ulike egenskaper, slik du lærte i 5.1. Et filter slipper gjennom vann og små partikler, men ikke store sandkorn. Vann koker ved 100 °C, men salt koker først ved over 1400 °C. Derfor fordamper vannet, og saltet blir igjen. Jern blir trukket mot en magnet, men sand og salt blir ikke det. Figur 5.8 viser hvilken egenskap hvert steg i forsøket under bruker."
+},
+"aa82a52e5178e1ef": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "tekst",
+"tekst": "Ved destillasjon koker vi blandingen og kjøler ned dampen, så den blir til væske igjen i et annet kar. Slik kan man lage rent vann av sjøvann. Slik skiller man også sprit fra vann, fordi sprit koker ved lavere temperatur (78 °C) enn vann. Figur 5.7 viser hvordan utstyret ser ut."
 },
 "b2562ee6940bd3ac": {
 "fag": "naturfag",
@@ -17875,11 +17923,11 @@
 "type": "oppgave",
 "tekst": "Koble delen av atomet med ladningen. Skriv tallet og bokstaven.protonnøytronelektronA negativB positivC ingen ladning"
 },
-"69f56e348b331e28": {
+"b009f97318b282de": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.6. a)Hvor mange elektroner har atomet? b)Hvor mange protoner har atomet? c)Hvor mange nøytroner har atomet?"
+"tekst": "Se på figur 5.9. a)Hvor mange elektroner har atomet? b)Hvor mange protoner har atomet? c)Hvor mange nøytroner har atomet?"
 },
 "5a398b444cbfc162": {
 "fag": "naturfag",
@@ -17929,11 +17977,11 @@
 "type": "oppgave",
 "tekst": "Et atom har 6 protoner. Hvor mange elektroner har det?"
 },
-"603a3303caa6df53": {
+"457d8fd759de183b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.7. Tell atomene i molekylene. a)Hvor mange hydrogenatomer er det i metan (CH₄)? b)Hvor mange oksygenatomer er det i karbondioksid (CO₂)?"
+"tekst": "Se på figur 5.10. Tell atomene i molekylene. a)Hvor mange hydrogenatomer er det i metan (CH₄)? b)Hvor mange oksygenatomer er det i karbondioksid (CO₂)?"
 },
 "555353ca5f4d809b": {
 "fag": "naturfag",
@@ -18055,17 +18103,17 @@
 "type": "oppgave",
 "tekst": "Hva heter grunnstoffet? a)H b)N c)He d)Mg e)K"
 },
-"072c14ac9cae11e8": {
+"a6817a306db0c2d0": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.8. Hva er atomnummeret? a)C b)O c)Al d)Ar"
+"tekst": "Se på figur 5.11. Hva er atomnummeret? a)C b)O c)Al d)Ar"
 },
-"d407a7980b0602d9": {
+"084627c902f36317": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.8. Hvilken gruppe og periode står grunnstoffet i? a)Na b)Cl"
+"tekst": "Se på figur 5.11. Hvilken gruppe og periode står grunnstoffet i? a)Na b)Cl"
 },
 "703ed02cb38d0668": {
 "fag": "naturfag",
@@ -18097,11 +18145,11 @@
 "type": "oppgave",
 "tekst": "Hvor mange kjente grunnstoffer finnes det?"
 },
-"0be0b924c1aa23be": {
+"196b935449dfcdd4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.8. Hvilket grunnstoff har atomnummer 8?"
+"tekst": "Se på figur 5.11. Hvilket grunnstoff har atomnummer 8?"
 },
 "97d4434cad1959b2": {
 "fag": "naturfag",
@@ -18115,11 +18163,11 @@
 "type": "oppgave",
 "tekst": "Litium og natrium står i samme gruppe. Hva har de felles?"
 },
-"8aa02252828c5c73": {
+"545ce331607d4d98": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.8. Hvor mange av de 20 første grunnstoffene er metaller?"
+"tekst": "Se på figur 5.11. Hvor mange av de 20 første grunnstoffene er metaller?"
 },
 "37cb0836a66ba5bc": {
 "fag": "naturfag",
@@ -18283,11 +18331,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 5.3. a)Hvor mange gram mindre veide det åpne glasset etter forsøket? b)Hvorfor ble det åpne glasset lettere, men ikke den lukkede posen?"
 },
-"c5c4fd7780cad0fc": {
+"1e05d6bc98470d42": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.9. Tell atomene. a)Hvor mange oksygenatomer er det på venstre side? b)Hvor mange oksygenatomer er det på høyre side? c)Hva forteller det?"
+"tekst": "Se på figur 5.12. Tell atomene. a)Hvor mange oksygenatomer er det på venstre side? b)Hvor mange oksygenatomer er det på høyre side? c)Hva forteller det?"
 },
 "054d4e2218a47d23": {
 "fag": "naturfag",
@@ -18343,11 +18391,11 @@
 "type": "tekst",
 "tekst": "Sikkerhet Ikke test avløpsåpner eller andre sterke kjemikalier. De er etsende. Bruk vernebriller."
 },
-"565c3aa01a510c4a": {
+"ea9a04461b4f1254": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.10. Hva er pH-verdien? a)sitronsaft b)rent vann c)såpevann"
+"tekst": "Se på figur 5.13. Hva er pH-verdien? a)sitronsaft b)rent vann c)såpevann"
 },
 "9c60bd69ec38b99c": {
 "fag": "naturfag",
@@ -18391,11 +18439,11 @@
 "type": "oppgave",
 "tekst": "Er påstanden sann eller usann? a)Eddik er surt. b)Såpevann er surt. c)Melk er litt surt."
 },
-"4f11401cb059bb14": {
+"fddbb0b0fab36877": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.10. Hvilket produkt er surest, og hvilket er mest basisk?"
+"tekst": "Se på figur 5.13. Hvilket produkt er surest, og hvilket er mest basisk?"
 },
 "6eb481aff29a69ab": {
 "fag": "naturfag",
@@ -18463,11 +18511,11 @@
 "type": "oppgave",
 "tekst": "Koble faremerket med betydningen. Skriv tallet og bokstaven.brannfarligetsendemiljøskadeligakutt giftigA kan gi alvorlig forgiftning eller død, selv i små mengderB skader dyr og planter i naturenC tar lett fyrD kan gi skade på hud, øyne og metall"
 },
-"7db3f39bd6d7cd43": {
+"42822854cf3b8596": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.11. Hvor mange farepiktogrammer finnes det?"
+"tekst": "Se på figur 5.14. Hvor mange farepiktogrammer finnes det?"
 },
 "0d514560a3273d9b": {
 "fag": "naturfag",
@@ -18577,11 +18625,11 @@
 "type": "oppgave",
 "tekst": "Sett trinnene i avfallstrappa i riktig rekkefølge, fra best til dårligst."
 },
-"9556b4d1f12d7253": {
+"3726063075106b4d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.13. a)Hvor mange kilo matavfall hadde familien? b)Hvor mange kilo avfall hadde de til sammen?"
+"tekst": "Se på figur 5.16. a)Hvor mange kilo matavfall hadde familien? b)Hvor mange kilo avfall hadde de til sammen?"
 },
 "68475d74ecf1e655": {
 "fag": "naturfag",
@@ -18619,11 +18667,11 @@
 "type": "oppgave",
 "tekst": "Hva er farlig avfall? Gi to eksempler."
 },
-"93fc4227d234d16f": {
+"0506104198deaac8": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.13. a)Hvor mange prosent av avfallet var matavfall? Rund av til hele prosent. b)Hvor mye avfall lager familien på et år (52 uker)?"
+"tekst": "Se på figur 5.16. a)Hvor mange prosent av avfallet var matavfall? Rund av til hele prosent. b)Hvor mye avfall lager familien på et år (52 uker)?"
 },
 "b8adb6f93d4a1f71": {
 "fag": "naturfag",
@@ -21595,11 +21643,11 @@
 "type": "tekst",
 "tekst": "Delmål — etter dette delkapitlet kan du forklare hva energi er kjenne igjen ulike energiformer forklare at energi ikke forsvinner, men går over til andre former"
 },
-"7ed31f0599c942cb": {
+"bbc4b15b3ef86b46": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "tekst",
-"tekst": "Energi er det som får ting til å skje: noe beveger seg, blir varmt, lyser eller vokser. Energi finnes i mange former."
+"tekst": "Energi er det som får ting til å skje: noe beveger seg, blir varmt, lyser eller vokser. Energi finnes i mange former. Figur 7.1 viser seks av dem."
 },
 "e48fb47de3290fdd": {
 "fag": "naturfag",
@@ -21612,6 +21660,24 @@
 "side": "naturfag/kapittel-7.html",
 "type": "tekst",
 "tekst": "Energi kan ikke lages fra ingenting, og den kan ikke forsvinne. Den kan bare gå over til andre former. Når du sykler, blir kjemisk energi fra maten til bevegelsesenergi og varme. Ofte blir noe av energien til varme som vi ikke får brukt."
+},
+"28003e9716783098": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Et eksempel: sykkelturen. Figur 7.2 viser energien på en sykkeltur. Energien i frokosten er kjemisk energi. Musklene gjør den om til bevegelsesenergi. Oppe på toppen av bakken har hun også fått stillingsenergi. Mye av energien blir til varme. Derfor blir hun varm og svett."
+},
+"66d7fa158e7fe954": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Et eksempel: kjelken. Figur 7.3 viser en kjelke i en akebakke. Høyt oppe har kjelken stillingsenergi. På vei ned blir stillingsenergien til bevegelsesenergi, og kjelken får fart. Nede på flata stopper kjelken, fordi friksjonen mot snøen gjør bevegelsesenergien om til varme. Energien er ikke borte, men den er blitt til varme som vi ikke får brukt."
+},
+"ea31aefc911bf555": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Et eksempel: lyspærer. En lampe gjør elektrisk energi om til lys, men også til varme. I en gammeldags glødepære blir det meste av energien til varme. En LED-pære gir like mye lys med mye mindre energi. Figur 7.4 viser forskjellen: Hånda over glødepæra kjenner at det er varmt."
 },
 "d5280cdd5424a7f3": {
 "fag": "naturfag",
@@ -21715,11 +21781,11 @@
 "type": "tekst",
 "tekst": "I et vannkraftverk har vannet i magasinet stillingsenergi. Vannet renner gjennom et rør og får bevegelsesenergi. Det får en turbin til å snurre, og generatoren gjør bevegelsen om til elektrisk energi. Men hvem løftet vannet opp? Sola, som fikk vannet til å fordampe, slik du lærte om vannets kretsløp i kapittel 1."
 },
-"f0e48467dcde2323": {
+"6c2e00eeaf760d8a": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.3. Skriv navnet ved tallene 1–8. Velg blant: demning, elv, generator, kraftledning, kraftstasjon, magasin, rør, turbin."
+"tekst": "Se på figur 7.7. Skriv navnet ved tallene 1–8. Velg blant: demning, elv, generator, kraftledning, kraftstasjon, magasin, rør, turbin."
 },
 "8b85fabfbdd08594": {
 "fag": "naturfag",
@@ -21817,11 +21883,11 @@
 "type": "oppgave",
 "tekst": "Sorter energikildene.naturgass, bioenergi, bølgekraft, kull, jordvarme"
 },
-"180a4a218ea86c05": {
+"05e6bc7dc443af43": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.6. a)Hvor mange prosent av strømmen kom fra vannkraft? b)Hvor mange prosent kom fra vindkraft?"
+"tekst": "Se på figur 7.10. a)Hvor mange prosent av strømmen kom fra vannkraft? b)Hvor mange prosent kom fra vindkraft?"
 },
 "d5e1a2139d0bc281": {
 "fag": "naturfag",
@@ -21853,17 +21919,17 @@
 "type": "oppgave",
 "tekst": "Er energikilden fornybar eller ikke-fornybar? a)naturgass b)bølgekraft c)jordvarme"
 },
-"f01cddad97a96a7f": {
+"251b0300bd8ff5ab": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.6. Hvor mange prosent av strømmen kom fra solkraft?"
+"tekst": "Se på figur 7.10. Hvor mange prosent av strømmen kom fra solkraft?"
 },
-"b6c2682790188a8f": {
+"fab28978d0ca1a09": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.6. a)Hvor mange prosent kom fra vannkraft og vindkraft til sammen? b)Norge produserte 161,8 TWh. Omtrent hvor mange TWh kom fra vannkraft?"
+"tekst": "Se på figur 7.10. a)Hvor mange prosent kom fra vannkraft og vindkraft til sammen? b)Norge produserte 161,8 TWh. Omtrent hvor mange TWh kom fra vannkraft?"
 },
 "0234ea73295d8e42": {
 "fag": "naturfag",
@@ -21919,17 +21985,17 @@
 "type": "tekst",
 "tekst": "Undersøk selv · Enkel strømkrets Dere trenger et batteri, tre ledninger, en lyspære eller LED og en bryter. Koble batteri, bryter og lampe i en ring.Slå bryteren av og på.Ta ut bryteren og sett inn ulike materialer i stedet. Lyser lampa? Snakk sammen Hvilke materialer leder strøm?Hvorfor skal vi aldri gjøre dette med strøm fra stikkontakten?"
 },
-"d017bb3f2a61e1f2": {
+"4f12992c04e0ee0d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.8. Skriv navnet ved tallene 1–4."
+"tekst": "Se på figur 7.12. Skriv navnet ved tallene 1–4."
 },
-"6284de73ef4f94f1": {
+"44f6a8f9d2cc5d41": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.8. Lyser lampa? Forklar."
+"tekst": "Se på figur 7.12. Lyser lampa? Forklar."
 },
 "2dcd97c60a5ed54a": {
 "fag": "naturfag",
@@ -22393,17 +22459,17 @@
 "type": "tekst",
 "tekst": "Kilder og mer å lese: FNs klimapanel (IPCC), sjette hovedrapport (2021); Store norske leksikon: «drivhuseffekt»."
 },
-"fbd9c2ead8e0e908": {
+"90614cec10504f2d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.10. Skriv navnet ved tallene 1–4. Velg blant: drivhusgasser, jordoverflaten, sollys, varmestråling."
+"tekst": "Se på figur 7.14. Skriv navnet ved tallene 1–4. Velg blant: drivhusgasser, jordoverflaten, sollys, varmestråling."
 },
-"1227db827e7a20ad": {
+"ec1fe6aa9642870b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.9. Hvilke tre drivhusgasser er tegnet som molekyler?"
+"tekst": "Se på figur 7.13. Hvilke tre drivhusgasser er tegnet som molekyler?"
 },
 "61b5bc560b3e66e3": {
 "fag": "naturfag",
@@ -22411,17 +22477,17 @@
 "type": "oppgave",
 "tekst": "Er gassen en drivhusgass? a)karbondioksid b)oksygen c)metan d)nitrogen"
 },
-"08a5108911b7431e": {
+"87a02def3a953b52": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.11. a)Hvor mye CO₂ var det i lufta i 1750? b)Hvor mye var det i 2025?"
+"tekst": "Se på figur 7.15. a)Hvor mye CO₂ var det i lufta i 1750? b)Hvor mye var det i 2025?"
 },
-"68196a476e806d53": {
+"85e8ab4da2c8fdb4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.12. Hva var temperaturen i glasset etter 15 minutter?"
+"tekst": "Se på figur 7.16. Hva var temperaturen i glasset etter 15 minutter?"
 },
 "f80f8ee9da6c037c": {
 "fag": "naturfag",
@@ -22441,11 +22507,11 @@
 "type": "oppgave",
 "tekst": "Hvor kommer metan fra? Nevn to kilder."
 },
-"f93705f2dade68b4": {
+"1384b7a0d19e8504": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.12. Hvor varmt var det utenfor glasset etter 15 minutter?"
+"tekst": "Se på figur 7.16. Hvor varmt var det utenfor glasset etter 15 minutter?"
 },
 "2543abe3f516890c": {
 "fag": "naturfag",
@@ -22453,17 +22519,17 @@
 "type": "oppgave",
 "tekst": "Hvor mye kaldere ville jorda vært uten drivhuseffekten?"
 },
-"a1c4533f19a7e370": {
+"f05d3e721d84050d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.11. a)Hvor mange ppm har CO₂ økt fra 1750 til 2025? b)Hvor mange prosent er økningen? Rund av til hele prosent."
+"tekst": "Se på figur 7.15. a)Hvor mange ppm har CO₂ økt fra 1750 til 2025? b)Hvor mange prosent er økningen? Rund av til hele prosent."
 },
-"ca37ae75266357e5": {
+"ec6441be9a790340": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
 "type": "oppgave",
-"tekst": "Se på figur 7.12. Hvor mange grader varmere var det i glasset enn utenfor etter 15 minutter?"
+"tekst": "Se på figur 7.16. Hvor mange grader varmere var det i glasset enn utenfor etter 15 minutter?"
 },
 "985e362e1ecc79f0": {
 "fag": "naturfag",
