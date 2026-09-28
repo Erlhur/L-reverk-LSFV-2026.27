@@ -453,3 +453,18 @@ body.vis-mobil .ordvalg, body.vis-mobil ol.fasit .d{ white-space: normal; }
   body:not(.vis-pc) .innhold table.data{ display: block; overflow-x: auto; }
   body:not(.vis-pc) .innhold code{ white-space: pre-wrap; word-break: break-word; }
 }
+
+/* ---- ordbrikker med forklaring og kompetansemål som kan åpnes (28.09.2026) ---- */
+.ordbrikke[data-forkl], .ordbrikke[data-eks]{ cursor: pointer; }
+.ordbrikke.apen{ background: #2d5c7a; border-color: #2d5c7a; color: #fff; }
+.ordforklaring{ position: absolute; z-index: 60; background: #fff; border: 1px solid #c9d3dc; border-radius: 10px;
+  box-shadow: 0 6px 22px rgba(20,40,60,.18); padding: .75rem .95rem; font-size: 1rem; line-height: 1.45; }
+.ordforklaring strong{ display: block; font-size: 1.08rem; margin-bottom: .25rem; color: #1f2d3a; }
+.ordforklaring p{ margin: 0 0 .35rem; }
+.ordforklaring p.eks{ font-style: italic; color: #4a5866; margin: 0; }
+.ordforklaring p.eks::before{ content: "Eksempel: "; font-style: normal; font-weight: 600; }
+.innhold > details.maalboks{ max-width: 48rem; margin: 1rem auto 1.4rem; }
+details.maalboks > summary{ cursor: pointer; font-weight: 700; color: #1d4e89; padding: .2rem 0; }
+details.maalboks[open] > summary{ margin-bottom: .6rem; }
+@media print{ details.maalboks{ display: block; } }
+details.maalboks:not([open]){ padding-top: .7rem; padding-bottom: .7rem; }

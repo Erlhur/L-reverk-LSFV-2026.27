@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Naturfag — modul 3 og 4</title>
-<link rel="stylesheet" href="../css/bok.css">
-<link rel="stylesheet" href="../css/nett.css">
+<link rel="stylesheet" href="../css/bok.css?v=6bee48db">
+<link rel="stylesheet" href="../css/nett.css?v=0bf1747e">
 </head>
 <body>
 <header class="topplinje">
@@ -299,6 +299,44 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
   window.addEventListener('pagehide', function () { if (harTale) synth.cancel(); if (lyd) lyd.pause(); });
   window.addEventListener('hashchange', stopp);
+})();
+</script>
+<script>
+(function () {
+  var boks = null, aktiv = null;
+  function lukk() {
+    if (boks) { boks.remove(); boks = null; }
+    if (aktiv) { aktiv.setAttribute('aria-expanded', 'false'); aktiv.classList.remove('apen'); aktiv = null; }
+  }
+  function vis(b) {
+    if (aktiv === b) { lukk(); return; }
+    lukk();
+    var f = b.getAttribute('data-forkl'), e = b.getAttribute('data-eks');
+    if (!f && !e) return;
+    boks = document.createElement('div');
+    boks.className = 'ordforklaring';
+    boks.setAttribute('role', 'note');
+    var o = document.createElement('strong'); o.textContent = b.textContent; boks.appendChild(o);
+    if (f) { var p = document.createElement('p'); p.textContent = f; boks.appendChild(p); }
+    if (e) { var q = document.createElement('p'); q.className = 'eks'; q.textContent = e; boks.appendChild(q); }
+    document.body.appendChild(boks);
+    var r = b.getBoundingClientRect(), w = Math.min(380, window.innerWidth - 24);
+    boks.style.width = w + 'px';
+    boks.style.left = Math.min(Math.max(12, r.left), window.innerWidth - w - 12) + window.scrollX + 'px';
+    boks.style.top = r.bottom + window.scrollY + 8 + 'px';
+    aktiv = b; b.setAttribute('aria-expanded', 'true'); b.classList.add('apen');
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest && ev.target.closest('.ordbrikke');
+    if (b) { vis(b); return; }
+    if (boks && !boks.contains(ev.target)) lukk();
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape') { lukk(); return; }
+    var b = ev.target.closest && ev.target.closest('.ordbrikke');
+    if (b && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); vis(b); }
+  });
+  window.addEventListener('resize', lukk);
 })();
 </script>
 </body>
