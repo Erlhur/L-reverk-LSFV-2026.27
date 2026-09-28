@@ -10855,6 +10855,12 @@
 "type": "tekst",
 "tekst": "Mange miljøgifter er flyktige: De fordamper i varme områder og blir fraktet med vind og havstrømmer mot nord. I kulden kondenserer de og faller ned med regn og snø. Dette kalles av og til «den globale destillasjonen». Også elver som renner ut i Polhavet, tar med seg forurensing. Miljøgiftene er ofte fettløselige og brytes langsomt ned. De tas opp av plankton, som blir spist av krepsdyr, fisk, sel og til slutt isbjørn. For hvert ledd øker konsentrasjonen. Isbjørnen lever nesten bare av sel, og selens spekk er fullt av fett, og dermed av miljøgifter."
 },
+"e4a208ea51e8a5ea": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "Figur 1.17 viser veien miljøgiftene tar mot nord."
+},
 "352a99cd7d2b7440": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
@@ -11065,6 +11071,12 @@
 "type": "tekst",
 "tekst": "Blomsterengene har forsvunnet i stor grad fordi jordbruket har endret seg. Før slo bøndene enger for hånd og lot dem blomstre hver sommer. I dag gjødsles og slås mange enger oftere, og andre gror igjen med busker og skog. Lys om natta er en annen trussel: Mange nattaktive insekter flyr mot lyset og dør, og de blir borte som pollinatorer og som mat for flaggermus."
 },
+"f625474456382343": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "Figur 1.18 viser en blomstereng slik mange enger så ut før."
+},
 "d6b33027cc561d2c": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
@@ -11082,6 +11094,12 @@
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
 "tekst": "Mange insekter har fullstendig forvandling: egg, larve, puppe og voksent insekt. Larven og det voksne insektet lever ofte helt forskjellig og trenger ulike ting. Sommerfugllarver spiser blader av bestemte planter, mens de voksne sommerfuglene suger nektar fra blomster. Da må både plantene larvene spiser, og blomstene finnes i samme område. Dette er en av grunnene til at mange insekter er sårbare når leveområdene forandrer seg."
+},
+"999633ab03c935d4": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "Figur 1.19 viser de fire stadiene hos en sommerfugl."
 },
 "9c1c38d9122c5968": {
 "fag": "naturfag",
@@ -13021,6 +13039,12 @@
 "type": "tekst",
 "tekst": "Du spiser en brødskive og går en tur. Hvordan kommer energien i brødet fram til muskelcellene i beina? For å forstå det, må vi følge både maten, lufta og blodet."
 },
+"373ad7139f5ab67b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Figur 2.24 gir en oversikt før du leser videre."
+},
 "c5265a58358b4e16": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
@@ -13189,11 +13213,11 @@
 "type": "tekst",
 "tekst": "Nervesystemet sender beskjeder rundt i kroppen. Det består av nerveceller, som har lange utløpere. Hjernen har rundt 86 milliarder nerveceller. Signalene går som små elektriske strømmer, og de raskeste nervene sender signaler med over 100 meter i sekundet."
 },
-"aac8d94a9ae5569f": {
+"9ceb1a5b22b7d27a": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Slik er en nervecelle bygget. Figur 2.24 viser en nervecelle. Den har en cellekropp med en cellekjerne, akkurat som andre celler. Men den har også lange utløpere som andre celler ikke har. Ordene har samme farge i teksten som i figuren."
+"tekst": "Slik er en nervecelle bygget. Figur 2.25 viser en nervecelle. Den har en cellekropp med en cellekjerne, akkurat som andre celler. Men den har også lange utløpere som andre celler ikke har. Ordene har samme farge i teksten som i figuren."
 },
 "ad9835883cf204fb": {
 "fag": "naturfag",
@@ -13207,11 +13231,11 @@
 "type": "tekst",
 "tekst": "Slik går et signal. Et signal går alltid samme vei gjennom nervecellen: inn gjennom dendrittene, videre gjennom cellekroppen og ut langs aksonet til nerveendene. Langs aksonet går signalet som en liten elektrisk strøm. Mellom nerveendene og neste celle er det et lite mellomrom, en synapse. Der blir signalet sendt videre med signalstoffer, som du leser om lenger ned."
 },
-"15e8cf0ba865ec1b": {
+"0c276dceb4ef23b1": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.25 er en mer virkelighetsnær tegning av en nervecelle. Delene har de samme fargene som i figur 2.24."
+"tekst": "Figur 2.26 er en mer virkelighetsnær tegning av en nervecelle. Delene har de samme fargene som i figur 2.25."
 },
 "c288f6480d7637ef": {
 "fag": "naturfag",
@@ -13231,11 +13255,11 @@
 "type": "tekst",
 "tekst": "Hjernen har tre hoveddeler. Storhjernen tar imot inntrykk fra sansene, styrer bevegelsene vi bestemmer oss for, og er der vi tenker, husker og snakker. Lillehjernen sørger for balanse og for at bevegelsene blir jevne. Hjernestammen styrer det vi ikke tenker på, som pust og hjerterytme."
 },
-"542dc1057d02ce9f": {
+"2b78c4750815884c": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.26 viser hvor de tre delene ligger. Ryggmargen går videre ned fra hjernestammen, inne i ryggraden."
+"tekst": "Figur 2.27 viser hvor de tre delene ligger. Ryggmargen går videre ned fra hjernestammen, inne i ryggraden."
 },
 "ef344f8f081bd705": {
 "fag": "naturfag",
@@ -13243,17 +13267,17 @@
 "type": "tekst",
 "tekst": "Hvis du tar på en varm kokeplate, trekker du hånda til deg før du kjenner at det gjør vondt. Det er en refleks. Signalet går bare til ryggmargen og tilbake til musklene, uten å gå veien om hjernen. Reflekser beskytter oss fordi de er svært raske."
 },
-"3af620f304cc2e86": {
+"15e3e4994fa1a5c4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "På figur 2.27 har mannen kommet borti en varm kokeplate. Armen bøyer seg og trekker hånda bort av seg selv, før han rekker å tenke."
+"tekst": "På figur 2.28 har mannen kommet borti en varm kokeplate. Armen bøyer seg og trekker hånda bort av seg selv, før han rekker å tenke."
 },
-"af8018a7a7fb1661": {
+"8c370b360a8f1f0d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.28 viser refleksen steg for steg. Signalet går inn til ryggmargen med en sansenervecelle og rett ut igjen med en motorisk nervecelle. Signalet til hjernen kommer litt senere. Derfor har du trukket hånda bort før du kjenner at det gjør vondt."
+"tekst": "Figur 2.29 viser refleksen steg for steg. Signalet går inn til ryggmargen med en sansenervecelle og rett ut igjen med en motorisk nervecelle. Signalet til hjernen kommer litt senere. Derfor har du trukket hånda bort før du kjenner at det gjør vondt."
 },
 "89f9a0e7e66da4e1": {
 "fag": "naturfag",
@@ -13285,11 +13309,11 @@
 "type": "tekst",
 "tekst": "Nervesystemet samarbeider med hormonsystemet. Hormoner er signalstoffer som kjertler slipper ut i blodet. Ved fare slipper binyrene ut adrenalin, som forsterker virkningen av det sympatiske nervesystemet. Nervesignaler er raske og treffer bestemte steder. Hormoner virker langsommere, men kan påvirke mange organer samtidig og over lang tid."
 },
-"4df4ac0d5131bf3a": {
+"7887fc559d129dc8": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Kjertlene. Hormonene lages i kjertler. Figur 2.29 viser hvor de viktigste kjertlene ligger. Blodet frakter hormonene rundt i hele kroppen, men bare de cellene som har en «mottaker» for hormonet, reagerer på det. Hormonet passer i mottakeren omtrent som en nøkkel i en lås."
+"tekst": "Kjertlene. Hormonene lages i kjertler. Figur 2.30 viser hvor de viktigste kjertlene ligger. Blodet frakter hormonene rundt i hele kroppen, men bare de cellene som har en «mottaker» for hormonet, reagerer på det. Hormonet passer i mottakeren omtrent som en nøkkel i en lås."
 },
 "f129466b6327a93f": {
 "fag": "naturfag",
@@ -13297,11 +13321,11 @@
 "type": "tekst",
 "tekst": "Viktige kjertler og hormoner hypofysen (under hjernen) — lager veksthormon og hormoner som styrer de andre kjertlene.skjoldbruskkjertelen (foran på halsen) — lager tyroksin, som styrer hvor fort cellene bruker energi. Det kalles stoffskiftet.binyrene (på toppen av nyrene) — lager adrenalin ved stress og fare.bukspyttkjertelen — lager insulin og glukagon, som styrer blodsukkeret.eggstokkene lager østrogen og progesteron, og testiklene lager testosteron. Kjønnshormonene styrer puberteten og evnen til å få barn."
 },
-"2da880d87907190b": {
+"1b64a9a92f3aba62": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Blodsukkeret holdes jevnt. Blodsukkeret er et godt eksempel på hvordan hormonene virker. Følg tallene i figur 2.30. (1) Når du har spist, stiger mengden sukker i blodet. (2) Da slipper bukspyttkjertelen ut insulin. Insulinet gjør at cellene tar opp sukker, og at leveren lagrer sukker. Da synker blodsukkeret igjen. (3) Når det har gått lang tid siden du spiste, synker blodsukkeret. (4) Da slipper bukspyttkjertelen ut glukagon, og leveren slipper ut sukker i blodet. Slik holder kroppen blodsukkeret passe høyt hele tiden."
+"tekst": "Blodsukkeret holdes jevnt. Blodsukkeret er et godt eksempel på hvordan hormonene virker. Følg tallene i figur 2.31. (1) Når du har spist, stiger mengden sukker i blodet. (2) Da slipper bukspyttkjertelen ut insulin. Insulinet gjør at cellene tar opp sukker, og at leveren lagrer sukker. Da synker blodsukkeret igjen. (3) Når det har gått lang tid siden du spiste, synker blodsukkeret. (4) Da slipper bukspyttkjertelen ut glukagon, og leveren slipper ut sukker i blodet. Slik holder kroppen blodsukkeret passe høyt hele tiden."
 },
 "3973733a963f87cf": {
 "fag": "naturfag",
@@ -13369,11 +13393,11 @@
 "type": "tekst",
 "tekst": "I celleåndingen skjer det motsatte. Cellene bruker oksygen til å bryte ned druesukker, og energien blir frigjort. Karbondioksid og vann blir til overs. Dette skjer i mitokondriene, både i dyreceller og planteceller."
 },
-"7da1d91087e34281": {
+"b487dca05dc8b1b5": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.31 viser hvordan stoffene går rundt i en ring mellom de to prosessene. Plantene har både bladgrønnkorn og mitokondrier, så de gjør begge deler: fotosyntese i lyset og celleånding hele døgnet. Dyr og mennesker har bare mitokondrier. Vi får druesukkeret fra maten og oksygenet fra lufta."
+"tekst": "Figur 2.32 viser hvordan stoffene går rundt i en ring mellom de to prosessene. Plantene har både bladgrønnkorn og mitokondrier, så de gjør begge deler: fotosyntese i lyset og celleånding hele døgnet. Dyr og mennesker har bare mitokondrier. Vi får druesukkeret fra maten og oksygenet fra lufta."
 },
 "e019c76ba9a81ebf": {
 "fag": "naturfag",
@@ -13411,11 +13435,11 @@
 "type": "tekst",
 "tekst": "Plantene tar inn CO₂ og slipper ut oksygen og vanndamp gjennom små åpninger på undersiden av bladene, spalteåpningene. Når det er varmt og tørt, lukker planten spalteåpningene for å spare vann. Da kommer det også mindre CO₂ inn, og fotosyntesen går saktere. Tørke kan derfor gi mindre avlinger, selv om det er mye sol."
 },
-"604b0f4093c0d53a": {
+"29c121da0bd5a30f": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.32 viser et blad forstørret mange ganger. Cellene øverst i bladet, der lyset kommer inn, er fulle av bladgrønnkorn. Spalteåpningene er på undersiden. Gjennom luftrommene inne i bladet kommer CO₂ fra spalteåpningene fram til cellene."
+"tekst": "Figur 2.33 viser et blad forstørret mange ganger. Cellene øverst i bladet, der lyset kommer inn, er fulle av bladgrønnkorn. Spalteåpningene er på undersiden. Gjennom luftrommene inne i bladet kommer CO₂ fra spalteåpningene fram til cellene."
 },
 "70239bae3c5e4ceb": {
 "fag": "naturfag",
@@ -13459,11 +13483,11 @@
 "type": "tekst",
 "tekst": "Mange tror at stølheten dagen etter kommer av melkesyre. Det stemmer ikke. Stølhet kommer av bittesmå skader i musklene når de blir brukt på en ny eller uvant måte. Kroppen reparerer skadene, og musklene blir litt sterkere."
 },
-"fd1dfa874ac563a7": {
+"0c70e2b0902d7828": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.33 viser hvorfor hvile er like viktig som selve treningen. Musklene blir ikke sterkere mens du trener, men mens de blir reparert etterpå. Kroppen trenger søvn og mat, særlig protein, for å reparere dem. Trener du hardt igjen før musklene er reparert, kan du bli sliten og skadet i stedet for sterkere."
+"tekst": "Figur 2.34 viser hvorfor hvile er like viktig som selve treningen. Musklene blir ikke sterkere mens du trener, men mens de blir reparert etterpå. Kroppen trenger søvn og mat, særlig protein, for å reparere dem. Trener du hardt igjen før musklene er reparert, kan du bli sliten og skadet i stedet for sterkere."
 },
 "de9a9104ce691d69": {
 "fag": "naturfag",
@@ -13477,11 +13501,11 @@
 "type": "tekst",
 "tekst": "Kroppen har tre typer muskelvev. Skjelettmusklene er festet til skjelettet med sener og styres av viljen. Glatt muskulatur finnes i tarmen, blodårene og livmoren, og arbeider uten at vi tenker på det. Hjertemuskelen trekker seg sammen hele livet uten pause. Musklene arbeider ofte i par: Når biceps trekker seg sammen og bøyer armen, slapper triceps av, og omvendt."
 },
-"5b8c1cc9e7c3ed46": {
+"eab7da009a043433": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.34 viser musklene i overarmen. En muskel kan bare trekke, ikke skyve. Derfor trengs det én muskel for å bøye armen og en annen for å strekke den."
+"tekst": "Figur 2.35 viser musklene i overarmen. En muskel kan bare trekke, ikke skyve. Derfor trengs det én muskel for å bøye armen og en annen for å strekke den."
 },
 "d9324abfd4829765": {
 "fag": "naturfag",
@@ -13495,11 +13519,11 @@
 "type": "tekst",
 "tekst": "Oppvarming før trening gjør musklene varmere og mer smidige, og reduserer risikoen for skader. Etter hard trening trenger musklene hvile og næring, særlig protein og karbohydrater, for å reparere seg og bli sterkere."
 },
-"4ec9823b81717fb0": {
+"53136367deb56791": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Figur 2.35 viser de to delene: først trening, så hvile, søvn og mat."
+"tekst": "Figur 2.36 viser de to delene: først trening, så hvile, søvn og mat."
 },
 "d6d4e7de47af538d": {
 "fag": "naturfag",
@@ -14317,11 +14341,11 @@
 "type": "tekst",
 "tekst": "Svar: Bare lyset er forskjellig, så forskjeller i høyden må skyldes lyset."
 },
-"f8df6f2649c39269": {
+"7fb56d4127a8cb1a": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "tekst",
-"tekst": "Endrer du to ting samtidig, vet du ikke hva som ga resultatet. Setter du karsen i mørket og gir den mindre vann, kan du ikke si om det var lyset eller vannet."
+"tekst": "Endrer du to ting samtidig, vet du ikke hva som ga resultatet. Setter du karsen i mørket og gir den mindre vann, kan du ikke si om det var lyset eller vannet. Figur 3.2 viser forsøket til Semhar, der bare lyset er ulikt."
 },
 "667eac4e191fb33e": {
 "fag": "naturfag",
@@ -14473,17 +14497,17 @@
 "type": "oppgave",
 "tekst": "Koble størrelsen med enheten. Skriv tallet og bokstaven.lengdemassetidtemperaturA sekund (s)B grader celsius (°C)C meter (m)D kilogram (kg)"
 },
-"b7eecf14772b47f9": {
+"15cd5d4ce8a8d1a6": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.3. Hvor mange grader viser termometeret? a)A b)B c)C"
+"tekst": "Se på figur 3.4. Hvor mange grader viser termometeret? a)A b)B c)C"
 },
-"4d97c00b65bc05a6": {
+"7b09e1bf2878c0e6": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.4. Hvor mye vann er det i målesylinderen?"
+"tekst": "Se på figur 3.5. Hvor mye vann er det i målesylinderen?"
 },
 "fac8a73fc14d2d63": {
 "fag": "naturfag",
@@ -14503,11 +14527,11 @@
 "type": "oppgave",
 "tekst": "Hvorfor må vi alltid skrive enheten etter et måltall?"
 },
-"68a182fd23796d5f": {
+"4c07770df2387732": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.5. Hva var temperaturen etter 15 minutter?"
+"tekst": "Se på figur 3.6. Hva var temperaturen etter 15 minutter?"
 },
 "3cf16adebbc2ee19": {
 "fag": "naturfag",
@@ -14515,11 +14539,11 @@
 "type": "oppgave",
 "tekst": "Hvilken enhet bruker vi for … a)masse b)lengde c)temperatur"
 },
-"68e6656d6e5ad67e": {
+"75e51148be44aa8d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.3. Hvor mange grader er forskjellen mellom termometer A og B?"
+"tekst": "Se på figur 3.4. Hvor mange grader er forskjellen mellom termometer A og B?"
 },
 "80da457faa1c8793": {
 "fag": "naturfag",
@@ -14533,11 +14557,11 @@
 "type": "oppgave",
 "tekst": "Gjør om 2 timer til minutter."
 },
-"ad1b80e58ac7c41b": {
+"472503f175f31416": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.5. a)Hvor mye steg temperaturen fra start til slutt? b)Hva var gjennomsnittstemperaturen? Svar med én desimal."
+"tekst": "Se på figur 3.6. a)Hvor mye steg temperaturen fra start til slutt? b)Hva var gjennomsnittstemperaturen? Svar med én desimal."
 },
 "bf3352712f2f50f4": {
 "fag": "naturfag",
@@ -14557,11 +14581,11 @@
 "type": "oppgave",
 "tekst": "Hvorfor er det bedre å regne ut gjennomsnittet av fem målinger enn å bruke bare én?"
 },
-"35980d46ccf30ca8": {
+"8087051490c31601": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Termometer B i figur 3.3 viser minusgrader. Hvor kan en slik måling være gjort, og hvorfor er det viktig å skrive minustegnet riktig?"
+"tekst": "Termometer B i figur 3.4 viser minusgrader. Hvor kan en slik måling være gjort, og hvorfor er det viktig å skrive minustegnet riktig?"
 },
 "001fbfa2d7d03ad9": {
 "fag": "naturfag",
@@ -14593,17 +14617,17 @@
 "type": "oppgave",
 "tekst": "Se på tabell 3.1. a)Hvilke gjenstander fløt? b)Hvor mange hypoteser var riktige?"
 },
-"12bf2031d3f958e2": {
+"4fb3749e772aaa58": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.7. a)Hvor høy var karsen i lys på dag 6? b)Hvor høy var karsen i mørke på dag 6?"
+"tekst": "Se på figur 3.8. a)Hvor høy var karsen i lys på dag 6? b)Hvor høy var karsen i mørke på dag 6?"
 },
-"fe7a39d378dc6cc8": {
+"bb110060a1768eef": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Hva står på den vannrette aksen i figur 3.7?"
+"tekst": "Hva står på den vannrette aksen i figur 3.8?"
 },
 "b01bd8dec4f6e82e": {
 "fag": "naturfag",
@@ -14623,11 +14647,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 3.1. Hvilke gjenstander sank?"
 },
-"53b388a0996a13fc": {
+"6622fb75cb312d43": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.7. På hvilken dag var karsen i lys 11 mm høy?"
+"tekst": "Se på figur 3.8. På hvilken dag var karsen i lys 11 mm høy?"
 },
 "3eedde17558ad4d1": {
 "fag": "naturfag",
@@ -14635,11 +14659,11 @@
 "type": "oppgave",
 "tekst": "Hva viser et søylediagram best?"
 },
-"fed637f9fe44adab": {
+"2625220d16433125": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.7. a)Hvor mye høyere var karsen i mørke enn i lys på dag 6? b)Hvor mye vokste karsen i lys fra dag 3 til dag 6?"
+"tekst": "Se på figur 3.8. a)Hvor mye høyere var karsen i mørke enn i lys på dag 6? b)Hvor mye vokste karsen i lys fra dag 3 til dag 6?"
 },
 "5802ad497cdd4124": {
 "fag": "naturfag",
@@ -14665,11 +14689,11 @@
 "type": "oppgave",
 "tekst": "Hvorfor er det viktig å skrive ned observasjoner som farge og form, ikke bare tall?"
 },
-"c540d918dec37f67": {
+"b84f154750613c6f": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Et diagram kan få en forskjell til å se større ut enn den er, for eksempel hvis aksen ikke starter på 0. Se på figur 3.5. Hvorfor ser temperaturøkningen stor ut, og hvordan kunne diagrammet vært laget annerledes?"
+"tekst": "Et diagram kan få en forskjell til å se større ut enn den er, for eksempel hvis aksen ikke starter på 0. Se på figur 3.6. Hvorfor ser temperaturøkningen stor ut, og hvordan kunne diagrammet vært laget annerledes?"
 },
 "fe682e3be6a0a062": {
 "fag": "naturfag",
@@ -14773,11 +14797,11 @@
 "type": "oppgave",
 "tekst": "I saltvann ble det smeltede vannet liggende øverst rundt isbiten. Hvorfor kan det gjøre at isen smelter langsommere?"
 },
-"2bb53dcf12bf3111": {
+"e7ab6503b52aae61": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Skriv et avsnitt om feilkilder til forsøket med karse i figur 3.7. Foreslå forbedringer."
+"tekst": "Skriv et avsnitt om feilkilder til forsøket med karse i figur 3.8. Foreslå forbedringer."
 },
 "a9e5ada7b398ef39": {
 "fag": "naturfag",
@@ -15079,11 +15103,11 @@
 "type": "oppgave",
 "tekst": "Hva er fagfellevurdering?"
 },
-"665d20e16e4abd4c": {
+"67b809cf7820f25e": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.9. a)Hvor mange prosent døde i 1846? b)Hvor mange prosent døde i 1848?"
+"tekst": "Se på figur 3.11. a)Hvor mange prosent døde i 1846? b)Hvor mange prosent døde i 1848?"
 },
 "1a1c0e34bcf76ea2": {
 "fag": "naturfag",
@@ -15121,11 +15145,11 @@
 "type": "oppgave",
 "tekst": "Hva var årsaken til at ozonlaget ble tynnere?"
 },
-"84c64a5147eef5b0": {
+"2617909aca0c7212": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.9. a)Hvor mange prosentpoeng lavere var dødeligheten i 1848 enn i 1846? b)Omtrent hvor mange ganger høyere var dødeligheten i 1846 enn i 1848? Rund av til hele tall."
+"tekst": "Se på figur 3.11. a)Hvor mange prosentpoeng lavere var dødeligheten i 1848 enn i 1846? b)Omtrent hvor mange ganger høyere var dødeligheten i 1846 enn i 1848? Rund av til hele tall."
 },
 "be28ee04ab222a26": {
 "fag": "naturfag",
@@ -15288,6 +15312,12 @@
 "side": "naturfag/kapittel-3.html",
 "type": "tekst",
 "tekst": "Atommodellen vi bruker i skolen, med elektroner i skall, er en forenkling. Etter moderne fysikk kan vi ikke si nøyaktig hvor et elektron er, bare hvor det er sannsynlig å finne det. Likevel er skallmodellen nyttig fordi den forklarer mange kjemiske egenskaper. En modell trenger ikke være helt riktig for å være nyttig."
+},
+"eae70d1f30d5c4c9": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "tekst",
+"tekst": "Figur 3.13 viser hvordan bildet av atomet har endret seg."
 },
 "2e54c2c8940ad901": {
 "fag": "naturfag",
@@ -16789,6 +16819,12 @@
 "type": "tekst",
 "tekst": "Hvordan virker den? CRISPR kommer opprinnelig fra bakterier, som bruker systemet til å forsvare seg mot virus. Gensaksen består av et enzym som kan klippe DNA, og et lite RNA-molekyl som fungerer som en adresselapp. RNA-et passer til en bestemt DNA-sekvens og leder enzymet dit. Der klipper enzymet DNA-et. Cellen prøver å reparere bruddet, og forskerne kan bruke dette til å slå av et gen, rette opp en feil eller sette inn en ny DNA-bit."
 },
+"5f1c216d749f5ac5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "tekst",
+"tekst": "Figur 4.14 viser gensaksen i tre steg."
+},
 "266511023f78c1c3": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-4.html",
@@ -16944,6 +16980,12 @@
 "side": "naturfag/kapittel-4.html",
 "type": "tekst",
 "tekst": "Ved meiose lages kjønnsceller: eggceller og sædceller. Da deles cellen to ganger, og hver kjønnscelle får bare 23 kromosomer, ett fra hvert par. Når en eggcelle og en sædcelle smelter sammen, får det befruktede egget 46 kromosomer igjen. Under meiosen blandes genene fra mor og far på nye måter. Derfor blir søsken ulike, og det er variasjon i en art."
+},
+"a40961bcf10bb665": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-4.html",
+"type": "tekst",
+"tekst": "Figur 4.15 viser forskjellen på mitose og meiose."
 },
 "f81388a5fc910a59": {
 "fag": "naturfag",
@@ -18061,6 +18103,12 @@
 "type": "tekst",
 "tekst": "Ikke-metaller tar opp elektroner. Klor har sju valenselektroner og mangler bare ett for å få fullt skall. Klor tar derfor gjerne opp et elektron og blir et negativt ion, Cl⁻. Når natrium og klor møtes, gir natrium et elektron til klor. De motsatt ladede ionene tiltrekker hverandre og danner et ionegitter: koksalt, NaCl. Dette kalles ionebinding. Ionestoffer har høyt smeltepunkt og leder strøm når de er løst i vann, fordi ionene da kan bevege seg. For halogenene er det motsatt av alkalimetallene: Fluor, øverst i gruppen, er mest reaktivt."
 },
+"405459663869603d": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-5.html",
+"type": "tekst",
+"tekst": "Figur 5.12 viser hva som skjer når natrium og klor møtes."
+},
 "d7acd28e4e1f3a87": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
@@ -18331,11 +18379,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 5.3. a)Hvor mange gram mindre veide det åpne glasset etter forsøket? b)Hvorfor ble det åpne glasset lettere, men ikke den lukkede posen?"
 },
-"1e05d6bc98470d42": {
+"0e23ce5c2066258a": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.12. Tell atomene. a)Hvor mange oksygenatomer er det på venstre side? b)Hvor mange oksygenatomer er det på høyre side? c)Hva forteller det?"
+"tekst": "Se på figur 5.13. Tell atomene. a)Hvor mange oksygenatomer er det på venstre side? b)Hvor mange oksygenatomer er det på høyre side? c)Hva forteller det?"
 },
 "054d4e2218a47d23": {
 "fag": "naturfag",
@@ -18391,11 +18439,11 @@
 "type": "tekst",
 "tekst": "Sikkerhet Ikke test avløpsåpner eller andre sterke kjemikalier. De er etsende. Bruk vernebriller."
 },
-"ea9a04461b4f1254": {
+"918f97ead9ab3444": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.13. Hva er pH-verdien? a)sitronsaft b)rent vann c)såpevann"
+"tekst": "Se på figur 5.14. Hva er pH-verdien? a)sitronsaft b)rent vann c)såpevann"
 },
 "9c60bd69ec38b99c": {
 "fag": "naturfag",
@@ -18439,11 +18487,11 @@
 "type": "oppgave",
 "tekst": "Er påstanden sann eller usann? a)Eddik er surt. b)Såpevann er surt. c)Melk er litt surt."
 },
-"fddbb0b0fab36877": {
+"3a0fa21e20e7a5fb": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.13. Hvilket produkt er surest, og hvilket er mest basisk?"
+"tekst": "Se på figur 5.14. Hvilket produkt er surest, og hvilket er mest basisk?"
 },
 "6eb481aff29a69ab": {
 "fag": "naturfag",
@@ -18511,11 +18559,11 @@
 "type": "oppgave",
 "tekst": "Koble faremerket med betydningen. Skriv tallet og bokstaven.brannfarligetsendemiljøskadeligakutt giftigA kan gi alvorlig forgiftning eller død, selv i små mengderB skader dyr og planter i naturenC tar lett fyrD kan gi skade på hud, øyne og metall"
 },
-"42822854cf3b8596": {
+"a46587fbad4911e4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.14. Hvor mange farepiktogrammer finnes det?"
+"tekst": "Se på figur 5.15. Hvor mange farepiktogrammer finnes det?"
 },
 "0d514560a3273d9b": {
 "fag": "naturfag",
@@ -18625,11 +18673,11 @@
 "type": "oppgave",
 "tekst": "Sett trinnene i avfallstrappa i riktig rekkefølge, fra best til dårligst."
 },
-"3726063075106b4d": {
+"aaf9c42d8ee47f7b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.16. a)Hvor mange kilo matavfall hadde familien? b)Hvor mange kilo avfall hadde de til sammen?"
+"tekst": "Se på figur 5.17. a)Hvor mange kilo matavfall hadde familien? b)Hvor mange kilo avfall hadde de til sammen?"
 },
 "68475d74ecf1e655": {
 "fag": "naturfag",
@@ -18667,11 +18715,11 @@
 "type": "oppgave",
 "tekst": "Hva er farlig avfall? Gi to eksempler."
 },
-"0506104198deaac8": {
+"519462f849477b2b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.16. a)Hvor mange prosent av avfallet var matavfall? Rund av til hele prosent. b)Hvor mye avfall lager familien på et år (52 uker)?"
+"tekst": "Se på figur 5.17. a)Hvor mange prosent av avfallet var matavfall? Rund av til hele prosent. b)Hvor mye avfall lager familien på et år (52 uker)?"
 },
 "b8adb6f93d4a1f71": {
 "fag": "naturfag",
@@ -19771,6 +19819,12 @@
 "type": "tekst",
 "tekst": "Når en etecelle har spist et smittestoff, viser den fram biter av det til T-hjelpeceller i lymfeknutene. Derfor kan lymfeknutene på halsen bli hovne når du er syk. T-hjelpecellene setter i gang to typer forsvar. B-celler som passer til antigenet, deler seg mange ganger og lager antistoffer. Antistoffene fester seg til smittestoffet, slik at det ikke kan komme inn i cellene, og slik at etecellene lettere finner det. Cytotoksiske T-celler finner kroppens egne celler som er infisert av virus, og dreper dem før viruset rekker å formere seg mer."
 },
+"37c1e55846779c51": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.7 viser hvordan cellene i immunforsvaret samarbeider."
+},
 "c07749a5edaad04b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
@@ -19903,11 +19957,11 @@
 "type": "oppgave",
 "tekst": "Forklar trinn for trinn hva som skjer fra et virus kommer inn i kroppen for første gang til kroppen er immun."
 },
-"62943c6518318aee": {
+"40ebf611f2218bfb": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "oppgave",
-"tekst": "Se på figur 6.7. Forklar forskjellen på kurven etter vaksinen og kurven etter smitten med ordene primærrespons og sekundærrespons."
+"tekst": "Se på figur 6.8. Forklar forskjellen på kurven etter vaksinen og kurven etter smitten med ordene primærrespons og sekundærrespons."
 },
 "ba51fc2ba42cb5fa": {
 "fag": "naturfag",
@@ -19927,11 +19981,11 @@
 "type": "tekst",
 "tekst": "En vaksine inneholder svekkede eller døde smittestoffer, biter av dem, eller en oppskrift på et protein fra smittestoffet. Kroppen lager antistoffer og hukommelsesceller uten at vi blir syke. Kommer det ekte smittestoffet senere, reagerer kroppen raskt og kraftig."
 },
-"c7cd6fe79eee977a": {
+"19bd01f4aa1ffb8d": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
-"tekst": "Når mange nok er vaksinert, sprer smitten seg ikke. Det kalles flokkimmunitet. Den beskytter også dem som ikke kan ta vaksine, for eksempel nyfødte og syke. For meslinger må omtrent 95 prosent være immune."
+"tekst": "Når mange nok er vaksinert, sprer smitten seg ikke. Det kalles flokkimmunitet. Den beskytter også dem som ikke kan ta vaksine, for eksempel nyfødte og syke. For meslinger må omtrent 95 prosent være immune. Figur 6.9 viser hvorfor."
 },
 "b24d8fb10a5f3d50": {
 "fag": "naturfag",
@@ -19968,6 +20022,12 @@
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
 "tekst": "For meslinger med R₀ = 15 gir det 1 − 1 : 15 ≈ 0,93, altså omtrent 93 prosent. Fordi ingen vaksine virker på alle, må vaksinasjonsdekningen være enda litt høyere. Derfor snakker helsemyndighetene om minst 95 prosent. Dette er flokkimmunitet. Den beskytter de som ikke kan vaksineres: nyfødte, personer med svekket immunforsvar og de få som ikke får effekt av vaksinen."
+},
+"f91e861cfd1a8ff6": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.10 viser hva flokkimmunitet betyr for en sykdom som meslinger."
 },
 "798709b2ae97bd4f": {
 "fag": "naturfag",
@@ -20017,11 +20077,11 @@
 "type": "oppgave",
 "tekst": "Hva er flokkimmunitet?"
 },
-"d9e5fa1f71006274": {
+"140b69c0038b0948": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "oppgave",
-"tekst": "Se på figur 6.7. a)Hvor mye antistoffer var det på dag 15? b)Hvor mye antistoffer var det på dag 40?"
+"tekst": "Se på figur 6.8. a)Hvor mye antistoffer var det på dag 15? b)Hvor mye antistoffer var det på dag 40?"
 },
 "93ec124a24314612": {
 "fag": "naturfag",
@@ -20053,11 +20113,11 @@
 "type": "oppgave",
 "tekst": "Er påstanden sann eller usann? a)Vaksiner lærer immunforsvaret å kjenne igjen et smittestoff. b)Alvorlige bivirkninger av vaksiner er vanlige. c)Barn i Norge får tilbud om gratis vaksiner."
 },
-"4f77129db446954f": {
+"5266a4921303fc00": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "oppgave",
-"tekst": "Se på figur 6.7. Hvor mange ganger mer antistoffer var det på dag 40 enn på dag 15?"
+"tekst": "Se på figur 6.8. Hvor mange ganger mer antistoffer var det på dag 40 enn på dag 15?"
 },
 "dc1f73d972534980": {
 "fag": "naturfag",
@@ -20227,11 +20287,11 @@
 "type": "oppgave",
 "tekst": "Hvor mange porsjoner frukt, bær og grønnsaker bør vi spise hver dag?"
 },
-"4c344640c5bc00a1": {
+"aa6f68c4c5d809ce": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "oppgave",
-"tekst": "Se på figur 6.8. Hvor stor del av tallerkenen skal være grønnsaker?"
+"tekst": "Se på figur 6.11. Hvor stor del av tallerkenen skal være grønnsaker?"
 },
 "30142aef62de8625": {
 "fag": "naturfag",
@@ -20388,6 +20448,12 @@
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
 "tekst": "Alkohol tas opp fra magesekken og tarmen og fordeles med blodet i hele kroppen. Leveren bryter det ned, omtrent 0,1–0,15 promille i timen. Mye alkohol over tid kan gi fettlever og skrumplever, høyt blodtrykk og flere typer kreft. Alkohol går over i fosteret, og kan gi varige skader på hjernen. Derfor er rådet at gravide ikke skal drikke alkohol."
+},
+"8f36b63ccb3ef638": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.15 viser veien alkoholen tar gjennom kroppen."
 },
 "98a5d0cc3745b1db": {
 "fag": "naturfag",
@@ -20598,6 +20664,12 @@
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
 "tekst": "Gjennom hele livet styres mange forandringer av hormoner: signalstoffer som lages i kjertler og fraktes med blodet til celler andre steder i kroppen. En liten kjertel under hjernen, hypofysen, styrer mange av de andre kjertlene."
+},
+"4bd3d371841e22d5": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.17 gir en oversikt over livsfasene."
 },
 "3881845ad254420d": {
 "fag": "naturfag",
@@ -21049,6 +21121,12 @@
 "type": "tekst",
 "tekst": "Hvordan oppstår resistens? I en stor bakteriebestand finnes det nesten alltid noen få bakterier som tilfeldig har en mutasjon som gjør dem mindre følsomme. Når vi bruker antibiotika, dør de følsomme bakteriene, mens de resistente overlever og formerer seg. Bakterier kan også overføre gener for resistens til hverandre. Dette er naturlig utvalg, slik du lærte i kapittel 4. Jo mer antibiotika som brukes, jo raskere sprer resistensen seg. Norge bruker lite antibiotika sammenlignet med mange andre land, og har derfor forholdsvis lite resistens. For å beholde det, skal antibiotika bare brukes når legen mener det er nødvendig."
 },
+"ae22c1b9624bf9f0": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.20 viser hvordan resistente bakterier blir flere."
+},
 "8de12255d20134f3": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
@@ -21138,6 +21216,12 @@
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
 "tekst": "Deretter testes medisinen på mennesker i tre faser. I fase 1 får et lite antall friske frivillige medisinen. Målet er å finne ut om den er trygg, og hvilken dose som tåles. I fase 2 får noen hundre pasienter medisinen, for å se om den virker mot sykdommen og hvilken dose som er best. I fase 3 er det ofte tusenvis av pasienter på mange sykehus, gjerne i flere land."
+},
+"523fc6f323fe9426": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-6.html",
+"type": "tekst",
+"tekst": "Figur 6.23 viser hele veien fra laboratoriet til en godkjent medisin."
 },
 "9fd276f1907028ac": {
 "fag": "naturfag",
@@ -22603,6 +22687,12 @@
 "type": "tekst",
 "tekst": "I Norge ventes mer nedbør, flere flommer og skred, og kortere vintre i lavlandet. I andre deler av verden kan tørke gi mangel på mat og vann. Ofte rammes de som har sluppet ut minst. I Parisavtalen fra 2015 ble landene enige om å holde oppvarmingen godt under 2 grader, og helst under 1,5 grader."
 },
+"f519d7fa33148f6b": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Figur 7.17 viser en flom i en norsk bygd. Når det regner mye over lang tid, går elvene over breddene, og jord og stein kan rase ut fra fjellsidene."
+},
 "7316fd764e53e2b2": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-7.html",
@@ -22614,6 +22704,12 @@
 "side": "naturfag/kapittel-7.html",
 "type": "tekst",
 "tekst": "Utslipp gjennom hele livsløpet. Det er ikke nok å se på hva som slippes ut når kraftverket er i drift. Også bygging, gruvedrift, transport og riving gir utslipp. FNs klimapanel har samlet mange studier av slike livsløpsutslipp, målt i gram CO₂-ekvivalenter per kilowattime. Tabellen viser at kull og gass har mange ganger høyere utslipp enn de andre kildene. En CO₂-ekvivalent er en måte å regne alle klimagasser om til den mengden CO₂ som gir samme oppvarming."
+},
+"60f487b2b25693a7": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Figur 7.18 viser de samme tallene som søyler."
 },
 "7e40a5a2951a15c9": {
 "fag": "naturfag",
@@ -22806,6 +22902,12 @@
 "side": "naturfag/kapittel-7.html",
 "type": "tekst",
 "tekst": "Hvordan virker et batteri? Et batteri lagrer energi som kjemisk energi. I et litium-ion-batteri beveger litiumioner seg mellom to elektroder når batteriet lades og utlades, mens elektronene går gjennom den ytre kretsen og gir strøm. Når batteriet lades, skyves ionene tilbake, og energien lagres igjen. Litium brukes fordi det er et svært lett metall som lett gir fra seg elektroner, slik du lærte om alkalimetallene i kapittel 5."
+},
+"74d39d8c20a7f200": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-7.html",
+"type": "tekst",
+"tekst": "Figur 7.19 viser hva som skjer inne i batteriet når det brukes, og når det lades."
 },
 "70e2c8ad1678fc0b": {
 "fag": "naturfag",
@@ -26989,11 +27091,11 @@
 "type": "tekst",
 "tekst": "Er den troverdig? Noe er troverdig når du har god grunn til å stole på det. Spør: Hvordan vet avsenderen dette? Bygger det på forskning, statistikk, egne erfaringer eller rykter? Står det hvor tallene kommer fra? Sier andre kilder det samme?"
 },
-"7c6a802a726626cf": {
+"204d0125864ddcc0": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Se på nettavisa i figur 1.5. En nettavis har flere deler som hjelper deg å vurdere saken. Avsenderen står øverst. Overskriften og ingressen forteller hva saken handler om. Navnet på journalisten og datoen viser hvem som skrev saken, og når. Nederst står det hvor opplysningene kommer fra. Reklamen til høyre er betalt av en annonsør og er ikke en del av saken."
+"tekst": "Se på nettavisa i figur 1.6. En nettavis har flere deler som hjelper deg å vurdere saken. Avsenderen står øverst. Overskriften og ingressen forteller hva saken handler om. Navnet på journalisten og datoen viser hvem som skrev saken, og når. Nederst står det hvor opplysningene kommer fra. Reklamen til høyre er betalt av en annonsør og er ikke en del av saken."
 },
 "9533ff3b35ed5e12": {
 "fag": "samfunnsfag",
@@ -27043,11 +27145,11 @@
 "type": "tekst",
 "tekst": "Kilder og mer å lese: Store norske leksikon: «kildekritikk»; Norsk Presseforbund: «Tekstreklameplakaten»."
 },
-"fc17f1bed388df7b": {
+"775e5c5c8d5093c8": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.6. Skriv navnet ved tallene 1–7. Velg blant: annonse, avsender, dato, ingress, journalist, kilde, overskrift."
+"tekst": "Se på figur 1.7. Skriv navnet ved tallene 1–7. Velg blant: annonse, avsender, dato, ingress, journalist, kilde, overskrift."
 },
 "fffed37b098b1f7e": {
 "fag": "samfunnsfag",
@@ -27085,11 +27187,11 @@
 "type": "oppgave",
 "tekst": "Du skal finne ut hva en bussbillett i Ringerike koster i dag. Er en nettside fra 2015 relevant?"
 },
-"6de4e68e1c95472e": {
+"faf9203562da8d1e": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.6. Hvor kommer tallene i saken fra?"
+"tekst": "Se på figur 1.7. Hvor kommer tallene i saken fra?"
 },
 "6b123d63336d6a3f": {
 "fag": "samfunnsfag",
@@ -27115,11 +27217,11 @@
 "type": "oppgave",
 "tekst": "Forklar forskjellen på en kilde som er troverdig, og en kilde som er relevant. Gi et eksempel på en kilde som er troverdig, men ikke relevant."
 },
-"a769ce2590ae57e4": {
+"b5125a615017474d": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Vurder saken i figur 1.5 med de fem spørsmålene i figur 1.3. Ville du brukt den som kilde i en tekst om kollektivtrafikk? Begrunn."
+"tekst": "Vurder saken i figur 1.6 med de fem spørsmålene i figur 1.4. Ville du brukt den som kilde i en tekst om kollektivtrafikk? Begrunn."
 },
 "4d2d6c71ca1a4c86": {
 "fag": "samfunnsfag",
@@ -27163,11 +27265,11 @@
 "type": "tekst",
 "tekst": "Delmål — etter dette delkapitlet kan du bruke TONE-modellen på innhold du møter på nett lese på tvers for å finne ut hvem som står bak forklare hva et omvendt bildesøk er"
 },
-"8d93aa0578e3e45e": {
+"7585906332f54971": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "På nett går alt fort. Vi scroller forbi hundrevis av innlegg hver dag, og det er umulig å vurdere alt grundig. Derfor er det lurt å ha noen faste spørsmål å stille. TONE er en modell som brukes mye i norsk skole. Bokstavene står for fire spørsmål du stiller til kilden, slik figur 1.8 viser. Det første du gjør, er likevel alltid det samme: stopp et øyeblikk. Innhold som gir sterke følelser, blir delt mest, og det vet de som lager falske saker."
+"tekst": "På nett går alt fort. Vi scroller forbi hundrevis av innlegg hver dag, og det er umulig å vurdere alt grundig. Derfor er det lurt å ha noen faste spørsmål å stille. TONE er en modell som brukes mye i norsk skole. Bokstavene står for fire spørsmål du stiller til kilden, slik figur 1.9 viser. Det første du gjør, er likevel alltid det samme: stopp et øyeblikk. Innhold som gir sterke følelser, blir delt mest, og det vet de som lager falske saker."
 },
 "097ba68a09538836": {
 "fag": "samfunnsfag",
@@ -27283,11 +27385,11 @@
 "type": "oppgave",
 "tekst": "TONE tar litt tid. Når er det viktigst å bruke modellen? Begrunn svaret."
 },
-"2c942a4e655f1ea1": {
+"5b2e9231679e0ca6": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Sammenlign TONE med de fem spørsmålene i figur 1.3. Hva er likt, og hva er nytt i TONE?"
+"tekst": "Sammenlign TONE med de fem spørsmålene i figur 1.4. Hva er likt, og hva er nytt i TONE?"
 },
 "2247e6f58ff591f2": {
 "fag": "samfunnsfag",
@@ -27319,11 +27421,11 @@
 "type": "tekst",
 "tekst": "En avis har flere sjangre. En nyhetsartikkel skal fortelle hva som har skjedd, og journalisten skal ikke ta side. I en kommentar eller på lederplass sier en journalist eller avisa selv hva de mener. I et leserinnlegg skriver en leser hva hun mener. Meninger skal være merket, så du vet hva du leser."
 },
-"04730f7f656943f8": {
+"19b91403b99a3ef5": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Se på figur 1.10. To aviser skriver om den samme bussstreiken. Avis A forteller om passasjerene som kom for sent. Avis B forteller om sjåførene og hvorfor de streiker. Begge sakene kan være sanne, men leseren får to ulike bilder av streiken."
+"tekst": "Se på figur 1.11. To aviser skriver om den samme bussstreiken. Avis A forteller om passasjerene som kom for sent. Avis B forteller om sjåførene og hvorfor de streiker. Begge sakene kan være sanne, men leseren får to ulike bilder av streiken."
 },
 "fa90c73508430297": {
 "fag": "samfunnsfag",
@@ -27361,17 +27463,17 @@
 "type": "oppgave",
 "tekst": "Hva er forskjellen på en nyhetsartikkel og et leserinnlegg?"
 },
-"1f7297e400e11853": {
+"2d65a7bc8c9cfde5": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.10. Hvilken hendelse skriver begge avisene om?"
+"tekst": "Se på figur 1.11. Hvilken hendelse skriver begge avisene om?"
 },
-"d94506681f744690": {
+"cc9d1a7cf4947c6f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.10. Hvem er i fokus i avis A, og hvem er i fokus i avis B?"
+"tekst": "Se på figur 1.11. Hvem er i fokus i avis A, og hvem er i fokus i avis B?"
 },
 "af0b89ceb0abcd04": {
 "fag": "samfunnsfag",
@@ -27421,11 +27523,11 @@
 "type": "oppgave",
 "tekst": "Tenk på en hendelse fra et land du kjenner. Ble den framstilt annerledes der enn i norske medier? Samtal om hvorfor."
 },
-"8ebec7b309c3b344": {
+"03fb0b26ff189efd": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Hvordan kan et bilde vinkle en sak? Bruk figur 1.10 som eksempel."
+"tekst": "Hvordan kan et bilde vinkle en sak? Bruk figur 1.11 som eksempel."
 },
 "7e76e6bcf074ef87": {
 "fag": "samfunnsfag",
@@ -27541,11 +27643,11 @@
 "type": "oppgave",
 "tekst": "Koble ordet med forklaringen. Skriv tallet og bokstaven.feilinformasjondesinformasjonklikkagndeepfakeA usann informasjon som spres uten at man vet at den er feilB en video eller et lydopptak som er laget med KI og ser ekte utC usann informasjon som spres med vilje for å lureD en overskrift som er laget for at du skal klikke"
 },
-"31919a1b7e2d4698": {
+"11bcbf2025d6441c": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "oppgave",
-"tekst": "Se på figur 1.13. Skriv navnet på varseltegnet ved tallene 1–5. Velg blant: ingen dato, ingen kilde, oppfordring til å dele, sterke følelser, ukjent avsender."
+"tekst": "Se på figur 1.14. Skriv navnet på varseltegnet ved tallene 1–5. Velg blant: ingen dato, ingen kilde, oppfordring til å dele, sterke følelser, ukjent avsender."
 },
 "5211db59d983201e": {
 "fag": "samfunnsfag",
@@ -27655,11 +27757,11 @@
 "type": "tekst",
 "tekst": "Algoritmen lærer av det du gjør. Den merker seg hva du liker, deler, kommenterer og ser lenge på, og hvem du følger. Den kan også bruke hvor du er, hvilken tid på døgnet det er, og hva folk som ligner på deg, liker. De fleste sosiale medier tjener penger på reklame. Jo lenger du blir, jo mer reklame kan de vise deg. Derfor er algoritmene laget for å holde på oppmerksomheten din."
 },
-"239efe236ed8e678": {
+"4b8ac97dcd05ed50": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Det kan være nyttig: Du slipper å lete, og du får mer av det du liker. Men det har også ulemper. Hvis du bare får se det som passer med det du har likt før, kan du havne i en filterboble, som i figur 1.14. Det du ikke får se, vet du ikke om. To personer som søker på det samme, kan få ulike treff."
+"tekst": "Det kan være nyttig: Du slipper å lete, og du får mer av det du liker. Men det har også ulemper. Hvis du bare får se det som passer med det du har likt før, kan du havne i en filterboble, som i figur 1.15. Det du ikke får se, vet du ikke om. To personer som søker på det samme, kan få ulike treff."
 },
 "9967ebe10010c98a": {
 "fag": "samfunnsfag",
@@ -28945,11 +29047,11 @@
 "type": "tekst",
 "tekst": "En regjering som har mer enn halvparten av representantene bak seg, er en flertallsregjering. Har den færre, er den en mindretallsregjering og må forhandle med andre partier for å få flertall for hver sak. En regjering med flere partier kalles en koalisjonsregjering. Da må partiene inngå kompromisser. I politikken sier man at partiene må «svelge kameler»: godta noe de egentlig er imot, for å få gjennomslag for andre saker. Partiene som ikke er med i regjeringen, kalles opposisjonen."
 },
-"be64abba8f4f91aa": {
+"bffc7c34b4ff22dd": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Ved stortingsvalget i september 2025 fikk de rødgrønne partiene flertall. Arbeiderpartiet fortsatte å styre alene, med Jonas Gahr Støre som statsminister. Det er en mindretallsregjering, som trenger støtte fra andre partier for å få vedtatt forslagene sine. Tabell 2.1 og figur 2.5 viser hvordan de 169 mandatene er fordelt i perioden 2025–2029, slik det var i september 2026."
+"tekst": "Ved stortingsvalget i september 2025 fikk de rødgrønne partiene flertall. Arbeiderpartiet fortsatte å styre alene, med Jonas Gahr Støre som statsminister. Det er en mindretallsregjering, som trenger støtte fra andre partier for å få vedtatt forslagene sine. Tabell 2.1 og figur 2.6 viser hvordan de 169 mandatene er fordelt i perioden 2025–2029, slik det var i september 2026."
 },
 "8fcfea0b15f543c7": {
 "fag": "samfunnsfag",
@@ -28975,11 +29077,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 2.1. Hvilke to partier er størst?"
 },
-"86c476f2ab9b32ed": {
+"d940fb81ff5568f0": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.5. Hvor mange mandater har rødgrønn side?"
+"tekst": "Se på figur 2.6. Hvor mange mandater har rødgrønn side?"
 },
 "85357b7f0f545886": {
 "fag": "samfunnsfag",
@@ -29155,11 +29257,11 @@
 "type": "tekst",
 "tekst": "Delmål — etter dette delkapitlet kan du forklare hva kommunen og fylkeskommunen har ansvar for forklare hvem som kan stemme ved kommunestyre- og fylkestingsvalg gi eksempler på hvordan man kan delta i demokratiet"
 },
-"b86d5858b7afde16": {
+"48255f48c4139b7f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Norge styres på tre nivåer: staten, fylkeskommunene og kommunene. Staten har ansvaret for det som gjelder hele landet. Norge har 15 fylker og 357 kommuner (2026). Kommunen har ansvaret for mange av tjenestene vi bruker hver dag. Figur 2.7 gir en oversikt."
+"tekst": "Norge styres på tre nivåer: staten, fylkeskommunene og kommunene. Staten har ansvaret for det som gjelder hele landet. Norge har 15 fylker og 357 kommuner (2026). Kommunen har ansvaret for mange av tjenestene vi bruker hver dag. Figur 2.8 gir en oversikt."
 },
 "1afe94556f9a2edf": {
 "fag": "samfunnsfag",
@@ -29647,41 +29749,41 @@
 "type": "tekst",
 "tekst": "FN i dag. FN ble opprettet av 51 land, og Norge var ett av dem. I dag er 193 land medlemmer. Det er nesten alle landene i verden. FNs hovedkvarter ligger i New York i USA. Den første lederen av FN, generalsekretæren, var nordmannen Trygve Lie. Han var generalsekretær fra 1946 til 1952."
 },
-"65f8dc6c0d53bc51": {
+"83e170ad719c40b9": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Slik er FN organisert. Figur 2.11 viser de viktigste delene av FN. I Generalforsamlingen møtes alle medlemslandene, og hvert land har én stemme, både store og små land. Sikkerhetsrådet skal sikre fred i verden. Det har 15 medlemmer. Fem av dem er faste: USA, Russland, Kina, Storbritannia og Frankrike. De har vetorett. Det betyr at hvert av dem kan stoppe et vedtak alene. De ti andre landene blir valgt for to år om gangen. Norge satt i Sikkerhetsrådet i 2021 og 2022. Salen der Sikkerhetsrådet møtes, var en gave fra Norge, og den ble laget av norske arkitekter og kunstnere. Generalsekretæren leder arbeidet i FN og velges for fem år om gangen."
+"tekst": "Slik er FN organisert. Figur 2.15 viser de viktigste delene av FN. I Generalforsamlingen møtes alle medlemslandene, og hvert land har én stemme, både store og små land. Sikkerhetsrådet skal sikre fred i verden. Det har 15 medlemmer. Fem av dem er faste: USA, Russland, Kina, Storbritannia og Frankrike. De har vetorett. Det betyr at hvert av dem kan stoppe et vedtak alene. De ti andre landene blir valgt for to år om gangen. Norge satt i Sikkerhetsrådet i 2021 og 2022. Salen der Sikkerhetsrådet møtes, var en gave fra Norge, og den ble laget av norske arkitekter og kunstnere. Generalsekretæren leder arbeidet i FN og velges for fem år om gangen."
 },
-"288e72e188dbd8c1": {
+"d750262b5564ccbb": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Generalforsamlingen møtes i en stor sal i New York. Hvert land har sine egne plasser. Den som taler, står på talerstolen foran i salen. Bak talerstolen sitter lederen av Generalforsamlingen og generalsekretæren. De som ikke forstår språket til den som taler, hører en tolk i hodetelefonene. Hvert år i september kommer mange presidenter og statsministre hit og holder tale. Figur 2.12 viser salen."
+"tekst": "Generalforsamlingen møtes i en stor sal i New York. Hvert land har sine egne plasser. Den som taler, står på talerstolen foran i salen. Bak talerstolen sitter lederen av Generalforsamlingen og generalsekretæren. De som ikke forstår språket til den som taler, hører en tolk i hodetelefonene. Hvert år i september kommer mange presidenter og statsministre hit og holder tale. Figur 2.16 viser salen."
 },
-"deec9cbe9d02b93a": {
+"6bc361dc280dee67": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Sikkerhetsrådet møtes i New York, ofte flere ganger i uka. Hvert land har en mikrofon, og mange lytter på tolk gjennom hodetelefoner. Figur 2.13 viser et slikt møte."
+"tekst": "Sikkerhetsrådet møtes i New York, ofte flere ganger i uka. Hvert land har en mikrofon, og mange lytter på tolk gjennom hodetelefoner. Figur 2.17 viser et slikt møte."
 },
-"bdec72a297f7106c": {
+"b7668425eeb9942b": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "FN har også mange organisasjoner som arbeider med hver sin sak. WFP, Verdens matvareprogram, gir mat til folk som sulter etter krig, tørke eller flom. Figur 2.14 viser en matutdeling."
+"tekst": "FN har også mange organisasjoner som arbeider med hver sin sak. WFP, Verdens matvareprogram, gir mat til folk som sulter etter krig, tørke eller flom. Figur 2.18 viser en matutdeling."
 },
-"ed7b762ca27df7f0": {
+"352ebf157b8dc345": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "UNICEF, FNs barnefond, arbeider for at barn skal få mat, helse og skolegang. UNICEF skaffer vaksiner til nesten halvparten av alle småbarn i verden. Figur 2.15 viser en vaksinering. WHO arbeider for bedre helse, og UNHCR hjelper og beskytter flyktninger."
+"tekst": "UNICEF, FNs barnefond, arbeider for at barn skal få mat, helse og skolegang. UNICEF skaffer vaksiner til nesten halvparten av alle småbarn i verden. Figur 2.19 viser en vaksinering. WHO arbeider for bedre helse, og UNHCR hjelper og beskytter flyktninger."
 },
-"33554b3563de6755": {
+"e3336c21495f5071": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "FN sender også soldater og politi til land der det har vært krig. De kalles fredsbevarende styrker eller «de blå hjelmene», fordi de har lyseblå hjelmer. De skal passe på at landene holder en våpenhvile, og beskytte folk som bor der. Figur 2.16 viser en patrulje. Mange tusen nordmenn har vært i FN-styrker, blant annet i Libanon."
+"tekst": "FN sender også soldater og politi til land der det har vært krig. De kalles fredsbevarende styrker eller «de blå hjelmene», fordi de har lyseblå hjelmer. De skal passe på at landene holder en våpenhvile, og beskytte folk som bor der. Figur 2.20 viser en patrulje. Mange tusen nordmenn har vært i FN-styrker, blant annet i Libanon."
 },
 "3eab485bf49802db": {
 "fag": "samfunnsfag",
@@ -29869,29 +29971,29 @@
 "type": "oppgave",
 "tekst": "Beskriv FN-flagget."
 },
-"254233ca25568db9": {
+"b31b3c66c98b4bca": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.12. Hvor står den som taler i Generalforsamlingen?"
+"tekst": "Se på figur 2.16. Hvor står den som taler i Generalforsamlingen?"
 },
-"423dfc38372154aa": {
+"109480563737cea2": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.16. Hvordan kan du se at soldatene er fra FN?"
+"tekst": "Se på figur 2.20. Hvordan kan du se at soldatene er fra FN?"
 },
-"56e4f7474ed982be": {
+"59fa07b2abbac893": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.15. Hvilken FN-organisasjon skaffer vaksiner til barn?"
+"tekst": "Se på figur 2.19. Hvilken FN-organisasjon skaffer vaksiner til barn?"
 },
-"044f99f89e0761b0": {
+"36d6d68bb3f45443": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.14. Hva deler hjelpearbeiderne ut?"
+"tekst": "Se på figur 2.18. Hva deler hjelpearbeiderne ut?"
 },
 "d3b24b5dbfee263a": {
 "fag": "samfunnsfag",
@@ -30439,17 +30541,17 @@
 "type": "oppgave",
 "tekst": "Når ble Norge fritt?"
 },
-"f5943fa2e03cdc81": {
+"9b5b919dda5eb683": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.22. Hvor mange år gikk det fra Grunnloven til Tyskland angrep Norge?"
+"tekst": "Se på figur 2.26. Hvor mange år gikk det fra Grunnloven til Tyskland angrep Norge?"
 },
-"e3f1738345654f04": {
+"bdbf356900132c2f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.22. Hvor lenge varte okkupasjonen, målt i hele år mellom årstallene?"
+"tekst": "Se på figur 2.26. Hvor lenge varte okkupasjonen, målt i hele år mellom årstallene?"
 },
 "abb41f98aaee18cc": {
 "fag": "samfunnsfag",
@@ -30553,11 +30655,11 @@
 "type": "oppgave",
 "tekst": "Hva svarte et flertall i folkeavstemningene om EU i 1972 og 1994?"
 },
-"73fb430aa5733c0c": {
+"489c00f991753479": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Se på figur 2.22. Hvor mange år gikk det fra krigen sluttet til olje ble funnet på Ekofisk?"
+"tekst": "Se på figur 2.26. Hvor mange år gikk det fra krigen sluttet til olje ble funnet på Ekofisk?"
 },
 "52ad8b99f9efbfb2": {
 "fag": "samfunnsfag",
@@ -32287,11 +32389,11 @@
 "type": "tekst",
 "tekst": "Etter andre verdenskrig begynte politikken å endre seg, og samene organiserte seg. Et vendepunkt var Alta-saken fra 1979, da samer og miljøvernere aksjonerte mot en kraftutbygging i Altaelva. Utbyggingen ble gjennomført, men saken satte samenes rettigheter på dagsorden. Deretter kom sameloven (1987), en egen paragraf om samene i Grunnloven (1988), og Sametinget, som ble åpnet i Karasjok i 1989. I 1990 ble Norge det første landet som ratifiserte ILO-konvensjon 169 om urfolks rettigheter. Finnmarksloven fra 2005 ga folk i Finnmark, samer og andre, mer kontroll over jord og naturressurser."
 },
-"ac62b0b8b1aa3097": {
+"274053ad4d120845": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "tekst",
-"tekst": "Sametinget har 39 representanter, som blir valgt hvert fjerde år samtidig med stortingsvalget. For å stemme må man stå i Sametingets valgmanntall. Staten har plikt til å konsultere Sametinget og andre samiske interesser før den bestemmer noe som berører samene direkte. Denne plikten ble skrevet inn i sameloven i 2021. Tabell 3.1 viser resultatet av sametingsvalget i 2025, og figur 3.11 viser noen viktige årstall."
+"tekst": "Sametinget har 39 representanter, som blir valgt hvert fjerde år samtidig med stortingsvalget. For å stemme må man stå i Sametingets valgmanntall. Staten har plikt til å konsultere Sametinget og andre samiske interesser før den bestemmer noe som berører samene direkte. Denne plikten ble skrevet inn i sameloven i 2021. Tabell 3.1 viser resultatet av sametingsvalget i 2025, og figur 3.12 viser noen viktige årstall."
 },
 "c3eeb2590b7b08b6": {
 "fag": "samfunnsfag",
@@ -32365,11 +32467,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 3.1. Hvor mange representanter har Sametinget til sammen?"
 },
-"ad040b4ce4b2bb73": {
+"5498e61fbf90ac64": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.11. Hvilket år begynte Alta-aksjonene?"
+"tekst": "Se på figur 3.12. Hvilket år begynte Alta-aksjonene?"
 },
 "e82dc931eb19635d": {
 "fag": "samfunnsfag",
@@ -32377,17 +32479,17 @@
 "type": "oppgave",
 "tekst": "Hva er konsultasjonsplikten?"
 },
-"304306874b183f9f": {
+"7faee9f004029fa4": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.11. Hvor mange år gikk det fra det første samiske landsmøtet til Sametinget ble åpnet?"
+"tekst": "Se på figur 3.12. Hvor mange år gikk det fra det første samiske landsmøtet til Sametinget ble åpnet?"
 },
-"37309a2fb3eb2d89": {
+"d67d58e9bbe18613": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.11. Hvilket år fikk samene en egen paragraf i Grunnloven?"
+"tekst": "Se på figur 3.12. Hvilket år fikk samene en egen paragraf i Grunnloven?"
 },
 "4aa57fdf1d224139": {
 "fag": "samfunnsfag",
@@ -32407,11 +32509,11 @@
 "type": "oppgave",
 "tekst": "Se på tabell 3.2. Hvor mange flere sto i valgmanntallet i 2025 enn i 1989?"
 },
-"7b3fa1a097e207a4": {
+"1812a450998e30eb": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Se på figur 3.11. Hvor mange år gikk det fra Sametinget ble åpnet til konsultasjonsplikten ble lovfestet?"
+"tekst": "Se på figur 3.12. Hvor mange år gikk det fra Sametinget ble åpnet til konsultasjonsplikten ble lovfestet?"
 },
 "a08880c5555927b7": {
 "fag": "samfunnsfag",
@@ -32443,11 +32545,11 @@
 "type": "oppgave",
 "tekst": "Sammenlign fornorskingspolitikken med integrering slik det ble forklart i 3.3."
 },
-"1420dc59d5c2ccc3": {
+"8fff9dadd4856e9a": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "oppgave",
-"tekst": "Reflekter over hvordan samene har påvirket og blitt påvirket av samfunnsutviklingen i Norge. Bruk minst tre årstall fra figur 3.11."
+"tekst": "Reflekter over hvordan samene har påvirket og blitt påvirket av samfunnsutviklingen i Norge. Bruk minst tre årstall fra figur 3.12."
 },
 "3d5648251d29c29a": {
 "fag": "samfunnsfag",
@@ -35383,11 +35485,11 @@
 "type": "tekst",
 "tekst": "Delmål — etter dette delkapitlet kan du forklare begrepet bærekraftig utvikling gi eksempler på de tre sidene ved bærekraft gi eksempler på FNs bærekraftsmål"
 },
-"f200d87eecfd07eb": {
+"1489fe6da6dc4bc7": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "I 1987 kom FN-rapporten Vår felles framtid, ledet av Gro Harlem Brundtland. Den forklarte bærekraftig utvikling slik: å dekke behovene i dag uten å ødelegge mulighetene for dem som kommer etter oss. Bærekraft har tre sider som henger sammen, slik figur 5.12 viser: miljø, økonomi og det sosiale."
+"tekst": "I 1987 kom FN-rapporten Vår felles framtid, ledet av Gro Harlem Brundtland. Den forklarte bærekraftig utvikling slik: å dekke behovene i dag uten å ødelegge mulighetene for dem som kommer etter oss. Bærekraft har tre sider som henger sammen, slik figur 5.13 viser: miljø, økonomi og det sosiale."
 },
 "6035fac0cc241a0b": {
 "fag": "samfunnsfag",
@@ -35515,11 +35617,11 @@
 "type": "tekst",
 "tekst": "Det er to typer klimatiltak. Utslippskutt skal bremse klimaendringene, for eksempel elbiler og fornybar energi. Klimatilpasning skal gjøre samfunnet bedre rustet mot et klima som allerede endrer seg, for eksempel større overvannsrør, flomvern og nye regler for hvor man kan bygge. Begge deler trengs."
 },
-"2c817778e0029119": {
+"f889055210c4092f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Figur 5.15 viser hvor langt Norge har kommet, og hvor langt det er igjen til klimamålene."
+"tekst": "Figur 5.16 viser hvor langt Norge har kommet, og hvor langt det er igjen til klimamålene."
 },
 "6c986a6e8b7de5df": {
 "fag": "samfunnsfag",
@@ -35569,11 +35671,11 @@
 "type": "oppgave",
 "tekst": "Er det utslippskutt eller klimatilpasning? a)flomvern langs elva b)elbil i stedet for dieselbil c)større overvannsrør i byen d)vindkraft i stedet for kullkraft"
 },
-"fcfac6efd03d1777": {
+"9aea8f91d83be98f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-5.html",
 "type": "oppgave",
-"tekst": "Se på figur 5.15. Hvor mange millioner tonn må utslippene ned fra 2025 til målet for 2030? Svar med én desimal."
+"tekst": "Se på figur 5.16. Hvor mange millioner tonn må utslippene ned fra 2025 til målet for 2030? Svar med én desimal."
 },
 "e366766b056e36b5": {
 "fag": "samfunnsfag",
