@@ -432,6 +432,9 @@ figure.foto, figure.foto svg{ float: none; width: 100%; max-width: none; margin:
 @media (min-width: 1100px){
   figure.foto{ float: none; width: 100%; margin: 1.2em auto 1.4em; }
 }
+/* 28.09.2026: alle KI-bilder i samme ramme, 680 px brede (FOTO_BREDDE i build_nett.py) */
+figure.foto{ max-width: 680px; }
+figure.foto svg{ width: 100%; max-width: 100%; }
 /* på brede skjermer får bildene litt mer plass enn tekstspalta; viktige bilder (klassen «stor») enda mer */
 @media (min-width: 1320px){
   body:not(.vis-mobil) .innhold > section > figure.stor{
