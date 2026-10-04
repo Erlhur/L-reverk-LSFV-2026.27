@@ -11233,6 +11233,12 @@
 "type": "tekst",
 "tekst": "I 2015 vedtok alle FNs 193 medlemsland 17 bærekraftsmål som skal nås innen 2030. Noen av målene er å utrydde sult (mål 2), sikre rent vann (mål 6), stoppe klimaendringene (mål 13) og ta vare på livet i havet og på land (mål 14 og 15). Målene henger sammen: Et varmere klima kan gi tørke, og tørke kan gi sult."
 },
+"683f86f486ddf765": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "Figur 1.24 viser et eksempel."
+},
 "39a6c82a337350ee": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
@@ -11245,11 +11251,17 @@
 "type": "tekst",
 "tekst": "En annen idé er sirkulær økonomi. I stedet for å produsere, bruke og kaste, skal produktene brukes lenge, repareres, deles og til slutt gjenvinnes, slik at råvarene går i kretsløp, akkurat som stoffene i naturen. EU har vedtatt regler som skal gjøre det lettere å få reparert blant annet elektronikk og hvitevarer."
 },
-"eb9cb6216257294a": {
+"c04c4cea8069398c": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Figur 1.24 viser forskjellen."
+"tekst": "Figur 1.25 viser forskjellen."
+},
+"faa6d42373d9dcea": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-1.html",
+"type": "tekst",
+"tekst": "I en lineær økonomi går råvarene bare én vei: fra naturen til produkt og så til søppel."
 },
 "433c308bb869af57": {
 "fag": "naturfag",
@@ -11263,11 +11275,11 @@
 "type": "tekst",
 "tekst": "Hvordan måler vi om verden når målene? De 17 bærekraftsmålene har til sammen 169 delmål. Til hvert delmål hører det indikatorer, altså tall som kan følges over tid, for eksempel hvor stor del av befolkningen som har rent drikkevann, eller hvor mange barn som går på skole. FN lager hvert år en rapport om hvordan det går. De siste rapportene viser at bare en liten del av delmålene er i rute, blant annet fordi pandemien, kriger og høye matpriser har satt utviklingen tilbake."
 },
-"e55686892d85048d": {
+"87919c2cdca31651": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Figur 1.25 viser hvordan målene blir målt."
+"tekst": "Figur 1.26 viser hvordan målene blir målt."
 },
 "31e36ca8302798c8": {
 "fag": "naturfag",
@@ -11341,11 +11353,11 @@
 "type": "tekst",
 "tekst": "Hvordan teller man dyr? Store dyr som villrein telles ofte fra fly, eller forskerne teller dyrene på bilder. Fugler telles langs faste ruter, der de samme stedene besøkes hvert år. Små og sky dyr kan registreres med viltkameraer, som tar bilde når et dyr passerer. En nyere metode er å ta prøver av vann eller jord og lete etter miljø-DNA, små rester av DNA som dyrene etterlater seg. Da kan man finne ut hvilke arter som lever i en innsjø, uten å fange dem."
 },
-"0cbdd72ca07d9ef5": {
+"3cf718f106b6e548": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Figur 1.27 viser de fire metodene."
+"tekst": "Figur 1.28 viser de fire metodene."
 },
 "923267e2df36e470": {
 "fag": "naturfag",
@@ -13758,6 +13770,12 @@
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
 "tekst": "Figur 2.48 viser anbefalingene."
+},
+"cb26636fa8d5ac4f": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Kurven viser helsegevinsten, altså hvor mye bedre helsen blir når du beveger deg mer."
 },
 "df3f35761fa2a2eb": {
 "fag": "naturfag",
@@ -17911,17 +17929,17 @@
 "type": "tekst",
 "tekst": "Alt rundt oss er laget av stoffer: vann, luft, jern, sukker, plast. Vi kjenner igjen stoffer på egenskapene deres, for eksempel farge, lukt, hardhet, om de løser seg i vann, om de leder strøm, om de er magnetiske, og ved hvilken temperatur de smelter og koker."
 },
-"45e526cf2aff5f53": {
+"3e78204a57737d97": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Tetthet forteller hvor tungt et stoff er i forhold til hvor mye plass det tar. Vann har tetthet 1 g/cm³. Stoffer med lavere tetthet flyter, stoffer med høyere tetthet synker."
+"tekst": "Tetthet forteller hvor tungt et stoff er i forhold til hvor mye plass det tar. Tetthet kalles også massetetthet. Vann har tetthet 1 g/cm³. Stoffer med lavere tetthet flyter, stoffer med høyere tetthet synker."
 },
-"af8acb1f91756510": {
+"e3190c634294c55b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Tetthet tetthet = masse : volumEt stykke jern veier 79 g og har volum 10 cm³. Tettheten er 79 : 10 = 7,9 g/cm³. Det er mer enn 1, så jern synker."
+"tekst": "Tetthet (massetetthet) tetthet = masse : volumEt stykke jern veier 79 g og har volum 10 cm³. Tettheten er 79 : 10 = 7,9 g/cm³. Det er mer enn 1, så jern synker."
 },
 "adb1838df9238348": {
 "fag": "naturfag",
@@ -20473,11 +20491,11 @@
 "type": "tekst",
 "tekst": "Sikkerhet og tillit. Nye vaksiner testes i store forsøk før de godkjennes, og de følges med etter godkjenning. Det fungerer: Etter vaksinen Pandemrix mot svineinfluensa i 2009 oppdaget man at noen få barn og unge fikk sykdommen narkolepsi. Vaksinen ble ikke brukt igjen, og de som ble skadet, har fått erstatning. Samtidig finnes det feilinformasjon. I 1998 publiserte legen Andrew Wakefield en studie som hevdet at MMR-vaksinen ga autisme. Studien var fusket, den ble trukket tilbake, og han mistet legelisensen. Mange store studier har senere vist at det ikke er noen slik sammenheng. Likevel gikk vaksinasjonen ned i flere land, og meslingene kom tilbake."
 },
-"8a9948963ad00acd": {
+"ae27ba7a55b1544f": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
-"tekst": "Et eksempel: meslinger. Meslinger gir høy feber, hoste og utslett over hele kroppen. De fleste blir friske, men sykdommen kan gi lungebetennelse og hjernebetennelse, og den svekker immunforsvaret i lang tid etterpå. Før vaksinen kom, fikk nesten alle barn meslinger. Ifølge Verdens helseorganisasjon (WHO) døde omtrent 780 000 mennesker av meslinger i verden i år 2000. I 2024 var tallet omtrent 95 000, og vaksinasjon anslås å ha forhindret nesten 59 millioner dødsfall i perioden. Samtidig er det fortsatt millioner av barn som ikke får to doser vaksine, og de fleste som dør, er små barn i land der mange ikke er vaksinert."
+"tekst": "Et eksempel: meslinger. Meslinger gir høy feber, hoste og utslett over hele kroppen. De fleste blir friske, men sykdommen kan gi lungebetennelse og hjernebetennelse, og den svekker immunforsvaret i lang tid etterpå. Før vaksinen kom, fikk nesten alle barn meslinger. Ifølge Verdens helseorganisasjon (WHO) døde omtrent 800 000 mennesker av meslinger i verden i år 2000. I 2024 var tallet omtrent 95 000, og vaksinasjon anslås å ha forhindret nesten 59 millioner dødsfall i perioden. Samtidig er det fortsatt millioner av barn som ikke får to doser vaksine, og de fleste som dør, er små barn i land der mange ikke er vaksinert."
 },
 "80241dbe1deb1dbb": {
 "fag": "naturfag",
@@ -20617,11 +20635,11 @@
 "type": "oppgave",
 "tekst": "Reflekter over hva vaksiner betyr for folkehelsen, både i Norge og i land med dårligere helsetjenester."
 },
-"9c7343dc65658efa": {
+"a90b9077187a53a4": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "oppgave",
-"tekst": "Ifølge WHO døde omtrent 780 000 av meslinger i år 2000 og 95 000 i 2024. Hvor mange prosent gikk dødsfallene ned?"
+"tekst": "Ifølge WHO døde omtrent 800 000 av meslinger i år 2000 og 95 000 i 2024. Hvor mange prosent gikk dødsfallene ned?"
 },
 "db68c4583f2d0b7d": {
 "fag": "naturfag",
@@ -26497,11 +26515,11 @@
 "type": "ord",
 "tekst": "å løse seg. Å blande seg helt med en væske, slik at du ikke ser stoffet lenger. Sukker løser seg i vann."
 },
-"75577decffe43598": {
+"f602c0ce0b0984e0": {
 "fag": "naturfag",
 "side": "naturfag/ordliste.html",
 "type": "ord",
-"tekst": "tetthet. Hvor mye masse et stoff har i forhold til hvor stor plass det tar. Jern har høy tetthet."
+"tekst": "tetthet. Hvor mye masse et stoff har i forhold til hvor stor plass det tar. Kalles også massetetthet. Jern har høy tetthet."
 },
 "38573c750201b1bb": {
 "fag": "naturfag",
@@ -33306,6 +33324,12 @@
 "side": "samfunnsfag/kapittel-3.html",
 "type": "tekst",
 "tekst": "Figur 3.14 viser de to hensynene som står mot hverandre."
+},
+"7ea02e95b5967c4b": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-3.html",
+"type": "tekst",
+"tekst": "En konvensjon er en avtale mellom land. Artikkel 27 i FN-konvensjonen om sivile og politiske rettigheter sier at minoriteter og urfolk har rett til sin egen kultur."
 },
 "9a5d3e40859382be": {
 "fag": "samfunnsfag",

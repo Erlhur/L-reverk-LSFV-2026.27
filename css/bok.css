@@ -822,3 +822,12 @@ ol.delkapitler.to li{ break-inside: avoid; }
 .fra-mor{ color: #c0392b; }
 .fra-far{ color: #2d5c7a; }
 .likning{ font-size: 1.05em; line-height: 2.1; }
+
+/* 04.10.2026: kapittelåpningen skal alltid holde seg på én side på papir, også med lange delkapittellister */
+@media print {
+  .kapittelapning .illustrasjon svg,
+  .kapittelapning .illustrasjon img { max-height: 88mm; }
+  .kapittelapning .flate { padding: 11mm 14mm 10mm; margin-bottom: 6mm; }
+  .kapittelapning ol.delkapitler.to li { padding: 0.18rem 0; font-size: 0.9rem; }
+  .kapittelapning .illustrasjon { margin-bottom: 5mm; }
+}

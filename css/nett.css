@@ -471,3 +471,18 @@ details.maalboks > summary{ cursor: pointer; font-weight: 700; color: #1d4e89; p
 details.maalboks[open] > summary{ margin-bottom: .6rem; }
 @media print{ details.maalboks{ display: block; } }
 details.maalboks:not([open]){ padding-top: .7rem; padding-bottom: .7rem; }
+
+/* 04.10.2026: papirbokas sidetall i margen (ebok.py). Teksten kommer fra CSS, så Lytt leser den ikke. */
+a.papirside{
+  float: right; margin: 0.1rem 0 0.2rem 0.6rem; padding: 0 0.5em;
+  font-size: 0.72rem; font-weight: 600; line-height: 1.55; letter-spacing: 0.02em;
+  color: #6b7380; background: #f3f4f6; border: 1px solid #d6d9de; border-radius: 999px;
+  text-decoration: none; font-style: normal; text-transform: none;
+}
+a.papirside::before{ content: "s. " attr(data-side); }
+a.papirside:hover{ color: #123252; border-color: #123252; }
+a.papirside:target{ background: #fff3c4; border-color: #f9a825; color: #1f2430; }
+figure > a.papirside, section > a.papirside{ float: none; display: inline-block; margin: 0 0 0.3rem; }
+h2 > a.papirside, h3 > a.papirside{ font-size: 0.62em; vertical-align: middle; }
+a.papirside{ scroll-margin-top: 5rem; }
+@media print{ a.papirside{ display: none; } }
