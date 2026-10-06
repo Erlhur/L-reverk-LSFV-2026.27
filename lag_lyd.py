@@ -6,8 +6,11 @@ Kjøres i mappa med nettstedet (den som er koblet til GitHub med GitHub Desktop)
     python3 lag_lyd.py --test --stemme STEMME-ID
         Lager tre korte prøver med hver modell i mappa lyd_test/. Lytt og velg modell.
 
-    python3 lag_lyd.py --stemme STEMME-ID --modell eleven_v3
+    python3 lag_lyd.py --stemme STEMME-ID --modell eleven_flash_v2_5
         Leser inn alle tekstene som mangler lydfil. Viser antall tegn og spør før den starter.
+
+    python3 lag_lyd.py --telle
+        Viser hvor mye som mangler, fag for fag og kapittel for kapittel. Trenger ingen nøkkel.
 
 Valg:
     --typer tekst,ord          hva som skal leses inn (standard). Legg til «oppgave» for oppgavene også.
@@ -15,6 +18,12 @@ Valg:
     --kapittel 2               bare ett kapittel (krever --fag). Flere: --kapittel 1,2
     --maks-tegn 100000         stopp etter så mange tegn (fint for å fordele på flere måneder).
     --rydd                     slett lydfiler for tekster som ikke finnes lenger.
+    --ny-uttale                les også inn på nytt filer som ble laget før uttaleteksten fantes
+                               (tekster med tall, formler, tabeller eller punktlister).
+    --telle                    bare tell opp, ingen innlesing og ingen nøkkel.
+
+Stemmen leser feltet «tale» i lytt_manus.json når det finnes: tall, formler og enheter skrevet
+som ord, og pauser mellom tabellceller og punkter. Flash v2.5 gjør ikke dette selv.
 
 API-nøkkelen hentes fra miljøvariabelen ELEVENLABS_API_KEY, ellers spør skriptet om den.
 Nøkkelen lagres ikke noe sted. Skriptet bruker bare Pythons standardbibliotek.
@@ -22,11 +31,12 @@ Nøkkelen lagres ikke noe sted. Skriptet bruker bare Pythons standardbibliotek.
 Lydfilene legges i lyd/<id>.mp3, og lyd/lyd.json forteller nettsiden hvilke som finnes.
 Tekster som er endret, får ny id og leses inn på nytt neste gang. Alt annet gjenbrukes.
 """
-import argparse, getpass, json, os, sys, time, urllib.error, urllib.request
+import argparse, getpass, hashlib, json, os, sys, time, urllib.error, urllib.request
+from collections import Counter
 from datetime import date
 
 API = os.environ.get('ELEVENLABS_API_URL', 'https://api.elevenlabs.io')
-MODELLER_TEST = ['eleven_v3', 'eleven_multilingual_v2', 'eleven_flash_v2_5']
+MODELLER_TEST = ['eleven_flash_v2_5', 'eleven_v4_turbo', 'eleven_v4']   # v4 og v4 Turbo kom 28.09.2026
 SPRAAKKODE = {'eleven_flash_v2_5': 'no', 'eleven_turbo_v2_5': 'no'}   # bare disse godtar language_code
 
 
@@ -58,16 +68,50 @@ def hent(nokkel, stemme, modell, tekst, forsok=5):
     raise RuntimeError('ga opp etter flere forsøk')
 
 
+def tale(v):
+    """Det stemmen skal lese: uttaleteksten hvis den finnes, ellers teksten slik den står."""
+    return v.get('tale') or v['tekst']
+
+
+def kort_id(t):
+    return hashlib.sha1(t.encode('utf-8')).hexdigest()[:16]
+
+
+def vis_telling(valgt, mangler, gamle):
+    """Skriver ut hva som mangler lyd, per fag og kapittel. Ingen nøkkel trengs."""
+    def tabell(par):
+        n, tegn = Counter(), Counter()
+        for _, v in par:
+            k = (v['fag'], v['side'].split('/')[-1].replace('.html', '').replace('kapittel-', 'kap. '))
+            n[k] += 1; tegn[k] += len(tale(v))
+        return n, tegn
+    n_alle, t_alle = tabell(valgt)
+    n_m, t_m = tabell(mangler)
+    n_g, t_g = tabell(gamle)
+    print(f'{"Fag":12} {"Side":10} {"Mangler":>8} {"Tegn":>8}   {"Ny uttale":>9}   {"Har lyd":>8}')
+    for k in sorted(n_alle, key=lambda k: (k[0], (len(k[1]), k[1]))):
+        har = n_alle[k] - n_m[k]
+        print(f'{k[0]:12} {k[1]:10} {n_m[k]:8} {t_m[k]:8}   {n_g[k]:9}   {har:5}/{n_alle[k]:<4}')
+    sm, sg = sum(t_m.values()), sum(t_g.values())
+    print(f'\nMangler lyd: {sum(n_m.values())} tekster, ' + f'{sm:,}'.replace(',', ' ') + ' tegn.')
+    if gamle:
+        print(f'Laget før uttaleteksten: {len(gamle)} filer, ' + f'{sg:,}'.replace(',', ' ') +
+              ' tegn (tas med med --ny-uttale).')
+    print('Flash v2.5 bruker omtrent et halvt kreditt per tegn. Se «Usage» på elevenlabs.io for det nøyaktige tallet.')
+
+
 def main():
     a = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    a.add_argument('--stemme', required=True, help='stemme-ID fra ElevenLabs (Voices → stemmen → «Copy voice ID»)')
-    a.add_argument('--modell', default='eleven_v3')
+    a.add_argument('--stemme', help='stemme-ID fra ElevenLabs (Voices → stemmen → «Copy voice ID»)')
+    a.add_argument('--modell', default='eleven_flash_v2_5')
     a.add_argument('--typer', default='tekst,ord')
     a.add_argument('--fag', default=None)
     a.add_argument('--kapittel', default=None, help='kapittelnummer, f.eks. 1 eller 1,2 (krever --fag)')
     a.add_argument('--maks-tegn', type=int, default=None)
     a.add_argument('--test', action='store_true')
     a.add_argument('--rydd', action='store_true')
+    a.add_argument('--ny-uttale', action='store_true')
+    a.add_argument('--telle', action='store_true')
     a.add_argument('--mappe', default='.')
     x = a.parse_args()
 
@@ -78,9 +122,13 @@ def main():
     manus = json.load(open(manusfil, encoding='utf-8'))['tekster']
     lydmappe = os.path.join(mappe, 'lyd')
     os.makedirs(lydmappe, exist_ok=True)
-    nokkel = os.environ.get('ELEVENLABS_API_KEY') or getpass.getpass('API-nøkkel fra ElevenLabs (vises ikke): ').strip()
+    if not x.telle and not x.stemme:
+        sys.exit('Skriv stemme-ID-en etter --stemme (eller bruk --telle for bare å telle).')
+    logg_f = os.path.join(lydmappe, 'lyd_logg.json')
+    logg = json.load(open(logg_f, encoding='utf-8')) if os.path.exists(logg_f) else {}
 
     if x.test:
+        nokkel = os.environ.get('ELEVENLABS_API_KEY') or getpass.getpass('API-nøkkel fra ElevenLabs (vises ikke): ').strip()
         prover = []
         for typ in ('tekst', 'ord'):
             prover += [(i, v) for i, v in manus.items() if v['type'] == typ and 120 < len(v['tekst']) < 400][:1] or \
@@ -89,7 +137,7 @@ def main():
         for m in MODELLER_TEST:
             for n, (i, v) in enumerate(prover, 1):
                 try:
-                    data = hent(nokkel, x.stemme, m, v['tekst'])
+                    data = hent(nokkel, x.stemme, m, tale(v))
                     f = os.path.join(ut, f'{m}_{n}.mp3'); open(f, 'wb').write(data)
                     print(f'{m}: {os.path.basename(f)} – «{v["tekst"][:60]}…»')
                 except RuntimeError as e:
@@ -107,31 +155,41 @@ def main():
         mangler = sorted(sider - finnes_sider)
         if mangler:
             sys.exit(f'Fant ikke {", ".join(mangler)} i lytt_manus.json.')
-    utvalg = [(i, v) for i, v in manus.items()
-              if v['type'] in typer and (not x.fag or v['fag'] == x.fag)
-              and (sider is None or v['side'] in sider)
-              and not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
+    valgt = [(i, v) for i, v in manus.items()
+             if v['type'] in typer and (not x.fag or v['fag'] == x.fag)
+             and (sider is None or v['side'] in sider)]
+    utvalg = [(i, v) for i, v in valgt if not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
+    # Filer laget før uttaleteksten fantes, der stemmen nå skal lese noe annet enn den gjorde.
+    gamle = [(i, v) for i, v in valgt if os.path.exists(os.path.join(lydmappe, i + '.mp3'))
+             and logg.get(i, {}).get('uttale', kort_id(v['tekst'])) != kort_id(tale(v))]
+    if x.telle:
+        vis_telling(valgt, utvalg, gamle)
+        return
+    if x.ny_uttale:
+        utvalg += gamle
+    elif gamle:
+        print(f'({len(gamle)} innleste filer er laget før uttaleteksten fantes. Ta dem med: --ny-uttale)')
     if x.maks_tegn:
         sum_, kort = 0, []
         for i, v in utvalg:
-            if sum_ + len(v['tekst']) > x.maks_tegn: break
-            kort.append((i, v)); sum_ += len(v['tekst'])
+            if sum_ + len(tale(v)) > x.maks_tegn: break
+            kort.append((i, v)); sum_ += len(tale(v))
         utvalg = kort
-    tegn = sum(len(v['tekst']) for _, v in utvalg)
+    tegn = sum(len(tale(v)) for _, v in utvalg)
     print(f'{len(utvalg)} tekster mangler lydfil, til sammen ' + f'{tegn:,}'.replace(',', ' ') + ' tegn' +
           f' (modell {x.modell}, typer: {", ".join(sorted(typer))}).')
     if utvalg and input('Starte innlesingen? Skriv ja: ').strip().lower() != 'ja':
         return
-    logg_f = os.path.join(lydmappe, 'lyd_logg.json')
-    logg = json.load(open(logg_f, encoding='utf-8')) if os.path.exists(logg_f) else {}
+    nokkel = (os.environ.get('ELEVENLABS_API_KEY') or getpass.getpass('API-nøkkel fra ElevenLabs (vises ikke): ').strip()) if utvalg else ''
     feil = 0
     for n, (i, v) in enumerate(utvalg, 1):
         try:
-            data = hent(nokkel, x.stemme, x.modell, v['tekst'])
+            data = hent(nokkel, x.stemme, x.modell, tale(v))
         except RuntimeError as e:
             feil += 1; print(f'  [{n}/{len(utvalg)}] {v["side"]}: {e}'); continue
         open(os.path.join(lydmappe, i + '.mp3'), 'wb').write(data)
-        logg[i] = {'modell': x.modell, 'stemme': x.stemme, 'dato': str(date.today()), 'side': v['side']}
+        logg[i] = {'modell': x.modell, 'stemme': x.stemme, 'dato': str(date.today()), 'side': v['side'],
+                   'uttale': kort_id(tale(v))}
         if n % 25 == 0 or n == len(utvalg):
             print(f'  {n}/{len(utvalg)} ferdig')
             json.dump(logg, open(logg_f, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
