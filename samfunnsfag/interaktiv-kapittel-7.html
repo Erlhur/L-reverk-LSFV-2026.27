@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Øv · 7. Skriving, prosjekt og eksamen — Samfunnsfag</title>
-<link rel="stylesheet" href="../css/bok.css?v=9d9f49a8">
+<link rel="stylesheet" href="../css/bok.css?v=0ee41778">
 <link rel="stylesheet" href="../css/nett.css?v=d8023c95">
 <link rel="stylesheet" href="../css/interaktiv.css?v=af314c4e">
 <script src="../js/interaktiv.js?v=3a5869cf" defer></script>
@@ -23,7 +23,7 @@
   </div>
 </header>
 <div class="side">
-<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#34568b"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Kilder, kildekritikk og digital dømmekraft</span></a></li><li style="--kap:#8b2f3c"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Demokrati, styresett og norsk historie</span></a></li><li style="--kap:#5b3f86"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Kultur, identitet, mangfold og urfolk</span></a></li><li style="--kap:#2f6b5a"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Arbeidsliv, teknologi og økonomi</span></a></li><li style="--kap:#4f6b2a"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Bærekraft, klima, levekår og geografi</span></a></li><li style="--kap:#4a4f58"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Konflikter, radikalisering, holocaust og forebygging</span></a></li><li style="--kap:#7a4b1c"><a href="interaktiv-kapittel-7.html" aria-current="page"><span class="nr">7</span><span>Skriving, prosjekt og eksamen</span></a></li><li class="dk"><a href="#d7-1">7.1 Å skrive i samfunnsfag</a></li><li class="dk"><a href="#d7-2">7.2 Forklarende tekst</a></li><li class="dk"><a href="#d7-3">7.3 Drøftende tekst</a></li><li class="dk"><a href="#d7-4">7.4 Refleksjonstekst</a></li><li class="dk"><a href="#d7-5">7.5 Å drøfte egne og andres tekster</a></li><li class="dk"><a href="#d7-6">7.6 Prosjekt: «Mitt samfunn, mine valg»</a></li><li class="dk"><a href="#d7-7">7.7 Standpunkt og eksamen</a></li><li class="dk"><a href="#d7-8">7.8 Repetisjon og temakobling</a></li></ol></aside>
+<aside class="sidemeny"><h2>Kapitler</h2><ol><li style="--kap:#34568b"><a href="interaktiv-kapittel-1.html"><span class="nr">1</span><span>Kilder, kildekritikk og digital dømmekraft</span></a></li><li style="--kap:#8b2f3c"><a href="interaktiv-kapittel-2.html"><span class="nr">2</span><span>Demokrati, styresett og norsk historie</span></a></li><li style="--kap:#5b3f86"><a href="interaktiv-kapittel-3.html"><span class="nr">3</span><span>Kultur, identitet, mangfold og urfolk</span></a></li><li style="--kap:#2f6b5a"><a href="interaktiv-kapittel-4.html"><span class="nr">4</span><span>Arbeidsliv, teknologi og økonomi</span></a></li><li style="--kap:#4f6b2a"><a href="interaktiv-kapittel-5.html"><span class="nr">5</span><span>Bærekraft, klima, levekår og geografi</span></a></li><li style="--kap:#4a4f58"><a href="interaktiv-kapittel-6.html"><span class="nr">6</span><span>Konflikter, radikalisering, holocaust og forebygging</span></a></li><li style="--kap:#7a4b1c"><a href="interaktiv-kapittel-7.html" aria-current="page"><span class="nr">7</span><span>Skriving, prosjekt og eksamen</span></a></li><li class="dk"><a href="#d7-1">7.1 Å skrive i samfunnsfag</a></li><li class="dk"><a href="#d7-2">7.2 Forklarende tekst</a></li><li class="dk"><a href="#d7-3">7.3 Drøftende tekst</a></li><li class="dk"><a href="#d7-4">7.4 Refleksjonstekst</a></li><li class="dk"><a href="#d7-5">7.5 Å drøfte egne og andres tekster</a></li><li class="dk"><a href="#d7-6">7.6 Prosjekt: «Mitt samfunn, mine valg»</a></li><li class="dk"><a href="#d7-7">7.7 Standpunkt og eksamen</a></li><li class="dk"><a href="#d7-8">7.8 Repetisjon og temakobling</a></li><li class="dk"><a href="#d7-9">7.9 Modul 4: utdypende tekster og oppgaver</a></li></ol></aside>
 <main class="innhold" style="--kap:#7a4b1c">
 <section class="kapittelapning" style="--kap:#7a4b1c">
   <div class="flate">
@@ -1177,78 +1177,6 @@ function rutenett() {
       '@media print{.ordhjelp,.ordhjelp-sok,.ordhjelp-knapp,.ordhjelp-tips{display:none!important}}';
     document.head.appendChild(css);
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
-})();
-</script>
-<script>
-/* modulvalg */
-(function () {
-  var NOKKEL = 'modulvisning';
-  function hent() { try { return localStorage.getItem(NOKKEL) || 'alle'; } catch (e) { return 'alle'; } }
-  function lagre(v) { try { localStorage.setItem(NOKKEL, v); } catch (e) {} }
-  function bruk(v) {
-    document.documentElement.classList.toggle('bare-m3', v === 'm3');
-    Array.prototype.forEach.call(document.querySelectorAll('.modulvalg button'), function (b) {
-      b.setAttribute('aria-pressed', b.getAttribute('data-modul') === v ? 'true' : 'false');
-    });
-  }
-  function start() {
-    var main = document.querySelector('main');
-    if (!main || !main.querySelector('section.modul4, .m4tekst, .oppgavebolk.bolk-m4, section.fordypning')) return;
-    // merk lenkene i kapittelmenyen som peker til modul 4-delkapitler
-    Array.prototype.forEach.call(document.querySelectorAll('section.modul4[id], section.fordypning[id]'), function (s) {
-      var h = s.querySelector('h2[id]');
-      var ider = ['#' + s.id].concat(h ? ['#' + h.id] : []);
-      Array.prototype.forEach.call(document.querySelectorAll('a[href]'), function (a) {
-        var href = a.getAttribute('href') || '';
-        if (ider.some(function (i) { return href.slice(-i.length) === i; }) && !a.closest('main')) {
-          a.classList.add(s.classList.contains('modul4') ? 'lenke-m4' : 'lenke-fordypning');
-        }
-      });
-    });
-    // og punktene i «I dette kapitlet» i kapittelåpningen
-    var nummer = {};
-    Array.prototype.forEach.call(document.querySelectorAll('section.modul4 > h2, section.fordypning > h2'), function (h) {
-      nummer[h.textContent.trim().split(/\s+/)[0]] = h.parentElement.classList.contains('modul4') ? 'lenke-m4' : 'lenke-fordypning';
-    });
-    Array.prototype.forEach.call(document.querySelectorAll('.kapittelapning li'), function (li) {
-      var n = li.querySelector('.dknr');
-      if (n && nummer[n.textContent.trim()]) li.classList.add(nummer[n.textContent.trim()]);
-    });
-    var boks = document.createElement('div');
-    boks.className = 'modulvalg'; boks.setAttribute('role', 'group'); boks.setAttribute('aria-label', 'Velg modul');
-    var et = document.createElement('span'); et.textContent = 'Vis:'; boks.appendChild(et);
-    [['m3', 'Modul 3'], ['alle', 'Modul 3 og 4']].forEach(function (d) {
-      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('data-modul', d[0]); b.textContent = d[1];
-      b.addEventListener('click', function () { lagre(d[0]); bruk(d[0]); });
-      boks.appendChild(b);
-    });
-    var forklar = document.createElement('span'); forklar.className = 'modulvalg-tekst';
-    forklar.textContent = 'Modul 3 skjuler stoff som bare er for modul 4, og fordypningen.';
-    boks.appendChild(forklar);
-    var apninger = main.querySelectorAll('.kapittelapning');
-    if (!apninger.length) main.insertBefore(boks, main.firstChild);
-    Array.prototype.forEach.call(apninger, function (apning, i) {
-      var kopi = i ? boks.cloneNode(true) : boks;
-      if (i) Array.prototype.forEach.call(kopi.querySelectorAll('button'), function (b) {
-        b.addEventListener('click', function () { lagre(b.getAttribute('data-modul')); bruk(b.getAttribute('data-modul')); });
-      });
-      apning.parentNode.insertBefore(kopi, apning.nextSibling);
-    });
-    bruk(hent());
-  }
-  var css = document.createElement('style');
-  css.textContent =
-    '.modulvalg{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;margin:1rem 0 1.4rem;padding:.6rem .9rem;background:#f4f8fc;border:1px solid #c9d8e8;border-radius:12px}' +
-    '.modulvalg span:first-child{font-weight:700;color:#1f2430}' +
-    '.modulvalg button{min-height:40px;padding:0 1rem;border-radius:20px;border:2px solid #1d4e89;background:#fff;color:#1d4e89;font:inherit;font-weight:700;cursor:pointer}' +
-    '.modulvalg button[aria-pressed=true]{background:#1d4e89;color:#fff}' +
-    '.modulvalg-tekst{flex-basis:100%;font-size:.88rem;color:#5a6272}' +
-    'html.bare-m3 main section.modul4,html.bare-m3 main section.fordypning,html.bare-m3 main .m4tekst,' +
-    'html.bare-m3 main .oppgavebolk.bolk-m4,html.bare-m3 .lenke-m4,html.bare-m3 .lenke-fordypning{display:none!important}' +
-    '.lenke-m4::after{content:"M4";margin-left:.4em;font-size:.68em;font-weight:700;color:#fff;background:#2c7a7b;border-radius:4px;padding:0 .3em;vertical-align:.1em}' +
-    '@media print{.modulvalg{display:none}}';
-  document.head.appendChild(css);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>

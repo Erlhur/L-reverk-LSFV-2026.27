@@ -852,17 +852,16 @@ ol.delkapitler.to li{ break-inside: avoid; }
 }
 .kortfortalt ul{ margin: 0; padding-left: 1.1rem; }
 .kortfortalt li{ margin-bottom: 0.15rem; font-size: 1.05em; line-height: 1.45; }
-section.modul4 > h2::after{
-  content: "Modul 4";
+/* Modul 4 samlet sist i kapitlet (lag_kapittel.flytt_m4) */
+.m4intro{ font-style: italic; color: #4b5a58; }
+.m4del{ margin: 1.4rem 0 2.2rem; }
+.m4til{
   display: inline-block;
-  margin-left: 0.6em;
-  padding: 0.12em 0.5em;
+  margin: 0 0 0.3rem;
+  padding: 0.15rem 0.7rem;
   border-radius: 4px;
-  background: var(--teal);
-  color: #fff;
-  font-size: 0.5em;
+  background: var(--teal-lys);
+  color: var(--teal);
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  vertical-align: 0.35em;
+  font-size: 0.9rem;
 }
