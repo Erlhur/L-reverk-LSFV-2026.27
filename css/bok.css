@@ -865,3 +865,18 @@ ol.delkapitler.to li{ break-inside: avoid; }
   font-weight: 700;
   font-size: 0.9rem;
 }
+figure.mindre{ max-width: 62%; margin-left: auto; margin-right: auto; }
+/* Sammendrag sist i kapitlet (07.10.2026) */
+.sammendrag{
+  background: #eef6ec;
+  border-left: 5px solid #3d6b35;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.8rem 1rem 0.7rem;
+  margin: 0.8rem 0 1.4rem;
+}
+.sammendrag .etikett{
+  display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #3d6b35; margin-bottom: 0.35rem;
+}
+.sammendrag ul{ margin: 0; padding-left: 1.1rem; }
+.sammendrag li{ margin-bottom: 0.25rem; line-height: 1.45; }

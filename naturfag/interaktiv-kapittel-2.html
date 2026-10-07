@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Øv · 2. Celler og kroppen — Naturfag</title>
-<link rel="stylesheet" href="../css/bok.css?v=0ee41778">
-<link rel="stylesheet" href="../css/nett.css?v=d8023c95">
+<link rel="stylesheet" href="../css/bok.css?v=11d1eaec">
+<link rel="stylesheet" href="../css/nett.css?v=e706c0f8">
 <link rel="stylesheet" href="../css/interaktiv.css?v=af314c4e">
 <script src="../js/interaktiv.js?v=3a5869cf" defer></script>
 </head>
@@ -244,7 +244,7 @@ Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div><
   function taleTil(el) { return el.classList && el.classList.contains('ordkort') ? ordkortTekst(el, taleFra) : taleFra(el); }
   function blokker(rot) {
     var ut = [];
-    rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main ol.oppgaver > li').forEach(function (el) {
+    rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
       if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       var t = tekstFra(el);
@@ -796,6 +796,77 @@ var TYPER = {
       ut += tx(440, 110, 'b = ' + komma(b) + ': linja krysser', 15, 'start', 'bold', ORANSJE) + tx(440, 130, 'y-aksen i ' + komma(b) + '.', 15, 'start', 'normal', ORANSJE);
       ut += tx(440, 170, 'a = ' + komma(a) + ': ett steg til høyre', 15, 'start', 'bold', ROD) + tx(440, 190, 'gir ' + (a >= 0 ? komma(a) + ' opp' : komma(-a) + ' ned') + '.', 15, 'start', 'normal', ROD);
       return svg(640, 340, ut, 'Grafen til ' + uttrykk);
+    }
+  },
+  // ------------------------------------------------------------------ naturfag (07.10.2026)
+  partikler: {
+    tall: [['Temperatur (°C)', -20, 120, 5]],
+    tegn: function (v) {
+      var T = v[0], fase = T <= 0 ? 'fast' : (T < 100 ? 'vaeske' : 'gass'), r = rng(11), ut = '';
+      var bx = 170, by = 40, bb = 280, bh = 210, n = 24, rad = 11;
+      // termometer
+      var ty0 = 240, ty1 = 50, ty = ty0 - (T + 20) / 140 * (ty0 - ty1);
+      ut += rute(52, 40, 22, 214, '#fff', '#9aa6b2', 11) + '<circle cx="63" cy="258" r="18" fill="' + ROD + '"/>';
+      ut += rute(57, ty, 12, 258 - ty, ROD);
+      [-20, 0, 50, 100].forEach(function (g) { var yy = ty0 - (g + 20) / 140 * (ty0 - ty1); ut += linje(76, yy, 86, yy, MORK, 1.4) + tx(90, yy + 5, g + ' °C', 12, 'start', 'normal', SVAK); });
+      ut += tx(63, 300, komma(T) + ' °C', 18, 'middle', 'bold', ROD);
+      // beholderen
+      ut += rute(bx, by, bb, bh, '#f7f9fb', '#9aa6b2', 8);
+      if (fase === 'vaeske') ut += rute(bx + 2, by + 70, bb - 4, bh - 72, '#e3eefa');
+      var farge = fase === 'fast' ? '#2f6fa6' : (fase === 'vaeske' ? '#d9822b' : ROD);
+      var fart = Math.max(.25, (T + 25) / 40), amp = fase === 'fast' ? 1 + (T + 20) / 8 : 0;
+      for (var i = 0; i < n; i++) {
+        var x, y;
+        if (fase === 'fast') { x = bx + 40 + (i % 6) * 40; y = by + 60 + Math.floor(i / 6) * 36; }
+        else if (fase === 'vaeske') { x = bx + 30 + (i % 8) * 31 + (r() - .5) * 12; y = by + 98 + Math.floor(i / 8) * 34 + (r() - .5) * 10; }
+        else { x = bx + 24 + r() * (bb - 48); y = by + 24 + r() * (bh - 48); }
+        var bev = '';
+        if (fase === 'fast') {
+          var d = (1.2 / fart).toFixed(2);
+          bev = '<animateTransform attributeName="transform" type="translate" values="0,0;' + amp.toFixed(1) + ',' + (-amp / 2).toFixed(1) + ';' + (-amp).toFixed(1) + ',' + (amp / 2).toFixed(1) + ';0,0" dur="' + (0.3 + r() * .2) + 's" repeatCount="indefinite"/>';
+        } else {
+          var sp = fase === 'vaeske' ? 18 : 120, dur = (fase === 'vaeske' ? 3 : 2.2) / fart * (0.8 + r() * .4);
+          var p = [[0, 0]];
+          for (var k = 0; k < 3; k++) p.push([(r() - .5) * 2 * sp, (r() - .5) * 2 * (fase === 'vaeske' ? 8 : sp * .6)]);
+          p.push([0, 0]);
+          bev = '<animateTransform attributeName="transform" type="translate" values="' + p.map(function (q) { return q[0].toFixed(1) + ',' + q[1].toFixed(1); }).join(';') + '" dur="' + dur.toFixed(2) + 's" repeatCount="indefinite"/>';
+        }
+        ut += '<g><circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + rad + '" fill="' + farge + '" stroke="#fff" stroke-width="1.5"/>' + bev + '</g>';
+      }
+      var navn = fase === 'fast' ? 'Is – fast stoff' : (fase === 'vaeske' ? 'Vann – væske' : 'Vanndamp – gass');
+      var forkl = fase === 'fast' ? ['Partiklene sitter fast', 'og rister på stedet.'] : (fase === 'vaeske' ? ['Partiklene er tett i tett,', 'men glir forbi hverandre.'] : ['Partiklene er langt fra', 'hverandre og farer rundt.']);
+      var x0 = 466;
+      ut += tx(x0, 80, navn, 20, 'start', 'bold', farge);
+      ut += tx(x0, 112, forkl[0], 15, 'start', 'normal', MORK) + tx(x0, 132, forkl[1], 15, 'start', 'normal', MORK);
+      var merk = T === 0 ? ['Ved 0 °C smelter isen.', ''] : (T === 100 ? ['Ved 100 °C koker vannet.', ''] : ['Jo varmere det er, desto', 'raskere beveger de seg.']);
+      ut += tx(x0, 170, merk[0], 14, 'start', 'bold', SVAK) + tx(x0, 188, merk[1], 14, 'start', 'bold', SVAK);
+      ut += tx(x0, 226, 'Smeltepunkt: 0 °C', 14, 'start', 'normal', SVAK) + tx(x0, 248, 'Kokepunkt: 100 °C', 14, 'start', 'normal', SVAK);
+      return svg(640, 320, ut, 'Vann ved ' + komma(T) + ' grader: ' + navn);
+    }
+  },
+  ph: {
+    tall: [['pH', 0, 14]],
+    tegn: function (v) {
+      var p = v[0], ut = '';
+      var FARGER = ['#c2185b', '#d81b60', '#e04a8a', '#d264a8', '#a35bb5', '#8a5ac8', '#6d5fd0', '#5a6fd6', '#3f8fd0', '#2fa7a0', '#3fae5a', '#7cbf3a', '#c7c83a', '#e0c341', '#e3b23c'];
+      var EKS = ['batterisyre', 'magesyre', 'sitronsaft', 'eddik', 'tomater', 'kaffe', 'melk', 'rent vann', 'sjøvann', 'natron løst i vann', 'såpevann', 'salmiakk', 'kalkvann', 'ovnsrens', 'avløpsåpner (lut)'];
+      var x0 = 40, b = 560 / 15;
+      for (var i = 0; i <= 14; i++) ut += rute(x0 + i * b, 40, b, 34, FARGER[i]) + tx(x0 + i * b + b / 2, 92, i, 13, 'middle', i === p ? 'bold' : 'normal', i === p ? MORK : SVAK);
+      ut += tx(x0, 30, 'surt', 14, 'start', 'bold', ROD) + tx(x0 + 7.5 * b, 30, 'nøytralt', 14, 'middle', 'bold', SVAK) + tx(x0 + 15 * b, 30, 'basisk', 14, 'end', 'bold', BLA);
+      var mx = x0 + p * b + b / 2;
+      ut += '<polygon points="' + (mx - 9) + ',112 ' + (mx + 9) + ',112 ' + mx + ',98" fill="' + MORK + '"/>';
+      // begeret med rødkålsaft i fargen som passer
+      ut += '<path d="M110,130 L110,262 Q110,272 120,272 L220,272 Q230,272 230,262 L230,130" fill="none" stroke="#7d8a96" stroke-width="3"/>';
+      ut += rute(113, 170, 114, 99, FARGER[p]);
+      var type = p < 7 ? 'surt' : (p === 7 ? 'nøytralt' : 'basisk'), farge = p < 7 ? ROD : (p === 7 ? SVAK : BLA);
+      ut += tx(270, 150, 'pH ' + p + ' – ' + type, 22, 'start', 'bold', farge);
+      ut += tx(270, 180, 'Eksempel: ' + EKS[p], 16, 'start', 'normal', MORK);
+      var gang = Math.pow(10, Math.abs(7 - p));
+      var sml = p === 7 ? 'Rent vann er nøytralt.' : (komma(gang) + ' ganger ' + (p < 7 ? 'surere' : 'mer basisk') + ' enn rent vann');
+      ut += tx(270, 214, sml, 15, 'start', 'bold', farge);
+      ut += tx(270, 246, 'Rødkålsaft får denne fargen.', 14, 'start', 'normal', SVAK);
+      if (p <= 2 || p >= 12) ut += tx(270, 272, 'Sterkt etsende! Bruk vernebriller og hansker.', 14, 'start', 'bold', ROD);
+      return svg(640, 290, ut, 'pH ' + p + ': ' + type + ', for eksempel ' + EKS[p]);
     }
   }
 };
