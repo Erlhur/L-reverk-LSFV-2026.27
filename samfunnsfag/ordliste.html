@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ordliste — Samfunnsfag</title>
-<link rel="stylesheet" href="../css/bok.css?v=11d1eaec">
+<link rel="stylesheet" href="../css/bok.css?v=79504fb5">
 <link rel="stylesheet" href="../css/nett.css?v=e706c0f8">
 
 <style>
@@ -273,6 +273,7 @@ body[data-spraak=alle] .ov .ord{ font-size:1.15rem; }
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
       if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
+      if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);
       if (t.length < 3) return;
       ut.push({ el: el, type: el.tagName === 'LI' ? 'oppgave' : 'tekst', tekst: t, hvor: 'foran' });
