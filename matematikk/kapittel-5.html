@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>5. Prosent — Matematikk</title>
-<link rel="stylesheet" href="../css/bok.css?v=7e793ac5">
+<link rel="stylesheet" href="../css/bok.css?v=9d9f49a8">
 <link rel="stylesheet" href="../css/nett.css?v=d8023c95">
 
 </head>
@@ -1570,7 +1570,7 @@
   function taleTil(el) { return el.classList && el.classList.contains('ordkort') ? ordkortTekst(el, taleFra) : taleFra(el); }
   function blokker(rot) {
     var ut = [];
-    rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main ol.oppgaver > li').forEach(function (el) {
+    rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main ol.oppgaver > li').forEach(function (el) {
       if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       var t = tekstFra(el);
@@ -2503,6 +2503,78 @@ function rutenett() {
       '@media print{.ordhjelp,.ordhjelp-sok,.ordhjelp-knapp,.ordhjelp-tips{display:none!important}}';
     document.head.appendChild(css);
   }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+<script>
+/* modulvalg */
+(function () {
+  var NOKKEL = 'modulvisning';
+  function hent() { try { return localStorage.getItem(NOKKEL) || 'alle'; } catch (e) { return 'alle'; } }
+  function lagre(v) { try { localStorage.setItem(NOKKEL, v); } catch (e) {} }
+  function bruk(v) {
+    document.documentElement.classList.toggle('bare-m3', v === 'm3');
+    Array.prototype.forEach.call(document.querySelectorAll('.modulvalg button'), function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-modul') === v ? 'true' : 'false');
+    });
+  }
+  function start() {
+    var main = document.querySelector('main');
+    if (!main || !main.querySelector('section.modul4, .m4tekst, .oppgavebolk.bolk-m4, section.fordypning')) return;
+    // merk lenkene i kapittelmenyen som peker til modul 4-delkapitler
+    Array.prototype.forEach.call(document.querySelectorAll('section.modul4[id], section.fordypning[id]'), function (s) {
+      var h = s.querySelector('h2[id]');
+      var ider = ['#' + s.id].concat(h ? ['#' + h.id] : []);
+      Array.prototype.forEach.call(document.querySelectorAll('a[href]'), function (a) {
+        var href = a.getAttribute('href') || '';
+        if (ider.some(function (i) { return href.slice(-i.length) === i; }) && !a.closest('main')) {
+          a.classList.add(s.classList.contains('modul4') ? 'lenke-m4' : 'lenke-fordypning');
+        }
+      });
+    });
+    // og punktene i «I dette kapitlet» i kapittelåpningen
+    var nummer = {};
+    Array.prototype.forEach.call(document.querySelectorAll('section.modul4 > h2, section.fordypning > h2'), function (h) {
+      nummer[h.textContent.trim().split(/\s+/)[0]] = h.parentElement.classList.contains('modul4') ? 'lenke-m4' : 'lenke-fordypning';
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.kapittelapning li'), function (li) {
+      var n = li.querySelector('.dknr');
+      if (n && nummer[n.textContent.trim()]) li.classList.add(nummer[n.textContent.trim()]);
+    });
+    var boks = document.createElement('div');
+    boks.className = 'modulvalg'; boks.setAttribute('role', 'group'); boks.setAttribute('aria-label', 'Velg modul');
+    var et = document.createElement('span'); et.textContent = 'Vis:'; boks.appendChild(et);
+    [['m3', 'Modul 3'], ['alle', 'Modul 3 og 4']].forEach(function (d) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('data-modul', d[0]); b.textContent = d[1];
+      b.addEventListener('click', function () { lagre(d[0]); bruk(d[0]); });
+      boks.appendChild(b);
+    });
+    var forklar = document.createElement('span'); forklar.className = 'modulvalg-tekst';
+    forklar.textContent = 'Modul 3 skjuler stoff som bare er for modul 4, og fordypningen.';
+    boks.appendChild(forklar);
+    var apninger = main.querySelectorAll('.kapittelapning');
+    if (!apninger.length) main.insertBefore(boks, main.firstChild);
+    Array.prototype.forEach.call(apninger, function (apning, i) {
+      var kopi = i ? boks.cloneNode(true) : boks;
+      if (i) Array.prototype.forEach.call(kopi.querySelectorAll('button'), function (b) {
+        b.addEventListener('click', function () { lagre(b.getAttribute('data-modul')); bruk(b.getAttribute('data-modul')); });
+      });
+      apning.parentNode.insertBefore(kopi, apning.nextSibling);
+    });
+    bruk(hent());
+  }
+  var css = document.createElement('style');
+  css.textContent =
+    '.modulvalg{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;margin:1rem 0 1.4rem;padding:.6rem .9rem;background:#f4f8fc;border:1px solid #c9d8e8;border-radius:12px}' +
+    '.modulvalg span:first-child{font-weight:700;color:#1f2430}' +
+    '.modulvalg button{min-height:40px;padding:0 1rem;border-radius:20px;border:2px solid #1d4e89;background:#fff;color:#1d4e89;font:inherit;font-weight:700;cursor:pointer}' +
+    '.modulvalg button[aria-pressed=true]{background:#1d4e89;color:#fff}' +
+    '.modulvalg-tekst{flex-basis:100%;font-size:.88rem;color:#5a6272}' +
+    'html.bare-m3 main section.modul4,html.bare-m3 main section.fordypning,html.bare-m3 main .m4tekst,' +
+    'html.bare-m3 main .oppgavebolk.bolk-m4,html.bare-m3 .lenke-m4,html.bare-m3 .lenke-fordypning{display:none!important}' +
+    '.lenke-m4::after{content:"M4";margin-left:.4em;font-size:.68em;font-weight:700;color:#fff;background:#2c7a7b;border-radius:4px;padding:0 .3em;vertical-align:.1em}' +
+    '@media print{.modulvalg{display:none}}';
+  document.head.appendChild(css);
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>
