@@ -889,4 +889,8 @@ figure.mindre{ max-width: 62%; margin-left: auto; margin-right: auto; }
 /* Små portretter av historiske personer (08.10.2026) */
 figure.portrett{ float: right; width: 30%; max-width: 30%; margin: 0.2rem 0 0.8rem 1.2rem; break-inside: avoid; page-break-inside: avoid; }
 figure.portrett.liten{ width: 22%; max-width: 22%; }
+figure.portrett svg{ break-after: avoid; page-break-after: avoid; }
+figure.portrett figcaption{ break-before: avoid; page-break-before: avoid; }
+figure.portrett.mini{ width: 16%; max-width: 16%; }
+figure.portrett.par{ width: 34%; max-width: 34%; }
 figure.portrett figcaption{ font-size: 0.8em; line-height: 1.3; }

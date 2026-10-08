@@ -491,5 +491,10 @@ body .innhold > section > figure.mindre, figure.foto.mindre{ width: 100%; max-wi
 /* Små portretter av historiske personer (08.10.2026). !important: build_nett gir bildene klassen «foto» og en max-width i style. */
 .innhold figure.portrett, figure.portrett.foto{ float: right !important; clear: right; width: 34% !important; max-width: 210px !important; margin: 0.2rem 0 0.8rem 1.2rem !important; transform: none !important; }
 .innhold figure.portrett.liten, figure.portrett.liten.foto{ max-width: 150px !important; }
-.innhold figure.portrett figcaption{ font-size: 0.82em; line-height: 1.3; }
+.innhold figure.portrett figcaption{ font-size: 0.82em; line-height: 1.3; margin-top: 0.3rem !important; }
+.innhold figure.portrett svg, figure.portrett.foto svg{ margin: 0 !important; display: block; }
+.innhold figure.portrett.liten, figure.portrett.liten.foto{ width: 26% !important; }
+.innhold figure.portrett.mini, figure.portrett.mini.foto{ width: 22% !important; max-width: 120px !important; }
+.innhold figure.portrett.par, figure.portrett.par.foto{ width: 40% !important; max-width: 270px !important; }
+@media (max-width: 560px){ .innhold figure.portrett.mini, figure.portrett.mini.foto{ max-width: 95px !important; } .innhold figure.portrett.par, figure.portrett.par.foto{ max-width: 200px !important; } }
 @media (max-width: 560px){ .innhold figure.portrett, figure.portrett.foto{ max-width: 150px !important; } .innhold figure.portrett.liten, figure.portrett.liten.foto{ max-width: 110px !important; } }
