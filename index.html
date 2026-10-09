@@ -3,44 +3,187 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Læreverk for forberedende opplæring for voksne</title>
+<title>Nettsted i matematikk, naturfag og samfunnsfag for voksne</title>
 <link rel="stylesheet" href="css/bok.css?v=9dc5bd88">
 <link rel="stylesheet" href="css/nett.css?v=35d7f77e">
+<style>
+body { background: #f4f2ee; }
+.fs-topp { position: absolute; inset: 0 0 auto 0; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem clamp(1rem, 4vw, 3rem); color: #fff; }
+.fs-topp .merke { color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem; }
+.fs-topp .merke span { font-weight: 400; opacity: .85; }
+.fs-topp nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; font-weight: 600; opacity: .92; }
+.fs-topp nav a:hover { opacity: 1; text-decoration: underline; }
+.fs-helt { position: relative; min-height: 78vh; display: flex; align-items: flex-end; overflow: hidden; color: #fff; background: #10243c; }
+.fs-lysbilder { position: absolute; inset: 0; z-index: 0; }
+.fs-lysbilder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fs-veksle 24s infinite; }
+.fs-lysbilder img:nth-child(2) { animation-delay: 8s; }
+.fs-lysbilder img:nth-child(3) { animation-delay: 16s; }
+@keyframes fs-veksle { 0% { opacity: 0; transform: scale(1.02); } 6% { opacity: 1; } 33% { opacity: 1; } 40% { opacity: 0; transform: scale(1.12); } 100% { opacity: 0; transform: scale(1.12); } }
+.fs-helt::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(10,24,42,.88) 0%, rgba(10,24,42,.70) 45%, rgba(10,24,42,.25) 80%, rgba(10,24,42,.15) 100%), linear-gradient(180deg, rgba(10,24,42,.5) 0%, rgba(10,24,42,0) 30%, rgba(10,24,42,.75) 100%); }
+@media (max-width: 700px) { .fs-helt::after { background: linear-gradient(180deg, rgba(10,24,42,.78) 0%, rgba(10,24,42,.72) 60%, rgba(10,24,42,.88) 100%); } }
+.fs-innhold { position: relative; z-index: 2; width: 100%; max-width: 1280px; margin: 0 auto; padding: 7rem clamp(1rem, 4vw, 3rem) 9rem; }
+.fs-modul { display: block; margin-top: .5rem; font-size: .55em; letter-spacing: .06em; color: #ffd27a; }
+.fs-over { display: inline-block; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; background: rgba(255,255,255,.14); padding: .35rem .8rem; border-radius: 99px; margin-bottom: 1rem; backdrop-filter: blur(4px); }
+.fs-innhold h1 { font-size: clamp(1.4rem, 2.9vw, 2.35rem); line-height: 1.15; margin: 0 0 1.2rem; max-width: 28ch; text-transform: uppercase; letter-spacing: .01em; font-weight: 800; color: #fff; border: 0; padding: 0; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+.fs-plan { color: #ffd27a; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.fs-innhold p { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 46rem; margin: 0; opacity: .95; }
+.fs-sprak { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.fs-sprak span { font-size: .95rem; padding: .3rem .75rem; border-radius: 99px; background: rgba(255,255,255,.16); animation: fs-svev 6s ease-in-out infinite; }
+.fs-sprak span:nth-child(2n) { animation-delay: -2s; } .fs-sprak span:nth-child(3n) { animation-delay: -4s; }
+@keyframes fs-svev { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+.fs-kort { position: relative; z-index: 4; max-width: 1280px; margin: -6rem auto 0; padding: 0 clamp(1rem, 4vw, 3rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+.fk { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(18,40,70,.14); display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; animation: fs-inn .8s ease both; }
+.fk:nth-child(2) { animation-delay: .12s; } .fk:nth-child(3) { animation-delay: .24s; }
+@keyframes fs-inn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.fk:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(18,40,70,.2); }
+.fk-bilde { display: block; height: 210px; overflow: hidden; }
+.fk-bilde img { width: 100%; height: 100%; object-fit: cover; transition: transform 6s ease; }
+.fk:hover .fk-bilde img { transform: scale(1.08); }
+.fk-tekst { padding: 1.2rem 1.4rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.fk h2 { margin: 0; font-size: 1.5rem; border: 0; padding: 0; }
+.fk h2 a { text-decoration: none; color: inherit; }
+.fk-matematikk h2 { color: #1d4e89; } .fk-naturfag h2 { color: #2e6b35; } .fk-samfunnsfag h2 { color: #8a3b12; }
+.fk p { margin: 0; color: #4a5263; }
+.fk .fk-tall { font-size: .88rem; color: #6b7280; }
+.fk .fk-plan { font-size: .88rem; margin-top: -.3rem; }
+.fk .fk-plan a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.fk-lenker { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: auto; padding-top: .6rem; }
+.fk-lenker a { font-size: .9rem; text-decoration: none; padding: .35rem .8rem; border-radius: 99px; border: 1px solid #d9dde5; color: #1f2430; }
+.fk-lenker a:first-child { background: #123252; color: #fff; border-color: #123252; }
+.fk-lenker a:hover { border-color: #123252; }
+.fs-del { max-width: 1280px; margin: 3.5rem auto 0; padding: 0 clamp(1rem, 4vw, 3rem); }
+.fs-del h2 { font-size: 1.6rem; border: 0; padding: 0; margin: 0 0 1.2rem; color: #123252; }
+.fs-ingress { max-width: 52rem; color: #4b5563; margin: -.4rem 0 1.2rem; }
+.fs-mk-rad { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; align-items: start; }
+.fs-mk { background: #fff; border-radius: 14px; padding: 1.2rem 1.3rem; box-shadow: 0 4px 16px rgba(18,40,70,.08); border-top: 5px solid #1f4e79; }
+.fs-mk-naturfag { border-top-color: #2e6b3a; } .fs-mk-samfunnsfag { border-top-color: #8a3b12; }
+.fs-mk-matematikk h3 { color: #1f4e79; } .fs-mk-naturfag h3 { color: #2e6b3a; } .fs-mk-samfunnsfag h3 { color: #8a3b12; }
+.fs-mk h3 { margin: 0 0 .2rem; font-size: 1.25rem; }
+.fs-mk-plan { margin: 0 0 .8rem; font-size: .92rem; }
+.fs-mk-plan a { color: #1f4e79; }
+.fs-mk details { border-top: 1px solid #e5e7eb; }
+.fs-mk summary { cursor: pointer; padding: .65rem 0; font-weight: 700; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.fs-mk summary::-webkit-details-marker { display: none; }
+.fs-mk summary::after { content: "+"; font-size: 1.3rem; font-weight: 400; color: #6b7280; margin-left: .6rem; }
+.fs-mk details[open] summary::after { content: "–"; }
+.fs-mk summary span { font-weight: 400; font-size: .85rem; color: #6b7280; margin-left: auto; }
+.fs-mk ul { margin: 0 0 .9rem; padding-left: 1.1rem; font-size: .93rem; line-height: 1.45; }
+.fs-mk li { margin-bottom: .45rem; }
+.fs-ruter { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1rem; }
+.fs-rute { background: #fff; border-radius: 14px; padding: 1.2rem 1.3rem; border: 1px solid #e6e3dc; }
+.fs-rute .ikon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: #e8eef7; color: #123252; margin-bottom: .7rem; }
+.fs-rute .ikon svg { width: 24px; height: 24px; }
+.fs-rute h3 { margin: 0 0 .3rem; font-size: 1.08rem; color: #123252; }
+.fs-rute p { margin: 0; color: #4a5263; font-size: .95rem; }
+.fs-tall { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.fs-tall div { background: #123252; color: #fff; border-radius: 14px; padding: 1.1rem 1.3rem; }
+.fs-tall b { display: block; font-size: 2rem; line-height: 1.1; }
+.fs-tall span { opacity: .85; font-size: .95rem; }
+.fs-bunn { margin-top: 4rem; background: #10243c; color: #c9d4e3; padding: 2rem clamp(1rem, 4vw, 3rem); }
+.fs-bunn .innmat { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: .95rem; }
+.fs-bunn b { color: #fff; }
+@media (prefers-reduced-motion: reduce) {
+  .fs-lysbilder img, .fs-sprak span, .fk { animation: none !important; }
+  .fs-lysbilder img:first-child { opacity: 1; }
+  .fk-bilde img { transition: none; }
+}
+@media (max-width: 700px) {
+  .fs-topp nav { display: none; }
+  .fs-helt { min-height: 70vh; }
+  .fs-innhold { padding-bottom: 7rem; }
+}
+</style>
 </head>
 <body>
-<header class="topplinje">
-  <div class="innmat">
-    <a class="merke" href="index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-  </div>
+<header class="fs-topp">
+  <a class="merke" href="index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
+  <nav><a href="matematikk/index.html">Matematikk</a><a href="naturfag/index.html">Naturfag</a><a href="samfunnsfag/index.html">Samfunnsfag</a></nav>
 </header>
 
-<section class="helt">
-  <div class="innmat">
-    <h1>Læreverk for voksne</h1>
-    <p>Forberedende opplæring for voksne, modul 3 og 4. Hele lærebøkene på nett,
-       med forklaringer, eksempler og oppgaver på fire nivåer.</p>
+<section class="fs-helt">
+  <div class="fs-lysbilder" aria-hidden="true">
+    <img src="bilder/forside_hero1.jpg" alt=""><img src="bilder/forside_hero2.jpg" alt=""><img src="bilder/forside_hero3.jpg" alt="">
+  </div>
+  <div class="fs-innhold">
+    <span class="fs-over">Forberedende opplæring for voksne</span>
+    <h1>Læreverk i matematikk, naturfag og samfunnsfag på nett <span class="fs-modul">for FOV modul 3 og 4</span></h1>
+    <p>Nettsted for voksne, fremmedspråklige deltakere i forberedende opplæring for voksne. Komplette lærebøker med forklaringer, eksempler, oppgaver på fire nivåer og ordhjelp på flere språk. Læreverket er basert på kompetansemålene fra Utdanningsdirektoratet (Udir) i læreplanene for forberedende opplæring for voksne: <a class="fs-plan" href="https://www.udir.no/lk20/mat10-01" target="_blank" rel="noopener">MAT10-01</a>, <a class="fs-plan" href="https://www.udir.no/lk20/nat03-01" target="_blank" rel="noopener">NAT03-01</a> og <a class="fs-plan" href="https://www.udir.no/lk20/saf03-01" target="_blank" rel="noopener">SAF03-01</a>.</p>
+    <div class="fs-sprak" aria-label="Ordhjelp på flere språk"><span>Velkommen</span><span lang="ar" dir="rtl">مرحباً</span><span lang="ti">እንቋዕ ብደሓን መጻእኩም</span><span lang="uk">Ласкаво просимо</span><span lang="prs" dir="rtl">خوش آمدید</span><span lang="so">Soo dhawoow</span><span lang="ckb" dir="rtl">بەخێربێن</span></div>
   </div>
 </section>
 
-<div class="fagkort">
-  <a href="matematikk/index.html">
-    
-    <h2>Matematikk</h2>
-    <p>Elleve kapitler fra tallregning til digitale verktøy. 1040 oppgaver med svar,
-       og 239 interaktive oppgaver på skjerm.</p>
-  </a>
-  <a href="naturfag/index.html">
-    
-    <h2>Naturfag</h2>
-    <p>Åtte kapitler fra økologi til prosjekt og eksamen, med fordypningstekster. 1336 oppgaver med svar,
-       og 143 interaktive oppgaver på skjerm.</p>
-  </a>
-  <a href="samfunnsfag/index.html">
-    
-    <h2>Samfunnsfag</h2>
-    <p>Kilder, demokrati, historie, kultur, arbeidsliv, bærekraft, konflikter og skriving. 1142 oppgaver med svar,
-       og 95 interaktive oppgaver på skjerm.</p>
-  </a>
-</div>
+<main class="fs-kort">
+  <article class="fk fk-matematikk">
+    <a class="fk-bilde" href="matematikk/index.html" tabindex="-1" aria-hidden="true"><img src="bilder/forside_matematikk.jpg" alt="" style="object-position:center 20%" loading="lazy"></a>
+    <div class="fk-tekst">
+      <h2><a href="matematikk/index.html">Matematikk</a></h2>
+      <p>Tall, brøk og prosent, likninger, geometri, statistikk og økonomi – med regning fra hverdagen.</p>
+      <p class="fk-tall">11 kapitler · 1040 oppgaver · 239 oppgaver på skjerm</p>
+      <p class="fk-plan">Læreplan: <a href="https://www.udir.no/lk20/mat10-01" target="_blank" rel="noopener">Matematikk – forberedende opplæring for voksne (MAT10-01) ↗</a></p>
+      <nav class="fk-lenker"><a href="matematikk/index.html">Kapitlene</a><a href="matematikk/interaktiv.html">Øv på skjerm</a><a href="matematikk/bok.html">Bla i boka</a><a href="matematikk/ressurser.html">Ressurser</a></nav>
+    </div>
+  </article>
+  <article class="fk fk-naturfag">
+    <a class="fk-bilde" href="naturfag/index.html" tabindex="-1" aria-hidden="true"><img src="bilder/forside_naturfag.jpg" alt="" style="object-position:center 60%" loading="lazy"></a>
+    <div class="fk-tekst">
+      <h2><a href="naturfag/index.html">Naturfag</a></h2>
+      <p>Økologi, kroppen, kjemi, evolusjon, helse og energi – med forsøk ute og inne.</p>
+      <p class="fk-tall">8 kapitler · 1336 oppgaver · 143 oppgaver på skjerm</p>
+      <p class="fk-plan">Læreplan: <a href="https://www.udir.no/lk20/nat03-01" target="_blank" rel="noopener">Naturfag – forberedende opplæring for voksne (NAT03-01) ↗</a></p>
+      <nav class="fk-lenker"><a href="naturfag/index.html">Kapitlene</a><a href="naturfag/interaktiv.html">Øv på skjerm</a><a href="naturfag/ordliste.html">Ordliste</a><a href="naturfag/bok.html">Bla i boka</a><a href="naturfag/ressurser.html">Ressurser</a></nav>
+    </div>
+  </article>
+  <article class="fk fk-samfunnsfag">
+    <a class="fk-bilde" href="samfunnsfag/index.html" tabindex="-1" aria-hidden="true"><img src="bilder/forside_samfunnsfag.jpg" alt="" style="object-position:center 40%" loading="lazy"></a>
+    <div class="fk-tekst">
+      <h2><a href="samfunnsfag/index.html">Samfunnsfag</a></h2>
+      <p>Kildekritikk, demokrati og historie, kultur, arbeidsliv, bærekraft og konflikter.</p>
+      <p class="fk-tall">7 kapitler · 1142 oppgaver · 95 oppgaver på skjerm</p>
+      <p class="fk-plan">Læreplan: <a href="https://www.udir.no/lk20/saf03-01" target="_blank" rel="noopener">Samfunnsfag – forberedende opplæring for voksne (SAF03-01) ↗</a></p>
+      <nav class="fk-lenker"><a href="samfunnsfag/index.html">Kapitlene</a><a href="samfunnsfag/interaktiv.html">Øv på skjerm</a><a href="samfunnsfag/ordliste.html">Ordliste</a><a href="samfunnsfag/bok.html">Bla i boka</a><a href="samfunnsfag/ressurser.html">Ressurser</a></nav>
+    </div>
+  </article>
+</main>
+
+<section class="fs-del fs-maal" id="kompetansemaal">
+  <h2>Kompetansemål fra Udir</h2>
+  <p class="fs-ingress">Læreverket bygger på kompetansemålene i læreplanene for forberedende opplæring for voksne. Målene står ordrett slik Udir har skrevet dem – trykk på en modul for å se dem.</p>
+  <div class="fs-mk-rad">
+    <div class="fs-mk fs-mk-matematikk"><h3>Matematikk</h3>
+      <p class="fs-mk-plan"><a href="https://www.udir.no/lk20/mat10-01/kompetansemaal-og-vurdering" target="_blank" rel="noopener">Læreplan MAT10-01 hos Udir ↗</a></p>
+      <details><summary>Modul 3 <span>19 mål</span></summary><ul><li>bruke og samtale om metoder for hoderegning og overslagsregning, bruke det i praktiske situasjoner og vurdere hvor rimelige svarene er</li><li>bruke og samtale om skriftlig regning med hele tall og desimaltall i addisjon, subtraksjon, enkel multiplikasjon og enkel divisjon og bruke digitale verktøy i beregninger</li><li>videreutvikle og bruke formålstjenlige strategier for addisjon, subtraksjon og multiplikasjon av brøk og forklare tenkemåtene sine</li><li>regne ut prosent av en mengde eller en størrelse, regne ut prosentvis endring og regne ut hvor mange prosent delen utgjør av det hele</li><li>representere og bruke brøk, desimaltall og prosent på ulike måter, utforske de matematiske sammenhengene mellom disse representasjonsformene og vurdere i hvilke situasjoner ulike representasjoner er hensiktsmessige</li><li>beskrive sammenhengen mellom gjentatt multiplikasjon og potenser og mellom kvadrattall og kvadratrøtter</li><li>regne med sammensatte regneuttrykk med tall og bruke og samtale om den distributive og assosiative lov brukt på talluttrykk</li><li>bruke figurer, ord og formler til å utforske og beskrive strukturer og endringer i geometriske mønstre og tallmønstre</li><li>lage og regne med enkle formler og algebrauttrykk knyttet til praktiske situasjoner</li><li>gjøre overslag over og beregne tidsforskjeller og regne med strekning, fart og tid</li><li>lage, løse og forklare enkle ligninger knyttet til praktiske situasjoner</li><li>gjøre beregninger med vinkler og vinkelsummer i todimensjonale figurer</li><li>måle diameter og omkrets til sirkler, og utforske og beskrive sammenhengen mellom diameter og omkrets</li><li>regne ut og sammenligne areal av enkle og sammensatte geometriske figurer og regne ut omkrets</li><li>undersøke og bruke Pytagoras&#x27; setning til å finne hypotenusen i rettvinklede trekanter</li><li>forstørre og forminske geometriske figurer og regne med målestokk på kart og arbeidstegninger</li><li>velge passende måleredskaper og måleenheter, måle og forklare sammenhenger og regne om mellom ulike måleenheter, alt knyttet til praktiske situasjoner</li><li>ordne, gruppere og presentere data med og uten digitale verktøy, og begrunne valg av framstilling</li><li>finne sentralmål og variasjonsbredde med og uten digitale verktøy, og forholde seg kritisk til resultatene</li></ul></details><details><summary>Modul 4Y <span>12 mål</span></summary><ul><li>sammenligne og bruke tall representert som desimaltall, prosent, brøker, potenser og kvadratrøtter i praktiske situasjoner, og vurdere hvilke representasjoner som er hensiktsmessige</li><li>formulere og løse problemer fra hverdag og arbeidsliv ved bruk av likninger eller likningssett</li><li>bruke og forklare formler knyttet til hverdagsliv og yrkesliv</li><li>lese og hente ut matematisk informasjon fra ulike typer tekster fra hverdagsliv, arbeidsliv og samfunnsliv, og bruke informasjonen til å gjøre hensiktsmessige beregninger</li><li>utforske og løse problemer knyttet til arbeidslivet som handler om måling, og velge hensiktsmessige måleenheter</li><li>utforske volumbegrepet, måleenheter for volum og formler for volum av rette prismer og rette sylindre</li><li>bruke Pytagoras’ læresetning og formlikhet til å løse praktiske problemer</li><li>utforske funksjonsbegrepet og grafen til en funksjon, med vekt på lineære funksjoner, knyttet til praktiske situasjoner</li><li>planlegge og gjennomføre datainnsamling ved bruk av observasjoner og spørreundersøkelser, presentere resultatene ved bruk av passende diagrammer, sentralmål og spredningsmål, og forklare og begrunne valg som er gjort</li><li>tolke og kritisk vurdere statistiske framstillinger fra ulike kilder, og argumentere for hvordan framstillinger av tall og data kan brukes for å fremme ulike synspunkter</li><li>gjøre beregninger og utforske sammenhenger knyttet til personlig økonomi, inkludert lønn og skatt, lån, sparing, valuta og bruk av kredittkort</li><li>forstå og kritisk vurdere resonnementer i relevante tekster fra arbeidsliv og media</li></ul></details></div>
+    <div class="fs-mk fs-mk-naturfag"><h3>Naturfag</h3>
+      <p class="fs-mk-plan"><a href="https://www.udir.no/lk20/nat03-01/kompetansemaal-og-vurdering" target="_blank" rel="noopener">Læreplan NAT03-01 hos Udir ↗</a></p>
+      <details><summary>Modul 3 <span>12 mål</span></summary><ul><li>gjenkjenne, observere og beskrive levende og ikke-levende faktorer i et naturområde og reflektere over samspillet og tilpasningen mellom dem</li><li>utforske og beskrive ulike næringskjeder</li><li>samle data om, utforske og beskrive likheter og forskjeller mellom ulike arter, og sortere artene etter felles egenskaper</li><li>gi eksempler på hvordan menneskelig aktivitet påvirker et naturområde, og foreslå tiltak som sørger for en bærekraftig utvikling</li><li>beskrive hvordan alle organismer er bygget opp av celler, og gi eksempler på noen oppgaver cellene har</li><li>stille spørsmål om og utforske naturfaglige fenomener, samle data og presentere resultater og identifisere eventuelle feilkilder</li><li>skrive naturfaglige tekster om observasjoner og erfaringer, med støtte i modelltekster</li><li>gi eksempler på HMS-krav knyttet til dagliglivet og arbeidslivet og sammenligne eksemplene med egne erfaringer</li><li>samtale om avfallshåndtering i et lokalt og globalt perspektiv og gi eksempler på hvordan forurensing kan påvirke små og store kretsløp</li><li>samtale om hva energi er, beskrive og sammenligne fornybare og ikke-fornybare energikilder og gi eksempler på ulike energikjeder</li><li>utforske enkle teknologiske systemer som bruker elektrisk energi, og samtale med støtte om bruk av og sikkerhet knyttet til elektrisk energi</li><li>samtale om teknologi og oppfinnelser, og beskrive og utforske sammenhengen mellom form, materiale og funksjon</li></ul></details><details><summary>Modul 4 <span>13 mål</span></summary><ul><li>gi eksempler på og reflektere over hvordan rus, legemidler, miljøgifter og kosthold påvirker kroppen</li><li>bruke naturfaglig kunnskap i samtaler om et selvvalgt samfunnsaktuelt tema</li><li>beskrive hovedtrekk ved fotosyntese og celleånding og reflektere over hvorfor det er viktig for livet på jorden</li><li>samtale om hvordan pusten, fordøyelsen og blodet jobber sammen gjennom celleånding for å oppretteholde kroppens vitale funksjoner</li><li>samtale om hva som kjennetegner naturvitenskapelig kunnskap, og reflektere over hvordan ny kunnskap utvikles gjennom samarbeid og kritisk tilnærming til eksisterende kunnskap</li><li>beskrive hovedtrekk ved evolusjonsteorien og knytte det til naturvitenskapelig metode</li><li>utforske og gi eksempler på hvordan teknologi kan løse utfordringer, skape muligheter og føre til nye dilemmaer</li><li>bruke atommodeller og periodesystemet til å gjøre rede for egenskaper til noen grunnstoffer og kjemiske forbindelser</li><li>beskrive sentrale trekk ved kroppens immunforsvar, forklare hvordan vaksiner virker, og reflektere over hva vaksiner betyr for folkehelsen</li><li>gjøre rede for fysiske og psykiske forandringer som er sentrale i ulike livsfaser, og samtale om hvordan disse forandringene kan påvirke oss mennesker</li><li>samtale om grensesetting, forståelse og respekt knyttet til seksualitet, prevensjonsmidler og abort, og begrunne egne synspunkter</li><li>samtale om hvordan energiproduksjon og energibruk kan påvirke miljøet lokalt og globalt</li><li>forklare drivhuseffekten og samtale om faktorer som kan forårsake globale klimaendringer</li></ul></details></div>
+    <div class="fs-mk fs-mk-samfunnsfag"><h3>Samfunnsfag</h3>
+      <p class="fs-mk-plan"><a href="https://www.udir.no/lk20/saf03-01/kompetansemaal-og-vurdering" target="_blank" rel="noopener">Læreplan SAF03-01 hos Udir ↗</a></p>
+      <details><summary>Modul 3 <span>15 mål</span></summary><ul><li>samtale om hva digital dømmekraft og kildekritikk innebærer, og samtale om hvorfor hendelser framstilles på ulike måter</li><li>sammenligne og vurdere informasjon fra ulike kilder, og bruke kilder i eget arbeid</li><li>utforske hvordan mennesker i fortiden livnærte seg, og samtale om hvordan sentrale endringer i livsgrunnlag og teknologi har påvirket demografi, levekår og bosettingsmønstre</li><li>beskrive geografiske hovedtrekk i Norge og ulike deler av verden og reflektere over hvordan geografi påvirker kultur og mennesker</li><li>utforske hvordan politiske partier fremmer ulike verdier og interesser, og diskutere noen relevante samfunnsspørsmål</li><li>samtale om hvorfor konflikter oppstår, og hvordan den enkelte og ulike samfunn kan håndtere disse</li><li>samtale om og reflektere over hva likeverd og likestilling betyr i et demokrati</li><li>gi eksempler på hvordan man kan motarbeide fordommer, diskriminering, rasisme og utenforskap</li><li>gi eksempler på sentrale normer, regler og lover, og reflektere over hvilke konsekvenser brudd på disse kan ha for den enkelte og for samfunnet</li><li>forklare begrepene bærekraftig utvikling og klima, og utforske tiltak som kan bidra til et mer bærekraftig samfunn</li><li>presentere sentrale aktører og gi eksempler på lover og regler som regulerer arbeidslivet</li><li>utforske relevante utdanningstilbud og lokalt arbeidsliv og reflektere over egne muligheter for videre opplæring, utdanning og karriere</li><li>presentere noen sentrale historiske hendelser og prosesser som har dannet grunnlaget for framveksten av det moderne Norge</li><li>samtale om og reflektere over kjønn, identitet og grensesetting for egen kropp</li><li>skrive og fortelle om samfunnsfaglige temaer og uttrykke egne meninger</li></ul></details><details><summary>Modul 4 <span>14 mål</span></summary><ul><li>bruke ulike metoder for å finne informasjon, diskutere kildenes formål og relevans og reflektere over hvordan algoritmer på internett, falske nyheter og ensidige kilder kan prege forståelsen vår</li><li>gjøre rede for årsaker til og virkninger av sentrale historiske og nåtidige konflikter og hendelser og gi eksempler på hvordan en konflikt kan beskrives avhengig av ideologisk ståsted</li><li>presentere hovedtrekk ved det politiske systemet og velferdssamfunnet i Norge og sammenligne styresett fra ulike deler av verden</li><li>gi eksempler på internasjonale avtaler og reflektere over hvordan de påvirker menneskers rettigheter og plikter</li><li>diskutere årsaker til og konsekvenser av radikalisering, terror og folkemord, inkludert holocaust, og reflektere over hvordan dette kan forebygges</li><li>reflektere over hvilke tiltak som er nødvendige for å skape bærekraftige samfunn, og diskutere hvilke konflikter som kan oppstå</li><li>utforske hvordan utdanning, arbeid og forbruk kan påvirke levestandard og livskvalitet</li><li>reflektere over hvorfor det finnes rike og fattige land, i et historisk og geografisk perspektiv, sammenligne forskjeller i levekår og beskrive noen faktorer som påvirker levekår</li><li>kjenne til samenes historie og rettigheter i Norge og reflektere over hvordan urfolk og nasjonale minoriteter påvirker og blir påvirket av samfunnsutviklingen</li><li>beskrive hovedtrekk ved norsk økonomi og hvordan den påvirkes av økonomiske forhold i resten av verden</li><li>beskrive noen sentrale reguleringer i arbeidslivet, reflektere over betydningen av dem og gi eksempler på hvordan fagforeningene har bidratt og bidrar i det demokratiske Norge</li><li>presentere viktige omveltninger i arbeidslivet og reflektere over hvordan innføring av ny teknologi påvirker arbeidslivet</li><li>samtale om likheter og ulikheter i identiteter, levesett og kulturuttrykk og reflektere over muligheter og utfordringer med mangfold</li><li>skrive tekster med samfunnsfaglige bekrivelser og forklaringer, og drøfte egne og andres tekster under veiledning</li></ul></details></div>
+  </div>
+</section>
+
+<section class="fs-del">
+  <h2>Dette finner du her</h2>
+  <div class="fs-ruter">
+    <div class="fs-rute"><div class="ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2"/><path d="M8 7h7M8 11h7"/></svg></div>
+      <h3>Hele boka</h3><p>Les kapitlene på skjermen, eller bla i boka med de samme sidetallene som i papirboka.</p></div>
+    <div class="fs-rute"><div class="ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+      <h3>Øv på skjerm</h3><p>Oppgaver du klikker, drar og sorterer – du ser med en gang om svaret er riktig.</p></div>
+    <div class="fs-rute"><div class="ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 12h9M5 16h6"/><circle cx="18" cy="16" r="3"/></svg></div>
+      <h3>Ordhjelp og ordliste</h3><p>Slå opp vanskelige ord og fagord, med forklaring på enkel norsk og på flere språk.</p></div>
+    <div class="fs-rute"><div class="ikon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4"/></svg></div>
+      <h3>Lytt og se</h3><p>Hør teksten lest høyt, og se filmer og lenker som læreren har valgt ut under «Ressurser».</p></div>
+  </div>
+  <div class="fs-tall">
+    <div><b>26</b><span>kapitler</span></div>
+    <div><b>3518</b><span>oppgaver med fasit</span></div>
+    <div><b>477</b><span>oppgaver på skjerm</span></div>
+    <div><b>3</b><span>fag på ett sted</span></div>
+  </div>
+</section>
+
+<footer class="fs-bunn"><div class="innmat">
+  <span><b>Læringssenteret for voksne, Ringerike</b> · Forberedende opplæring for voksne (FOV)</span>
+  <span>Læreverket er laget for deltakerne på skolen.</span>
+</div></footer>
 </body>
 </html>
