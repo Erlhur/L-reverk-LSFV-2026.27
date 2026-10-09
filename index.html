@@ -15,18 +15,16 @@ body { background: #f4f2ee; }
 .fs-topp nav a:hover { opacity: 1; text-decoration: underline; }
 .fs-helt { position: relative; min-height: 78vh; display: flex; align-items: flex-end; overflow: hidden; color: #fff; background: #10243c; }
 .fs-lysbilder { position: absolute; inset: 0; z-index: 0; }
-.fs-lysbilder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fs-veksle 24s infinite; }
-.fs-lysbilder img:nth-child(2) { animation-delay: 8s; }
-.fs-lysbilder img:nth-child(3) { animation-delay: 16s; }
-@keyframes fs-veksle { 0% { opacity: 0; transform: scale(1.02); } 6% { opacity: 1; } 33% { opacity: 1; } 40% { opacity: 0; transform: scale(1.12); } 100% { opacity: 0; transform: scale(1.12); } }
+.fs-lysbilder img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% center; animation: fs-glid 32s ease-in-out infinite alternate; transform-origin: 70% 60%; }
+@keyframes fs-glid { from { transform: scale(1.02); } to { transform: scale(1.12) translateX(-1.5%); } }
 .fs-helt::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(10,24,42,.88) 0%, rgba(10,24,42,.70) 45%, rgba(10,24,42,.25) 80%, rgba(10,24,42,.15) 100%), linear-gradient(180deg, rgba(10,24,42,.5) 0%, rgba(10,24,42,0) 30%, rgba(10,24,42,.75) 100%); }
 @media (max-width: 700px) { .fs-helt::after { background: linear-gradient(180deg, rgba(10,24,42,.78) 0%, rgba(10,24,42,.72) 60%, rgba(10,24,42,.88) 100%); } }
 .fs-innhold { position: relative; z-index: 2; width: 100%; max-width: 1280px; margin: 0 auto; padding: 7rem clamp(1rem, 4vw, 3rem) 9rem; }
 .fs-modul { display: block; margin-top: .5rem; font-size: .55em; letter-spacing: .06em; color: #ffd27a; }
 .fs-over { display: inline-block; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; background: rgba(255,255,255,.14); padding: .35rem .8rem; border-radius: 99px; margin-bottom: 1rem; backdrop-filter: blur(4px); }
 .fs-innhold h1 { font-size: clamp(1.4rem, 2.9vw, 2.35rem); line-height: 1.15; margin: 0 0 1.2rem; max-width: 28ch; text-transform: uppercase; letter-spacing: .01em; font-weight: 800; color: #fff; border: 0; padding: 0; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
-.fs-plan { color: #ffd27a; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-.fs-innhold p { font-size: clamp(1.05rem, 1.6vw, 1.3rem); max-width: 46rem; margin: 0; opacity: .95; }
+.fs-plan { color: #fff; font-weight: 400; font-size: .85em; text-decoration: underline; text-decoration-color: rgba(255,255,255,.55); text-underline-offset: 3px; }
+.fs-innhold p { font-size: clamp(1rem, 1.4vw, 1.15rem); max-width: 46rem; margin: 0; opacity: .95; }
 .fs-sprak { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem; }
 .fs-sprak span { font-size: .95rem; padding: .3rem .75rem; border-radius: 99px; background: rgba(255,255,255,.16); animation: fs-svev 6s ease-in-out infinite; }
 .fs-sprak span:nth-child(2n) { animation-delay: -2s; } .fs-sprak span:nth-child(3n) { animation-delay: -4s; }
@@ -102,13 +100,12 @@ body { background: #f4f2ee; }
 
 <section class="fs-helt">
   <div class="fs-lysbilder" aria-hidden="true">
-    <img src="bilder/forside_hero1.jpg" alt=""><img src="bilder/forside_hero2.jpg" alt=""><img src="bilder/forside_hero3.jpg" alt="">
+    <img src="bilder/forside_hero_foss.jpg" alt="">
   </div>
   <div class="fs-innhold">
     <span class="fs-over">Forberedende opplæring for voksne</span>
     <h1>Læreverk i matematikk, naturfag og samfunnsfag på nett <span class="fs-modul">for FOV modul 3 og 4</span></h1>
     <p>Nettsted for voksne, fremmedspråklige deltakere i forberedende opplæring for voksne. Komplette lærebøker med forklaringer, eksempler, oppgaver på fire nivåer og ordhjelp på flere språk. Læreverket er basert på kompetansemålene fra Utdanningsdirektoratet (Udir) i læreplanene for forberedende opplæring for voksne: <a class="fs-plan" href="https://www.udir.no/lk20/mat10-01" target="_blank" rel="noopener">MAT10-01</a>, <a class="fs-plan" href="https://www.udir.no/lk20/nat03-01" target="_blank" rel="noopener">NAT03-01</a> og <a class="fs-plan" href="https://www.udir.no/lk20/saf03-01" target="_blank" rel="noopener">SAF03-01</a>.</p>
-    <div class="fs-sprak" aria-label="Ordhjelp på flere språk"><span>Velkommen</span><span lang="ar" dir="rtl">مرحباً</span><span lang="ti">እንቋዕ ብደሓን መጻእኩም</span><span lang="uk">Ласкаво просимо</span><span lang="prs" dir="rtl">خوش آمدید</span><span lang="so">Soo dhawoow</span><span lang="ckb" dir="rtl">بەخێربێن</span></div>
   </div>
 </section>
 
