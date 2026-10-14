@@ -3988,12 +3988,12 @@
 "tekst": "Les teksten. «I en undersøkelse ble 480 personer spurt om reisevanene sine. 312 av dem svarte at de bruker kollektivtransport minst én gang i uken.» a)Skriv andelen som brøk, og regn den ut som desimaltall. b)Hvor mange prosent er dette? c)En journalist skriver at «nesten to av tre bruker kollektivtransport». Er det en dekkende beskrivelse? Begrunn svaret med utregning.",
 "tale": "Les teksten. «I en undersøkelse ble fire hundre og åtti personer spurt om reisevanene sine, tre hundre og tolv av dem svarte at de bruker kollektivtransport minst én gang i uken.». a: Skriv andelen som brøk, og regn den ut som desimaltall, b: Hvor mange prosent er dette? c: En journalist skriver at «nesten to av tre bruker kollektivtransport». Er det en dekkende beskrivelse? Begrunn svaret med utregning."
 },
-"08d20f22a4bc50c0": {
+"417ec33d6ab940af": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
 "type": "tekst",
-"tekst": "Delmål — etter dette delkapitlet kan du navngi og forklare den kommutative, assosiative og distributive lov bruke lovene til å regne raskere i hodet vise med eksempler at lovene ikke gjelder for subtraksjon og divisjon",
-"tale": "Delmål — etter dette delkapitlet kan du, navngi og forklare den kommutative, assosiative og distributive lov, bruke lovene til å regne raskere i hodet, vise med eksempler at lovene ikke gjelder for subtraksjon og divisjon."
+"tekst": "Delmål — etter dette delkapitlet kan du navngi og forklare den kommutative, assosiative og distributive lov bruke lovene til å regne raskere i hodet vise med eksempler at lovene ikke gjelder for subtraksjon og divisjon bruke dobling og halvering og andre lure strategier når du ganger og deler i hodet",
+"tale": "Delmål — etter dette delkapitlet kan du, navngi og forklare den kommutative, assosiative og distributive lov, bruke lovene til å regne raskere i hodet, vise med eksempler at lovene ikke gjelder for subtraksjon og divisjon, bruke dobling og halvering og andre lure strategier når du ganger og deler i hodet."
 },
 "b122f60999c73851": {
 "fag": "matematikk",
@@ -4042,6 +4042,19 @@
 "type": "tekst",
 "tekst": "Loven virker også motsatt vei: 12 · 15 + 12 · 5 = 12 · (15 + 5) = 12 · 20 = 240. Da samler du i stedet for å dele opp.",
 "tale": "Loven virker også motsatt vei: tolv ganger femten pluss tolv ganger fem er lik tolv ganger (femten pluss fem) er lik tolv ganger tjue er lik to hundre og førti. Da samler du i stedet for å dele opp."
+},
+"bb83ade96e6b79ef": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Regnelovene gir deg flere lure måter å gange og dele på i hodet. Velg den strategien som gir de enkleste tallene. Tenk først, regn etterpå."
+},
+"0b21e43cf9691409": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Fem strategier du kan bruke Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme. 16 · 25 = 8 · 50 = 4 · 100 = 400 Del opp tallet: 7 · 48 = 7 · 40 + 7 · 8 = 280 + 56 = 336 Gange med 5: Gang med 10 og del på 2. 5 · 46 = 460 : 2 = 230 Dele på 5: Del på 10 og gang med 2. 340 : 5 = 34 · 2 = 68 Dele på 4: Halver to ganger. 180 : 4 → 90 → 45 Du kan også dele opp tallet du deler: 96 : 4 = 80 : 4 + 16 : 4 = 20 + 4 = 24",
+"tale": "Fem strategier du kan bruke. Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme, seksten ganger tjuefem er lik åtte ganger femti er lik fire ganger hundre er lik fire hundre. Del opp tallet: sju ganger førtiåtte er lik sju ganger førti pluss sju ganger åtte er lik to hundre og åtti pluss femtiseks er lik tre hundre og trettiseks. Gange med fem: Gang med ti og del på to, fem ganger førtiseks er lik fire hundre og seksti delt på to er lik to hundre og tretti. Dele på fem: Del på ti og gang med to, tre hundre og førti delt på fem er lik trettifire ganger to er lik sekstiåtte. Dele på fire: Halver to ganger, hundre og åtti delt på fire gir nitti gir førtifem. Du kan også dele opp tallet du deler: nittiseks delt på fire er lik åtti delt på fire pluss seksten delt på fire er lik tjue pluss fire er lik tjuefire."
 },
 "6f5bd0fd07e9bef5": {
 "fag": "matematikk",
@@ -4092,6 +4105,20 @@
 "tekst": "Er dette riktig? Svar ja eller nei. a)10 − 4 = 4 − 10b)20 : 5 = 5 : 20 c)3 + 8 = 8 + 3d)(10 − 3) − 2 = 10 − (3 − 2)",
 "tale": "Er dette riktig? Svar ja eller nei, a: ti minus fire er lik fire minus ti, b: tjue delt på fem er lik fem delt på tjue, c: tre pluss åtte er lik åtte pluss tre, d: (ti minus tre) minus to er lik ti minus (tre minus to)."
 },
+"f04c20ba5d44fd0d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Bruk dobling og halvering.a)14 · 5b)18 · 50c)16 · 25d)12 · 35",
+"tale": "Bruk dobling og halvering, a: fjorten ganger fem, b: atten ganger femti, c: seksten ganger tjuefem, d: tolv ganger trettifem."
+},
+"624bc6a7c8eebae1": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Gang med 5 ved å gange med 10 og dele på 2.a)5 · 36b)5 · 48c)5 · 124d)5 · 87",
+"tale": "Gang med fem ved å gange med ti og dele på to, a: fem ganger trettiseks, b: fem ganger førtiåtte, c: fem ganger hundre og tjuefire, d: fem ganger åttisju."
+},
 "ab68d204828dd2af": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -4120,6 +4147,20 @@
 "tekst": "En butikk får inn 24 kasser med 15 flasker i hver. Vis to ulike måter å regne ut totalen på, og forklar hvilken lov du bruker i hver av dem.",
 "tale": "En butikk får inn tjuefire kasser med femten flasker i hver. Vis to ulike måter å regne ut totalen på, og forklar hvilken lov du bruker i hver av dem."
 },
+"358bb0dcab25893d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Regn ut i hodet ved å dele opp tallet du deler.a)96 : 4b)84 : 6c)135 : 5d)156 : 12",
+"tale": "Regn ut i hodet ved å dele opp tallet du deler, a: nittiseks delt på fire, b: åttifire delt på seks, c: hundre og trettifem delt på fem, d: hundre og femtiseks delt på tolv."
+},
+"a54d1df594280d65": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Del på 4 ved å halvere to ganger.a)180 : 4b)260 : 4c)348 : 4d)1 000 : 4",
+"tale": "Del på fire ved å halvere to ganger, a: hundre og åtti delt på fire, b: to hundre og seksti delt på fire, c: tre hundre og førtiåtte delt på fire, d: tusen delt på fire."
+},
 "f19e0d9d2ebad305": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -4139,6 +4180,13 @@
 "type": "oppgave",
 "tekst": "En hall har 18 rader med 24 seter. a)Regn ut antall seter ved å dele 24 opp i 20 + 4. b)Regn ut det samme med oppstilt multiplikasjon. c)Hvilken metode synes du er raskest her? Begrunn svaret.",
 "tale": "En hall har atten rader med tjuefire seter, a: Regn ut antall seter ved å dele tjuefire opp i tjue pluss fire, b: Regn ut det samme med oppstilt multiplikasjon, c: Hvilken metode synes du er raskest her? Begrunn svaret."
+},
+"3c52d503f44a7bf5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Amir regner ut 25 · 36 som 100 · 9. Forklar hvorfor det stemmer. Regn så ut 25 · 44 på samme måte.",
+"tale": "Amir regner ut tjuefem ganger trettiseks som hundre ganger ni. Forklar hvorfor det stemmer. Regn så ut tjuefem ganger førtifire på samme måte."
 },
 "54f8381e16ba01d8": {
 "fag": "matematikk",
@@ -4196,12 +4244,12 @@
 "tekst": "Skriv som regneuttrykk. Du skal ikke regne ut ennå. a)summen av 12 og 8, ganget med 3 b)12 ganget med 8, pluss 3 c)40 minus produktet av 3 og 5 d)60 delt på summen av 2 og 4",
 "tale": "Skriv som regneuttrykk. Du skal ikke regne ut ennå, a: summen av tolv og åtte, ganget med tre, b: tolv ganget med åtte, pluss tre, c: førti minus produktet av tre og fem, d: seksti delt på summen av to og fire."
 },
-"3b82f4e182cc288f": {
+"ade3308e62fb6429": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
 "type": "oppgave",
-"tekst": "Regn ut uttrykkene du skrev i oppgave 66.",
-"tale": "Regn ut uttrykkene du skrev i oppgave sekstiseks."
+"tekst": "Regn ut uttrykkene du skrev i oppgave 71.",
+"tale": "Regn ut uttrykkene du skrev i oppgave syttien."
 },
 "fb67f5012cd84241": {
 "fag": "matematikk",
@@ -4706,6 +4754,18 @@
 "side": "matematikk/kapittel-2.html",
 "type": "ord",
 "tekst": "å gruppere"
+},
+"010a4e7f6edfbe5a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å doble"
+},
+"52f90b91528e497d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "ord",
+"tekst": "å halvere"
 },
 "69ec9d7c11077eed": {
 "fag": "matematikk",
@@ -5355,12 +5415,12 @@
 "tekst": "Sorter tallene fra minst til størst. Skriv dem først som vanlige tall. 3,2 · 10⁵ 9,8 · 10⁴ 1,1 · 10⁶ 4,5 · 10⁵",
 "tale": "Sorter tallene fra minst til størst. Skriv dem først som vanlige tall, tre komma to ganger ti opphøyd i fem ni komma åtte ganger ti opphøyd i fire en komma en ganger ti opphøyd i seks fire komma fem ganger ti opphøyd i fem"
 },
-"acc342fddd1cd934": {
+"82df88f337893b52": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
 "type": "tekst",
-"tekst": "Delmål — etter dette delkapitlet kan du avgjøre om et tall er et primtall finne alle faktorene til et tall faktorisere et tall i primtall og skrive svaret med potenser bruke faktorisering til å finne største felles faktor og minste felles multiplum",
-"tale": "Delmål — etter dette delkapitlet kan du, avgjøre om et tall er et primtall, finne alle faktorene til et tall, faktorisere et tall i primtall og skrive svaret med potenser, bruke faktorisering til å finne største felles faktor og minste felles multiplum."
+"tekst": "Delmål — etter dette delkapitlet kan du avgjøre om et tall er et primtall finne alle faktorene til et tall faktorisere et tall i primtall og skrive svaret med potenser bruke faktorisering til å finne største felles faktor og minste felles multiplum bruke delelighetsreglene for 2, 3, 5, 9 og 10 skille mellom primtall og sammensatte tall",
+"tale": "Delmål — etter dette delkapitlet kan du, avgjøre om et tall er et primtall, finne alle faktorene til et tall, faktorisere et tall i primtall og skrive svaret med potenser, bruke faktorisering til å finne største felles faktor og minste felles multiplum, bruke delelighetsreglene for to, tre, fem, ni og ti, skille mellom primtall og sammensatte tall."
 },
 "3e17ea56b9ab3f9a": {
 "fag": "matematikk",
@@ -5389,6 +5449,34 @@
 "type": "tekst",
 "tekst": "Svar: Største felles faktor er 12.",
 "tale": "Svar: Største felles faktor er tolv."
+},
+"bfa30e0f83b70182": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Et tall større enn 1 som ikke er et primtall, kaller vi et sammensatt tall. 12 er et sammensatt tall, fordi 12 = 3 · 4. For å finne ut om et tall kan deles på 2, 3, 5, 9 eller 10, trenger du ikke dele. Du kan se det på sifrene.",
+"tale": "Et tall større enn en som ikke er et primtall, kaller vi et sammensatt tall, tolv er et sammensatt tall, fordi tolv er lik tre ganger fire. For å finne ut om et tall kan deles på to, tre, fem, ni eller ti, trenger du ikke dele. Du kan se det på sifrene."
+},
+"f6cbfe5af985b4fb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Delelighetsreglene 2: Det siste sifferet er 0, 2, 4, 6 eller 8. Tallet er et partall. 5: Det siste sifferet er 0 eller 5. 10: Det siste sifferet er 0. 3: Tverrsummen kan deles på 3. Tverrsummen er summen av sifrene. 471: 4 + 7 + 1 = 12, og 12 kan deles på 3. Da kan 471 deles på 3. 9: Tverrsummen kan deles på 9.",
+"tale": "Delelighetsreglene, to: Det siste sifferet er null, to, fire, seks eller åtte. Tallet er et partall, fem: Det siste sifferet er null eller fem, ti: Det siste sifferet er null, tre: Tverrsummen kan deles på tre. Tverrsummen er summen av sifrene, fire hundre og syttien: fire pluss sju pluss en er lik tolv, og tolv kan deles på tre. Da kan fire hundre og syttien deles på tre, ni: Tverrsummen kan deles på ni."
+},
+"b23476493d3cb476": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Kan 2 345 deles på 2, 3 og 5?",
+"tale": "Kan to tusen tre hundre og førtifem deles på to, tre og fem?"
+},
+"e72e240ff06b0721": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Svar: 2 345 kan bare deles på 5 av disse. 2 345 : 5 = 469.",
+"tale": "Svar: to tusen tre hundre og førtifem kan bare deles på fem av disse, to tusen tre hundre og førtifem delt på fem er lik fire hundre og sekstini."
 },
 "ac53a4e739c07431": {
 "fag": "matematikk",
@@ -5439,6 +5527,20 @@
 "tekst": "Faktoriser i primtall. Skriv svaret med potenser der du kan. a)40 b)42 c)48",
 "tale": "Faktoriser i primtall. Skriv svaret med potenser der du kan, a: førti, b: førtito, c: førtiåtte."
 },
+"5c6ae2729ecd78ca": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Kan tallet deles på 2? Kan det deles på 5?a)70b)135c)248d)1 001",
+"tale": "Kan tallet deles på to? Kan det deles på fem? a: sytti, b: hundre og trettifem, c: to hundre og førtiåtte, d: tusen og en."
+},
+"d6f3950bf1a46f34": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Finn tverrsummen. Kan tallet deles på 3?a)51b)124c)312d)2 001",
+"tale": "Finn tverrsummen. Kan tallet deles på tre? a: femtien, b: hundre og tjuefire, c: tre hundre og tolv, d: to tusen og en."
+},
 "fbcb2dda5c7b3ef3": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -5460,6 +5562,20 @@
 "tekst": "Finn minste felles multiplum. a)4 og 6b)6 og 8 c)10 og 15",
 "tale": "Finn minste felles multiplum, a: fire og seks, b: seks og åtte, c: ti og femten."
 },
+"380a17d049de65b7": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Er tallet et primtall eller et sammensatt tall? Bruk delelighetsreglene, og prøv også å dele på 7.a)39b)41c)57d)91",
+"tale": "Er tallet et primtall eller et sammensatt tall? Bruk delelighetsreglene, og prøv også å dele på sju, a: trettini, b: førtien, c: femtisju, d: nittien."
+},
+"9ace3965cdbdec35": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Kan tallet deles på 9?a)189b)405c)1 234d)7 290",
+"tale": "Kan tallet deles på ni? a: hundre og åttini, b: fire hundre og fem, c: tusen to hundre og trettifire, d: sju tusen to hundre og nitti."
+},
 "6130f0d75e1f34cc": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -5473,6 +5589,13 @@
 "type": "oppgave",
 "tekst": "Forklar hvorfor 1 ikke regnes som et primtall. Bruk definisjonen øverst i delkapitlet i svaret ditt.",
 "tale": "Forklar hvorfor en ikke regnes som et primtall. Bruk definisjonen øverst i delkapitlet i svaret ditt."
+},
+"d41627a12e4a476c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Et klasserom har 96 stoler. Kan stolene stå i rader med like mange stoler i hver rad, hvis hver rad skal ha 3, 5 eller 9 stoler? Begrunn svaret med delelighetsreglene.",
+"tale": "Et klasserom har nittiseks stoler. Kan stolene stå i rader med like mange stoler i hver rad, hvis hver rad skal ha tre, fem eller ni stoler? Begrunn svaret med delelighetsreglene."
 },
 "c952da7200a791e1": {
 "fag": "matematikk",
@@ -5652,12 +5775,6 @@
 "type": "ord",
 "tekst": "i andre / i tredje"
 },
-"010a4e7f6edfbe5a": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "ord",
-"tekst": "å doble"
-},
 "b2065b465890f3df": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -5753,6 +5870,24 @@
 "side": "matematikk/kapittel-3.html",
 "type": "ord",
 "tekst": "multiplum"
+},
+"acbe069de27b24b8": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "sammensatt tall"
+},
+"1f242a3b8998cc77": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "tverrsum"
+},
+"41f30efef93be174": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "ord",
+"tekst": "kan deles på"
 },
 "36346927bf660aa0": {
 "fag": "matematikk",
@@ -6254,12 +6389,12 @@
 "tekst": "Vurder hvilken skrivemåte som er mest hensiktsmessig i hver situasjon, og begrunn valget. a)En oppskrift som bruker en tredel av en pakke smør. b)En rente på lånet ditt. c)Mengden væske i en flaske.",
 "tale": "Vurder hvilken skrivemåte som er mest hensiktsmessig i hver situasjon, og begrunn valget, a: En oppskrift som bruker en tredel av en pakke smør, b: En rente på lånet ditt, c: Mengden væske i en flaske."
 },
-"70d9f1b2aad9a644": {
+"05dc676ef5b1e686": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
 "type": "tekst",
-"tekst": "Delmål — etter dette delkapitlet kan du legge sammen og trekke fra brøker med samme nevner finne en fellesnevner for to brøker regne med brøker som har ulik nevner forkorte svaret når det er mulig",
-"tale": "Delmål — etter dette delkapitlet kan du, legge sammen og trekke fra brøker med samme nevner, finne en fellesnevner for to brøker, regne med brøker som har ulik nevner, forkorte svaret når det er mulig."
+"tekst": "Delmål — etter dette delkapitlet kan du legge sammen og trekke fra brøker med samme nevner finne en fellesnevner for to brøker regne med brøker som har ulik nevner forkorte svaret når det er mulig skille mellom ekte og uekte brøk gjøre om mellom uekte brøk og blandet tall",
+"tale": "Delmål — etter dette delkapitlet kan du, legge sammen og trekke fra brøker med samme nevner, finne en fellesnevner for to brøker, regne med brøker som har ulik nevner, forkorte svaret når det er mulig, skille mellom ekte og uekte brøk, gjøre om mellom uekte brøk og blandet tall."
 },
 "dce796cf4ed2bb3a": {
 "fag": "matematikk",
@@ -6295,6 +6430,41 @@
 "type": "tekst",
 "tekst": "Svar: 34 − 16 = 712",
 "tale": "Svar: tre firedeler minus en seksdel er lik sju tolvdeler"
+},
+"188105eaf89cd3fb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Når du legger sammen brøker, kan svaret bli større enn 1. I en ekte brøk er telleren mindre enn nevneren, for eksempel 34. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel 74. Da har du mer enn én hel.",
+"tale": "Når du legger sammen brøker, kan svaret bli større enn en. I en ekte brøk er telleren mindre enn nevneren, for eksempel tre firedeler. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel sju firedeler. Da har du mer enn én hel."
+},
+"60204ce487c5cbf4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: 1 34 betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel 1 34 liter melk.",
+"tale": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: en tre firedeler betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel en tre firedeler liter melk."
+},
+"4c916774291f4b82": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Fra uekte brøk til blandet tall – og tilbake Uekte brøk → blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller. 74: 7 : 4 = 1 og 3 i rest. Det gir 1 34. Blandet tall → uekte brøk: Gang de hele med nevneren, og legg til telleren. 2 13: 2 · 3 + 1 = 7. Det gir 73.",
+"tale": "Fra uekte brøk til blandet tall – og tilbake. Uekte brøk gir blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller, sju firedeler delt på sju delt på fire er lik en og tre i rest. Det gir en tre firedeler. Blandet tall gir uekte brøk: Gang de hele med nevneren, og legg til telleren, to en tredjedel delt på to ganger tre pluss en er lik sju. Det gir sju tredjedeler."
+},
+"4d8dade130c0ff48": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Mina bruker 34 liter saft i dag og 24 liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall.",
+"tale": "Mina bruker tre firedeler liter saft i dag og to firedeler liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall."
+},
+"5e2c9abb9ebb943e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Svar: Hun bruker 1 14 liter saft.",
+"tale": "Svar: Hun bruker en en firedel liter saft."
 },
 "f20713f987ba32b9": {
 "fag": "matematikk",
@@ -6345,6 +6515,20 @@
 "tekst": "Regn ut. a)12 + 16 b)14 + 18 c)56 − 13 d)34 − 18",
 "tale": "Regn ut, a: en halv pluss en seksdel, b: en firedel pluss en åttedel, c: fem seksdeler minus en tredjedel, d: tre firedeler minus en åttedel."
 },
+"c055361958a0f374": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Er brøken ekte eller uekte?a)35b)94c)78d)1110",
+"tale": "Er brøken ekte eller uekte? a: tre femdeler, b: ni firedeler, c: sju åttedeler, d: elleve tideler."
+},
+"a19b01c2835b5c69": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Skriv som blandet tall.a)54b)73c)92d)115",
+"tale": "Skriv som blandet tall, a: fem firedeler, b: sju tredjedeler, c: ni halve, d: elleve femdeler."
+},
 "212e853bf98cea32": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
@@ -6373,6 +6557,20 @@
 "tekst": "Hassan bruker 25 av lønnen på husleie og 14 på mat. a)Hvor stor del av lønnen går til disse to tingene? b)Hvor stor del har han igjen?",
 "tale": "Hassan bruker to femdeler av lønnen på husleie og en firedel på mat, a: Hvor stor del av lønnen går til disse to tingene? b: Hvor stor del har han igjen?"
 },
+"f6004f5a1b60a05f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Skriv som uekte brøk.a)1 12b)2 34c)3 25d)4 13",
+"tale": "Skriv som uekte brøk, a: en en halv, b: to tre firedeler, c: tre to femdeler, d: fire en tredjedel."
+},
+"374fedba05f96260": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Regn ut. Skriv svaret som blandet tall, og forkort hvis du kan.a)34 + 34b)56 + 56c)23 + 23 + 23d)710 + 910",
+"tale": "Regn ut. Skriv svaret som blandet tall, og forkort hvis du kan, a: tre firedeler pluss tre firedeler, b: fem seksdeler pluss fem seksdeler, c: to tredjedeler pluss to tredjedeler pluss to tredjedeler, d: sju tideler pluss ni tideler."
+},
 "3faf0ad8e9cb8080": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
@@ -6393,6 +6591,13 @@
 "type": "oppgave",
 "tekst": "Hvilken brøk mangler? a)12 + □ = 34 b)56 − □ = 12 c)□ + 13 = 1",
 "tale": "Hvilken brøk mangler? a: en halv pluss □ er lik tre firedeler, b: fem seksdeler minus □ er lik en halv, c: □ pluss en tredjedel er lik en."
+},
+"a88ac2964cd5b378": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "En oppskrift trenger 34 dl melk. Du skal lage oppskriften fem ganger. Hvor mye melk trenger du? Skriv svaret som blandet tall, og forklar hvorfor det er lettere å måle opp enn den uekte brøken.",
+"tale": "En oppskrift trenger tre firedeler dl melk. Du skal lage oppskriften fem ganger. Hvor mye melk trenger du? Skriv svaret som blandet tall, og forklar hvorfor det er lettere å måle opp enn den uekte brøken."
 },
 "36ab32c76ead3fa4": {
 "fag": "matematikk",
@@ -6758,6 +6963,24 @@
 "side": "matematikk/kapittel-4.html",
 "type": "ord",
 "tekst": "hensiktsmessig"
+},
+"8bb5e6524ebb7a31": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "ekte brøk"
+},
+"372690e6e1a85fa3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "uekte brøk"
+},
+"265c12c4f4a0216d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "ord",
+"tekst": "blandet tall"
 },
 "260d5bc42480d1d3": {
 "fag": "matematikk",
@@ -8403,12 +8626,12 @@
 "tekst": "En bedrift har faste kostnader på 4 500 kroner og 260 kroner per produsert enhet. a)Skriv en formel for kostnaden K ved n enheter. b)Hva koster det å produsere 25 enheter? c)Hvor mange hele enheter kan produseres for 20 000 kroner?",
 "tale": "En bedrift har faste kostnader på fire tusen fem hundre kroner og to hundre og seksti kroner per produsert enhet, a: Skriv en formel for kostnaden K ved n enheter, b: Hva koster det å produsere tjuefem enheter? c: Hvor mange hele enheter kan produseres for tjue tusen kroner?"
 },
-"6a5a16f0db812849": {
+"fcc5b323d094e830": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-6.html",
 "type": "tekst",
-"tekst": "Delmål — etter dette delkapitlet kan du forklare hva likhetstegnet betyr i en likning løse likninger med én ukjent kontrollere svaret ved å sette det inn lage en likning ut fra en praktisk situasjon",
-"tale": "Delmål — etter dette delkapitlet kan du, forklare hva likhetstegnet betyr i en likning, løse likninger med én ukjent, kontrollere svaret ved å sette det inn, lage en likning ut fra en praktisk situasjon."
+"tekst": "Delmål — etter dette delkapitlet kan du forklare hva likhetstegnet betyr i en likning løse likninger med én ukjent kontrollere svaret ved å sette det inn lage en likning ut fra en praktisk situasjon løse en likning fra tekst i tre trinn: sett opp, løs og sett prøve",
+"tale": "Delmål — etter dette delkapitlet kan du, forklare hva likhetstegnet betyr i en likning, løse likninger med én ukjent, kontrollere svaret ved å sette det inn, lage en likning ut fra en praktisk situasjon, løse en likning fra tekst i tre trinn: sett opp, løs og sett prøve."
 },
 "78151e05c9914a9f": {
 "fag": "matematikk",
@@ -8429,6 +8652,33 @@
 "type": "tekst",
 "tekst": "I figur 6.9 er likningen en vekt. Prøv deg fram med ulike verdier for x, til vekta er i balanse. Da har du funnet løsningen. Du kan også lage egne likninger ved å endre a, b og c.",
 "tale": "I figur seks punkt ni er likningen en vekt. Prøv deg fram med ulike verdier for x, til vekta er i balanse. Da har du funnet løsningen. Du kan også lage egne likninger ved å endre a, b og c."
+},
+"969c786766149742": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Mange oppgaver i hverdagen kan løses med en likning. Bruk tre trinn: Sett opp likningen, løs den, og sett prøve. Å sette prøve betyr å sette svaret inn i likningen og se om venstre side blir lik høyre side."
+},
+"a9cfbb932685628c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Slik setter du prøve Likning: 2x + 3 = 11. Du har funnet x = 4. Venstre side: 2 · 4 + 3 = 11. Høyre side: 11. Sidene er like, så svaret er riktig.",
+"tale": "Slik setter du prøve. Likning: to x pluss tre er lik elleve. Du har funnet x er lik fire. Venstre side: to ganger fire pluss tre er lik elleve. Høyre side: elleve. Sidene er like, så svaret er riktig."
+},
+"cf57e8f76876d837": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Leila kjøper 3 like bøker og en pose til 40 kr. Hun betaler 280 kr til sammen. Hva koster én bok?",
+"tale": "Leila kjøper tre like bøker og en pose til førti kroner. Hun betaler to hundre og åtti kroner til sammen. Hva koster én bok?"
+},
+"b7a88879f971c621": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Svar: Én bok koster 80 kr.",
+"tale": "Svar: Én bok koster åtti kroner."
 },
 "fb68741b9a3a6ede": {
 "fag": "matematikk",
@@ -8479,6 +8729,13 @@
 "tekst": "Sett inn og kontroller. Er x = 4 løsningen? a)x + 5 = 9b)3x = 15",
 "tale": "Sett inn og kontroller. Er x er lik fire løsningen? a: x pluss fem er lik ni, b: tre x er lik femten."
 },
+"adb6e1333cf90c1a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "Sett prøve. Er x = 5 løsningen av likningen?a)3x + 2 = 17b)4x − 6 = 12c)2x + 5 = 15d)10 − x = 4",
+"tale": "Sett prøve. Er x er lik fem løsningen av likningen? a: tre x pluss to er lik sytten, b: fire x minus seks er lik tolv, c: to x pluss fem er lik femten, d: ti minus x er lik fire."
+},
 "89ecf5fd097ec391": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-6.html",
@@ -8507,6 +8764,20 @@
 "tekst": "Sara tenker på et tall. Hun ganger det med 4 og legger til 6. Svaret blir 30. Sett opp en likning, og finn tallet.",
 "tale": "Sara tenker på et tall. Hun ganger det med fire og legger til seks. Svaret blir tretti. Sett opp en likning, og finn tallet."
 },
+"d94722e1cd14981b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "En taxitur koster 50 kr i startpris og 15 kr per kilometer. Turen kostet 290 kr. Sett opp en likning, løs den, og sett prøve. Hvor langt kjørte du?",
+"tale": "En taxitur koster femti kroner i startpris og femten kroner per kilometer. Turen kostet to hundre og nitti kroner. Sett opp en likning, løs den, og sett prøve. Hvor langt kjørte du?"
+},
+"f00236485e2876df": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "Tre venner deler en regning likt. I tillegg gir de 30 kr i tips til sammen. Hele beløpet er 450 kr. Sett opp en likning, og finn ut hvor mye hver betaler for maten.",
+"tale": "Tre venner deler en regning likt. I tillegg gir de tretti kroner i tips til sammen. Hele beløpet er fire hundre og femti kroner. Sett opp en likning, og finn ut hvor mye hver betaler for maten."
+},
 "07a0a1ea9ffc6f06": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-6.html",
@@ -8520,6 +8791,13 @@
 "type": "oppgave",
 "tekst": "En taxi tar 65 kroner i startpris og 18 kroner per kilometer. En tur kostet 281 kroner. a)Sett opp en likning for turen. b)Hvor mange kilometer var turen?",
 "tale": "En taxi tar sekstifem kroner i startpris og atten kroner per kilometer. En tur kostet to hundre og åttien kroner, a: Sett opp en likning for turen, b: Hvor mange kilometer var turen?"
+},
+"3961d2452c51cff6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "Mohammed løser likningen 5x − 8 = 2x + 7 og får x = 3. Sett prøve. Er svaret riktig? Hvis det er feil, finn riktig løsning.",
+"tale": "Mohammed løser likningen fem x minus åtte er lik to x pluss sju og får x er lik tre. Sett prøve. Er svaret riktig? Hvis det er feil, finn riktig løsning."
 },
 "b9316dd2ae223f5a": {
 "fag": "matematikk",
@@ -8784,6 +9062,12 @@
 "side": "matematikk/kapittel-6.html",
 "type": "ord",
 "tekst": "å løse"
+},
+"097b102143ac6dd3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "ord",
+"tekst": "å sette prøve"
 },
 "6b7b1727b61e73b6": {
 "fag": "matematikk",
@@ -10515,6 +10799,146 @@
 "tekst": "Les teksten. «Et betongfundament er 3,2 meter langt, 0,8 meter bredt og 0,5 meter dypt. Betong koster 1 850 kroner per kubikkmeter.» a)Hvor mange kubikkmeter betong trengs? b)Hva koster betongen? c)Det bestilles alltid 10 % ekstra. Hva blir prisen da?",
 "tale": "Les teksten. «Et betongfundament er tre komma to meter langt, null komma åtte meter bredt og null komma fem meter dypt. Betong koster tusen åtte hundre og femti kroner per kubikkmeter.». a: Hvor mange kubikkmeter betong trengs? b: Hva koster betongen? c: Det bestilles alltid ti prosent ekstra. Hva blir prisen da?"
 },
+"0d7ab830c0513e8d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Delmål — etter dette delkapitlet kan du forklare hva målestokk betyr regne fra tegning eller kart til virkelighet, og omvendt forstørre og forminske figurer og kjenne igjen formlike figurer",
+"tale": "Delmål — etter dette delkapitlet kan du, forklare hva målestokk betyr, regne fra tegning eller kart til virkelighet, og omvendt, forstørre og forminske figurer og kjenne igjen formlike figurer."
+},
+"52ec106de0ea4c28": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Et hus, en tomt eller en by er for stor til å tegne i full størrelse. Derfor tegner vi alt mindre, men like mange ganger mindre overalt. Tallet som forteller hvor mye mindre, kaller vi målestokk. Målestokk 1:100 betyr at 1 cm på tegningen er 100 cm i virkeligheten.",
+"tale": "Et hus, en tomt eller en by er for stor til å tegne i full størrelse. Derfor tegner vi alt mindre, men like mange ganger mindre overalt. Tallet som forteller hvor mye mindre, kaller vi målestokk. Målestokk en: hundre betyr at en centimeter på tegningen er hundre centimeter i virkeligheten."
+},
+"eca72473805acb9e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Målestokk Fra tegning til virkelighet: gang med tallet etter kolon. 1:100 og 4 cm: 4 · 100 = 400 cm = 4 m Fra virkelighet til tegning: del på tallet. 1:100 og 6 m = 600 cm: 600 : 100 = 6 cm Gjør om til samme enhet først, helst centimeter. Gjør om svaret til meter eller kilometer til slutt.",
+"tale": "Målestokk. Fra tegning til virkelighet: gang med tallet etter kolon, en: hundre og fire centimeter: fire ganger hundre er lik fire hundre centimeter er lik fire meter. Fra virkelighet til tegning: del på tallet, en: hundre og seks meter er lik seks hundre centimeter: seks hundre delt på hundre er lik seks centimeter. Gjør om til samme enhet først, helst centimeter. Gjør om svaret til meter eller kilometer til slutt."
+},
+"5b5c03e8c2b7c084": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Et kart har målestokk 1:50 000. To steder ligger 6 cm fra hverandre på kartet. Hvor langt er det i virkeligheten?",
+"tale": "Et kart har målestokk en: femti tusen. To steder ligger seks centimeter fra hverandre på kartet. Hvor langt er det i virkeligheten?"
+},
+"36c6236c7ec1ec06": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Svar: Det er 3 km mellom stedene.",
+"tale": "Svar: Det er tre kilometer mellom stedene."
+},
+"cf59d8eeb381a975": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn 1 forstørrer. Et tall mellom 0 og 1 forminsker.",
+"tale": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn en forstørrer. Et tall mellom null og en forminsker."
+},
+"9248c47f7a76120a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Et bilde er 15 cm bredt og 10 cm høyt. Det skal forminskes slik at bredden blir 6 cm. Hvor høyt blir bildet?",
+"tale": "Et bilde er femten centimeter bredt og ti centimeter høyt. Det skal forminskes slik at bredden blir seks centimeter. Hvor høyt blir bildet?"
+},
+"1f665af09378e504": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Svar: Bildet blir 4 cm høyt.",
+"tale": "Svar: Bildet blir fire centimeter høyt."
+},
+"9e0a8a84e0421212": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Tegningen har målestokk 1:100. Hvor lang er strekningen i virkeligheten? Svar i meter.a)2 cmb)5 cmc)8 cmd)12 cm",
+"tale": "Tegningen har målestokk en: hundre. Hvor lang er strekningen i virkeligheten? Svar i meter, a: to centimeter, b: fem centimeter, c: åtte centimeter, d: tolv centimeter."
+},
+"4aa7dfc9bd6664b3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Tegningen har målestokk 1:50. Hvor lang er strekningen i virkeligheten? Svar i meter.a)4 cmb)10 cmc)7 cmd)3 cm",
+"tale": "Tegningen har målestokk en: femti. Hvor lang er strekningen i virkeligheten? Svar i meter, a: fire centimeter, b: ti centimeter, c: sju centimeter, d: tre centimeter."
+},
+"744c481f62d32008": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Gjør om til meter.a)300 cmb)1 250 cmc)85 cmd)40 000 cm",
+"tale": "Gjør om til meter, a: tre hundre centimeter, b: tusen to hundre og femti centimeter, c: åttifem centimeter, d: førti tusen centimeter."
+},
+"a384189c8834f659": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et rektangel skal forstørres 3 ganger. Hvor lange blir sidene?a)2 cm × 1 cmb)4 cm × 2 cmc)5 cm × 3 cm",
+"tale": "Et rektangel skal forstørres tre ganger. Hvor lange blir sidene? a: to centimeter ganger en centimeter, b: fire centimeter ganger to centimeter, c: fem centimeter ganger tre centimeter."
+},
+"cdb66b4ee19f0508": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene?a)10 cm × 6 cmb)8 cm × 4 cmc)12 cm × 9 cm",
+"tale": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene? a: ti centimeter ganger seks centimeter, b: åtte centimeter ganger fire centimeter, c: tolv centimeter ganger ni centimeter."
+},
+"8ab87989ee6a8991": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et turkart har målestokk 1:25 000. Hvor langt er det i virkeligheten? Svar i kilometer.a)4 cmb)10 cmc)2 cm",
+"tale": "Et turkart har målestokk en: tjuefem tusen. Hvor langt er det i virkeligheten? Svar i kilometer, a: fire centimeter, b: ti centimeter, c: to centimeter."
+},
+"6f16351b405d8aca": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "En arbeidstegning av et bad har målestokk 1:50. På tegningen er badet 5 cm × 4 cm.a)Hvor stort er badet i virkeligheten?b)Hvor stort er gulvarealet?",
+"tale": "En arbeidstegning av et bad har målestokk en: femti. På tegningen er badet fem centimeter ganger fire centimeter, a: Hvor stort er badet i virkeligheten? b: Hvor stort er gulvarealet?"
+},
+"a932518ac5b94fd4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et rom er 6 m langt og 4 m bredt. Du skal tegne det i målestokk 1:100. Hvor store blir målene på tegningen?",
+"tale": "Et rom er seks meter langt og fire meter bredt. Du skal tegne det i målestokk en: hundre. Hvor store blir målene på tegningen?"
+},
+"60e24b5c7804249e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et bilde er 12 cm bredt og 8 cm høyt. Det forstørres slik at bredden blir 18 cm. Hvor høyt blir bildet?",
+"tale": "Et bilde er tolv centimeter bredt og åtte centimeter høyt. Det forstørres slik at bredden blir atten centimeter. Hvor høyt blir bildet?"
+},
+"147eaf81dd95e789": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "På et kart over Hønefoss er avstanden fra jernbanestasjonen til fossen 4 cm. I virkeligheten er den omtrent 1 km. Hvilken målestokk har kartet? Vis hvordan du tenker.",
+"tale": "På et kart over Hønefoss er avstanden fra jernbanestasjonen til fossen fire centimeter. I virkeligheten er den omtrent en kilometer. Hvilken målestokk har kartet? Vis hvordan du tenker."
+},
+"66d24e9310d98172": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "En trekant har sidene 3 cm, 4 cm og 5 cm. Du skal tegne en formlik trekant der den korteste siden er 9 cm. Hvor lange blir de to andre sidene? Forklar.",
+"tale": "En trekant har sidene tre centimeter, fire centimeter og fem centimeter. Du skal tegne en formlik trekant der den korteste siden er ni centimeter. Hvor lange blir de to andre sidene? Forklar."
+},
+"4df4524f17e5e307": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "En tomt er 30 m lang og 20 m bred. Den tegnes i målestokk 1:500.a)Hvor store blir målene på tegningen?b)Hva er arealet av tomta i virkeligheten?c)Hva er arealet på tegningen?d)Hvor mange ganger større er det virkelige arealet? Sammenlign med 500 · 500.",
+"tale": "En tomt er tretti meter lang og tjue meter bred. Den tegnes i målestokk en: fem hundre, a: Hvor store blir målene på tegningen? b: Hva er arealet av tomta i virkeligheten? c: Hva er arealet på tegningen? d: Hvor mange ganger større er det virkelige arealet? Sammenlign med fem hundre ganger fem hundre."
+},
 "29bfe94a64f55681": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-8.html",
@@ -10598,6 +11022,20 @@
 "type": "tekst",
 "tekst": "Volum er hvor mye plass en gjenstand fyller. For rette prismer og sylindre ganger vi arealet av grunnflaten med høyden. For en kasse er V = l · b · h, og for en sylinder er V = π · r² · h. Husk at 1 m³ = 1 000 liter. Eksempel: En kasse på 4 cm, 3 cm og 2 cm har volumet 4 · 3 · 2 = 24 cm³.",
 "tale": "Volum er hvor mye plass en gjenstand fyller. For rette prismer og sylindre ganger vi arealet av grunnflaten med høyden. For en kasse er V er lik l ganger b ganger h, og for en sylinder er V er lik pi ganger r i andre ganger h. Husk at en kubikkmeter er lik tusen liter. Eksempel: En kasse på fire centimeter, tre centimeter og to centimeter har volumet fire ganger tre ganger to er lik tjuefire kubikkcentimeter."
+},
+"d11dfc6573be2188": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "8.7 Målestokk, forstørre og forminske",
+"tale": "åtte punkt sju Målestokk, forstørre og forminske"
+},
+"8fcd878794cd60d3": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Målestokk forteller hvor mange ganger mindre en tegning eller et kart er enn virkeligheten. 1:100 betyr at 1 cm på tegningen er 100 cm i virkeligheten. Fra tegning til virkelighet ganger vi, og fra virkelighet til tegning deler vi. Figurer er formlike når alle sidene er ganget med samme tall. Da er vinklene like. Eksempel: 6 cm på et kart i 1:50 000 er 6 · 50 000 = 300 000 cm = 3 km.",
+"tale": "Målestokk forteller hvor mange ganger mindre en tegning eller et kart er enn virkeligheten, en: hundre betyr at en centimeter på tegningen er hundre centimeter i virkeligheten. Fra tegning til virkelighet ganger vi, og fra virkelighet til tegning deler vi. Figurer er formlike når alle sidene er ganget med samme tall. Da er vinklene like. Eksempel: seks centimeter på et kart i en: femti tusen er seks ganger femti tusen er lik tre hundre tusen centimeter er lik tre kilometer."
 },
 "4bd28cff3f388edb": {
 "fag": "matematikk",
@@ -10806,6 +11244,24 @@
 "side": "matematikk/kapittel-8.html",
 "type": "ord",
 "tekst": "kubikkmeter"
+},
+"df2455c7dc72aa14": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "kart"
+},
+"db15175b949c1404": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "arbeidstegning"
+},
+"543ba93b55d0270a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "ord",
+"tekst": "å forminske"
 },
 "621414b8404619c5": {
 "fag": "matematikk",
