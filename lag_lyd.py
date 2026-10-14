@@ -21,6 +21,9 @@ Valg:
     --ny-uttale                les også inn på nytt filer som ble laget før uttaleteksten fantes
                                (tekster med tall, formler, tabeller eller punktlister).
     --telle                    bare tell opp, ingen innlesing og ingen nøkkel.
+    --alt RUNDE                les inn alt på nytt, også tekster som har lyd fra før. RUNDE er et navn du velger,
+                               for eksempel okt2026. Filer som er lest inn i denne runden, hoppes over, så du kan
+                               stoppe og fortsette (også over flere måneder med --maks-tegn) uten å betale to ganger.
 
 Stemmen leser feltet «tale» i lytt_manus.json når det finnes: tall, formler og enheter skrevet
 som ord, og pauser mellom tabellceller og punkter. Flash v2.5 gjør ikke dette selv.
@@ -112,6 +115,7 @@ def main():
     a.add_argument('--rydd', action='store_true')
     a.add_argument('--ny-uttale', action='store_true')
     a.add_argument('--telle', action='store_true')
+    a.add_argument('--alt', default=None, metavar='RUNDE')
     a.add_argument('--mappe', default='.')
     x = a.parse_args()
 
@@ -158,9 +162,14 @@ def main():
     valgt = [(i, v) for i, v in manus.items()
              if v['type'] in typer and (not x.fag or v['fag'] == x.fag)
              and (sider is None or v['side'] in sider)]
-    utvalg = [(i, v) for i, v in valgt if not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
+    if x.alt:
+        # Alt på nytt: alt som ikke er lest inn i denne runden.
+        utvalg = [(i, v) for i, v in valgt if logg.get(i, {}).get('runde') != x.alt
+                  or not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
+    else:
+        utvalg = [(i, v) for i, v in valgt if not os.path.exists(os.path.join(lydmappe, i + '.mp3'))]
     # Filer laget før uttaleteksten fantes, der stemmen nå skal lese noe annet enn den gjorde.
-    gamle = [(i, v) for i, v in valgt if os.path.exists(os.path.join(lydmappe, i + '.mp3'))
+    gamle = [] if x.alt else [(i, v) for i, v in valgt if os.path.exists(os.path.join(lydmappe, i + '.mp3'))
              and logg.get(i, {}).get('uttale', kort_id(v['tekst'])) != kort_id(tale(v))]
     if x.telle:
         vis_telling(valgt, utvalg, gamle)
@@ -190,6 +199,8 @@ def main():
         open(os.path.join(lydmappe, i + '.mp3'), 'wb').write(data)
         logg[i] = {'modell': x.modell, 'stemme': x.stemme, 'dato': str(date.today()), 'side': v['side'],
                    'uttale': kort_id(tale(v))}
+        if x.alt:
+            logg[i]['runde'] = x.alt
         if n % 25 == 0 or n == len(utvalg):
             print(f'  {n}/{len(utvalg)} ferdig')
             json.dump(logg, open(logg_f, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

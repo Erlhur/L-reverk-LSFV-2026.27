@@ -14797,17 +14797,17 @@
 "type": "tekst",
 "tekst": "En celle har mange små deler. Hver del har en oppgave, akkurat som rom i et hus. Delene kalles også organeller."
 },
-"19f9877d5d569b5c": {
+"7c32347aa10def78": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Alle celler har en cellemembran ytterst. Den slipper noen stoffer inn og ut, og holder andre stoffer igjen. Inni er cytoplasma, en geléaktig væske. Cellekjernen har arvestoffet DNA, som styrer hva cellen gjør. I mitokondriene lager cellen energi av sukker og oksygen. Ribosomene lager proteiner, og lysosomene bryter ned stoffer cellen ikke trenger."
+"tekst": "Alle celler har en cellemembran ytterst. Den slipper noen stoffer inn og ut, og holder andre stoffer igjen. Inni er cytoplasma, en geléaktig væske. Cellekjernen har arvestoffet DNA, som styrer hva cellen gjør. I mitokondriene lager cellen energi av sukker og oksygen. Ribosomene lager proteiner. Dyrecellen har også lysosomer. De bryter ned stoffer cellen ikke trenger."
 },
-"68be78391ff76a57": {
+"b643660fbd2f9104": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "En plantecelle har de samme delene, men også tre ekstra:"
+"tekst": "En plantecelle har nesten de samme delene. Den har ikke lysosomer, men den har tre deler som dyrecellen ikke har:"
 },
 "f7401d83348990d2": {
 "fag": "naturfag",
@@ -16512,11 +16512,11 @@
 "tekst": "2.2 Cellens deler",
 "tale": "to punkt to Cellens deler"
 },
-"df9891da4a0f86c8": {
+"a09ddd772956ac1e": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Alle celler har en cellemembran som slipper noen stoffer inn og ut. Cellekjernen har DNA, som styrer cellen. I mitokondriene lager cellen energi av sukker og oksygen. Planteceller har i tillegg cellevegg, stor vakuole og kloroplaster, der fotosyntesen skjer. Bakterier har ingen cellekjerne, og DNA-et ligger fritt i cellen."
+"tekst": "Alle celler har en cellemembran som slipper noen stoffer inn og ut. Cellekjernen har DNA, som styrer cellen. I mitokondriene lager cellen energi av sukker og oksygen. Dyreceller har lysosomer, som bryter ned stoffer. Planteceller har i tillegg cellevegg, stor vakuole og kloroplaster, der fotosyntesen skjer. Bakterier har ingen cellekjerne, og DNA-et ligger fritt i cellen."
 },
 "5c79a2034f6e7ff5": {
 "fag": "naturfag",
@@ -20547,12 +20547,12 @@
 "tekst": "Hvis DNA-et i én menneskecelle ble strukket ut, ville det vært omtrent 2 meter langt. Hvordan får det plass?",
 "tale": "Hvis DNA-et i én menneskecelle ble strukket ut, ville det vært omtrent to meter langt. Hvordan får det plass?"
 },
-"320669f960db203e": {
+"6586fbadf560f84b": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Kort fortalt Vi har to kopier av hvert gen, én fra hver forelder. En dominant variant trenger bare én kopi. Gul (G) er dominant: GG og Gg gir gul ert. En recessiv variant trenger to kopier. Bare gg gir grønn ert. Et krysningsskjema viser sjansen for hver egenskap.",
-"tale": "Kort fortalt. Vi har to kopier av hvert gen, én fra hver forelder. En dominant variant trenger bare én kopi. Gul (G) er dominant: stor G, stor G og stor G, liten g gir gul ert. En recessiv variant trenger to kopier. Bare liten g, liten g gir grønn ert. Et krysningsskjema viser sjansen for hver egenskap."
+"tekst": "Kort fortalt Vi har to kopier av hvert gen, én fra hver forelder. En dominant variant trenger bare én kopi. Brune øyne (B) er dominant: BB og Bb gir brune øyne. En recessiv variant trenger to kopier. Bare bb gir blå øyne. Et krysningsskjema viser sjansen for hver egenskap.",
+"tale": "Kort fortalt. Vi har to kopier av hvert gen, én fra hver forelder. En dominant variant trenger bare én kopi. Brune øyne (B) er dominant: stor B, stor B og stor B, liten b gir brune øyne. En recessiv variant trenger to kopier. Bare liten b, liten b gir blå øyne. Et krysningsskjema viser sjansen for hver egenskap."
 },
 "4bfa7e065e0fa96b": {
 "fag": "naturfag",
@@ -36674,12 +36674,12 @@
 "type": "oppgave",
 "tekst": "Sammenlign styresettet i Norge med styresettet i et land du kjenner. Bruk spørsmålene i teksten."
 },
-"f3adee628745a966": {
+"6bd51293db237484": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Kort fortalt Menneskerettigheter gjelder alle mennesker. Alle har for eksempel rett til liv og utdanning. Mange land startet FN i 1945 etter andre verdenskrig. FN arbeider for fred og menneskerettigheter. FN-dagen er 24. oktober. Norge er med i avtaler, for eksempel EØS og NATO. Norge har vært med i forsvarsalliansen NATO siden 1949.",
-"tale": "Kort fortalt. Menneskerettigheter gjelder alle mennesker. Alle har for eksempel rett til liv og utdanning. Mange land startet FN i nitten hundre og førtifem etter andre verdenskrig. FN arbeider for fred og menneskerettigheter. FN-dagen er tjuefjerde oktober. Norge er med i avtaler, for eksempel EØS og Nato. Norge har vært med i forsvarsalliansen Nato siden nitten hundre og førtini."
+"tekst": "Kort fortalt Menneskerettigheter gjelder alle mennesker. Alle har for eksempel rett til liv og utdanning. Mange land startet FN i 1945 etter andre verdenskrig. FN arbeider for fred og menneskerettigheter. FN-dagen er 24. oktober. Norge er med i avtaler, for eksempel EØS og Schengen. Schengen betyr at vi kan reise uten passkontroll mellom mange land. Norge har vært med i forsvarsalliansen NATO siden 1949.",
+"tale": "Kort fortalt. Menneskerettigheter gjelder alle mennesker. Alle har for eksempel rett til liv og utdanning. Mange land startet FN i nitten hundre og førtifem etter andre verdenskrig. FN arbeider for fred og menneskerettigheter. FN-dagen er tjuefjerde oktober. Norge er med i avtaler, for eksempel EØS og Schengen. Schengen betyr at vi kan reise uten passkontroll mellom mange land. Norge har vært med i forsvarsalliansen Nato siden nitten hundre og førtini."
 },
 "08f0e67a3022c60b": {
 "fag": "samfunnsfag",
@@ -36792,6 +36792,12 @@
 "type": "tekst",
 "tekst": "Norge er også med i avtaler om handel, sikkerhet og miljø. Gjennom EØS-avtalen fra 1994 er Norge en del av EUs indre marked, selv om Norge ikke er medlem av EU. Det betyr at varer, tjenester, penger og arbeidskraft kan flyttes fritt, men også at Norge må innføre mange av EUs regler. Norge er med i Schengen, i forsvarsalliansen NATO og i Parisavtalen om klima.",
 "tale": "Norge er også med i avtaler om handel, sikkerhet og miljø. Gjennom EØS-avtalen fra nitten hundre og nittifire er Norge en del av EUs indre marked, selv om Norge ikke er medlem av EU. Det betyr at varer, tjenester, penger og arbeidskraft kan flyttes fritt, men også at Norge må innføre mange av EUs regler. Norge er med i Schengen, i forsvarsalliansen Nato og i Parisavtalen om klima."
+},
+"a7f00c6745c011f0": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-2.html",
+"type": "tekst",
+"tekst": "Schengen er et samarbeid mellom de fleste landene i Europa. Mellom landene er det vanligvis ingen passkontroll. Du kan for eksempel kjøre fra Norge til Sverige uten å stoppe på grensen. I stedet samarbeider landene om kontrollen mot land utenfor Schengen. Du må likevel alltid ha med pass eller nasjonalt ID-kort."
 },
 "e8347959f1d9e334": {
 "fag": "samfunnsfag",
@@ -38088,12 +38094,12 @@
 "tekst": "2.9 Menneskerettigheter og internasjonale avtaler",
 "tale": "to punkt ni Menneskerettigheter og internasjonale avtaler"
 },
-"c43e2d0c4edfa67b": {
+"c08140cd4f18de89": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Menneskerettigheter har alle, bare fordi de er mennesker. FN ble laget i 1945. I 1948 vedtok FN en erklæring om menneskerettighetene. I Sikkerhetsrådet har fem land vetorett. Den første lederen av FN var nordmannen Trygve Lie. Norge er med i mange avtaler, som EØS og NATO. Avtalene gir både rettigheter og plikter.",
-"tale": "Menneskerettigheter har alle, bare fordi de er mennesker. FN ble laget i nitten hundre og førtifem. I nitten hundre og førtiåtte vedtok FN en erklæring om menneskerettighetene. I Sikkerhetsrådet har fem land vetorett. Den første lederen av FN var nordmannen Trygve Lie. Norge er med i mange avtaler, som EØS og Nato. Avtalene gir både rettigheter og plikter."
+"tekst": "Menneskerettigheter har alle, bare fordi de er mennesker. FN ble laget i 1945. I 1948 vedtok FN en erklæring om menneskerettighetene. I Sikkerhetsrådet har fem land vetorett. Den første lederen av FN var nordmannen Trygve Lie. Norge er med i mange avtaler, som EØS, Schengen og NATO. Schengen betyr at det vanligvis ikke er passkontroll mellom landene. Avtalene gir både rettigheter og plikter.",
+"tale": "Menneskerettigheter har alle, bare fordi de er mennesker. FN ble laget i nitten hundre og førtifem. I nitten hundre og førtiåtte vedtok FN en erklæring om menneskerettighetene. I Sikkerhetsrådet har fem land vetorett. Den første lederen av FN var nordmannen Trygve Lie. Norge er med i mange avtaler, som EØS, Schengen og Nato. Schengen betyr at det vanligvis ikke er passkontroll mellom landene. Avtalene gir både rettigheter og plikter."
 },
 "a70ca7f3235dca47": {
 "fag": "samfunnsfag",
@@ -41700,12 +41706,12 @@
 "tekst": "Case: Et byggfirma betaler utenlandske arbeidere 90 kroner timen, uten arbeidsavtale. Hvilke regler brytes, og hvilke konsekvenser kan det få for arbeiderne, firmaet og samfunnet?",
 "tale": "Case: Et byggfirma betaler utenlandske arbeidere nitti kroner timen, uten arbeidsavtale. Hvilke regler brytes, og hvilke konsekvenser kan det få for arbeiderne, firmaet og samfunnet?"
 },
-"4c53fcf8db922820": {
+"c610a0d380a8b598": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Kort fortalt Arbeidslivet har hatt store omveltninger, altså store endringer. Før jobbet de fleste i jordbruk, fiske og skogbruk. I dag jobber de fleste med tjenester, for eksempel skole og helse. Ny teknologi endrer jobbene, for eksempel roboter og kunstig intelligens. Noen jobber forsvinner, og nye jobber kommer. Derfor er det viktig å lære hele livet.",
-"tale": "Kort fortalt. Arbeidslivet har hatt store omveltninger, altså store endringer. Før jobbet de fleste i jordbruk, fiske og skogbruk. I dag jobber de fleste med tjenester, for eksempel skole og helse. Ny teknologi endrer jobbene, for eksempel roboter og kunstig intelligens. Noen jobber forsvinner, og nye jobber kommer. Derfor er det viktig å lære hele livet."
+"tekst": "Kort fortalt Arbeidslivet har hatt store omveltninger, altså store endringer. Før jobbet de fleste i jordbruk, fiske og skogbruk. Primærnæringer henter råvarer fra naturen. Sekundærnæringer lager varer. Tertiærnæringer gir tjenester. I dag jobber de fleste med tjenester, for eksempel skole og helse. Ny teknologi endrer jobbene, for eksempel roboter og kunstig intelligens. Derfor er det viktig å lære hele livet.",
+"tale": "Kort fortalt. Arbeidslivet har hatt store omveltninger, altså store endringer. Før jobbet de fleste i jordbruk, fiske og skogbruk. Primærnæringer henter råvarer fra naturen. Sekundærnæringer lager varer. Tertiærnæringer gir tjenester. I dag jobber de fleste med tjenester, for eksempel skole og helse. Ny teknologi endrer jobbene, for eksempel roboter og kunstig intelligens. Derfor er det viktig å lære hele livet."
 },
 "7c8af732a31d4f07": {
 "fag": "samfunnsfag",
@@ -41720,6 +41726,20 @@
 "type": "tekst",
 "tekst": "Arbeidslivet har gått gjennom flere store omveltninger. For 200 år siden arbeidet de fleste i jordbruk, fiske og skogbruk. Med industrialiseringen på 1800-tallet flyttet mange til byene og fabrikkene, slik du lærte i kapittel 2.11. Etter andre verdenskrig ble det stadig flere jobber innen tjenester: skole, helse, handel og kontor. I dag arbeider omtrent åtte av ti nordmenn i tjenesteytende næringer.",
 "tale": "Arbeidslivet har gått gjennom flere store omveltninger. For to hundre år siden arbeidet de fleste i jordbruk, fiske og skogbruk. Med industrialiseringen på attenhundretallet flyttet mange til byene og fabrikkene, slik du lærte i kapittel to punkt elleve. Etter andre verdenskrig ble det stadig flere jobber innen tjenester: skole, helse, handel og kontor. I dag arbeider omtrent åtte av ti nordmenn i tjenesteytende næringer."
+},
+"0708e6dafb7c8083": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "tekst",
+"tekst": "Arbeidet i et land deles ofte i tre næringer. Primærnæringene henter råvarer fra naturen. Det er jordbruk, fiske og skogbruk. Sekundærnæringene lager varer av råvarene. Det er fabrikker, industri og byggfirmaer. Olje- og gassutvinning regnes også som sekundærnæring. Tertiærnæringene gir tjenester til folk. Det er for eksempel skoler, sykehus, butikker og banker. Et annet ord for tertiærnæring er tjenesteytende næring.",
+"tale": "Arbeidet i et land deles ofte i tre næringer. Primærnæringene henter råvarer fra naturen. Det er jordbruk, fiske og skogbruk. Sekundærnæringene lager varer av råvarene. Det er fabrikker, industri og byggfirmaer. Olje-og gassutvinning regnes også som sekundærnæring. Tertiærnæringene gir tjenester til folk. Det er for eksempel skoler, sykehus, butikker og banker. Et annet ord for tertiærnæring er tjenesteytende næring."
+},
+"2e28c9ff0de5eb06": {
+"fag": "samfunnsfag",
+"side": "samfunnsfag/kapittel-4.html",
+"type": "tekst",
+"tekst": "Figur 4.10 viser de tre næringene.",
+"tale": "Figur fire punkt ti viser de tre næringene."
 },
 "35612ea1b981f825": {
 "fag": "samfunnsfag",
@@ -41790,12 +41810,12 @@
 "type": "oppgave",
 "tekst": "Sorter oppfinnelsene etter industriell revolusjon: dampmaskinen, samlebåndet, datamaskinen, kunstig intelligens, elektrisitet i fabrikkene, industriroboter."
 },
-"5dd2f9e04d344bcd": {
+"d121e4beeeec20d0": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "oppgave",
-"tekst": "Se på figur 4.11. Hvor mange år gikk det fra samlebåndet til den første mikroprosessoren?",
-"tale": "Se på figur fire punkt elleve. Hvor mange år gikk det fra samlebåndet til den første mikroprosessoren?"
+"tekst": "Se på figur 4.12. Hvor mange år gikk det fra samlebåndet til den første mikroprosessoren?",
+"tale": "Se på figur fire punkt tolv. Hvor mange år gikk det fra samlebåndet til den første mikroprosessoren?"
 },
 "53f80a465aca3f10": {
 "fag": "samfunnsfag",
@@ -41907,12 +41927,12 @@
 "tekst": "Prisen har økt med 4 prosent.",
 "tale": "Prisen har økt med fire prosent."
 },
-"dd8426e6841f856b": {
+"1ecabb809ead1f6c": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Figur 4.13 viser hvordan styringsrenten virker på prisveksten, steg for steg.",
-"tale": "Figur fire punkt tretten viser hvordan styringsrenten virker på prisveksten, steg for steg."
+"tekst": "Figur 4.14 viser hvordan styringsrenten virker på prisveksten, steg for steg.",
+"tale": "Figur fire punkt fjorten viser hvordan styringsrenten virker på prisveksten, steg for steg."
 },
 "d25f846f2b6e6be3": {
 "fag": "samfunnsfag",
@@ -41970,19 +41990,19 @@
 "tekst": "Et brød kostet 40 kroner og koster nå 42 kroner. Hvor mange prosent har prisen økt?",
 "tale": "Et brød kostet førti kroner og koster nå førtito kroner. Hvor mange prosent har prisen økt?"
 },
-"358cdf0779749f8e": {
+"c160f89e2ef79b67": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "oppgave",
-"tekst": "Se på figur 4.13. Hva skjer rett etter at det blir dyrere å låne?",
-"tale": "Se på figur fire punkt tretten. Hva skjer rett etter at det blir dyrere å låne?"
+"tekst": "Se på figur 4.14. Hva skjer rett etter at det blir dyrere å låne?",
+"tale": "Se på figur fire punkt fjorten. Hva skjer rett etter at det blir dyrere å låne?"
 },
-"e49e241ac1a5effc": {
+"048b0ffc245d33cd": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "oppgave",
-"tekst": "Se på figur 4.13. Hva tror du skjer hvis styringsrenten går ned? Beskriv kjeden baklengs.",
-"tale": "Se på figur fire punkt tretten. Hva tror du skjer hvis styringsrenten går ned? Beskriv kjeden baklengs."
+"tekst": "Se på figur 4.14. Hva tror du skjer hvis styringsrenten går ned? Beskriv kjeden baklengs.",
+"tale": "Se på figur fire punkt fjorten. Hva tror du skjer hvis styringsrenten går ned? Beskriv kjeden baklengs."
 },
 "29b0671325308f51": {
 "fag": "samfunnsfag",
@@ -42353,12 +42373,12 @@
 "tekst": "4.6 Teknologi og omveltninger i arbeidslivet",
 "tale": "fire punkt seks Teknologi og omveltninger i arbeidslivet"
 },
-"18cec3f36540286f": {
+"cef65403f935c596": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Arbeidslivet har gått gjennom store omveltninger. For 200 år siden jobbet de fleste i jordbruk og fiske. I dag jobber åtte av ti i tjenesteytende næringer. Automatisering og kunstig intelligens endrer mange yrker. Follum fabrikker ble lagt ned i 2012, men nye jobber har kommet. Plattformarbeid gir ofte færre rettigheter enn vanlig ansettelse.",
-"tale": "Arbeidslivet har gått gjennom store omveltninger. For to hundre år siden jobbet de fleste i jordbruk og fiske. I dag jobber åtte av ti i tjenesteytende næringer. Automatisering og kunstig intelligens endrer mange yrker. Follum fabrikker ble lagt ned i to tusen og tolv, men nye jobber har kommet. Plattformarbeid gir ofte færre rettigheter enn vanlig ansettelse."
+"tekst": "Arbeidslivet har gått gjennom store omveltninger. For 200 år siden jobbet de fleste i jordbruk og fiske. Arbeidet deles i tre næringer: primærnæringer henter råvarer fra naturen, sekundærnæringer lager varer, og tertiærnæringer gir tjenester. I dag jobber åtte av ti i tjenesteytende næringer. Automatisering og kunstig intelligens endrer mange yrker. Follum fabrikker ble lagt ned i 2012, men nye jobber har kommet. Plattformarbeid gir ofte færre rettigheter enn vanlig ansettelse.",
+"tale": "Arbeidslivet har gått gjennom store omveltninger. For to hundre år siden jobbet de fleste i jordbruk og fiske. Arbeidet deles i tre næringer: primærnæringer henter råvarer fra naturen, sekundærnæringer lager varer, og tertiærnæringer gir tjenester. I dag jobber åtte av ti i tjenesteytende næringer. Automatisering og kunstig intelligens endrer mange yrker. Follum fabrikker ble lagt ned i to tusen og tolv, men nye jobber har kommet. Plattformarbeid gir ofte færre rettigheter enn vanlig ansettelse."
 },
 "e844876bdb433da5": {
 "fag": "samfunnsfag",

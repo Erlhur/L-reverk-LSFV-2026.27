@@ -14,7 +14,7 @@
 .ressurs h3 { font-size: 1.05rem; margin: 0 0 .3rem; }
 .ressurs p { margin: .3rem 0 0; color: #4a5263; font-size: .95rem; }
 .ressurs .film { position: relative; padding-top: 56.25%; margin: .3rem 0; border-radius: 8px; overflow: hidden; background: #000; }
-.ressurs .film iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.ressurs .film iframe, .ressurs .film video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
 .ressurs .kilde { font-size: .82rem; color: #6b7280; }
 .ressurs.dk { border-top: 3px solid var(--kap); }
 .ingen { color: #6b7280; font-style: italic; }
@@ -64,12 +64,13 @@
     return null;
   }
   function kort(r) {
-    var inn = innbygg(r.url || ''), vert = '';
+    var inn = innbygg(r.url || ''), vert = '', fil = /\.(mp4|webm|m4v)(\?|#|$)/i.test(r.url || '');
     try { vert = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) {}
     return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + (r.dk ? esc(r.dk) + ' ' : '') + esc(r.tittel) + '</h3>' +
-      (inn ? '<div class="film"><iframe src="' + inn + '" loading="lazy" allowfullscreen title="' + esc(r.tittel) + '"></iframe></div>' : '') +
+      (inn ? '<div class="film"><iframe src="' + inn + '" loading="lazy" allowfullscreen title="' + esc(r.tittel) + '"></iframe></div>' :
+       fil ? '<div class="film"><video controls preload="metadata" playsinline src=' + "'" + esc(r.url) + "'" + '></video></div>' : '') +
       (r.beskrivelse ? '<p>' + esc(r.beskrivelse) + '</p>' : '') +
-      '<p class="kilde"><a target="_blank" rel="noopener" href=' + "'" + esc(r.url) + "'" + '>' + (inn ? 'Åpne filmen i nytt vindu' : 'Åpne ' + esc(vert || 'lenken')) + ' →</a></p></div>';
+      '<p class="kilde"><a target="_blank" rel="noopener" href=' + "'" + esc(r.url) + "'" + '>' + (inn || fil ? 'Åpne filmen i nytt vindu' : 'Åpne ' + esc(vert || 'lenken')) + ' →</a></p></div>';
   }
   var s = document.createElement('script'); s.src = '../ressurser.js?' + Date.now();
   s.onload = vis; s.onerror = vis; document.head.appendChild(s);
