@@ -1,6 +1,6 @@
-/* Ressurser til elevene – laget i Lærerlab 2026-10-17 */
+/* Ressurser til elevene – laget i Lærerlab 2026-10-19 (Campus-lenker rett til temaet) */
 window.RESSURSER = {
- "oppdatert": "2026-10-17",
+ "oppdatert": "2026-10-19",
  "liste": [
   {
    "id": "exta1855888f9",
@@ -8,8 +8,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.1",
    "tittel": "Campus: Hoderegning og overslag (kap. 1.2 og 2.4)",
-   "url": "https://app.campus.no/",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12775",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext543e318d88",
@@ -17,8 +17,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.2",
    "tittel": "Campus: Desimaltall og tallinjen (kap. 2)",
-   "url": "https://app.campus.no/#1-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/600",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext9385f075d1",
@@ -35,8 +35,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.3",
    "tittel": "Campus: Divisjon med desimaltall (kap. 3.4)",
-   "url": "https://app.campus.no/#1-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/606",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extdfbd88c73f",
@@ -44,8 +44,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.5",
    "tittel": "Campus: Regnerekkefølge (kap. 1.3)",
-   "url": "https://app.campus.no/#1-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12776",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext53b2ac91d5",
@@ -62,8 +62,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.6",
    "tittel": "Campus: Regne med negative tall (kap. 4)",
-   "url": "https://app.campus.no/#1-6",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12719",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext878b1b4c47",
@@ -80,8 +80,8 @@ window.RESSURSER = {
    "kap": 2,
    "dk": "2.2",
    "tittel": "Campus: Parenteser (kap. 1.6)",
-   "url": "https://app.campus.no/#2-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12782",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extce7dbe463d",
@@ -89,8 +89,8 @@ window.RESSURSER = {
    "kap": 2,
    "dk": "2.4",
    "tittel": "Campus: Hoderegning og regnealgoritmer (kap. 1.2 og 1.4)",
-   "url": "https://app.campus.no/#2-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12780",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext5bc251d5c9",
@@ -98,8 +98,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.1",
    "tittel": "Campus: Potenser (kap. 6.1 og 7)",
-   "url": "https://app.campus.no/#3-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12720",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exte87429d627",
@@ -107,8 +107,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.2",
    "tittel": "Campus: Kvadrattall og kvadratrot (kap. 6.2–6.5)",
-   "url": "https://app.campus.no/#3-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12768",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext34cfda4935",
@@ -125,8 +125,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.3",
    "tittel": "Campus: Regne med potenser (kap. 7)",
-   "url": "https://app.campus.no/#3-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/611",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exta45d54b03c",
@@ -134,8 +134,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.4",
    "tittel": "Campus: Tall på standardform (kap. 8)",
-   "url": "https://app.campus.no/#3-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/612",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extdc8f569f8b",
@@ -161,8 +161,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.5",
    "tittel": "Campus: Primtall og faktorisering (kap. 1.1 og 1.5)",
-   "url": "https://app.campus.no/#3-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12718",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extd4fa2006b4",
@@ -179,8 +179,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.1",
    "tittel": "Campus: Ekte brøk og likeverdige brøker (kap. 5.1–5.3)",
-   "url": "https://app.campus.no/#4-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15117",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exte873fe7522",
@@ -197,8 +197,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.2",
    "tittel": "Campus: Utviding og forkorting av brøk (kap. 5.4)",
-   "url": "https://app.campus.no/#4-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15165",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext55d4e9ee84",
@@ -224,8 +224,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.3",
    "tittel": "Campus: Brøk og desimaltall (kap. 5.7)",
-   "url": "https://app.campus.no/#4-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15168",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extf4b1d7e829",
@@ -242,8 +242,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.4",
    "tittel": "Campus: Uekte brøk og blandet tall, trekke sammen brøker (kap. 5.2, 5.5, 5.6)",
-   "url": "https://app.campus.no/#4-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15163",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext745922ca5a",
@@ -260,8 +260,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.5",
    "tittel": "Campus: Multiplikasjon og divisjon av brøk (kap. 5.8–5.9)",
-   "url": "https://app.campus.no/#4-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15169",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext93dd6964d6",
@@ -296,8 +296,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.1",
    "tittel": "Campus: Hva er prosent? (kap. 24.1–24.3)",
-   "url": "https://app.campus.no/#5-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12723",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext6d2cd93112",
@@ -323,8 +323,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.2",
    "tittel": "Campus: Prosentdelen av et tall (kap. 24.4–24.5)",
-   "url": "https://app.campus.no/#5-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12752",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext4398f54277",
@@ -350,8 +350,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.3",
    "tittel": "Campus: Finne prosenten (kap. 24.6)",
-   "url": "https://app.campus.no/#5-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12754",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extb0ea1f35d9",
@@ -368,8 +368,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.4",
    "tittel": "Campus: Prosentvis endring (kap. 24.7)",
-   "url": "https://app.campus.no/#5-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12755",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext66b95f4dca",
@@ -386,8 +386,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.1",
    "tittel": "Campus: Lage bokstavuttrykk (kap. 9.1)",
-   "url": "https://app.campus.no/#6-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/615",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext28a885fadc",
@@ -404,8 +404,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.2",
    "tittel": "Campus: Sette tall inn i uttrykk (kap. 9.2)",
-   "url": "https://app.campus.no/#6-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/616",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext7133245c72",
@@ -413,8 +413,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.3",
    "tittel": "Campus: Trekke sammen ledd (kap. 9.3)",
-   "url": "https://app.campus.no/#6-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/617",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext41da9e5524",
@@ -422,8 +422,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.4",
    "tittel": "Campus: Multiplisere inn i en parentes (kap. 28.1)",
-   "url": "https://app.campus.no/#6-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12726",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext5104809903",
@@ -431,8 +431,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.5",
    "tittel": "Campus: Tallmønster (kap. 9.4)",
-   "url": "https://app.campus.no/#6-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/618",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext77d828e4da",
@@ -449,8 +449,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.6",
    "tittel": "Campus: Likninger, sette opp og sette prøve (kap. 10)",
-   "url": "https://app.campus.no/#6-6",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/622",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext7b2401bfa5",
@@ -467,8 +467,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.1",
    "tittel": "Campus: Enheter og forstavelser (kap. 12.3)",
-   "url": "https://app.campus.no/#7-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15162",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext216b7f57ec",
@@ -503,8 +503,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.3",
    "tittel": "Campus: Omgjøring mellom lengdeenheter (kap. 12.4)",
-   "url": "https://app.campus.no/#7-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15161",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extd7b78fe38d",
@@ -521,8 +521,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.4",
    "tittel": "Campus: Tid og regne med tid (kap. 12.1–12.2)",
-   "url": "https://app.campus.no/#7-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15118",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extf37dad99b3",
@@ -530,8 +530,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.5",
    "tittel": "Campus: Vei, fart og tid (kap. 18.1)",
-   "url": "https://app.campus.no/#7-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15119",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext6fb94a2ea9",
@@ -548,8 +548,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.1",
    "tittel": "Campus: Trekanter og firkanter (kap. 13.1)",
-   "url": "https://app.campus.no/#8-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/652",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extcc22fa12c1",
@@ -575,8 +575,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.2",
    "tittel": "Campus: Omkrets og areal (kap. 13.2–13.4, 13.6–13.7)",
-   "url": "https://app.campus.no/#8-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/653",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exta6d3f5dc26",
@@ -611,8 +611,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.3",
    "tittel": "Campus: Omkrets og areal av sammensatte figurer (kap. 13.8)",
-   "url": "https://app.campus.no/#8-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/651",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extdf81a64c00",
@@ -620,8 +620,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.4",
    "tittel": "Campus: Omkrets og areal av sirkler (kap. 13.5)",
-   "url": "https://app.campus.no/#8-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/648",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext29fc73212e",
@@ -647,8 +647,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.5",
    "tittel": "Campus: Pytagoras' setning (kap. 14)",
-   "url": "https://app.campus.no/#8-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/640",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext24c310921e",
@@ -674,8 +674,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.6",
    "tittel": "Campus: Overflate og volum (kap. 15)",
-   "url": "https://app.campus.no/#8-6",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15120",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext06a81b096e",
@@ -701,8 +701,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.7",
    "tittel": "Campus: Målestokk – forminsking, forstørring og å finne målestokk (kap. 17)",
-   "url": "https://app.campus.no/#8-7",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/643",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extde00936897",
@@ -719,8 +719,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.1",
    "tittel": "Campus: Frekvens og relativ frekvens (kap. 20.1–20.3)",
-   "url": "https://app.campus.no/#9-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12722",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extf0a4ffbefe",
@@ -728,8 +728,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.1",
    "tittel": "Campus: Spørreundersøkelser (kap. 21.1)",
-   "url": "https://app.campus.no/#9-1-40",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15121",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext374fd13f69",
@@ -737,8 +737,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.2",
    "tittel": "Campus: Tabeller og diagrammer (kap. 21)",
-   "url": "https://app.campus.no/#9-2",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15148",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext82a8bde0a5",
@@ -764,8 +764,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.3",
    "tittel": "Campus: Gjennomsnitt, median og typetall (kap. 20.4–20.7)",
-   "url": "https://app.campus.no/#9-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12758",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extc8d206bdad",
@@ -773,8 +773,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.4",
    "tittel": "Campus: Spredningsmål (kap. 20.8–20.9)",
-   "url": "https://app.campus.no/#9-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12762",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extec0cf50353",
@@ -782,8 +782,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.5",
    "tittel": "Campus: Misvisende diagrammer (kap. 21.6)",
-   "url": "https://app.campus.no/#9-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15152",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exte674b21b26",
@@ -809,8 +809,8 @@ window.RESSURSER = {
    "kap": 9,
    "dk": "9.6",
    "tittel": "Campus: Sannsynlighet og kombinatorikk (kap. 22–23)",
-   "url": "https://app.campus.no/#9-6",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15122",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext81c6e5fa7b",
@@ -818,8 +818,8 @@ window.RESSURSER = {
    "kap": 10,
    "dk": "10.1",
    "tittel": "Campus: Funksjoner og lineære funksjoner (kap. 11 og 31)",
-   "url": "https://app.campus.no/#10-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/630",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext8b1ca8eae5",
@@ -854,8 +854,8 @@ window.RESSURSER = {
    "kap": 10,
    "dk": "10.3",
    "tittel": "Campus: Formlikhet og kongruens (kap. 16)",
-   "url": "https://app.campus.no/#10-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12721",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extc867c2e50b",
@@ -872,8 +872,8 @@ window.RESSURSER = {
    "kap": 10,
    "dk": "10.4",
    "tittel": "Campus: Lønn og skatt (kap. 25)",
-   "url": "https://app.campus.no/#10-4",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12724",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext2beebfd90f",
@@ -890,8 +890,8 @@ window.RESSURSER = {
    "kap": 10,
    "dk": "10.5",
    "tittel": "Campus: Sparing, lån og budsjett (kap. 26–27)",
-   "url": "https://app.campus.no/#10-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12725",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext73a6196433",
@@ -935,8 +935,8 @@ window.RESSURSER = {
    "kap": 10,
    "dk": "10.6",
    "tittel": "Campus: Valuta (kap. 27.4)",
-   "url": "https://app.campus.no/#10-6",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/15140",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext95e8847093",
@@ -953,8 +953,8 @@ window.RESSURSER = {
    "kap": 11,
    "dk": "11.1",
    "tittel": "Campus: Sentralmål og relativ frekvens med regneark (kap. 20.3, 20.7, 20.9)",
-   "url": "https://app.campus.no/#11-1",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/12757",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exta7f3e9b93f",
@@ -962,8 +962,8 @@ window.RESSURSER = {
    "kap": 11,
    "dk": "11.3",
    "tittel": "Campus: Grafer og kongruensavbildning i GeoGebra (kap. 11.4 og 16.4)",
-   "url": "https://app.campus.no/#11-3",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/632",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext8e7d90f3bd",
@@ -971,8 +971,8 @@ window.RESSURSER = {
    "kap": 11,
    "dk": "11.5",
    "tittel": "Campus: Programmering i Python (kap. 32)",
-   "url": "https://app.campus.no/#11-5",
-   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/363505/Subchapter/23124",
+   "beskrivelse": "Campus Inkrement, Matte 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext138c5dcb4c",
@@ -1016,8 +1016,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.1",
    "tittel": "Campus: Økologi – samspillet i naturen (kap. 6)",
-   "url": "https://app.campus.no/",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1282",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext589c74a36d",
@@ -1043,8 +1043,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.3",
    "tittel": "Campus: Energi i økosystemet (kap. 6.3)",
-   "url": "https://app.campus.no/#1-3",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1284",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext11fbec53f7",
@@ -1052,8 +1052,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.4",
    "tittel": "Campus: Næringskjeder og næringspyramider (kap. 7)",
-   "url": "https://app.campus.no/#1-4",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1286",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext82383c5ca0",
@@ -1115,8 +1115,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.8",
    "tittel": "Campus: Biologisk mangfold (kap. 2.4 og 19)",
-   "url": "https://app.campus.no/#1-8",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1269",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext08b2dfdae5",
@@ -1142,8 +1142,8 @@ window.RESSURSER = {
    "kap": 1,
    "dk": "1.9",
    "tittel": "Campus: Mennesket og naturen (kap. 19)",
-   "url": "https://app.campus.no/#1-9",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13075",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extf31371fd2e",
@@ -1178,8 +1178,8 @@ window.RESSURSER = {
    "kap": 2,
    "dk": "2.1",
    "tittel": "Campus: Hva er celler? (kap. 18)",
-   "url": "https://app.campus.no/#2-1",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15438",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext377d439a4a",
@@ -1241,8 +1241,8 @@ window.RESSURSER = {
    "kap": 2,
    "dk": "2.5",
    "tittel": "Campus: Fotosyntese og celleånding (kap. 18.4)",
-   "url": "https://app.campus.no/#2-5",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15441",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext9a8d26d583",
@@ -1295,8 +1295,8 @@ window.RESSURSER = {
    "kap": 2,
    "dk": "2.6",
    "tittel": "Campus: Hormoner og nervesystemet (kap. 20)",
-   "url": "https://app.campus.no/#2-6",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13067",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext5a0636b072",
@@ -1385,8 +1385,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.1",
    "tittel": "Campus: Vitenskap, en prosess (kap. 8.1)",
-   "url": "https://app.campus.no/#3-1",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1305",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext8394706da8",
@@ -1412,8 +1412,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.2",
    "tittel": "Campus: Naturvitenskapelig metode (kap. 8.2)",
-   "url": "https://app.campus.no/#3-2",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1306",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext042f6a135f",
@@ -1430,8 +1430,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.3",
    "tittel": "Campus: Undersøkelser (kap. 8.3)",
-   "url": "https://app.campus.no/#3-3",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1307",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext34947c1506",
@@ -1457,8 +1457,8 @@ window.RESSURSER = {
    "kap": 3,
    "dk": "3.8",
    "tittel": "Campus: Kildekritikk (kap. 8.4)",
-   "url": "https://app.campus.no/#3-8",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1308",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext8059364a63",
@@ -1466,8 +1466,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.1",
    "tittel": "Campus: Arter (kap. 2.1)",
-   "url": "https://app.campus.no/#4-1",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1271",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext46d787db72",
@@ -1493,8 +1493,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.3",
    "tittel": "Campus: Evolusjon (kap. 2.3)",
-   "url": "https://app.campus.no/#4-3",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1268",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext5164063c44",
@@ -1538,8 +1538,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.4",
    "tittel": "Campus: Hvordan vet vi? (kap. 2.2)",
-   "url": "https://app.campus.no/#4-4",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1272",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext83c8dfeb82",
@@ -1565,8 +1565,8 @@ window.RESSURSER = {
    "kap": 4,
    "dk": "4.5",
    "tittel": "Campus: Livets begynnelse (kap. 1)",
-   "url": "https://app.campus.no/#4-5",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1265",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext8f69e5a130",
@@ -1601,8 +1601,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.1",
    "tittel": "Campus: Hva er alt rundt oss laget av? (kap. 4.1)",
-   "url": "https://app.campus.no/#5-1",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13082",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extcee8783571",
@@ -1646,8 +1646,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.3",
    "tittel": "Campus: Blandinger og rene stoffer (kap. 4.2)",
-   "url": "https://app.campus.no/#5-3",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13083",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extea626a915f",
@@ -1664,8 +1664,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.4",
    "tittel": "Campus: Atomer og ioner (kap. 5)",
-   "url": "https://app.campus.no/#5-4",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13079",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extc0d88b4042",
@@ -1709,8 +1709,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.5",
    "tittel": "Campus: Periodesystemet (kap. 5.2)",
-   "url": "https://app.campus.no/#5-5",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13080",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extc0ceefeae0",
@@ -1745,8 +1745,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.6",
    "tittel": "Campus: Reaksjoner og kjemispråket (kap. 4.3–4.4)",
-   "url": "https://app.campus.no/#5-6",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13084",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext62fb2857a4",
@@ -1781,8 +1781,8 @@ window.RESSURSER = {
    "kap": 5,
    "dk": "5.8",
    "tittel": "Campus: Kjemi og sikkerhet, labvett (kap. 3)",
-   "url": "https://app.campus.no/#5-8",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1276",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext2bc67ea501",
@@ -1835,8 +1835,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.2",
    "tittel": "Campus: Bakterier og virus (kap. 22.1)",
-   "url": "https://app.campus.no/#6-2",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1292",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext1b1fb3bfbc",
@@ -1880,8 +1880,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.4",
    "tittel": "Campus: Indre og ytre forsvar (kap. 22.2)",
-   "url": "https://app.campus.no/#6-4",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1293",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exta218df7e54",
@@ -1907,8 +1907,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.5",
    "tittel": "Campus: Vaksiner og behandling (kap. 22.3–22.4)",
-   "url": "https://app.campus.no/#6-5",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1294",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext76e726fa3e",
@@ -1943,8 +1943,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.7",
    "tittel": "Campus: Rus: alkohol, narkotika og tobakk (kap. 21)",
-   "url": "https://app.campus.no/#6-7",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15427",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extac45e0f46e",
@@ -1970,8 +1970,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.8",
    "tittel": "Campus: Pubertet og identitet (kap. 13)",
-   "url": "https://app.campus.no/#6-8",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1290",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext6fdf8ac7b6",
@@ -1997,8 +1997,8 @@ window.RESSURSER = {
    "kap": 6,
    "dk": "6.9",
    "tittel": "Campus: Seksualitet og grenser (kap. 14–15)",
-   "url": "https://app.campus.no/#6-9",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/13068",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext43db2ceac9",
@@ -2024,8 +2024,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.1",
    "tittel": "Campus: Hva er energi? (kap. 16)",
-   "url": "https://app.campus.no/#7-1",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1297",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext6d6e25abd2",
@@ -2060,8 +2060,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.3",
    "tittel": "Campus: Energikilder (kap. 17)",
-   "url": "https://app.campus.no/#7-3",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1302",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extdef1d38078",
@@ -2141,8 +2141,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.7",
    "tittel": "Campus: Teknologi (kap. 9)",
-   "url": "https://app.campus.no/#7-7",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/1309",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extd28a20a943",
@@ -2177,8 +2177,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.8",
    "tittel": "Campus: Drivhuseffekt og klimagasser (kap. 23.2)",
-   "url": "https://app.campus.no/#7-8",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15432",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "extc995c59e29",
@@ -2213,8 +2213,8 @@ window.RESSURSER = {
    "kap": 7,
    "dk": "7.9",
    "tittel": "Campus: Vær og klima (kap. 23.3)",
-   "url": "https://app.campus.no/#7-9",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15433",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "exta3afeff157",
@@ -2276,8 +2276,8 @@ window.RESSURSER = {
    "kap": 8,
    "dk": "8.6",
    "tittel": "Campus: Bærekraftig utvikling (kap. 23)",
-   "url": "https://app.campus.no/#8-6",
-   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen og finn temaet under «Innhold»."
+   "url": "https://app.campus.no/Education/Contents/527631/Subchapter/15428",
+   "beskrivelse": "Campus Inkrement, Naturfag 8–10. Logg inn med skolekontoen, så kommer du rett til temaet."
   },
   {
    "id": "ext4b750f6cbe",
