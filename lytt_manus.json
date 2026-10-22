@@ -19,12 +19,12 @@
 "type": "tekst",
 "tekst": "I dette kapitlet"
 },
-"ab8536d4e7b047bf": {
+"334f24059bc54d48": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "tekst",
-"tekst": "Øv på skjerm21 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjueen oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjerm60 oppgaver du klikker og drar i. Du får svar med en gang.",
+"tale": "Øv på skjerm, seksti oppgaver du klikker og drar i. Du får svar med en gang."
 },
 "87ec362df096695c": {
 "fag": "matematikk",
@@ -2613,6 +2613,13 @@
 "side": "matematikk/kapittel-11.html",
 "type": "tekst",
 "tekst": "Fire verktøy med hvert sitt bruksområde: regneark til mange tall, GeoGebra til å se former og grafer, Scratch til å bygge et program av blokker, og Python til å skrive det som tekst."
+},
+"ab8536d4e7b047bf": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-11.html",
+"type": "tekst",
+"tekst": "Øv på skjerm21 oppgaver du klikker og drar i. Du får svar med en gang.",
+"tale": "Øv på skjerm, tjueen oppgaver du klikker og drar i. Du får svar med en gang."
 },
 "1293ec9f3d54847f": {
 "fag": "matematikk",
