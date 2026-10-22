@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3. Kultur, identitet, mangfold og urfolk — Samfunnsfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -276,6 +276,7 @@
      3.2 IDENTITET – RØTTER OG FØTTER
      ============================================================ -->
 <section id="k32">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-1"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 3.1</a></p>
 <h2 id="d3-2">3.2 Identitet – røtter og føtter</h2>
 <!-- kort:3.2 -->
 <div class="kortfortalt">
@@ -431,6 +432,7 @@
      3.3 MANGFOLD – MULIGHETER OG UTFORDRINGER
      ============================================================ -->
 <section id="k33">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-2"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 3.2</a></p>
 <h2 id="d3-3"><a class="papirside" id="s141" href="bok.html#s141" data-side="141" title="Side 141 i boka. Trykk for å bla i boka." aria-label="Side 141 i boka"></a>3.3 Mangfold – muligheter og utfordringer</h2>
 <!-- kort:3.3 -->
 <div class="kortfortalt">
@@ -643,6 +645,7 @@
      3.4 KJØNN, KJØNNSROLLER OG IDENTITET
      ============================================================ -->
 <section id="k34">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-3"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 3.3</a></p>
 <h2 id="d3-4">3.4 Kjønn, kjønnsroller og identitet</h2>
 <!-- kort:3.4 -->
 <div class="kortfortalt">
@@ -758,6 +761,7 @@
      3.5 GRENSESETTING, SAMTYKKE OG NEGATIV SOSIAL KONTROLL
      ============================================================ -->
 <section id="k35">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-4"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 3.4</a></p>
 <h2 id="d3-5"><a class="papirside" id="s147" href="bok.html#s147" data-side="147" title="Side 147 i boka. Trykk for å bla i boka." aria-label="Side 147 i boka"></a>3.5 Grensesetting, samtykke og negativ sosial kontroll</h2>
 <!-- kort:3.5 -->
 <div class="kortfortalt">
@@ -878,6 +882,7 @@
      3.6 SAMENE – ET URFOLK
      ============================================================ -->
 <section id="k36">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-5"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 3.5</a></p>
 <h2 id="d3-6">3.6 Samene – et urfolk</h2>
 <!-- kort:3.6 -->
 <div class="kortfortalt">
@@ -1222,6 +1227,7 @@
      3.8 NASJONALE MINORITETER
      ============================================================ -->
 <section id="k38">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-7"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 3.7</a></p>
 <h2 id="d3-8">3.8 Nasjonale minoriteter</h2>
 <!-- kort:3.8 -->
 <div class="kortfortalt">
@@ -1360,6 +1366,7 @@
      3.9 FORDYPNING
      ============================================================ -->
 <section id="k39">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-8"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 3.8</a></p>
 <h2 id="d3-9">3.9 Fordypning</h2>
 
 
@@ -2080,7 +2087,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

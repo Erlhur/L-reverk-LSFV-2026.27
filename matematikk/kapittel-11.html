@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>11. Digitale verktøy — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -351,6 +351,7 @@
      11.2 REGNEARK — HVIS OG DIAGRAM
      ============================================================ -->
 <section id="k112" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-11.html#d11-1"><span aria-hidden="true">▶</span> Øv på skjerm: 8 oppgaver til 11.1</a></p>
 <h2 id="d11-2"><a class="papirside" id="s274" href="bok.html#s274" data-side="274" title="Side 274 i boka. Trykk for å bla i boka." aria-label="Side 274 i boka"></a>11.2 Regneark — HVIS og diagram</h2>
 
 <div class="delmaal">
@@ -503,6 +504,7 @@
      11.3 GEOGEBRA
      ============================================================ -->
 <section id="k113" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-11.html#d11-2"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 11.2</a></p>
 <h2 id="d11-3"><a class="papirside" id="s277" href="bok.html#s277" data-side="277" title="Side 277 i boka. Trykk for å bla i boka." aria-label="Side 277 i boka"></a>11.3 GeoGebra</h2>
 
 <div class="delmaal">
@@ -630,6 +632,7 @@
      11.4 SCRATCH
      ============================================================ -->
 <section id="k114" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-11.html#d11-3"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 11.3</a></p>
 <h2 id="d11-4"><a class="papirside" id="s280" href="bok.html#s280" data-side="280" title="Side 280 i boka. Trykk for å bla i boka." aria-label="Side 280 i boka"></a>11.4 Scratch</h2>
 
 <div class="delmaal">
@@ -755,6 +758,7 @@
      11.5 PYTHON
      ============================================================ -->
 <section id="k115" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-11.html#d11-4"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 11.4</a></p>
 <h2 id="d11-5"><a class="papirside" id="s282" href="bok.html#s282" data-side="282" title="Side 282 i boka. Trykk for å bla i boka." aria-label="Side 282 i boka"></a>11.5 Python</h2>
 
 <div class="delmaal">
@@ -885,6 +889,7 @@
      11.6 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k116" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-11.html#d11-5"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 11.5</a></p>
 <h2 id="d11-6"><a class="papirside" id="s285" href="bok.html#s285" data-side="285" title="Side 285 i boka. Trykk for å bla i boka." aria-label="Side 285 i boka"></a>11.6 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1368,7 +1373,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

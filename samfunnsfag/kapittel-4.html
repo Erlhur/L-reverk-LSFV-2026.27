@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4. Arbeidsliv, teknologi og økonomi — Samfunnsfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -225,6 +225,7 @@
      4.2 LØNN, SKATT OG LØNNSSLIPP
      ============================================================ -->
 <section id="k42">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-1"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 4.1</a></p>
 <h2 id="d4-2"><a class="papirside" id="s176" href="bok.html#s176" data-side="176" title="Side 176 i boka. Trykk for å bla i boka." aria-label="Side 176 i boka"></a>4.2 Lønn, skatt og lønnsslipp</h2>
 <!-- kort:4.2 -->
 <div class="kortfortalt">
@@ -479,6 +480,7 @@
      4.3 ARBEIDSMILJØLOVEN – RETTIGHETER OG PLIKTER
      ============================================================ -->
 <section id="k43">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-2"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 4.2</a></p>
 <h2 id="d4-3">4.3 Arbeidsmiljøloven – rettigheter og plikter</h2>
 <!-- kort:4.3 -->
 <div class="kortfortalt">
@@ -592,6 +594,7 @@
      4.4 FAGFORENINGER OG PARTENE I ARBEIDSLIVET
      ============================================================ -->
 <section id="k44">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-3"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 4.3</a></p>
 <h2 id="d4-4">4.4 Fagforeninger og partene i arbeidslivet</h2>
 <!-- kort:4.4 -->
 <div class="kortfortalt">
@@ -732,6 +735,7 @@
      4.5 REGLER, LOVER OG KONSEKVENSER AV BRUDD
      ============================================================ -->
 <section id="k45">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-4"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 4.4</a></p>
 <h2 id="d4-5">4.5 Regler, lover og konsekvenser av brudd</h2>
 <!-- kort:4.5 -->
 <div class="kortfortalt">
@@ -1047,6 +1051,7 @@
      4.7 NORSK ØKONOMI OG VERDEN
      ============================================================ -->
 <section id="k47">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-6"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 4.6</a></p>
 <h2 id="d4-7">4.7 Norsk økonomi og verden</h2>
 <!-- kort:4.7 -->
 <div class="kortfortalt">
@@ -1197,6 +1202,7 @@
      4.8 UTDANNING OG VEIEN VIDERE
      ============================================================ -->
 <section id="k48">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-7"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 4.7</a></p>
 <h2 id="d4-8">4.8 Utdanning og veien videre</h2>
 <!-- kort:4.8 -->
 <div class="kortfortalt">
@@ -1973,7 +1979,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

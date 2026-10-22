@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4. Brøk — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -370,6 +370,7 @@
      4.2 UTVIDE OG FORKORTE
      ============================================================ -->
 <section id="k42" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-1"><span aria-hidden="true">▶</span> Øv på skjerm: 11 oppgaver til 4.1</a></p>
 <h2 id="d4-2"><a class="papirside" id="s99" href="bok.html#s99" data-side="99" title="Side 99 i boka. Trykk for å bla i boka." aria-label="Side 99 i boka"></a>4.2 Utvide og forkorte</h2>
 
 <div class="delmaal">
@@ -619,6 +620,7 @@
      4.3 BRØK, DESIMALTALL OG PROSENT
      ============================================================ -->
 <section id="k43" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-2"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 4.2</a></p>
 <h2 id="d4-3"><a class="papirside" id="s104" href="bok.html#s104" data-side="104" title="Side 104 i boka. Trykk for å bla i boka." aria-label="Side 104 i boka"></a>4.3 Brøk, desimaltall og prosent</h2>
 
 <div class="delmaal">
@@ -831,6 +833,7 @@
      4.4 ADDISJON OG SUBTRAKSJON AV BRØK
      ============================================================ -->
 <section id="k44" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-3"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 4.3</a></p>
 <h2 id="d4-4"><a class="papirside" id="s108" href="bok.html#s108" data-side="108" title="Side 108 i boka. Trykk for å bla i boka." aria-label="Side 108 i boka"></a>4.4 Addisjon og subtraksjon av brøk</h2>
 
 <div class="delmaal">
@@ -1106,6 +1109,7 @@
      4.5 MULTIPLIKASJON OG DIVISJON AV BRØK
      ============================================================ -->
 <section id="k45" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-4"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 4.4</a></p>
 <h2 id="d4-5"><a class="papirside" id="s115" href="bok.html#s115" data-side="115" title="Side 115 i boka. Trykk for å bla i boka." aria-label="Side 115 i boka"></a>4.5 Multiplikasjon og divisjon av brøk</h2>
 
 <div class="delmaal">
@@ -1293,6 +1297,7 @@
      4.6 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k46" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-4.html#d4-5"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 4.5</a></p>
 <h2 id="d4-6"><a class="papirside" id="s118" href="bok.html#s118" data-side="118" title="Side 118 i boka. Trykk for å bla i boka." aria-label="Side 118 i boka"></a>4.6 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1764,7 +1769,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

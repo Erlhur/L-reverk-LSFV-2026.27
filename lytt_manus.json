@@ -12285,12 +12285,12 @@
 "type": "tekst",
 "tekst": "Et økosystem har levende deler, som trær, elg og fisk, og ikke-levende deler, som lys, vann og stein. Alle påvirker hverandre."
 },
-"8950509408c95058": {
+"7e68ea7ca355ed22": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Øv på skjerm18 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, atten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjerm83 oppgaver du klikker og drar i. Du får svar med en gang.",
+"tale": "Øv på skjerm, åttitre oppgaver du klikker og drar i. Du får svar med en gang."
 },
 "a705f5fbb7924c55": {
 "fag": "naturfag",
@@ -17917,6 +17917,13 @@
 "side": "naturfag/kapittel-3.html",
 "type": "tekst",
 "tekst": "Forskere arbeider i en syklus: svaret på ett spørsmål fører ofte til nye spørsmål."
+},
+"8950509408c95058": {
+"fag": "naturfag",
+"side": "naturfag/kapittel-3.html",
+"type": "tekst",
+"tekst": "Øv på skjerm18 oppgaver du klikker og drar i. Du får svar med en gang.",
+"tale": "Øv på skjerm, atten oppgaver du klikker og drar i. Du får svar med en gang."
 },
 "bf1a8d26fed4fe37": {
 "fag": "naturfag",

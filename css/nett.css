@@ -498,3 +498,13 @@ body .innhold > section > figure.mindre, figure.foto.mindre{ width: 100%; max-wi
 .innhold figure.portrett.par, figure.portrett.par.foto{ width: 40% !important; max-width: 270px !important; }
 @media (max-width: 560px){ .innhold figure.portrett.mini, figure.portrett.mini.foto{ max-width: 95px !important; } .innhold figure.portrett.par, figure.portrett.par.foto{ max-width: 200px !important; } }
 @media (max-width: 560px){ .innhold figure.portrett, figure.portrett.foto{ max-width: 150px !important; } .innhold figure.portrett.liten, figure.portrett.liten.foto{ max-width: 110px !important; } }
+
+/* lenke til øveoppgavene nederst i hvert delkapittel (22.10.2026) */
+.ovdklenke{ margin: 1.2rem 0 .4rem; }
+.ovdklenke a{
+  display: inline-flex; gap: .5rem; align-items: center; text-decoration: none;
+  padding: .45rem .9rem; border-radius: 8px; font-weight: 600; font-size: .95rem;
+  border: 1px solid var(--kap, #1d4e89); color: var(--kap, #1d4e89); background: #fff;
+}
+.ovdklenke a:hover{ background: var(--kap, #1d4e89); color: #fff; }
+@media print{ .ovdklenke{ display: none; } }

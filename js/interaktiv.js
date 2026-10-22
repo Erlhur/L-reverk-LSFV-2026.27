@@ -839,10 +839,9 @@
 
     kropp.appendChild(rad);
     var piler = lag('div', 'sorterpiler');
-    piler.appendChild(lag('span', null,
-      d.retning === 'synkende' ? '◀ størst' : '◀ minst'));
-    piler.appendChild(lag('span', null,
-      d.retning === 'synkende' ? 'minst ▶' : 'størst ▶'));
+    var ender = d.ender || (d.retning === 'synkende' ? ['størst', 'minst'] : ['minst', 'størst']);
+    piler.appendChild(lag('span', null, '◀ ' + ender[0]));
+    piler.appendChild(lag('span', null, ender[1] + ' ▶'));
     kropp.appendChild(piler);
 
     /* Å bytte plass på to brikker er lettere å treffe på et nettbrett
@@ -1287,7 +1286,7 @@
         if (feil || mangler) {
           return {
             ok: false,
-            melding: feil ? 'Ikke helt. Prøv et annet svar.' : 'Du mangler ett svar til.'
+            melding: feil ? 'Ikke helt. Prøv et annet svar.' : (mangler === 1 ? 'Du mangler ett svar til.' : 'Du mangler ' + mangler + ' svar til.')
           };
         }
         return { ok: true };
@@ -1317,6 +1316,7 @@
 
     var hode = lag('div', 'hode');
     hode.appendChild(lag('span', 'nr', 'Oppgave ' + nr));
+    if (d.m4) hode.appendChild(lag('span', 'm4merke', 'Modul 4'));
     hode.appendChild(lag('p', 'oppgave', vis(d.oppgave)));
     var merke = lag('span', 'merke', '✔');
     merke.setAttribute('aria-hidden', 'true');
@@ -1442,9 +1442,46 @@
       fyll.style.width = (n / data.aktiviteter.length * 100) + '%';
     }
 
-    data.aktiviteter.forEach(function (d, i) {
-      mal.appendChild(byggAktivitet(d, i + 1, meldFerdig));
-    });
+    var dkListe = data.delkapitler || [];
+    if (dkListe.length) {
+      /* Øveoppgavene er delt inn etter delkapittel: én del per delkapittel,
+         med overskrift, egen teller og nummer som «1.3 · 2». */
+      var prefiks = mal.dataset.ankerprefiks || 'd';
+      var hopp = lag('nav', 'ovhopp');
+      hopp.setAttribute('aria-label', 'Hopp til delkapittel');
+      mal.appendChild(hopp);
+      dkListe.forEach(function (dk) {
+        var egne = data.aktiviteter.filter(function (d) { return d.dk === dk.nr; });
+        if (!egne.length) return;
+        var anker = prefiks + dk.nr.replace('.', '-');
+        var lenke = lag('a', null, '<b>' + dk.nr + '</b> <span>' + egne.length + '</span>');
+        lenke.href = '#' + anker;
+        lenke.title = dk.tittel;
+        hopp.appendChild(lenke);
+        var del = lag('section', 'ovdel');
+        del.id = anker;
+        var hodet = lag('h2', 'ovdk');
+        hodet.appendChild(lag('span', 'ovdknr', dk.nr));
+        hodet.appendChild(lag('span', 'ovdktittel', vis(dk.tittel)));
+        del.appendChild(hodet);
+        var deltall = lag('p', 'ovdktall', '0 av ' + egne.length + ' riktige');
+        del.appendChild(deltall);
+        egne.forEach(function (d, i) {
+          var akt = byggAktivitet(d, dk.nr + ' · ' + (i + 1), function (id, ok) {
+            meldFerdig(id, ok);
+            var n = egne.filter(function (e) { return status[e.id]; }).length;
+            deltall.textContent = n + ' av ' + egne.length + ' riktige';
+            deltall.classList.toggle('alle', n === egne.length);
+          });
+          del.appendChild(akt);
+        });
+        mal.appendChild(del);
+      });
+    } else {
+      data.aktiviteter.forEach(function (d, i) {
+        mal.appendChild(byggAktivitet(d, i + 1, meldFerdig));
+      });
+    }
 
     nullstill.addEventListener('click', function () {
       mal.querySelectorAll('.akt .aktknapper .mild').forEach(function (b) {
@@ -1456,6 +1493,21 @@
 
   function start() {
     document.querySelectorAll('.aktliste').forEach(byggSamling);
+    /* Delkapitlene lages av skriptet, så nettleseren fant ikke ankeret da
+       sida ble lastet. Rull dit nå, og under den faste telleren. */
+    function rullTil() {
+      var h = location.hash && document.getElementById(location.hash.slice(1));
+      if (!h || !h.classList.contains('ovdel')) return;
+      var topp = 0;
+      document.querySelectorAll('.topplinje, .framdrift').forEach(function (e) {
+        var r = e.getBoundingClientRect();
+        if (r.top < 200) topp = Math.max(topp, r.bottom);
+      });
+      window.scrollTo(0, h.getBoundingClientRect().top + window.pageYOffset - Math.max(topp, 120) - 12);
+    }
+    setTimeout(rullTil, 50);
+    window.addEventListener('load', function () { setTimeout(rullTil, 50); });
+    window.addEventListener('hashchange', function () { setTimeout(rullTil, 0); });
   }
 
   if (document.readyState === 'loading') {

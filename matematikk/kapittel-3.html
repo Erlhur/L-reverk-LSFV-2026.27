@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3. Potenser, kvadratrot og faktorisering — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -376,6 +376,7 @@
      3.2 KVADRATTALL OG KVADRATROT
      ============================================================ -->
 <section id="k32" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-1"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 3.1</a></p>
 <h2 id="d3-2"><a class="papirside" id="s76" href="bok.html#s76" data-side="76" title="Side 76 i boka. Trykk for å bla i boka." aria-label="Side 76 i boka"></a>3.2 Kvadrattall og kvadratrot</h2>
 
 <div class="delmaal">
@@ -586,6 +587,7 @@
      3.3 REGNEREGLER FOR POTENSER
      ============================================================ -->
 <section id="k33" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-2"><span aria-hidden="true">▶</span> Øv på skjerm: 8 oppgaver til 3.2</a></p>
 <h2 id="d3-3"><a class="papirside" id="s80" href="bok.html#s80" data-side="80" title="Side 80 i boka. Trykk for å bla i boka." aria-label="Side 80 i boka"></a>3.3 Regneregler for potenser</h2>
 
 <div class="delmaal">
@@ -781,6 +783,7 @@
      3.4 TIERPOTENSER OG STANDARDFORM
      ============================================================ -->
 <section id="k34" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-3"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 3.3</a></p>
 <h2 id="d3-4"><a class="papirside" id="s83" href="bok.html#s83" data-side="83" title="Side 83 i boka. Trykk for å bla i boka." aria-label="Side 83 i boka"></a>3.4 Tierpotenser og standardform</h2>
 
 <div class="delmaal">
@@ -947,6 +950,7 @@
      3.5 PRIMTALL OG FAKTORISERING
      ============================================================ -->
 <section id="k35" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-4"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 3.4</a></p>
 <h2 id="d3-5"><a class="papirside" id="s86" href="bok.html#s86" data-side="86" title="Side 86 i boka. Trykk for å bla i boka." aria-label="Side 86 i boka"></a>3.5 Primtall og faktorisering</h2>
 
 <div class="delmaal">
@@ -1185,6 +1189,7 @@
      3.6 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k36" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-3.html#d3-5"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 3.5</a></p>
 <h2 id="d3-6"><a class="papirside" id="s90" href="bok.html#s90" data-side="90" title="Side 90 i boka. Trykk for å bla i boka." aria-label="Side 90 i boka"></a>3.6 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1643,7 +1648,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

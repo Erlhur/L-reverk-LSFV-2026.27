@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>2. Sammensatte regneuttrykk — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -381,6 +381,7 @@
      2.2 PARENTESER INNI PARENTESER
      ============================================================ -->
 <section id="k22" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-2.html#d2-1"><span aria-hidden="true">▶</span> Øv på skjerm: 15 oppgaver til 2.1</a></p>
 <h2 id="d2-2"><a class="papirside" id="s47" href="bok.html#s47" data-side="47" title="Side 47 i boka. Trykk for å bla i boka." aria-label="Side 47 i boka"></a>2.2 Parenteser inni parenteser</h2>
 
 <div class="delmaal">
@@ -843,6 +844,7 @@
      2.4 DE TRE REGNELOVENE
      ============================================================ -->
 <section id="k24" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-2.html#d2-3"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 2.3</a></p>
 <h2 id="d2-4"><a class="papirside" id="s56" href="bok.html#s56" data-side="56" title="Side 56 i boka. Trykk for å bla i boka." aria-label="Side 56 i boka"></a>2.4 De tre regnelovene</h2>
 
 <div class="delmaal">
@@ -1093,6 +1095,7 @@
      2.5 FRA TEKST TIL REGNEUTTRYKK
      ============================================================ -->
 <section id="k25" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-2.html#d2-4"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 2.4</a></p>
 <h2 id="d2-5"><a class="papirside" id="s61" href="bok.html#s61" data-side="61" title="Side 61 i boka. Trykk for å bla i boka." aria-label="Side 61 i boka"></a>2.5 Fra tekst til regneuttrykk</h2>
 
 <div class="delmaal">
@@ -1269,6 +1272,7 @@
      2.6 REGNEUTTRYKK PÅ KALKULATOR
      ============================================================ -->
 <section id="k26" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-2.html#d2-5"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 2.5</a></p>
 <h2 id="d2-6"><a class="papirside" id="s64" href="bok.html#s64" data-side="64" title="Side 64 i boka. Trykk for å bla i boka." aria-label="Side 64 i boka"></a>2.6 Regneuttrykk på kalkulator</h2>
 
 <div class="delmaal">
@@ -1997,7 +2001,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

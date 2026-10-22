@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7. Skriving, prosjekt og eksamen — Samfunnsfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -180,6 +180,7 @@
      7.2 FORKLARENDE TEKST
      ============================================================ -->
 <section id="k72">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-1"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 7.1</a></p>
 <h2 id="d7-2">7.2 Forklarende tekst</h2>
 <!-- kort:7.2 -->
 <div class="kortfortalt">
@@ -306,6 +307,7 @@
      7.4 REFLEKSJONSTEKST
      ============================================================ -->
 <section id="k74">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-3"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 7.3</a></p>
 <h2 id="d7-4">7.4 Refleksjonstekst</h2>
 <!-- kort:7.4 -->
 <div class="kortfortalt">
@@ -549,6 +551,7 @@
      7.7 STANDPUNKT OG EKSAMEN
      ============================================================ -->
 <section id="k77">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-6"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 7.6</a></p>
 <h2 id="d7-7">7.7 Standpunkt og eksamen</h2>
 <!-- kort:7.7 -->
 <div class="kortfortalt">
@@ -746,6 +749,7 @@
      7.9 MODUL 4: UTDYPENDE TEKSTER OG OPPGAVER
      ============================================================ -->
 <section id="k79" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-8"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 7.8</a></p>
 <h2 id="d7-9"><a class="papirside" id="s305" href="bok.html#s305" data-side="305" title="Side 305 i boka. Trykk for å bla i boka." aria-label="Side 305 i boka"></a>7.9 Modul 4: utdypende tekster og oppgaver</h2>
 
 
@@ -1098,7 +1102,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

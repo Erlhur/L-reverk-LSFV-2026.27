@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1. Tallregning — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -519,6 +519,7 @@
      1.2 REGNING MED HELE TALL OG DESIMALTALL
      ============================================================ -->
 <section id="k12" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-1.html#d1-1"><span aria-hidden="true">▶</span> Øv på skjerm: 12 oppgaver til 1.1</a></p>
 <h2 id="d1-2"><a class="papirside" id="s14" href="bok.html#s14" data-side="14" title="Side 14 i boka. Trykk for å bla i boka." aria-label="Side 14 i boka"></a>1.2 Regning med hele tall og desimaltall</h2>
 
 <div class="delmaal">
@@ -823,6 +824,7 @@
      1.3 DIVISJON
      ============================================================ -->
 <section id="k13" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-1.html#d1-2"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 1.2</a></p>
 <h2 id="d1-3"><a class="papirside" id="s19" href="bok.html#s19" data-side="19" title="Side 19 i boka. Trykk for å bla i boka." aria-label="Side 19 i boka"></a>1.3 Divisjon</h2>
 
 <div class="delmaal">
@@ -1102,6 +1104,7 @@
      1.4 TEKSTOPPGAVER MED DE FIRE REGNEARTENE
      ============================================================ -->
 <section id="k14" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-1.html#d1-3"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 1.3</a></p>
 <h2 id="d1-4"><a class="papirside" id="s24" href="bok.html#s24" data-side="24" title="Side 24 i boka. Trykk for å bla i boka." aria-label="Side 24 i boka"></a>1.4 Tekstoppgaver med de fire regneartene</h2>
 
 <div class="delmaal">
@@ -1307,6 +1310,7 @@
      1.5 REGNEREKKEFØLGEN
      ============================================================ -->
 <section id="k15" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-1.html#d1-4"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 1.4</a></p>
 <h2 id="d1-5"><a class="papirside" id="s28" href="bok.html#s28" data-side="28" title="Side 28 i boka. Trykk for å bla i boka." aria-label="Side 28 i boka"></a>1.5 Regnerekkefølgen</h2>
 
 <div class="delmaal">
@@ -1865,6 +1869,7 @@
      1.7 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k17" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-1.html#d1-6"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 1.6</a></p>
 <h2 id="d1-7"><a class="papirside" id="s37" href="bok.html#s37" data-side="37" title="Side 37 i boka. Trykk for å bla i boka." aria-label="Side 37 i boka"></a>1.7 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -2362,7 +2367,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

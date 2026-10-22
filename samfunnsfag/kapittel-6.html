@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>6. Konflikter, radikalisering, holocaust og forebygging — Samfunnsfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -284,6 +284,7 @@
      6.2 Å HÅNDTERE OG LØSE KONFLIKTER
      ============================================================ -->
 <section id="k62">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-1"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 6.1</a></p>
 <h2 id="d6-2">6.2 Å håndtere og løse konflikter</h2>
 <!-- kort:6.2 -->
 <div class="kortfortalt">
@@ -518,6 +519,7 @@
      6.4 ÉN KONFLIKT – FLERE FORTELLINGER
      ============================================================ -->
 <section id="k64">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-3"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.3</a></p>
 <h2 id="d6-4">6.4 Én konflikt – flere fortellinger</h2>
 <!-- kort:6.4 -->
 <div class="kortfortalt">
@@ -752,6 +754,7 @@
      6.6 UTENFORSKAP OG INKLUDERING – HVA KAN VI GJØRE?
      ============================================================ -->
 <section id="k66">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-5"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.5</a></p>
 <h2 id="d6-6"><a class="papirside" id="s265" href="bok.html#s265" data-side="265" title="Side 265 i boka. Trykk for å bla i boka." aria-label="Side 265 i boka"></a>6.6 Utenforskap og inkludering – hva kan vi gjøre?</h2>
 <!-- kort:6.6 -->
 <div class="kortfortalt">
@@ -851,6 +854,7 @@
      6.7 HOLOCAUST
      ============================================================ -->
 <section id="k67">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-6"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.6</a></p>
 <h2 id="d6-7">6.7 Holocaust</h2>
 <!-- kort:6.7 -->
 <div class="kortfortalt">
@@ -1164,6 +1168,7 @@
      6.9 RADIKALISERING, TERROR OG FOREBYGGING
      ============================================================ -->
 <section id="k69">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-8"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 6.8</a></p>
 <h2 id="d6-9">6.9 Radikalisering, terror og forebygging</h2>
 <!-- kort:6.9 -->
 <div class="kortfortalt">
@@ -1324,6 +1329,7 @@
      6.10 FORDYPNING
      ============================================================ -->
 <section id="k610">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-9"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 6.9</a></p>
 <h2 id="d6-10">6.10 Fordypning</h2>
 
 
@@ -2042,7 +2048,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

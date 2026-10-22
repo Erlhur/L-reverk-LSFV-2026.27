@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>10. Temaer for modul 4 — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -380,6 +380,7 @@
      10.2 LIKNINGSSETT
      ============================================================ -->
 <section id="k102" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-1"><span aria-hidden="true">▶</span> Øv på skjerm: 11 oppgaver til 10.1</a></p>
 <h2 id="d10-2"><a class="papirside" id="s251" href="bok.html#s251" data-side="251" title="Side 251 i boka. Trykk for å bla i boka." aria-label="Side 251 i boka"></a>10.2 Likningssett</h2>
 
 <div class="delmaal">
@@ -508,6 +509,7 @@
      10.3 FORMLIKHET
      ============================================================ -->
 <section id="k103" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-2"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 10.2</a></p>
 <h2 id="d10-3"><a class="papirside" id="s254" href="bok.html#s254" data-side="254" title="Side 254 i boka. Trykk for å bla i boka." aria-label="Side 254 i boka"></a>10.3 Formlikhet</h2>
 
 <div class="delmaal">
@@ -635,6 +637,7 @@
      10.4 LØNN OG SKATT
      ============================================================ -->
 <section id="k104" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-3"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 10.3</a></p>
 <h2 id="d10-4"><a class="papirside" id="s257" href="bok.html#s257" data-side="257" title="Side 257 i boka. Trykk for å bla i boka." aria-label="Side 257 i boka"></a>10.4 Lønn og skatt</h2>
 
 <div class="delmaal">
@@ -793,6 +796,7 @@
      10.5 BUDSJETT, SPARING OG LÅN
      ============================================================ -->
 <section id="k105" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-4"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 10.4</a></p>
 <h2 id="d10-5"><a class="papirside" id="s260" href="bok.html#s260" data-side="260" title="Side 260 i boka. Trykk for å bla i boka." aria-label="Side 260 i boka"></a>10.5 Budsjett, sparing og lån</h2>
 
 <div class="delmaal">
@@ -967,6 +971,7 @@
      10.6 VALUTA
      ============================================================ -->
 <section id="k106" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-5"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 10.5</a></p>
 <h2 id="d10-6"><a class="papirside" id="s263" href="bok.html#s263" data-side="263" title="Side 263 i boka. Trykk for å bla i boka." aria-label="Side 263 i boka"></a>10.6 Valuta</h2>
 
 <div class="delmaal">
@@ -1118,6 +1123,7 @@
      10.7 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k107" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-10.html#d10-6"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 10.6</a></p>
 <h2 id="d10-7"><a class="papirside" id="s266" href="bok.html#s266" data-side="266" title="Side 266 i boka. Trykk for å bla i boka." aria-label="Side 266 i boka"></a>10.7 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1615,7 +1621,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

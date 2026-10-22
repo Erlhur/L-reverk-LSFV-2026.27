@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>9. Statistikk — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -313,6 +313,7 @@
      9.2 DIAGRAMMER
      ============================================================ -->
 <section id="k92" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-9.html#d9-1"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 9.1</a></p>
 <h2 id="d9-2"><a class="papirside" id="s225" href="bok.html#s225" data-side="225" title="Side 225 i boka. Trykk for å bla i boka." aria-label="Side 225 i boka"></a>9.2 Diagrammer</h2>
 
 <div class="delmaal">
@@ -458,6 +459,7 @@
      9.3 SENTRALMÅL
      ============================================================ -->
 <section id="k93" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-9.html#d9-2"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 9.2</a></p>
 <h2 id="d9-3"><a class="papirside" id="s228" href="bok.html#s228" data-side="228" title="Side 228 i boka. Trykk for å bla i boka." aria-label="Side 228 i boka"></a>9.3 Sentralmål</h2>
 
 <div class="delmaal">
@@ -661,6 +663,7 @@
      9.4 VARIASJONSBREDDE OG SPREDNING
      ============================================================ -->
 <section id="k94" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-9.html#d9-3"><span aria-hidden="true">▶</span> Øv på skjerm: 11 oppgaver til 9.3</a></p>
 <h2 id="d9-4"><a class="papirside" id="s232" href="bok.html#s232" data-side="232" title="Side 232 i boka. Trykk for å bla i boka." aria-label="Side 232 i boka"></a>9.4 Variasjonsbredde og spredning</h2>
 
 <div class="delmaal">
@@ -792,6 +795,7 @@
      9.5 Å VURDERE STATISTIKK KRITISK
      ============================================================ -->
 <section id="k95" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-9.html#d9-4"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 9.4</a></p>
 <h2 id="d9-5"><a class="papirside" id="s234" href="bok.html#s234" data-side="234" title="Side 234 i boka. Trykk for å bla i boka." aria-label="Side 234 i boka"></a>9.5 Å vurdere statistikk kritisk</h2>
 
 <div class="delmaal">
@@ -1122,6 +1126,7 @@
      9.7 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k97" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-9.html#d9-6"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 9.6</a></p>
 <h2 id="d9-7"><a class="papirside" id="s241" href="bok.html#s241" data-side="241" title="Side 241 i boka. Trykk for å bla i boka." aria-label="Side 241 i boka"></a>9.7 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1620,7 +1625,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

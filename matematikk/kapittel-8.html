@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>8. Geometri — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -336,6 +336,7 @@
      8.2 OMKRETS OG AREAL
      ============================================================ -->
 <section id="k82" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-1"><span aria-hidden="true">▶</span> Øv på skjerm: 6 oppgaver til 8.1</a></p>
 <h2 id="d8-2"><a class="papirside" id="s196" href="bok.html#s196" data-side="196" title="Side 196 i boka. Trykk for å bla i boka." aria-label="Side 196 i boka"></a>8.2 Omkrets og areal</h2>
 
 <div class="delmaal">
@@ -569,6 +570,7 @@
      8.3 SAMMENSATTE FIGURER
      ============================================================ -->
 <section id="k83" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-2"><span aria-hidden="true">▶</span> Øv på skjerm: 9 oppgaver til 8.2</a></p>
 <h2 id="d8-3"><a class="papirside" id="s200" href="bok.html#s200" data-side="200" title="Side 200 i boka. Trykk for å bla i boka." aria-label="Side 200 i boka"></a>8.3 Sammensatte figurer</h2>
 
 <div class="delmaal">
@@ -906,6 +908,7 @@
      8.5 PYTAGORAS' SETNING
      ============================================================ -->
 <section id="k85" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-4"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 8.4</a></p>
 <h2 id="d8-5"><a class="papirside" id="s206" href="bok.html#s206" data-side="206" title="Side 206 i boka. Trykk for å bla i boka." aria-label="Side 206 i boka"></a>8.5 Pytagoras' setning</h2>
 
 <div class="delmaal">
@@ -1111,6 +1114,7 @@
      8.6 VOLUM
      ============================================================ -->
 <section id="k86" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-5"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 8.5</a></p>
 <h2 id="d8-6">8.6 Volum</h2>
 
 <div class="delmaal">
@@ -1267,6 +1271,7 @@
      8.7 MÅLESTOKK, FORSTØRRE OG FORMINSKE
      ============================================================ -->
 <section id="k87" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-6"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 8.6</a></p>
 <h2 id="d8-7"><a class="papirside" id="s213" href="bok.html#s213" data-side="213" title="Side 213 i boka. Trykk for å bla i boka." aria-label="Side 213 i boka"></a>8.7 Målestokk, forstørre og forminske</h2>
 
 <div class="delmaal">
@@ -1928,7 +1933,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

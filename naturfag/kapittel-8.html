@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>8. Skriving, prosjekt og eksamen — Naturfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -211,6 +211,7 @@
      8.2 MODELLTEKST: FORKLARENDE TEKST
      ============================================================ -->
 <section id="k82">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-1"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 8.1</a></p>
 <h2 id="d8-2">8.2 Modelltekst: forklarende tekst</h2>
 
 
@@ -263,6 +264,7 @@
      8.3 MODELLTEKST: BESKRIVENDE TEKST
      ============================================================ -->
 <section id="k83">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-2"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 8.2</a></p>
 <h2 id="d8-3">8.3 Modelltekst: beskrivende tekst</h2>
 
 
@@ -367,6 +369,7 @@
      8.5 PROSJEKT: ET SAMFUNNSAKTUELT TEMA
      ============================================================ -->
 <section id="k85">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-4"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 8.4</a></p>
 <h2 id="d8-5">8.5 Prosjekt: et samfunnsaktuelt tema</h2>
 <!-- kort:8.5 -->
 <div class="kortfortalt">
@@ -498,6 +501,7 @@
      8.6 TVERRFAGLIG PROSJEKT: BÆREKRAFTIG UTVIKLING
      ============================================================ -->
 <section id="k86">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-5"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 8.5</a></p>
 <h2 id="d8-6">8.6 Tverrfaglig prosjekt: bærekraftig utvikling</h2>
 <!-- kort:8.6 -->
 <div class="kortfortalt">
@@ -592,6 +596,7 @@
      8.7 TVERRFAGLIG PROSJEKT: DEMOKRATI OG MEDBORGERSKAP
      ============================================================ -->
 <section id="k87">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-6"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 8.6</a></p>
 <h2 id="d8-7">8.7 Tverrfaglig prosjekt: demokrati og medborgerskap</h2>
 <!-- kort:8.7 -->
 <div class="kortfortalt">
@@ -1082,6 +1087,7 @@
      8.11 MODUL 4: UTDYPENDE TEKSTER OG OPPGAVER
      ============================================================ -->
 <section id="k811" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-8.html#d8-10"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 8.10</a></p>
 <h2 id="d8-11"><a class="papirside" id="s423" href="bok.html#s423" data-side="423" title="Side 423 i boka. Trykk for å bla i boka." aria-label="Side 423 i boka"></a>8.11 Modul 4: utdypende tekster og oppgaver</h2>
 
 
@@ -1561,7 +1567,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

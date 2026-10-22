@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>5. Prosent — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -363,6 +363,7 @@
      5.2 PROSENT AV ET TALL
      ============================================================ -->
 <section id="k52" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-5.html#d5-1"><span aria-hidden="true">▶</span> Øv på skjerm: 10 oppgaver til 5.1</a></p>
 <h2 id="d5-2"><a class="papirside" id="s126" href="bok.html#s126" data-side="126" title="Side 126 i boka. Trykk for å bla i boka." aria-label="Side 126 i boka"></a>5.2 Prosent av et tall</h2>
 
 <div class="delmaal">
@@ -562,6 +563,7 @@
      5.3 HVOR MANGE PROSENT UTGJØR DELEN?
      ============================================================ -->
 <section id="k53" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-5.html#d5-2"><span aria-hidden="true">▶</span> Øv på skjerm: 5 oppgaver til 5.2</a></p>
 <h2 id="d5-3"><a class="papirside" id="s129" href="bok.html#s129" data-side="129" title="Side 129 i boka. Trykk for å bla i boka." aria-label="Side 129 i boka"></a>5.3 Hvor mange prosent utgjør delen?</h2>
 
 <div class="delmaal">
@@ -756,6 +758,7 @@
      5.4 PROSENTVIS ØKNING OG REDUKSJON
      ============================================================ -->
 <section id="k54" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-5.html#d5-3"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 5.3</a></p>
 <h2 id="d5-4"><a class="papirside" id="s133" href="bok.html#s133" data-side="133" title="Side 133 i boka. Trykk for å bla i boka." aria-label="Side 133 i boka"></a>5.4 Prosentvis økning og reduksjon</h2>
 
 <div class="delmaal">
@@ -959,6 +962,7 @@
      5.5 VEKSTFAKTOR OG GJENTATT ENDRING
      ============================================================ -->
 <section id="k55" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-5.html#d5-4"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 5.4</a></p>
 <h2 id="d5-5"><a class="papirside" id="s136" href="bok.html#s136" data-side="136" title="Side 136 i boka. Trykk for å bla i boka." aria-label="Side 136 i boka"></a>5.5 Vekstfaktor og gjentatt endring</h2>
 
 <div class="delmaal">
@@ -1138,6 +1142,7 @@
      5.6 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k56" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-5.html#d5-5"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 5.5</a></p>
 <h2 id="d5-6"><a class="papirside" id="s139" href="bok.html#s139" data-side="139" title="Side 139 i boka. Trykk for å bla i boka." aria-label="Side 139 i boka"></a>5.6 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1598,7 +1603,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

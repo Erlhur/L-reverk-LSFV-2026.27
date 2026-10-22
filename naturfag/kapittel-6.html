@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>6. Helse, sykdom og immunforsvar — Naturfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -317,6 +317,7 @@
      6.3 SMITTE OG SMITTEVERN
      ============================================================ -->
 <section id="k63">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-2"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 6.2</a></p>
 <h2 id="d6-3"><a class="papirside" id="s285" href="bok.html#s285" data-side="285" title="Side 285 i boka. Trykk for å bla i boka." aria-label="Side 285 i boka"></a>6.3 Smitte og smittevern</h2>
 <!-- kort:6.3 -->
 <div class="kortfortalt">
@@ -507,6 +508,7 @@
      6.4 IMMUNFORSVARET
      ============================================================ -->
 <section id="k64">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-3"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 6.3</a></p>
 <h2 id="d6-4">6.4 Immunforsvaret</h2>
 <!-- kort:6.4 -->
 <div class="kortfortalt">
@@ -695,6 +697,7 @@
      6.5 VAKSINER OG FOLKEHELSE
      ============================================================ -->
 <section id="k65">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-4"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.4</a></p>
 <h2 id="d6-5"><a class="papirside" id="s292" href="bok.html#s292" data-side="292" title="Side 292 i boka. Trykk for å bla i boka." aria-label="Side 292 i boka"></a>6.5 Vaksiner og folkehelse</h2>
 <!-- kort:6.5 -->
 <div class="kortfortalt">
@@ -847,6 +850,7 @@
      6.6 KOSTHOLD OG HELSE
      ============================================================ -->
 <section id="k66">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-5"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.5</a></p>
 <h2 id="d6-6">6.6 Kosthold og helse</h2>
 <!-- kort:6.6 -->
 <div class="kortfortalt">
@@ -1143,6 +1147,7 @@
      6.8 LIVSFASER
      ============================================================ -->
 <section id="k68">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-7"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 6.7</a></p>
 <h2 id="d6-8"><a class="papirside" id="s301" href="bok.html#s301" data-side="301" title="Side 301 i boka. Trykk for å bla i boka." aria-label="Side 301 i boka"></a>6.8 Livsfaser</h2>
 <!-- kort:6.8 -->
 <div class="kortfortalt">
@@ -1257,6 +1262,7 @@
      6.9 SEKSUALITET, GRENSER OG PREVENSJON
      ============================================================ -->
 <section id="k69">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-8"><span aria-hidden="true">▶</span> Øv på skjerm: 3 oppgaver til 6.8</a></p>
 <h2 id="d6-9">6.9 Seksualitet, grenser og prevensjon</h2>
 <!-- kort:6.9 -->
 <div class="kortfortalt">
@@ -1389,6 +1395,7 @@
      6.10 FORDYPNING
      ============================================================ -->
 <section id="k610">
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-9"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 6.9</a></p>
 <h2 id="d6-10">6.10 Fordypning</h2>
 
 
@@ -2519,7 +2526,7 @@
 </div>
 
 </section>
-
+<p class="ovdklenke"><a href="interaktiv-kapittel-6.html#d6-12"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 6.12</a></p>
 
 <section class="kapittelfasit" id="fasit"><h2>Fasit til kapittel 6</h2><p class="fasitintro">Gjør oppgaven først. Finn så nummeret ditt her.</p><section class="fasitseksjon">
 <h3>6.1 Hva er helse?</h3>
@@ -2962,7 +2969,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);

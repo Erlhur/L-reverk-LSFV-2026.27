@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>7. Målinger — Matematikk</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=35d7f77e">
+<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
 
 </head>
 <body>
@@ -340,6 +340,7 @@
      7.2 LENGDE, MASSE OG VOLUM
      ============================================================ -->
 <section id="k72" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-1"><span aria-hidden="true">▶</span> Øv på skjerm: 1 oppgave til 7.1</a></p>
 <h2 id="d7-2"><a class="papirside" id="s174" href="bok.html#s174" data-side="174" title="Side 174 i boka. Trykk for å bla i boka." aria-label="Side 174 i boka"></a>7.2 Lengde, masse og volum</h2>
 
 <div class="delmaal">
@@ -529,6 +530,7 @@
      7.3 Å GJØRE OM MELLOM ENHETER
      ============================================================ -->
 <section id="k73" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-2"><span aria-hidden="true">▶</span> Øv på skjerm: 6 oppgaver til 7.2</a></p>
 <h2 id="d7-3"><a class="papirside" id="s177" href="bok.html#s177" data-side="177" title="Side 177 i boka. Trykk for å bla i boka." aria-label="Side 177 i boka"></a>7.3 Å gjøre om mellom enheter</h2>
 
 <div class="delmaal">
@@ -731,6 +733,7 @@
      7.4 TID OG TIDSFORSKJELLER
      ============================================================ -->
 <section id="k74" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-3"><span aria-hidden="true">▶</span> Øv på skjerm: 8 oppgaver til 7.3</a></p>
 <h2 id="d7-4"><a class="papirside" id="s181" href="bok.html#s181" data-side="181" title="Side 181 i boka. Trykk for å bla i boka." aria-label="Side 181 i boka"></a>7.4 Tid og tidsforskjeller</h2>
 
 <div class="delmaal">
@@ -926,6 +929,7 @@
      7.5 FART, STREKNING OG TID
      ============================================================ -->
 <section id="k75" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-4"><span aria-hidden="true">▶</span> Øv på skjerm: 4 oppgaver til 7.4</a></p>
 <h2 id="d7-5"><a class="papirside" id="s184" href="bok.html#s184" data-side="184" title="Side 184 i boka. Trykk for å bla i boka." aria-label="Side 184 i boka"></a>7.5 Fart, strekning og tid</h2>
 
 <div class="delmaal">
@@ -1140,6 +1144,7 @@
      7.6 BLANDEDE OPPGAVER
      ============================================================ -->
 <section id="k76" class="nyside">
+<p class="ovdklenke"><a href="interaktiv-kapittel-7.html#d7-5"><span aria-hidden="true">▶</span> Øv på skjerm: 2 oppgaver til 7.5</a></p>
 <h2 id="d7-6"><a class="papirside" id="s188" href="bok.html#s188" data-side="188" title="Side 188 i boka. Trykk for å bla i boka." aria-label="Side 188 i boka"></a>7.6 Blandede oppgaver</h2>
 <!-- kapsammendrag -->
 <div class="sammendrag kapstart">
@@ -1592,7 +1597,7 @@
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);
