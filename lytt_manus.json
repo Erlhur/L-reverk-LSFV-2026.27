@@ -80,39 +80,6 @@
 "tekst": "Svar: 3 847 ≈ 3 800",
 "tale": "Svar: tre tusen åtte hundre og førtisju omtrent tre tusen åtte hundre"
 },
-"d26013e031cd024e": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Et overslag er et raskt, omtrentlig svar. Du runder av tallene først, og regner deretter i hodet. Overslag brukes til to ting: å finne ut om du har nok penger, og å sjekke om et svar du har regnet ut er rimelig."
-},
-"21aa9f7fa4ae8ef9": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Sara skal kjøpe en jakke til 589 kr, sko til 412 kr, en genser til 248 kr og en lue til 96 kr. Hun har 1 500 kroner. Har hun nok penger?",
-"tale": "Sara skal kjøpe en jakke til fem hundre og åttini kroner, sko til fire hundre og tolv kroner, en genser til to hundre og førtiåtte kroner og en lue til nittiseks kroner. Hun har tusen fem hundre kroner. Har hun nok penger?"
-},
-"87e6ef47a1ecfd88": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Svar: Ja, Sara har nok penger. Overslaget er omtrent 1 350 kr.",
-"tale": "Svar: Ja, Sara har nok penger. Overslaget er omtrent tusen tre hundre og femti kroner."
-},
-"3d58923de64b1e60": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Du trenger ikke å regne på papir hver gang. Her er tre strategier som gjør hoderegning raskere. Bruk den som passer tallene best."
-},
-"4a8c6547df496c11": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "I figur 1.4 kan du runde av selv. Velg et tall, og se hvor det ligger på tallinja, og hvilken tier og hundrer det ligger nærmest.",
-"tale": "I figur en punkt fire kan du runde av selv. Velg et tall, og se hvor det ligger på tallinja, og hvilken tier og hundrer det ligger nærmest."
-},
 "9eafcbf92f47edb2": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -162,6 +129,33 @@
 "tekst": "Rund av til plassen som står i parentes. a)472 (nærmeste tier) b)472 (nærmeste hundrer) c)3 548 (nærmeste tier) d)3 548 (nærmeste hundrer) e)12 450 (nærmeste hundrer) f)8,64 (nærmeste hele tall)",
 "tale": "Rund av til plassen som står i parentes, a: fire hundre og syttito (nærmeste tier). b: fire hundre og syttito (nærmeste hundrer). c: tre tusen fem hundre og førtiåtte (nærmeste tier). d: tre tusen fem hundre og førtiåtte (nærmeste hundrer). e: tolv tusen fire hundre og femti (nærmeste hundrer). f: åtte komma sekstifire (nærmeste hele tall)."
 },
+"d26013e031cd024e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Et overslag er et raskt, omtrentlig svar. Du runder av tallene først, og regner deretter i hodet. Overslag brukes til to ting: å finne ut om du har nok penger, og å sjekke om et svar du har regnet ut er rimelig."
+},
+"21aa9f7fa4ae8ef9": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Sara skal kjøpe en jakke til 589 kr, sko til 412 kr, en genser til 248 kr og en lue til 96 kr. Hun har 1 500 kroner. Har hun nok penger?",
+"tale": "Sara skal kjøpe en jakke til fem hundre og åttini kroner, sko til fire hundre og tolv kroner, en genser til to hundre og førtiåtte kroner og en lue til nittiseks kroner. Hun har tusen fem hundre kroner. Har hun nok penger?"
+},
+"87e6ef47a1ecfd88": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Svar: Ja, Sara har nok penger. Overslaget er omtrent 1 350 kr.",
+"tale": "Svar: Ja, Sara har nok penger. Overslaget er omtrent tusen tre hundre og femti kroner."
+},
+"b3bbe5b2975b6468": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Slik får du et godt overslag Når du runder av, blir det ene tallet litt for stort eller litt for lite. Runder du av på en lur måte, jevner feilene seg ofte ut, og overslaget kommer nærmere det riktige svaret. Pluss (+): rund det ene tallet opp og det andre ned. 389 + 512 ≈ 400 + 500 = 900 Minus (−): rund begge tallene samme vei, begge opp eller begge ned. 682 − 291 ≈ 700 − 300 = 400 Gange (·): rund det ene tallet opp og det andre ned. 48 · 21 ≈ 50 · 20 = 1 000 Dele (:): rund begge tallene samme vei. 412 : 19 ≈ 420 : 20 = 21 Det viktigste er likevel at overslaget er lett å regne i hodet. Velg tall som er lette å regne med.",
+"tale": "Slik får du et godt overslag. Når du runder av, blir det ene tallet litt for stort eller litt for lite. Runder du av på en lur måte, jevner feilene seg ofte ut, og overslaget kommer nærmere det riktige svaret. Pluss (pluss): rund det ene tallet opp og det andre ned, tre hundre og åttini pluss fem hundre og tolv omtrent fire hundre pluss fem hundre er lik ni hundre. Minus (minus): rund begge tallene samme vei, begge opp eller begge ned, seks hundre og åttito minus to hundre og nittien omtrent sju hundre minus tre hundre er lik fire hundre. Gange (·): rund det ene tallet opp og det andre ned, førtiåtte ganger tjueen omtrent femti ganger tjue er lik tusen. Dele (:): rund begge tallene samme vei, fire hundre og tolv delt på nitten omtrent fire hundre og tjue delt på tjue er lik tjueen. Det viktigste er likevel at overslaget er lett å regne i hodet. Velg tall som er lette å regne med."
+},
 "bf3badeb493ee44e": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -182,13 +176,6 @@
 "type": "oppgave",
 "tekst": "Gjør et overslag. Rund av prisene til nærmeste tier. Du skal ikke regne nøyaktig. a)Tre brød til 29 kr. b)En pizza til 118 kr og en brus til 22 kr. c)Fire kopper kaffe til 41 kr. d)To bussbilletter til 38 kr og en kaffe til 29 kr.",
 "tale": "Gjør et overslag. Rund av prisene til nærmeste tier. Du skal ikke regne nøyaktig, a: Tre brød til tjueni kroner, b: En pizza til hundre og atten kroner og en brus til tjueto kroner, c: Fire kopper kaffe til førtien kroner, d: To bussbilletter til trettiåtte kroner og en kaffe til tjueni kroner."
-},
-"829fb7ffef1ab54e": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut i hodet. a)36 + 29b)58 + 27 c)73 − 48d)25 · 4 e)50 · 12",
-"tale": "Regn ut i hodet, a: trettiseks pluss tjueni, b: femtiåtte pluss tjuesju, c: syttitre minus førtiåtte, d: tjuefem ganger fire, e: femti ganger tolv."
 },
 "554fe55746dc6cc1": {
 "fag": "matematikk",
@@ -211,19 +198,46 @@
 "tekst": "En buss bruker omtrent 3,8 liter diesel per mil. Gjør et overslag over hvor mye diesel bussen bruker på 21 mil.",
 "tale": "En buss bruker omtrent tre komma åtte liter diesel per mil. Gjør et overslag over hvor mye diesel bussen bruker på tjueen mil."
 },
-"037af8a1e863eaf2": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut i hodet ved å doble og halvere. a)35 · 4b)15 · 12 c)45 · 8d)2,5 · 16",
-"tale": "Regn ut i hodet ved å doble og halvere, a: trettifem ganger fire, b: femten ganger tolv, c: førtifem ganger åtte, d: to komma fem ganger seksten."
-},
 "93e9d91d475300a6": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "oppgave",
 "tekst": "En elev regner ut 312 · 19 og får svaret 928. Bruk overslag til å vise at svaret ikke kan være riktig.",
 "tale": "En elev regner ut tre hundre og tolv ganger nitten og får svaret ni hundre og tjueåtte. Bruk overslag til å vise at svaret ikke kan være riktig."
+},
+"286d0d949acfa1d4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Gjør et godt overslag. Bruk reglene i boksen «Slik får du et godt overslag». Regn deretter nøyaktig, og sammenlign. a)297 + 418b)579 − 188 c)38 · 52d)387 : 19",
+"tale": "Gjør et godt overslag. Bruk reglene i boksen «Slik får du et godt overslag». Regn deretter nøyaktig, og sammenlign, a: to hundre og nittisju pluss fire hundre og atten, b: fem hundre og syttini minus hundre og åttiåtte, c: trettiåtte ganger femtito, d: tre hundre og åttisju delt på nitten."
+},
+"3d58923de64b1e60": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Du trenger ikke å regne på papir hver gang. Her er tre strategier som gjør hoderegning raskere. Bruk den som passer tallene best."
+},
+"4a8c6547df496c11": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "I figur 1.4 kan du runde av selv. Velg et tall, og se hvor det ligger på tallinja, og hvilken tier og hundrer det ligger nærmest.",
+"tale": "I figur en punkt fire kan du runde av selv. Velg et tall, og se hvor det ligger på tallinja, og hvilken tier og hundrer det ligger nærmest."
+},
+"829fb7ffef1ab54e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut i hodet. a)36 + 29b)58 + 27 c)73 − 48d)25 · 4 e)50 · 12",
+"tale": "Regn ut i hodet, a: trettiseks pluss tjueni, b: femtiåtte pluss tjuesju, c: syttitre minus førtiåtte, d: tjuefem ganger fire, e: femti ganger tolv."
+},
+"037af8a1e863eaf2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut i hodet ved å doble og halvere. a)35 · 4b)15 · 12 c)45 · 8d)2,5 · 16",
+"tale": "Regn ut i hodet ved å doble og halvere, a: trettifem ganger fire, b: femten ganger tolv, c: førtifem ganger åtte, d: to komma fem ganger seksten."
 },
 "6e31e63b36f9522d": {
 "fag": "matematikk",
@@ -287,45 +301,6 @@
 "tekst": "Husk Nuller etter siste desimal endrer ikke verdien: 7,5 = 7,50 = 7,500. Det er dette som gjør det trygt å fylle ut med nuller når du stiller opp regnestykker.",
 "tale": "Husk. Nuller etter siste desimal endrer ikke verdien: sju komma fem er lik sju komma femti er lik sju komma fem null null. Det er dette som gjør det trygt å fylle ut med nuller når du stiller opp regnestykker."
 },
-"26c142631315b342": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Når du stiller opp desimaltall under hverandre, er det bare én regel du må huske: komma skal stå under komma. Da havner tideler under tideler og enere under enere."
-},
-"23eafcc5918ddba8": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Arealmetoden viser hvorfor multiplikasjon fungerer. Du deler hvert tall opp i tiere og enere, regner ut hver rute, og legger sammen til slutt."
-},
-"ea7985fb82001e13": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Regel Regn først som om det ikke var komma i det hele tatt. Tell deretter hvor mange desimaler det er til sammen i de to tallene du ganget. Svaret skal ha like mange desimaler.",
-"tale": "Regel. Regn først som om det ikke var komma i det hele tatt. Tell deretter hvor mange desimaler det er til sammen i de to tallene du ganget. Svaret skal ha like mange desimaler."
-},
-"2b1edaba446cd2e2": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Regn ut 2,3 · 4,7.",
-"tale": "Regn ut to komma tre ganger fire komma sju."
-},
-"aa78574135d96418": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Svar: 2,3 · 4,7 = 10,81",
-"tale": "Svar: to komma tre ganger fire komma sju er lik ti komma åttien"
-},
-"6a336b9d76862d17": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Her flytter du bare kommaet. Det er ingen grunn til å stille opp."
-},
 "d74c0954f6e82142": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -339,6 +314,12 @@
 "type": "oppgave",
 "tekst": "Hvilken verdi har sifferet 7 i disse tallene? a)470 b)7 200 c)0,7 d)3,07",
 "tale": "Hvilken verdi har sifferet sju i disse tallene? a: fire hundre og sytti, b: sju tusen to hundre, c: null komma sju, d: tre komma null sju."
+},
+"26c142631315b342": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Når du stiller opp desimaltall under hverandre, er det bare én regel du må huske: komma skal stå under komma. Da havner tideler under tideler og enere under enere."
 },
 "96e9bde2425681cd": {
 "fag": "matematikk",
@@ -361,19 +342,11 @@
 "tekst": "Regn ut. Husk komma under komma. a)4,6 + 3,7 b)15,2 + 6,45 c)9 − 3,4 d)7,05 + 2,9 e)30 − 12,8 f)1,25 + 0,8",
 "tale": "Regn ut. Husk komma under komma, a: fire komma seks pluss tre komma sju, b: femten komma to pluss seks komma førtifem, c: ni minus tre komma fire, d: sju komma null fem pluss to komma ni, e: tretti minus tolv komma åtte, f: en komma tjuefem pluss null komma åtte."
 },
-"1928df20abd6c232": {
+"23eafcc5918ddba8": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)3,7 · 10b)0,45 · 100 c)82 : 10d)560 : 100",
-"tale": "Regn ut, a: tre komma sju ganger ti, b: null komma førtifem ganger hundre, c: åttito delt på ti, d: fem hundre og seksti delt på hundre."
-},
-"5f81cf89a95dd38f": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)2,5 · 10 b)0,08 · 100 c)4,1 · 1 000 d)65 : 10 e)900 : 1 000 f)7 : 100",
-"tale": "Regn ut, a: to komma fem ganger ti, b: null komma null åtte ganger hundre, c: fire komma en ganger tusen, d: sekstifem delt på ti, e: ni hundre delt på tusen, f: sju delt på hundre."
+"type": "tekst",
+"tekst": "Arealmetoden viser hvorfor multiplikasjon fungerer. Du deler hvert tall opp i tiere og enere, regner ut hver rute, og legger sammen til slutt."
 },
 "79a5c7571da2c6e2": {
 "fag": "matematikk",
@@ -381,6 +354,27 @@
 "type": "oppgave",
 "tekst": "Bruk arealmetoden og regn ut. a)16 · 12b)24 · 15 c)32 · 21",
 "tale": "Bruk arealmetoden og regn ut, a: seksten ganger tolv, b: tjuefire ganger femten, c: trettito ganger tjueen."
+},
+"ea7985fb82001e13": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Regel Regn først som om det ikke var komma i det hele tatt. Tell deretter hvor mange desimaler det er til sammen i de to tallene du ganget. Svaret skal ha like mange desimaler.",
+"tale": "Regel. Regn først som om det ikke var komma i det hele tatt. Tell deretter hvor mange desimaler det er til sammen i de to tallene du ganget. Svaret skal ha like mange desimaler."
+},
+"2b1edaba446cd2e2": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Regn ut 2,3 · 4,7.",
+"tale": "Regn ut to komma tre ganger fire komma sju."
+},
+"aa78574135d96418": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Svar: 2,3 · 4,7 = 10,81",
+"tale": "Svar: to komma tre ganger fire komma sju er lik ti komma åttien"
 },
 "78b7ef0a9fa748b3": {
 "fag": "matematikk",
@@ -409,6 +403,26 @@
 "type": "oppgave",
 "tekst": "På en lønnsslipp står det at Kadir har jobbet 152,5 timer med en timelønn på 238 kr. Hva er bruttolønnen hans?",
 "tale": "På en lønnsslipp står det at Kadir har jobbet hundre og femtito komma fem timer med en timelønn på to hundre og trettiåtte kroner. Hva er bruttolønnen hans?"
+},
+"6a336b9d76862d17": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Her flytter du bare kommaet. Det er ingen grunn til å stille opp."
+},
+"1928df20abd6c232": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)3,7 · 10b)0,45 · 100 c)82 : 10d)560 : 100",
+"tale": "Regn ut, a: tre komma sju ganger ti, b: null komma førtifem ganger hundre, c: åttito delt på ti, d: fem hundre og seksti delt på hundre."
+},
+"5f81cf89a95dd38f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)2,5 · 10 b)0,08 · 100 c)4,1 · 1 000 d)65 : 10 e)900 : 1 000 f)7 : 100",
+"tale": "Regn ut, a: to komma fem ganger ti, b: null komma null åtte ganger hundre, c: fire komma en ganger tusen, d: sekstifem delt på ti, e: ni hundre delt på tusen, f: sju delt på hundre."
 },
 "fca7bcf73c788d2b": {
 "fag": "matematikk",
@@ -452,11 +466,60 @@
 "tekst": "Delmål — etter dette delkapitlet kan du forklare divisjon både som å dele likt og som å måle opp i like grupper dividere oppstilt med hele tall regne divisjon med rest, og skrive svaret som desimaltall dividere når divisor er et desimaltall",
 "tale": "Delmål — etter dette delkapitlet kan du, forklare divisjon både som å dele likt og som å måle opp i like grupper, dividere oppstilt med hele tall, regne divisjon med rest, og skrive svaret som desimaltall, dividere når divisor er et desimaltall."
 },
+"936258162298e4e6": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)24 : 6b)81 : 9 c)56 : 7d)72 : 8 e)100 : 4",
+"tale": "Regn ut, a: tjuefire delt på seks, b: åttien delt på ni, c: femtiseks delt på sju, d: syttito delt på åtte, e: hundre delt på fire."
+},
+"625f2c555bfebd69": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)36 : 4 b)63 : 7 c)45 : 5 d)48 : 6 e)90 : 3 f)120 : 4",
+"tale": "Regn ut, a: trettiseks delt på fire, b: sekstitre delt på sju, c: førtifem delt på fem, d: førtiåtte delt på seks, e: nitti delt på tre, f: hundre og tjue delt på fire."
+},
 "a64f15f40bba0cda": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "tekst",
 "tekst": "Ved oppstilt divisjon jobber du deg gjennom sifrene i dividenden fra venstre mot høyre. For hvert siffer spør du: hvor mange ganger går divisoren opp i dette tallet, og hva blir til overs?"
+},
+"68a1652e1d08c27e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut med oppstilling. a)648 : 4b)735 : 5 c)912 : 3d)1 260 : 6",
+"tale": "Regn ut med oppstilling, a: seks hundre og førtiåtte delt på fire, b: sju hundre og trettifem delt på fem, c: ni hundre og tolv delt på tre, d: tusen to hundre og seksti delt på seks."
+},
+"9534fb3ed30fddbf": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut med oppstilling. a)856 : 4 b)693 : 3 c)1 185 : 5 d)2 448 : 8",
+"tale": "Regn ut med oppstilling, a: åtte hundre og femtiseks delt på fire, b: seks hundre og nittitre delt på tre, c: tusen hundre og åttifem delt på fem, d: to tusen fire hundre og førtiåtte delt på åtte."
+},
+"50dd4a9f55f9013b": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)4,8 : 2b)9,6 : 3 c)7,5 : 5d)2,4 : 4",
+"tale": "Regn ut, a: fire komma åtte delt på to, b: ni komma seks delt på tre, c: sju komma fem delt på fem, d: to komma fire delt på fire."
+},
+"889ebc93883328fe": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Fire venner deler en regning på 1 268 kroner likt. Hvor mye betaler hver?",
+"tale": "Fire venner deler en regning på tusen to hundre og sekstiåtte kroner likt. Hvor mye betaler hver?"
+},
+"7d676470d352facf": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "En pakke med 24 flasker vann koster 168 kr. Hva koster én flaske?",
+"tale": "En pakke med tjuefire flasker vann koster hundre og sekstiåtte kroner. Hva koster én flaske?"
 },
 "b4993ae18ea95a20": {
 "fag": "matematikk",
@@ -485,41 +548,6 @@
 "tekst": "Hadde spørsmålet i stedet vært «47 kroner deles likt på 5 personer», ville svaret vært 47 : 5 = 9,4 — altså 9 kroner og 40 øre til hver. Samme regnestykke, men konteksten bestemmer hvordan du svarer.",
 "tale": "Hadde spørsmålet i stedet vært « førtisju kroner deles likt på fem personer», ville svaret vært førtisju delt på fem er lik ni komma fire — altså ni kroner og førti øre til hver. Samme regnestykke, men konteksten bestemmer hvordan du svarer."
 },
-"46309217a6fd8121": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Regel Gang begge tallene med 10, 100 eller 1 000, helt til divisoren blir et helt tall. Svaret blir det samme, fordi forholdet mellom tallene ikke endrer seg.",
-"tale": "Regel. Gang begge tallene med ti, hundre eller tusen, helt til divisoren blir et helt tall. Svaret blir det samme, fordi forholdet mellom tallene ikke endrer seg."
-},
-"936258162298e4e6": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)24 : 6b)81 : 9 c)56 : 7d)72 : 8 e)100 : 4",
-"tale": "Regn ut, a: tjuefire delt på seks, b: åttien delt på ni, c: femtiseks delt på sju, d: syttito delt på åtte, e: hundre delt på fire."
-},
-"625f2c555bfebd69": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)36 : 4 b)63 : 7 c)45 : 5 d)48 : 6 e)90 : 3 f)120 : 4",
-"tale": "Regn ut, a: trettiseks delt på fire, b: sekstitre delt på sju, c: førtifem delt på fem, d: førtiåtte delt på seks, e: nitti delt på tre, f: hundre og tjue delt på fire."
-},
-"68a1652e1d08c27e": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut med oppstilling. a)648 : 4b)735 : 5 c)912 : 3d)1 260 : 6",
-"tale": "Regn ut med oppstilling, a: seks hundre og førtiåtte delt på fire, b: sju hundre og trettifem delt på fem, c: ni hundre og tolv delt på tre, d: tusen to hundre og seksti delt på seks."
-},
-"9534fb3ed30fddbf": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut med oppstilling. a)856 : 4 b)693 : 3 c)1 185 : 5 d)2 448 : 8",
-"tale": "Regn ut med oppstilling, a: åtte hundre og femtiseks delt på fire, b: seks hundre og nittitre delt på tre, c: tusen hundre og åttifem delt på fem, d: to tusen fire hundre og førtiåtte delt på åtte."
-},
 "368a2007bbb9cd13": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -534,13 +562,6 @@
 "tekst": "Regn ut. Skriv svaret med rest. a)23 : 4 b)38 : 6 c)61 : 8 d)95 : 10",
 "tale": "Regn ut. Skriv svaret med rest, a: tjuetre delt på fire, b: trettiåtte delt på seks, c: sekstien delt på åtte, d: nittifem delt på ti."
 },
-"50dd4a9f55f9013b": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)4,8 : 2b)9,6 : 3 c)7,5 : 5d)2,4 : 4",
-"tale": "Regn ut, a: fire komma åtte delt på to, b: ni komma seks delt på tre, c: sju komma fem delt på fem, d: to komma fire delt på fire."
-},
 "52ba755a8782baaf": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -548,33 +569,26 @@
 "tekst": "Regn ut. Skriv svaret som desimaltall. a)7 : 4b)9 : 2 c)13 : 5d)27 : 8",
 "tale": "Regn ut. Skriv svaret som desimaltall, a: sju delt på fire, b: ni delt på to, c: tretten delt på fem, d: tjuesju delt på åtte."
 },
-"f16895f9463c77df": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Regn ut. a)8,4 : 0,2b)15 : 0,5 c)3,6 : 0,4d)2,5 : 0,05",
-"tale": "Regn ut, a: åtte komma fire delt på null komma to, b: femten delt på null komma fem, c: tre komma seks delt på null komma fire, d: to komma fem delt på null komma null fem."
-},
-"889ebc93883328fe": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Fire venner deler en regning på 1 268 kroner likt. Hvor mye betaler hver?",
-"tale": "Fire venner deler en regning på tusen to hundre og sekstiåtte kroner likt. Hvor mye betaler hver?"
-},
-"7d676470d352facf": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "En pakke med 24 flasker vann koster 168 kr. Hva koster én flaske?",
-"tale": "En pakke med tjuefire flasker vann koster hundre og sekstiåtte kroner. Hva koster én flaske?"
-},
 "0771864956a2203b": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "oppgave",
 "tekst": "En bil bruker 42 liter bensin på 60 mil. Hvor mange liter bruker den per mil? Rund av svaret til én desimal.",
 "tale": "En bil bruker førtito liter bensin på seksti mil. Hvor mange liter bruker den per mil? Rund av svaret til én desimal."
+},
+"46309217a6fd8121": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Regel Gang begge tallene med 10, 100 eller 1 000, helt til divisoren blir et helt tall. Svaret blir det samme, fordi forholdet mellom tallene ikke endrer seg.",
+"tale": "Regel. Gang begge tallene med ti, hundre eller tusen, helt til divisoren blir et helt tall. Svaret blir det samme, fordi forholdet mellom tallene ikke endrer seg."
+},
+"f16895f9463c77df": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Regn ut. a)8,4 : 0,2b)15 : 0,5 c)3,6 : 0,4d)2,5 : 0,05",
+"tale": "Regn ut, a: åtte komma fire delt på null komma to, b: femten delt på null komma fem, c: tre komma seks delt på null komma fire, d: to komma fem delt på null komma null fem."
 },
 "e0d9660ef8b3598c": {
 "fag": "matematikk",
@@ -827,20 +841,6 @@
 "tekst": "Svar: 19",
 "tale": "Svar: nitten"
 },
-"ec39de7be6523329": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Den distributive lov a · (b + c) = a · b + a · c Du kan dele opp det ene tallet og gange hver del for seg: 7 · 103 = 7 · (100 + 3) = 700 + 21 = 721",
-"tale": "Den distributive lov, a ganger (b pluss c) er lik a ganger b pluss a ganger c. Du kan dele opp det ene tallet og gange hver del for seg: sju ganger hundre og tre er lik sju ganger (hundre pluss tre) er lik sju hundre pluss tjueen er lik sju hundre og tjueen."
-},
-"2433eb3b0694927f": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Den assosiative lov (a · b) · c = a · (b · c) Du kan gruppere faktorene slik det passer deg best: 25 · 17 · 4 = (25 · 4) · 17 = 100 · 17 = 1 700",
-"tale": "Den assosiative lov. (a ganger b) ganger c er lik a ganger (b ganger c). Du kan gruppere faktorene slik det passer deg best: tjuefem ganger sytten ganger fire er lik (tjuefem ganger fire) ganger sytten er lik hundre ganger sytten er lik tusen sju hundre."
-},
 "ce83bcce45174945": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -910,6 +910,20 @@
 "type": "oppgave",
 "tekst": "Skriv situasjonen som ett regneuttrykk, og regn ut: «Tre venner kjøper hver sin billett til 180 kroner og deler en parkeringsavgift på 90 kroner likt. Hva betaler hver person?»",
 "tale": "Skriv situasjonen som ett regneuttrykk, og regn ut: «Tre venner kjøper hver sin billett til hundre og åtti kroner og deler en parkeringsavgift på nitti kroner likt. Hva betaler hver person?»"
+},
+"ec39de7be6523329": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Den distributive lov a · (b + c) = a · b + a · c Du kan dele opp det ene tallet og gange hver del for seg: 7 · 103 = 7 · (100 + 3) = 700 + 21 = 721",
+"tale": "Den distributive lov, a ganger (b pluss c) er lik a ganger b pluss a ganger c. Du kan dele opp det ene tallet og gange hver del for seg: sju ganger hundre og tre er lik sju ganger (hundre pluss tre) er lik sju hundre pluss tjueen er lik sju hundre og tjueen."
+},
+"2433eb3b0694927f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Den assosiative lov (a · b) · c = a · (b · c) Du kan gruppere faktorene slik det passer deg best: 25 · 17 · 4 = (25 · 4) · 17 = 100 · 17 = 1 700",
+"tale": "Den assosiative lov. (a ganger b) ganger c er lik a ganger (b ganger c). Du kan gruppere faktorene slik det passer deg best: tjuefem ganger sytten ganger fire er lik (tjuefem ganger fire) ganger sytten er lik hundre ganger sytten er lik tusen sju hundre."
 },
 "00758b4d9cc6a1a3": {
 "fag": "matematikk",
@@ -988,27 +1002,6 @@
 "tekst": "Svar: −7 + 12 = 5. Temperaturen ble 5 °C.",
 "tale": "Svar: minus sju pluss tolv er lik fem. Temperaturen ble fem grader."
 },
-"b17b96819d499b95": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "Regel + (−4) er det samme som − 4 − (−4) er det samme som + 4 To like fortegn ved siden av hverandre gir pluss. To ulike fortegn gir minus.",
-"tale": "Regel, pluss (minus fire) er det samme som minus fire, minus (minus fire) er det samme som pluss fire. To like fortegn ved siden av hverandre gir pluss. To ulike fortegn gir minus."
-},
-"546d7e2548c52e61": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "5 + (−3) = 5 − 3 = 2 5 − (−3) = 5 + 3 = 8",
-"tale": "fem pluss (minus tre) er lik fem minus tre er lik to fem minus (minus tre) er lik fem pluss tre er lik åtte"
-},
-"28adc5d327d254d7": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "I figur 1.17 kan du regne med negative tall på tallinja. Velg hvor du starter, og hvor mye du legger til eller trekker fra.",
-"tale": "I figur en punkt sytten kan du regne med negative tall på tallinja. Velg hvor du starter, og hvor mye du legger til eller trekker fra."
-},
 "3d8e836d3df8940d": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
@@ -1037,12 +1030,54 @@
 "tekst": "Regn ut. Bruk tallinjen. a)−5 + 3 b)4 − 9 c)−2 + 8 d)−7 + 7 e)6 − 11 f)−10 + 4",
 "tale": "Regn ut. Bruk tallinjen, a: minus fem pluss tre, b: fire minus ni, c: minus to pluss åtte, d: minus sju pluss sju, e: seks minus elleve, f: minus ti pluss fire."
 },
+"36d688b9ce32224f": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Om morgenen var det −12 °C. Utover dagen steg temperaturen med 9 grader. Om kvelden sank den 6 grader igjen. Hva var temperaturen om kvelden?",
+"tale": "Om morgenen var det minus tolv grader. Utover dagen steg temperaturen med ni grader. Om kvelden sank den seks grader igjen. Hva var temperaturen om kvelden?"
+},
+"c2f976ac7e96a96d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "En bankkonto står i −2 450 kroner. Kontoeieren setter inn 1 800 kroner. Hva er saldoen etterpå?",
+"tale": "En bankkonto står i minus to tusen fire hundre og femti kroner. Kontoeieren setter inn tusen åtte hundre kroner. Hva er saldoen etterpå?"
+},
+"b17b96819d499b95": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "Regel + (−4) er det samme som − 4 − (−4) er det samme som + 4 To like fortegn ved siden av hverandre gir pluss. To ulike fortegn gir minus.",
+"tale": "Regel, pluss (minus fire) er det samme som minus fire, minus (minus fire) er det samme som pluss fire. To like fortegn ved siden av hverandre gir pluss. To ulike fortegn gir minus."
+},
+"546d7e2548c52e61": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "5 + (−3) = 5 − 3 = 2 5 − (−3) = 5 + 3 = 8",
+"tale": "fem pluss (minus tre) er lik fem minus tre er lik to fem minus (minus tre) er lik fem pluss tre er lik åtte"
+},
 "75642c6b8f038fbb": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "oppgave",
 "tekst": "Regn ut. a)7 + (−4)b)7 − (−4) c)−5 + (−3)d)−5 − (−3)",
 "tale": "Regn ut, a: sju pluss (minus fire). b: sju minus (minus fire). c: minus fem pluss (minus tre). d: minus fem minus (minus tre)."
+},
+"4923d53f47ed6366": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "oppgave",
+"tekst": "Den laveste temperaturen målt i Norge er −51,4 °C. Den høyeste er 35,6 °C. Hva er differansen mellom dem?",
+"tale": "Den laveste temperaturen målt i Norge er minus femtien komma fire grader. Den høyeste er trettifem komma seks grader. Hva er differansen mellom dem?"
+},
+"28adc5d327d254d7": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-1.html",
+"type": "tekst",
+"tekst": "I figur 1.17 kan du regne med negative tall på tallinja. Velg hvor du starter, og hvor mye du legger til eller trekker fra.",
+"tale": "I figur en punkt sytten kan du regne med negative tall på tallinja. Velg hvor du starter, og hvor mye du legger til eller trekker fra."
 },
 "51da182eaed0831f": {
 "fag": "matematikk",
@@ -1064,27 +1099,6 @@
 "type": "oppgave",
 "tekst": "Regn ut. a)−8 + 3 − (−5)b)4 − (−6) − 12 c)(−3) · 4 + 10d)(−24) : 6 − (−2)",
 "tale": "Regn ut, a: minus åtte pluss tre minus (minus fem). b: fire minus (minus seks) minus tolv, c: (minus tre) ganger fire pluss ti, d: (minus tjuefire) delt på seks minus (minus to)."
-},
-"36d688b9ce32224f": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Om morgenen var det −12 °C. Utover dagen steg temperaturen med 9 grader. Om kvelden sank den 6 grader igjen. Hva var temperaturen om kvelden?",
-"tale": "Om morgenen var det minus tolv grader. Utover dagen steg temperaturen med ni grader. Om kvelden sank den seks grader igjen. Hva var temperaturen om kvelden?"
-},
-"4923d53f47ed6366": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "Den laveste temperaturen målt i Norge er −51,4 °C. Den høyeste er 35,6 °C. Hva er differansen mellom dem?",
-"tale": "Den laveste temperaturen målt i Norge er minus femtien komma fire grader. Den høyeste er trettifem komma seks grader. Hva er differansen mellom dem?"
-},
-"c2f976ac7e96a96d": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "oppgave",
-"tekst": "En bankkonto står i −2 450 kroner. Kontoeieren setter inn 1 800 kroner. Hva er saldoen etterpå?",
-"tale": "En bankkonto står i minus to tusen fire hundre og femti kroner. Kontoeieren setter inn tusen åtte hundre kroner. Hva er saldoen etterpå?"
 },
 "062b0388e3be86ba": {
 "fag": "matematikk",
@@ -3703,13 +3717,6 @@
 "tekst": "Svar: 16",
 "tale": "Svar: seksten"
 },
-"d4b9a5c26263d1c5": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Regel Står det pluss foran parentesen, beholder alle ledd fortegnet sitt: 40 + (8 − 3) = 40 + 8 − 3 Står det minus foran parentesen, bytter alle ledd fortegn: 40 − (8 − 3) = 40 − 8 + 3",
-"tale": "Regel. Står det pluss foran parentesen, beholder alle ledd fortegnet sitt: førti pluss (åtte minus tre) er lik førti pluss åtte minus tre. Står det minus foran parentesen, bytter alle ledd fortegn: førti minus (åtte minus tre) er lik førti minus åtte pluss tre."
-},
 "f0bf1ecefbc48c86": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -3738,20 +3745,6 @@
 "tekst": "Regn ut. Begynn innerst. a)4 · [9 − (3 + 2)] b)3 · [12 − (5 + 4)] c)[10 + (4 · 3)] : 2 d)[30 − (8 + 7)] · 2",
 "tale": "Regn ut. Begynn innerst, a: fire, [ ni minus (tre pluss to)]. b: tre, [ tolv minus (fem pluss fire)]. c: [ ti pluss (fire ganger tre)]: to, d: [ tretti minus (åtte pluss sju)], to."
 },
-"dd211d8024ff3028": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Fjern parentesen, og regn ut. a)30 − (10 + 5)b)30 − (10 − 5) c)40 + (8 − 3)d)40 − (8 − 3)",
-"tale": "Fjern parentesen, og regn ut, a: tretti minus (ti pluss fem). b: tretti minus (ti minus fem). c: førti pluss (åtte minus tre). d: førti minus (åtte minus tre)."
-},
-"7da965bc2be20b0a": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Fjern parentesen, og regn ut. a)50 − (20 + 10) b)50 − (20 − 10) c)60 + (9 − 4) d)60 − (9 − 4)",
-"tale": "Fjern parentesen, og regn ut, a: femti minus (tjue pluss ti). b: femti minus (tjue minus ti). c: seksti pluss (ni minus fire). d: seksti minus (ni minus fire)."
-},
 "edd2d0b6bea21430": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -3773,19 +3766,40 @@
 "tekst": "Regn ut. a)200 − [3 · (25 + 15) − 20]b)[(9 + 6) · 4] : 5 c)5 · [12 − (18 : 3)]d)[100 − (4 · 15)] : 8",
 "tale": "Regn ut, a: to hundre minus [ tre ganger (tjuefem pluss femten) minus tjue ]. b: [(ni pluss seks) ganger fire ]: fem, c: fem, [ tolv minus (atten delt på tre)]. d: [ hundre minus (fire ganger femten)]: åtte."
 },
-"24d027d7ac330d56": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Regn ut både 24 − (6 + 2) og 24 − 6 + 2. Forklar hvorfor svarene blir forskjellige.",
-"tale": "Regn ut både tjuefire minus (seks pluss to) og tjuefire minus seks pluss to. Forklar hvorfor svarene blir forskjellige."
-},
 "eae32fae44ff9a5a": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
 "type": "oppgave",
 "tekst": "Tre venner spiser ute. Maten koster 189 kroner per person og drikken 65 kroner per person. De får 150 kroner i avslag på hele regningen, og deler resten likt. Skriv ett uttrykk for hva hver av dem betaler, og regn ut.",
 "tale": "Tre venner spiser ute. Maten koster hundre og åttini kroner per person og drikken sekstifem kroner per person. De får hundre og femti kroner i avslag på hele regningen, og deler resten likt. Skriv ett uttrykk for hva hver av dem betaler, og regn ut."
+},
+"d4b9a5c26263d1c5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Regel Står det pluss foran parentesen, beholder alle ledd fortegnet sitt: 40 + (8 − 3) = 40 + 8 − 3 Står det minus foran parentesen, bytter alle ledd fortegn: 40 − (8 − 3) = 40 − 8 + 3",
+"tale": "Regel. Står det pluss foran parentesen, beholder alle ledd fortegnet sitt: førti pluss (åtte minus tre) er lik førti pluss åtte minus tre. Står det minus foran parentesen, bytter alle ledd fortegn: førti minus (åtte minus tre) er lik førti minus åtte pluss tre."
+},
+"dd211d8024ff3028": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Fjern parentesen, og regn ut. a)30 − (10 + 5)b)30 − (10 − 5) c)40 + (8 − 3)d)40 − (8 − 3)",
+"tale": "Fjern parentesen, og regn ut, a: tretti minus (ti pluss fem). b: tretti minus (ti minus fem). c: førti pluss (åtte minus tre). d: førti minus (åtte minus tre)."
+},
+"7da965bc2be20b0a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Fjern parentesen, og regn ut. a)50 − (20 + 10) b)50 − (20 − 10) c)60 + (9 − 4) d)60 − (9 − 4)",
+"tale": "Fjern parentesen, og regn ut, a: femti minus (tjue pluss ti). b: femti minus (tjue minus ti). c: seksti pluss (ni minus fire). d: seksti minus (ni minus fire)."
+},
+"24d027d7ac330d56": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Regn ut både 24 − (6 + 2) og 24 − 6 + 2. Forklar hvorfor svarene blir forskjellige.",
+"tale": "Regn ut både tjuefire minus (seks pluss to) og tjuefire minus seks pluss to. Forklar hvorfor svarene blir forskjellige."
 },
 "43144d09cf8a20cf": {
 "fag": "matematikk",
@@ -3863,26 +3877,6 @@
 "tekst": "Vanlig feil 12 + 82 er ikke det samme som 12 + 8 : 2. Det første er 20 : 2 = 10. Det andre er 12 + 4 = 16. Uten parentes deler du bare det siste tallet.",
 "tale": "Vanlig feil, tolv pluss åtte delt på to er ikke det samme som tolv pluss åtte delt på to. Det første er tjue delt på to er lik ti. Det andre er tolv pluss fire er lik seksten. Uten parentes deler du bare det siste tallet."
 },
-"5f0b5ab6cc1c63e5": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Gjennomsnitt er den vanligste bruken av brøkstrek i hverdagen: du legger sammen alle tallene og deler på hvor mange de er."
-},
-"c4ff8fdc48c96c89": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Fire målinger av temperaturen ga 12, 18, 21 og 29 grader. Hva er gjennomsnittet?",
-"tale": "Fire målinger av temperaturen ga tolv, atten, tjueen og tjueni grader. Hva er gjennomsnittet?"
-},
-"3c3fb7e15d9c24f0": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Svar: Gjennomsnittet er 20 grader.",
-"tale": "Svar: Gjennomsnittet er tjue grader."
-},
 "ea28979b8a223c2f": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -3925,13 +3919,6 @@
 "tekst": "Skriv med kolon i stedet for brøkstrek, og regn ut. a)14 + 65b)9 · 46 c)452 + 7",
 "tale": "Skriv med kolon i stedet for brøkstrek, og regn ut, a: fjorten pluss seks delt på fem, b: ni ganger fire delt på seks, c: førtifem delt på to pluss sju."
 },
-"9d0af4507cb92cda": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Regn ut gjennomsnittet. a)4, 6 og 8 b)10, 12, 14 og 16 c)3, 7, 5 og 9 d)20, 30 og 25",
-"tale": "Regn ut gjennomsnittet, a: fire, seks og åtte, b: ti, tolv, fjorten og seksten, c: tre, sju, fem og ni, d: tjue, tretti og tjuefem."
-},
 "f8b4227528faabb3": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -3952,6 +3939,33 @@
 "type": "oppgave",
 "tekst": "En gruppe på 4 voksne og 5 barn deler en regning. Maten kostet 620 kroner og drikken 280 kroner. Skriv uttrykket med brøkstrek, og regn ut hva hver person betaler.",
 "tale": "En gruppe på fire voksne og fem barn deler en regning. Maten kostet seks hundre og tjue kroner og drikken to hundre og åtti kroner. Skriv uttrykket med brøkstrek, og regn ut hva hver person betaler."
+},
+"5f0b5ab6cc1c63e5": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Gjennomsnitt er den vanligste bruken av brøkstrek i hverdagen: du legger sammen alle tallene og deler på hvor mange de er."
+},
+"c4ff8fdc48c96c89": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Fire målinger av temperaturen ga 12, 18, 21 og 29 grader. Hva er gjennomsnittet?",
+"tale": "Fire målinger av temperaturen ga tolv, atten, tjueen og tjueni grader. Hva er gjennomsnittet?"
+},
+"3c3fb7e15d9c24f0": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Svar: Gjennomsnittet er 20 grader.",
+"tale": "Svar: Gjennomsnittet er tjue grader."
+},
+"9d0af4507cb92cda": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Regn ut gjennomsnittet. a)4, 6 og 8 b)10, 12, 14 og 16 c)3, 7, 5 og 9 d)20, 30 og 25",
+"tale": "Regn ut gjennomsnittet, a: fire, seks og åtte, b: ti, tolv, fjorten og seksten, c: tre, sju, fem og ni, d: tjue, tretti og tjuefem."
 },
 "7f0dfa6c40fc3d85": {
 "fag": "matematikk",
@@ -4050,19 +4064,6 @@
 "tekst": "Loven virker også motsatt vei: 12 · 15 + 12 · 5 = 12 · (15 + 5) = 12 · 20 = 240. Da samler du i stedet for å dele opp.",
 "tale": "Loven virker også motsatt vei: tolv ganger femten pluss tolv ganger fem er lik tolv ganger (femten pluss fem) er lik tolv ganger tjue er lik to hundre og førti. Da samler du i stedet for å dele opp."
 },
-"bb83ade96e6b79ef": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Regnelovene gir deg flere lure måter å gange og dele på i hodet. Velg den strategien som gir de enkleste tallene. Tenk først, regn etterpå."
-},
-"0b21e43cf9691409": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "tekst",
-"tekst": "Fem strategier du kan bruke Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme. 16 · 25 = 8 · 50 = 4 · 100 = 400 Del opp tallet: 7 · 48 = 7 · 40 + 7 · 8 = 280 + 56 = 336 Gange med 5: Gang med 10 og del på 2. 5 · 46 = 460 : 2 = 230 Dele på 5: Del på 10 og gang med 2. 340 : 5 = 34 · 2 = 68 Dele på 4: Halver to ganger. 180 : 4 → 90 → 45 Du kan også dele opp tallet du deler: 96 : 4 = 80 : 4 + 16 : 4 = 20 + 4 = 24",
-"tale": "Fem strategier du kan bruke. Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme, seksten ganger tjuefem er lik åtte ganger femti er lik fire ganger hundre er lik fire hundre. Del opp tallet: sju ganger førtiåtte er lik sju ganger førti pluss sju ganger åtte er lik to hundre og åtti pluss femtiseks er lik tre hundre og trettiseks. Gange med fem: Gang med ti og del på to, fem ganger førtiseks er lik fire hundre og seksti delt på to er lik to hundre og tretti. Dele på fem: Del på ti og gang med to, tre hundre og førti delt på fem er lik trettifire ganger to er lik sekstiåtte. Dele på fire: Halver to ganger, hundre og åtti delt på fire gir nitti gir førtifem. Du kan også dele opp tallet du deler: nittiseks delt på fire er lik åtti delt på fire pluss seksten delt på fire er lik tjue pluss fire er lik tjuefire."
-},
 "6f5bd0fd07e9bef5": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -4112,20 +4113,6 @@
 "tekst": "Er dette riktig? Svar ja eller nei. a)10 − 4 = 4 − 10b)20 : 5 = 5 : 20 c)3 + 8 = 8 + 3d)(10 − 3) − 2 = 10 − (3 − 2)",
 "tale": "Er dette riktig? Svar ja eller nei, a: ti minus fire er lik fire minus ti, b: tjue delt på fem er lik fem delt på tjue, c: tre pluss åtte er lik åtte pluss tre, d: (ti minus tre) minus to er lik ti minus (tre minus to)."
 },
-"f04c20ba5d44fd0d": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Bruk dobling og halvering.a)14 · 5b)18 · 50c)16 · 25d)12 · 35",
-"tale": "Bruk dobling og halvering, a: fjorten ganger fem, b: atten ganger femti, c: seksten ganger tjuefem, d: tolv ganger trettifem."
-},
-"624bc6a7c8eebae1": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-2.html",
-"type": "oppgave",
-"tekst": "Gang med 5 ved å gange med 10 og dele på 2.a)5 · 36b)5 · 48c)5 · 124d)5 · 87",
-"tale": "Gang med fem ved å gange med ti og dele på to, a: fem ganger trettiseks, b: fem ganger førtiåtte, c: fem ganger hundre og tjuefire, d: fem ganger åttisju."
-},
 "ab68d204828dd2af": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-2.html",
@@ -4153,6 +4140,33 @@
 "type": "oppgave",
 "tekst": "En butikk får inn 24 kasser med 15 flasker i hver. Vis to ulike måter å regne ut totalen på, og forklar hvilken lov du bruker i hver av dem.",
 "tale": "En butikk får inn tjuefire kasser med femten flasker i hver. Vis to ulike måter å regne ut totalen på, og forklar hvilken lov du bruker i hver av dem."
+},
+"bb83ade96e6b79ef": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Regnelovene gir deg flere lure måter å gange og dele på i hodet. Velg den strategien som gir de enkleste tallene. Tenk først, regn etterpå."
+},
+"0b21e43cf9691409": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "tekst",
+"tekst": "Fem strategier du kan bruke Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme. 16 · 25 = 8 · 50 = 4 · 100 = 400 Del opp tallet: 7 · 48 = 7 · 40 + 7 · 8 = 280 + 56 = 336 Gange med 5: Gang med 10 og del på 2. 5 · 46 = 460 : 2 = 230 Dele på 5: Del på 10 og gang med 2. 340 : 5 = 34 · 2 = 68 Dele på 4: Halver to ganger. 180 : 4 → 90 → 45 Du kan også dele opp tallet du deler: 96 : 4 = 80 : 4 + 16 : 4 = 20 + 4 = 24",
+"tale": "Fem strategier du kan bruke. Doble og halvere: Doble den ene faktoren og halver den andre. Produktet blir det samme, seksten ganger tjuefem er lik åtte ganger femti er lik fire ganger hundre er lik fire hundre. Del opp tallet: sju ganger førtiåtte er lik sju ganger førti pluss sju ganger åtte er lik to hundre og åtti pluss femtiseks er lik tre hundre og trettiseks. Gange med fem: Gang med ti og del på to, fem ganger førtiseks er lik fire hundre og seksti delt på to er lik to hundre og tretti. Dele på fem: Del på ti og gang med to, tre hundre og førti delt på fem er lik trettifire ganger to er lik sekstiåtte. Dele på fire: Halver to ganger, hundre og åtti delt på fire gir nitti gir førtifem. Du kan også dele opp tallet du deler: nittiseks delt på fire er lik åtti delt på fire pluss seksten delt på fire er lik tjue pluss fire er lik tjuefire."
+},
+"f04c20ba5d44fd0d": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Bruk dobling og halvering.a)14 · 5b)18 · 50c)16 · 25d)12 · 35",
+"tale": "Bruk dobling og halvering, a: fjorten ganger fem, b: atten ganger femti, c: seksten ganger tjuefem, d: tolv ganger trettifem."
+},
+"624bc6a7c8eebae1": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-2.html",
+"type": "oppgave",
+"tekst": "Gang med 5 ved å gange med 10 og dele på 2.a)5 · 36b)5 · 48c)5 · 124d)5 · 87",
+"tale": "Gang med fem ved å gange med ti og dele på to, a: fem ganger trettiseks, b: fem ganger førtiåtte, c: fem ganger hundre og tjuefire, d: fem ganger åttisju."
 },
 "358bb0dcab25893d": {
 "fag": "matematikk",
@@ -5457,34 +5471,6 @@
 "tekst": "Svar: Største felles faktor er 12.",
 "tale": "Svar: Største felles faktor er tolv."
 },
-"bfa30e0f83b70182": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "tekst",
-"tekst": "Et tall større enn 1 som ikke er et primtall, kaller vi et sammensatt tall. 12 er et sammensatt tall, fordi 12 = 3 · 4. For å finne ut om et tall kan deles på 2, 3, 5, 9 eller 10, trenger du ikke dele. Du kan se det på sifrene.",
-"tale": "Et tall større enn en som ikke er et primtall, kaller vi et sammensatt tall, tolv er et sammensatt tall, fordi tolv er lik tre ganger fire. For å finne ut om et tall kan deles på to, tre, fem, ni eller ti, trenger du ikke dele. Du kan se det på sifrene."
-},
-"f6cbfe5af985b4fb": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "tekst",
-"tekst": "Delelighetsreglene 2: Det siste sifferet er 0, 2, 4, 6 eller 8. Tallet er et partall. 5: Det siste sifferet er 0 eller 5. 10: Det siste sifferet er 0. 3: Tverrsummen kan deles på 3. Tverrsummen er summen av sifrene. 471: 4 + 7 + 1 = 12, og 12 kan deles på 3. Da kan 471 deles på 3. 9: Tverrsummen kan deles på 9.",
-"tale": "Delelighetsreglene, to: Det siste sifferet er null, to, fire, seks eller åtte. Tallet er et partall, fem: Det siste sifferet er null eller fem, ti: Det siste sifferet er null, tre: Tverrsummen kan deles på tre. Tverrsummen er summen av sifrene, fire hundre og syttien: fire pluss sju pluss en er lik tolv, og tolv kan deles på tre. Da kan fire hundre og syttien deles på tre, ni: Tverrsummen kan deles på ni."
-},
-"b23476493d3cb476": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "tekst",
-"tekst": "Kan 2 345 deles på 2, 3 og 5?",
-"tale": "Kan to tusen tre hundre og førtifem deles på to, tre og fem?"
-},
-"e72e240ff06b0721": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "tekst",
-"tekst": "Svar: 2 345 kan bare deles på 5 av disse. 2 345 : 5 = 469.",
-"tale": "Svar: to tusen tre hundre og førtifem kan bare deles på fem av disse, to tusen tre hundre og førtifem delt på fem er lik fire hundre og sekstini."
-},
 "ac53a4e739c07431": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -5534,20 +5520,6 @@
 "tekst": "Faktoriser i primtall. Skriv svaret med potenser der du kan. a)40 b)42 c)48",
 "tale": "Faktoriser i primtall. Skriv svaret med potenser der du kan, a: førti, b: førtito, c: førtiåtte."
 },
-"5c6ae2729ecd78ca": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "oppgave",
-"tekst": "Kan tallet deles på 2? Kan det deles på 5?a)70b)135c)248d)1 001",
-"tale": "Kan tallet deles på to? Kan det deles på fem? a: sytti, b: hundre og trettifem, c: to hundre og førtiåtte, d: tusen og en."
-},
-"d6f3950bf1a46f34": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-3.html",
-"type": "oppgave",
-"tekst": "Finn tverrsummen. Kan tallet deles på 3?a)51b)124c)312d)2 001",
-"tale": "Finn tverrsummen. Kan tallet deles på tre? a: femtien, b: hundre og tjuefire, c: tre hundre og tolv, d: to tusen og en."
-},
 "fbcb2dda5c7b3ef3": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-3.html",
@@ -5568,6 +5540,48 @@
 "type": "oppgave",
 "tekst": "Finn minste felles multiplum. a)4 og 6b)6 og 8 c)10 og 15",
 "tale": "Finn minste felles multiplum, a: fire og seks, b: seks og åtte, c: ti og femten."
+},
+"bfa30e0f83b70182": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Et tall større enn 1 som ikke er et primtall, kaller vi et sammensatt tall. 12 er et sammensatt tall, fordi 12 = 3 · 4. For å finne ut om et tall kan deles på 2, 3, 5, 9 eller 10, trenger du ikke dele. Du kan se det på sifrene.",
+"tale": "Et tall større enn en som ikke er et primtall, kaller vi et sammensatt tall, tolv er et sammensatt tall, fordi tolv er lik tre ganger fire. For å finne ut om et tall kan deles på to, tre, fem, ni eller ti, trenger du ikke dele. Du kan se det på sifrene."
+},
+"f6cbfe5af985b4fb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Delelighetsreglene 2: Det siste sifferet er 0, 2, 4, 6 eller 8. Tallet er et partall. 5: Det siste sifferet er 0 eller 5. 10: Det siste sifferet er 0. 3: Tverrsummen kan deles på 3. Tverrsummen er summen av sifrene. 471: 4 + 7 + 1 = 12, og 12 kan deles på 3. Da kan 471 deles på 3. 9: Tverrsummen kan deles på 9.",
+"tale": "Delelighetsreglene, to: Det siste sifferet er null, to, fire, seks eller åtte. Tallet er et partall, fem: Det siste sifferet er null eller fem, ti: Det siste sifferet er null, tre: Tverrsummen kan deles på tre. Tverrsummen er summen av sifrene, fire hundre og syttien: fire pluss sju pluss en er lik tolv, og tolv kan deles på tre. Da kan fire hundre og syttien deles på tre, ni: Tverrsummen kan deles på ni."
+},
+"b23476493d3cb476": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Kan 2 345 deles på 2, 3 og 5?",
+"tale": "Kan to tusen tre hundre og førtifem deles på to, tre og fem?"
+},
+"e72e240ff06b0721": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "tekst",
+"tekst": "Svar: 2 345 kan bare deles på 5 av disse. 2 345 : 5 = 469.",
+"tale": "Svar: to tusen tre hundre og førtifem kan bare deles på fem av disse, to tusen tre hundre og førtifem delt på fem er lik fire hundre og sekstini."
+},
+"5c6ae2729ecd78ca": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Kan tallet deles på 2? Kan det deles på 5?a)70b)135c)248d)1 001",
+"tale": "Kan tallet deles på to? Kan det deles på fem? a: sytti, b: hundre og trettifem, c: to hundre og førtiåtte, d: tusen og en."
+},
+"d6f3950bf1a46f34": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-3.html",
+"type": "oppgave",
+"tekst": "Finn tverrsummen. Kan tallet deles på 3?a)51b)124c)312d)2 001",
+"tale": "Finn tverrsummen. Kan tallet deles på tre? a: femtien, b: hundre og tjuefire, c: tre hundre og tolv, d: to tusen og en."
 },
 "380a17d049de65b7": {
 "fag": "matematikk",
@@ -6438,41 +6452,6 @@
 "tekst": "Svar: 34 − 16 = 712",
 "tale": "Svar: tre firedeler minus en seksdel er lik sju tolvdeler"
 },
-"188105eaf89cd3fb": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "tekst",
-"tekst": "Når du legger sammen brøker, kan svaret bli større enn 1. I en ekte brøk er telleren mindre enn nevneren, for eksempel 34. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel 74. Da har du mer enn én hel.",
-"tale": "Når du legger sammen brøker, kan svaret bli større enn en. I en ekte brøk er telleren mindre enn nevneren, for eksempel tre firedeler. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel sju firedeler. Da har du mer enn én hel."
-},
-"60204ce487c5cbf4": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "tekst",
-"tekst": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: 1 34 betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel 1 34 liter melk.",
-"tale": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: en tre firedeler betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel en tre firedeler liter melk."
-},
-"4c916774291f4b82": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "tekst",
-"tekst": "Fra uekte brøk til blandet tall – og tilbake Uekte brøk → blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller. 74: 7 : 4 = 1 og 3 i rest. Det gir 1 34. Blandet tall → uekte brøk: Gang de hele med nevneren, og legg til telleren. 2 13: 2 · 3 + 1 = 7. Det gir 73.",
-"tale": "Fra uekte brøk til blandet tall – og tilbake. Uekte brøk gir blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller, sju firedeler delt på sju delt på fire er lik en og tre i rest. Det gir en tre firedeler. Blandet tall gir uekte brøk: Gang de hele med nevneren, og legg til telleren, to en tredjedel delt på to ganger tre pluss en er lik sju. Det gir sju tredjedeler."
-},
-"4d8dade130c0ff48": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "tekst",
-"tekst": "Mina bruker 34 liter saft i dag og 24 liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall.",
-"tale": "Mina bruker tre firedeler liter saft i dag og to firedeler liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall."
-},
-"5e2c9abb9ebb943e": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "tekst",
-"tekst": "Svar: Hun bruker 1 14 liter saft.",
-"tale": "Svar: Hun bruker en en firedel liter saft."
-},
 "f20713f987ba32b9": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
@@ -6522,20 +6501,6 @@
 "tekst": "Regn ut. a)12 + 16 b)14 + 18 c)56 − 13 d)34 − 18",
 "tale": "Regn ut, a: en halv pluss en seksdel, b: en firedel pluss en åttedel, c: fem seksdeler minus en tredjedel, d: tre firedeler minus en åttedel."
 },
-"c055361958a0f374": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "oppgave",
-"tekst": "Er brøken ekte eller uekte?a)35b)94c)78d)1110",
-"tale": "Er brøken ekte eller uekte? a: tre femdeler, b: ni firedeler, c: sju åttedeler, d: elleve tideler."
-},
-"a19b01c2835b5c69": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-4.html",
-"type": "oppgave",
-"tekst": "Skriv som blandet tall.a)54b)73c)92d)115",
-"tale": "Skriv som blandet tall, a: fem firedeler, b: sju tredjedeler, c: ni halve, d: elleve femdeler."
-},
 "212e853bf98cea32": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
@@ -6563,6 +6528,55 @@
 "type": "oppgave",
 "tekst": "Hassan bruker 25 av lønnen på husleie og 14 på mat. a)Hvor stor del av lønnen går til disse to tingene? b)Hvor stor del har han igjen?",
 "tale": "Hassan bruker to femdeler av lønnen på husleie og en firedel på mat, a: Hvor stor del av lønnen går til disse to tingene? b: Hvor stor del har han igjen?"
+},
+"188105eaf89cd3fb": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Når du legger sammen brøker, kan svaret bli større enn 1. I en ekte brøk er telleren mindre enn nevneren, for eksempel 34. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel 74. Da har du mer enn én hel.",
+"tale": "Når du legger sammen brøker, kan svaret bli større enn en. I en ekte brøk er telleren mindre enn nevneren, for eksempel tre firedeler. Brøken er mindre enn én hel. I en uekte brøk er telleren større enn nevneren, for eksempel sju firedeler. Da har du mer enn én hel."
+},
+"60204ce487c5cbf4": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: 1 34 betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel 1 34 liter melk.",
+"tale": "En uekte brøk kan du skrive som et blandet tall. Det har en hel del og en brøk: en tre firedeler betyr «én hel og tre firedeler». Blandede tall er lettere å forstå i hverdagen, for eksempel en tre firedeler liter melk."
+},
+"4c916774291f4b82": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Fra uekte brøk til blandet tall – og tilbake Uekte brøk → blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller. 74: 7 : 4 = 1 og 3 i rest. Det gir 1 34. Blandet tall → uekte brøk: Gang de hele med nevneren, og legg til telleren. 2 13: 2 · 3 + 1 = 7. Det gir 73.",
+"tale": "Fra uekte brøk til blandet tall – og tilbake. Uekte brøk gir blandet tall: Del telleren på nevneren. Svaret er de hele, og resten blir ny teller, sju firedeler delt på sju delt på fire er lik en og tre i rest. Det gir en tre firedeler. Blandet tall gir uekte brøk: Gang de hele med nevneren, og legg til telleren, to en tredjedel delt på to ganger tre pluss en er lik sju. Det gir sju tredjedeler."
+},
+"4d8dade130c0ff48": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Mina bruker 34 liter saft i dag og 24 liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall.",
+"tale": "Mina bruker tre firedeler liter saft i dag og to firedeler liter i morgen. Hvor mye bruker hun til sammen? Skriv svaret som blandet tall."
+},
+"5e2c9abb9ebb943e": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "tekst",
+"tekst": "Svar: Hun bruker 1 14 liter saft.",
+"tale": "Svar: Hun bruker en en firedel liter saft."
+},
+"c055361958a0f374": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Er brøken ekte eller uekte?a)35b)94c)78d)1110",
+"tale": "Er brøken ekte eller uekte? a: tre femdeler, b: ni firedeler, c: sju åttedeler, d: elleve tideler."
+},
+"a19b01c2835b5c69": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-4.html",
+"type": "oppgave",
+"tekst": "Skriv som blandet tall.a)54b)73c)92d)115",
+"tale": "Skriv som blandet tall, a: fem firedeler, b: sju tredjedeler, c: ni halve, d: elleve femdeler."
 },
 "f6004f5a1b60a05f": {
 "fag": "matematikk",
@@ -8660,33 +8674,6 @@
 "tekst": "I figur 6.9 er likningen en vekt. Prøv deg fram med ulike verdier for x, til vekta er i balanse. Da har du funnet løsningen. Du kan også lage egne likninger ved å endre a, b og c.",
 "tale": "I figur seks punkt ni er likningen en vekt. Prøv deg fram med ulike verdier for x, til vekta er i balanse. Da har du funnet løsningen. Du kan også lage egne likninger ved å endre a, b og c."
 },
-"969c786766149742": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "tekst",
-"tekst": "Mange oppgaver i hverdagen kan løses med en likning. Bruk tre trinn: Sett opp likningen, løs den, og sett prøve. Å sette prøve betyr å sette svaret inn i likningen og se om venstre side blir lik høyre side."
-},
-"a9cfbb932685628c": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "tekst",
-"tekst": "Slik setter du prøve Likning: 2x + 3 = 11. Du har funnet x = 4. Venstre side: 2 · 4 + 3 = 11. Høyre side: 11. Sidene er like, så svaret er riktig.",
-"tale": "Slik setter du prøve. Likning: to x pluss tre er lik elleve. Du har funnet x er lik fire. Venstre side: to ganger fire pluss tre er lik elleve. Høyre side: elleve. Sidene er like, så svaret er riktig."
-},
-"cf57e8f76876d837": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "tekst",
-"tekst": "Leila kjøper 3 like bøker og en pose til 40 kr. Hun betaler 280 kr til sammen. Hva koster én bok?",
-"tale": "Leila kjøper tre like bøker og en pose til førti kroner. Hun betaler to hundre og åtti kroner til sammen. Hva koster én bok?"
-},
-"b7a88879f971c621": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "tekst",
-"tekst": "Svar: Én bok koster 80 kr.",
-"tale": "Svar: Én bok koster åtti kroner."
-},
 "fb68741b9a3a6ede": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-6.html",
@@ -8729,20 +8716,6 @@
 "tekst": "Løs likningen. a)x : 4 = 3 b)x : 2 = 8 c)x : 10 = 6",
 "tale": "Løs likningen, a: x delt på fire er lik tre, b: x delt på to er lik åtte, c: x delt på ti er lik seks."
 },
-"38fa043512ed1523": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "oppgave",
-"tekst": "Sett inn og kontroller. Er x = 4 løsningen? a)x + 5 = 9b)3x = 15",
-"tale": "Sett inn og kontroller. Er x er lik fire løsningen? a: x pluss fem er lik ni, b: tre x er lik femten."
-},
-"adb6e1333cf90c1a": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-6.html",
-"type": "oppgave",
-"tekst": "Sett prøve. Er x = 5 løsningen av likningen?a)3x + 2 = 17b)4x − 6 = 12c)2x + 5 = 15d)10 − x = 4",
-"tale": "Sett prøve. Er x er lik fem løsningen av likningen? a: tre x pluss to er lik sytten, b: fire x minus seks er lik tolv, c: to x pluss fem er lik femten, d: ti minus x er lik fire."
-},
 "89ecf5fd097ec391": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-6.html",
@@ -8763,6 +8736,47 @@
 "type": "oppgave",
 "tekst": "Løs likningen. a)3(x + 2) = 18b)2(x − 1) = 10",
 "tale": "Løs likningen, a: tre (x pluss to) er lik atten, b: to (x minus en) er lik ti."
+},
+"969c786766149742": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Mange oppgaver i hverdagen kan løses med en likning. Bruk tre trinn: Sett opp likningen, løs den, og sett prøve. Å sette prøve betyr å sette svaret inn i likningen og se om venstre side blir lik høyre side."
+},
+"a9cfbb932685628c": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Slik setter du prøve Likning: 2x + 3 = 11. Du har funnet x = 4. Venstre side: 2 · 4 + 3 = 11. Høyre side: 11. Sidene er like, så svaret er riktig.",
+"tale": "Slik setter du prøve. Likning: to x pluss tre er lik elleve. Du har funnet x er lik fire. Venstre side: to ganger fire pluss tre er lik elleve. Høyre side: elleve. Sidene er like, så svaret er riktig."
+},
+"cf57e8f76876d837": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Leila kjøper 3 like bøker og en pose til 40 kr. Hun betaler 280 kr til sammen. Hva koster én bok?",
+"tale": "Leila kjøper tre like bøker og en pose til førti kroner. Hun betaler to hundre og åtti kroner til sammen. Hva koster én bok?"
+},
+"b7a88879f971c621": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "tekst",
+"tekst": "Svar: Én bok koster 80 kr.",
+"tale": "Svar: Én bok koster åtti kroner."
+},
+"38fa043512ed1523": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "Sett inn og kontroller. Er x = 4 løsningen? a)x + 5 = 9b)3x = 15",
+"tale": "Sett inn og kontroller. Er x er lik fire løsningen? a: x pluss fem er lik ni, b: tre x er lik femten."
+},
+"adb6e1333cf90c1a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-6.html",
+"type": "oppgave",
+"tekst": "Sett prøve. Er x = 5 løsningen av likningen?a)3x + 2 = 17b)4x − 6 = 12c)2x + 5 = 15d)10 − x = 4",
+"tale": "Sett prøve. Er x er lik fem løsningen av likningen? a: tre x pluss to er lik sytten, b: fire x minus seks er lik tolv, c: to x pluss fem er lik femten, d: ti minus x er lik fire."
 },
 "606f859eb55ad97a": {
 "fag": "matematikk",
@@ -10841,27 +10855,6 @@
 "tekst": "Svar: Det er 3 km mellom stedene.",
 "tale": "Svar: Det er tre kilometer mellom stedene."
 },
-"cf59d8eeb381a975": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-8.html",
-"type": "tekst",
-"tekst": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn 1 forstørrer. Et tall mellom 0 og 1 forminsker.",
-"tale": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn en forstørrer. Et tall mellom null og en forminsker."
-},
-"9248c47f7a76120a": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-8.html",
-"type": "tekst",
-"tekst": "Et bilde er 15 cm bredt og 10 cm høyt. Det skal forminskes slik at bredden blir 6 cm. Hvor høyt blir bildet?",
-"tale": "Et bilde er femten centimeter bredt og ti centimeter høyt. Det skal forminskes slik at bredden blir seks centimeter. Hvor høyt blir bildet?"
-},
-"1f665af09378e504": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-8.html",
-"type": "tekst",
-"tekst": "Svar: Bildet blir 4 cm høyt.",
-"tale": "Svar: Bildet blir fire centimeter høyt."
-},
 "9e0a8a84e0421212": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-8.html",
@@ -10883,20 +10876,6 @@
 "tekst": "Gjør om til meter.a)300 cmb)1 250 cmc)85 cmd)40 000 cm",
 "tale": "Gjør om til meter, a: tre hundre centimeter, b: tusen to hundre og femti centimeter, c: åttifem centimeter, d: førti tusen centimeter."
 },
-"a384189c8834f659": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-8.html",
-"type": "oppgave",
-"tekst": "Et rektangel skal forstørres 3 ganger. Hvor lange blir sidene?a)2 cm × 1 cmb)4 cm × 2 cmc)5 cm × 3 cm",
-"tale": "Et rektangel skal forstørres tre ganger. Hvor lange blir sidene? a: to centimeter ganger en centimeter, b: fire centimeter ganger to centimeter, c: fem centimeter ganger tre centimeter."
-},
-"cdb66b4ee19f0508": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-8.html",
-"type": "oppgave",
-"tekst": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene?a)10 cm × 6 cmb)8 cm × 4 cmc)12 cm × 9 cm",
-"tale": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene? a: ti centimeter ganger seks centimeter, b: åtte centimeter ganger fire centimeter, c: tolv centimeter ganger ni centimeter."
-},
 "8ab87989ee6a8991": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-8.html",
@@ -10917,6 +10896,41 @@
 "type": "oppgave",
 "tekst": "Et rom er 6 m langt og 4 m bredt. Du skal tegne det i målestokk 1:100. Hvor store blir målene på tegningen?",
 "tale": "Et rom er seks meter langt og fire meter bredt. Du skal tegne det i målestokk en: hundre. Hvor store blir målene på tegningen?"
+},
+"cf59d8eeb381a975": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn 1 forstørrer. Et tall mellom 0 og 1 forminsker.",
+"tale": "Når du forstørrer eller forminsker en figur, ganger du alle sidene med det samme tallet. Da får figuren samme form, og vinklene blir de samme. To slike figurer kaller vi formlike. Et tall større enn en forstørrer. Et tall mellom null og en forminsker."
+},
+"9248c47f7a76120a": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Et bilde er 15 cm bredt og 10 cm høyt. Det skal forminskes slik at bredden blir 6 cm. Hvor høyt blir bildet?",
+"tale": "Et bilde er femten centimeter bredt og ti centimeter høyt. Det skal forminskes slik at bredden blir seks centimeter. Hvor høyt blir bildet?"
+},
+"1f665af09378e504": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "tekst",
+"tekst": "Svar: Bildet blir 4 cm høyt.",
+"tale": "Svar: Bildet blir fire centimeter høyt."
+},
+"a384189c8834f659": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et rektangel skal forstørres 3 ganger. Hvor lange blir sidene?a)2 cm × 1 cmb)4 cm × 2 cmc)5 cm × 3 cm",
+"tale": "Et rektangel skal forstørres tre ganger. Hvor lange blir sidene? a: to centimeter ganger en centimeter, b: fire centimeter ganger to centimeter, c: fem centimeter ganger tre centimeter."
+},
+"cdb66b4ee19f0508": {
+"fag": "matematikk",
+"side": "matematikk/kapittel-8.html",
+"type": "oppgave",
+"tekst": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene?a)10 cm × 6 cmb)8 cm × 4 cmc)12 cm × 9 cm",
+"tale": "Et rektangel skal forminskes til halvparten. Hvor lange blir sidene? a: ti centimeter ganger seks centimeter, b: åtte centimeter ganger fire centimeter, c: tolv centimeter ganger ni centimeter."
 },
 "60e24b5c7804249e": {
 "fag": "matematikk",

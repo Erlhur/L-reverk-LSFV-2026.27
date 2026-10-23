@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Øv · 8. Skriving, prosjekt og eksamen — Naturfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=f43341c3">
+<link rel="stylesheet" href="../css/nett.css?v=584a37c9">
 <link rel="stylesheet" href="../css/interaktiv.css?v=ee0cd2ba">
 <script src="../js/interaktiv.js?v=49fac33d" defer></script>
 </head>
@@ -247,7 +247,7 @@ Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div><
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke, .dkres')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);
