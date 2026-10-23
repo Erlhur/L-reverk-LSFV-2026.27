@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1. Økologi og naturmiljø — Naturfag</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=584a37c9">
+<link rel="stylesheet" href="../css/nett.css?v=aaca4f92">
 
 </head>
 <body>
@@ -13,7 +13,7 @@
   <div class="innmat">
     <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
     <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Naturfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html">Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a></nav>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html" aria-current='page'>Naturfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html">Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a></nav>
     <div class="visningsbryter" role="group" aria-label="Velg visning">
       <button type="button" data-vis="auto">Automatisk</button>
       <button type="button" data-vis="pc">PC</button>
@@ -4412,6 +4412,77 @@ function rutenett() {
   }
   var s = document.createElement('script'); s.src = '../ressurser.js?' + Date.now();
   s.onload = vis; document.head.appendChild(s);
+})();
+</script>
+
+<script>
+(function () {
+  /* Søk i boka: ?finn=ord markerer ordet på sida og går til første treff i delkapitlet i #. */
+  var q = new URLSearchParams(location.search).get('finn');
+  if (!q || !q.trim()) return;
+  q = q.trim();
+  function rx(q) {
+    var e = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+    try { return new RegExp('(?<![\\p{L}\\p{N}])' + e, 'giu'); } catch (x) { return new RegExp(e, 'gi'); }
+  }
+  function marker() {
+    var main = document.querySelector('main') || document.body, re = rx(q), merker = [];
+    var hopp = 'svg, script, style, button, .fasitbolk, .papirside, .lytt-stripe, .dkres, .ovdklenke, mark';
+    var w = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
+      if (!n.nodeValue.trim() || (n.parentElement && n.parentElement.closest(hopp))) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT; } });
+    var noder = []; while (w.nextNode()) noder.push(w.currentNode);
+    noder.forEach(function (n) {
+      var t = n.nodeValue, m, sist = 0, biter = []; re.lastIndex = 0;
+      while ((m = re.exec(t))) { biter.push([m.index, m.index + m[0].length]); if (!m[0].length) re.lastIndex++; }
+      if (!biter.length) return;
+      var f = document.createDocumentFragment();
+      biter.forEach(function (b) {
+        f.appendChild(document.createTextNode(t.slice(sist, b[0])));
+        var mk = document.createElement('mark'); mk.className = 'sokmerke'; mk.textContent = t.slice(b[0], b[1]);
+        f.appendChild(mk); merker.push(mk); sist = b[1];
+      });
+      f.appendChild(document.createTextNode(t.slice(sist)));
+      n.parentNode.replaceChild(f, n);
+    });
+    return merker;
+  }
+  function start() {
+    var merker = marker(), i = 0;
+    var bar = document.createElement('div'); bar.className = 'sokbar';
+    var tekst = document.createElement('span');
+    function knapp(t, f, tittel) { var b = document.createElement('button'); b.type = 'button'; b.textContent = t;
+      if (tittel) b.setAttribute('aria-label', tittel); b.addEventListener('click', f); return b; }
+    function gaa(n) {
+      if (!merker.length) return;
+      i = (n + merker.length) % merker.length;
+      merker.forEach(function (m) { m.classList.remove('aktiv'); });
+      var m = merker[i]; m.classList.add('aktiv');
+      var topp = 0; document.querySelectorAll('.topplinje').forEach(function (e) { topp = Math.max(topp, e.getBoundingClientRect().bottom); });
+      window.scrollTo(0, m.getBoundingClientRect().top + window.pageYOffset - topp - 90);
+      tekst.textContent = '«' + q + '»: treff ' + (i + 1) + ' av ' + merker.length;
+    }
+    bar.appendChild(tekst);
+    bar.appendChild(knapp('◀', function () { gaa(i - 1); }, 'Forrige treff'));
+    bar.appendChild(knapp('▶', function () { gaa(i + 1); }, 'Neste treff'));
+    var tilbake = document.createElement('a'); tilbake.href = '../sok.html?q=' + encodeURIComponent(q); tilbake.textContent = 'Til søket';
+    bar.appendChild(tilbake);
+    bar.appendChild(knapp('×', function () {
+      merker.forEach(function (m) { m.replaceWith(document.createTextNode(m.textContent)); }); bar.remove();
+    }, 'Lukk'));
+    document.body.appendChild(bar);
+    if (!merker.length) { tekst.textContent = 'Fant ikke «' + q + '» på denne sida.'; return; }
+    // første treff etter delkapitlet i adressen
+    var maal = location.hash && document.getElementById(location.hash.slice(1)), forst = 0;
+    if (maal) {
+      for (var j = 0; j < merker.length; j++) {
+        if (maal.compareDocumentPosition(merker[j]) & Node.DOCUMENT_POSITION_FOLLOWING) { forst = j; break; }
+      }
+    }
+    setTimeout(function () { gaa(forst); }, 60);
+    window.addEventListener('load', function () { setTimeout(function () { gaa(i); }, 60); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>
 

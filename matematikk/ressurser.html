@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ressurser — Matematikk modul 3 og 4</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=584a37c9">
+<link rel="stylesheet" href="../css/nett.css?v=aaca4f92">
 <style>
 .ressurskap { margin: 0 0 2rem; }
 .ressurskap h2 { border-left: 6px solid var(--kap); padding-left: .6rem; font-size: 1.25rem; }
@@ -18,6 +18,8 @@
 .ressurs .kilde { font-size: .82rem; color: #6b7280; }
 .ressurs.dk { border-top: 3px solid var(--kap); }
 .ingen { color: #6b7280; font-style: italic; }
+.ressurskap h3.dkgruppe { font-size: 1.05rem; color: var(--kap); margin: 1.2rem 0 .5rem; padding-bottom: .2rem; border-bottom: 2px solid #e3e7ee; }
+.ressurskap h3.dkgruppe:first-child { margin-top: .4rem; }
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@
   <div class="innmat">
     <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
     <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="bok.html">Bla i boka</a></nav>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a></nav>
     <div class="visningsbryter" role="group" aria-label="Velg visning">
       <button type="button" data-vis="auto">Automatisk</button>
       <button type="button" data-vis="pc">PC</button>
@@ -46,13 +48,29 @@
 <script>
 (function () {
   var FAG = "matematikk";
+  var DKNAVN = {"1.1": "Overslagsregning og hoderegning", "1.2": "Regning med hele tall og desimaltall", "1.3": "Divisjon", "1.4": "Tekstoppgaver med de fire regneartene", "1.5": "Regnerekkefølgen", "1.6": "Regning med negative tall", "1.7": "Blandede oppgaver", "2.1": "Regnerekkefølgen i lengre uttrykk", "2.2": "Parenteser inni parenteser", "2.3": "Brøkstreken som divisjonstegn", "2.4": "De tre regnelovene", "2.5": "Fra tekst til regneuttrykk", "2.6": "Regneuttrykk på kalkulator", "2.7": "Blandede oppgaver", "3.1": "Potenser", "3.2": "Kvadrattall og kvadratrot", "3.3": "Regneregler for potenser", "3.4": "Tierpotenser og standardform", "3.5": "Primtall og faktorisering", "3.6": "Blandede oppgaver", "4.1": "Hva en brøk er", "4.2": "Utvide og forkorte", "4.3": "Brøk, desimaltall og prosent", "4.4": "Addisjon og subtraksjon av brøk", "4.5": "Multiplikasjon og divisjon av brøk", "4.6": "Blandede oppgaver", "5.1": "Hva prosent er", "5.2": "Prosent av et tall", "5.3": "Hvor mange prosent utgjør delen?", "5.4": "Prosentvis økning og reduksjon", "5.5": "Vekstfaktor og gjentatt endring", "5.6": "Blandede oppgaver", "6.1": "Bokstaver i matematikk", "6.2": "Sette tall inn i uttrykk og formler", "6.3": "Trekke sammen like ledd", "6.4": "Gange ut parenteser", "6.5": "Mønstre og formler", "6.6": "Likninger", "6.7": "Blandede oppgaver", "7.1": "Måleenheter og måleredskaper", "7.2": "Lengde, masse og volum", "7.3": "Å gjøre om mellom enheter", "7.4": "Tid og tidsforskjeller", "7.5": "Fart, strekning og tid", "7.6": "Blandede oppgaver", "8.1": "Figurer og vinkler", "8.2": "Omkrets og areal", "8.3": "Sammensatte figurer", "8.4": "Sirkelen", "8.5": "Pytagoras' setning", "8.6": "Volum", "8.7": "Målestokk, forstørre og forminske", "8.8": "Blandede oppgaver", "9.1": "Å samle og ordne data", "9.2": "Diagrammer", "9.3": "Sentralmål", "9.4": "Variasjonsbredde og spredning", "9.5": "Å vurdere statistikk kritisk", "9.6": "Sannsynlighet", "9.7": "Blandede oppgaver", "10.1": "Funksjoner og grafer", "10.2": "Likningssett", "10.3": "Formlikhet", "10.4": "Lønn og skatt", "10.5": "Budsjett, sparing og lån", "10.6": "Valuta", "10.7": "Blandede oppgaver", "11.1": "Regneark — formler og cellereferanser", "11.2": "Regneark — HVIS og diagram", "11.3": "GeoGebra", "11.4": "Scratch", "11.5": "Python", "11.6": "Blandede oppgaver"};
   function vis() {
     var R = (window.RESSURSER && window.RESSURSER.liste) || [];
     document.querySelectorAll('.ressurskap').forEach(function (sek) {
       var k = Number(sek.dataset.kap), boks = sek.querySelector('.ressursliste');
       var mine = R.filter(function (r) { return r.fag === FAG && Number(r.kap || 0) === k && forElev(r); });
       if (!mine.length) { if (k === 0) sek.style.display = 'none'; else boks.innerHTML = '<p class="ingen">Ingen ressurser lagt inn ennå.</p>'; return; }
-      boks.innerHTML = mine.map(kort).join('');
+      // 23.10.2026: sortert etter delkapittel, med en overskrift for hvert delkapittel
+      function nokkel(r) { var d = String(r.dk || '').split('.'); return r.dk ? Number(d[1] || 0) : -1; }
+      mine = mine.map(function (r, i) { return [nokkel(r), i, r]; })
+                 .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; })
+                 .map(function (x) { return x[2]; });
+      var ut = '', forrige = null;
+      mine.forEach(function (r) {
+        var dk = r.dk || '';
+        if (dk !== forrige) {
+          if (forrige !== null) ut += '</div>';
+          ut += '<h3 class="dkgruppe">' + (dk ? esc(dk) + ' ' + esc(DKNAVN[dk] || '') : 'Hele kapitlet') + '</h3><div class="ressursliste">';
+          forrige = dk;
+        }
+        ut += kort(r);
+      });
+      boks.outerHTML = '<div class="ressursgrupper">' + ut + '</div></div>';
     });
   }
   // 23.10.2026: NotebookLM, Veilederkorpset og ressurser merket laerer: true vises bare i Lærerlab
@@ -68,7 +86,7 @@
   function kort(r) {
     var inn = innbygg(r.url || ''), vert = '', fil = /\.(mp4|webm|m4v)(\?|#|$)/i.test(r.url || '');
     try { vert = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) {}
-    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + (r.dk ? esc(r.dk) + ' ' : '') + esc(r.tittel) + '</h3>' +
+    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + esc(r.tittel) + '</h3>' +
       (inn ? '<div class="film"><iframe src="' + inn + '" loading="lazy" allowfullscreen title="' + esc(r.tittel) + '"></iframe></div>' :
        fil ? '<div class="film"><video controls preload="metadata" playsinline src=' + "'" + esc(r.url) + "'" + '></video></div>' : '') +
       (r.beskrivelse ? '<p>' + esc(r.beskrivelse) + '</p>' : '') +

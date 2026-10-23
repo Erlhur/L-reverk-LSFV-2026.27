@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ressurser — Naturfag modul 3 og 4</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=584a37c9">
+<link rel="stylesheet" href="../css/nett.css?v=aaca4f92">
 <style>
 .ressurskap { margin: 0 0 2rem; }
 .ressurskap h2 { border-left: 6px solid var(--kap); padding-left: .6rem; font-size: 1.25rem; }
@@ -18,6 +18,8 @@
 .ressurs .kilde { font-size: .82rem; color: #6b7280; }
 .ressurs.dk { border-top: 3px solid var(--kap); }
 .ingen { color: #6b7280; font-style: italic; }
+.ressurskap h3.dkgruppe { font-size: 1.05rem; color: var(--kap); margin: 1.2rem 0 .5rem; padding-bottom: .2rem; border-bottom: 2px solid #e3e7ee; }
+.ressurskap h3.dkgruppe:first-child { margin-top: .4rem; }
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@
   <div class="innmat">
     <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
     <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-    <nav><a href="../index.html">Forsiden</a><a href="index.html">Naturfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a></nav>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Naturfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a></nav>
     <div class="visningsbryter" role="group" aria-label="Velg visning">
       <button type="button" data-vis="auto">Automatisk</button>
       <button type="button" data-vis="pc">PC</button>
@@ -46,13 +48,29 @@
 <script>
 (function () {
   var FAG = "naturfag";
+  var DKNAVN = {"1.1": "Økologi — levende og ikke-levende", "1.2": "Slik undersøker vi naturen", "1.3": "Produsenter, konsumenter og nedbrytere", "1.4": "Næringskjeder og næringsnett", "1.5": "Kretsløp i naturen", "1.6": "Tilpasning og samspill", "1.7": "Livet i elva", "1.8": "Biologisk mangfold og naturressurser", "1.9": "Mennesker påvirker naturen", "1.10": "Fordypning", "1.11": "Blandede oppgaver", "1.12": "Modul 4: utdypende tekster og oppgaver", "2.1": "Alt levende er bygget av celler", "2.2": "Cellens deler", "2.3": "Celler med ulike oppgaver", "2.4": "Stoffer inn og ut av cellen", "2.5": "Fotosyntese og celleånding", "2.6": "Organsystemene i kroppen", "2.7": "Pusten", "2.8": "Fordøyelsen og næringsstoffene", "2.9": "Blodet og hjertet", "2.10": "Pust, fordøyelse og blod samarbeider", "2.11": "Fordypning", "2.12": "Blandede oppgaver", "2.13": "Modul 4: utdypende tekster og oppgaver", "3.1": "Hva er naturvitenskapelig kunnskap?", "3.2": "Et godt spørsmål og en hypotese", "3.3": "Variabler og rettferdige forsøk", "3.4": "Måle og registrere", "3.5": "Presentere resultater", "3.6": "Feilkilder og usikkerhet", "3.7": "Konklusjon og forsøksrapport", "3.8": "Kilder og kildekritikk", "3.9": "Slik blir ny kunnskap til", "3.10": "Fordypning", "3.11": "Blandede oppgaver", "3.12": "Modul 4: utdypende tekster og oppgaver", "4.1": "Arter og grupper", "4.2": "Variasjon — arv og miljø", "4.3": "Darwin og det naturlige utvalget", "4.4": "Bevis for evolusjon", "4.5": "Livets historie", "4.6": "DNA, gener og kromosomer", "4.7": "Slik går egenskaper i arv", "4.8": "Genteknologi — muligheter og dilemmaer", "4.9": "Fordypning", "4.10": "Blandede oppgaver", "4.11": "Modul 4: utdypende tekster og oppgaver", "5.1": "Stoffer og egenskaper", "5.2": "Fast stoff, væske og gass", "5.3": "Rene stoffer og blandinger", "5.4": "Atomer og molekyler", "5.5": "Periodesystemet", "5.6": "Kjemiske reaksjoner", "5.7": "Syrer og baser", "5.8": "HMS og faremerking", "5.9": "Avfall og forurensing", "5.10": "Fordypning", "5.11": "Blandede oppgaver", "5.12": "Modul 4: utdypende tekster og oppgaver", "6.1": "Hva er helse?", "6.2": "Bakterier, virus og andre smittestoffer", "6.3": "Smitte og smittevern", "6.4": "Immunforsvaret", "6.5": "Vaksiner og folkehelse", "6.6": "Kosthold og helse", "6.7": "Rus, legemidler og miljøgifter", "6.8": "Livsfaser", "6.9": "Seksualitet, grenser og prevensjon", "6.10": "Fordypning", "6.11": "Blandede oppgaver", "6.12": "Modul 4: utdypende tekster og oppgaver", "7.1": "Hva er energi?", "7.2": "Energikjeder", "7.3": "Fornybare og ikke-fornybare energikilder", "7.4": "Elektrisitet og strømkretser", "7.5": "Elsikkerhet", "7.6": "Energibruk hjemme", "7.7": "Teknologi og oppfinnelser", "7.8": "Drivhuseffekten", "7.9": "Klimaendringer", "7.10": "Teknologi: løsninger og dilemmaer", "7.11": "Fordypning", "7.12": "Blandede oppgaver", "7.13": "Modul 4: utdypende tekster og oppgaver", "8.1": "Å skrive i naturfag", "8.2": "Modelltekst: forklarende tekst", "8.3": "Modelltekst: beskrivende tekst", "8.4": "Modelltekst: drøftende tekst", "8.5": "Prosjekt: et samfunnsaktuelt tema", "8.6": "Tverrfaglig prosjekt: bærekraftig utvikling", "8.7": "Tverrfaglig prosjekt: demokrati og medborgerskap", "8.8": "Tverrfaglig prosjekt: folkehelse og livsmestring", "8.9": "Slik forbereder du deg til eksamen", "8.10": "Eksamensoppgaver på tvers av kapitlene", "8.11": "Modul 4: utdypende tekster og oppgaver"};
   function vis() {
     var R = (window.RESSURSER && window.RESSURSER.liste) || [];
     document.querySelectorAll('.ressurskap').forEach(function (sek) {
       var k = Number(sek.dataset.kap), boks = sek.querySelector('.ressursliste');
       var mine = R.filter(function (r) { return r.fag === FAG && Number(r.kap || 0) === k && forElev(r); });
       if (!mine.length) { if (k === 0) sek.style.display = 'none'; else boks.innerHTML = '<p class="ingen">Ingen ressurser lagt inn ennå.</p>'; return; }
-      boks.innerHTML = mine.map(kort).join('');
+      // 23.10.2026: sortert etter delkapittel, med en overskrift for hvert delkapittel
+      function nokkel(r) { var d = String(r.dk || '').split('.'); return r.dk ? Number(d[1] || 0) : -1; }
+      mine = mine.map(function (r, i) { return [nokkel(r), i, r]; })
+                 .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; })
+                 .map(function (x) { return x[2]; });
+      var ut = '', forrige = null;
+      mine.forEach(function (r) {
+        var dk = r.dk || '';
+        if (dk !== forrige) {
+          if (forrige !== null) ut += '</div>';
+          ut += '<h3 class="dkgruppe">' + (dk ? esc(dk) + ' ' + esc(DKNAVN[dk] || '') : 'Hele kapitlet') + '</h3><div class="ressursliste">';
+          forrige = dk;
+        }
+        ut += kort(r);
+      });
+      boks.outerHTML = '<div class="ressursgrupper">' + ut + '</div></div>';
     });
   }
   // 23.10.2026: NotebookLM, Veilederkorpset og ressurser merket laerer: true vises bare i Lærerlab
@@ -68,7 +86,7 @@
   function kort(r) {
     var inn = innbygg(r.url || ''), vert = '', fil = /\.(mp4|webm|m4v)(\?|#|$)/i.test(r.url || '');
     try { vert = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) {}
-    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + (r.dk ? esc(r.dk) + ' ' : '') + esc(r.tittel) + '</h3>' +
+    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + esc(r.tittel) + '</h3>' +
       (inn ? '<div class="film"><iframe src="' + inn + '" loading="lazy" allowfullscreen title="' + esc(r.tittel) + '"></iframe></div>' :
        fil ? '<div class="film"><video controls preload="metadata" playsinline src=' + "'" + esc(r.url) + "'" + '></video></div>' : '') +
       (r.beskrivelse ? '<p>' + esc(r.beskrivelse) + '</p>' : '') +

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Søk i boka — Læringssenteret</title>
+<link rel="stylesheet" href="css/bok.css?v=9dc5bd88">
+<link rel="stylesheet" href="css/nett.css?v=aaca4f92">
+<style>
+body { background: #f4f6f9; }
+.soktopp { background: #123252; color: #fff; }
+.soktopp .innmat { max-width: 60rem; margin: 0 auto; padding: .8rem 1rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.soktopp a { color: #fff; text-decoration: none; font-weight: 700; }
+.soktopp nav { margin-left: auto; display: flex; gap: 1rem; flex-wrap: wrap; }
+.soktopp nav a { font-weight: 500; opacity: .9; }
+.sokside { max-width: 60rem; margin: 1.5rem auto 3rem; padding: 0 1rem; }
+.sokside h1 { color: #123252; margin: 0 0 .3rem; }
+.sokside .ingress { color: #5a6272; margin: 0 0 1rem; }
+.sokfelt { display: flex; gap: .5rem; }
+.sokfelt input { flex: 1; font: inherit; font-size: 1.15rem; padding: .7rem 1rem; border: 2px solid #b8c4d6; border-radius: 10px; }
+.sokfelt input:focus { outline: none; border-color: #1d4e89; }
+.fagvalg { display: flex; gap: .4rem; flex-wrap: wrap; margin: .8rem 0 1.2rem; }
+.fagvalg button { font: inherit; font-size: .92rem; padding: .3rem .8rem; border-radius: 999px; border: 1px solid #b8c4d6; background: #fff; cursor: pointer; }
+.fagvalg button[aria-pressed="true"] { background: #123252; color: #fff; border-color: #123252; }
+.sokinfo { color: #5a6272; margin: 0 0 1rem; }
+.sokfag h2 { font-size: 1.2rem; color: #123252; margin: 1.4rem 0 .6rem; }
+.treff { display: block; background: #fff; border: 1px solid #dde2ea; border-radius: 10px; padding: .7rem 1rem; margin: 0 0 .6rem; text-decoration: none; color: inherit; }
+.treff:hover { border-color: #1d4e89; box-shadow: 0 2px 10px rgba(18,50,82,.1); }
+.treff .hvor { font-weight: 700; color: #1d4e89; }
+.treff .antall { float: right; font-size: .85rem; color: #6b7280; }
+.treff .utdrag { margin: .3rem 0 0; color: #3a4252; font-size: .95rem; }
+.treff mark { background: #ffe58a; color: inherit; border-radius: 3px; }
+</style>
+</head>
+<body>
+<header class="soktopp"><div class="innmat">
+  <a href="index.html">Læringssenteret · for voksne, Ringerike</a>
+  <nav><a href="matematikk/index.html">Matematikk</a><a href="naturfag/index.html">Naturfag</a><a href="samfunnsfag/index.html">Samfunnsfag</a></nav>
+</div></header>
+<main class="sokside">
+  <h1>Søk i boka</h1>
+  <p class="ingress">Skriv et ord, for eksempel <em>FN</em> eller <em>prosent</em>. Trykk på et treff for å gå rett dit i boka.</p>
+  <div class="sokfelt"><input type="search" id="q" placeholder="Skriv et ord" autocomplete="off" aria-label="Søkeord"></div>
+  <div class="fagvalg" role="group" aria-label="Velg fag"><button type="button" data-fag="">Alle fag</button><button type="button" data-fag="matematikk">Matematikk</button><button type="button" data-fag="naturfag">Naturfag</button><button type="button" data-fag="samfunnsfag">Samfunnsfag</button></div>
+  <p class="sokinfo" id="info" aria-live="polite"></p>
+  <div id="treff"></div>
+</main>
+<script src="matematikk/sok.js"></script>
+<script src="naturfag/sok.js"></script>
+<script src="samfunnsfag/sok.js"></script>
+<script>
+(function () {
+  var S = window.SOK || {}, felt = document.getElementById('q'), info = document.getElementById('info'), ut = document.getElementById('treff');
+  var p = new URLSearchParams(location.search), valgt = p.get('fag') || '';
+  if (!S[valgt]) valgt = '';
+  felt.value = p.get('q') || '';
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function rx(q) {
+    var e = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+    try { return new RegExp('(?<![\\p{L}\\p{N}])' + e, 'giu'); } catch (x) { return new RegExp(e, 'gi'); }
+  }
+  function utdrag(x, re) {
+    re.lastIndex = 0; var m = re.exec(x); if (!m) return '';
+    var a = Math.max(0, m.index - 70), b = Math.min(x.length, m.index + m[0].length + 110);
+    var s = (a > 0 ? '… ' : '') + x.slice(a, b) + (b < x.length ? ' …' : '');
+    return esc(s).replace(rx(m[0]), function (t) { return '<mark>' + t + '</mark>'; });
+  }
+  function sok() {
+    var q = felt.value.trim();
+    document.querySelectorAll('.fagvalg button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.fag === valgt ? 'true' : 'false'); });
+    var u = new URL(location.href); u.searchParams.set('q', q); if (valgt) u.searchParams.set('fag', valgt); else u.searchParams.delete('fag');
+    history.replaceState(null, '', u);
+    ut.innerHTML = '';
+    if (q.length < 2) { info.textContent = q ? 'Skriv minst to bokstaver.' : ''; return; }
+    var re = rx(q), html = '', totalt = 0, steder = 0;
+    Object.keys(S).forEach(function (f) {
+      if (valgt && f !== valgt) return;
+      var biter = '';
+      S[f].dk.forEach(function (d) {
+        re.lastIndex = 0; var n = (d.x.match(re) || []).length + (d.t.match(rx(q)) || []).length;
+        if (!n) return;
+        totalt += n; steder++;
+        biter += '<a class="treff" data-h="' + f + '/kapittel-' + d.k + '.html?finn=' + encodeURIComponent(q) + (d.a ? '#' + d.a : '') + '">' +
+          '<span class="antall">' + n + (n === 1 ? ' treff' : ' treff') + '</span><span class="hvor">' + esc(d.t) + '</span>' +
+          '<p class="utdrag">' + (utdrag(d.x, re) || esc(d.t)) + '</p></a>';
+      });
+      if (biter) html += '<section class="sokfag"><h2>' + esc(S[f].navn) + '</h2>' + biter + '</section>';
+    });
+    info.textContent = steder ? '«' + q + '» står ' + totalt + ' ganger, i ' + steder + (steder === 1 ? ' delkapittel.' : ' delkapitler.') : 'Fant ikke «' + q + '». Prøv et annet ord, eller bruk «Slå opp ord».';
+    ut.innerHTML = html;
+    ut.querySelectorAll('a[data-h]').forEach(function (a) { a.setAttribute('href', a.dataset.h); });
+  }
+  var t; felt.addEventListener('input', function () { clearTimeout(t); t = setTimeout(sok, 200); });
+  document.querySelectorAll('.fagvalg button').forEach(function (b) { b.addEventListener('click', function () { valgt = b.dataset.fag; sok(); felt.focus(); }); });
+  sok(); felt.focus();
+})();
+</script>
+</body>
+</html>

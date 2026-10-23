@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ressurser — Samfunnsfag modul 3 og 4</title>
 <link rel="stylesheet" href="../css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="../css/nett.css?v=584a37c9">
+<link rel="stylesheet" href="../css/nett.css?v=aaca4f92">
 <style>
 .ressurskap { margin: 0 0 2rem; }
 .ressurskap h2 { border-left: 6px solid var(--kap); padding-left: .6rem; font-size: 1.25rem; }
@@ -18,6 +18,8 @@
 .ressurs .kilde { font-size: .82rem; color: #6b7280; }
 .ressurs.dk { border-top: 3px solid var(--kap); }
 .ingen { color: #6b7280; font-style: italic; }
+.ressurskap h3.dkgruppe { font-size: 1.05rem; color: var(--kap); margin: 1.2rem 0 .5rem; padding-bottom: .2rem; border-bottom: 2px solid #e3e7ee; }
+.ressurskap h3.dkgruppe:first-child { margin-top: .4rem; }
 </style>
 </head>
 <body>
@@ -25,7 +27,7 @@
   <div class="innmat">
     <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
     <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-    <nav><a href="../index.html">Forsiden</a><a href="index.html">Samfunnsfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a></nav>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Samfunnsfag</a><a href="interaktiv.html">Øv</a><a href="ressurser.html" aria-current='page'>Ressurser</a><a href="ordliste.html">Ordliste</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a></nav>
     <div class="visningsbryter" role="group" aria-label="Velg visning">
       <button type="button" data-vis="auto">Automatisk</button>
       <button type="button" data-vis="pc">PC</button>
@@ -46,13 +48,29 @@
 <script>
 (function () {
   var FAG = "samfunnsfag";
+  var DKNAVN = {"1.1": "Hva er en kilde?", "1.2": "Å finne informasjon", "1.3": "Kildekritikk: avsender, formål og relevans", "1.4": "TONE – fire spørsmål før du stoler på noe", "1.5": "Fakta, meninger og vinkling", "1.6": "Falske nyheter og manipulasjon", "1.7": "Algoritmer, filterbobler og ekkokamre", "1.8": "Digital dømmekraft: personvern og ansvar på nett", "1.9": "Å bruke kilder i eget arbeid", "1.10": "Fordypning", "1.11": "Blandede oppgaver", "1.12": "Modul 4: utdypende tekster og oppgaver", "2.1": "Hva er demokrati?", "2.2": "Maktfordeling: Stortinget, regjeringen og domstolene", "2.3": "Valg, parlamentarisme og regjering", "2.4": "Politiske partier og verdier", "2.5": "Kommune, fylke og å delta i demokratiet", "2.6": "Likeverd og likestilling i demokratiet", "2.7": "Velferdsstaten", "2.8": "Styresett i verden", "2.9": "Menneskerettigheter og internasjonale avtaler", "2.10": "1814 – nye tanker og en ny grunnlov", "2.11": "Fra bondesamfunn til industrisamfunn", "2.12": "1905 og mellomkrigstiden", "2.13": "Krig og okkupasjon 1940–1945", "2.14": "Gjenreisning, olje og velferd", "2.15": "Innvandring og et mangfoldig Norge", "2.16": "Fordypning", "2.17": "Blandede oppgaver", "2.18": "Modul 4: utdypende tekster og oppgaver", "3.1": "Kultur, normer og kulturminner", "3.2": "Identitet – røtter og føtter", "3.3": "Mangfold – muligheter og utfordringer", "3.4": "Kjønn, kjønnsroller og identitet", "3.5": "Grensesetting, samtykke og negativ sosial kontroll", "3.6": "Samene – et urfolk", "3.7": "Fornorsking og samenes rettigheter", "3.8": "Nasjonale minoriteter", "3.9": "Fordypning", "3.10": "Blandede oppgaver", "3.11": "Modul 4: utdypende tekster og oppgaver", "4.1": "Arbeid, kompetanse og jobbsøking", "4.2": "Lønn, skatt og lønnsslipp", "4.3": "Arbeidsmiljøloven – rettigheter og plikter", "4.4": "Fagforeninger og partene i arbeidslivet", "4.5": "Regler, lover og konsekvenser av brudd", "4.6": "Teknologi og omveltninger i arbeidslivet", "4.7": "Norsk økonomi og verden", "4.8": "Utdanning og veien videre", "4.9": "Fordypning", "4.10": "Blandede oppgaver", "4.11": "Modul 4: utdypende tekster og oppgaver", "5.1": "Norges geografi", "5.2": "Verdens geografi – klima og levesett", "5.3": "Fra jegere til byfolk – livsgrunnlag og bosetting", "5.4": "Hvorfor mennesker flytter og flykter", "5.5": "Levekår, levestandard og livskvalitet", "5.6": "Hvorfor finnes det rike og fattige land?", "5.7": "Bærekraftig utvikling", "5.8": "Klima og klimatiltak", "5.9": "Tiltak og interessekonflikter", "5.10": "Fordypning", "5.11": "Blandede oppgaver", "5.12": "Modul 4: utdypende tekster og oppgaver", "6.1": "Hva er en konflikt?", "6.2": "Å håndtere og løse konflikter", "6.3": "Krig og konflikt i verden i dag", "6.4": "Én konflikt – flere fortellinger", "6.5": "Fordommer, diskriminering og rasisme", "6.6": "Utenforskap og inkludering – hva kan vi gjøre?", "6.7": "Holocaust", "6.8": "Folkemord etter holocaust", "6.9": "Radikalisering, terror og forebygging", "6.10": "Fordypning", "6.11": "Blandede oppgaver", "6.12": "Modul 4: utdypende tekster og oppgaver", "7.1": "Å skrive i samfunnsfag", "7.2": "Forklarende tekst", "7.3": "Drøftende tekst", "7.4": "Refleksjonstekst", "7.5": "Å drøfte egne og andres tekster", "7.6": "Prosjekt: «Mitt samfunn, mine valg»", "7.7": "Standpunkt og eksamen", "7.8": "Repetisjon og temakobling", "7.9": "Modul 4: utdypende tekster og oppgaver"};
   function vis() {
     var R = (window.RESSURSER && window.RESSURSER.liste) || [];
     document.querySelectorAll('.ressurskap').forEach(function (sek) {
       var k = Number(sek.dataset.kap), boks = sek.querySelector('.ressursliste');
       var mine = R.filter(function (r) { return r.fag === FAG && Number(r.kap || 0) === k && forElev(r); });
       if (!mine.length) { if (k === 0) sek.style.display = 'none'; else boks.innerHTML = '<p class="ingen">Ingen ressurser lagt inn ennå.</p>'; return; }
-      boks.innerHTML = mine.map(kort).join('');
+      // 23.10.2026: sortert etter delkapittel, med en overskrift for hvert delkapittel
+      function nokkel(r) { var d = String(r.dk || '').split('.'); return r.dk ? Number(d[1] || 0) : -1; }
+      mine = mine.map(function (r, i) { return [nokkel(r), i, r]; })
+                 .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; })
+                 .map(function (x) { return x[2]; });
+      var ut = '', forrige = null;
+      mine.forEach(function (r) {
+        var dk = r.dk || '';
+        if (dk !== forrige) {
+          if (forrige !== null) ut += '</div>';
+          ut += '<h3 class="dkgruppe">' + (dk ? esc(dk) + ' ' + esc(DKNAVN[dk] || '') : 'Hele kapitlet') + '</h3><div class="ressursliste">';
+          forrige = dk;
+        }
+        ut += kort(r);
+      });
+      boks.outerHTML = '<div class="ressursgrupper">' + ut + '</div></div>';
     });
   }
   // 23.10.2026: NotebookLM, Veilederkorpset og ressurser merket laerer: true vises bare i Lærerlab
@@ -68,7 +86,7 @@
   function kort(r) {
     var inn = innbygg(r.url || ''), vert = '', fil = /\.(mp4|webm|m4v)(\?|#|$)/i.test(r.url || '');
     try { vert = new URL(r.url).hostname.replace(/^www\./, ''); } catch (e) {}
-    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + (r.dk ? esc(r.dk) + ' ' : '') + esc(r.tittel) + '</h3>' +
+    return '<div class="ressurs' + (r.dk ? ' dk' : '') + '"><h3>' + esc(r.tittel) + '</h3>' +
       (inn ? '<div class="film"><iframe src="' + inn + '" loading="lazy" allowfullscreen title="' + esc(r.tittel) + '"></iframe></div>' :
        fil ? '<div class="film"><video controls preload="metadata" playsinline src=' + "'" + esc(r.url) + "'" + '></video></div>' : '') +
       (r.beskrivelse ? '<p>' + esc(r.beskrivelse) + '</p>' : '') +

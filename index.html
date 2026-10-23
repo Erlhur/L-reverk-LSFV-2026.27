@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nettsted i matematikk, naturfag og samfunnsfag for voksne</title>
 <link rel="stylesheet" href="css/bok.css?v=9dc5bd88">
-<link rel="stylesheet" href="css/nett.css?v=584a37c9">
+<link rel="stylesheet" href="css/nett.css?v=aaca4f92">
 <style>
 body { background: #f4f2ee; }
 .fs-topp { position: absolute; inset: 0 0 auto 0; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem clamp(1rem, 4vw, 3rem); color: #fff; }
@@ -86,7 +86,8 @@ body { background: #f4f2ee; }
   .fk-bilde img { transition: none; }
 }
 @media (max-width: 700px) {
-  .fs-topp nav { display: none; }
+  .fs-topp nav a { display: none; }
+  .fs-topp nav a.fs-sok { display: inline; }
   .fs-helt { min-height: 70vh; }
   .fs-innhold { padding-bottom: 7rem; }
 }
@@ -95,7 +96,7 @@ body { background: #f4f2ee; }
 <body>
 <header class="fs-topp">
   <a class="merke" href="index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-  <nav><a href="matematikk/index.html">Matematikk</a><a href="naturfag/index.html">Naturfag</a><a href="samfunnsfag/index.html">Samfunnsfag</a></nav>
+  <nav><a href="matematikk/index.html">Matematikk</a><a href="naturfag/index.html">Naturfag</a><a href="samfunnsfag/index.html">Samfunnsfag</a><a class="fs-sok" href="sok.html">Søk i boka</a></nav>
 </header>
 
 <section class="fs-helt">
