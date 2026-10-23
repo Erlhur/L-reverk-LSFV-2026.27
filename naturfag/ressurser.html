@@ -50,11 +50,13 @@
     var R = (window.RESSURSER && window.RESSURSER.liste) || [];
     document.querySelectorAll('.ressurskap').forEach(function (sek) {
       var k = Number(sek.dataset.kap), boks = sek.querySelector('.ressursliste');
-      var mine = R.filter(function (r) { return r.fag === FAG && Number(r.kap || 0) === k; });
+      var mine = R.filter(function (r) { return r.fag === FAG && Number(r.kap || 0) === k && forElev(r); });
       if (!mine.length) { if (k === 0) sek.style.display = 'none'; else boks.innerHTML = '<p class="ingen">Ingen ressurser lagt inn ennå.</p>'; return; }
       boks.innerHTML = mine.map(kort).join('');
     });
   }
+  // 23.10.2026: NotebookLM, Veilederkorpset og ressurser merket laerer: true vises bare i Lærerlab
+  function forElev(r) { return !r.laerer && !/notebooklm|notebook\.google|veilederkorpset/i.test(r.url || ''); }
   function esc(s) { return String(s || '').replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function innbygg(u) {
     var m = u.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{11})/);

@@ -2629,6 +2629,7 @@ function rutenett() {
     bokser.forEach(function (b) {
       var mine = R.filter(function (r) {
         if (r.fag !== FAG || r.dk !== b.dataset.dk || !r.url || sett[r.url + '|' + r.dk]) return false;
+        if (r.laerer || /notebooklm|notebook\.google|veilederkorpset/i.test(r.url)) return false;  // bare i Lærerlab
         sett[r.url + '|' + r.dk] = 1; return true;
       });
       if (!mine.length) return;
