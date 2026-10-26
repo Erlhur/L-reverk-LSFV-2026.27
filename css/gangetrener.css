@@ -1,0 +1,41 @@
+/* Gangetrener (26.10.2026) */
+.gt-valg { margin: 1rem 0; }
+.gt-etikett { font-weight: 700; margin: 0 0 .4rem; }
+.gt-tabeller { display: flex; flex-wrap: wrap; gap: .35rem; }
+.gt-tabeller button { min-width: 48px; min-height: 48px; font: inherit; font-weight: 800; font-size: 1.1rem; border: 2px solid #d6d9de; background: #fff; border-radius: 10px; cursor: pointer; }
+.gt-tabeller button.paa { background: var(--kap, #1d4e89); border-color: var(--kap, #1d4e89); color: #fff; }
+.gt-tabeller .gt-alle { font-size: .9rem; font-weight: 600; padding: 0 .7rem; }
+.gt-bryter { display: block; margin: .7rem 0; }
+.gt-moduser { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .5rem; margin-top: .6rem; }
+.gt-moduser button { text-align: left; font: inherit; border: 2px solid #d6d9de; background: #fff; border-radius: 12px; padding: .6rem .8rem; cursor: pointer; }
+.gt-moduser button b { display: block; font-size: 1.05rem; }
+.gt-moduser button span { color: #5a6272; font-size: .88rem; }
+.gt-moduser button.paa { border-color: var(--kap, #1d4e89); background: #eef3fa; }
+.gt-flate { background: #fff; border: 1px solid #e1e4e9; border-radius: 14px; padding: 1.2rem; min-height: 360px; }
+.gt-info { color: #5a6272; margin: 0 0 .6rem; text-align: center; }
+.gt-klokke-linje { display: flex; justify-content: center; gap: 2rem; font-size: 1.2rem; color: #1f2430; }
+.gt-stykke { display: flex; justify-content: center; align-items: center; gap: .4em; font-size: clamp(2.4rem, 8vw, 4rem); font-weight: 800; margin: .8rem 0; font-variant-numeric: tabular-nums; }
+.gt-stykke .op { color: var(--kap, #1d4e89); }
+.gt-stykke input { width: 3.2em; font: inherit; text-align: center; border: 3px solid #c6ccd6; border-radius: 12px; padding: 0 .1em; }
+.gt-stykke input:focus { outline: none; border-color: var(--kap, #1d4e89); }
+.gt-stykke input.rett { border-color: #22a35a; background: #dcf3e3; }
+.gt-stykke input.galt { border-color: #d64545; background: #fde2e1; }
+.gt-tilbake { min-height: 2.6em; text-align: center; font-size: 1.1rem; max-width: 560px; margin: 0 auto .5rem; }
+.gt-tilbake .rett { color: #157a3e; font-weight: 800; }
+.gt-tilbake .galt { color: #b42318; font-weight: 800; }
+.gt-tast { display: grid; grid-template-columns: repeat(3, 1fr); gap: .45rem; max-width: 300px; margin: 0 auto; }
+.gt-tast button { font: inherit; font-size: 1.6rem; font-weight: 700; min-height: 60px; border: 2px solid #d6d9de; background: #fff; border-radius: 12px; cursor: pointer; touch-action: manipulation; }
+.gt-tast button:active { background: #eef3fa; }
+.gt-tast .ok { background: var(--kap, #1d4e89); color: #fff; border-color: var(--kap, #1d4e89); font-size: 1.2rem; }
+.gt-start { text-align: center; padding: 1.5rem 0; font-size: 1.1rem; }
+.gt-stor { font-size: 4rem; font-weight: 800; color: var(--kap, #1d4e89); }
+.gt-k { font: inherit; font-weight: 700; border: 2px solid #d6d9de; background: #fff; border-radius: 10px; padding: .6rem 1.4rem; cursor: pointer; min-height: 48px; }
+.gt-k.hoved { background: var(--kap, #1d4e89); border-color: var(--kap, #1d4e89); color: #fff; font-size: 1.15rem; }
+.gt-fremdrift { height: 10px; background: #eef1f5; border-radius: 5px; overflow: hidden; max-width: 560px; margin: 0 auto .5rem; }
+.gt-fremdrift div { height: 100%; background: #22a35a; transition: width .3s; }
+.gt-rutenett { display: grid; grid-template-columns: repeat(11, minmax(28px, 1fr)); gap: 3px; max-width: 560px; margin: 0 auto 1rem; }
+.gt-rutenett .hj { display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--kap, #1d4e89); }
+.gt-celle { aspect-ratio: 1; font: inherit; font-weight: 600; border: 1px solid #dfe3ea; background: #f4f5f7; border-radius: 6px; cursor: pointer; padding: 0; font-size: clamp(.7rem, 2.4vw, 1rem); }
+.gt-celle.gronn { background: #c9ecd5; border-color: #8fd1a7; }
+.gt-celle.gul { background: #fff1c2; border-color: #f0d27a; }
+.gt-celle.rod { background: #fbd3d1; border-color: #eba19d; }
