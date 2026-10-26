@@ -2,10 +2,6 @@
    Ordene ligger i <script type="application/json" id="ordtrening"> på sida: [{o, f, s, dk, t}] */
 (function () {
   'use strict';
-  const rot = document.getElementById('ot');
-  if (!rot) return;
-  const ALLE = JSON.parse(document.getElementById('ordtrening').textContent);
-  const KAP = rot.dataset.kap, FAG = rot.dataset.fag;
   const SPRAK = { ar: 'Arabisk', ti: 'Tigrinja', ckb: 'Sorani', prs: 'Dari', ps: 'Pashto' };
   const RTL = { ar: 1, ckb: 1, prs: 1, ps: 1 };
   const LAGER = 'fov_ordtrening_v1';
@@ -17,10 +13,6 @@
   const enkelt = o => { const k = kjerne(o).toLowerCase(); return /^[a-zæøåé]{3,13}$/.test(k) ? k.replace('é', 'e') : null; };
   const kort = f => f.length > 90 ? f.slice(0, f.lastIndexOf(' ', 88)) + ' …' : f;
 
-  let dkValg = 'alle', modus = 'kort', sprak = lager.sprak || '';
-  const harSprak = ALLE.some(x => x.t);
-  const dkListe = [...new Set(ALLE.map(x => x.dk))];
-  const ord = () => dkValg === 'alle' ? ALLE : ALLE.filter(x => x.dk === dkValg);
 
   // ---------------------------------------------------------------- lyd
   let stemme = null;
@@ -31,25 +23,42 @@
     speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = 'nb-NO'; if (stemme) u.voice = stemme; u.rate = .85; speechSynthesis.speak(u);
   }
   const lydKnapp = t => window.speechSynthesis ? `<button class="ot-lyd" data-si="${esc(t)}" title="Hør ordet" aria-label="Hør ordet">🔊</button>` : '';
+  let aktivRot = null;
+
+  // ---------------------------------------------------------------- én ordtrening (hel side, oppsummering eller ett delkapittel)
+  function monter(rot, ALLE, valg = {}) {
+  const KAP = valg.kap, FAG = valg.fag, kompakt = !!valg.kompakt;
+  const $ = id => rot.querySelector('#' + id);
+  let dkValg = valg.dk || 'alle', modus = valg.modus || 'kort', sprak = lager.sprak || '';
+  const harSprak = ALLE.some(x => x.t);
+  const dkListe = [...new Set(ALLE.map(x => x.dk))];
+  const ord = () => dkValg === 'alle' ? ALLE : ALLE.filter(x => x.dk === dkValg);
+  rot.classList.add('ot-rot');
   rot.addEventListener('click', e => { const b = e.target.closest('[data-si]'); if (b) { e.stopPropagation(); si(b.dataset.si); } });
+  rot.addEventListener('pointerdown', () => { aktivRot = rot; });
+  rot.addEventListener('focusin', () => { aktivRot = rot; });
 
   // ---------------------------------------------------------------- ramme
   const MODUS = [['kort', '🃏', 'Ordkort'], ['quiz', '⏱', 'Quiz'], ['fyll', '✎', 'Fyll inn'], ['memory', '◫', 'Memory'],
     ['ordsok', '🔍', 'Ordsøk'], ['kryss', '✚', 'Kryssord'], ['gjett', '?', 'Gjett ordet']];
   rot.innerHTML = `
     <div class="ot-valg">
+      ${kompakt ? `<p class="ot-overskrift">${valg.tittel || 'Ordtrening'} <span>· ${ALLE.length} fagord</span></p>` : ''}
       <div class="ot-moduser" role="tablist">${MODUS.map(([m, i, t]) => `<button role="tab" data-m="${m}"><span class="i">${i}</span>${t}</button>`).join('')}</div>
       <div class="ot-filter">
-        <label>Delkapittel <select id="otDk"><option value="alle">Hele kapittel ${esc(KAP)} (${ALLE.length} ord)</option>${dkListe.map(d => `<option value="${esc(d)}">${esc(d)} (${ALLE.filter(x => x.dk === d).length} ord)</option>`).join('')}</select></label>
+        ${valg.dk ? '' : `<label>Delkapittel <select id="otDk"><option value="alle">Hele kapittel ${esc(KAP)} (${ALLE.length} ord)</option>${dkListe.map(d => `<option value="${esc(d)}">${esc(d)} (${ALLE.filter(x => x.dk === d).length} ord)</option>`).join('')}</select></label>`}
         ${harSprak ? `<label>Mitt språk <select id="otSprak"><option value="">Bare norsk</option>${Object.entries(SPRAK).map(([k, v]) => `<option value="${k}" ${k === sprak ? 'selected' : ''}>${v}</option>`).join('')}</select></label>` : ''}
       </div>
     </div>
-    <div class="ot-flate" id="otFlate"></div>`;
-  const flate = document.getElementById('otFlate');
-  rot.querySelectorAll('[data-m]').forEach(b => b.onclick = () => { modus = b.dataset.m; start(); try { history.replaceState(null, '', '#' + modus); } catch (e) {} });
-  document.getElementById('otDk').onchange = e => { dkValg = e.target.value; start(); };
-  const sp = document.getElementById('otSprak'); if (sp) sp.onchange = e => { sprak = e.target.value; lager.sprak = sprak; lagre(); start(); };
-  const fraHash = location.hash.slice(1); if (MODUS.some(m => m[0] === fraHash)) modus = fraHash;
+    <div class="ot-flate" id="otFlate" ${kompakt ? 'hidden' : ''}></div>`;
+  const flate = $('otFlate');
+  rot.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+    if (kompakt && !flate.hidden && modus === b.dataset.m) { stoppTimer(); flate.hidden = true; b.classList.remove('paa'); return; }   // trykk igjen: lukk
+    modus = b.dataset.m; flate.hidden = false; start();
+    if (valg.hash) try { history.replaceState(null, '', '#' + modus); } catch (e) {}
+  });
+  if ($('otDk')) $('otDk').onchange = e => { dkValg = e.target.value; if (!flate.hidden) start(); };
+  const sp = $('otSprak'); if (sp) sp.onchange = e => { sprak = e.target.value; lager.sprak = sprak; lagre(); if (!flate.hidden) start(); };
   let stoppTimer = () => {};
   function start() {
     stoppTimer(); stoppTimer = () => {};
@@ -61,7 +70,7 @@
   const oversett = x => sprak && x.t && x.t[sprak] ? `<p class="ot-overs" dir="${RTL[sprak] ? 'rtl' : 'ltr'}" lang="${sprak}">${esc(x.t[sprak])}</p>` : '';
   const ferdigBoks = (tittel, tekst, igjen) => {
     flate.innerHTML = `<div class="ot-ferdig"><div class="stor">🎉</div><h3>${tittel}</h3>${tekst}<button class="ot-k hoved" id="otIgjen">Prøv igjen</button></div>`;
-    document.getElementById('otIgjen').onclick = igjen;
+    $('otIgjen').onclick = igjen;
   };
 
   // ---------------------------------------------------------------- 1 ordkort
@@ -84,9 +93,9 @@
       const k = flate.querySelector('.ot-kort');
       const snu = () => { snudd = !snudd; k.classList.toggle('snudd', snudd); };
       k.onclick = snu; k.onkeydown = e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); snu(); } };
-      document.getElementById('kForr').onclick = () => { i = Math.max(0, i - 1); snudd = false; tegn(); };
-      document.getElementById('kKan').onclick = () => { kan++; i++; snudd = false; tegn(); };
-      document.getElementById('kOv').onclick = () => { bunke.push(x); i++; snudd = false; tegn(); };
+      $('kForr').onclick = () => { i = Math.max(0, i - 1); snudd = false; tegn(); };
+      $('kKan').onclick = () => { kan++; i++; snudd = false; tegn(); };
+      $('kOv').onclick = () => { bunke.push(x); i++; snudd = false; tegn(); };
     };
     tegn();
   }
@@ -116,7 +125,7 @@
         <p class="ot-spm">${tekst}</p>
         <div class="ot-alt">${q.valg.map((v, j) => `<button class="ot-svar" data-j="${j}">${esc(q.typ === 'forkl' ? kort(v.f) : v.o)}</button>`).join('')}</div>
         <p class="ot-tilbake" id="qMelding" aria-live="polite"></p>`;
-      const t0 = Date.now(), bar = document.getElementById('qTid');
+      const t0 = Date.now(), bar = $('qTid');
       let ferdig = false;
       const tick = setInterval(() => { const g = (Date.now() - t0) / 1000; bar.style.width = Math.max(0, 100 - g / TID * 100) + '%'; if (g >= TID) svar(-1); }, 100);
       stoppTimer = () => clearInterval(tick);
@@ -124,8 +133,8 @@
         if (ferdig) return; ferdig = true; clearInterval(tick);
         const rett = j >= 0 && q.valg[j] === q.x, g = (Date.now() - t0) / 1000;
         flate.querySelectorAll('.ot-svar').forEach((b, k) => { b.disabled = true; if (q.valg[k] === q.x) b.classList.add('rett'); else if (k === j) b.classList.add('galt'); });
-        if (rett) { riktige++; rekke++; const p = 100 + Math.round(Math.max(0, TID - g) / TID * 100) + (rekke > 2 ? 25 : 0); poeng += p; document.getElementById('qMelding').innerHTML = `Riktig! +${p} poeng`; }
-        else { rekke = 0; bom.push(q.x); document.getElementById('qMelding').innerHTML = j < 0 ? 'Tiden er ute.' : `Ikke helt. <strong>${esc(q.x.o)}</strong>: ${esc(q.x.f)}`; }
+        if (rett) { riktige++; rekke++; const p = 100 + Math.round(Math.max(0, TID - g) / TID * 100) + (rekke > 2 ? 25 : 0); poeng += p; $('qMelding').innerHTML = `Riktig! +${p} poeng`; }
+        else { rekke = 0; bom.push(q.x); $('qMelding').innerHTML = j < 0 ? 'Tiden er ute.' : `Ikke helt. <strong>${esc(q.x.o)}</strong>: ${esc(q.x.f)}`; }
         const neste = document.createElement('button'); neste.className = 'ot-k hoved'; neste.textContent = i + 1 < spm.length ? 'Neste →' : 'Se resultatet';
         neste.onclick = () => { i++; vis(); }; flate.appendChild(neste); neste.focus();
       }
@@ -177,7 +186,7 @@
     let apne = [], funnet = 0, trekk = 0, laast = false; const t0 = Date.now();
     flate.innerHTML = `<p class="ot-teller">Finn ordet og forklaringen som hører sammen. <span id="mInfo"></span></p>
       <div class="ot-memory">${kort.map((k, i) => `<button class="mk" data-i="${i}" aria-label="Kort ${i + 1}"><span class="bak">?</span><span class="fram ${k.type}">${esc(k.t)}</span></button>`).join('')}</div>`;
-    const info = document.getElementById('mInfo');
+    const info = $('mInfo');
     const oppdater = () => { info.textContent = `Forsøk: ${trekk} · Par: ${funnet} av ${par.length}`; }; oppdater();
     flate.querySelectorAll('.mk').forEach(b => b.onclick = () => {
       if (laast || b.classList.contains('apen') || b.classList.contains('funnet')) return;
@@ -223,7 +232,7 @@
       <label class="ot-bryter"><input type="checkbox" id="osVansk" ${vanskelig ? 'checked' : ''}> Vanskelig (baklengs og bare forklaringer)</label></p>
       <div class="ot-ordsok"><div class="ot-gitter" style="--n:${N}">${G.map((rad, r) => rad.map((b, c) => `<span data-r="${r}" data-c="${c}">${b}</span>`).join('')).join('')}</div>
       <ul class="ot-ordliste">${plass.map((p, i) => `<li data-i="${i}">${vanskelig ? esc(kort(p.y.x.f)) : esc(p.y.w.toUpperCase())}</li>`).join('')}</ul></div>`;
-    document.getElementById('osVansk').onchange = e => { lager.ordsokVanskelig = e.target.checked; lagre(); ordsok(o); };
+    $('osVansk').onchange = e => { lager.ordsokVanskelig = e.target.checked; lagre(); ordsok(o); };
     const gitter = flate.querySelector('.ot-gitter'), celle = (r, c) => gitter.children[r * N + c];
     let start = null, funnet = 0;
     const linje = (a, b) => {
@@ -335,13 +344,13 @@
     });
     flate.querySelectorAll('.ot-ledetekst li').forEach(li => li.onclick = () => { const p = K.plass[li.dataset.p]; retning = p.dir; const x = fra(p.r + ',' + p.c); if (x) x.focus(); });
     const melding = flate.querySelector('.ot-tilbake');
-    document.getElementById('kSjekk').onclick = () => {
+    $('kSjekk').onclick = () => {
       let rett = 0, tom = 0;
       inn.forEach(i => { i.classList.remove('rett', 'galt'); if (!i.value) { tom++; return; } if (i.value === fasit[i.dataset.k]) { rett++; i.classList.add('rett'); } else i.classList.add('galt'); });
       if (rett === inn.length) { melding.textContent = 'Alt er riktig! 🎉'; } else melding.textContent = `${rett} av ${inn.length} bokstaver er riktige${tom ? `, ${tom} er tomme` : ''}.`;
     };
-    document.getElementById('kHint').onclick = () => { const t = inn.filter(i => i.value !== fasit[i.dataset.k]); if (!t.length) return; const i = t[Math.floor(Math.random() * t.length)]; i.value = fasit[i.dataset.k]; i.classList.add('rett'); };
-    document.getElementById('kFasit').onclick = () => { inn.forEach(i => { i.value = fasit[i.dataset.k]; i.classList.remove('galt'); }); melding.textContent = 'Her er svaret. Trykk «Kryssord» for et nytt.'; };
+    $('kHint').onclick = () => { const t = inn.filter(i => i.value !== fasit[i.dataset.k]); if (!t.length) return; const i = t[Math.floor(Math.random() * t.length)]; i.value = fasit[i.dataset.k]; i.classList.add('rett'); };
+    $('kFasit').onclick = () => { inn.forEach(i => { i.value = fasit[i.dataset.k]; i.classList.remove('galt'); }); melding.textContent = 'Her er svaret. Trykk «Kryssord» for et nytt.'; };
   }
 
   // ---------------------------------------------------------------- 7 gjett ordet
@@ -370,12 +379,21 @@
         flate.querySelectorAll('[data-b]').forEach(b => b.onclick = () => gjettBokstav(b.dataset.b));
       };
       const gjettBokstav = b => { if (gjettet.has(b) || !liv) return; gjettet.add(b); if (!W.includes(b)) liv--; tegn(); };
-      const tast = e => { if (modus !== 'gjett') return; const b = e.key.toUpperCase(); if (/^[A-ZÆØÅ]$/.test(b) && !e.ctrlKey && !e.metaKey && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) gjettBokstav(b); };
+      const tast = e => { if (modus !== 'gjett' || flate.hidden || (aktivRot && aktivRot !== rot)) return; const b = e.key.toUpperCase(); if (/^[A-ZÆØÅ]$/.test(b) && !e.ctrlKey && !e.metaKey && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) gjettBokstav(b); };
       document.addEventListener('keydown', tast); stoppTimer = () => document.removeEventListener('keydown', tast);
       tegn();
     };
     runde();
   }
 
-  start();
+  if (!kompakt) start();
+  }
+
+  window.ORDTRENING = { monter };
+  const hel = document.getElementById('ot');
+  if (hel) {
+    const fraHash = location.hash.slice(1);
+    monter(hel, JSON.parse(document.getElementById('ordtrening').textContent),
+      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett'].includes(fraHash) ? fraHash : 'kort' });
+  }
 })();

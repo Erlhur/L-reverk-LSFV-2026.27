@@ -19,19 +19,12 @@
 "type": "tekst",
 "tekst": "I dette kapitlet"
 },
-"334f24059bc54d48": {
+"15f5d8f662d73432": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-1.html",
 "type": "tekst",
-"tekst": "Øv på skjerm60 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, seksti oppgaver du klikker og drar i. Du får svar med en gang."
-},
-"880df4ca70e9208e": {
-"fag": "matematikk",
-"side": "matematikk/kapittel-1.html",
-"type": "tekst",
-"tekst": "OrdtreningFagordene i kapitlet: ordkort, quiz, fyll inn, memory, ordsøk, kryssord og gjett ordet.",
-"tale": "Ordtrening. Fagordene i kapitlet: ordkort, quiz, fyll inn, memory, ordsøk, kryssord og gjett ordet."
+"tekst": "Øv på skjermOrdtrening og 60 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og seksti oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "87ec362df096695c": {
 "fag": "matematikk",
@@ -1498,12 +1491,12 @@
 "tekst": "Fire verktøy fra modul 4: den lineære funksjonen med startverdi og stigning, likningssettet som finner der to sammenhenger møtes, formlikhet — og økonomien du møter på lønnsslippen.",
 "tale": "Fire verktøy fra modul fire: den lineære funksjonen med startverdi og stigning, likningssettet som finner der to sammenhenger møtes, formlikhet — og økonomien du møter på lønnsslippen."
 },
-"30f513684f97a227": {
+"93023a688249c0a4": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-10.html",
 "type": "tekst",
-"tekst": "Øv på skjerm24 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjuefire oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 24 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tjuefire oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "bb3cb06d2489ab7a": {
 "fag": "matematikk",
@@ -2635,12 +2628,12 @@
 "type": "tekst",
 "tekst": "Fire verktøy med hvert sitt bruksområde: regneark til mange tall, GeoGebra til å se former og grafer, Scratch til å bygge et program av blokker, og Python til å skrive det som tekst."
 },
-"ab8536d4e7b047bf": {
+"1e655d0df3339727": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-11.html",
 "type": "tekst",
-"tekst": "Øv på skjerm21 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjueen oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 21 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tjueen oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "1293ec9f3d54847f": {
 "fag": "matematikk",
@@ -5929,12 +5922,12 @@
 "type": "tekst",
 "tekst": "Brøk kan bety en del av noe helt, en del av en mengde, eller et tall på tallinja — og den samme mengden kan skrives som brøk, desimaltall eller prosent."
 },
-"eee1b026d0e020b1": {
+"48606cf1f5dab4e7": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-4.html",
 "type": "tekst",
-"tekst": "Øv på skjerm22 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjueto oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 22 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tjueto oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "ad66fb0bb32cb720": {
 "fag": "matematikk",
@@ -10043,12 +10036,12 @@
 "tekst": "Fem verktøy i geometrien: vinkelsummen, formlene for omkrets og areal, sirkelen med π, Pytagoras' setning for rettvinklede trekanter, og volum som grunnflate ganger høyde.",
 "tale": "Fem verktøy i geometrien: vinkelsummen, formlene for omkrets og areal, sirkelen med pi, Pytagoras' setning for rettvinklede trekanter, og volum som grunnflate ganger høyde."
 },
-"c53f980eb3ef9d5f": {
+"7536e0c6f1351986": {
 "fag": "matematikk",
 "side": "matematikk/kapittel-8.html",
 "type": "tekst",
-"tekst": "Øv på skjerm25 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjuefem oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 25 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tjuefem oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "59433daccbdb9b5d": {
 "fag": "matematikk",
@@ -12313,12 +12306,12 @@
 "type": "tekst",
 "tekst": "Et økosystem har levende deler, som trær, elg og fisk, og ikke-levende deler, som lys, vann og stein. Alle påvirker hverandre."
 },
-"7e68ea7ca355ed22": {
+"1fae190f4137ad4f": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-1.html",
 "type": "tekst",
-"tekst": "Øv på skjerm83 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, åttitre oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 83 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og åttitre oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "a705f5fbb7924c55": {
 "fag": "naturfag",
@@ -17946,12 +17939,12 @@
 "type": "tekst",
 "tekst": "Forskere arbeider i en syklus: svaret på ett spørsmål fører ofte til nye spørsmål."
 },
-"8950509408c95058": {
+"322c98c11a0ebc09": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-3.html",
 "type": "tekst",
-"tekst": "Øv på skjerm18 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, atten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 18 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og atten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "bf1a8d26fed4fe37": {
 "fag": "naturfag",
@@ -20126,12 +20119,12 @@
 "type": "tekst",
 "tekst": "Finkene på Galápagos fikk Darwin til å tenke over hvordan arter endrer seg."
 },
-"5add2b41c16f63e4": {
+"97f6bf90b4c44642": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Øv på skjerm20 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tjue oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 20 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tjue oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "063bc54b418c6fd5": {
 "fag": "naturfag",
@@ -22353,12 +22346,12 @@
 "type": "tekst",
 "tekst": "Vann, karbondioksid, oksygen, metan og koksalt, vist som modeller av atomer."
 },
-"b5e2b7b11aebc42e": {
+"7a6132bb13f6ab47": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Øv på skjerm17 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, sytten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 17 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og sytten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "9934c616d3b8f8d3": {
 "fag": "naturfag",
@@ -24755,12 +24748,12 @@
 "type": "tekst",
 "tekst": "Kroppen har tre forsvarslinjer mot smittestoffer. Illustrasjon laget med KI."
 },
-"17f897fcab7f789e": {
+"9b2440613746ae13": {
 "fag": "naturfag",
 "side": "naturfag/kapittel-6.html",
 "type": "tekst",
-"tekst": "Øv på skjerm16 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, seksten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 16 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og seksten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "e4b1802343b93c16": {
 "fag": "naturfag",
@@ -36129,12 +36122,12 @@
 "tekst": "De 169 setene på Stortinget i perioden 2025–2029. Du lærer om valg og regjering i 2.3.",
 "tale": "De hundre og sekstini setene på Stortinget i perioden to tusen og tjuefem til to tusen og tjueni. Du lærer om valg og regjering i to punkt tre."
 },
-"5984c51e848a4084": {
+"cf4b92cbe82a5545": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-2.html",
 "type": "tekst",
-"tekst": "Øv på skjerm19 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, nitten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 19 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og nitten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "3e0712ef6ea8ea2a": {
 "fag": "samfunnsfag",
@@ -39555,12 +39548,12 @@
 "tekst": "Identitet har mange sider. Noe har vi fått, og noe velger vi selv. Du lærer mer i 3.2.",
 "tale": "Identitet har mange sider. Noe har vi fått, og noe velger vi selv. Du lærer mer i tre punkt to."
 },
-"b482300984e5b5e2": {
+"a3a547546625827f": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-3.html",
 "type": "tekst",
-"tekst": "Øv på skjerm13 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tretten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 13 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tretten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "dcb42c4bfd8dc69a": {
 "fag": "samfunnsfag",
@@ -41461,12 +41454,12 @@
 "tekst": "Arbeidstakerne, arbeidsgiverne og staten samarbeider. Du lærer mer om trepartssamarbeidet i 4.4.",
 "tale": "Arbeidstakerne, arbeidsgiverne og staten samarbeider. Du lærer mer om trepartssamarbeidet i fire punkt fire."
 },
-"ff6997d6744a12af": {
+"870b90584021926b": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-4.html",
 "type": "tekst",
-"tekst": "Øv på skjerm14 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, fjorten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 14 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og fjorten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "02ecaaa34d85c58f": {
 "fag": "samfunnsfag",
@@ -43281,12 +43274,12 @@
 "tekst": "Bærekraft handler om miljø, økonomi og det sosiale på samme tid. Du lærer mer i 5.7.",
 "tale": "Bærekraft handler om miljø, økonomi og det sosiale på samme tid. Du lærer mer i fem punkt sju."
 },
-"05bc3530e819bbbf": {
+"4ae265cf562508f1": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-5.html",
 "type": "tekst",
-"tekst": "Øv på skjerm15 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, femten oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 15 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og femten oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "44b85902eae70be8": {
 "fag": "samfunnsfag",
@@ -45219,12 +45212,12 @@
 "type": "tekst",
 "tekst": "Konflikter trappes ofte opp steg for steg. Jo tidligere noen griper inn, jo lettere er de å løse."
 },
-"d934b065d4c796ca": {
+"865d6b4f9d274cb1": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-6.html",
 "type": "tekst",
-"tekst": "Øv på skjerm12 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, tolv oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 12 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og tolv oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "8db75c526a922fc8": {
 "fag": "samfunnsfag",
@@ -47103,12 +47096,12 @@
 "tekst": "Oppgaveverbet forteller hva slags tekst du skal skrive. Du lærer mer i 7.1.",
 "tale": "Oppgaveverbet forteller hva slags tekst du skal skrive. Du lærer mer i sju punkt en."
 },
-"7412b000e4e55a89": {
+"d41c3fb6d821da49": {
 "fag": "samfunnsfag",
 "side": "samfunnsfag/kapittel-7.html",
 "type": "tekst",
-"tekst": "Øv på skjerm6 oppgaver du klikker og drar i. Du får svar med en gang.",
-"tale": "Øv på skjerm, seks oppgaver du klikker og drar i. Du får svar med en gang."
+"tekst": "Øv på skjermOrdtrening og 6 oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang.",
+"tale": "Øv på skjerm. Ordtrening og seks oppgaver du klikker og drar i, delt inn etter delkapittel. Du får svar med en gang."
 },
 "2a8a765a0a77d55a": {
 "fag": "samfunnsfag",

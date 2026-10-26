@@ -73,7 +73,7 @@
 .ot-bryter { display: block; margin-top: .4rem; font-size: .92rem; }
 /* kryssord */
 .ot-kryss { display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: flex-start; }
-.ot-kgitter { display: grid; grid-template-columns: repeat(var(--b), minmax(26px, 40px)); gap: 0; }
+.ot-kgitter { display: grid; grid-template-columns: repeat(var(--b), minmax(22px, 40px)); gap: 0; max-width: 100%; overflow-x: auto; padding: 1px; }
 .ot-kgitter .ot-blank { display: block; aspect-ratio: 1; }
 .ot-kgitter .ot-rute { display: block; width: 100%; position: relative; aspect-ratio: 1; border: 1.5px solid #1f2430; margin: -0.75px; background: #fff; }
 .ot-kgitter .ot-rute i { position: absolute; left: 2px; top: 0; font-size: .62rem; font-style: normal; color: #5a6272; pointer-events: none; }
@@ -96,3 +96,13 @@
 .ot-tastatur button { width: 46px; height: 46px; font: inherit; font-weight: 700; border: 1.5px solid #d6d9de; background: #fff; border-radius: 8px; cursor: pointer; }
 .ot-tastatur button:disabled { opacity: .55; cursor: default; }
 @media print { .ot-valg, .ot-flate { display: none; } }
+/* ordtrening inne i øvesidene (26.10.2026) */
+.otdk { background: #f6f8fb; border: 1px solid #e1e6ee; border-radius: 12px; padding: .7rem .9rem .8rem; margin: .6rem 0 1.2rem; }
+.otdk .ot-valg { margin: 0; }
+.otdk .ot-flate { margin-top: .7rem; }
+.otdk .ot-moduser button { min-height: 40px; padding: .35rem .75rem; font-size: .95rem; }
+.ot-overskrift { margin: 0 0 .5rem; font-weight: 800; color: var(--kap, #1d4e89); }
+.ot-overskrift span { font-weight: 600; color: #5a6272; }
+.ovdkoppg { font-size: 1.05rem; margin: .4rem 0 .2rem; color: #1f2430; }
+.ovopps .ovoppstekst { color: #5a6272; margin: .2rem 0 .6rem; }
+.ovhopp a.opps { background: #eef4ec; }

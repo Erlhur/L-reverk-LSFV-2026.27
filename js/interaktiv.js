@@ -1450,11 +1450,15 @@
       var hopp = lag('nav', 'ovhopp');
       hopp.setAttribute('aria-label', 'Hopp til delkapittel');
       mal.appendChild(hopp);
+      /* 26.10.2026: ordtrening først i hvert delkapittel, oppsummering til slutt (ordtrening.js) */
+      var ordAlle = (window.ORDTRENING && data.ord) || [];
       dkListe.forEach(function (dk) {
         var egne = data.aktiviteter.filter(function (d) { return d.dk === dk.nr; });
-        if (!egne.length) return;
+        var ordDk = ordAlle.filter(function (o) { return o.dk === dk.nr; });
+        if (ordDk.length < 2) ordDk = [];
+        if (!egne.length && !ordDk.length) return;
         var anker = prefiks + dk.nr.replace('.', '-');
-        var lenke = lag('a', null, '<b>' + dk.nr + '</b> <span>' + egne.length + '</span>');
+        var lenke = lag('a', null, '<b>' + dk.nr + '</b> <span>' + (egne.length || 'ord') + '</span>');
         lenke.href = '#' + anker;
         lenke.title = dk.tittel;
         hopp.appendChild(lenke);
@@ -1464,6 +1468,13 @@
         hodet.appendChild(lag('span', 'ovdknr', dk.nr));
         hodet.appendChild(lag('span', 'ovdktittel', vis(dk.tittel)));
         del.appendChild(hodet);
+        if (ordDk.length) {
+          var ot = lag('div', 'otdk');
+          del.appendChild(ot);
+          window.ORDTRENING.monter(ot, ordDk, { kap: data.kap, fag: data.fag, dk: dk.nr, kompakt: true, tittel: 'Ordtrening ' + dk.nr });
+        }
+        if (!egne.length) { mal.appendChild(del); return; }
+        if (ordDk.length) del.appendChild(lag('h3', 'ovdkoppg', 'Øveoppgaver ' + dk.nr));
         var deltall = lag('p', 'ovdktall', '0 av ' + egne.length + ' riktige');
         del.appendChild(deltall);
         egne.forEach(function (d, i) {
@@ -1477,6 +1488,22 @@
         });
         mal.appendChild(del);
       });
+      if (ordAlle.length >= 6) {
+        var oppsAnker = prefiks + 'oppsummering';
+        var oppsLenke = lag('a', 'opps', '<b>Oppsummering</b>');
+        oppsLenke.href = '#' + oppsAnker; hopp.appendChild(oppsLenke);
+        var opps = lag('section', 'ovdel ovopps');
+        opps.id = oppsAnker;
+        var oh = lag('h2', 'ovdk');
+        oh.appendChild(lag('span', 'ovdknr', '✓'));
+        oh.appendChild(lag('span', 'ovdktittel', 'Oppsummering · hele kapittel ' + (data.kap || '')));
+        opps.appendChild(oh);
+        opps.appendChild(lag('p', 'ovoppstekst', 'Øv på alle fagordene i kapitlet. Velg en øvelse, eller velg ett delkapittel.'));
+        var hel = lag('div', 'othel');
+        opps.appendChild(hel);
+        window.ORDTRENING.monter(hel, ordAlle, { kap: data.kap, fag: data.fag });
+        mal.appendChild(opps);
+      }
     } else {
       data.aktiviteter.forEach(function (d, i) {
         mal.appendChild(byggAktivitet(d, i + 1, meldFerdig));
