@@ -1,0 +1,86 @@
+/* Verktøy (GeoGebra, regneark, Python, blokker) – 26.10.2026 */
+:root { --bla: #123252; --kant: #d6d9de; --svak: #5a6272; --bak: #f4f5f7; --aksent: #1d4e89; --mork: #1f2430; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bak); color: var(--mork);
+  font-family: "Source Sans 3", "Segoe UI", system-ui, -apple-system, Arial, sans-serif; }
+body { display: flex; flex-direction: column; }
+.vtopp { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; padding: .55rem 1rem; background: var(--bla); color: #fff; }
+.vtopp a.hjem { color: #fff; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.vtopp nav { display: flex; flex-wrap: wrap; gap: .3rem; }
+.vtopp nav a { color: #dfe7f3; text-decoration: none; padding: .35rem .7rem; border-radius: 8px; font-size: .95rem; }
+.vtopp nav a[aria-current] { background: rgba(255,255,255,.18); color: #fff; font-weight: 700; }
+body.tavle .vtopp { display: none; }
+.vlinje { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; padding: .5rem .8rem; background: #fff; border-bottom: 1px solid var(--kant); }
+.vlinje .tittel { font-weight: 700; margin-right: .4rem; }
+button, select, input, textarea { font: inherit; }
+.vk { background: #fff; border: 1px solid var(--kant); border-radius: 8px; padding: .4rem .8rem; cursor: pointer; min-height: 40px; color: var(--mork); }
+.vk:hover { border-color: var(--aksent); }
+.vk.hoved { background: var(--aksent); border-color: var(--aksent); color: #fff; font-weight: 700; }
+.vk.paa { background: #e7eef8; border-color: var(--aksent); font-weight: 700; }
+.vk:disabled { opacity: .45; cursor: default; }
+.vlinje select { border: 1px solid var(--kant); border-radius: 8px; padding: .35rem .5rem; min-height: 40px; background: #fff; }
+.skille { width: 1px; align-self: stretch; background: var(--kant); margin: 0 .2rem; }
+.hint { color: var(--svak); font-size: .88rem; }
+.flate { flex: 1; min-height: 0; position: relative; }
+
+/* forsiden for verktøy */
+.vforside { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+.vforside h1 { color: var(--bla); margin: .2rem 0 .4rem; }
+.vforside .ingress { color: var(--svak); font-size: 1.05rem; max-width: 44rem; }
+.vkort { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-top: 1.2rem; }
+.vkort a { display: block; background: #fff; border: 1px solid var(--kant); border-radius: 12px; padding: 1rem 1.1rem; text-decoration: none; color: var(--mork); border-top: 5px solid var(--aksent); }
+.vkort a:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.vkort .ik { font-size: 1.8rem; display: block; }
+.vkort strong { display: block; font-size: 1.15rem; margin: .3rem 0; color: var(--bla); }
+.vkort span.om { color: var(--svak); font-size: .95rem; }
+
+/* regneark */
+.ark-formel { display: flex; gap: .4rem; align-items: center; padding: .4rem .8rem; background: #fff; border-bottom: 1px solid var(--kant); }
+.ark-formel .adr { min-width: 4.2rem; text-align: center; font-weight: 700; border: 1px solid var(--kant); border-radius: 6px; padding: .3rem; background: var(--bak); }
+.ark-formel input { flex: 1; border: 1px solid var(--kant); border-radius: 6px; padding: .4rem .6rem; font-family: ui-monospace, Menlo, Consolas, monospace; }
+.ark-rull { position: absolute; inset: 0; overflow: auto; background: #fff; }
+table.ark { border-collapse: collapse; table-layout: fixed; font-size: calc(15px * var(--zoom, 1)); user-select: none; -webkit-user-select: none; }
+table.ark th, table.ark td { border: 1px solid #d9dde3; height: calc(30px * var(--zoom, 1)); padding: 0 .35em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+table.ark th { background: #eef1f5; color: #4a5263; font-weight: 600; position: sticky; z-index: 2; text-align: center; }
+table.ark thead th { top: 0; }
+table.ark tbody th { left: 0; width: calc(46px * var(--zoom, 1)); }
+table.ark thead th:first-child { left: 0; z-index: 3; }
+table.ark col.c { width: calc(104px * var(--zoom, 1)); }
+table.ark td { cursor: cell; }
+table.ark td.tall { text-align: right; font-variant-numeric: tabular-nums; }
+table.ark td.feil { color: #b42318; font-weight: 600; }
+table.ark td.valgt { background: #dbe7fb; }
+table.ark td.aktiv { outline: 2px solid var(--aksent); outline-offset: -2px; background: #fff; }
+table.ark td.aktiv.valgt { background: #eef4fe; }
+table.ark th.valgt { background: #c9d8f0; color: var(--bla); }
+table.ark td input { width: 100%; height: 100%; border: 0; outline: 0; font: inherit; padding: 0; background: transparent; font-family: ui-monospace, Menlo, Consolas, monospace; }
+.diagram { position: absolute; right: 16px; bottom: 16px; width: min(560px, 90%); background: #fff; border: 1px solid var(--kant); border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.18); padding: .6rem; z-index: 5; }
+.diagram .topp { display: flex; gap: .4rem; align-items: center; margin-bottom: .3rem; }
+.diagram .topp strong { flex: 1; }
+.diagram canvas { width: 100%; height: 320px; display: block; }
+
+/* python og blokker */
+.kode-flate { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0; }
+.kode-flate > div { min-height: 0; display: flex; flex-direction: column; border-right: 1px solid var(--kant); }
+.redigering { flex: 1; min-height: 0; display: flex; background: #1e2430; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: calc(16px * var(--zoom, 1)); line-height: 1.5; overflow: auto; }
+.redigering .nr { padding: .6em .5em; color: #6b7690; text-align: right; user-select: none; white-space: pre; min-width: 2.6em; background: #181d27; }
+.redigering textarea { flex: 1; border: 0; outline: 0; resize: none; background: transparent; color: #e7ecf5; padding: .6em .7em; font: inherit; line-height: inherit; white-space: pre; overflow: hidden; tab-size: 4; min-height: 100%; }
+.utdata { flex: 1; min-height: 0; overflow: auto; background: #fff; padding: .7em .9em; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: calc(16px * var(--zoom, 1)); white-space: pre-wrap; word-break: break-word; }
+.utdata .feil { color: #b42318; }
+.utdata .info { color: var(--svak); font-style: italic; }
+.utdata .inn { display: inline-flex; gap: .3em; }
+.utdata .inn input { font: inherit; border: 1px solid var(--aksent); border-radius: 4px; padding: .1em .3em; min-width: 12em; }
+.panel-tittel { padding: .35rem .8rem; background: #eef1f5; font-weight: 700; font-size: .85rem; color: #4a5263; letter-spacing: .04em; text-transform: uppercase; display: flex; gap: .5rem; align-items: center; }
+.panel-tittel span { flex: 1; }
+.skilpadde { flex: 0 0 auto; background: #fff; border-top: 1px solid var(--kant); display: none; overflow: auto; }
+.skilpadde.vis { display: block; }
+.blokk-flate { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+#blokker { min-height: 0; }
+.pykode { flex: 1; min-height: 0; overflow: auto; margin: 0; padding: .6em .8em; background: #1e2430; color: #e7ecf5; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: calc(14px * var(--zoom, 1)); white-space: pre; }
+@media (max-width: 760px) {
+  .kode-flate, .blokk-flate { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+}
+
+/* GeoGebra */
+#ggb { position: absolute; inset: 0; }
+.ggb-melding { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--svak); font-size: 1.1rem; text-align: center; padding: 2rem; }

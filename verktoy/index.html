@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verktøy — Læringssenteret</title>
+<link rel="stylesheet" href="verktoy.css">
+</head>
+<body>
+<header class="vtopp"><a class="hjem" href="../index.html">← Læringssenteret</a><nav><a href="index.html" aria-current="page">Alle verktøy</a><a href="geogebra.html?app=graphing">GeoGebra</a><a href="regneark.html">Regneark</a><a href="python.html">Python</a><a href="blokker.html">Blokker</a></nav></header>
+<main class="vforside">
+  <h1>Verktøy</h1>
+  <p class="ingress">Verktøy du kan bruke i alle fag: tegn grafer og figurer, regn i regneark og lær å programmere.
+  Det du lager i regnearket og i programmeringen, blir lagret i nettleseren på maskinen du bruker.</p>
+  <div class="vkort">
+    <a href="geogebra.html?app=graphing"><span class="ik">📈</span><strong>Graftegner</strong><span class="om">Tegn grafer til funksjoner, finn skjæringspunkter og nullpunkter. (GeoGebra)</span></a>
+    <a href="geogebra.html?app=geometry"><span class="ik">📐</span><strong>Geometri</strong><span class="om">Konstruer trekanter, sirkler og vinkler, og mål lengder og areal. (GeoGebra)</span></a>
+    <a href="geogebra.html?app=cas"><span class="ik">x=</span><strong>CAS og likninger</strong><span class="om">Løs likninger og regn med bokstaver, steg for steg. (GeoGebra)</span></a>
+    <a href="regneark.html"><span class="ik">▦</span><strong>Regneark</strong><span class="om">Formler, summer, gjennomsnitt og diagram, som i Excel. Med eksempler: budsjett, handleliste og statistikk.</span></a>
+    <a href="python.html"><span class="ik">🐍</span><strong>Python</strong><span class="om">Skriv og kjør Python, også med skilpaddegrafikk (turtle). Med eksempler.</span></a>
+    <a href="blokker.html"><span class="ik">🧩</span><strong>Blokkprogrammering</strong><span class="om">Programmer med blokker, og se hvordan det blir i Python.</span></a>
+  </div>
+  <p class="hint" style="margin-top:2rem">GeoGebra hentes fra geogebra.org (gratis for skolebruk). Python kjøres med Skulpt (MIT-lisens), blokkene er Blockly (Apache 2.0).</p>
+</main>
+<script>if (/[?&]tavle=1/.test(location.search)) { document.body.classList.add('tavle');
+  document.querySelectorAll('a[href$=".html"], a[href*=".html?"]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('tavle', '1'); a.href = u.href; }); }</script>
+</body>
+</html>

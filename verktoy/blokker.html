@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blokkprogrammering — verktøy</title>
+<link rel="stylesheet" href="verktoy.css">
+</head>
+<body>
+<header class="vtopp"><a class="hjem" href="../index.html">← Læringssenteret</a><nav><a href="index.html">Alle verktøy</a><a href="geogebra.html?app=graphing">GeoGebra</a><a href="regneark.html">Regneark</a><a href="python.html">Python</a><a href="blokker.html" aria-current="page">Blokker</a></nav></header>
+<div class="vlinje">
+  <span class="tittel">Blokkprogrammering</span>
+  <button class="vk hoved" id="bKjor">▶ Kjør</button>
+  <button class="vk" id="bStopp" disabled>■ Stopp</button>
+  <span class="skille"></span>
+  <select id="bEksempel" aria-label="Eksempler"><option value="">Eksempler …</option>
+    <option value="hei">Hei og navn</option><option value="firkant">Skilpadde: firkant</option>
+    <option value="stjerne">Skilpadde: stjerne</option><option value="gange">Gangetabell</option></select>
+  <span class="skille"></span>
+  <button class="vk" id="bTilPython" title="Åpne koden i Python-verktøyet">Åpne som Python</button>
+  <button class="vk" id="bNy">Tøm</button>
+  <span class="hint">Dra blokker fra menyen til venstre. Programmet lagres i nettleseren.</span>
+</div>
+<div class="flate">
+  <div class="blokk-flate">
+    <div id="blokker"></div>
+    <div style="display:flex;flex-direction:column;min-height:0;border-left:1px solid var(--kant)">
+      <div class="panel-tittel"><span>Resultat</span></div>
+      <div class="utdata" id="bUt"><span class="info">Trykk ▶ Kjør.</span></div>
+      <div class="skilpadde" id="bSkilpadde"></div>
+      <div class="panel-tittel"><span>Slik ser det ut i Python</span></div>
+      <pre class="pykode" id="bPy"></pre>
+    </div>
+  </div>
+</div>
+<script src="lib/blockly/blockly_compressed.js"></script>
+<script src="lib/blockly/blocks_compressed.js"></script>
+<script src="lib/blockly/python_compressed.js"></script>
+<script src="lib/blockly/msg/nb.js"></script>
+<script src="lib/skulpt/skulpt.min.js"></script>
+<script src="lib/skulpt/skulpt-stdlib.js"></script>
+<script src="kjor.js"></script>
+<script>
+(function () {
+  const LAGER = 'fov_blokker_v1';
+  const PY = python.pythonGenerator, Order = python.Order;
+  PY.INDENT = '    ';
+  // ---- skilpaddeblokker
+  const F = '#2e7d32';
+  Blockly.common.defineBlocksWithJsonArray([
+    { type: 'sk_fram', message0: 'gå fram %1', args0: [{ type: 'input_value', name: 'N', check: 'Number' }], previousStatement: null, nextStatement: null, colour: F, tooltip: 'Skilpadda går fram så mange steg.' },
+    { type: 'sk_tilbake', message0: 'gå tilbake %1', args0: [{ type: 'input_value', name: 'N', check: 'Number' }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_snu', message0: 'snu %1 %2 grader', args0: [{ type: 'field_dropdown', name: 'R', options: [['til høyre', 'right'], ['til venstre', 'left']] }, { type: 'input_value', name: 'N', check: 'Number' }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_penn', message0: 'penn %1', args0: [{ type: 'field_dropdown', name: 'P', options: [['ned (tegn)', 'pendown'], ['opp (ikke tegn)', 'penup']] }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_farge', message0: 'farge %1', args0: [{ type: 'field_dropdown', name: 'F', options: [['svart', 'black'], ['rød', 'red'], ['blå', 'blue'], ['grønn', 'green'], ['oransje', 'orange'], ['lilla', 'purple'], ['gul', 'gold']] }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_tykk', message0: 'pennebredde %1', args0: [{ type: 'input_value', name: 'N', check: 'Number' }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_sirkel', message0: 'tegn sirkel med radius %1', args0: [{ type: 'input_value', name: 'N', check: 'Number' }], previousStatement: null, nextStatement: null, colour: F },
+    { type: 'sk_fart', message0: 'fart %1', args0: [{ type: 'field_dropdown', name: 'S', options: [['raskest', '0'], ['rask', '10'], ['middels', '6'], ['sakte', '3']] }], previousStatement: null, nextStatement: null, colour: F },
+  ]);
+  const t = 't';
+  PY.forBlock.sk_fram = (b, g) => `${t}.forward(${g.valueToCode(b, 'N', Order.NONE) || 0})\n`;
+  PY.forBlock.sk_tilbake = (b, g) => `${t}.backward(${g.valueToCode(b, 'N', Order.NONE) || 0})\n`;
+  PY.forBlock.sk_snu = (b, g) => `${t}.${b.getFieldValue('R')}(${g.valueToCode(b, 'N', Order.NONE) || 0})\n`;
+  PY.forBlock.sk_penn = b => `${t}.${b.getFieldValue('P')}()\n`;
+  PY.forBlock.sk_farge = b => `${t}.color("${b.getFieldValue('F')}")\n`;
+  PY.forBlock.sk_tykk = (b, g) => `${t}.pensize(${g.valueToCode(b, 'N', Order.NONE) || 1})\n`;
+  PY.forBlock.sk_sirkel = (b, g) => `${t}.circle(${g.valueToCode(b, 'N', Order.NONE) || 0})\n`;
+  PY.forBlock.sk_fart = b => `${t}.speed(${b.getFieldValue('S')})\n`;
+  const num = n => `<value name="N"><shadow type="math_number"><field name="NUM">${n}</field></shadow></value>`;
+  const TOOLBOX = `<xml>
+    <category name="Skilpadde" colour="${F}">
+      <block type="sk_fram">${num(100)}</block><block type="sk_tilbake">${num(50)}</block>
+      <block type="sk_snu"><field name="R">right</field>${num(90)}</block><block type="sk_snu"><field name="R">left</field>${num(90)}</block>
+      <block type="sk_sirkel">${num(50)}</block><block type="sk_penn"></block><block type="sk_farge"></block><block type="sk_tykk">${num(3)}</block><block type="sk_fart"></block>
+    </category>
+    <category name="Skriv og spør" colour="#5b67a5">
+      <block type="text_print"><value name="TEXT"><shadow type="text"><field name="TEXT">Hei!</field></shadow></value></block>
+      <block type="text"></block>
+      <block type="text_join"></block>
+      <block type="text_prompt_ext"><mutation type="TEXT"></mutation><value name="TEXT"><shadow type="text"><field name="TEXT">Hva heter du?</field></shadow></value></block>
+      <block type="text_prompt_ext"><mutation type="NUMBER"></mutation><field name="TYPE">NUMBER</field><value name="TEXT"><shadow type="text"><field name="TEXT">Skriv et tall</field></shadow></value></block>
+      <block type="text_length"></block>
+    </category>
+    <category name="Løkker" colour="#5ba55b">
+      <block type="controls_repeat_ext">${num(4).replace('name="N"', 'name="TIMES"')}</block>
+      <block type="controls_whileUntil"></block>
+      <block type="controls_for"><value name="FROM"><shadow type="math_number"><field name="NUM">1</field></shadow></value><value name="TO"><shadow type="math_number"><field name="NUM">10</field></shadow></value><value name="BY"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+    </category>
+    <category name="Hvis" colour="#5b80a5">
+      <block type="controls_if"></block><block type="controls_if"><mutation else="1"></mutation></block>
+      <block type="logic_compare"></block><block type="logic_operation"></block><block type="logic_boolean"></block>
+    </category>
+    <category name="Tall og regning" colour="#5b67a5">
+      <block type="math_number"></block><block type="math_arithmetic"></block><block type="math_round"></block>
+      <block type="math_random_int"><value name="FROM"><shadow type="math_number"><field name="NUM">1</field></shadow></value><value name="TO"><shadow type="math_number"><field name="NUM">6</field></shadow></value></block>
+      <block type="math_modulo"></block><block type="math_single"></block>
+    </category>
+    <category name="Variabler" colour="#a55b80" custom="VARIABLE"></category>
+    <category name="Funksjoner" colour="#995ba5" custom="PROCEDURE"></category>
+  </xml>`;
+  const ws = Blockly.inject('blokker', { toolbox: TOOLBOX, trashcan: true, sounds: false, zoom: { controls: true, wheel: true, startScale: 1.1 }, move: { scrollbars: true, drag: true, wheel: true }, media: 'lib/blockly/media/', grid: { spacing: 24, length: 3, colour: '#e5e8ee', snap: true } });
+  function pythonkode() {
+    let k = PY.workspaceToCode(ws);
+    if (/\bt\.(forward|backward|left|right|circle|pendown|penup|color|pensize|speed)\(/.test(k)) k = 'import turtle\nt = turtle.Turtle()\nt.shape("turtle")\n' + k;
+    return k;
+  }
+  const py = document.getElementById('bPy');
+  const lagre = () => { try { localStorage.setItem(LAGER, JSON.stringify(Blockly.serialization.workspaces.save(ws))); } catch (e) {} };
+  ws.addChangeListener(e => { if (e.isUiEvent) return; py.textContent = pythonkode(); lagre(); });
+  const EKS = {
+    hei: `<xml><variables><variable>navn</variable></variables><block type="variables_set" x="40" y="40"><field name="VAR">navn</field><value name="VALUE"><block type="text_prompt_ext"><mutation type="TEXT"></mutation><field name="TYPE">TEXT</field><value name="TEXT"><shadow type="text"><field name="TEXT">Hva heter du?</field></shadow></value></block></value><next><block type="text_print"><value name="TEXT"><block type="text_join"><mutation items="2"></mutation><value name="ADD0"><block type="text"><field name="TEXT">Hei, </field></block></value><value name="ADD1"><block type="variables_get"><field name="VAR">navn</field></block></value></block></value></block></next></block></xml>`,
+    firkant: `<xml><block type="sk_farge" x="40" y="40"><field name="F">blue</field><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_number"><field name="NUM">4</field></shadow></value><statement name="DO"><block type="sk_fram">${num(150)}<next><block type="sk_snu"><field name="R">left</field>${num(90)}</block></next></block></statement></block></next></block></xml>`,
+    stjerne: `<xml><block type="sk_farge" x="40" y="40"><field name="F">red</field><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_number"><field name="NUM">5</field></shadow></value><statement name="DO"><block type="sk_fram">${num(200)}<next><block type="sk_snu"><field name="R">right</field>${num(144)}</block></next></block></statement></block></next></block></xml>`,
+    gange: `<xml><variables><variable>i</variable></variables><block type="controls_for" x="40" y="40"><field name="VAR">i</field><value name="FROM"><shadow type="math_number"><field name="NUM">1</field></shadow></value><value name="TO"><shadow type="math_number"><field name="NUM">10</field></shadow></value><value name="BY"><shadow type="math_number"><field name="NUM">1</field></shadow></value><statement name="DO"><block type="text_print"><value name="TEXT"><block type="math_arithmetic"><field name="OP">MULTIPLY</field><value name="A"><shadow type="math_number"><field name="NUM">7</field></shadow></value><value name="B"><block type="variables_get"><field name="VAR">i</field></block></value></block></value></block></statement></block></xml>`,
+  };
+  function lastXml(x) { ws.clear(); Blockly.Xml.domToWorkspace(Blockly.utils.xml.textToDom(x), ws); }
+  let lagret = null; try { lagret = JSON.parse(localStorage.getItem(LAGER) || 'null'); } catch (e) {}
+  try { if (lagret) Blockly.serialization.workspaces.load(lagret, ws); else lastXml(EKS.firkant); } catch (e) { lastXml(EKS.firkant); }
+  py.textContent = pythonkode();
+  document.getElementById('bEksempel').onchange = e => { if (EKS[e.target.value]) lastXml(EKS[e.target.value]); e.target.value = ''; };
+  const kjorK = document.getElementById('bKjor'), stoppK = document.getElementById('bStopp');
+  kjorK.onclick = () => KJOR.kjor(pythonkode(), { ut: document.getElementById('bUt'), skilpadde: document.getElementById('bSkilpadde'),
+    start: () => { kjorK.disabled = true; stoppK.disabled = false; }, ferdig: () => { kjorK.disabled = false; stoppK.disabled = true; } });
+  stoppK.onclick = () => KJOR.stopp();
+  document.getElementById('bTilPython').onclick = () => {
+    try { localStorage.setItem('fov_python_v1', JSON.stringify({ kode: pythonkode(), zoom: 1 })); } catch (e) {}
+    location.href = 'python.html' + location.search;
+  };
+  let t0 = 0; const ny = document.getElementById('bNy');
+  ny.onclick = () => { if (Date.now() - t0 > 3000) { t0 = Date.now(); ny.textContent = 'Sikker?'; setTimeout(() => { ny.textContent = 'Tøm'; }, 3000); return; } ws.clear(); ny.textContent = 'Tøm'; };
+  window.addEventListener('resize', () => Blockly.svgResize(ws));
+})();
+</script>
+<script>if (/[?&]tavle=1/.test(location.search)) { document.body.classList.add('tavle');
+  document.querySelectorAll('a[href$=".html"], a[href*=".html?"]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('tavle', '1'); a.href = u.href; }); }</script>
+</body>
+</html>

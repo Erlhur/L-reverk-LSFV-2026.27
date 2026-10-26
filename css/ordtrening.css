@@ -1,0 +1,98 @@
+/* Ordtrening (26.10.2026) */
+.ot-valg { margin: 1rem 0 .8rem; }
+.ot-moduser { display: flex; flex-wrap: wrap; gap: .4rem; }
+.ot-moduser button { display: inline-flex; align-items: center; gap: .35rem; background: #fff; border: 1.5px solid #d6d9de; border-radius: 999px; padding: .45rem .9rem; font: inherit; font-weight: 600; cursor: pointer; color: #1f2430; min-height: 44px; }
+.ot-moduser button .i { font-size: 1.05rem; }
+.ot-moduser button.paa { background: var(--kap, #1d4e89); border-color: var(--kap, #1d4e89); color: #fff; }
+.ot-filter { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin-top: .7rem; color: #5a6272; font-size: .95rem; }
+.ot-filter select { font: inherit; border: 1px solid #d6d9de; border-radius: 8px; padding: .3rem .5rem; margin-left: .3rem; background: #fff; }
+.ot-flate { background: #fff; border: 1px solid #e1e4e9; border-radius: 14px; padding: 1.2rem; min-height: 340px; }
+.ot-tom { color: #5a6272; }
+.ot-teller { color: #5a6272; margin: 0 0 .8rem; font-size: .95rem; }
+.ot-rad { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-top: 1rem; }
+.ot-k { font: inherit; font-weight: 600; border: 1.5px solid #d6d9de; background: #fff; border-radius: 10px; padding: .55rem 1.1rem; cursor: pointer; min-height: 46px; margin-top: .6rem; }
+.ot-k.hoved { background: var(--kap, #1d4e89); border-color: var(--kap, #1d4e89); color: #fff; }
+.ot-k.ov { border-color: #e0a100; }
+.ot-k:disabled { opacity: .4; cursor: default; }
+.ot-lyd { border: 0; background: #eef2f7; border-radius: 50%; width: 44px; height: 44px; font-size: 1.2rem; cursor: pointer; margin: .4rem; }
+.ot-overs { font-size: 1.4rem; color: #5a6272; margin: .4rem 0 0; }
+/* ordkort */
+.ot-kort { position: relative; width: min(560px, 100%); height: 300px; margin: 0 auto; perspective: 1200px; cursor: pointer; outline: none; }
+.ot-kort .side { position: absolute; inset: 0; border-radius: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.4rem; text-align: center;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .45s; box-shadow: 0 6px 22px rgba(0,0,0,.12); border: 2px solid var(--kap, #1d4e89); background: #fff; }
+.ot-kort .bakside { transform: rotateY(180deg); background: #f7f9fc; }
+.ot-kort.snudd .forside { transform: rotateY(180deg); }
+.ot-kort.snudd .bakside { transform: rotateY(360deg); }
+.ot-kort .ord { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; color: var(--kap, #1d4e89); }
+.ot-kort .ord.liten { font-size: 1.3rem; }
+.ot-kort .forkl { font-size: 1.25rem; margin: .5rem 0; }
+.ot-kort .setn { color: #5a6272; font-style: italic; margin: .2rem 0; }
+.ot-kort:focus-visible .side { outline: 3px solid #f4c430; }
+/* quiz og fyll inn */
+.ot-quizlinje { display: flex; justify-content: space-between; color: #5a6272; font-weight: 600; }
+.ot-quizlinje .poeng { color: var(--kap, #1d4e89); }
+.ot-tid { height: 8px; background: #eef1f5; border-radius: 4px; overflow: hidden; margin: .5rem 0 1rem; }
+.ot-tid div { height: 100%; width: 100%; background: linear-gradient(90deg, #f59e0b, #22a35a); transition: width .1s linear; }
+.ot-spm { font-size: 1.35rem; margin: .4rem 0 1rem; }
+.ot-def { display: inline-block; font-size: 1.15rem; margin-top: .4rem; color: #1f2430; }
+.ot-def.stor { font-size: 1.3rem; display: block; text-align: center; }
+.ot-alt { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem; }
+.ot-svar { font: inherit; text-align: left; border: 2px solid #d6d9de; background: #fff; border-radius: 12px; padding: .8rem 1rem; cursor: pointer; min-height: 56px; font-size: 1.05rem; }
+.ot-svar:hover:not(:disabled) { border-color: var(--kap, #1d4e89); }
+.ot-svar.rett, .ot-gitter span.funnet, .ot-tastatur button.rett { background: #dcf3e3; border-color: #22a35a; }
+.ot-svar.galt, .ot-tastatur button.galt { background: #fde2e1; border-color: #d64545; }
+.ot-tilbake { min-height: 1.5em; margin: .8rem 0 0; font-size: 1.05rem; }
+.ot-setning { font-size: 1.45rem; line-height: 1.6; margin: .3rem 0 1rem; }
+.ot-setning .hull { display: inline-block; border-bottom: 3px solid var(--kap, #1d4e89); min-width: 4em; padding: 0 .2em; color: transparent; letter-spacing: .1em; }
+.ot-setning .hull.rett { color: #157a3e; border-color: #22a35a; letter-spacing: 0; }
+.ot-setning .hull.galt { color: #b42318; border-color: #d64545; letter-spacing: 0; }
+.ot-ferdig { text-align: center; padding: 1rem; }
+.ot-ferdig .stor { font-size: 3rem; }
+.ot-ferdig h3 { font-size: 1.6rem; margin: .3rem 0; color: var(--kap, #1d4e89); }
+.ot-bom { text-align: left; max-width: 600px; margin: 1rem auto; background: #fff8e6; border-radius: 10px; padding: .6rem 1rem; }
+.ot-bom ul { margin: .3rem 0; padding-left: 1.2rem; }
+/* memory */
+.ot-memory { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; }
+.mk { position: relative; min-height: 110px; border: 2px solid #d6d9de; border-radius: 12px; background: var(--kap, #1d4e89); cursor: pointer; font: inherit; padding: .5rem; color: #fff; }
+.mk .bak { font-size: 2rem; font-weight: 800; opacity: .6; }
+.mk .fram { display: none; color: #1f2430; }
+.mk .fram.ord { font-weight: 800; font-size: 1.15rem; color: var(--kap, #1d4e89); }
+.mk .fram.forkl { font-size: .92rem; }
+.mk.apen, .mk.funnet { background: #fff; }
+.mk.apen .bak, .mk.funnet .bak { display: none; }
+.mk.apen .fram, .mk.funnet .fram { display: block; }
+.mk.funnet { border-color: #22a35a; background: #dcf3e3; }
+/* ordsøk */
+.ot-ordsok { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: flex-start; }
+.ot-gitter { display: grid; grid-template-columns: repeat(var(--n), 1fr); width: min(560px, 100%); aspect-ratio: 1; border: 2px solid var(--kap, #1d4e89); border-radius: 8px; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
+.ot-gitter span { display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: clamp(.8rem, 2.6vw, 1.25rem); border: 1px solid #f0f2f5; cursor: pointer; }
+.ot-gitter span.merk { background: #ffe9a8; }
+.ot-ordliste { list-style: none; padding: 0; margin: 0; flex: 1; min-width: 200px; }
+.ot-ordliste li { padding: .35rem .6rem; border-radius: 6px; margin-bottom: .3rem; background: #f4f6f9; font-weight: 600; }
+.ot-ordliste li.funnet { text-decoration: line-through; color: #157a3e; background: #dcf3e3; }
+.ot-bryter { display: block; margin-top: .4rem; font-size: .92rem; }
+/* kryssord */
+.ot-kryss { display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: flex-start; }
+.ot-kgitter { display: grid; grid-template-columns: repeat(var(--b), minmax(26px, 40px)); gap: 0; }
+.ot-kgitter .ot-blank { display: block; aspect-ratio: 1; }
+.ot-kgitter .ot-rute { display: block; width: 100%; position: relative; aspect-ratio: 1; border: 1.5px solid #1f2430; margin: -0.75px; background: #fff; }
+.ot-kgitter .ot-rute i { position: absolute; left: 2px; top: 0; font-size: .62rem; font-style: normal; color: #5a6272; pointer-events: none; }
+.ot-kgitter input { width: 100%; height: 100%; border: 0; text-align: center; font: inherit; font-weight: 700; font-size: 1.15rem; text-transform: uppercase; background: transparent; padding: 0; }
+.ot-kgitter input:focus { background: #fff3c4; outline: none; }
+.ot-kgitter input.rett { background: #dcf3e3; }
+.ot-kgitter input.galt { background: #fde2e1; }
+.ot-ledetekst { flex: 1; min-width: 240px; }
+.ot-ledetekst h4 { margin: .2rem 0 .3rem; color: var(--kap, #1d4e89); }
+.ot-ledetekst ol { list-style: none; padding: 0; margin: 0 0 .8rem; }
+.ot-ledetekst li { padding: .3rem .4rem; border-radius: 6px; cursor: pointer; }
+.ot-ledetekst li:hover { background: #f1f4f8; }
+.ot-ledetekst .lengde { color: #8a92a2; }
+/* gjett ordet */
+.ot-gjett { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; margin: 1rem 0; }
+.ot-gjett span { width: 1.6em; height: 1.9em; border-bottom: 3px solid #1f2430; font-size: 1.7rem; font-weight: 800; text-align: center; }
+.ot-gjett span.mellom { border: 0; width: .8em; }
+.ot-liv { text-align: center; font-size: 1.3rem; margin: .2rem 0 .8rem; }
+.ot-tastatur { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem; max-width: 640px; margin: 0 auto; }
+.ot-tastatur button { width: 46px; height: 46px; font: inherit; font-weight: 700; border: 1.5px solid #d6d9de; background: #fff; border-radius: 8px; cursor: pointer; }
+.ot-tastatur button:disabled { opacity: .55; cursor: default; }
+@media print { .ot-valg, .ot-flate { display: none; } }

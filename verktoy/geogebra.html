@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoGebra — verktøy</title>
+<link rel="stylesheet" href="verktoy.css">
+</head>
+<body>
+<header class="vtopp"><a class="hjem" href="../index.html">← Læringssenteret</a><nav><a href="index.html">Alle verktøy</a><a href="geogebra.html?app=graphing" aria-current="page">GeoGebra</a><a href="regneark.html">Regneark</a><a href="python.html">Python</a><a href="blokker.html">Blokker</a></nav></header>
+<div class="vlinje" id="ggbValg">
+  <span class="tittel">GeoGebra</span>
+  <button class="vk" data-app="graphing">📈 Graftegner</button>
+  <button class="vk" data-app="geometry">📐 Geometri</button>
+  <button class="vk" data-app="classic">▦ Klassisk</button>
+  <button class="vk" data-app="cas">x= CAS</button>
+  <button class="vk" data-app="3d">🧊 3D</button>
+  <button class="vk" data-app="scientific">🖩 Kalkulator</button>
+  <span class="hint">GeoGebra hentes fra geogebra.org og krever internett. Gratis for skolebruk.</span>
+</div>
+<div class="flate"><div id="ggb"></div><div class="ggb-melding" id="ggbMelding">Laster GeoGebra …</div></div>
+<script>
+(function () {
+  const valg = new URLSearchParams(location.search).get('app') || 'graphing';
+  let app = ['graphing', 'geometry', 'classic', 'cas', '3d', 'scientific'].includes(valg) ? valg : 'graphing';
+  const flate = document.querySelector('.flate'), melding = document.getElementById('ggbMelding');
+  function start() {
+    document.querySelectorAll('[data-app]').forEach(b => b.classList.toggle('paa', b.dataset.app === app));
+    const holder = document.getElementById('ggb'); holder.innerHTML = '<div id="ggbApp"></div>';
+    melding.hidden = false; melding.textContent = 'Laster GeoGebra …';
+    const r = flate.getBoundingClientRect();
+    const p = { appName: app, width: Math.floor(r.width), height: Math.floor(r.height), language: 'nb',
+      showToolBar: true, showAlgebraInput: true, showMenuBar: true, showResetIcon: true, enableShiftDragZoom: true,
+      showFullscreenButton: true, scaleContainerClass: 'flate', allowStyleBar: true, useBrowserForJS: false,
+      appletOnLoad: () => { melding.hidden = true; } };
+    try { new GGBApplet(p, true).inject('ggbApp'); } catch (e) { melding.textContent = 'Fikk ikke startet GeoGebra. Sjekk internett.'; }
+  }
+  document.querySelectorAll('[data-app]').forEach(b => b.onclick = () => {
+    app = b.dataset.app; const u = new URL(location.href); u.searchParams.set('app', app); history.replaceState(null, '', u); start();
+  });
+  const s = document.createElement('script'); s.src = 'https://www.geogebra.org/apps/deployggb.js';
+  s.onload = start; s.onerror = () => { melding.textContent = 'Fikk ikke kontakt med geogebra.org. Sjekk internett.'; };
+  document.head.appendChild(s);
+  let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(start, 400); });
+})();
+</script>
+<script>if (/[?&]tavle=1/.test(location.search)) { document.body.classList.add('tavle');
+  document.querySelectorAll('a[href$=".html"], a[href*=".html?"]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('tavle', '1'); a.href = u.href; }); }</script>
+</body>
+</html>

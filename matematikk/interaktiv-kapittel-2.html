@@ -14,7 +14,7 @@
   <div class="innmat">
     <button class="menyknapp" onclick="document.querySelector('.sidemeny').classList.toggle('apen')">☰ Kapitler</button>
     <a class="merke" href="../index.html">Læringssenteret <span>· for voksne, Ringerike</span></a>
-    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a><a href="ressurser.html">Ressurser</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a></nav>
+    <nav><a href="../index.html">Forsiden</a><a href="index.html">Matematikk</a><a href="interaktiv.html" aria-current='page'>Øv</a><a href="ressurser.html">Ressurser</a><a href="bok.html">Bla i boka</a><a href="../sok.html">Søk</a><a href="../verktoy/index.html">Verktøy</a></nav>
     <div class="visningsbryter" role="group" aria-label="Velg visning">
       <button type="button" data-vis="auto">Automatisk</button>
       <button type="button" data-vis="pc">PC</button>
@@ -247,7 +247,7 @@ Slå det på i nettleseren, eller bruk oppgavene i kapitlet i stedet.</p></div><
   function blokker(rot) {
     var ut = [];
     rot.querySelectorAll('main p, main .regel, main .forsok, main .delmaal, main .kortfortalt, main .sammendrag, main ol.oppgaver > li').forEach(function (el) {
-      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke, .dkres')) return;
+      if (el.closest('.fasitseksjon, figure, table, nav, header, .lytt-stripe, .kapittelapning .kapittelnr, .ordkort, .varsel, .ovdklenke, .dkres, #ot')) return;
       if (el.tagName === 'P' && el.parentElement.closest('.regel, .forsok, .delmaal, ol.oppgaver')) return;
       if (el.classList && el.classList.contains('kapstart')) return;   // kapittelsammendraget leses avsnitt for avsnitt
       var t = tekstFra(el);
@@ -995,7 +995,7 @@ function rutenett() {
   var D = null, venter = [], kort = null, aktivMerke = null;
   var TEGN = 'A-Za-zÀ-ÖØ-öø-ÿ', ORDRE = new RegExp('[' + TEGN + ']+(?:-[' + TEGN + ']+)*', 'g');
   var ENDELSER = ['ene', 'ane', 'ens', 'ets', 'en', 'et', 'er', 'te', 'de', 'a', 'e', 't', 's', 'r'];
-  var IKKE = 'a, button, input, select, textarea, label, summary, svg, figure, [role=button], [contenteditable], ' +
+  var IKKE = '#ot, a, button, input, select, textarea, label, summary, svg, figure, [role=button], [contenteditable], ' +
     '.ordbrikke, .ordvalg, .lytt-knapp, .lytt-stripe, .papirside, .brikke, .brikkelager, .kurv, .valg, .sorterrad, ' +
     '.parrad, .merkpunkt, .merkfigur, .tallinje, .rutenett, .trekant, .brokfigur, .utforsk-panel, .ordhjelp, ' +
     '.ordforklaring, .ordhjelp-sok, .brok, .formel, code, pre';

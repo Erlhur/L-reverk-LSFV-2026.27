@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regneark — verktøy</title>
+<link rel="stylesheet" href="verktoy.css">
+</head>
+<body>
+<header class="vtopp"><a class="hjem" href="../index.html">← Læringssenteret</a><nav><a href="index.html">Alle verktøy</a><a href="geogebra.html?app=graphing">GeoGebra</a><a href="regneark.html" aria-current="page">Regneark</a><a href="python.html">Python</a><a href="blokker.html">Blokker</a></nav></header>
+<div class="vlinje">
+  <span class="tittel">Regneark</span>
+  <button class="vk" id="vAngre" title="Angre (Ctrl/⌘ + Z)">↶ Angre</button>
+  <button class="vk" id="vGjor" title="Gjør om">↷</button>
+  <span class="skille"></span>
+  <button class="vk" id="vKopier" title="Kopier (Ctrl/⌘ + C)">Kopier</button>
+  <button class="vk" id="vLim" title="Lim inn (Ctrl/⌘ + V)">Lim inn</button>
+  <button class="vk" id="vFyll" title="Kopier den øverste formelen nedover i det merkede området (Ctrl/⌘ + D)">Fyll ned ↓</button>
+  <button class="vk" id="vSum" title="Summer kolonnene du har merket">Σ Autosum</button>
+  <button class="vk" id="vSlett">Slett</button>
+  <span class="skille"></span>
+  <button class="vk hoved" id="vDiagram" title="Merk tall (gjerne med navn og overskrift) og lag diagram">📊 Diagram</button>
+  <select id="vEksempel" aria-label="Eksempler">
+    <option value="">Eksempler …</option>
+    <option value="handleliste">Handleliste</option>
+    <option value="budsjett">Månedsbudsjett</option>
+    <option value="statistikk">Statistikk (snitt, median, typetall)</option>
+    <option value="gangetabell">Gangetabell ($ i formler)</option>
+    <option value="lineaer">Verditabell y = 2x + 1</option>
+  </select>
+  <span class="skille"></span>
+  <button class="vk" id="vZut" title="Mindre">A−</button><button class="vk" id="vZinn" title="Større">A+</button>
+  <button class="vk" id="vCsv" title="Last ned som CSV (åpnes i Excel)">Last ned</button>
+  <button class="vk" id="vNy">Tøm arket</button>
+</div>
+<div class="ark-formel"><span class="adr" id="adr">A1</span><input id="formel" aria-label="Innhold i cellen" placeholder="Skriv tall, tekst eller en formel, f.eks. =SUMMER(B2:B5) eller =B2*C2" autocomplete="off" spellcheck="false"></div>
+<div class="flate">
+  <div class="ark-rull"></div>
+  <div class="diagram" id="diagram" hidden>
+    <div class="topp"><strong>Diagram</strong>
+      <select id="dType"><option value="stolpe">Stolpediagram</option><option value="linje">Linjediagram</option><option value="sektor">Sektordiagram</option></select>
+      <button class="vk" id="dLagre">Lagre bilde</button><button class="vk" id="dLukk">✕</button></div>
+    <canvas id="dCanvas"></canvas>
+  </div>
+  <div id="melding" class="diagram" hidden style="bottom:auto;top:16px;padding:.8rem 1rem"></div>
+</div>
+<div class="vlinje hint" style="border-top:1px solid var(--kant);border-bottom:0">
+  Formler starter med = . Bruk semikolon mellom tall i funksjoner: =AVRUND(B2/3;1). Funksjoner: SUMMER, GJENNOMSNITT, MEDIAN, TYPETALL, MIN, MAKS, ANTALL, AVRUND, ROT, POTENS, HVIS, VARIASJONSBREDDE. $ låser en rad eller kolonne når du kopierer: =$A2*B$1. Arket lagres i nettleseren.
+</div>
+<script src="regneark.js"></script>
+<script>if (/[?&]tavle=1/.test(location.search)) { document.body.classList.add('tavle');
+  document.querySelectorAll('a[href$=".html"], a[href*=".html?"]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('tavle', '1'); a.href = u.href; }); }</script>
+</body>
+</html>

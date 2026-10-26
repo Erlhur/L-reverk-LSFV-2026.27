@@ -1,0 +1,3 @@
+Skulpt (https://skulpt.org) – MIT-lisens. Python i nettleseren.
+Blockly (https://developers.google.com/blockly) – Apache License 2.0.
+GeoGebra lastes fra geogebra.org og ligger ikke her. Gratis for ikke-kommersiell bruk i skolen.

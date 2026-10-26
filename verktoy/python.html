@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Python — verktøy</title>
+<link rel="stylesheet" href="verktoy.css">
+</head>
+<body>
+<header class="vtopp"><a class="hjem" href="../index.html">← Læringssenteret</a><nav><a href="index.html">Alle verktøy</a><a href="geogebra.html?app=graphing">GeoGebra</a><a href="regneark.html">Regneark</a><a href="python.html" aria-current="page">Python</a><a href="blokker.html">Blokker</a></nav></header>
+<div class="vlinje">
+  <span class="tittel">Python</span>
+  <button class="vk hoved" id="pKjor" title="Kjør (Ctrl/⌘ + Enter)">▶ Kjør</button>
+  <button class="vk" id="pStopp" disabled>■ Stopp</button>
+  <span class="skille"></span>
+  <select id="pEksempel" aria-label="Eksempler"><option value="">Eksempler …</option></select>
+  <span class="skille"></span>
+  <button class="vk" id="pZut" title="Mindre">A−</button><button class="vk" id="pZinn" title="Større">A+</button>
+  <button class="vk" id="pLast">Last ned .py</button>
+  <button class="vk" id="pNy">Tøm</button>
+  <span class="hint">Koden lagres i nettleseren.</span>
+</div>
+<div class="flate">
+  <div class="kode-flate">
+    <div>
+      <div class="panel-tittel"><span>Kode</span></div>
+      <div class="redigering"><div class="nr" id="pNr">1</div><textarea id="pKode" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Python-kode"></textarea></div>
+    </div>
+    <div>
+      <div class="panel-tittel"><span>Resultat</span></div>
+      <div class="utdata" id="pUt"><span class="info">Trykk ▶ Kjør for å kjøre programmet.</span></div>
+      <div class="skilpadde" id="pSkilpadde"></div>
+    </div>
+  </div>
+</div>
+<script src="lib/skulpt/skulpt.min.js"></script>
+<script src="lib/skulpt/skulpt-stdlib.js"></script>
+<script src="kjor.js"></script>
+<script>
+(function () {
+  const LAGER = 'fov_python_v1';
+  const EKS = {
+    'Hei og navn': 'navn = input("Hva heter du? ")\nprint("Hei,", navn)\nprint("Navnet ditt har", len(navn), "bokstaver.")\n',
+    'Regning': 'pris = 249.90\nantall = 3\nsum = pris * antall\nprint("Til sammen:", sum, "kr")\nprint("Med 25 % rabatt:", round(sum * 0.75, 2), "kr")\n',
+    'Hvis (if)': 'alder = int(input("Hvor gammel er du? "))\nif alder >= 18:\n    print("Du er myndig.")\nelse:\n    print("Du er ikke myndig ennå.")\n',
+    'Løkke (for)': 'for i in range(1, 11):\n    print(i, "x 7 =", i * 7)\n',
+    'Løkke (while)': 'tall = 1\nwhile tall < 1000:\n    print(tall)\n    tall = tall * 2\n',
+    'Liste': 'temperaturer = [12, 15, 9, 18, 21, 14, 11]\nprint("Høyest:", max(temperaturer))\nprint("Lavest:", min(temperaturer))\nprint("Gjennomsnitt:", round(sum(temperaturer) / len(temperaturer), 1))\n',
+    'Gjett tallet': 'import random\nhemmelig = random.randint(1, 20)\nforsok = 0\ngjett = 0\nwhile gjett != hemmelig:\n    gjett = int(input("Gjett et tall fra 1 til 20: "))\n    forsok = forsok + 1\n    if gjett < hemmelig:\n        print("For lite!")\n    elif gjett > hemmelig:\n        print("For stort!")\nprint("Riktig! Du brukte", forsok, "forsøk.")\n',
+    'Funksjon': 'def areal_rektangel(lengde, bredde):\n    return lengde * bredde\n\nprint("Arealet er", areal_rektangel(5, 3), "m²")\nprint("Arealet er", areal_rektangel(12, 7.5), "m²")\n',
+    'Skilpadde: firkant': 'import turtle\nt = turtle.Turtle()\nt.shape("turtle")\nt.color("blue")\nt.pensize(3)\nfor i in range(4):\n    t.forward(150)\n    t.left(90)\n',
+    'Skilpadde: stjerne': 'import turtle\nt = turtle.Turtle()\nt.color("red")\nt.speed(0)\nfor i in range(5):\n    t.forward(200)\n    t.right(144)\n',
+    'Skilpadde: mønster': 'import turtle\nt = turtle.Turtle()\nt.speed(0)\nfarger = ["red", "orange", "green", "blue", "purple"]\nfor i in range(60):\n    t.color(farger[i % 5])\n    t.circle(80)\n    t.left(6)\n',
+  };
+  const kode = document.getElementById('pKode'), nr = document.getElementById('pNr'), ut = document.getElementById('pUt');
+  const sel = document.getElementById('pEksempel');
+  Object.keys(EKS).forEach(k => sel.insertAdjacentHTML('beforeend', `<option>${k}</option>`));
+  let zoom = 1;
+  try { const l = JSON.parse(localStorage.getItem(LAGER) || 'null'); if (l) { kode.value = l.kode || ''; zoom = l.zoom || 1; } } catch (e) {}
+  if (!kode.value) kode.value = EKS['Hei og navn'];
+  const lagre = () => { try { localStorage.setItem(LAGER, JSON.stringify({ kode: kode.value, zoom })); } catch (e) {} };
+  const tall = () => { const n = kode.value.split('\n').length; nr.textContent = Array.from({ length: n }, (_, i) => i + 1).join('\n'); kode.style.height = 'auto'; kode.style.height = kode.scrollHeight + 'px'; };
+  document.body.style.setProperty('--zoom', zoom);
+  kode.addEventListener('input', () => { tall(); lagre(); });
+  kode.addEventListener('keydown', e => {
+    if (e.key === 'Tab') { e.preventDefault(); const s = kode.selectionStart; kode.setRangeText('    ', s, kode.selectionEnd, 'end'); tall(); lagre(); }
+    else if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); kjor(); }
+    else if (e.key === 'Enter') {
+      const s = kode.selectionStart, linje = kode.value.slice(kode.value.lastIndexOf('\n', s - 1) + 1, s);
+      let inn = linje.match(/^\s*/)[0]; if (/:\s*$/.test(linje)) inn += '    ';
+      e.preventDefault(); kode.setRangeText('\n' + inn, s, kode.selectionEnd, 'end'); tall(); lagre();
+    }
+  });
+  sel.onchange = () => { if (EKS[sel.value]) { kode.value = EKS[sel.value]; tall(); lagre(); } sel.value = ''; };
+  const kjorK = document.getElementById('pKjor'), stoppK = document.getElementById('pStopp');
+  function kjor() {
+    KJOR.kjor(kode.value, { ut, skilpadde: document.getElementById('pSkilpadde'),
+      start: () => { kjorK.disabled = true; stoppK.disabled = false; },
+      ferdig: () => { kjorK.disabled = false; stoppK.disabled = true; } });
+  }
+  kjorK.onclick = kjor; stoppK.onclick = () => KJOR.stopp();
+  document.getElementById('pZinn').onclick = () => { zoom = Math.min(2.2, zoom + .15); document.body.style.setProperty('--zoom', zoom); lagre(); tall(); };
+  document.getElementById('pZut').onclick = () => { zoom = Math.max(.6, zoom - .15); document.body.style.setProperty('--zoom', zoom); lagre(); tall(); };
+  document.getElementById('pLast').onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([kode.value], { type: 'text/x-python' })); a.download = 'program.py'; a.click(); };
+  let t0 = 0; const ny = document.getElementById('pNy');
+  ny.onclick = () => { if (Date.now() - t0 > 3000) { t0 = Date.now(); ny.textContent = 'Sikker?'; setTimeout(() => { ny.textContent = 'Tøm'; }, 3000); return; } kode.value = ''; tall(); lagre(); ny.textContent = 'Tøm'; };
+  tall();
+})();
+</script>
+<script>if (/[?&]tavle=1/.test(location.search)) { document.body.classList.add('tavle');
+  document.querySelectorAll('a[href$=".html"], a[href*=".html?"]').forEach(a => { const u = new URL(a.href, location.href); u.searchParams.set('tavle', '1'); a.href = u.href; }); }</script>
+</body>
+</html>
