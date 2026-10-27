@@ -106,3 +106,27 @@
 .ovdkoppg { font-size: 1.05rem; margin: .4rem 0 .2rem; color: #1f2430; }
 .ovopps .ovoppstekst { color: #5a6272; margin: .2rem 0 .6rem; }
 .ovhopp a.opps { background: #eef4ec; }
+/* spill (27.10.2026) */
+.ot-spillrad { margin-top: .45rem; align-items: center; }
+.ot-spilletikett { font-weight: 800; color: #5a6272; margin-right: .2rem; }
+.ot-spillrad button { border-color: #c9b8f5; }
+.ot-spillrad button.paa { background: #5b21b6; border-color: #5b21b6; }
+.ot-spill { max-width: 900px; margin: 0 auto; }
+.ot-spill-topp { display: flex; justify-content: space-between; font-weight: 700; color: #5a6272; margin-bottom: .3rem; }
+.ot-spill-spm { font-size: 1.15rem; min-height: 2.6em; margin: .2rem 0 .6rem; }
+.ot-spill-flate canvas { display: block; border-radius: 12px; touch-action: none; margin: 0 auto; max-width: 100%; }
+.ot-spill-hjelp { color: #5a6272; font-size: .9rem; text-align: center; margin: .5rem 0 0; }
+.ot-rett { color: #157a3e; font-weight: 800; }
+.ot-galt { color: #b42318; font-weight: 800; }
+.ot-pad { display: grid; grid-template-columns: repeat(3, 64px); grid-template-rows: repeat(2, 56px); gap: 6px; justify-content: center; margin-top: .6rem; }
+.ot-pad button { font-size: 1.5rem; border: 2px solid #d6d9de; background: #fff; border-radius: 12px; cursor: pointer; touch-action: none; user-select: none; }
+.ot-pad button[data-d="0,-1"] { grid-column: 2; grid-row: 1; }
+.ot-pad button[data-d="-1,0"] { grid-column: 1; grid-row: 2; }
+.ot-pad button[data-d="1,0"] { grid-column: 3; grid-row: 2; }
+.ot-pad button[data-d="0,1"] { grid-column: 2; grid-row: 2; }
+.ot-bane { position: relative; background: #3b3f4a; border-radius: 12px; padding: 10px 12px; margin-bottom: 1rem; }
+.ot-bane .felt { position: relative; height: 52px; border-bottom: 2px dashed #8a90a0; }
+.ot-bane .felt:last-of-type { border-bottom: 0; }
+.ot-bane .bil { position: absolute; top: 4px; font-size: 2.3rem; transition: left .4s; transform: scaleX(-1); }
+.ot-bane .navn { position: absolute; right: 50px; top: 14px; color: #cfd4de; font-size: .85rem; }
+.ot-bane .maal { position: absolute; right: 10px; top: 0; bottom: 0; display: flex; align-items: center; font-size: 2rem; }

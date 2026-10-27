@@ -41,10 +41,12 @@
   // ---------------------------------------------------------------- ramme
   const MODUS = [['kort', '🃏', 'Ordkort'], ['quiz', '⏱', 'Quiz'], ['fyll', '✎', 'Fyll inn'], ['memory', '◫', 'Memory'],
     ['ordsok', '🔍', 'Ordsøk'], ['kryss', '✚', 'Kryssord'], ['gjett', '?', 'Gjett ordet']];
+  const SPILL = [['labyrint', '🌀', 'Labyrint'], ['skyt', '🚀', 'Skyt riktig svar'], ['kapp', '🏁', 'Kappløp']];
   rot.innerHTML = `
     <div class="ot-valg">
       ${kompakt ? `<p class="ot-overskrift">${valg.tittel || 'Ordtrening'} <span>· ${ALLE.length} fagord</span></p>` : ''}
       <div class="ot-moduser" role="tablist">${MODUS.map(([m, i, t]) => `<button role="tab" data-m="${m}"><span class="i">${i}</span>${t}</button>`).join('')}</div>
+      <div class="ot-moduser ot-spillrad" role="tablist"><span class="ot-spilletikett">Spill:</span>${SPILL.map(([m, i, t]) => `<button role="tab" data-m="${m}"><span class="i">${i}</span>${t}</button>`).join('')}</div>
       <div class="ot-filter">
         ${valg.dk ? '' : `<label>Delkapittel <select id="otDk"><option value="alle">Hele kapittel ${esc(KAP)} (${ALLE.length} ord)</option>${dkListe.map(d => `<option value="${esc(d)}">${esc(d)} (${ALLE.filter(x => x.dk === d).length} ord)</option>`).join('')}</select></label>`}
         ${harSprak ? `<label>Mitt språk <select id="otSprak"><option value="">Bare norsk</option>${Object.entries(SPRAK).map(([k, v]) => `<option value="${k}" ${k === sprak ? 'selected' : ''}>${v}</option>`).join('')}</select></label>` : ''}
@@ -65,7 +67,8 @@
     rot.querySelectorAll('[data-m]').forEach(b => { b.classList.toggle('paa', b.dataset.m === modus); b.setAttribute('aria-selected', b.dataset.m === modus); });
     const o = ord();
     if (o.length < 2) { flate.innerHTML = '<p class="ot-tom">For få ord her. Velg hele kapitlet.</p>'; return; }
-    ({ kort: ordkort, quiz, fyll, memory, ordsok, kryss, gjett })[modus](o);
+    if (['labyrint', 'skyt', 'kapp'].includes(modus) && ALLE.length < 4) { flate.innerHTML = '<p class="ot-tom">For få ord til spill her.</p>'; return; }
+    ({ kort: ordkort, quiz, fyll, memory, ordsok, kryss, gjett, labyrint, skyt, kapp })[modus](o);
   }
   const oversett = x => sprak && x.t && x.t[sprak] ? `<p class="ot-overs" dir="${RTL[sprak] ? 'rtl' : 'ltr'}" lang="${sprak}">${esc(x.t[sprak])}</p>` : '';
   const ferdigBoks = (tittel, tekst, igjen) => {
@@ -386,6 +389,191 @@
     runde();
   }
 
+  // ---------------------------------------------------------------- SPILL (27.10.2026): labyrint, skyt riktig svar, kappløp
+  function spillSporsmal(o, n) {
+    const kort = f => f.length > 110 ? f.slice(0, f.lastIndexOf(' ', 108)) + ' …' : f;
+    const ord = stokk(o), ut = [];
+    for (let i = 0; i < n; i++) {
+      const x = ord[i % ord.length], andre = stokk(ALLE.filter(y => y.o !== x.o && kjerne(y.o) !== kjerne(x.o))).slice(0, 3);
+      ut.push({ tekst: kort(x.f), riktig: kjerne(x.o), valg: stokk([x, ...andre]).map(y => kjerne(y.o)), x });
+    }
+    return ut;
+  }
+  const hjerter = (n, maks) => '❤️'.repeat(Math.max(0, n)) + '🤍'.repeat(Math.max(0, maks - n));
+  function spillRamme(navn, hjelp) {
+    flate.innerHTML = `<div class="ot-spill">
+      <div class="ot-spill-topp"><span id="spInfo"></span><span id="spLiv"></span></div>
+      <p class="ot-spill-spm" id="spSpm"></p>
+      <div class="ot-spill-flate" id="spFlate"></div>
+      <p class="ot-spill-hjelp">${hjelp}</p></div>`;
+    return { info: $('spInfo'), liv: $('spLiv'), spm: $('spSpm'), flate: $('spFlate') };
+  }
+  function lerret(holder, forhold) {
+    const c = document.createElement('canvas'); holder.appendChild(c);
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const W = Math.min(900, holder.clientWidth || 600), H = Math.round(W * forhold);
+    c.width = W * dpr; c.height = H * dpr; c.style.width = W + 'px'; c.style.height = H + 'px';
+    const x = c.getContext('2d'); x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    return { c, x, W, H };
+  }
+  function tekstBoks(x, t, cx, cy, maksB, farge, bak) {
+    let fs = 18; x.font = `700 ${fs}px system-ui, sans-serif`;
+    while (x.measureText(t).width > maksB - 10 && fs > 10) { fs--; x.font = `700 ${fs}px system-ui, sans-serif`; }
+    const b = Math.min(maksB, x.measureText(t).width + 14);
+    if (bak) { x.fillStyle = bak; x.beginPath(); x.roundRect ? x.roundRect(cx - b / 2, cy - fs * .8, b, fs * 1.6, 6) : x.rect(cx - b / 2, cy - fs * .8, b, fs * 1.6); x.fill(); }
+    x.fillStyle = farge; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(t, cx, cy + 1);
+  }
+
+  // ---- 1 labyrint: styr til riktig ord, unngå romvesenene
+  function labyrint(o) {
+    const N = 10, KOL = 15, RAD = 9;
+    const sp = spillSporsmal(o, N), ui = spillRamme('Labyrint', 'Styr med piltastene eller knappene. Gå inn i rommet med riktig ord. Pass deg for romvesenene 👾!');
+    ui.flate.insertAdjacentHTML('afterend', `<div class="ot-pad"><button data-d="0,-1" aria-label="Opp">▲</button><button data-d="-1,0" aria-label="Venstre">◀</button><button data-d="1,0" aria-label="Høyre">▶</button><button data-d="0,1" aria-label="Ned">▼</button></div>`);
+    const { c, x, W, H } = lerret(ui.flate, RAD / KOL), CW = W / KOL, CH = H / RAD;
+    // labyrint: vegger[r][k] = {n,s,ø,v}
+    const vegg = Array.from({ length: RAD }, () => Array.from({ length: KOL }, () => ({ n: 1, s: 1, o: 1, v: 1 })));
+    const fjern = (r, k, r2, k2) => { if (r2 < r) { vegg[r][k].n = 0; vegg[r2][k2].s = 0; } else if (r2 > r) { vegg[r][k].s = 0; vegg[r2][k2].n = 0; } else if (k2 < k) { vegg[r][k].v = 0; vegg[r2][k2].o = 0; } else { vegg[r][k].o = 0; vegg[r2][k2].v = 0; } };
+    const sett = new Set(['4,7']), stakk = [[4, 7]];
+    while (stakk.length) {
+      const [r, k] = stakk[stakk.length - 1];
+      const nb = [[r - 1, k], [r + 1, k], [r, k - 1], [r, k + 1]].filter(([a, b]) => a >= 0 && a < RAD && b >= 0 && b < KOL && !sett.has(a + ',' + b));
+      if (!nb.length) { stakk.pop(); continue; }
+      const [a, b] = nb[Math.floor(Math.random() * nb.length)]; fjern(r, k, a, b); sett.add(a + ',' + b); stakk.push([a, b]);
+    }
+    for (let i = 0; i < 28; i++) { const r = 1 + Math.floor(Math.random() * (RAD - 2)), k = 1 + Math.floor(Math.random() * (KOL - 2)); const [a, b] = [[r - 1, k], [r, k + 1]][i % 2]; fjern(r, k, a, b); }   // flere veier
+    const ROM = [[0, 0], [0, KOL - 3], [RAD - 1, 0], [RAD - 1, KOL - 3]];   // 3 ruter brede rom i hjørnene
+    ROM.forEach(([r, k]) => { fjern(r, k, r, k + 1); fjern(r, k + 1, r, k + 2); });
+    const iRom = (r, k) => ROM.findIndex(([rr, kk]) => r === rr && k >= kk && k < kk + 3);
+    let i = 0, poeng = 0, liv = 3, spiller = { r: 4, k: 7 }, fiender = [{ r: 0, k: 7 }, { r: RAD - 1, k: 7 }], blink = 0, slutt = false, etiketter = [];
+    const nyttSpm = () => { if (i >= N || liv <= 0) return ferdig(); const q = sp[i]; ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`; etiketter = stokk(q.valg); ui.info.textContent = `Spørsmål ${i + 1} av ${N} · ${poeng} riktige`; ui.liv.textContent = hjerter(liv, 3); spiller = { r: 4, k: 7 }; };
+    const ferdig = () => { slutt = true; stoppTimer(); ferdigBoks(liv > 0 ? 'Du kom gjennom labyrinten!' : 'Tom for liv', `<p>${poeng} av ${N} riktige.</p>`, () => labyrint(o)); };
+    const kanGaa = (r, k, dr, dk) => { const v = vegg[r][k]; return !((dr === -1 && v.n) || (dr === 1 && v.s) || (dk === -1 && v.v) || (dk === 1 && v.o)); };
+    function flytt(dk, dr) {
+      if (slutt) return;
+      if (!kanGaa(spiller.r, spiller.k, dr, dk)) return;
+      spiller = { r: spiller.r + dr, k: spiller.k + dk };
+      const rom = iRom(spiller.r, spiller.k);
+      if (rom >= 0) {
+        const rett = etiketter[rom] === sp[i].riktig;
+        if (rett) { poeng++; si(sp[i].riktig); } else { liv--; blink = 12; }
+        ui.spm.insertAdjacentHTML('beforeend', ` <span class="${rett ? 'ot-rett' : 'ot-galt'}">${rett ? '✓ Riktig!' : '✗ ' + esc(sp[i].riktig) + ' var riktig'}</span>`);
+        i++; setTimeout(nyttSpm, rett ? 500 : 1300); spiller = { r: 4, k: 7 };
+      }
+    }
+    function tegn() {
+      x.fillStyle = '#1b1440'; x.fillRect(0, 0, W, H);
+      ROM.forEach(([r, k], j) => { x.fillStyle = ['#7c3aed', '#1d6fd6', '#c78a00', '#2e8b45'][j]; x.globalAlpha = .55; x.fillRect(k * CW + 2, r * CH + 2, CW * 3 - 4, CH - 4); x.globalAlpha = 1; tekstBoks(x, etiketter[j] || '', (k + 1.5) * CW, (r + .5) * CH, CW * 3 - 6, '#fff', null); });
+      x.strokeStyle = '#e0b84a'; x.lineWidth = 3; x.lineCap = 'round'; x.beginPath();
+      for (let r = 0; r < RAD; r++) for (let k = 0; k < KOL; k++) { const v = vegg[r][k], X = k * CW, Y = r * CH;
+        if (v.n) { x.moveTo(X, Y); x.lineTo(X + CW, Y); } if (v.v) { x.moveTo(X, Y); x.lineTo(X, Y + CH); }
+        if (r === RAD - 1 && v.s) { x.moveTo(X, Y + CH); x.lineTo(X + CW, Y + CH); } if (k === KOL - 1 && v.o) { x.moveTo(X + CW, Y); x.lineTo(X + CW, Y + CH); } }
+      x.stroke();
+      x.font = `${Math.min(CW, CH) * .7}px system-ui`; x.textAlign = 'center'; x.textBaseline = 'middle';
+      fiender.forEach(f => x.fillText('👾', (f.k + .5) * CW, (f.r + .55) * CH));
+      if (!(blink && blink % 2)) x.fillText('🧑‍🚀', (spiller.k + .5) * CW, (spiller.r + .55) * CH);
+      if (blink) blink--;
+    }
+    let teller = 0;
+    const loop = setInterval(() => {
+      if (slutt) return;
+      if (++teller % 6 === 0) fiender.forEach(f => {          // romvesenene går tilfeldig, men aldri inn i rommene
+        const mulig = [[0, -1], [0, 1], [-1, 0], [1, 0]].filter(([dr, dk]) => kanGaa(f.r, f.k, dr, dk) && iRom(f.r + dr, f.k + dk) < 0);
+        if (mulig.length) { const m = (f.sist && mulig.length > 1) ? mulig.filter(([a, b]) => !(a === -f.sist[0] && b === -f.sist[1])) : mulig; const [dr, dk] = m[Math.floor(Math.random() * m.length)]; f.r += dr; f.k += dk; f.sist = [dr, dk]; }
+      });
+      if (fiender.some(f => f.r === spiller.r && f.k === spiller.k)) { liv--; blink = 12; spiller = { r: 4, k: 7 }; ui.liv.textContent = hjerter(liv, 3); if (liv <= 0) return ferdig(); }
+      tegn();
+    }, 80);
+    const tast = e => { if (slutt || flate.hidden || (aktivRot && aktivRot !== rot)) return; const d = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] }[e.key]; if (d) { e.preventDefault(); flytt(d[0], d[1]); } };
+    document.addEventListener('keydown', tast);
+    let hold = null;
+    flate.querySelectorAll('[data-d]').forEach(b => {
+      const [dk, dr] = b.dataset.d.split(',').map(Number);
+      b.addEventListener('pointerdown', e => { e.preventDefault(); aktivRot = rot; flytt(dk, dr); clearInterval(hold); hold = setInterval(() => flytt(dk, dr), 170); });
+      ['pointerup', 'pointerleave', 'pointercancel'].forEach(t => b.addEventListener(t, () => clearInterval(hold)));
+    });
+    let sveip = null;
+    c.addEventListener('pointerdown', e => { sveip = [e.clientX, e.clientY]; aktivRot = rot; });
+    c.addEventListener('pointerup', e => { if (!sveip) return; const dx = e.clientX - sveip[0], dy = e.clientY - sveip[1]; sveip = null; if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return; if (Math.abs(dx) > Math.abs(dy)) flytt(Math.sign(dx), 0); else flytt(0, Math.sign(dy)); });
+    stoppTimer = () => { clearInterval(loop); clearInterval(hold); document.removeEventListener('keydown', tast); };
+    nyttSpm(); tegn();
+  }
+
+  // ---- 2 skyt riktig svar: trykk på riktig ord før det faller ned
+  function skyt(o) {
+    const N = 10, sp = spillSporsmal(o, N), ui = spillRamme('Skyt', 'Trykk på ordet som passer, før det faller ned. Du kan også bruke tastene 1–4.');
+    const { c, x, W, H } = lerret(ui.flate, .6);
+    let i = 0, poeng = 0, liv = 3, bobler = [], skudd = null, slutt = false, sist = performance.now(), fart = H / 14;
+    const stjerner = Array.from({ length: 60 }, () => [Math.random() * W, Math.random() * H, Math.random() * 1.5 + .3]);
+    const nyRunde = () => {
+      if (i >= N || liv <= 0) return ferdig();
+      const q = sp[i]; ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`; ui.info.textContent = `Spørsmål ${i + 1} av ${N} · ${poeng} poeng`; ui.liv.textContent = hjerter(liv, 3);
+      const valg = stokk(q.valg); bobler = valg.map((v, j) => ({ t: v, x: W * (j + .5) / valg.length, y: -30 - Math.random() * 70, r: Math.min(W / valg.length / 2 - 6, 70), nr: j + 1, ut: false }));
+      fart = H / (16 - Math.min(6, i * .6));
+    };
+    const ferdig = () => { slutt = true; stoppTimer(); ferdigBoks(liv > 0 ? 'Bra skutt!' : 'Tom for liv', `<p>${poeng} av ${N} riktige.</p>`, () => skyt(o)); };
+    const treff = b => {
+      if (slutt || b.ut) return;
+      skudd = { x: b.x, y: b.y, t: 10 }; b.ut = true;
+      const rett = b.t === sp[i].riktig;
+      if (rett) { poeng++; si(b.t); i++; setTimeout(nyRunde, 450); }
+      else { liv--; ui.liv.textContent = hjerter(liv, 3); if (liv <= 0) setTimeout(ferdig, 500); }
+    };
+    c.addEventListener('pointerdown', e => {
+      aktivRot = rot; const r = c.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
+      const b = bobler.find(b => !b.ut && Math.hypot(px - b.x, py - b.y) < b.r + 8); if (b) treff(b);
+    });
+    const tast = e => { if (slutt || flate.hidden || (aktivRot && aktivRot !== rot)) return; const n = Number(e.key); if (n >= 1 && n <= bobler.length) { const b = bobler.find(x => x.nr === n); if (b) treff(b); } };
+    document.addEventListener('keydown', tast);
+    let raf;
+    const loop = t => {
+      const dt = Math.min(.05, (t - sist) / 1000); sist = t;
+      x.fillStyle = '#0d1230'; x.fillRect(0, 0, W, H);
+      x.fillStyle = '#fff'; stjerner.forEach(s => { s[1] = (s[1] + s[2] * 20 * dt) % H; x.globalAlpha = .6; x.fillRect(s[0], s[1], s[2], s[2]); }); x.globalAlpha = 1;
+      if (!slutt) bobler.forEach(b => {
+        if (b.ut) return; b.y += fart * dt;
+        if (b.y - b.r > H - 40) { b.ut = true; if (b.t === sp[i].riktig) { liv--; ui.liv.textContent = hjerter(liv, 3); ui.spm.insertAdjacentHTML('beforeend', ` <span class="ot-galt">✗ ${esc(sp[i].riktig)} slapp unna</span>`); i++; setTimeout(nyRunde, 1200); } }
+      });
+      bobler.forEach(b => {
+        if (b.ut) return;
+        x.fillStyle = 'rgba(80,140,255,.25)'; x.strokeStyle = '#8fb8ff'; x.lineWidth = 2; x.beginPath(); x.arc(b.x, b.y, b.r, 0, 7); x.fill(); x.stroke();
+        tekstBoks(x, b.t, b.x, b.y, b.r * 2 - 6, '#fff', null);
+        x.font = '600 12px system-ui'; x.fillStyle = '#8fb8ff'; x.fillText(b.nr, b.x, b.y + b.r - 10);
+      });
+      x.font = '34px system-ui'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('🚀', W / 2, H - 24);
+      if (skudd && skudd.t-- > 0) { x.strokeStyle = '#ffde59'; x.lineWidth = 4; x.beginPath(); x.moveTo(W / 2, H - 44); x.lineTo(skudd.x, skudd.y); x.stroke(); x.font = '30px system-ui'; x.fillText('💥', skudd.x, skudd.y); }
+      if (!slutt) raf = requestAnimationFrame(loop);
+    };
+    stoppTimer = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', tast); };
+    nyRunde(); raf = requestAnimationFrame(loop);
+  }
+
+  // ---- 3 kappløp mot maskinen
+  function kapp(o) {
+    const N = 10, sp = spillSporsmal(o, N + 6), ui = spillRamme('Kappløp', 'Svar riktig for å kjøre fram. Rekker du i mål før maskinen?');
+    ui.flate.innerHTML = `<div class="ot-bane"><div class="felt"><span class="bil" id="kDeg">🏎️</span><span class="navn">Du</span></div><div class="felt"><span class="bil" id="kMaskin">🚙</span><span class="navn">Maskinen</span></div><div class="maal">🏁</div></div><div class="ot-alt" id="kValg"></div>`;
+    let i = 0, meg = 0, maskin = 0, slutt = false, laast = false, riktige = 0;
+    const MASKIN_SEK = 9 * N;   // maskinen bruker omtrent 9 sekunder per strekning
+    const vis = () => { $('kDeg').style.left = `calc(${meg / N * 88}% )`; $('kMaskin').style.left = `calc(${Math.min(1, maskin / N) * 88}%)`; ui.info.textContent = `${riktige} riktige`; ui.liv.textContent = ''; };
+    const nytt = () => {
+      if (slutt) return; const q = sp[i % sp.length]; laast = false;
+      ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`;
+      $('kValg').innerHTML = q.valg.map((v, j) => `<button class="ot-svar" data-j="${j}">${esc(v)}</button>`).join('');
+      $('kValg').querySelectorAll('.ot-svar').forEach(b => b.onclick = () => {
+        if (laast || slutt) return; laast = true; const v = q.valg[b.dataset.j], rett = v === q.riktig;
+        b.classList.add(rett ? 'rett' : 'galt');
+        if (rett) { meg++; riktige++; si(v); } else $('kValg').querySelectorAll('.ot-svar').forEach(c => { if (q.valg[c.dataset.j] === q.riktig) c.classList.add('rett'); });
+        vis(); i++;
+        if (meg >= N) return ferdig(true);
+        setTimeout(nytt, rett ? 350 : 1600);
+      });
+    };
+    const ferdig = vant => { slutt = true; stoppTimer(); setTimeout(() => ferdigBoks(vant ? 'Du vant! 🏆' : 'Maskinen vant denne gangen', `<p>${riktige} riktige svar.</p>`, () => kapp(o)), 700); };
+    const t0 = performance.now();
+    const loop = setInterval(() => { if (slutt) return; maskin = (performance.now() - t0) / 1000 / MASKIN_SEK * N; vis(); if (maskin >= N) ferdig(false); }, 100);
+    stoppTimer = () => clearInterval(loop);
+    vis(); nytt();
+  }
+
   if (!kompakt) start();
   }
 
@@ -394,6 +582,6 @@
   if (hel) {
     const fraHash = location.hash.slice(1);
     monter(hel, JSON.parse(document.getElementById('ordtrening').textContent),
-      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett'].includes(fraHash) ? fraHash : 'kort' });
+      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett', 'labyrint', 'skyt', 'kapp'].includes(fraHash) ? fraHash : 'kort' });
   }
 })();

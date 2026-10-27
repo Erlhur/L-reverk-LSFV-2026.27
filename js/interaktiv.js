@@ -1447,6 +1447,16 @@
       /* Øveoppgavene er delt inn etter delkapittel: én del per delkapittel,
          med overskrift, egen teller og nummer som «1.3 · 2». */
       var prefiks = mal.dataset.ankerprefiks || 'd';
+      /* 27.10.2026: på nettstedet vises ett delkapittel om gangen. Eleven velger delkapittel i menyen. */
+      var endel = !mal.dataset.ankerprefiks;
+      if (endel) {
+        mal.classList.add('endel');
+        var velg = lag('section', 'ovvelg');
+        velg.id = 'dvelg';
+        velg.appendChild(lag('h2', null, 'Velg et delkapittel'));
+        velg.appendChild(lag('p', null, 'Trykk på delkapitlet du skal øve på, i menyen til venstre eller på knappene her. Du får ordtreningen og oppgavene til akkurat det delkapitlet.'));
+        mal.appendChild(velg);
+      }
       var hopp = lag('nav', 'ovhopp');
       hopp.setAttribute('aria-label', 'Hopp til delkapittel');
       mal.appendChild(hopp);
@@ -1473,7 +1483,7 @@
           del.appendChild(ot);
           window.ORDTRENING.monter(ot, ordDk, { kap: data.kap, fag: data.fag, dk: dk.nr, kompakt: true, tittel: 'Ordtrening ' + dk.nr });
         }
-        if (!egne.length) { mal.appendChild(del); return; }
+        if (!egne.length) { if (endel) del.appendChild(lag('p', 'ovneste', 'Ferdig med ' + dk.nr + '? Velg neste delkapittel i menyen.')); mal.appendChild(del); return; }
         if (ordDk.length) del.appendChild(lag('h3', 'ovdkoppg', 'Øveoppgaver ' + dk.nr));
         var deltall = lag('p', 'ovdktall', '0 av ' + egne.length + ' riktige');
         del.appendChild(deltall);
@@ -1486,6 +1496,7 @@
           });
           del.appendChild(akt);
         });
+        if (endel) del.appendChild(lag('p', 'ovneste', 'Ferdig med ' + dk.nr + '? Velg neste delkapittel i menyen.'));
         mal.appendChild(del);
       });
       if (ordAlle.length >= 6) {
@@ -1518,8 +1529,22 @@
     });
   }
 
+  /* vis bare delkapitlet i adressen (#d1-3); uten valg vises «Velg et delkapittel» */
+  function visValgt() {
+    document.querySelectorAll('.aktliste.endel').forEach(function (mal) {
+      var id = location.hash.slice(1), funnet = false;
+      mal.querySelectorAll('.ovdel').forEach(function (d) { var vis = d.id === id; d.hidden = !vis; if (vis) funnet = true; });
+      var velg = mal.querySelector('.ovvelg'); if (velg) velg.hidden = funnet;
+      document.querySelectorAll('.ovhopp a, .sidemeny a[href^="#"]').forEach(function (a) {
+        a.classList.toggle('aktiv', funnet && a.getAttribute('href') === '#' + id);
+      });
+    });
+  }
+
   function start() {
     document.querySelectorAll('.aktliste').forEach(byggSamling);
+    visValgt();
+    window.addEventListener('hashchange', visValgt);
     /* Delkapitlene lages av skriptet, så nettleseren fant ikke ankeret da
        sida ble lastet. Rull dit nå, og under den faste telleren. */
     function rullTil() {
