@@ -18,16 +18,35 @@
   let stemme = null;
   function finnStemme() { const v = (window.speechSynthesis && speechSynthesis.getVoices()) || []; stemme = v.find(x => /^(nb|no|nn)(-|_|$)/i.test(x.lang)) || null; }
   if (window.speechSynthesis) { finnStemme(); speechSynthesis.onvoiceschanged = finnStemme; }
-  function si(t) {
+  function siTale(t) {
     if (!window.speechSynthesis) return;
     speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = 'nb-NO'; if (stemme) u.voice = stemme; u.rate = .85; speechSynthesis.speak(u);
   }
-  const lydKnapp = t => window.speechSynthesis ? `<button class="ot-lyd" data-si="${esc(t)}" title="Hør ordet" aria-label="Hør ordet">🔊</button>` : '';
+  // 27.10.2026: fagord som er lest inn (lyd/<id>.mp3, samme filer som Lytt bruker) spilles av i stedet for nettleserstemmen
+  const rotSti = () => /\/(matematikk|naturfag|samfunnsfag)\/[^\/]*$/.test(location.pathname) ? '../' : '';
+  let innlest = null, spiller = null;
+  if (location.protocol !== 'file:' && window.fetch) fetch(rotSti() + 'lyd/lyd.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.filer) innlest = new Set(j.filer); }).catch(() => {});
+  const ORDMAP = {};
+  async function lydId(t) { const b = await crypto.subtle.digest('SHA-1', new TextEncoder().encode(t)); return Array.from(new Uint8Array(b), x => x.toString(16).padStart(2, '0')).join('').slice(0, 16); }
+  async function si(t) {
+    if (spiller) { spiller.pause(); spiller = null; }
+    if (window.speechSynthesis) speechSynthesis.cancel();
+    const hel = ORDMAP[String(t).toLowerCase()] || t;
+    try {
+      if (innlest && window.crypto && crypto.subtle) {
+        const id = await lydId(hel);
+        if (innlest.has(id)) { spiller = new Audio(rotSti() + 'lyd/' + id + '.mp3'); await spiller.play(); return; }
+      }
+    } catch (e) {}
+    siTale(t);
+  }
+  const lydKnapp = t => `<button class="ot-lyd" data-si="${esc(t)}" title="Hør" aria-label="Hør">🔊</button>`;
   let aktivRot = null;
 
   // ---------------------------------------------------------------- én ordtrening (hel side, oppsummering eller ett delkapittel)
   function monter(rot, ALLE, valg = {}) {
   const KAP = valg.kap, FAG = valg.fag, kompakt = !!valg.kompakt;
+  ALLE.forEach(x => { ORDMAP[kjerne(x.o).toLowerCase()] = x.o; ORDMAP[x.o.toLowerCase()] = x.o; });
   const $ = id => rot.querySelector('#' + id);
   let dkValg = valg.dk || 'alle', modus = valg.modus || 'kort', sprak = lager.sprak || '';
   const harSprak = ALLE.some(x => x.t);
