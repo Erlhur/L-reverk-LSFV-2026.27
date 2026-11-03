@@ -1,4 +1,4 @@
-/* Ordtrening: ordkort, quiz med poeng, fyll inn, memory, ordsøk, kryssord og gjett ordet (26.10.2026).
+/* Ordtrening: ordkort, quiz med poeng, fyll inn, memory, ordsøk, kryssord, gjett ordet og stokk om (03.11.2026).
    Ordene ligger i <script type="application/json" id="ordtrening"> på sida: [{o, f, s, dk, t}] */
 (function () {
   'use strict';
@@ -59,7 +59,7 @@
 
   // ---------------------------------------------------------------- ramme
   const MODUS = [['kort', '🃏', 'Ordkort'], ['quiz', '⏱', 'Quiz'], ['fyll', '✎', 'Fyll inn'], ['memory', '◫', 'Memory'],
-    ['ordsok', '🔍', 'Ordsøk'], ['kryss', '✚', 'Kryssord'], ['gjett', '?', 'Gjett ordet']];
+    ['ordsok', '🔍', 'Ordsøk'], ['kryss', '✚', 'Kryssord'], ['gjett', '?', 'Gjett ordet'], ['stokk', '🔀', 'Stokk om']];
   const SPILL = [['labyrint', '🌀', 'Labyrint'], ['skyt', '🚀', 'Skyt riktig svar'], ['kapp', '🏁', 'Kappløp']];
   rot.innerHTML = `
     <div class="ot-valg">
@@ -87,7 +87,7 @@
     const o = ord();
     if (o.length < 2) { flate.innerHTML = '<p class="ot-tom">For få ord her. Velg hele kapitlet.</p>'; return; }
     if (['labyrint', 'skyt', 'kapp'].includes(modus) && ALLE.length < 4) { flate.innerHTML = '<p class="ot-tom">For få ord til spill her.</p>'; return; }
-    ({ kort: ordkort, quiz, fyll, memory, ordsok, kryss, gjett, labyrint, skyt, kapp })[modus](o);
+    ({ kort: ordkort, quiz, fyll, memory, ordsok, kryss, gjett, stokk: stokkOm, labyrint, skyt, kapp })[modus](o);
   }
   const oversett = x => sprak && x.t && x.t[sprak] ? `<p class="ot-overs" dir="${RTL[sprak] ? 'rtl' : 'ltr'}" lang="${sprak}">${esc(x.t[sprak])}</p>` : '';
   const ferdigBoks = (tittel, tekst, igjen) => {
@@ -408,6 +408,43 @@
     runde();
   }
 
+  // ---------------------------------------------------------------- 8 stokk om (03.11.2026): skriv ordet og setningen selv
+  // Først ord med stokkede bokstaver, så setninger med stokkede ord. Eleven skriver svaret selv.
+  function stokkOm(o) {
+    const vask = t => t.toLowerCase().replace(/[.,!?;:«»"()]/g, '').replace(/\s+/g, ' ').trim();
+    const blandet = a => { if (new Set(a).size < 2) return a; let b; do { b = stokk(a); } while (b.join('|') === a.join('|')); return b; };
+    const rentOrd = x => kjerne(x.o).replace(/\s*\(.*?\)\s*/g, ' ').trim();
+    const ordOppg = stokk(o.filter(x => /^[a-zæøåé\-]{3,16}$/i.test(rentOrd(x)))).slice(0, 6)
+      .map(x => { const w = rentOrd(x); return { type: 'ord', x, svar: w, brikker: blandet([...w.toUpperCase()]) }; });
+    const setnOppg = stokk(o.filter(x => x.s && x.s.split(/\s+/).length >= 3 && x.s.split(/\s+/).length <= 12)).slice(0, 4)
+      .map(x => { const d = x.s.replace(/[.!?]+$/, '').split(/\s+/); const v = [...d]; if (/^[A-ZÆØÅ][a-zæøå]/.test(v[0]) && v[0] !== v[0].toUpperCase()) v[0] = v[0][0].toLowerCase() + v[0].slice(1);
+        return { type: 'setn', x, svar: x.s, brikker: blandet(v) }; });
+    const oppg = [...ordOppg, ...setnOppg];
+    if (oppg.length < 2) { flate.innerHTML = '<p class="ot-tom">For få ord å øve på her. Velg hele kapitlet.</p>'; return; }
+    let i = 0, riktige = 0;
+    const vis = () => {
+      if (i >= oppg.length) { ferdigBoks(`${riktige} av ${oppg.length} riktige`, '', () => stokkOm(o)); return; }
+      const q = oppg[i], ord = q.type === 'ord';
+      flate.innerHTML = `<p class="ot-teller">${i + 1} av ${oppg.length} · ${ord ? 'Bokstavene er stokket. Skriv ordet.' : 'Ordene er stokket. Skriv hele setningen.'}</p>
+        ${ord ? `<p class="ot-def stor">${esc(q.x.f)}</p>` : ''}
+        <div class="ot-brikker ${ord ? 'bokst' : 'ordb'}">${q.brikker.map(b => `<span>${esc(b)}</span>`).join('')}</div>
+        <div class="ot-skriv"><input id="soSvar" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${ord ? 'Skriv ordet her' : 'Skriv setningen her'}" aria-label="Svaret ditt">
+          <button class="ot-k hoved" id="soSjekk">Sjekk</button></div>
+        <p class="ot-tilbake" aria-live="polite"></p>`;
+      const inn = $('soSvar'), knapp = $('soSjekk'); inn.focus();
+      const sjekk = () => {
+        if (!inn.value.trim()) { inn.focus(); return; }
+        const rett = vask(inn.value) === vask(q.svar);
+        inn.disabled = true; knapp.remove(); inn.classList.add(rett ? 'rett' : 'galt');
+        if (rett) riktige++;
+        flate.querySelector('.ot-tilbake').innerHTML = (rett ? '<strong>Riktig!</strong> ' : `Riktig svar: <strong>${esc(q.svar)}</strong> `) + lydKnapp(ord ? q.x.o : q.svar);
+        const n = document.createElement('button'); n.className = 'ot-k hoved'; n.textContent = 'Neste →'; n.onclick = () => { i++; vis(); }; flate.appendChild(n); n.focus();
+      };
+      knapp.onclick = sjekk; inn.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); sjekk(); } };
+    };
+    vis();
+  }
+
   // ---------------------------------------------------------------- SPILL (27.10.2026): labyrint, skyt riktig svar, kappløp
   function spillSporsmal(o, n) {
     const kort = f => f.length > 110 ? f.slice(0, f.lastIndexOf(' ', 108)) + ' …' : f;
@@ -601,6 +638,6 @@
   if (hel) {
     const fraHash = location.hash.slice(1);
     monter(hel, JSON.parse(document.getElementById('ordtrening').textContent),
-      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett', 'labyrint', 'skyt', 'kapp'].includes(fraHash) ? fraHash : 'kort' });
+      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett', 'stokk', 'labyrint', 'skyt', 'kapp'].includes(fraHash) ? fraHash : 'kort' });
   }
 })();
