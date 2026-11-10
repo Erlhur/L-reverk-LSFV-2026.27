@@ -127,7 +127,7 @@
 .ot-bane { position: relative; background: #3b3f4a; border-radius: 12px; padding: 10px 12px; margin-bottom: 1rem; }
 .ot-bane .felt { position: relative; height: 52px; border-bottom: 2px dashed #8a90a0; }
 .ot-bane .felt:last-of-type { border-bottom: 0; }
-.ot-bane .bil { position: absolute; top: 4px; font-size: 2.3rem; transition: left .4s; transform: scaleX(-1); }
+.ot-bane .bil { position: absolute; top: 4px; font-size: 2.3rem; transition: left .12s linear; transform: scaleX(-1); }
 .ot-bane .navn { position: absolute; right: 50px; top: 14px; color: #cfd4de; font-size: .85rem; }
 .ot-bane .maal { position: absolute; right: 10px; top: 0; bottom: 0; display: flex; align-items: center; font-size: 2rem; }
 
@@ -142,3 +142,11 @@
 .ot-skriv input.rett { border-color: #22a35a; background: #dcf3e3; }
 .ot-skriv input.galt { border-color: #d64545; background: #fde8e8; }
 .ot-skriv .ot-k { margin-top: 0; }
+/* labyrint i full skjerm (10.11.2026) */
+.ot-fullknapp { border: 2px solid #c9b8f5; background: #fff; border-radius: 8px; padding: .15rem .6rem; font-weight: 700; cursor: pointer; margin: 0 .6rem; }
+.ot-spill.ot-full { position: fixed; inset: 0; z-index: 9999; max-width: none; margin: 0; padding: 10px 18px; background: #f2f0ec; display: flex; flex-direction: column; box-sizing: border-box; overflow: hidden; }
+.ot-spill.ot-full .ot-spill-flate { flex: 1 1 0; min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.ot-spill.ot-full .ot-spill-spm { font-size: 1.3rem; min-height: 0; margin: .1rem 0 .4rem; }
+.ot-spill.ot-full .ot-spill-hjelp { margin: .3rem 0 0; font-size: .85rem; }
+.ot-spill.ot-full .ot-pad { grid-template-columns: repeat(3, 52px); grid-template-rows: repeat(2, 46px); margin-top: .3rem; }
+@media (hover: hover) and (pointer: fine) { .ot-spill.ot-full .ot-pad { display: none; } }

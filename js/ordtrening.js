@@ -480,46 +480,95 @@
     x.fillStyle = farge; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(t, cx, cy + 1);
   }
 
-  // ---- 1 labyrint: styr til riktig ord, unngå romvesenene
+  // ---- 1 labyrint: styr til riktig ord, unngå romvesenene (fullskjerm, økende vanskelighet, åpen start, tunneler på sidene)
   function labyrint(o) {
-    const N = 10, KOL = 15, RAD = 9;
-    const sp = spillSporsmal(o, N), ui = spillRamme('Labyrint', 'Styr med piltastene eller knappene. Gå inn i rommet med riktig ord. Pass deg for romvesenene 👾!');
+    const N = 10, KOL = 15, RAD = 9, START = { r: 4, k: 7 }, TUN = [2, 4, 6];
+    const sp = spillSporsmal(o, N), ui = spillRamme('Labyrint', 'Styr med piltastene eller knappene. Gå inn i rommet med riktig ord. Pass deg for romvesenene 👾! Du kan gå ut på siden og komme inn igjen på den andre siden.');
+    const el = flate.querySelector('.ot-spill'); el.classList.add('ot-full');
     ui.flate.insertAdjacentHTML('afterend', `<div class="ot-pad"><button data-d="0,-1" aria-label="Opp">▲</button><button data-d="-1,0" aria-label="Venstre">◀</button><button data-d="1,0" aria-label="Høyre">▶</button><button data-d="0,1" aria-label="Ned">▼</button></div>`);
-    const { c, x, W, H } = lerret(ui.flate, RAD / KOL), CW = W / KOL, CH = H / RAD;
-    // labyrint: vegger[r][k] = {n,s,ø,v}
+    el.querySelector('.ot-spill-topp').insertAdjacentHTML('beforeend', '<button class="ot-fullknapp" id="spFull" type="button"></button>');
+    const fullKnapp = $('spFull');
+    const c = document.createElement('canvas'); ui.flate.appendChild(c); const x = c.getContext('2d');
+    let W = 600, H = 360, CW = W / KOL, CH = H / RAD;
+    const tilpass = () => {
+      const full = el.classList.contains('ot-full'), dpr = Math.min(2, window.devicePixelRatio || 1);
+      c.style.width = c.style.height = '0px';
+      const bb = ui.flate.clientWidth || 600, hh = ui.flate.clientHeight;
+      W = full && hh > 100 ? Math.min(bb, hh * KOL / RAD) : Math.min(900, bb); H = Math.round(W * RAD / KOL); W = Math.round(W);
+      c.width = W * dpr; c.height = H * dpr; c.style.width = W + 'px'; c.style.height = H + 'px'; x.setTransform(dpr, 0, 0, dpr, 0, 0);
+      CW = W / KOL; CH = H / RAD; fullKnapp.textContent = full ? '✕ Avslutt fullskjerm' : '⛶ Fullskjerm';
+    };
+    const settFull = paa => {
+      el.classList.toggle('ot-full', paa);
+      try { if (paa) { if (!document.fullscreenElement && el.requestFullscreen) el.requestFullscreen().catch(() => {}); } else if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch (e) {}
+      setTimeout(() => { tilpass(); tegn(); }, 60);
+    };
+    fullKnapp.onclick = () => { aktivRot = rot; settFull(!el.classList.contains('ot-full')); };
+    // labyrint: vegger[r][k] = {n,s,o,v}
     const vegg = Array.from({ length: RAD }, () => Array.from({ length: KOL }, () => ({ n: 1, s: 1, o: 1, v: 1 })));
     const fjern = (r, k, r2, k2) => { if (r2 < r) { vegg[r][k].n = 0; vegg[r2][k2].s = 0; } else if (r2 > r) { vegg[r][k].s = 0; vegg[r2][k2].n = 0; } else if (k2 < k) { vegg[r][k].v = 0; vegg[r2][k2].o = 0; } else { vegg[r][k].o = 0; vegg[r2][k2].v = 0; } };
-    const sett = new Set(['4,7']), stakk = [[4, 7]];
+    const sett = new Set([START.r + ',' + START.k]), stakk = [[START.r, START.k]];
     while (stakk.length) {
       const [r, k] = stakk[stakk.length - 1];
       const nb = [[r - 1, k], [r + 1, k], [r, k - 1], [r, k + 1]].filter(([a, b]) => a >= 0 && a < RAD && b >= 0 && b < KOL && !sett.has(a + ',' + b));
       if (!nb.length) { stakk.pop(); continue; }
       const [a, b] = nb[Math.floor(Math.random() * nb.length)]; fjern(r, k, a, b); sett.add(a + ',' + b); stakk.push([a, b]);
     }
-    for (let i = 0; i < 28; i++) { const r = 1 + Math.floor(Math.random() * (RAD - 2)), k = 1 + Math.floor(Math.random() * (KOL - 2)); const [a, b] = [[r - 1, k], [r, k + 1]][i % 2]; fjern(r, k, a, b); }   // flere veier
+    for (let n = 0; n < 48; n++) { const r = 1 + Math.floor(Math.random() * (RAD - 2)), k = 1 + Math.floor(Math.random() * (KOL - 2)); const [a, b] = [[r - 1, k], [r, k + 1]][n % 2]; fjern(r, k, a, b); }   // flere veier
+    // åpen start: alle fire sider åpne, og hver nabo har enda en åpning videre
+    [[-1, 0], [1, 0], [0, -1], [0, 1]].forEach(([dr, dk]) => {
+      fjern(START.r, START.k, START.r + dr, START.k + dk);
+      const r = START.r + dr, k = START.k + dk, [er, ek] = [[0, 1], [0, -1], [1, 0], [-1, 0]][Math.floor(Math.random() * 4)];
+      const r2 = r + er, k2 = k + ek; if (r2 >= 1 && r2 < RAD - 1 && k2 >= 3 && k2 < KOL - 3) fjern(r, k, r2, k2);
+    });
+    TUN.forEach(r => { vegg[r][0].v = 0; vegg[r][KOL - 1].o = 0; });   // åpninger i sidene: ut til høyre = inn fra venstre
     const ROM = [[0, 0], [0, KOL - 3], [RAD - 1, 0], [RAD - 1, KOL - 3]];   // 3 ruter brede rom i hjørnene
     ROM.forEach(([r, k]) => { fjern(r, k, r, k + 1); fjern(r, k + 1, r, k + 2); });
     const iRom = (r, k) => ROM.findIndex(([rr, kk]) => r === rr && k >= kk && k < kk + 3);
-    let i = 0, poeng = 0, liv = 3, spiller = { r: 4, k: 7 }, fiender = [{ r: 0, k: 7 }, { r: RAD - 1, k: 7 }], blink = 0, slutt = false, etiketter = [];
-    const nyttSpm = () => { if (i >= N || liv <= 0) return ferdig(); const q = sp[i]; ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`; etiketter = stokk(q.valg); ui.info.textContent = `Spørsmål ${i + 1} av ${N} · ${poeng} riktige`; ui.liv.textContent = hjerter(liv, 3); spiller = { r: 4, k: 7 }; };
-    const ferdig = () => { slutt = true; stoppTimer(); ferdigBoks(liv > 0 ? 'Du kom gjennom labyrinten!' : 'Tom for liv', `<p>${poeng} av ${N} riktige.</p>`, () => labyrint(o)); };
     const kanGaa = (r, k, dr, dk) => { const v = vegg[r][k]; return !((dr === -1 && v.n) || (dr === 1 && v.s) || (dk === -1 && v.v) || (dk === 1 && v.o)); };
+    const nr = (r, k, dr, dk) => ({ r: r + dr, k: (k + dk + KOL) % KOL });
+    const avstand = (fra) => {   // bredde først fra spilleren; romvesen går ikke inn i rommene
+      const d = Array.from({ length: RAD }, () => Array(KOL).fill(99)); d[fra.r][fra.k] = 0; const kø = [[fra.r, fra.k]];
+      for (let q = 0; q < kø.length; q++) { const [r, k] = kø[q]; [[-1, 0], [1, 0], [0, -1], [0, 1]].forEach(([dr, dk]) => { if (!kanGaa(r, k, dr, dk)) return; const p = nr(r, k, dr, dk); if (iRom(p.r, p.k) >= 0 || d[p.r][p.k] < 99) return; d[p.r][p.k] = d[r][k] + 1; kø.push([p.r, p.k]); }); }
+      return d;
+    };
+    const tilfeldigFjern = (minAvst) => {   // tilfeldig rute langt unna spilleren
+      const d = avstand(spiller), mulig = [];
+      for (let r = 0; r < RAD; r++) for (let k = 0; k < KOL; k++) if (iRom(r, k) < 0 && d[r][k] >= minAvst && d[r][k] < 99) mulig.push({ r, k });
+      return mulig.length ? mulig[Math.floor(Math.random() * mulig.length)] : { r: 0, k: 7 };
+    };
+    let i = 0, poeng = 0, liv = 3, spiller = { ...START }, fiender = [{ r: 0, k: 7 }, { r: RAD - 1, k: 7 }], blink = 0, slutt = false, etiketter = [], teller = 0;
+    const antallFiender = () => Math.min(5, 2 + Math.floor(i / 3));     // flere romvesener etter hvert
+    const tikk = () => [7, 6, 5, 5, 4, 4, 3, 3, 3, 2][Math.min(i, 9)];   // raskere: 80 ms per tikk
+    const jaktSjanse = () => Math.min(.65, .05 + i * .07);              // flere som jager spilleren
+    const nivaa = () => antallFiender() - 1;
+    const nyttSpm = () => {
+      if (i >= N || liv <= 0) return ferdig(); const q = sp[i];
+      ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`; etiketter = stokk(q.valg); ui.liv.textContent = hjerter(liv, 3);
+      ui.info.textContent = `Spørsmål ${i + 1} av ${N} · ${poeng} riktige · Nivå ${nivaa()}`;
+      spiller = { ...START };
+      while (fiender.length < antallFiender()) fiender.push(tilfeldigFjern(7));
+      const d = avstand(spiller); fiender.forEach(f => { if (d[f.r][f.k] < 4) Object.assign(f, tilfeldigFjern(7)); });   // ingen romvesen ved start
+    };
+    const ferdig = () => { slutt = true; stoppTimer(); ferdigBoks(liv > 0 ? 'Du kom gjennom labyrinten!' : 'Tom for liv', `<p>${poeng} av ${N} riktige.</p>`, () => labyrint(o)); };
     function flytt(dk, dr) {
-      if (slutt) return;
+      if (slutt || laast) return;
       if (!kanGaa(spiller.r, spiller.k, dr, dk)) return;
-      spiller = { r: spiller.r + dr, k: spiller.k + dk };
+      spiller = nr(spiller.r, spiller.k, dr, dk);
       const rom = iRom(spiller.r, spiller.k);
       if (rom >= 0) {
         const rett = etiketter[rom] === sp[i].riktig;
         if (rett) { poeng++; si(sp[i].riktig); } else { liv--; blink = 12; }
         ui.spm.insertAdjacentHTML('beforeend', ` <span class="${rett ? 'ot-rett' : 'ot-galt'}">${rett ? '✓ Riktig!' : '✗ ' + esc(sp[i].riktig) + ' var riktig'}</span>`);
-        i++; setTimeout(nyttSpm, rett ? 500 : 1300); spiller = { r: 4, k: 7 };
+        i++; laast = true; setTimeout(() => { laast = false; nyttSpm(); }, rett ? 500 : 1300); spiller = { ...START };
       }
     }
+    let laast = false;
     function tegn() {
       x.fillStyle = '#1b1440'; x.fillRect(0, 0, W, H);
       ROM.forEach(([r, k], j) => { x.fillStyle = ['#7c3aed', '#1d6fd6', '#c78a00', '#2e8b45'][j]; x.globalAlpha = .55; x.fillRect(k * CW + 2, r * CH + 2, CW * 3 - 4, CH - 4); x.globalAlpha = 1; tekstBoks(x, etiketter[j] || '', (k + 1.5) * CW, (r + .5) * CH, CW * 3 - 6, '#fff', null); });
-      x.strokeStyle = '#e0b84a'; x.lineWidth = 3; x.lineCap = 'round'; x.beginPath();
+      x.fillStyle = 'rgba(80,220,255,.55)'; TUN.forEach(r => { x.fillRect(0, r * CH + 4, 4, CH - 8); x.fillRect(W - 4, r * CH + 4, 4, CH - 8); });   // markerer tunnelåpningene
+      x.strokeStyle = '#e0b84a'; x.lineWidth = Math.max(2, CW / 22); x.lineCap = 'round'; x.beginPath();
       for (let r = 0; r < RAD; r++) for (let k = 0; k < KOL; k++) { const v = vegg[r][k], X = k * CW, Y = r * CH;
         if (v.n) { x.moveTo(X, Y); x.lineTo(X + CW, Y); } if (v.v) { x.moveTo(X, Y); x.lineTo(X, Y + CH); }
         if (r === RAD - 1 && v.s) { x.moveTo(X, Y + CH); x.lineTo(X + CW, Y + CH); } if (k === KOL - 1 && v.o) { x.moveTo(X + CW, Y); x.lineTo(X + CW, Y + CH); } }
@@ -529,17 +578,29 @@
       if (!(blink && blink % 2)) x.fillText('🧑‍🚀', (spiller.k + .5) * CW, (spiller.r + .55) * CH);
       if (blink) blink--;
     }
-    let teller = 0;
     const loop = setInterval(() => {
       if (slutt) return;
-      if (++teller % 6 === 0) fiender.forEach(f => {          // romvesenene går tilfeldig, men aldri inn i rommene
-        const mulig = [[0, -1], [0, 1], [-1, 0], [1, 0]].filter(([dr, dk]) => kanGaa(f.r, f.k, dr, dk) && iRom(f.r + dr, f.k + dk) < 0);
-        if (mulig.length) { const m = (f.sist && mulig.length > 1) ? mulig.filter(([a, b]) => !(a === -f.sist[0] && b === -f.sist[1])) : mulig; const [dr, dk] = m[Math.floor(Math.random() * m.length)]; f.r += dr; f.k += dk; f.sist = [dr, dk]; }
-      });
-      if (fiender.some(f => f.r === spiller.r && f.k === spiller.k)) { liv--; blink = 12; spiller = { r: 4, k: 7 }; ui.liv.textContent = hjerter(liv, 3); if (liv <= 0) return ferdig(); }
+      if (++teller % tikk() === 0 && !laast) {
+        const d = avstand(spiller);
+        fiender.forEach(f => {          // romvesenene går tilfeldig, men jager oftere jo lenger du kommer. De går aldri inn i rommene.
+          const mulig = [[0, -1], [0, 1], [-1, 0], [1, 0]].filter(([dr, dk]) => { if (!kanGaa(f.r, f.k, dr, dk)) return false; const p = nr(f.r, f.k, dr, dk); return iRom(p.r, p.k) < 0; });
+          if (!mulig.length) return;
+          let m = (f.sist && mulig.length > 1) ? mulig.filter(([a, b]) => !(a === -f.sist[0] && b === -f.sist[1])) : mulig;
+          if (Math.random() < jaktSjanse()) { const best = Math.min(...mulig.map(([dr, dk]) => { const p = nr(f.r, f.k, dr, dk); return d[p.r][p.k]; })); m = mulig.filter(([dr, dk]) => { const p = nr(f.r, f.k, dr, dk); return d[p.r][p.k] === best; }); }
+          const [dr, dk] = m[Math.floor(Math.random() * m.length)]; const p = nr(f.r, f.k, dr, dk); f.r = p.r; f.k = p.k; f.sist = [dr, dk];
+        });
+      }
+      if (!laast && fiender.some(f => f.r === spiller.r && f.k === spiller.k)) {
+        liv--; blink = 12; spiller = { ...START }; ui.liv.textContent = hjerter(liv, 3); if (liv <= 0) return ferdig();
+        const d = avstand(spiller); fiender.forEach(f => { if (d[f.r][f.k] < 4) Object.assign(f, tilfeldigFjern(7)); });
+      }
       tegn();
     }, 80);
-    const tast = e => { if (slutt || flate.hidden || (aktivRot && aktivRot !== rot)) return; const d = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] }[e.key]; if (d) { e.preventDefault(); flytt(d[0], d[1]); } };
+    const tast = e => {
+      if (slutt || flate.hidden || (aktivRot && aktivRot !== rot)) return;
+      if (e.key === 'Escape' && el.classList.contains('ot-full') && !document.fullscreenElement) { settFull(false); return; }
+      const d = { ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0], w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0] }[e.key]; if (d) { e.preventDefault(); flytt(d[0], d[1]); }
+    };
     document.addEventListener('keydown', tast);
     let hold = null;
     flate.querySelectorAll('[data-d]').forEach(b => {
@@ -550,8 +611,11 @@
     let sveip = null;
     c.addEventListener('pointerdown', e => { sveip = [e.clientX, e.clientY]; aktivRot = rot; });
     c.addEventListener('pointerup', e => { if (!sveip) return; const dx = e.clientX - sveip[0], dy = e.clientY - sveip[1]; sveip = null; if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return; if (Math.abs(dx) > Math.abs(dy)) flytt(Math.sign(dx), 0); else flytt(0, Math.sign(dy)); });
-    stoppTimer = () => { clearInterval(loop); clearInterval(hold); document.removeEventListener('keydown', tast); };
-    nyttSpm(); tegn();
+    const omstor = () => { tilpass(); tegn(); };
+    window.addEventListener('resize', omstor); document.addEventListener('fullscreenchange', omstor);
+    stoppTimer = () => { clearInterval(loop); clearInterval(hold); document.removeEventListener('keydown', tast); window.removeEventListener('resize', omstor); document.removeEventListener('fullscreenchange', omstor); try { if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch (e) {} };
+    nyttSpm(); tilpass(); tegn();
+    try { if (el.requestFullscreen) el.requestFullscreen().catch(() => {}); } catch (e) {}   // helskjerm (krever at eleven nettopp har trykket)
   }
 
   // ---- 2 skyt riktig svar: trykk på riktig ord før det faller ned
@@ -603,13 +667,16 @@
     nyRunde(); raf = requestAnimationFrame(loop);
   }
 
-  // ---- 3 kappløp mot maskinen
+  // ---- 3 kappløp mot maskinen (nedtelling, svingende fart, tilpasset: kampen holdes jevn)
   function kapp(o) {
-    const N = 10, sp = spillSporsmal(o, N + 6), ui = spillRamme('Kappløp', 'Svar riktig for å kjøre fram. Rekker du i mål før maskinen?');
+    const N = 10, SEK = 5.5, sp = spillSporsmal(o, N + 8), ui = spillRamme('Kappløp', 'Svar riktig for å kjøre fram. Tre riktige på rad gir turbo 🔥. Rekker du i mål før maskinen?');
     ui.flate.innerHTML = `<div class="ot-bane"><div class="felt"><span class="bil" id="kDeg">🏎️</span><span class="navn">Du</span></div><div class="felt"><span class="bil" id="kMaskin">🚙</span><span class="navn">Maskinen</span></div><div class="maal">🏁</div></div><div class="ot-alt" id="kValg"></div>`;
-    let i = 0, meg = 0, maskin = 0, slutt = false, laast = false, riktige = 0;
-    const MASKIN_SEK = 9 * N;   // maskinen bruker omtrent 9 sekunder per strekning
-    const vis = () => { $('kDeg').style.left = `calc(${meg / N * 88}% )`; $('kMaskin').style.left = `calc(${Math.min(1, maskin / N) * 88}%)`; ui.info.textContent = `${riktige} riktige`; ui.liv.textContent = ''; };
+    let i = 0, meg = 0, maskin = 0, slutt = false, laast = true, riktige = 0, rekke = 0, mult = 1, skiftT = 0, t = 0, loop = null, ned = 3;
+    const vis = () => {
+      $('kDeg').style.left = `${Math.min(N, meg) / N * 88}%`; $('kMaskin').style.left = `${Math.min(N, maskin) / N * 88}%`;
+      ui.info.textContent = `${riktige} riktige${rekke >= 2 ? ' · 🔥 ' + rekke + ' på rad' : ''}`;
+      ui.liv.textContent = Math.abs(meg - maskin) < .4 ? '🟡 Side om side!' : meg > maskin ? '🟢 Du leder' : '🔴 Maskinen leder';
+    };
     const nytt = () => {
       if (slutt) return; const q = sp[i % sp.length]; laast = false;
       ui.spm.innerHTML = `Hvilket ord betyr: <b>${esc(q.tekst)}</b>`;
@@ -617,17 +684,26 @@
       $('kValg').querySelectorAll('.ot-svar').forEach(b => b.onclick = () => {
         if (laast || slutt) return; laast = true; const v = q.valg[b.dataset.j], rett = v === q.riktig;
         b.classList.add(rett ? 'rett' : 'galt');
-        if (rett) { meg++; riktige++; si(v); } else $('kValg').querySelectorAll('.ot-svar').forEach(c => { if (q.valg[c.dataset.j] === q.riktig) c.classList.add('rett'); });
+        if (rett) { rekke++; riktige++; meg += rekke >= 3 ? 1.5 : 1; si(v); if (rekke >= 3) ui.spm.insertAdjacentHTML('beforeend', ' <span class="ot-rett">🔥 Turbo!</span>'); }
+        else { rekke = 0; maskin += .4; $('kValg').querySelectorAll('.ot-svar').forEach(c => { if (q.valg[c.dataset.j] === q.riktig) c.classList.add('rett'); }); }
         vis(); i++;
         if (meg >= N) return ferdig(true);
-        setTimeout(nytt, rett ? 350 : 1600);
+        setTimeout(nytt, rett ? 250 : 1000);
       });
     };
     const ferdig = vant => { slutt = true; stoppTimer(); setTimeout(() => ferdigBoks(vant ? 'Du vant! 🏆' : 'Maskinen vant denne gangen', `<p>${riktige} riktige svar.</p>`, () => kapp(o)), 700); };
-    const t0 = performance.now();
-    const loop = setInterval(() => { if (slutt) return; maskin = (performance.now() - t0) / 1000 / MASKIN_SEK * N; vis(); if (maskin >= N) ferdig(false); }, 100);
-    stoppTimer = () => clearInterval(loop);
-    vis(); nytt();
+    const begynn = () => {
+      ui.spm.innerHTML = '<b>🚦 KJØR!</b>'; nytt();
+      loop = setInterval(() => {
+        if (slutt) return; t += .05;
+        if (t > skiftT) { mult = .7 + Math.random() * .75; skiftT = t + 1.2 + Math.random() * 1.8; }   // maskinen skifter fart
+        const gap = meg - maskin, k = gap > 2.5 ? 1.25 : gap < -2.5 ? .85 : 1;                          // holder kampen jevn
+        maskin += .05 / SEK * mult * k; vis(); if (maskin >= N) ferdig(false);
+      }, 50);
+    };
+    ui.spm.innerHTML = `<b>Gjør deg klar … ${ned}</b>`; vis();
+    const nedtell = setInterval(() => { ned--; if (ned > 0) ui.spm.innerHTML = `<b>Gjør deg klar … ${ned}</b>`; else { clearInterval(nedtell); begynn(); } }, 700);
+    stoppTimer = () => { clearInterval(nedtell); clearInterval(loop); };
   }
 
   if (!kompakt) start();
