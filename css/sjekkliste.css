@@ -1,0 +1,39 @@
+/* Sjekkliste: kan / kan litt / kan ikke (nett) og tabell i boka */
+.sjekk{margin:0 0 1.6rem;padding:0}
+.sjekk .sjekkintro{margin:0 0 1rem;font-size:1rem}
+.sjekk fieldset{border:1px solid var(--kant,#ccc);border-left:6px solid var(--kap,#b04a2f);border-radius:8px;margin:0 0 1rem;padding:.6rem .9rem .8rem;min-width:0}
+.sjekk legend{font-weight:700;padding:0 .4rem}
+.sjekk legend span{color:var(--kap,#b04a2f);margin-right:.4rem}
+.sjekk .sjmal{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:center;padding:.5rem 0;border-top:1px dashed var(--kant,#ccc)}
+.sjekk .sjmal:first-of-type{border-top:0}
+.sjekk .sjtekst{flex:1 1 18rem;min-width:0}
+.sjekk .sjvalg{display:flex;gap:.35rem;flex-wrap:wrap}
+.sjekk .sjvalg label{cursor:pointer}
+.sjekk .sjvalg input{position:absolute;opacity:0;pointer-events:none}
+.sjekk .sjvalg span{display:inline-block;padding:.3rem .7rem;border:2px solid #999;border-radius:999px;font-size:.9rem;background:transparent;color:inherit}
+.sjekk .sjvalg input:focus-visible+span{outline:3px solid #1a5fb4;outline-offset:2px}
+.sjekk .sjvalg input:checked+span{font-weight:700}
+.sjekk .sjvalg .v-kan input:checked+span{background:#2e7d32;border-color:#2e7d32;color:#fff}
+.sjekk .sjvalg .v-litt input:checked+span{background:#f2b705;border-color:#c99700;color:#222}
+.sjekk .sjvalg .v-ikke input:checked+span{background:#c62828;border-color:#c62828;color:#fff}
+.sjekk .dkstatus{margin:.6rem 0 0;font-size:.95rem}
+.sjekk .dkstatus a{font-weight:700}
+.sjekk .sjekkoppsummering{border:2px solid var(--kap,#b04a2f);border-radius:8px;padding:.7rem 1rem;margin:0 0 1rem}
+.sjekk .sjekkoppsummering p{margin:.2rem 0}
+.sjekk .sjekkknapp{font:inherit;padding:.4rem .9rem;border:2px solid #666;border-radius:6px;background:transparent;color:inherit;cursor:pointer}
+.ovdel h3.ovprove{margin:1.8rem 0 .4rem;padding-top:1rem;border-top:3px solid var(--kap,#b04a2f)}
+.ovdel p.ovproveintro{margin:0 0 1rem}
+/* Boka */
+table.sjekktabell{width:100%;border-collapse:collapse;margin:.4rem 0 .8rem;font-size:.95rem;table-layout:fixed}
+table.sjekktabell th,table.sjekktabell td{border:1px solid #777;padding:.3rem .45rem;vertical-align:middle;text-align:left}
+table.sjekktabell th.k,table.sjekktabell td.k{width:3.6rem;text-align:center}
+table.sjekktabell thead th{background:#eee;color:#000}
+table.sjekktabell tr.dkrad td{background:#f4f4f4;color:#000;font-weight:700}
+table.sjekktabell .rute{display:inline-block;width:1.05rem;height:1.05rem;border:2px solid #000;border-radius:2px;vertical-align:middle}
+.sjekkmer{margin:.6rem 0 0}
+.sjekkmer .linje{border-bottom:1px solid #777;height:1.7rem}
+@media (prefers-color-scheme:dark){
+ table.sjekktabell thead th{background:#333;color:#fff}table.sjekktabell tr.dkrad td{background:#2a2a2a;color:#fff}
+ table.sjekktabell th,table.sjekktabell td{border-color:#999}table.sjekktabell .rute{border-color:#ddd}
+}
+@media print{table.sjekktabell thead th,table.sjekktabell tr.dkrad td{background:#eee!important;color:#000!important}table.sjekktabell .rute{border-color:#000}}
