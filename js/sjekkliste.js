@@ -26,8 +26,8 @@
       dk.mal.forEach(function (m, mi) {
         totalt++;
         var id = dk.dk + '-' + mi, navn = 'sj' + di + '_' + mi;
-        var rad = el('div', 'sjmal'); rad.setAttribute('role', 'radiogroup'); rad.setAttribute('aria-label', 'Jeg kan ' + m);
-        rad.appendChild(el('div', 'sjtekst', 'Jeg kan ' + m + '.'));
+        var rad = el('div', 'sjmal'); rad.setAttribute('role', 'radiogroup'); var tekst = /^Jeg /.test(m) ? m : 'Jeg kan ' + m; rad.setAttribute('aria-label', tekst);
+        rad.appendChild(el('div', 'sjtekst', tekst + '.'));
         var v = el('div', 'sjvalg');
         VALG.forEach(function (o) {
           var lab = el('label', o[2]); var inp = document.createElement('input'); inp.type = 'radio'; inp.name = navn; inp.value = o[0];
@@ -66,7 +66,7 @@
     var h2 = del.querySelector('h2.ovdk');
     if (h2 && h2.nextSibling) del.insertBefore(rot, h2.nextSibling); else del.appendChild(rot);
     var tall = del.querySelector('.ovdktall');
-    var h3 = el('h3', 'ovprove', 'Øv til kapittelprøve');
+    var h3 = el('h3', 'ovprove', 'Oppgaver til kapittelprøven');
     var intro = el('p', 'ovproveintro', 'Oppgaver fra alle delkapitlene, blandet. Prøv å løse dem uten å se i boka først.');
     if (tall) { del.insertBefore(h3, tall); del.insertBefore(intro, tall); } else { del.appendChild(h3); del.appendChild(intro); }
   }
