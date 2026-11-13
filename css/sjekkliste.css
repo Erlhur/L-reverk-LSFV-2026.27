@@ -37,3 +37,14 @@ table.sjekktabell .rute{display:inline-block;width:1.05rem;height:1.05rem;border
  table.sjekktabell th,table.sjekktabell td{border-color:#999}table.sjekktabell .rute{border-color:#ddd}
 }
 @media print{table.sjekktabell thead th,table.sjekktabell tr.dkrad td{background:#eee!important;color:#000!important}table.sjekktabell .rute{border-color:#000}}
+/* Boka: klikkbare ruter (js/sjekktabell.js) */
+table.sjekktabell td.sjklikk{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+table.sjekktabell td.sjklikk:hover{background:rgba(0,0,0,.06)}
+table.sjekktabell td.sjklikk:focus-visible{outline:3px solid #1a5fb4;outline-offset:-3px}
+table.sjekktabell td.sjklikk .rute{width:1.6rem;height:1.6rem;line-height:1.45rem;font-size:1.1rem;font-weight:700;text-align:center}
+table.sjekktabell td.sj-kan .rute{background:#2e7d32;border-color:#2e7d32;color:#fff}
+table.sjekktabell td.sj-litt .rute{background:#f2b705;border-color:#c99700;color:#222}
+table.sjekktabell td.sj-ikke .rute{background:#c62828;border-color:#c62828;color:#fff}
+.sjekkliste .sjtstatus{font-weight:700}
+.sjekkliste .sjtny{font:inherit;font-size:.9rem;padding:.2rem .7rem;border:2px solid #666;border-radius:6px;background:transparent;color:inherit;cursor:pointer}
+@media print{.sjekkliste .sjtny{display:none}}

@@ -51,6 +51,7 @@
   let dkValg = valg.dk || 'alle', modus = valg.modus || 'kort', sprak = lager.sprak || '';
   const harSprak = ALLE.some(x => x.t);
   const dkListe = [...new Set(ALLE.map(x => x.dk))];
+  if (!valg.dk && valg.startDk && dkListe.includes(valg.startDk)) dkValg = valg.startDk;
   const ord = () => dkValg === 'alle' ? ALLE : ALLE.filter(x => x.dk === dkValg);
   rot.classList.add('ot-rot');
   rot.addEventListener('click', e => { const b = e.target.closest('[data-si]'); if (b) { e.stopPropagation(); si(b.dataset.si); } });
@@ -78,6 +79,7 @@
     modus = b.dataset.m; flate.hidden = false; start();
     if (valg.hash) try { history.replaceState(null, '', '#' + modus); } catch (e) {}
   });
+  if ($('otDk')) $('otDk').value = dkValg;
   if ($('otDk')) $('otDk').onchange = e => { dkValg = e.target.value; if (!flate.hidden) start(); };
   const sp = $('otSprak'); if (sp) sp.onchange = e => { sprak = e.target.value; lager.sprak = sprak; lagre(); if (!flate.hidden) start(); };
   let stoppTimer = () => {};
@@ -712,8 +714,10 @@
   window.ORDTRENING = { monter };
   const hel = document.getElementById('ot');
   if (hel) {
-    const fraHash = location.hash.slice(1);
+    // #quiz eller #quiz&dk=1.3 (delkapittel valgt på forhånd, f.eks. fra Lærerlab)
+    const hdel = location.hash.slice(1).split('&'), fraHash = hdel[0];
+    const hDk = (hdel.find(x => x.indexOf('dk=') === 0) || '').slice(3);
     monter(hel, JSON.parse(document.getElementById('ordtrening').textContent),
-      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett', 'stokk', 'labyrint', 'skyt', 'kapp'].includes(fraHash) ? fraHash : 'kort' });
+      { kap: hel.dataset.kap, fag: hel.dataset.fag, hash: true, startDk: hDk ? decodeURIComponent(hDk) : '', modus: ['kort', 'quiz', 'fyll', 'memory', 'ordsok', 'kryss', 'gjett', 'stokk', 'labyrint', 'skyt', 'kapp'].includes(fraHash) ? fraHash : 'kort' });
   }
 })();
